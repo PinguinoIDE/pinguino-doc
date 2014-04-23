@@ -1,0 +1,54 @@
+\hypertarget{delayms_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/delayms.c File Reference}
+\label{delayms_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/delayms.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/delayms.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$delay.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{delayms_8c_ae2962d4e553f7edf9df8c62f6259c39a}{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-M\-S\-\_\-\-C\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms} (unsigned int milliseconds)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{delayms_8c_ae2962d4e553f7edf9df8c62f6259c39a}{\index{delayms.\-c@{delayms.\-c}!\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-M\-S\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-M\-S\-\_\-\-C\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-M\-S\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-M\-S\-\_\-\-C\-\_\-\-\_\-}!delayms.c@{delayms.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-M\-S\-\_\-\-C\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-E\-L\-A\-Y\-M\-S\-\_\-\-C\-\_\-\-\_\-}}\label{delayms_8c_ae2962d4e553f7edf9df8c62f6259c39a}
+
+
+Definition at line 30 of file delayms.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{\index{delayms.\-c@{delayms.\-c}!Delayms@{Delayms}}
+\index{Delayms@{Delayms}!delayms.c@{delayms.\-c}}
+\subsubsection[{Delayms}]{\setlength{\rightskip}{0pt plus 5cm}void Delayms (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{milliseconds}
+\end{DoxyParamCaption}
+)}}\label{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}
+the delay\-N\-Ntcy family of functions performs a delay of N\-N cycles. Possible values for N\-N are\-: 10 10$\ast$n cycles delay 100 100$\ast$n cycles delay 1k 1000$\ast$n cycles delay 10k 10000$\ast$n cycles delay 100k 100000$\ast$n cycles delay 1m 1000000$\ast$n cycles delay
+
+3100 Hz $<$ P\-I\-C18\-F Clock $<$ 64\-M\-Hz 7750 $<$ Cycles per second = Clock / 4 $<$ 16.\-000.\-000 8 $<$ Cycles per millisecond $<$ 16.\-000 0 $<$ Cycles per microsecond $<$ 16 
+
+Definition at line 71 of file delayms.\-c.
+
+
+
+Referenced by \-\_\-\-A\-D\-B\-Open(), B\-T\-\_\-send\-Command(), C\-D\-C\-\_\-init(), enc28j60\-Init(), if(), I\-L\-I9325\-\_\-enter\-Sleep(), I\-L\-I9325\-\_\-exit\-Sleep(), I\-L\-I9325\-\_\-init(), init\-\_\-\-C\-D\-C(), Init\-L\-C\-D(), Keyboard\-\_\-get(), lcd\-\_\-begin(), lcdi2c\-\_\-clear(), lcdi2c\-\_\-home(), lcdi2c\-\_\-init(), mrf24j40\-\_\-setup\-\_\-io(), P\-M\-P\-\_\-init(), S\-P\-I\-\_\-begin(), S\-T7565\-\_\-init(), Switch\-Debounce(), and Tone().
+
+
+\begin{DoxyCode}
+72 \{
+73     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i;
+74     
+75     \textcolor{keywordflow}{for} (i=0; i<milliseconds; i++)
+76         delay1ktcy(12);
+77 \}
+\end{DoxyCode}

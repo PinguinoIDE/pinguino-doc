@@ -1,0 +1,1229 @@
+\hypertarget{pic_u_s_b_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/pic\-U\-S\-B.c File Reference}
+\label{pic_u_s_b_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/pic\-U\-S\-B.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/pic\-U\-S\-B.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}pic\-U\-S\-B.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usb\-\_\-config.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pic_u_s_b_8c_ab3103f4a2f6ce63e88a133552fb9a162}{A\-L\-L\-O\-W\-\_\-\-S\-U\-S\-P\-E\-N\-D}~0
+\item 
+\#define \hyperlink{pic_u_s_b_8c_a92abc1325b4a9b6030abd7d0c70e5242}{U\-S\-E\-\_\-\-M\-E\-M\-C\-P\-Y}~0
+\item 
+\#define \hyperlink{pic_u_s_b_8c_afdf079ce4e900ef1e16297972c4a5bf8}{D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E}~0x12
+\item 
+\#define \hyperlink{pic_u_s_b_8c_a1a8e571a7015979182ed891afe822da5}{C\-O\-N\-F\-I\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E}~0x09
+\item 
+\#define \hyperlink{pic_u_s_b_8c_a951df24b66fc578e35f3e95a8d248f64}{H\-I\-D\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E}~0x20
+\item 
+\#define \hyperlink{pic_u_s_b_8c_a8099ca9fcbed7c461eb48c42895e4795}{H\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E}~0x09
+\item 
+\#define \hyperlink{pic_u_s_b_8c_af17ab8a97cb7e972a59ac6eda5b3dda9}{S\-E\-T\-U\-P\-\_\-\-S\-T\-A\-G\-E}~0
+\item 
+\#define \hyperlink{pic_u_s_b_8c_a79d8d0f170ddcec78b7e650b048d7385}{D\-A\-T\-A\-\_\-\-O\-U\-T\-\_\-\-S\-T\-A\-G\-E}~1
+\item 
+\#define \hyperlink{pic_u_s_b_8c_a7e13c6f377f2c0a8fa8c8bf0b232afda}{D\-A\-T\-A\-\_\-\-I\-N\-\_\-\-S\-T\-A\-G\-E}~2
+\item 
+\#define \hyperlink{pic_u_s_b_8c_ae3dfdc5d3d3d2ebfb9bf1f9340c4b4e6}{S\-T\-A\-T\-U\-S\-\_\-\-S\-T\-A\-G\-E}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{union_buffer_descriptor_table}{Buffer\-Descriptor\-Table} \hyperlink{pic_u_s_b_8c_ac54befa8230fcac0df633d14c200f7bb}{\-\_\-\-\_\-at} (0x400)
+\item 
+void \hyperlink{pic_u_s_b_8c_a9b03243fa77fb3f84daed841d54bdfa6}{Process\-Standard\-Request} (void)
+\item 
+void \hyperlink{pic_u_s_b_8c_aac2dc96034df4e8ee36c2624bb7c3115}{In\-Data\-Stage} (unsigned char ep)
+\item 
+void \hyperlink{pic_u_s_b_8c_ada8ce1a5c7856ea96b8249e046582988}{Out\-Data\-Stage} (unsigned char ep)
+\item 
+void \hyperlink{pic_u_s_b_8c_ae7e3d2b65c93d75072f82c47c4a4ca30}{Setup\-Stage} (void)
+\item 
+void \hyperlink{pic_u_s_b_8c_a4f251422044d0c7f8373f8e1d42ca4ee}{Wait\-For\-Setup\-Stage} (void)
+\item 
+void \hyperlink{pic_u_s_b_8c_a0cdf23416266db97850174a4a14be599}{Process\-Control\-Transfer} (void)
+\item 
+void \hyperlink{pic_u_s_b_8c_a7ce360ecb075203865186f441fe72574}{Enable\-U\-S\-B\-Module} (void)
+\item 
+void \hyperlink{pic_u_s_b_8c_a272fb225233be964e3b61b708e0c5c64}{Un\-Suspend} (void)
+\item 
+void \hyperlink{pic_u_s_b_8c_a457f7be555516059c29fa546b4b38333}{Start\-Of\-Frame} (void)
+\item 
+void \hyperlink{pic_u_s_b_8c_a03de205acec4df503c45cde99ba898ef}{Stall} (void)
+\item 
+void \hyperlink{pic_u_s_b_8c_a1eb60d4c13f2c21d00ddc5fe6ad57f40}{Suspend} (void)
+\item 
+void \hyperlink{pic_u_s_b_8c_a14ebe200ff243af23432fcbe2c246dec}{Bus\-Reset} ()
+\item 
+void \hyperlink{pic_u_s_b_8c_a72d2fa72a0db42721bb8d9b9de26b431}{Process\-U\-S\-B\-Transactions} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{device\-State}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8c_a8f6657264342ba68ae2efa649f018cf9}{remote\-Wakeup}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8c_aa54d2a2a60630c7dd6a9c6166a917f89}{device\-Address}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8c_af8db2005d4e92586c83a261bb869f135}{self\-Powered}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8c_a1c07dc041da5fe22f47633438dc0c0ac}{current\-Configuration}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8c_a715f1c137e8eb193cb336f4cf8f1d2a2}{ctrl\-Transfer\-Stage}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8c_acb0a4b925e8922db9f3975a4389a5b2d}{H\-I\-D\-Post\-Process}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{request\-Handled}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$ \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{out\-Ptr}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$ \hyperlink{pic_u_s_b_8c_ae16622319c61882067048c564148ae16}{in\-Ptr}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{w\-Count}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8c_a27a60ac1b912a0e2cf731ca5c0ae1f7d}{hid\-Idle\-Rate}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8c_af8645cd1c6f9da72d039e361c3127967}{hid\-Protocol}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8c_af7bb57deec874c793aae34290b358e41}{hid\-Rx\-Len}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{pic_u_s_b_8c_ab3103f4a2f6ce63e88a133552fb9a162}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!A\-L\-L\-O\-W\-\_\-\-S\-U\-S\-P\-E\-N\-D@{A\-L\-L\-O\-W\-\_\-\-S\-U\-S\-P\-E\-N\-D}}
+\index{A\-L\-L\-O\-W\-\_\-\-S\-U\-S\-P\-E\-N\-D@{A\-L\-L\-O\-W\-\_\-\-S\-U\-S\-P\-E\-N\-D}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{A\-L\-L\-O\-W\-\_\-\-S\-U\-S\-P\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-L\-L\-O\-W\-\_\-\-S\-U\-S\-P\-E\-N\-D~0}}\label{pic_u_s_b_8c_ab3103f4a2f6ce63e88a133552fb9a162}
+T\-O\-D\-O\-: 
+
+Definition at line 37 of file pic\-U\-S\-B.\-c.
+
+\hypertarget{pic_u_s_b_8c_a1a8e571a7015979182ed891afe822da5}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!C\-O\-N\-F\-I\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E@{C\-O\-N\-F\-I\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{C\-O\-N\-F\-I\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E@{C\-O\-N\-F\-I\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{C\-O\-N\-F\-I\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-N\-F\-I\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E~0x09}}\label{pic_u_s_b_8c_a1a8e571a7015979182ed891afe822da5}
+
+
+Definition at line 47 of file pic\-U\-S\-B.\-c.
+
+\hypertarget{pic_u_s_b_8c_a7e13c6f377f2c0a8fa8c8bf0b232afda}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!D\-A\-T\-A\-\_\-\-I\-N\-\_\-\-S\-T\-A\-G\-E@{D\-A\-T\-A\-\_\-\-I\-N\-\_\-\-S\-T\-A\-G\-E}}
+\index{D\-A\-T\-A\-\_\-\-I\-N\-\_\-\-S\-T\-A\-G\-E@{D\-A\-T\-A\-\_\-\-I\-N\-\_\-\-S\-T\-A\-G\-E}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{D\-A\-T\-A\-\_\-\-I\-N\-\_\-\-S\-T\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-A\-T\-A\-\_\-\-I\-N\-\_\-\-S\-T\-A\-G\-E~2}}\label{pic_u_s_b_8c_a7e13c6f377f2c0a8fa8c8bf0b232afda}
+
+
+Definition at line 61 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Process\-Control\-Transfer(), and Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8c_a79d8d0f170ddcec78b7e650b048d7385}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!D\-A\-T\-A\-\_\-\-O\-U\-T\-\_\-\-S\-T\-A\-G\-E@{D\-A\-T\-A\-\_\-\-O\-U\-T\-\_\-\-S\-T\-A\-G\-E}}
+\index{D\-A\-T\-A\-\_\-\-O\-U\-T\-\_\-\-S\-T\-A\-G\-E@{D\-A\-T\-A\-\_\-\-O\-U\-T\-\_\-\-S\-T\-A\-G\-E}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{D\-A\-T\-A\-\_\-\-O\-U\-T\-\_\-\-S\-T\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-A\-T\-A\-\_\-\-O\-U\-T\-\_\-\-S\-T\-A\-G\-E~1}}\label{pic_u_s_b_8c_a79d8d0f170ddcec78b7e650b048d7385}
+
+
+Definition at line 60 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Process\-Control\-Transfer(), and Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8c_afdf079ce4e900ef1e16297972c4a5bf8}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E@{D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E}}
+\index{D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E@{D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E~0x12}}\label{pic_u_s_b_8c_afdf079ce4e900ef1e16297972c4a5bf8}
+
+
+Definition at line 46 of file pic\-U\-S\-B.\-c.
+
+\hypertarget{pic_u_s_b_8c_a951df24b66fc578e35f3e95a8d248f64}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!H\-I\-D\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E@{H\-I\-D\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E}}
+\index{H\-I\-D\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E@{H\-I\-D\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{H\-I\-D\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-I\-D\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R\-\_\-\-S\-I\-Z\-E~0x20}}\label{pic_u_s_b_8c_a951df24b66fc578e35f3e95a8d248f64}
+
+
+Definition at line 48 of file pic\-U\-S\-B.\-c.
+
+\hypertarget{pic_u_s_b_8c_a8099ca9fcbed7c461eb48c42895e4795}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!H\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E@{H\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{H\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E@{H\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{H\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-S\-I\-Z\-E~0x09}}\label{pic_u_s_b_8c_a8099ca9fcbed7c461eb48c42895e4795}
+
+
+Definition at line 49 of file pic\-U\-S\-B.\-c.
+
+\hypertarget{pic_u_s_b_8c_af17ab8a97cb7e972a59ac6eda5b3dda9}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!S\-E\-T\-U\-P\-\_\-\-S\-T\-A\-G\-E@{S\-E\-T\-U\-P\-\_\-\-S\-T\-A\-G\-E}}
+\index{S\-E\-T\-U\-P\-\_\-\-S\-T\-A\-G\-E@{S\-E\-T\-U\-P\-\_\-\-S\-T\-A\-G\-E}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{S\-E\-T\-U\-P\-\_\-\-S\-T\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-T\-U\-P\-\_\-\-S\-T\-A\-G\-E~0}}\label{pic_u_s_b_8c_af17ab8a97cb7e972a59ac6eda5b3dda9}
+
+
+Definition at line 59 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Setup\-Stage(), and Wait\-For\-Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8c_ae3dfdc5d3d3d2ebfb9bf1f9340c4b4e6}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!S\-T\-A\-T\-U\-S\-\_\-\-S\-T\-A\-G\-E@{S\-T\-A\-T\-U\-S\-\_\-\-S\-T\-A\-G\-E}}
+\index{S\-T\-A\-T\-U\-S\-\_\-\-S\-T\-A\-G\-E@{S\-T\-A\-T\-U\-S\-\_\-\-S\-T\-A\-G\-E}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{S\-T\-A\-T\-U\-S\-\_\-\-S\-T\-A\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-A\-T\-U\-S\-\_\-\-S\-T\-A\-G\-E~3}}\label{pic_u_s_b_8c_ae3dfdc5d3d3d2ebfb9bf1f9340c4b4e6}
+
+
+Definition at line 62 of file pic\-U\-S\-B.\-c.
+
+\hypertarget{pic_u_s_b_8c_a92abc1325b4a9b6030abd7d0c70e5242}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!U\-S\-E\-\_\-\-M\-E\-M\-C\-P\-Y@{U\-S\-E\-\_\-\-M\-E\-M\-C\-P\-Y}}
+\index{U\-S\-E\-\_\-\-M\-E\-M\-C\-P\-Y@{U\-S\-E\-\_\-\-M\-E\-M\-C\-P\-Y}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{U\-S\-E\-\_\-\-M\-E\-M\-C\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-E\-\_\-\-M\-E\-M\-C\-P\-Y~0}}\label{pic_u_s_b_8c_a92abc1325b4a9b6030abd7d0c70e5242}
+
+
+Definition at line 40 of file pic\-U\-S\-B.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{pic_u_s_b_8c_ac54befa8230fcac0df633d14c200f7bb}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!\-\_\-\-\_\-at@{\-\_\-\-\_\-at}}
+\index{\-\_\-\-\_\-at@{\-\_\-\-\_\-at}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{\-\_\-\-\_\-at}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf Buffer\-Descriptor\-Table} \-\_\-\-\_\-at (
+\begin{DoxyParamCaption}
+\item[{0x400}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_ac54befa8230fcac0df633d14c200f7bb}
+Buffer descriptors Table (see datasheet page 171) R\-A\-M Bank 4 (0x400 though 0x4ff) is used sp\-Ecifically for endpoint buffer control in a structure known as Buffer Descriptor Table (B\-D\-T\-Z). T\-O\-D\-O\-: find something smarter to allocate the buffer, like in usbmmap.\-c of the microchip firmware. If not all endpoints are used the space in R\-A\-M is wasted. 
+
+Definition at line 95 of file pic\-U\-S\-B.\-c.
+
+
+\begin{DoxyCode}
+110 \{
+111 \textcolor{preprocessor}{    #ifdef DEBUG\_PRINT}
+112 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"GetDescriptor\(\backslash\)r\(\backslash\)n"});
+113 \textcolor{preprocessor}{    #endif}
+114 \textcolor{preprocessor}{}
+115     \textcolor{keywordflow}{if}(\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9119649a830686614e70e2e8d42c91d3}{bmRequestType} == 0x80)
+116     \{
+117         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} descriptorType  = \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_ae02c3c2f43b18232e17336ffe81c72ea}{wValue1};
+118         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} descriptorIndex = \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9ec22823f856325394796ecddc8c7cee}{wValue0};
+119 
+120         \textcolor{keywordflow}{if} (descriptorType == \hyperlink{pic_u_s_b_8h_aecd4c19bbe800ec917cfcaa91e4347d1}{DEVICE\_DESCRIPTOR})
+121         \{
+122 \textcolor{preprocessor}{        #ifdef DEBUG\_PRINT}
+123 \textcolor{preprocessor}{}        printf(\textcolor{stringliteral}{"DEVICE\_DESCRIPTOR (0x%ux)\(\backslash\)r\(\backslash\)n"},(\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})descriptorType);
+124 \textcolor{preprocessor}{        #endif}
+125 \textcolor{preprocessor}{}          \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+126           \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr} = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *)&\hyperlink{usb__config_8h_a82c3241716dd16e0a0f1c822d854f5a6}{libdevice\_descriptor};
+127           \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = \textcolor{keyword}{sizeof}(\hyperlink{struct_u_s_b___device___descriptor}{USB\_Device\_Descriptor});
+128         \}
+129 
+130         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (descriptorType == \hyperlink{pic_u_s_b_8h_a16d470261826d2b3f2af975f7a965b90}{CONFIGURATION\_DESCRIPTOR})
+131         \{
+132 \textcolor{preprocessor}{            #ifdef DEBUG\_PRINT}
+133 \textcolor{preprocessor}{}            printf(\textcolor{stringliteral}{"CONFIGURATION\_DESCRIPTOR (0x%ux): %d\(\backslash\)r\(\backslash\)n"}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})descriptorType, descriptorIndex);
+134 \textcolor{preprocessor}{            #endif}
+135 \textcolor{preprocessor}{}
+136             \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+137 
+138 \textcolor{preprocessor}{            #if 0}
+139 \textcolor{preprocessor}{}            \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr} = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *)&\hyperlink{usb__config_8h_a6ad9d633318374b9161df82d241af202}{libconfiguration\_descriptor};
+140             \textcolor{comment}{// wCount = *(outPtr + 2);}
+141             \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = CFSZ;
+142 \textcolor{preprocessor}{            #else}
+143 \textcolor{preprocessor}{}            \textcolor{comment}{// SDCC 2.5 makes bad code with the following two lines.  The}
+144             \textcolor{comment}{// unusual thing is that it is the first of the two lines that}
+145             \textcolor{comment}{// is compiled incorrectly (outPtr gets the contents of}
+146             \textcolor{comment}{// libconfiguration\_descriptor rather than the address), even though it}
+147             \textcolor{comment}{// is the second line that changes from above.}
+148             \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr} = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *)&\hyperlink{usb__config_8h_a6ad9d633318374b9161df82d241af202}{libconfiguration\_descriptor};
+149             \textcolor{comment}{//wCount = libconfiguration\_descriptor.configHeader[2]; // Note: SDCC makes bad code with this}
+150             \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = \hyperlink{usb__config_8h_a6ad9d633318374b9161df82d241af202}{libconfiguration\_descriptor}.Header.wTotalLength;
+151 \textcolor{preprocessor}{            #endif}
+152 \textcolor{preprocessor}{}
+153 \textcolor{preprocessor}{            #ifdef DEBUG\_PRINT}
+154 \textcolor{preprocessor}{}            printf(\textcolor{stringliteral}{"Total config size: %d\(\backslash\)r\(\backslash\)n"}, \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount});
+155 \textcolor{preprocessor}{            #endif}
+156 \textcolor{preprocessor}{}        \}
+157 
+158         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (descriptorType == \hyperlink{pic_u_s_b_8h_a875e5da7a1540475d6ee1ca13f30cd00}{STRING\_DESCRIPTOR})
+159         \{
+160 \textcolor{preprocessor}{            #ifdef DEBUG\_PRINT}
+161 \textcolor{preprocessor}{}            printf(\textcolor{stringliteral}{"STRING\_DESCRIPTOR: %d\(\backslash\)r\(\backslash\)n"}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})descriptorIndex);
+162 \textcolor{preprocessor}{            #endif}
+163 \textcolor{preprocessor}{}
+164             \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+165             \textcolor{comment}{//outPtr = (u8 *)&libstring\_descriptor[descriptorIndex];}
+166             \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr} = \hyperlink{usb__config_8c_a54002dfd77c49d181c86fb2069853a7a}{libstring\_descriptor}[descriptorIndex];
+167             \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = *\hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr};
+168         \}
+169 
+170         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (descriptorType == \hyperlink{pic_u_s_b_8h_afeb17c285ae0402d737219e1d67f94c6}{DEVICE\_QUALIFIER\_DESCRIPTOR})
+171         \{
+172 \textcolor{preprocessor}{            #ifdef DEBUG\_PRINT}
+173 \textcolor{preprocessor}{}            printf(\textcolor{stringliteral}{"DEVICE\_QUALIFIER\_DESCRIPTOR\(\backslash\)r\(\backslash\)n"});
+174 \textcolor{preprocessor}{            #endif}
+175 \textcolor{preprocessor}{}
+176             \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+177             \textcolor{comment}{// TODO: check if this is needed if not requestHandled is not set to 1 the device will}
+178             \textcolor{comment}{// stall later when the linux kernel requests this descriptor}
+179             \textcolor{comment}{//outPtr = (u8 *)&libconfiguration\_descriptor;}
+180             \textcolor{comment}{//wCount = sizeof();}
+181         \}
+182 
+183         \textcolor{keywordflow}{else}
+184         \{
+185 \textcolor{preprocessor}{            #ifdef DEBUG\_PRINT}
+186 \textcolor{preprocessor}{}            printf(\textcolor{stringliteral}{"Unknown Descriptor: 0x%ux\(\backslash\)r\(\backslash\)n"}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})descriptorType);
+187 \textcolor{preprocessor}{            #endif}
+188 \textcolor{preprocessor}{}        \}
+189     \}
+190 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_a14ebe200ff243af23432fcbe2c246dec}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Bus\-Reset@{Bus\-Reset}}
+\index{Bus\-Reset@{Bus\-Reset}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Bus\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}void Bus\-Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_a14ebe200ff243af23432fcbe2c246dec}
+
+
+Definition at line 793 of file pic\-U\-S\-B.\-c.
+
+
+
+References current\-Configuration, D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S, device\-State, E\-P\-\_\-\-C\-T\-R\-L, H\-S\-H\-K\-\_\-\-E\-N, remote\-Wakeup, self\-Powered, and Wait\-For\-Setup\-Stage().
+
+
+
+Referenced by Process\-U\-S\-B\-Transactions().
+
+
+\begin{DoxyCode}
+793                 \{
+794   UEIR  = 0x00;
+795   UIR   = 0x00;
+796   UEIE  = 0x9f;
+797   UIE   = 0x7b;
+798   UADDR = 0x00;
+799 
+800   \textcolor{comment}{// Set endpoint 0 as a control pipe}
+801   UEP0 = \hyperlink{pic_u_s_b_8h_ae13b33a030a1eade0fc81785285fdadb}{EP\_CTRL} | \hyperlink{pic_u_s_b_8h_ad9b2ef082540a0da668f9ae8e06319f6}{HSHK\_EN};
+802 
+803   \textcolor{comment}{// Flush any pending transactions}
+804   \textcolor{keywordflow}{while} (UIRbits.TRNIF == 1)
+805     UIRbits.TRNIF = 0;
+806 
+807   \textcolor{comment}{// Enable packet processing}
+808   UCONbits.PKTDIS = 0;
+809 
+810   \textcolor{comment}{// Prepare for the Setup stage of a control transfer}
+811   \hyperlink{pic_u_s_b_8c_a4f251422044d0c7f8373f8e1d42ca4ee}{WaitForSetupStage}();
+812 
+813   \hyperlink{pic_u_s_b_8c_a8f6657264342ba68ae2efa649f018cf9}{remoteWakeup} = 0;                     \textcolor{comment}{// Remote wakeup is off by default}
+814   \hyperlink{pic_u_s_b_8c_af8db2005d4e92586c83a261bb869f135}{selfPowered} = 0;                      \textcolor{comment}{// Self powered is off by default}
+815   \hyperlink{pic_u_s_b_8c_a1c07dc041da5fe22f47633438dc0c0ac}{currentConfiguration} = 0;             \textcolor{comment}{// Clear active configuration}
+816   \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} = \hyperlink{pic_u_s_b_8h_a188ce67e515b427589d4c363d1132018}{DEFAULT\_STATUS};
+817 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_a7ce360ecb075203865186f441fe72574}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Enable\-U\-S\-B\-Module@{Enable\-U\-S\-B\-Module}}
+\index{Enable\-U\-S\-B\-Module@{Enable\-U\-S\-B\-Module}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Enable\-U\-S\-B\-Module}]{\setlength{\rightskip}{0pt plus 5cm}void Enable\-U\-S\-B\-Module (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_a7ce360ecb075203865186f441fe72574}
+
+
+Definition at line 651 of file pic\-U\-S\-B.\-c.
+
+
+
+References A\-T\-T\-A\-C\-H\-E\-D, device\-State, and P\-O\-W\-E\-R\-E\-D.
+
+
+
+Referenced by C\-D\-C\-\_\-init(), and init\-\_\-\-C\-D\-C().
+
+
+\begin{DoxyCode}
+652 \{
+653     \textcolor{comment}{// TBD: Check for voltage coming from the USB cable and use that}
+654     \textcolor{comment}{// as an indication we are attached.}
+655     \textcolor{keywordflow}{if}(UCONbits.USBEN == 0)
+656     \{
+657 \textcolor{preprocessor}{        #ifdef DEBUG\_PRINT}
+658 \textcolor{preprocessor}{}        printf(\textcolor{stringliteral}{"Enable the module\(\backslash\)r\(\backslash\)n"});
+659 \textcolor{preprocessor}{        #endif}
+660 \textcolor{preprocessor}{}        UCON = 0;
+661         UIE = 0;
+662         UCONbits.USBEN = 1;
+663         \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} = \hyperlink{pic_u_s_b_8h_a762fa5d8c5d91e6acea6891d7ca643ef}{ATTACHED};
+664     \}
+665 
+666     \textcolor{comment}{// If we are attached and no single-ended zero is detected, then}
+667     \textcolor{comment}{// we can move to the Powered state.}
+668     \textcolor{keywordflow}{if} ((\hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} == \hyperlink{pic_u_s_b_8h_a762fa5d8c5d91e6acea6891d7ca643ef}{ATTACHED}) && !UCONbits.SE0)
+669     \{
+670         UIR = 0;
+671         UIE = 0;
+672         UIEbits.URSTIE = 1;
+673         UIEbits.IDLEIE = 1;
+674         \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} = \hyperlink{pic_u_s_b_8h_a2695e45377366b596d024f1fbcdf8126}{POWERED};
+675 \textcolor{preprocessor}{        #ifdef DEBUG\_PRINT}
+676 \textcolor{preprocessor}{}        printf(\textcolor{stringliteral}{"Device powered\(\backslash\)r\(\backslash\)n"});
+677 \textcolor{preprocessor}{        #endif}
+678 \textcolor{preprocessor}{}    \}
+679 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_aac2dc96034df4e8ee36c2624bb7c3115}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!In\-Data\-Stage@{In\-Data\-Stage}}
+\index{In\-Data\-Stage@{In\-Data\-Stage}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{In\-Data\-Stage}]{\setlength{\rightskip}{0pt plus 5cm}void In\-Data\-Stage (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{ep}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_aac2dc96034df4e8ee36c2624bb7c3115}
+Data stage for a Control Transfer that sends data to the host 
+
+Definition at line 394 of file pic\-U\-S\-B.\-c.
+
+
+
+References B\-D\-S\-\_\-\-B\-C8, B\-D\-S\-\_\-\-B\-C9, E\-P0\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E, E\-P\-\_\-\-I\-N\-\_\-\-B\-D, in\-Ptr, out\-Ptr, P\-T\-R16, and w\-Count.
+
+
+
+Referenced by Process\-Control\-Transfer(), and Setup\-Stage().
+
+
+\begin{DoxyCode}
+394                                    \{
+395 \textcolor{preprocessor}{#if !USE\_MEMCPY}
+396 \textcolor{preprocessor}{}  \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+397 \textcolor{preprocessor}{#endif}
+398 \textcolor{preprocessor}{}  \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word} bufferSize;
+399 
+400   \textcolor{comment}{// Determine how many bytes are going to the host}
+401   \textcolor{keywordflow}{if}(\hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} < \hyperlink{pic_u_s_b_8h_a6f14b739a5aa3c5fe517de514f1ec7e2}{EP0\_BUFFER\_SIZE})
+402     bufferSize = \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount};
+403   \textcolor{keywordflow}{else}
+404     bufferSize = \hyperlink{pic_u_s_b_8h_a6f14b739a5aa3c5fe517de514f1ec7e2}{EP0\_BUFFER\_SIZE};
+405 
+406 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+407 \textcolor{preprocessor}{}  \textcolor{comment}{//    printf("USBCtrlTrfTxService: %d\(\backslash\)r\(\backslash\)n", bufferSize);}
+408 \textcolor{preprocessor}{#endif}
+409 \textcolor{preprocessor}{}
+410   \textcolor{comment}{// Load the high two bits of the u8 count into BC8:BC9}
+411   \textcolor{comment}{// Clear BC8 and BC9}
+412   \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(ep).Stat.uc &= ~(\hyperlink{pic_u_s_b_8h_adc4617d0b8588d2fa9a36928e9b02b12}{BDS\_BC8} | \hyperlink{pic_u_s_b_8h_aa64edb29ad471c896ea1744de332aafb}{BDS\_BC9});
+413   \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(ep).Stat.uc |= (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})((bufferSize & 0x0300) >> 8);
+414   \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(ep).Cnt = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})(bufferSize & 0xFF);
+415   \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(ep).ADDR = \hyperlink{pic_u_s_b_8h_af6cb843eae51baccea7482dec09f8030}{PTR16}(&controlTransferBuffer);
+416 
+417   \textcolor{comment}{// Update the number of bytes that still need to be sent.  Getting}
+418   \textcolor{comment}{// all the data back to the host can take multiple transactions, so}
+419   \textcolor{comment}{// we need to track how far along we are.}
+420   \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} - bufferSize;
+421 
+422   \textcolor{comment}{// Move data to the USB output buffer from wherever it sits now.}
+423   \hyperlink{pic_u_s_b_8c_ae16622319c61882067048c564148ae16}{inPtr} = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *)&controlTransferBuffer;
+424 
+425 \textcolor{preprocessor}{#if USE\_MEMCPY}
+426 \textcolor{preprocessor}{}  memcpy(\hyperlink{pic_u_s_b_8c_ae16622319c61882067048c564148ae16}{inPtr}, \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr}, bufferSize);
+427 \textcolor{preprocessor}{#else}
+428 \textcolor{preprocessor}{}  \textcolor{keywordflow}{for} (i=0;i<bufferSize;i++) \{
+429 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+430 \textcolor{preprocessor}{}  \textcolor{comment}{//printf("0x%x = 0x%x (0x%uhx) ", PTR16(ramPtr), PTR16(romPtr), *romPtr);}
+431 \textcolor{preprocessor}{#endif}
+432 \textcolor{preprocessor}{}    *\hyperlink{pic_u_s_b_8c_ae16622319c61882067048c564148ae16}{inPtr}++ = *\hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr}++;
+433   \}
+434 \textcolor{preprocessor}{#endif}
+435 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_ada8ce1a5c7856ea96b8249e046582988}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Out\-Data\-Stage@{Out\-Data\-Stage}}
+\index{Out\-Data\-Stage@{Out\-Data\-Stage}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Out\-Data\-Stage}]{\setlength{\rightskip}{0pt plus 5cm}void Out\-Data\-Stage (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{ep}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_ada8ce1a5c7856ea96b8249e046582988}
+Data stage for a Control Transfer that reads data from the host 
+
+Definition at line 441 of file pic\-U\-S\-B.\-c.
+
+
+
+References E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D, in\-Ptr, out\-Ptr, and w\-Count.
+
+
+
+Referenced by Process\-Control\-Transfer().
+
+
+\begin{DoxyCode}
+441                                     \{
+442   \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word} i, bufferSize;
+443 
+444   bufferSize = ((0x03 & \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(ep).Stat.uc) << 8) | \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(ep).Cnt;
+445 
+446 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+447 \textcolor{preprocessor}{}  \textcolor{comment}{//    printf("OutDataStage: %d\(\backslash\)r\(\backslash\)n", bufferSize);}
+448 \textcolor{preprocessor}{#endif}
+449 \textcolor{preprocessor}{}
+450   \textcolor{comment}{// Accumulate total number of bytes read}
+451   \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} + bufferSize;
+452 
+453   \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr} = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}*)&controlTransferBuffer;
+454 \textcolor{preprocessor}{#if USE\_MEMCPY}
+455 \textcolor{preprocessor}{}  memcpy(\hyperlink{pic_u_s_b_8c_ae16622319c61882067048c564148ae16}{inPtr}, \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr}, bufferSize);
+456 \textcolor{preprocessor}{#else}
+457 \textcolor{preprocessor}{}  \textcolor{keywordflow}{for} (i=0;i<bufferSize;i++) \{
+458 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+459 \textcolor{preprocessor}{}  \textcolor{comment}{// printf("0x%x = 0x%x (0x%uhx) ", PTR16(inPtr), PTR16(outPtr), *outPtr);}
+460 \textcolor{preprocessor}{#endif}
+461 \textcolor{preprocessor}{}    *\hyperlink{pic_u_s_b_8c_ae16622319c61882067048c564148ae16}{inPtr}++ = *\hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr}++;
+462   \}
+463 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+464 \textcolor{preprocessor}{}  \textcolor{comment}{// printf("\(\backslash\)r\(\backslash\)n");}
+465 \textcolor{preprocessor}{#endif}
+466 \textcolor{preprocessor}{}\textcolor{preprocessor}{#endif}
+467 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_a0cdf23416266db97850174a4a14be599}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Process\-Control\-Transfer@{Process\-Control\-Transfer}}
+\index{Process\-Control\-Transfer@{Process\-Control\-Transfer}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Process\-Control\-Transfer}]{\setlength{\rightskip}{0pt plus 5cm}void Process\-Control\-Transfer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_a0cdf23416266db97850174a4a14be599}
+
+
+Definition at line 563 of file pic\-U\-S\-B.\-c.
+
+
+
+References A\-D\-D\-R\-E\-S\-S, B\-D\-S\-\_\-\-D\-T\-S, B\-D\-S\-\_\-\-D\-T\-S\-E\-N, B\-D\-S\-\_\-\-U\-O\-W\-N, ctrl\-Transfer\-Stage, D\-A\-T\-A\-\_\-\-I\-N\-\_\-\-S\-T\-A\-G\-E, D\-A\-T\-A\-\_\-\-O\-U\-T\-\_\-\-S\-T\-A\-G\-E, D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S, device\-State, E\-P\-\_\-\-I\-N\-\_\-\-B\-D, E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D, H\-I\-D\-Post\-Process, I\-N, In\-Data\-Stage(), O\-U\-T, Out\-Data\-Stage(), Setup\-Stage(), and Wait\-For\-Setup\-Stage().
+
+
+
+Referenced by Process\-U\-S\-B\-Transactions().
+
+
+\begin{DoxyCode}
+563                                   \{
+564 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+565 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"Pct\(\backslash\)n\(\backslash\)r"});
+566 \textcolor{preprocessor}{#endif}
+567 \textcolor{preprocessor}{}  \textcolor{keywordflow}{if} (USTATbits.DIR == \hyperlink{pic_u_s_b_8h_aec78e7a9e90a406a56f859ee456e8eae}{OUT}) \{
+568   \textcolor{comment}{// Endpoint 0:out}
+569   \textcolor{comment}{// Pull PID from middle of BD0STAT}
+570     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} PID = (\hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Stat.uc & 0x3C) >> 2;
+571     \textcolor{keywordflow}{if} (PID == 0x0D)
+572   \textcolor{comment}{// SETUP PID - a transaction is starting}
+573       \hyperlink{pic_u_s_b_8c_ae7e3d2b65c93d75072f82c47c4a4ca30}{SetupStage}();
+574     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{pic_u_s_b_8c_a715f1c137e8eb193cb336f4cf8f1d2a2}{ctrlTransferStage} == \hyperlink{pic_u_s_b_8c_a79d8d0f170ddcec78b7e650b048d7385}{DATA\_OUT\_STAGE}) \{
+575   \textcolor{comment}{// Complete the data stage so that all information has}
+576   \textcolor{comment}{// passed from host to device before servicing it.}
+577       \hyperlink{pic_u_s_b_8c_ada8ce1a5c7856ea96b8249e046582988}{OutDataStage}(0);
+578 
+579 \textcolor{preprocessor}{#ifdef USB\_USE\_HID}
+580 \textcolor{preprocessor}{}      \textcolor{keywordflow}{if} (\hyperlink{pic_u_s_b_8c_acb0a4b925e8922db9f3975a4389a5b2d}{HIDPostProcess}) \{
+581   \textcolor{comment}{// Determine which report is being set.}
+582         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} reportID = \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9ec22823f856325394796ecddc8c7cee}{wValue0};
+583 
+584   \textcolor{comment}{// Find out if an Output or Feature report has arrived on the control pipe.}
+585   \textcolor{comment}{// Get the report type from the Setup packet.}
+586         \textcolor{keywordflow}{if} (\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_ae02c3c2f43b18232e17336ffe81c72ea}{wValue1} == 0x02) \{
+587   \textcolor{comment}{// Output report}
+588           SetOutputReport(reportID);
+589         \}
+590         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_ae02c3c2f43b18232e17336ffe81c72ea}{wValue1} == 0x03) \{
+591   \textcolor{comment}{// Feature report}
+592           SetFeatureReport(reportID);
+593         \}
+594         \textcolor{keywordflow}{else} \{
+595   \textcolor{comment}{// Unknown report type}
+596         \}
+597       \}
+598 \textcolor{preprocessor}{#endif}
+599 \textcolor{preprocessor}{}
+600   \textcolor{comment}{// Turn control over to the SIE and toggle the data bit}
+601       \textcolor{keywordflow}{if}(\hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Stat.DTS)
+602         \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Stat.uc = \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN} | \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+603       \textcolor{keywordflow}{else}
+604         \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Stat.uc = \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN} | \hyperlink{pic_u_s_b_8h_a6009ca28ad8ba886db3ec053726ff8b1}{BDS\_DTS} | 
+      \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+605     \}
+606     \textcolor{keywordflow}{else} \{
+607   \textcolor{comment}{// Prepare for the Setup stage of a control transfer}
+608       \hyperlink{pic_u_s_b_8c_a4f251422044d0c7f8373f8e1d42ca4ee}{WaitForSetupStage}();
+609     \}
+610   \}
+611   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(USTATbits.DIR == \hyperlink{pic_u_s_b_8h_ac2bbd6d630a06a980d9a92ddb9a49928}{IN}) \{
+612   \textcolor{comment}{// Endpoint 0:in}
+613     \textcolor{keywordflow}{if} ((UADDR == 0) && (\hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} == \hyperlink{pic_u_s_b_8h_a280feb883e9d4a7edcc69c8bcb9f38f2}{ADDRESS})) \{
+614   \textcolor{comment}{// TBD: ensure that the new address matches the value of}
+615   \textcolor{comment}{// "deviceAddress" (which came in through a SET\_ADDRESS).}
+616       UADDR = \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9ec22823f856325394796ecddc8c7cee}{wValue0};
+617 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+618 \textcolor{preprocessor}{}      printf(\textcolor{stringliteral}{"UADDR = 0x%x\(\backslash\)r\(\backslash\)n"}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})UADDR);
+619 \textcolor{preprocessor}{#endif}
+620 \textcolor{preprocessor}{}      \textcolor{keywordflow}{if}(UADDR == 0)
+621   \textcolor{comment}{// If we get a reset after a SET\_ADDRESS, then we need}
+622   \textcolor{comment}{// to drop back to the Default state.}
+623         \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} = \hyperlink{pic_u_s_b_8h_a188ce67e515b427589d4c363d1132018}{DEFAULT\_STATUS};
+624     \}
+625 
+626     \textcolor{keywordflow}{if} (\hyperlink{pic_u_s_b_8c_a715f1c137e8eb193cb336f4cf8f1d2a2}{ctrlTransferStage} == \hyperlink{pic_u_s_b_8c_a7e13c6f377f2c0a8fa8c8bf0b232afda}{DATA\_IN\_STAGE}) \{
+627   \textcolor{comment}{// Start (or continue) transmitting data}
+628       \hyperlink{pic_u_s_b_8c_aac2dc96034df4e8ee36c2624bb7c3115}{InDataStage}(0);
+629 
+630   \textcolor{comment}{// Turn control over to the SIE and toggle the data bit}
+631       \textcolor{keywordflow}{if}(\hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(0).Stat.DTS)
+632         \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(0).Stat.uc = \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN} | \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+633       \textcolor{keywordflow}{else}
+634         \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(0).Stat.uc = \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN} | \hyperlink{pic_u_s_b_8h_a6009ca28ad8ba886db3ec053726ff8b1}{BDS\_DTS} | 
+      \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+635     \}
+636     \textcolor{keywordflow}{else} \{
+637   \textcolor{comment}{// Prepare for the Setup stage of a control transfer}
+638       \hyperlink{pic_u_s_b_8c_a4f251422044d0c7f8373f8e1d42ca4ee}{WaitForSetupStage}();
+639     \}
+640   \}
+641   \textcolor{keywordflow}{else} \{
+642 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+643 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"IN on EP %d\(\backslash\)r\(\backslash\)n"}, (USTAT >> 3) & 0x0f);
+644     printf(\textcolor{stringliteral}{"USTAT = 0x%uhx\(\backslash\)r\(\backslash\)n"}, USTAT);
+645 \textcolor{preprocessor}{#endif}
+646 \textcolor{preprocessor}{}  \}
+647 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_a9b03243fa77fb3f84daed841d54bdfa6}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Process\-Standard\-Request@{Process\-Standard\-Request}}
+\index{Process\-Standard\-Request@{Process\-Standard\-Request}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Process\-Standard\-Request}]{\setlength{\rightskip}{0pt plus 5cm}void Process\-Standard\-Request (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_a9b03243fa77fb3f84daed841d54bdfa6}
+
+
+Definition at line 283 of file pic\-U\-S\-B.\-c.
+
+
+
+References A\-D\-D\-R\-E\-S\-S, C\-L\-E\-A\-R\-\_\-\-F\-E\-A\-T\-U\-R\-E, C\-O\-N\-F\-I\-G\-U\-R\-E\-D, current\-Configuration, device\-Address, device\-State, G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N, G\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R, G\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E, G\-E\-T\-\_\-\-S\-T\-A\-T\-U\-S, out\-Ptr, request\-Handled, S\-E\-T\-\_\-\-A\-D\-D\-R\-E\-S\-S, S\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N, S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R, S\-E\-T\-\_\-\-F\-E\-A\-T\-U\-R\-E, S\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E, S\-Y\-N\-C\-H\-\_\-\-F\-R\-A\-M\-E, and w\-Count.
+
+
+
+Referenced by Setup\-Stage().
+
+
+\begin{DoxyCode}
+283                                   \{
+284   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} request = \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_af819cb33a956603d06237735e0a40606}{bRequest};
+285 
+286   \textcolor{keywordflow}{if}((\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9119649a830686614e70e2e8d42c91d3}{bmRequestType} & 0x60) != 0x00)
+287   \textcolor{comment}{// Not a standard request - don't process here.  Class or Vendor}
+288   \textcolor{comment}{// requests have to be handled seperately.}
+289     \textcolor{keywordflow}{return};
+290 
+291   \textcolor{keywordflow}{if} (request == \hyperlink{pic_u_s_b_8h_ad3c9f5426c07d7d4da8cf1752a111576}{SET\_ADDRESS}) \{
+292   \textcolor{comment}{// Set the address of the device.  All future requests}
+293   \textcolor{comment}{// will come to that address.  Can't actually set UADDR}
+294   \textcolor{comment}{// to the new address yet because the rest of the SET\_ADDRESS}
+295   \textcolor{comment}{// transaction uses address 0.}
+296 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+297 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"SET\_ADDRESS: %uhx\(\backslash\)r\(\backslash\)n"}, \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9ec22823f856325394796ecddc8c7cee}{wValue0});
+298 \textcolor{preprocessor}{#endif}
+299 \textcolor{preprocessor}{}    \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+300     \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} = \hyperlink{pic_u_s_b_8h_a280feb883e9d4a7edcc69c8bcb9f38f2}{ADDRESS};
+301     \hyperlink{pic_u_s_b_8c_aa54d2a2a60630c7dd6a9c6166a917f89}{deviceAddress} = \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9ec22823f856325394796ecddc8c7cee}{wValue0};
+302   \}
+303   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (request == \hyperlink{pic_u_s_b_8h_a115a1d866ed9498300d59c90549ead0d}{GET\_DESCRIPTOR}) \{
+304     GetDescriptor();
+305   \}
+306   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (request == \hyperlink{pic_u_s_b_8h_a5cdfe3de183eb4e190b2ccaa299045bf}{SET\_CONFIGURATION}) \{
+307 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+308 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"SET\_CONFIGURATION\(\backslash\)r\(\backslash\)n"});
+309 \textcolor{preprocessor}{#endif}
+310 \textcolor{preprocessor}{}    \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+311     \hyperlink{pic_u_s_b_8c_a1c07dc041da5fe22f47633438dc0c0ac}{currentConfiguration} = \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9ec22823f856325394796ecddc8c7cee}{wValue0};
+312   \textcolor{comment}{// TBD: ensure the new configuration value is one that}
+313   \textcolor{comment}{// exists in the descriptor.}
+314     \textcolor{keywordflow}{if} (\hyperlink{pic_u_s_b_8c_a1c07dc041da5fe22f47633438dc0c0ac}{currentConfiguration} == 0)
+315   \textcolor{comment}{// If configuration value is zero, device is put in}
+316   \textcolor{comment}{// address state (USB 2.0 - 9.4.7)}
+317       \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} = \hyperlink{pic_u_s_b_8h_a280feb883e9d4a7edcc69c8bcb9f38f2}{ADDRESS};
+318     \textcolor{keywordflow}{else} \{
+319   \textcolor{comment}{// Set the configuration.}
+320       \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} = \hyperlink{pic_u_s_b_8h_a514476189fbaf15c716d5e846955d2b8}{CONFIGURED};
+321 
+322   \textcolor{comment}{// Initialize the endpoints for all interfaces}
+323 \textcolor{preprocessor}{#ifdef USB\_USE\_HID}
+324 \textcolor{preprocessor}{}      HIDInitEndpoint();
+325 \textcolor{preprocessor}{#endif}
+326 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef USB\_USE\_UART}
+327 \textcolor{preprocessor}{}      UARTInitEndpoint();
+328 \textcolor{preprocessor}{#endif}
+329 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef USB\_USE\_CDC}
+330 \textcolor{preprocessor}{}      CDCInitEndpoint();
+331 \textcolor{preprocessor}{#endif      }
+332 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef USB\_USE\_BULK}
+333 \textcolor{preprocessor}{}      BULKInitEndpoint();
+334 \textcolor{preprocessor}{#endif   }
+335 \textcolor{preprocessor}{}
+336   \textcolor{comment}{// TBD: Add initialization code here for any additional}
+337   \textcolor{comment}{// interfaces beyond the one used for the HID}
+338     \}
+339   \}
+340   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (request == \hyperlink{pic_u_s_b_8h_ac6bffdcb940a0338051c4baa72498beb}{GET\_CONFIGURATION}) \{
+341 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+342 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"GET\_CONFIGURATION\(\backslash\)r\(\backslash\)n"});
+343 \textcolor{preprocessor}{#endif}
+344 \textcolor{preprocessor}{}    \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+345     \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr} = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}*)&\hyperlink{pic_u_s_b_8c_a1c07dc041da5fe22f47633438dc0c0ac}{currentConfiguration};
+346     \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = 1;
+347   \}
+348   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (request == \hyperlink{pic_u_s_b_8h_aeba76c92af8f1a94982ec4cb767452f0}{GET\_STATUS}) \{
+349     GetStatus();
+350   \}
+351   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((request == \hyperlink{pic_u_s_b_8h_a1908d37748e7d545ee5f190715624150}{CLEAR\_FEATURE}) ||
+352   (request == \hyperlink{pic_u_s_b_8h_af8b97e67097fbf7d56c3dcac52fe679e}{SET\_FEATURE})) \{
+353     SetFeature();
+354   \}
+355   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (request == \hyperlink{pic_u_s_b_8h_a1846f3a13493771ceced447397221de1}{GET\_INTERFACE}) \{
+356   \textcolor{comment}{// No support for alternate interfaces.  Send}
+357   \textcolor{comment}{// zero back to the host.}
+358 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+359 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"GET\_INTERFACE\(\backslash\)r\(\backslash\)n"});
+360 \textcolor{preprocessor}{#endif}
+361 \textcolor{preprocessor}{}    \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+362     controlTransferBuffer[0] = 0;
+363     \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr} = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *)&controlTransferBuffer;
+364     \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = 1;
+365   \}
+366   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (request == \hyperlink{pic_u_s_b_8h_a90c9c23759bdbb3ba106f88cb5ffc261}{SET\_INTERFACE}) \{
+367   \textcolor{comment}{// No support for alternate interfaces - just ignore.}
+368 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+369 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"SET\_INTERFACE\(\backslash\)r\(\backslash\)n"});
+370 \textcolor{preprocessor}{#endif}
+371 \textcolor{preprocessor}{}    \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+372   \}
+373   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (request == \hyperlink{pic_u_s_b_8h_a264a9bda1309d7cc0311d57274194ca3}{SET\_DESCRIPTOR}) \{
+374 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+375 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"SET\_DESCRIPTOR\(\backslash\)r\(\backslash\)n"});
+376 \textcolor{preprocessor}{#endif}
+377 \textcolor{preprocessor}{}  \}
+378   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (request == \hyperlink{pic_u_s_b_8h_a43c627a14ff41632fa9c234a3df41b2b}{SYNCH\_FRAME}) \{
+379 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+380 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"SYNCH\_FRAME\(\backslash\)r\(\backslash\)n"});
+381 \textcolor{preprocessor}{#endif}
+382 \textcolor{preprocessor}{}  \}
+383   \textcolor{keywordflow}{else} \{
+384 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+385 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"Default Std Request\(\backslash\)r\(\backslash\)n"});
+386 \textcolor{preprocessor}{#endif}
+387 \textcolor{preprocessor}{}  \}
+388 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_a72d2fa72a0db42721bb8d9b9de26b431}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Process\-U\-S\-B\-Transactions@{Process\-U\-S\-B\-Transactions}}
+\index{Process\-U\-S\-B\-Transactions@{Process\-U\-S\-B\-Transactions}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Process\-U\-S\-B\-Transactions}]{\setlength{\rightskip}{0pt plus 5cm}void Process\-U\-S\-B\-Transactions (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_a72d2fa72a0db42721bb8d9b9de26b431}
+
+
+Definition at line 821 of file pic\-U\-S\-B.\-c.
+
+
+
+References Bus\-Reset(), D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S, D\-E\-T\-A\-C\-H\-E\-D, device\-State, Process\-Control\-Transfer(), Stall(), Start\-Of\-Frame(), Suspend(), and Un\-Suspend().
+
+
+
+Referenced by C\-D\-C\-\_\-init(), C\-D\-C\-\_\-interrupt(), and init\-\_\-\-C\-D\-C().
+
+
+\begin{DoxyCode}
+822 \{
+823   \textcolor{comment}{// See if the device is connected yet.}
+824   \textcolor{keywordflow}{if}(\hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} == \hyperlink{pic_u_s_b_8h_a7dead3b2c769570340a638dbc6c07339}{DETACHED})
+825     \textcolor{keywordflow}{return};
+826 
+827   \textcolor{comment}{// If the USB became active then wake up from suspend}
+828   \textcolor{keywordflow}{if}(UIRbits.ACTVIF && UIEbits.ACTVIE)
+829     \hyperlink{pic_u_s_b_8c_a272fb225233be964e3b61b708e0c5c64}{UnSuspend}();
+830 
+831   \textcolor{comment}{// If we are supposed to be suspended, then don't try performing any}
+832   \textcolor{comment}{// processing.}
+833   \textcolor{keywordflow}{if}(UCONbits.SUSPND == 1)
+834     \textcolor{keywordflow}{return};
+835 
+836   \textcolor{comment}{// Process a bus reset}
+837   \textcolor{keywordflow}{if} (UIRbits.URSTIF && UIEbits.URSTIE)
+838     \hyperlink{pic_u_s_b_8c_a14ebe200ff243af23432fcbe2c246dec}{BusReset}();
+839 
+840   \textcolor{comment}{// No bus activity for a while - suspend the firmware}
+841   \textcolor{keywordflow}{if} (UIRbits.IDLEIF && UIEbits.IDLEIE)
+842     \hyperlink{pic_u_s_b_8c_a1eb60d4c13f2c21d00ddc5fe6ad57f40}{Suspend}();
+843 
+844   
+845   \textcolor{keywordflow}{if} (UIRbits.SOFIF && UIEbits.SOFIE)
+846     \hyperlink{pic_u_s_b_8c_a457f7be555516059c29fa546b4b38333}{StartOfFrame}();
+847   
+848   \textcolor{keywordflow}{if} (UIRbits.STALLIF && UIEbits.STALLIE)
+849     \hyperlink{pic_u_s_b_8c_a03de205acec4df503c45cde99ba898ef}{Stall}();
+850 
+851   \textcolor{comment}{// TBD: See where the error came from.}
+852   \textcolor{comment}{// Clear errors}
+853   \textcolor{keywordflow}{if} (UIRbits.UERRIF && UIEbits.UERRIE)
+854     UIRbits.UERRIF = 0;
+855 
+856   \textcolor{comment}{// Unless we have been reset by the host, no need to keep processing}
+857   \textcolor{keywordflow}{if} (\hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} < \hyperlink{pic_u_s_b_8h_a188ce67e515b427589d4c363d1132018}{DEFAULT\_STATUS})
+858     \textcolor{keywordflow}{return};
+859 
+860   \textcolor{comment}{// A transaction has finished.  Try default processing on endpoint 0.}
+861   \textcolor{keywordflow}{if}(UIRbits.TRNIF && UIEbits.TRNIE)
+862   \{
+863     \hyperlink{pic_u_s_b_8c_a0cdf23416266db97850174a4a14be599}{ProcessControlTransfer}();
+864     \textcolor{comment}{// Turn off interrupt}
+865     UIRbits.TRNIF = 0;
+866   \}
+867 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_ae7e3d2b65c93d75072f82c47c4a4ca30}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Setup\-Stage@{Setup\-Stage}}
+\index{Setup\-Stage@{Setup\-Stage}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Setup\-Stage}]{\setlength{\rightskip}{0pt plus 5cm}void Setup\-Stage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_ae7e3d2b65c93d75072f82c47c4a4ca30}
+Process the Setup stage of a control transfer. This code initializes the flags that let the firmware know what to do during subsequent stages of the transfer. T\-O\-D\-O\-: Only Ep0 is handled here. 
+
+Definition at line 477 of file pic\-U\-S\-B.\-c.
+
+
+
+References B\-D\-S\-\_\-\-B\-S\-T\-A\-L\-L, B\-D\-S\-\_\-\-D\-T\-S, B\-D\-S\-\_\-\-D\-T\-S\-E\-N, B\-D\-S\-\_\-\-U\-O\-W\-N, ctrl\-Transfer\-Stage, D\-A\-T\-A\-\_\-\-I\-N\-\_\-\-S\-T\-A\-G\-E, D\-A\-T\-A\-\_\-\-O\-U\-T\-\_\-\-S\-T\-A\-G\-E, E\-P0\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E, E\-P\-\_\-\-I\-N\-\_\-\-B\-D, E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D, H\-I\-D\-Post\-Process, In\-Data\-Stage(), Process\-Standard\-Request(), P\-T\-R16, request\-Handled, S\-E\-T\-U\-P\-\_\-\-S\-T\-A\-G\-E, U\-S\-B\-\_\-\-R\-E\-C\-I\-P\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E, U\-S\-B\-\_\-\-R\-E\-C\-I\-P\-\_\-\-M\-A\-S\-K, and w\-Count.
+
+
+
+Referenced by Process\-Control\-Transfer().
+
+
+\begin{DoxyCode}
+477                       \{
+478   \textcolor{comment}{// Note: Microchip says to turn off the UOWN bit on the IN direction as}
+479   \textcolor{comment}{// soon as possible after detecting that a SETUP has been received.}
+480   \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(0).Stat.uc &= ~\hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN};
+481   \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Stat.uc &= ~\hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN};
+482 
+483   \textcolor{comment}{// Initialize the transfer process}
+484   \hyperlink{pic_u_s_b_8c_a715f1c137e8eb193cb336f4cf8f1d2a2}{ctrlTransferStage} = \hyperlink{pic_u_s_b_8c_af17ab8a97cb7e972a59ac6eda5b3dda9}{SETUP\_STAGE};
+485   \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 0;                   \textcolor{comment}{// Default is that request hasn't been handled}
+486   \hyperlink{pic_u_s_b_8c_acb0a4b925e8922db9f3975a4389a5b2d}{HIDPostProcess} = 0;                   \textcolor{comment}{// Assume standard request until know otherwise}
+487   \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = 0;                           \textcolor{comment}{// No bytes transferred}
+488 
+489   \textcolor{comment}{// See if this is a standard (as definded in USB chapter 9) request}
+490   \hyperlink{pic_u_s_b_8c_a9b03243fa77fb3f84daed841d54bdfa6}{ProcessStandardRequest}();
+491 
+492   \textcolor{comment}{// only Process CDC or HID if recipient is an interface}
+493   \textcolor{comment}{// See if the HID class can do something with it.}
+494 \textcolor{preprocessor}{#ifdef USB\_USE\_HID}
+495 \textcolor{preprocessor}{}  \textcolor{keywordflow}{if} ((\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9119649a830686614e70e2e8d42c91d3}{bmRequestType} & \hyperlink{usb__bulk_8h_ab67d23886b99a8c21fee81f8c3cec64c}{USB\_RECIP\_MASK}) == 
+      \hyperlink{usb__bulk_8h_af17fccabaf184e41e5b75a909df014ae}{USB\_RECIP\_INTERFACE})
+496     ProcessHIDRequest();
+497 \textcolor{preprocessor}{#endif }
+498 \textcolor{preprocessor}{}  
+499 \textcolor{preprocessor}{#ifdef USB\_USE\_CDC}
+500 \textcolor{preprocessor}{}  \textcolor{keywordflow}{if} ((\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9119649a830686614e70e2e8d42c91d3}{bmRequestType} & \hyperlink{usb__bulk_8h_ab67d23886b99a8c21fee81f8c3cec64c}{USB\_RECIP\_MASK}) == 
+      \hyperlink{usb__bulk_8h_af17fccabaf184e41e5b75a909df014ae}{USB\_RECIP\_INTERFACE})  
+501     ProcessCDCRequest();
+502 \textcolor{preprocessor}{#endif}
+503 \textcolor{preprocessor}{}  \textcolor{comment}{// TBD: Add handlers for any other classes/interfaces in the device}
+504   \textcolor{keywordflow}{if} (!\hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled}) \{
+505   \textcolor{comment}{// If this service wasn't handled then stall endpoint 0}
+506     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Cnt = \hyperlink{pic_u_s_b_8h_a6f14b739a5aa3c5fe517de514f1ec7e2}{EP0\_BUFFER\_SIZE};
+507     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).ADDR = \hyperlink{pic_u_s_b_8h_af6cb843eae51baccea7482dec09f8030}{PTR16}(&\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket});
+508     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Stat.uc = \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN} | \hyperlink{pic_u_s_b_8h_af8d7dca1fd5ea75549e9f547f55433d2}{BDS\_BSTALL};
+509     \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(0).Stat.uc = \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN} | \hyperlink{pic_u_s_b_8h_af8d7dca1fd5ea75549e9f547f55433d2}{BDS\_BSTALL};
+510   \}
+511   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9119649a830686614e70e2e8d42c91d3}{bmRequestType} & 0x80) \{
+512   \textcolor{comment}{// Device-to-host}
+513     \textcolor{keywordflow}{if}(\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9fafd313816c51f76e621935f33a634a}{wLength} < \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount})
+514       \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9fafd313816c51f76e621935f33a634a}{wLength};
+515     \hyperlink{pic_u_s_b_8c_aac2dc96034df4e8ee36c2624bb7c3115}{InDataStage}(0);
+516     \hyperlink{pic_u_s_b_8c_a715f1c137e8eb193cb336f4cf8f1d2a2}{ctrlTransferStage} = \hyperlink{pic_u_s_b_8c_a7e13c6f377f2c0a8fa8c8bf0b232afda}{DATA\_IN\_STAGE};
+517   \textcolor{comment}{// Reset the out buffer descriptor for endpoint 0}
+518     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Cnt = \hyperlink{pic_u_s_b_8h_a6f14b739a5aa3c5fe517de514f1ec7e2}{EP0\_BUFFER\_SIZE};
+519     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).ADDR = \hyperlink{pic_u_s_b_8h_af6cb843eae51baccea7482dec09f8030}{PTR16}(&\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket});
+520     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Stat.uc = \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN};
+521 
+522   \textcolor{comment}{// Set the in buffer descriptor on endpoint 0 to send data}
+523     \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(0).ADDR = \hyperlink{pic_u_s_b_8h_af6cb843eae51baccea7482dec09f8030}{PTR16}(&controlTransferBuffer);
+524   \textcolor{comment}{// Give to SIE, DATA1 packet, enable data toggle checks}
+525     \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(0).Stat.uc = \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN} | \hyperlink{pic_u_s_b_8h_a6009ca28ad8ba886db3ec053726ff8b1}{BDS\_DTS} | \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+526   \}
+527   \textcolor{keywordflow}{else} \{
+528   \textcolor{comment}{// Host-to-device}
+529     \hyperlink{pic_u_s_b_8c_a715f1c137e8eb193cb336f4cf8f1d2a2}{ctrlTransferStage} = \hyperlink{pic_u_s_b_8c_a79d8d0f170ddcec78b7e650b048d7385}{DATA\_OUT\_STAGE};
+530 
+531   \textcolor{comment}{// Clear the input buffer descriptor}
+532     \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(0).Cnt = 0;
+533     \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(0).Stat.uc = \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN} | \hyperlink{pic_u_s_b_8h_a6009ca28ad8ba886db3ec053726ff8b1}{BDS\_DTS} | \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+534 
+535   \textcolor{comment}{// Set the out buffer descriptor on endpoint 0 to receive data}
+536     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Cnt = \hyperlink{pic_u_s_b_8h_a6f14b739a5aa3c5fe517de514f1ec7e2}{EP0\_BUFFER\_SIZE};
+537     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).ADDR = \hyperlink{pic_u_s_b_8h_af6cb843eae51baccea7482dec09f8030}{PTR16}(&controlTransferBuffer);
+538   \textcolor{comment}{// Give to SIE, DATA1 packet, enable data toggle checks}
+539     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Stat.uc = \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN} | \hyperlink{pic_u_s_b_8h_a6009ca28ad8ba886db3ec053726ff8b1}{BDS\_DTS} | 
+      \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+540   \}
+541 
+542   \textcolor{comment}{// Enable SIE token and packet processing}
+543   UCONbits.PKTDIS = 0;
+544 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_a03de205acec4df503c45cde99ba898ef}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Stall@{Stall}}
+\index{Stall@{Stall}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Stall}]{\setlength{\rightskip}{0pt plus 5cm}void Stall (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_a03de205acec4df503c45cde99ba898ef}
+
+
+Definition at line 704 of file pic\-U\-S\-B.\-c.
+
+
+
+References Wait\-For\-Setup\-Stage().
+
+
+
+Referenced by Process\-U\-S\-B\-Transactions().
+
+
+\begin{DoxyCode}
+705 \{
+706 \textcolor{preprocessor}{    #ifdef DEBUG\_PRINT}
+707 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"Stall\(\backslash\)r\(\backslash\)n"});
+708 \textcolor{preprocessor}{    #endif}
+709 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if}(UEP0bits.EPSTALL == 1)
+710     \{
+711         \textcolor{comment}{// Prepare for the Setup stage of a control transfer}
+712         \hyperlink{pic_u_s_b_8c_a4f251422044d0c7f8373f8e1d42ca4ee}{WaitForSetupStage}();
+713         UEP0bits.EPSTALL = 0;
+714     \}
+715     UIRbits.STALLIF = 0;
+716 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_a457f7be555516059c29fa546b4b38333}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Start\-Of\-Frame@{Start\-Of\-Frame}}
+\index{Start\-Of\-Frame@{Start\-Of\-Frame}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Start\-Of\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Start\-Of\-Frame (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_a457f7be555516059c29fa546b4b38333}
+
+
+Definition at line 697 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Process\-U\-S\-B\-Transactions().
+
+
+\begin{DoxyCode}
+698 \{
+699       \textcolor{comment}{// TBD: Add a callback routine to do something}
+700       UIRbits.SOFIF = 0;
+701 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_a1eb60d4c13f2c21d00ddc5fe6ad57f40}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Suspend@{Suspend}}
+\index{Suspend@{Suspend}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Suspend}]{\setlength{\rightskip}{0pt plus 5cm}void Suspend (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_a1eb60d4c13f2c21d00ddc5fe6ad57f40}
+
+
+Definition at line 720 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Process\-U\-S\-B\-Transactions().
+
+
+\begin{DoxyCode}
+721 \{
+722 \textcolor{preprocessor}{#ifdef ALLOW\_SUSPEND}
+723 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+724 \textcolor{preprocessor}{}  printf(\textcolor{stringliteral}{"Suspend\(\backslash\)r\(\backslash\)n"});
+725 \textcolor{preprocessor}{#endif}
+726 \textcolor{preprocessor}{}  UIEbits.ACTVIE = 1;
+727   UIRbits.IDLEIF = 0;
+728   UCONbits.SUSPND = 1;
+729 
+730 \textcolor{preprocessor}{  #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+731 \textcolor{preprocessor}{}  PIR3bits.USBIF = 0;
+732 \textcolor{preprocessor}{  #else}
+733 \textcolor{preprocessor}{}  PIR2bits.USBIF = 0;
+734 \textcolor{preprocessor}{  #endif}
+735 \textcolor{preprocessor}{}
+736 \textcolor{preprocessor}{  #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+737 \textcolor{preprocessor}{}  INTCONbits.IOCIF = 0;
+738 \textcolor{preprocessor}{  #else}
+739 \textcolor{preprocessor}{}  INTCONbits.RBIF = 0;
+740 \textcolor{preprocessor}{  #endif}
+741 \textcolor{preprocessor}{}
+742 \textcolor{preprocessor}{  #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+743 \textcolor{preprocessor}{}  PIE3bits.USBIE = 1;
+744 \textcolor{preprocessor}{  #else}
+745 \textcolor{preprocessor}{}  PIE2bits.USBIE = 1;
+746 \textcolor{preprocessor}{  #endif}
+747 \textcolor{preprocessor}{}
+748 \textcolor{preprocessor}{  #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+749 \textcolor{preprocessor}{}  INTCONbits.IOCIE = 1;
+750 \textcolor{preprocessor}{  #else}
+751 \textcolor{preprocessor}{}  INTCONbits.RBIE = 1;
+752 \textcolor{preprocessor}{  #endif}
+753 \textcolor{preprocessor}{}
+754   \textcolor{comment}{// disable the USART}
+755 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+756 \textcolor{preprocessor}{}\textcolor{preprocessor}{  #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+757 \textcolor{preprocessor}{}  RCSTA1bits.CREN = 0;
+758   TXSTA1bits.TXEN = 0;
+759 \textcolor{preprocessor}{  #else}
+760 \textcolor{preprocessor}{}  RCSTAbits.CREN = 0;
+761   TXSTAbits.TXEN = 0;
+762 \textcolor{preprocessor}{  #endif}
+763 \textcolor{preprocessor}{}\textcolor{preprocessor}{#endif}
+764 \textcolor{preprocessor}{}
+765   Sleep();
+766 
+767   \textcolor{comment}{// enable the USART}
+768 \textcolor{preprocessor}{#ifdef DEBUG\_PRINT}
+769 \textcolor{preprocessor}{}\textcolor{preprocessor}{  #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+770 \textcolor{preprocessor}{}  RCSTA1bits.CREN = 1;
+771   TXSTA1bits.TXEN = 1;
+772 \textcolor{preprocessor}{  #else}
+773 \textcolor{preprocessor}{}  RCSTAbits.CREN = 1;
+774   TXSTAbits.TXEN = 1;
+775 \textcolor{preprocessor}{  #endif}
+776 \textcolor{preprocessor}{}\textcolor{preprocessor}{#endif}
+777 \textcolor{preprocessor}{}
+778 \textcolor{preprocessor}{  #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+779 \textcolor{preprocessor}{}  PIE3bits.USBIE = 0;
+780 \textcolor{preprocessor}{  #else}
+781 \textcolor{preprocessor}{}  PIE2bits.USBIE = 0;
+782 \textcolor{preprocessor}{  #endif}
+783 \textcolor{preprocessor}{}
+784 \textcolor{preprocessor}{  #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+785 \textcolor{preprocessor}{}  INTCONbits.IOCIE = 0;
+786 \textcolor{preprocessor}{  #else}
+787 \textcolor{preprocessor}{}  INTCONbits.RBIE = 0;
+788 \textcolor{preprocessor}{  #endif}
+789 \textcolor{preprocessor}{}\textcolor{preprocessor}{#endif}
+790 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_a272fb225233be964e3b61b708e0c5c64}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Un\-Suspend@{Un\-Suspend}}
+\index{Un\-Suspend@{Un\-Suspend}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Un\-Suspend}]{\setlength{\rightskip}{0pt plus 5cm}void Un\-Suspend (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_a272fb225233be964e3b61b708e0c5c64}
+
+
+Definition at line 683 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Process\-U\-S\-B\-Transactions().
+
+
+\begin{DoxyCode}
+684 \{
+685 \textcolor{preprocessor}{    #ifdef DEBUG\_PRINT}
+686 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"UnSuspend\(\backslash\)r\(\backslash\)n"});
+687 \textcolor{preprocessor}{    #endif}
+688 \textcolor{preprocessor}{}
+689     UCONbits.SUSPND = 0;
+690     UIEbits.ACTVIE = 0;
+691     UIRbits.ACTVIF = 0;
+692 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8c_a4f251422044d0c7f8373f8e1d42ca4ee}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!Wait\-For\-Setup\-Stage@{Wait\-For\-Setup\-Stage}}
+\index{Wait\-For\-Setup\-Stage@{Wait\-For\-Setup\-Stage}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{Wait\-For\-Setup\-Stage}]{\setlength{\rightskip}{0pt plus 5cm}void Wait\-For\-Setup\-Stage (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8c_a4f251422044d0c7f8373f8e1d42ca4ee}
+
+
+Definition at line 549 of file pic\-U\-S\-B.\-c.
+
+
+
+References B\-D\-S\-\_\-\-D\-T\-S\-E\-N, B\-D\-S\-\_\-\-U\-O\-W\-N, ctrl\-Transfer\-Stage, E\-P0\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E, E\-P\-\_\-\-I\-N\-\_\-\-B\-D, E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D, P\-T\-R16, and S\-E\-T\-U\-P\-\_\-\-S\-T\-A\-G\-E.
+
+
+
+Referenced by Bus\-Reset(), Process\-Control\-Transfer(), and Stall().
+
+
+\begin{DoxyCode}
+549                              \{
+550   \hyperlink{pic_u_s_b_8c_a715f1c137e8eb193cb336f4cf8f1d2a2}{ctrlTransferStage} = \hyperlink{pic_u_s_b_8c_af17ab8a97cb7e972a59ac6eda5b3dda9}{SETUP\_STAGE};
+551   \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Cnt = \hyperlink{pic_u_s_b_8h_a6f14b739a5aa3c5fe517de514f1ec7e2}{EP0\_BUFFER\_SIZE};
+552   \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).ADDR = \hyperlink{pic_u_s_b_8h_af6cb843eae51baccea7482dec09f8030}{PTR16}(&\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket});
+553   \textcolor{comment}{// Give to SIE, enable data toggle checks}
+554   \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(0).Stat.uc = \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{BDS\_UOWN} | \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+555   \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(0).Stat.uc = 0x00;           \textcolor{comment}{// Give control to CPU}
+556 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{pic_u_s_b_8c_a715f1c137e8eb193cb336f4cf8f1d2a2}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!ctrl\-Transfer\-Stage@{ctrl\-Transfer\-Stage}}
+\index{ctrl\-Transfer\-Stage@{ctrl\-Transfer\-Stage}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{ctrl\-Transfer\-Stage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} ctrl\-Transfer\-Stage}}\label{pic_u_s_b_8c_a715f1c137e8eb193cb336f4cf8f1d2a2}
+
+
+Definition at line 64 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Process\-Control\-Transfer(), Setup\-Stage(), and Wait\-For\-Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8c_a1c07dc041da5fe22f47633438dc0c0ac}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!current\-Configuration@{current\-Configuration}}
+\index{current\-Configuration@{current\-Configuration}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{current\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} current\-Configuration}}\label{pic_u_s_b_8c_a1c07dc041da5fe22f47633438dc0c0ac}
+
+
+Definition at line 56 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Bus\-Reset(), C\-D\-C\-\_\-init(), init\-\_\-\-C\-D\-C(), and Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8c_aa54d2a2a60630c7dd6a9c6166a917f89}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!device\-Address@{device\-Address}}
+\index{device\-Address@{device\-Address}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{device\-Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} device\-Address}}\label{pic_u_s_b_8c_aa54d2a2a60630c7dd6a9c6166a917f89}
+
+
+Definition at line 54 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!device\-State@{device\-State}}
+\index{device\-State@{device\-State}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{device\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} device\-State}}\label{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}
+
+
+Definition at line 52 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Bus\-Reset(), C\-D\-C\-\_\-init(), Enable\-U\-S\-B\-Module(), init\-\_\-\-C\-D\-C(), Process\-Control\-Transfer(), Process\-Standard\-Request(), and Process\-U\-S\-B\-Transactions().
+
+\hypertarget{pic_u_s_b_8c_a27a60ac1b912a0e2cf731ca5c0ae1f7d}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!hid\-Idle\-Rate@{hid\-Idle\-Rate}}
+\index{hid\-Idle\-Rate@{hid\-Idle\-Rate}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{hid\-Idle\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} hid\-Idle\-Rate}}\label{pic_u_s_b_8c_a27a60ac1b912a0e2cf731ca5c0ae1f7d}
+
+
+Definition at line 74 of file pic\-U\-S\-B.\-c.
+
+\hypertarget{pic_u_s_b_8c_acb0a4b925e8922db9f3975a4389a5b2d}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!H\-I\-D\-Post\-Process@{H\-I\-D\-Post\-Process}}
+\index{H\-I\-D\-Post\-Process@{H\-I\-D\-Post\-Process}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{H\-I\-D\-Post\-Process}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} H\-I\-D\-Post\-Process}}\label{pic_u_s_b_8c_acb0a4b925e8922db9f3975a4389a5b2d}
+
+
+Definition at line 66 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Process\-Control\-Transfer(), and Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8c_af8645cd1c6f9da72d039e361c3127967}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!hid\-Protocol@{hid\-Protocol}}
+\index{hid\-Protocol@{hid\-Protocol}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{hid\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} hid\-Protocol}}\label{pic_u_s_b_8c_af8645cd1c6f9da72d039e361c3127967}
+
+
+Definition at line 75 of file pic\-U\-S\-B.\-c.
+
+\hypertarget{pic_u_s_b_8c_af7bb57deec874c793aae34290b358e41}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!hid\-Rx\-Len@{hid\-Rx\-Len}}
+\index{hid\-Rx\-Len@{hid\-Rx\-Len}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{hid\-Rx\-Len}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} hid\-Rx\-Len}}\label{pic_u_s_b_8c_af7bb57deec874c793aae34290b358e41}
+
+
+Definition at line 76 of file pic\-U\-S\-B.\-c.
+
+\hypertarget{pic_u_s_b_8c_ae16622319c61882067048c564148ae16}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!in\-Ptr@{in\-Ptr}}
+\index{in\-Ptr@{in\-Ptr}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{in\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8}$\ast$ in\-Ptr}}\label{pic_u_s_b_8c_ae16622319c61882067048c564148ae16}
+
+
+Definition at line 70 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by In\-Data\-Stage(), and Out\-Data\-Stage().
+
+\hypertarget{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!out\-Ptr@{out\-Ptr}}
+\index{out\-Ptr@{out\-Ptr}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{out\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8}$\ast$ out\-Ptr}}\label{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}
+
+
+Definition at line 69 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by \-\_\-\-\_\-at(), In\-Data\-Stage(), Out\-Data\-Stage(), and Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8c_a8f6657264342ba68ae2efa649f018cf9}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!remote\-Wakeup@{remote\-Wakeup}}
+\index{remote\-Wakeup@{remote\-Wakeup}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{remote\-Wakeup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} remote\-Wakeup}}\label{pic_u_s_b_8c_a8f6657264342ba68ae2efa649f018cf9}
+
+
+Definition at line 53 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Bus\-Reset(), C\-D\-C\-\_\-init(), and init\-\_\-\-C\-D\-C().
+
+\hypertarget{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!request\-Handled@{request\-Handled}}
+\index{request\-Handled@{request\-Handled}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{request\-Handled}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} request\-Handled}}\label{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}
+
+
+Definition at line 67 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by \-\_\-\-\_\-at(), Process\-Standard\-Request(), and Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8c_af8db2005d4e92586c83a261bb869f135}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!self\-Powered@{self\-Powered}}
+\index{self\-Powered@{self\-Powered}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{self\-Powered}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} self\-Powered}}\label{pic_u_s_b_8c_af8db2005d4e92586c83a261bb869f135}
+
+
+Definition at line 55 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Bus\-Reset().
+
+\hypertarget{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{\index{pic\-U\-S\-B.\-c@{pic\-U\-S\-B.\-c}!w\-Count@{w\-Count}}
+\index{w\-Count@{w\-Count}!picUSB.c@{pic\-U\-S\-B.\-c}}
+\subsubsection[{w\-Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} w\-Count}}\label{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}
+
+
+Definition at line 71 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by \-\_\-\-\_\-at(), In\-Data\-Stage(), Out\-Data\-Stage(), Process\-Standard\-Request(), and Setup\-Stage().
+

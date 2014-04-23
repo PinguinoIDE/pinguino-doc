@@ -1,0 +1,1677 @@
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/fileio.c File Reference}
+\label{p8_2pinguino_2libraries_2sd_2fileio_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/fileio.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/fileio.\-c}}
+}
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$malloc.\-h$>$}\\*
+{\ttfamily \#include $<$sd/fileio.\-h$>$}\\*
+{\ttfamily \#include $<$sd/sdmmc.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_af053caa28c3846e3ea96509b7fb9e82d}{\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_abfeb8fcd27cd6a2e5a60a6d490e09996}{F\-O\-\_\-\-M\-B\-R}~0\-L
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ada232b05c8728901a80fb2b2f98b0fb1}{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-P}~0x1\-B\-E
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a4aab664a52485b0e434874ad1859ffb5}{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-T\-Y\-P\-E}~0x1\-C2
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ad7b1157180a64e11f743c2cc620654cd}{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-E\-C\-T}~0x1\-C6
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aace209212e98007d8326ee8693a4fa35}{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-I\-Z\-E}~0x1\-C\-A
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7969964918ef6b9822961bda8e61d2fe}{F\-O\-\_\-\-S\-I\-G\-N}~0x1\-F\-E
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a6546c12ad09d8a707d32a7d9bd3a0acc}{F\-A\-T\-\_\-\-E\-O\-F}~0xffff
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aae698dd430232a22a3d834105a617420}{F\-A\-T\-\_\-\-M\-C\-L\-S\-T}~0xfff8
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a445dcf32cf3282c36b52f196b17c675f}{B\-R\-\_\-\-S\-X\-C}~0xd
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a82026dea9c622a43fb7eb75de1d2a157}{B\-R\-\_\-\-R\-E\-S}~0xe
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ac8c38cace0621d8b40056257236e2893}{B\-R\-\_\-\-F\-A\-T\-\_\-\-S\-I\-Z\-E}~0x16
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1eeb9b6692e7c1a4ef7010098c0ff82b}{B\-R\-\_\-\-F\-A\-T\-\_\-\-C\-P\-Y}~0x10
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1558f87b898b948cb6935560b1e424fc}{B\-R\-\_\-\-M\-A\-X\-\_\-\-R\-O\-O\-T}~0x11
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1399e8a4edfa03198e73b139c3eec47b}{D\-I\-R\-\_\-\-N\-A\-M\-E}~0
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a9c3293aeffc3d77b35e40d5f43e84181}{D\-I\-R\-\_\-\-E\-X\-T}~8
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aa592e29c5a275b550f5a6d6065db8aad}{D\-I\-R\-\_\-\-A\-T\-T\-R\-I\-B}~11
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a9471c60b462ee08f9b427b6b69bcd0be}{D\-I\-R\-\_\-\-C\-T\-I\-M\-E}~14
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aa3d5521a146e910070f908e5c11d4f68}{D\-I\-R\-\_\-\-C\-D\-A\-T\-E}~16
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a35337b5fb420f67433d5255f4047a51c}{D\-I\-R\-\_\-\-A\-D\-A\-T\-E}~18
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a38fc3c977fa15820814c81f5e54eec92}{D\-I\-R\-\_\-\-T\-I\-M\-E}~22
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1414e63dda545c326862ec3e9e464552}{D\-I\-R\-\_\-\-D\-A\-T\-E}~24
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a0742ee26c9f8663e13e601a68d3b77f2}{D\-I\-R\-\_\-\-C\-L\-S\-T}~26
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aac52a71d47407de47c401baf9c827cdb}{D\-I\-R\-\_\-\-S\-I\-Z\-E}~28
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a69cef9ae7d8e3672a5a8194f3910dfef}{D\-I\-R\-\_\-\-E\-S\-I\-Z\-E}~32
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a656fe006524f6bfb2f63ab7578570dc9}{D\-I\-R\-\_\-\-D\-E\-L}~0x\-E5
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a91f26aee0bf76e8f186d565e23b64f75}{D\-I\-R\-\_\-\-E\-M\-P\-T\-Y}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_m_e_d_i_a}{M\-E\-D\-I\-A} $\ast$ \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a5e3ce5c604a13f189e763de37fab581f}{mount} (unsigned char pin)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ac87c06145b272705cfac7529b90e8f25}{unmount} (void)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7784bb8fe3548575ceaaf0bfdcf9701d}{read\-D\-I\-R} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp, unsigned entry)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a66261acd7af71bf44ec600465081a20a}{write\-D\-I\-R} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp, unsigned entry)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a5df8f3fb52e7aa741319e3ee55d999e5}{find\-D\-I\-R} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_acef3556d119a7ad248aee3e968f6f882}{new\-D\-I\-R} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a529f3dbb82d084c374d50f66c9e8d2d6}{read\-F\-A\-T} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp, unsigned ccls)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a8328b8a38f617e7484aedb335042f84e}{write\-F\-A\-T} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp, unsigned cls, unsigned v)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1648c2f15eef4cf931a5b43e4a51afd2}{next\-F\-A\-T} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp, unsigned n)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a4e5fcba44087d21084b9ddbd31d80576}{new\-F\-A\-T} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a11d8612e3cb3ffd3ad445b551ddf9cf0}{write\-D\-A\-T\-A} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ae31ee89e781d7295cf44ec09b91ff997}{read\-D\-A\-T\-A} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp)
+\item 
+\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$ \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_af2faf1920aa9be76c53d53e56e4d3294}{fopen\-M} (const char $\ast$filename, const char $\ast$mode)
+\item 
+char \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ab1f2b210f9cee32310d6ecce7a0c4e82}{fexists\-M} (const char $\ast$filename)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a21d0374eee09e515ba20f34f081090eb}{fread\-M} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp, void $\ast$dest, unsigned size)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a30f379054c024e5e3d4c59786f12a6ab}{fclose\-M} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ae049dce0e1bb5fdb79d7110e9dc72206}{fwrite\-M} (\hyperlink{struct_m_f_i_l_e}{M\-F\-I\-L\-E} $\ast$fp, void $\ast$src, unsigned count)
+\item 
+unsigned \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aac7b2f6f53be66b71a1c61c90e0d4e9f}{list\-T\-Y\-P\-E} (\hyperlink{struct_d_i_r_t_a_b_l_e}{D\-I\-R\-T\-A\-B\-L\-E} $\ast$list, int \hyperlink{p32_2include_2pinguino_2core_2macro_8h_affe776513b24d84b39af8ab0930fef7f}{max}, const char $\ast$ext)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_af053caa28c3846e3ea96509b7fb9e82d}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_af053caa28c3846e3ea96509b7fb9e82d}
+
+
+Definition at line 15 of file fileio.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a1eeb9b6692e7c1a4ef7010098c0ff82b}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!B\-R\-\_\-\-F\-A\-T\-\_\-\-C\-P\-Y@{B\-R\-\_\-\-F\-A\-T\-\_\-\-C\-P\-Y}}
+\index{B\-R\-\_\-\-F\-A\-T\-\_\-\-C\-P\-Y@{B\-R\-\_\-\-F\-A\-T\-\_\-\-C\-P\-Y}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{B\-R\-\_\-\-F\-A\-T\-\_\-\-C\-P\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-\_\-\-F\-A\-T\-\_\-\-C\-P\-Y~0x10}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a1eeb9b6692e7c1a4ef7010098c0ff82b}
+
+
+Definition at line 40 of file fileio.\-c.
+
+
+
+Referenced by mount().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_ac8c38cace0621d8b40056257236e2893}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!B\-R\-\_\-\-F\-A\-T\-\_\-\-S\-I\-Z\-E@{B\-R\-\_\-\-F\-A\-T\-\_\-\-S\-I\-Z\-E}}
+\index{B\-R\-\_\-\-F\-A\-T\-\_\-\-S\-I\-Z\-E@{B\-R\-\_\-\-F\-A\-T\-\_\-\-S\-I\-Z\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{B\-R\-\_\-\-F\-A\-T\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-\_\-\-F\-A\-T\-\_\-\-S\-I\-Z\-E~0x16}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_ac8c38cace0621d8b40056257236e2893}
+
+
+Definition at line 39 of file fileio.\-c.
+
+
+
+Referenced by mount().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a1558f87b898b948cb6935560b1e424fc}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!B\-R\-\_\-\-M\-A\-X\-\_\-\-R\-O\-O\-T@{B\-R\-\_\-\-M\-A\-X\-\_\-\-R\-O\-O\-T}}
+\index{B\-R\-\_\-\-M\-A\-X\-\_\-\-R\-O\-O\-T@{B\-R\-\_\-\-M\-A\-X\-\_\-\-R\-O\-O\-T}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{B\-R\-\_\-\-M\-A\-X\-\_\-\-R\-O\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-\_\-\-M\-A\-X\-\_\-\-R\-O\-O\-T~0x11}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a1558f87b898b948cb6935560b1e424fc}
+
+
+Definition at line 41 of file fileio.\-c.
+
+
+
+Referenced by mount().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a82026dea9c622a43fb7eb75de1d2a157}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!B\-R\-\_\-\-R\-E\-S@{B\-R\-\_\-\-R\-E\-S}}
+\index{B\-R\-\_\-\-R\-E\-S@{B\-R\-\_\-\-R\-E\-S}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{B\-R\-\_\-\-R\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-\_\-\-R\-E\-S~0xe}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a82026dea9c622a43fb7eb75de1d2a157}
+
+
+Definition at line 38 of file fileio.\-c.
+
+
+
+Referenced by mount().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a445dcf32cf3282c36b52f196b17c675f}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!B\-R\-\_\-\-S\-X\-C@{B\-R\-\_\-\-S\-X\-C}}
+\index{B\-R\-\_\-\-S\-X\-C@{B\-R\-\_\-\-S\-X\-C}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{B\-R\-\_\-\-S\-X\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-\_\-\-S\-X\-C~0xd}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a445dcf32cf3282c36b52f196b17c675f}
+
+
+Definition at line 37 of file fileio.\-c.
+
+
+
+Referenced by mount().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a35337b5fb420f67433d5255f4047a51c}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-A\-D\-A\-T\-E@{D\-I\-R\-\_\-\-A\-D\-A\-T\-E}}
+\index{D\-I\-R\-\_\-\-A\-D\-A\-T\-E@{D\-I\-R\-\_\-\-A\-D\-A\-T\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-A\-D\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-A\-D\-A\-T\-E~18}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a35337b5fb420f67433d5255f4047a51c}
+
+
+Definition at line 49 of file fileio.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_aa592e29c5a275b550f5a6d6065db8aad}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-A\-T\-T\-R\-I\-B@{D\-I\-R\-\_\-\-A\-T\-T\-R\-I\-B}}
+\index{D\-I\-R\-\_\-\-A\-T\-T\-R\-I\-B@{D\-I\-R\-\_\-\-A\-T\-T\-R\-I\-B}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-A\-T\-T\-R\-I\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-A\-T\-T\-R\-I\-B~11}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_aa592e29c5a275b550f5a6d6065db8aad}
+
+
+Definition at line 46 of file fileio.\-c.
+
+
+
+Referenced by find\-D\-I\-R(), fopen\-M(), and list\-T\-Y\-P\-E().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_aa3d5521a146e910070f908e5c11d4f68}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-C\-D\-A\-T\-E@{D\-I\-R\-\_\-\-C\-D\-A\-T\-E}}
+\index{D\-I\-R\-\_\-\-C\-D\-A\-T\-E@{D\-I\-R\-\_\-\-C\-D\-A\-T\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-C\-D\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-C\-D\-A\-T\-E~16}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_aa3d5521a146e910070f908e5c11d4f68}
+
+
+Definition at line 48 of file fileio.\-c.
+
+
+
+Referenced by fopen\-M().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a0742ee26c9f8663e13e601a68d3b77f2}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-C\-L\-S\-T@{D\-I\-R\-\_\-\-C\-L\-S\-T}}
+\index{D\-I\-R\-\_\-\-C\-L\-S\-T@{D\-I\-R\-\_\-\-C\-L\-S\-T}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-C\-L\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-C\-L\-S\-T~26}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a0742ee26c9f8663e13e601a68d3b77f2}
+
+
+Definition at line 52 of file fileio.\-c.
+
+
+
+Referenced by find\-D\-I\-R(), and fopen\-M().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a9471c60b462ee08f9b427b6b69bcd0be}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-C\-T\-I\-M\-E@{D\-I\-R\-\_\-\-C\-T\-I\-M\-E}}
+\index{D\-I\-R\-\_\-\-C\-T\-I\-M\-E@{D\-I\-R\-\_\-\-C\-T\-I\-M\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-C\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-C\-T\-I\-M\-E~14}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a9471c60b462ee08f9b427b6b69bcd0be}
+
+
+Definition at line 47 of file fileio.\-c.
+
+
+
+Referenced by fopen\-M().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a1414e63dda545c326862ec3e9e464552}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-D\-A\-T\-E@{D\-I\-R\-\_\-\-D\-A\-T\-E}}
+\index{D\-I\-R\-\_\-\-D\-A\-T\-E@{D\-I\-R\-\_\-\-D\-A\-T\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-D\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-D\-A\-T\-E~24}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a1414e63dda545c326862ec3e9e464552}
+
+
+Definition at line 51 of file fileio.\-c.
+
+
+
+Referenced by find\-D\-I\-R(), and fopen\-M().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a656fe006524f6bfb2f63ab7578570dc9}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-D\-E\-L@{D\-I\-R\-\_\-\-D\-E\-L}}
+\index{D\-I\-R\-\_\-\-D\-E\-L@{D\-I\-R\-\_\-\-D\-E\-L}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-D\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-D\-E\-L~0x\-E5}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a656fe006524f6bfb2f63ab7578570dc9}
+
+
+Definition at line 56 of file fileio.\-c.
+
+
+
+Referenced by find\-D\-I\-R(), list\-T\-Y\-P\-E(), and new\-D\-I\-R().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a91f26aee0bf76e8f186d565e23b64f75}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-E\-M\-P\-T\-Y@{D\-I\-R\-\_\-\-E\-M\-P\-T\-Y}}
+\index{D\-I\-R\-\_\-\-E\-M\-P\-T\-Y@{D\-I\-R\-\_\-\-E\-M\-P\-T\-Y}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-E\-M\-P\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-E\-M\-P\-T\-Y~0}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a91f26aee0bf76e8f186d565e23b64f75}
+
+
+Definition at line 57 of file fileio.\-c.
+
+
+
+Referenced by find\-D\-I\-R(), list\-T\-Y\-P\-E(), and new\-D\-I\-R().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a69cef9ae7d8e3672a5a8194f3910dfef}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-E\-S\-I\-Z\-E@{D\-I\-R\-\_\-\-E\-S\-I\-Z\-E}}
+\index{D\-I\-R\-\_\-\-E\-S\-I\-Z\-E@{D\-I\-R\-\_\-\-E\-S\-I\-Z\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-E\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-E\-S\-I\-Z\-E~32}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a69cef9ae7d8e3672a5a8194f3910dfef}
+
+
+Definition at line 54 of file fileio.\-c.
+
+
+
+Referenced by fclose\-M(), find\-D\-I\-R(), fopen\-M(), and new\-D\-I\-R().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a9c3293aeffc3d77b35e40d5f43e84181}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-E\-X\-T@{D\-I\-R\-\_\-\-E\-X\-T}}
+\index{D\-I\-R\-\_\-\-E\-X\-T@{D\-I\-R\-\_\-\-E\-X\-T}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-E\-X\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-E\-X\-T~8}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a9c3293aeffc3d77b35e40d5f43e84181}
+
+
+Definition at line 45 of file fileio.\-c.
+
+
+
+Referenced by list\-T\-Y\-P\-E().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a1399e8a4edfa03198e73b139c3eec47b}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-N\-A\-M\-E@{D\-I\-R\-\_\-\-N\-A\-M\-E}}
+\index{D\-I\-R\-\_\-\-N\-A\-M\-E@{D\-I\-R\-\_\-\-N\-A\-M\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-N\-A\-M\-E~0}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a1399e8a4edfa03198e73b139c3eec47b}
+
+
+Definition at line 44 of file fileio.\-c.
+
+
+
+Referenced by find\-D\-I\-R(), list\-T\-Y\-P\-E(), and new\-D\-I\-R().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_aac52a71d47407de47c401baf9c827cdb}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-S\-I\-Z\-E@{D\-I\-R\-\_\-\-S\-I\-Z\-E}}
+\index{D\-I\-R\-\_\-\-S\-I\-Z\-E@{D\-I\-R\-\_\-\-S\-I\-Z\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-S\-I\-Z\-E~28}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_aac52a71d47407de47c401baf9c827cdb}
+
+
+Definition at line 53 of file fileio.\-c.
+
+
+
+Referenced by fclose\-M(), find\-D\-I\-R(), and list\-T\-Y\-P\-E().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a38fc3c977fa15820814c81f5e54eec92}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!D\-I\-R\-\_\-\-T\-I\-M\-E@{D\-I\-R\-\_\-\-T\-I\-M\-E}}
+\index{D\-I\-R\-\_\-\-T\-I\-M\-E@{D\-I\-R\-\_\-\-T\-I\-M\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{D\-I\-R\-\_\-\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-T\-I\-M\-E~22}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a38fc3c977fa15820814c81f5e54eec92}
+
+
+Definition at line 50 of file fileio.\-c.
+
+
+
+Referenced by find\-D\-I\-R(), and fopen\-M().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a6546c12ad09d8a707d32a7d9bd3a0acc}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!F\-A\-T\-\_\-\-E\-O\-F@{F\-A\-T\-\_\-\-E\-O\-F}}
+\index{F\-A\-T\-\_\-\-E\-O\-F@{F\-A\-T\-\_\-\-E\-O\-F}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{F\-A\-T\-\_\-\-E\-O\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-T\-\_\-\-E\-O\-F~0xffff}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a6546c12ad09d8a707d32a7d9bd3a0acc}
+
+
+Definition at line 33 of file fileio.\-c.
+
+
+
+Referenced by new\-F\-A\-T(), and read\-F\-A\-T().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_aae698dd430232a22a3d834105a617420}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!F\-A\-T\-\_\-\-M\-C\-L\-S\-T@{F\-A\-T\-\_\-\-M\-C\-L\-S\-T}}
+\index{F\-A\-T\-\_\-\-M\-C\-L\-S\-T@{F\-A\-T\-\_\-\-M\-C\-L\-S\-T}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{F\-A\-T\-\_\-\-M\-C\-L\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-T\-\_\-\-M\-C\-L\-S\-T~0xfff8}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_aae698dd430232a22a3d834105a617420}
+
+
+Definition at line 34 of file fileio.\-c.
+
+
+
+Referenced by next\-F\-A\-T().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_ada232b05c8728901a80fb2b2f98b0fb1}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-P@{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-P}}
+\index{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-P@{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-P}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-P~0x1\-B\-E}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_ada232b05c8728901a80fb2b2f98b0fb1}
+
+
+Definition at line 27 of file fileio.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_ad7b1157180a64e11f743c2cc620654cd}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-E\-C\-T@{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-E\-C\-T}}
+\index{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-E\-C\-T@{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-E\-C\-T}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-E\-C\-T~0x1\-C6}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_ad7b1157180a64e11f743c2cc620654cd}
+
+
+Definition at line 29 of file fileio.\-c.
+
+
+
+Referenced by mount().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_aace209212e98007d8326ee8693a4fa35}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-I\-Z\-E@{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-I\-Z\-E}}
+\index{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-I\-Z\-E@{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-I\-Z\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-I\-Z\-E~0x1\-C\-A}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_aace209212e98007d8326ee8693a4fa35}
+
+
+Definition at line 30 of file fileio.\-c.
+
+
+
+Referenced by mount().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a4aab664a52485b0e434874ad1859ffb5}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-T\-Y\-P\-E@{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-T\-Y\-P\-E}}
+\index{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-T\-Y\-P\-E@{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-T\-Y\-P\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-T\-Y\-P\-E~0x1\-C2}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a4aab664a52485b0e434874ad1859ffb5}
+
+
+Definition at line 28 of file fileio.\-c.
+
+
+
+Referenced by mount().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_abfeb8fcd27cd6a2e5a60a6d490e09996}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!F\-O\-\_\-\-M\-B\-R@{F\-O\-\_\-\-M\-B\-R}}
+\index{F\-O\-\_\-\-M\-B\-R@{F\-O\-\_\-\-M\-B\-R}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{F\-O\-\_\-\-M\-B\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-O\-\_\-\-M\-B\-R~0\-L}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_abfeb8fcd27cd6a2e5a60a6d490e09996}
+
+
+Definition at line 26 of file fileio.\-c.
+
+
+
+Referenced by mount().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a7969964918ef6b9822961bda8e61d2fe}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!F\-O\-\_\-\-S\-I\-G\-N@{F\-O\-\_\-\-S\-I\-G\-N}}
+\index{F\-O\-\_\-\-S\-I\-G\-N@{F\-O\-\_\-\-S\-I\-G\-N}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{F\-O\-\_\-\-S\-I\-G\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-O\-\_\-\-S\-I\-G\-N~0x1\-F\-E}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a7969964918ef6b9822961bda8e61d2fe}
+
+
+Definition at line 31 of file fileio.\-c.
+
+
+
+Referenced by mount().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a30f379054c024e5e3d4c59786f12a6ab}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!fclose\-M@{fclose\-M}}
+\index{fclose\-M@{fclose\-M}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{fclose\-M}]{\setlength{\rightskip}{0pt plus 5cm}unsigned fclose\-M (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a30f379054c024e5e3d4c59786f12a6ab}
+
+
+Definition at line 886 of file fileio.\-c.
+
+
+
+References M\-F\-I\-L\-E\-::buffer, D\-I\-R\-\_\-\-E\-S\-I\-Z\-E, D\-I\-R\-\_\-\-S\-I\-Z\-E, M\-F\-I\-L\-E\-::entry, F\-A\-I\-L, M\-F\-I\-L\-E\-::mode, M\-F\-I\-L\-E\-::pos, read\-D\-I\-R(), M\-F\-I\-L\-E\-::size, T\-R\-U\-E, write\-D\-A\-T\-A(), and write\-D\-I\-R().
+
+
+\begin{DoxyCode}
+887 \{
+888     \textcolor{keywordtype}{unsigned} e, r;     
+889 
+890     r = \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};
+891 
+892     \textcolor{comment}{// 1. check if it was open for write}
+893     \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a000e34997df38c2005a83d63e67d9282}{mode} == \textcolor{charliteral}{'w'})   
+894     \{
+895         \textcolor{comment}{// 1.1 if the current buffer contains data, flush it}
+896         \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos} >0)
+897         \{   
+898             \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a11d8612e3cb3ffd3ad445b551ddf9cf0}{writeDATA}(fp))
+899                 \textcolor{keywordflow}{goto} ExitClose; 
+900         \} 
+901 
+902         \textcolor{comment}{// 1.2      finally update the dir entry, }
+903         \textcolor{comment}{// 1.2.1    retrive the dir sector}
+904         \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7784bb8fe3548575ceaaf0bfdcf9701d}{readDIR}(fp, fp->\hyperlink{struct_m_f_i_l_e_aca0461bffb12ab51bb48e6684f46dc43}{entry})) 
+905             \textcolor{keywordflow}{goto} ExitClose;
+906 
+907         \textcolor{comment}{// 1.2.2    determine position in DIR sector}
+908         e = (fp->\hyperlink{struct_m_f_i_l_e_aca0461bffb12ab51bb48e6684f46dc43}{entry} & 0xf) * \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a69cef9ae7d8e3672a5a8194f3910dfef}{DIR\_ESIZE};    
+909 
+910         \textcolor{comment}{// 1.2.3 update file size}
+911         fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aac52a71d47407de47c401baf9c827cdb}{DIR\_SIZE}]  = fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size};
+912         fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aac52a71d47407de47c401baf9c827cdb}{DIR\_SIZE}+1]= fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size}>>8;
+913         fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aac52a71d47407de47c401baf9c827cdb}{DIR\_SIZE}+2]= fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size}>>16;
+914         fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aac52a71d47407de47c401baf9c827cdb}{DIR\_SIZE}+3]= fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size}>>24;
+915 
+916         \textcolor{comment}{// 1.2.4    update the directory sector;}
+917         \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a66261acd7af71bf44ec600465081a20a}{writeDIR}(fp, fp->\hyperlink{struct_m_f_i_l_e_aca0461bffb12ab51bb48e6684f46dc43}{entry}))
+918             \textcolor{keywordflow}{goto} ExitClose;
+919     \} \textcolor{comment}{// write}
+920 
+921     \textcolor{comment}{// 2. exit with success}
+922     r = \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+923 
+924     ExitClose:        
+925 
+926     \textcolor{comment}{// 3. free up the buffer and the MFILE struct}
+927     free(fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer});
+928     free(fp);
+929     \textcolor{keywordflow}{return}(r);
+930 
+931 \} \textcolor{comment}{// fcloseM}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_ab1f2b210f9cee32310d6ecce7a0c4e82}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!fexists\-M@{fexists\-M}}
+\index{fexists\-M@{fexists\-M}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{fexists\-M}]{\setlength{\rightskip}{0pt plus 5cm}char fexists\-M (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_ab1f2b210f9cee32310d6ecce7a0c4e82}
+
+
+Definition at line 787 of file fileio.\-c.
+
+
+
+References F\-A\-L\-S\-E, fopen\-M(), and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+788 \{
+789     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_af2faf1920aa9be76c53d53e56e4d3294}{fopenM}(filename, \textcolor{stringliteral}{"r"}))
+790         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+791     \textcolor{keywordflow}{else}
+792         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+793 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a5df8f3fb52e7aa741319e3ee55d999e5}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!find\-D\-I\-R@{find\-D\-I\-R}}
+\index{find\-D\-I\-R@{find\-D\-I\-R}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{find\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}unsigned find\-D\-I\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a5df8f3fb52e7aa741319e3ee55d999e5}
+
+
+Definition at line 251 of file fileio.\-c.
+
+
+
+References A\-T\-T\-\_\-\-D\-I\-R, A\-T\-T\-\_\-\-H\-I\-D\-E, M\-F\-I\-L\-E\-::buffer, M\-F\-I\-L\-E\-::cluster, M\-F\-I\-L\-E\-::date, D\-I\-R\-\_\-\-A\-T\-T\-R\-I\-B, D\-I\-R\-\_\-\-C\-L\-S\-T, D\-I\-R\-\_\-\-D\-A\-T\-E, D\-I\-R\-\_\-\-D\-E\-L, D\-I\-R\-\_\-\-E\-M\-P\-T\-Y, D\-I\-R\-\_\-\-E\-S\-I\-Z\-E, D\-I\-R\-\_\-\-N\-A\-M\-E, D\-I\-R\-\_\-\-S\-I\-Z\-E, D\-I\-R\-\_\-\-T\-I\-M\-E, M\-F\-I\-L\-E\-::entry, F\-A\-I\-L, F\-O\-U\-N\-D, M\-E\-D\-I\-A\-::maxroot, M\-F\-I\-L\-E\-::mda, M\-F\-I\-L\-E\-::name, N\-O\-T\-\_\-\-F\-O\-U\-N\-D, read\-D\-I\-R(), Read\-L, Read\-W, M\-F\-I\-L\-E\-::size, and M\-F\-I\-L\-E\-::time.
+
+
+
+Referenced by fopen\-M().
+
+
+\begin{DoxyCode}
+252 \{
+253     \textcolor{keywordtype}{unsigned} eCount;            \textcolor{comment}{// current entry counter}
+254     \textcolor{keywordtype}{unsigned} e;                 \textcolor{comment}{// current entry offset }
+255     \textcolor{keywordtype}{int} i, a;             
+256     \hyperlink{struct_m_e_d_i_a}{MEDIA} *mda = fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda};
+257 
+258     \textcolor{comment}{// 1. start from the first entry}
+259     eCount = 0;
+260 
+261     \textcolor{comment}{// load the first sector of root}
+262     \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7784bb8fe3548575ceaaf0bfdcf9701d}{readDIR}(fp, eCount)) 
+263     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};
+264 
+265     \textcolor{comment}{// 2. loop until you reach the end or find the file}
+266     \textcolor{keywordflow}{while} (1)
+267     \{
+268     \textcolor{comment}{// 2.0 determine the offset in current buffer}
+269     e = (eCount&0xf) * \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a69cef9ae7d8e3672a5a8194f3910dfef}{DIR\_ESIZE};
+270 
+271     \textcolor{comment}{// 2.1 read the first char of the file name }
+272     a = fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1399e8a4edfa03198e73b139c3eec47b}{DIR\_NAME}]; 
+273 
+274     \textcolor{comment}{// 2.2 terminate if it is empty (end of the list)        }
+275     \textcolor{keywordflow}{if} (a == \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a91f26aee0bf76e8f186d565e23b64f75}{DIR\_EMPTY})
+276     \{
+277     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a33bfc1f995233887a0414369c36936b8}{NOT\_FOUND};
+278     \} \textcolor{comment}{// empty entry}
+279 
+280     \textcolor{comment}{// 2.3 skip erased entries if looking for a match}
+281     \textcolor{keywordflow}{if} (a != \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a656fe006524f6bfb2f63ab7578570dc9}{DIR\_DEL})
+282     \{
+283     \textcolor{comment}{// 2.3.1 if not VOLume or DIR compare the names}
+284     a = fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aa592e29c5a275b550f5a6d6065db8aad}{DIR\_ATTRIB}];
+285     \textcolor{keywordflow}{if} (!(a & (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_afd50fc85d6978a4442cbcda86e7a4d47}{ATT\_DIR} | \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ac8011665141082ab84d80f00fb4e66d2}{ATT\_HIDE})) )
+286     \{   
+287      \textcolor{comment}{// compare file name and extension}
+288      \textcolor{keywordflow}{for} (i=\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1399e8a4edfa03198e73b139c3eec47b}{DIR\_NAME}; i<\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aa592e29c5a275b550f5a6d6065db8aad}{DIR\_ATTRIB}; i++)
+289      \{
+290          \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + i] !=  fp->\hyperlink{struct_m_f_i_l_e_afb5f90328f746a429516e6c9b1a069e2}{name}[i])
+291               \textcolor{keywordflow}{break};  \textcolor{comment}{// difference found}
+292      \}
+293 
+294      \textcolor{keywordflow}{if} (i == DIR\_ATTRIB)
+295      \{
+296         \textcolor{comment}{// entry found, fill the file structure }
+297         fp->\hyperlink{struct_m_f_i_l_e_aca0461bffb12ab51bb48e6684f46dc43}{entry} = eCount;         \textcolor{comment}{// store index}
+298         fp->\hyperlink{struct_m_f_i_l_e_a9e291d833ba33b59d6063a0cd586a86b}{time} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a05105cc74388898b2be4ab11d2ba3375}{ReadW}(fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}, e+\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a38fc3c977fa15820814c81f5e54eec92}{DIR\_TIME});
+299         fp->\hyperlink{struct_m_f_i_l_e_aa5308fb86cfb276522804ceec15b7efe}{date} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a05105cc74388898b2be4ab11d2ba3375}{ReadW}(fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}, e+\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1414e63dda545c326862ec3e9e464552}{DIR\_DATE});
+300         fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2587e1fdf92ddc430e4f5355e84cdb38}{ReadL}(fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}, e+\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aac52a71d47407de47c401baf9c827cdb}{DIR\_SIZE});
+301         fp->\hyperlink{struct_m_f_i_l_e_a17846faf54d8f2b8a1dcf87afd2a9775}{cluster} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2587e1fdf92ddc430e4f5355e84cdb38}{ReadL}(fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}, e+\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a0742ee26c9f8663e13e601a68d3b77f2}{DIR\_CLST});
+302         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a841b291dedf074d07299e089dc0722e6}{FOUND};      
+303      \}
+304     \} \textcolor{comment}{// not dir nor vol}
+305     \} \textcolor{comment}{// not deleted}
+306 
+307     \textcolor{comment}{// 2.4 get the next entry}
+308     eCount++;
+309     \textcolor{keywordflow}{if} ((eCount & 0xf) == 0)
+310     \{   \textcolor{comment}{// load a new sector from the Dir}
+311     \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7784bb8fe3548575ceaaf0bfdcf9701d}{readDIR}(fp, eCount))
+312      \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL}; 
+313     \}
+314 
+315     \textcolor{comment}{//  2.5. exit the loop if reached the end or error}
+316     \textcolor{keywordflow}{if} (eCount >= mda->\hyperlink{struct_m_e_d_i_a_a78f14f8c25b8a0d73de86c9c96e068f9}{maxroot})
+317     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a33bfc1f995233887a0414369c36936b8}{NOT\_FOUND};       \textcolor{comment}{// last entry reached}
+318 
+319     \}\textcolor{comment}{// while }
+320 
+321 \} \textcolor{comment}{// findDIR}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_af2faf1920aa9be76c53d53e56e4d3294}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!fopen\-M@{fopen\-M}}
+\index{fopen\-M@{fopen\-M}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{fopen\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-F\-I\-L\-E}$\ast$ fopen\-M (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_af2faf1920aa9be76c53d53e56e4d3294}
+
+
+Definition at line 579 of file fileio.\-c.
+
+
+
+References A\-T\-T\-\_\-\-A\-R\-C, M\-F\-I\-L\-E\-::buffer, c, M\-F\-I\-L\-E\-::ccls, M\-F\-I\-L\-E\-::cluster, D, M\-F\-I\-L\-E\-::date, D\-I\-R\-\_\-\-A\-T\-T\-R\-I\-B, D\-I\-R\-\_\-\-C\-D\-A\-T\-E, D\-I\-R\-\_\-\-C\-L\-S\-T, D\-I\-R\-\_\-\-C\-T\-I\-M\-E, D\-I\-R\-\_\-\-D\-A\-T\-E, D\-I\-R\-\_\-\-E\-S\-I\-Z\-E, D\-I\-R\-\_\-\-T\-I\-M\-E, M\-F\-I\-L\-E\-::entry, F\-A\-I\-L, F\-E\-\_\-\-D\-I\-R\-\_\-\-F\-U\-L\-L, F\-E\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D, F\-E\-\_\-\-F\-I\-L\-E\-\_\-\-O\-V\-E\-R\-W\-R\-I\-T\-E, F\-E\-\_\-\-F\-I\-N\-D\-\_\-\-E\-R\-R\-O\-R, F\-E\-\_\-\-I\-D\-E\-\_\-\-E\-R\-R\-O\-R, F\-E\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-M\-O\-D\-E, F\-E\-\_\-\-M\-A\-L\-L\-O\-C\-\_\-\-F\-A\-I\-L\-E\-D, F\-E\-\_\-\-M\-E\-D\-I\-A\-\_\-\-F\-U\-L\-L, F\-E\-\_\-\-M\-E\-D\-I\-A\-\_\-\-N\-O\-T\-\_\-\-M\-N\-T\-D, F\-Error, find\-D\-I\-R(), if(), M\-F\-I\-L\-E\-::mda, M\-F\-I\-L\-E\-::mode, M\-F\-I\-L\-E\-::name, new\-D\-I\-R(), new\-F\-A\-T(), N\-O\-T\-\_\-\-F\-O\-U\-N\-D, N\-U\-L\-L, M\-F\-I\-L\-E\-::pos, read\-D\-A\-T\-A(), M\-F\-I\-L\-E\-::sec, M\-F\-I\-L\-E\-::seek, M\-F\-I\-L\-E\-::size, M\-F\-I\-L\-E\-::time, M\-F\-I\-L\-E\-::top, toupper(), T\-R\-U\-E, and write\-D\-I\-R().
+
+
+
+Referenced by fexists\-M().
+
+
+\begin{DoxyCode}
+580 \{
+581     \textcolor{keywordtype}{char} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+582     \textcolor{keywordtype}{int} i, r, e;
+583     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *b;       
+584     \hyperlink{struct_m_f_i_l_e}{MFILE} *fp;              
+585 
+586     \textcolor{comment}{// 1.  check if storage device is mounted }
+587     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D} == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})       \textcolor{comment}{// unmounted}
+588     \{
+589         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_adbe9e01457dbc7e83e9cbb099006d9be}{FE\_MEDIA\_NOT\_MNTD};
+590         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+591     \}
+592 
+593     \textcolor{comment}{// 2. allocate a buffer for the file}
+594     b = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)malloc(512);
+595     \textcolor{keywordflow}{if} (b == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+596     \{   
+597         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ad3117d88498c65662b3caebb1b712448}{FE\_MALLOC\_FAILED};
+598         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+599     \}
+600 
+601     \textcolor{comment}{// 3. allocate a MFILE structure on the heap}
+602     fp = (\hyperlink{struct_m_f_i_l_e}{MFILE} *) malloc(\textcolor{keyword}{sizeof}(\hyperlink{struct_m_f_i_l_e}{MFILE}));
+603     \textcolor{keywordflow}{if} (fp == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})            \textcolor{comment}{// report an error  }
+604     \{   
+605         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ad3117d88498c65662b3caebb1b712448}{FE\_MALLOC\_FAILED};
+606         free(b);
+607         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+608     \}
+609 
+610     \textcolor{comment}{// 4. set pointers to the MEDIA structure and buffer}
+611     fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D};
+612     fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer} = b;
+613 
+614     \textcolor{comment}{// 5. format the filename into name }
+615     \textcolor{keywordflow}{for}(i=0; i<8; i++)
+616     \{
+617         \textcolor{comment}{// read a char and convert to upper case}
+618         c = \hyperlink{ctype_8c_a2b06f7950350fbc418d294217b273888}{toupper}(*filename++);      
+619         \textcolor{comment}{// extension or short name no-extension}
+620         \textcolor{keywordflow}{if} ((c == \textcolor{charliteral}{'.'}) || (c == \textcolor{charliteral}{'\(\backslash\)0'}))
+621             \textcolor{keywordflow}{break};
+622         \textcolor{keywordflow}{else} 
+623             fp->\hyperlink{struct_m_f_i_l_e_afb5f90328f746a429516e6c9b1a069e2}{name}[i] = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+624     \} \textcolor{comment}{// for}
+625     \textcolor{comment}{// if short fill the rest up to 8 with spaces}
+626     \textcolor{keywordflow}{while} (i<8) fp->\hyperlink{struct_m_f_i_l_e_afb5f90328f746a429516e6c9b1a069e2}{name}[i++] = \textcolor{charliteral}{' '};
+627 
+628     \textcolor{comment}{// 6. if there is an extension}
+629     \textcolor{keywordflow}{if} (c != \textcolor{charliteral}{'\(\backslash\)0'}) 
+630     \{    
+631         \textcolor{keywordflow}{for}(i=8; i<11; i++)
+632         \{
+633             \textcolor{comment}{// read a char and convert to upper case}
+634             c = \hyperlink{ctype_8c_a2b06f7950350fbc418d294217b273888}{toupper}(*filename++);      
+635             \textcolor{keywordflow}{if} (c == \textcolor{charliteral}{'.'})
+636                 c = \hyperlink{ctype_8c_a2b06f7950350fbc418d294217b273888}{toupper}(*filename++);
+637             \textcolor{keywordflow}{if} (c == \textcolor{charliteral}{'\(\backslash\)0'})                 \textcolor{comment}{// short extension}
+638                 \textcolor{keywordflow}{break};
+639             \textcolor{keywordflow}{else} 
+640                 fp->\hyperlink{struct_m_f_i_l_e_afb5f90328f746a429516e6c9b1a069e2}{name}[i] = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+641         \} \textcolor{comment}{// for}
+642         \textcolor{comment}{// if short fill the rest up to 3 with spaces}
+643         \textcolor{keywordflow}{while} (i<11) fp->\hyperlink{struct_m_f_i_l_e_afb5f90328f746a429516e6c9b1a069e2}{name}[i++] = \textcolor{charliteral}{' '};
+644     \} \textcolor{comment}{// if}
+645 
+646     \textcolor{comment}{// 7. copy the file mode character  (r, w) }
+647     \textcolor{keywordflow}{if} ((*mode == \textcolor{charliteral}{'r'})||(*mode == \textcolor{charliteral}{'w'}))
+648         fp->\hyperlink{struct_m_f_i_l_e_a000e34997df38c2005a83d63e67d9282}{mode} = *mode;
+649     \textcolor{keywordflow}{else}
+650     \{ 
+651         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a92ae8c2d819b95c43dc84a46df998786}{FE\_INVALID\_MODE};
+652         \textcolor{keywordflow}{goto} ExitOpen;
+653     \}
+654 
+655     \textcolor{comment}{// 8. Search for the file in current directory}
+656     \textcolor{keywordflow}{if} ((r = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a5df8f3fb52e7aa741319e3ee55d999e5}{findDIR}(fp)) == \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL})
+657     \{ 
+658         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_aa0e109b5541339105e26e766f912b3cf}{FE\_FIND\_ERROR};
+659         \textcolor{keywordflow}{goto} ExitOpen;
+660     \}
+661 
+662     \textcolor{comment}{// 9. init all counters to the beginning of the file}
+663     fp->\hyperlink{struct_m_f_i_l_e_ae9fff3db126e97d7628ae0cf472e47b7}{seek} = 0;               \textcolor{comment}{// first byte in file}
+664     fp->\hyperlink{struct_m_f_i_l_e_a2080d32eab8db36848f7e4af7976dd84}{sec} = 0;                \textcolor{comment}{// first sector in the cluster}
+665     fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos} = 0;                \textcolor{comment}{// first byte in sector/cluster}
+666 
+667     \textcolor{comment}{// 10. depending on the mode (read or write) }
+668     \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a000e34997df38c2005a83d63e67d9282}{mode} == \textcolor{charliteral}{'r'}) 
+669     \{   \textcolor{comment}{// 10.1 'r' open for reading}
+670         \textcolor{keywordflow}{if}  (r == \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a33bfc1f995233887a0414369c36936b8}{NOT\_FOUND})
+671         \{
+672             \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_acc86c01bb99ff5c3dc6e684a1295f743}{FE\_FILE\_NOT\_FOUND};
+673             \textcolor{keywordflow}{goto} ExitOpen;
+674         \}
+675         \textcolor{keywordflow}{else}
+676         \{  \textcolor{comment}{// found             }
+677             \textcolor{comment}{// 10.2 set current cluster pointer on first cluster}
+678             fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls} = fp->\hyperlink{struct_m_f_i_l_e_a17846faf54d8f2b8a1dcf87afd2a9775}{cluster};     
+679 
+680             \textcolor{comment}{// 10.3 read a sector of data from the file}
+681             \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ae31ee89e781d7295cf44ec09b91ff997}{readDATA}(fp))
+682             \{
+683                 \textcolor{keywordflow}{goto} ExitOpen;
+684             \}
+685 
+686             \textcolor{comment}{// 10.4 determine how much data is really inside buffer}
+687             \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size}-fp->\hyperlink{struct_m_f_i_l_e_ae9fff3db126e97d7628ae0cf472e47b7}{seek} < 512)
+688                 fp->\hyperlink{struct_m_f_i_l_e_a5c1244c5c185fad943dea5b4ffb5cef5}{top} = fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size} - fp->\hyperlink{struct_m_f_i_l_e_ae9fff3db126e97d7628ae0cf472e47b7}{seek};
+689             \textcolor{keywordflow}{else}
+690                 fp->\hyperlink{struct_m_f_i_l_e_a5c1244c5c185fad943dea5b4ffb5cef5}{top} = 512;
+691         \} \textcolor{comment}{// found}
+692     \} \textcolor{comment}{// 'r' }
+693     \textcolor{keywordflow}{else} \textcolor{comment}{// 11.  open for 'write'}
+694     \{ 
+695         \textcolor{keywordflow}{if}  (r == \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a33bfc1f995233887a0414369c36936b8}{NOT\_FOUND})
+696         \{
+697             \textcolor{comment}{// 11.1 allocate a first cluster to it}
+698             fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls} = 0;            \textcolor{comment}{// indicate brand new file}
+699             \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a4e5fcba44087d21084b9ddbd31d80576}{newFAT}(fp) != \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})
+700             \{ \textcolor{comment}{// must be media full }
+701                 \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a1bed5082c8cee14ed40b23bd4610143f}{FE\_MEDIA\_FULL};
+702                 \textcolor{keywordflow}{goto} ExitOpen;
+703             \}
+704             fp->\hyperlink{struct_m_f_i_l_e_a17846faf54d8f2b8a1dcf87afd2a9775}{cluster} = fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls}; 
+705 
+706             \textcolor{comment}{// 11.2 create a new entry}
+707             \textcolor{comment}{// search again, for an empty entry this time}
+708             \textcolor{keywordflow}{if} ((r = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_acef3556d119a7ad248aee3e968f6f882}{newDIR}(fp)) == \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL})           
+709             \{   \textcolor{comment}{// report any error}
+710                 \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a367a94f3f6718e1964bfadd2c083cabd}{FE\_IDE\_ERROR};
+711                 \textcolor{keywordflow}{goto} ExitOpen;
+712             \}
+713             \textcolor{comment}{// 11.3 new entry not found }
+714             \textcolor{keywordflow}{if} (r == \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a33bfc1f995233887a0414369c36936b8}{NOT\_FOUND})
+715             \{ 
+716                 \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ad831be1334033a800973b391d6195e4e}{FE\_DIR\_FULL};
+717                 \textcolor{keywordflow}{goto} ExitOpen;
+718             \}
+719             \textcolor{keywordflow}{else} \textcolor{comment}{// 11.4 new entry identified fp->entry filled }
+720             \{
+721                 \textcolor{comment}{// 11.4.1}
+722                 fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size} = 0;
+723 
+724                 \textcolor{comment}{// 11.4.2    determine offset in DIR sector}
+725                 e = (fp->\hyperlink{struct_m_f_i_l_e_aca0461bffb12ab51bb48e6684f46dc43}{entry} & 0xf) * \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a69cef9ae7d8e3672a5a8194f3910dfef}{DIR\_ESIZE};    
+726 
+727                 \textcolor{comment}{// 11.4.3 init all fields to 0}
+728                 \textcolor{keywordflow}{for} (i=0; i<32; i++)
+729                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + i]  = 0;
+730 
+731                 \textcolor{comment}{// 11.4.4 set date and time}
+732                 fp->\hyperlink{struct_m_f_i_l_e_aa5308fb86cfb276522804ceec15b7efe}{date} = 0x378A; \textcolor{comment}{// Dec 10th, 2007}
+733                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aa3d5521a146e910070f908e5c11d4f68}{DIR\_CDATE}]  = fp->\hyperlink{struct_m_f_i_l_e_aa5308fb86cfb276522804ceec15b7efe}{date};
+734                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aa3d5521a146e910070f908e5c11d4f68}{DIR\_CDATE}+1]= fp->\hyperlink{struct_m_f_i_l_e_aa5308fb86cfb276522804ceec15b7efe}{date}>>8;
+735                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1414e63dda545c326862ec3e9e464552}{DIR\_DATE}]  = fp->\hyperlink{struct_m_f_i_l_e_aa5308fb86cfb276522804ceec15b7efe}{date};
+736                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1414e63dda545c326862ec3e9e464552}{DIR\_DATE}+1]= fp->\hyperlink{struct_m_f_i_l_e_aa5308fb86cfb276522804ceec15b7efe}{date}>>8;
+737 
+738                 fp->\hyperlink{struct_m_f_i_l_e_a9e291d833ba33b59d6063a0cd586a86b}{time} = 0x6000; \textcolor{comment}{// 12:00:00 PM}
+739                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a9471c60b462ee08f9b427b6b69bcd0be}{DIR\_CTIME}]  = fp->\hyperlink{struct_m_f_i_l_e_a9e291d833ba33b59d6063a0cd586a86b}{time};
+740                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a9471c60b462ee08f9b427b6b69bcd0be}{DIR\_CTIME}+1]= fp->\hyperlink{struct_m_f_i_l_e_a9e291d833ba33b59d6063a0cd586a86b}{time}>>8;
+741                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a38fc3c977fa15820814c81f5e54eec92}{DIR\_TIME}]  = fp->\hyperlink{struct_m_f_i_l_e_a9e291d833ba33b59d6063a0cd586a86b}{time}+1;
+742                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a38fc3c977fa15820814c81f5e54eec92}{DIR\_TIME}+1]= fp->\hyperlink{struct_m_f_i_l_e_a9e291d833ba33b59d6063a0cd586a86b}{time}>>8;
+743 
+744                 \textcolor{comment}{// 11.4.5 set first cluster}
+745                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a0742ee26c9f8663e13e601a68d3b77f2}{DIR\_CLST}]  = fp->\hyperlink{struct_m_f_i_l_e_a17846faf54d8f2b8a1dcf87afd2a9775}{cluster};
+746                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a0742ee26c9f8663e13e601a68d3b77f2}{DIR\_CLST}+1]= (fp->\hyperlink{struct_m_f_i_l_e_a17846faf54d8f2b8a1dcf87afd2a9775}{cluster}>>8);
+747 
+748                 \textcolor{comment}{// 11.4.6 set name}
+749                 \textcolor{keywordflow}{for} (i = 0; i<\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aa592e29c5a275b550f5a6d6065db8aad}{DIR\_ATTRIB}; i++)
+750                   fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + i] = fp->\hyperlink{struct_m_f_i_l_e_afb5f90328f746a429516e6c9b1a069e2}{name}[i];
+751 
+752                 \textcolor{comment}{// 11.4.7 set attrib}
+753                 fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + DIR\_ATTRIB] = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ab485a7cde029de184115f996e41f63e3}{ATT\_ARC};
+754 
+755                 \textcolor{comment}{// 11.4.8  update the directory sector;}
+756                 \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_af84ca11bf86c56a1f74027a99d48218d}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a66261acd7af71bf44ec600465081a20a}{writeDIR}(fp, fp->\hyperlink{struct_m_f_i_l_e_aca0461bffb12ab51bb48e6684f46dc43}{entry}))
+757                 \{
+758                   \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a367a94f3f6718e1964bfadd2c083cabd}{FE\_IDE\_ERROR};
+759                   \textcolor{keywordflow}{goto} ExitOpen;
+760                 \}
+761             \} \textcolor{comment}{// new entry}
+762         \} \textcolor{comment}{// not found}
+763         \textcolor{keywordflow}{else} \textcolor{comment}{// file exist already, report error}
+764         \{
+765             \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a663b7a77ce6d0d51fd388ee0296228be}{FE\_FILE\_OVERWRITE};
+766             \textcolor{keywordflow}{goto} ExitOpen;
+767         \}
+768     \} \textcolor{comment}{// w request}
+769 
+770     \textcolor{comment}{// 12. Exit with success    }
+771     \textcolor{keywordflow}{return} fp;
+772 
+773     \textcolor{comment}{// 13. Exit with error}
+774     ExitOpen:
+775     free(fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}); 
+776     free(fp);
+777     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+778 
+779 \} \textcolor{comment}{// fopenM}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a21d0374eee09e515ba20f34f081090eb}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!fread\-M@{fread\-M}}
+\index{fread\-M@{fread\-M}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{fread\-M}]{\setlength{\rightskip}{0pt plus 5cm}unsigned fread\-M (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp, }
+\item[{void $\ast$}]{dest, }
+\item[{unsigned}]{size}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a21d0374eee09e515ba20f34f081090eb}
+
+
+Definition at line 806 of file fileio.\-c.
+
+
+
+References M\-F\-I\-L\-E\-::buffer, F\-E\-\_\-\-E\-O\-F, F\-E\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-F\-I\-L\-E, F\-Error, M\-F\-I\-L\-E\-::mda, M\-F\-I\-L\-E\-::mode, next\-F\-A\-T(), M\-F\-I\-L\-E\-::pos, read\-D\-A\-T\-A(), M\-F\-I\-L\-E\-::sec, M\-F\-I\-L\-E\-::seek, M\-F\-I\-L\-E\-::size, M\-E\-D\-I\-A\-::sxc, and M\-F\-I\-L\-E\-::top.
+
+
+\begin{DoxyCode}
+807 \{
+808     \hyperlink{struct_m_e_d_i_a}{MEDIA} * mda = fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda};      
+809     \textcolor{keywordtype}{unsigned} count=size;        \textcolor{comment}{// counts bytes to be transfer}
+810     \textcolor{keywordtype}{unsigned} len;          
+811 
+812 
+813     \textcolor{comment}{// 1. check if fp points to a valid open file structure}
+814     \textcolor{keywordflow}{if} ((fp->\hyperlink{struct_m_f_i_l_e_a000e34997df38c2005a83d63e67d9282}{mode} != \textcolor{charliteral}{'r'})) 
+815     \{   \textcolor{comment}{// invalid file or not open in read mode}
+816         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_afd008abf4497f9ce222fe06c63159844}{FE\_INVALID\_FILE}; 
+817         \textcolor{keywordflow}{return} 0;
+818     \}
+819 
+820     \textcolor{comment}{// 2. loop to transfer the data}
+821     \textcolor{keywordflow}{while} (count>0)
+822     \{               
+823 
+824         \textcolor{comment}{// 2.1 check if EOF reached }
+825         \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_ae9fff3db126e97d7628ae0cf472e47b7}{seek} >= fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size})
+826         \{
+827             \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ac234cc388a644ba27688e59cb14ce7df}{FE\_EOF};  \textcolor{comment}{// reached the end}
+828             \textcolor{keywordflow}{break};
+829         \}
+830 
+831         \textcolor{comment}{// 2.2 load a new sector if necessary}
+832         \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos} == fp->\hyperlink{struct_m_f_i_l_e_a5c1244c5c185fad943dea5b4ffb5cef5}{top}) 
+833         \{   
+834             fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos} = 0;
+835             fp->\hyperlink{struct_m_f_i_l_e_a2080d32eab8db36848f7e4af7976dd84}{sec}++;
+836 
+837             \textcolor{comment}{// 2.2.1 get a new cluster if necessary}
+838             \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a2080d32eab8db36848f7e4af7976dd84}{sec} == mda->\hyperlink{struct_m_e_d_i_a_ac9daa97bcbd38f1fda0f357dfa22aaa7}{sxc})
+839             \{
+840                 fp->\hyperlink{struct_m_f_i_l_e_a2080d32eab8db36848f7e4af7976dd84}{sec} = 0;
+841                 \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1648c2f15eef4cf931a5b43e4a51afd2}{nextFAT}(fp, 1))
+842                     \textcolor{keywordflow}{break};
+843             \}
+844 
+845             \textcolor{comment}{// 2.2.2 load a sector of data}
+846             \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ae31ee89e781d7295cf44ec09b91ff997}{readDATA}(fp))
+847                 \textcolor{keywordflow}{break}; 
+848 
+849             \textcolor{comment}{// 2.2.3 determine how much data is inside buffer}
+850             \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size}-fp->\hyperlink{struct_m_f_i_l_e_ae9fff3db126e97d7628ae0cf472e47b7}{seek} < 512)
+851                 fp->\hyperlink{struct_m_f_i_l_e_a5c1244c5c185fad943dea5b4ffb5cef5}{top} = fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size} - fp->\hyperlink{struct_m_f_i_l_e_ae9fff3db126e97d7628ae0cf472e47b7}{seek};
+852             \textcolor{keywordflow}{else}
+853                 fp->\hyperlink{struct_m_f_i_l_e_a5c1244c5c185fad943dea5b4ffb5cef5}{top} = 512;
+854 
+855         \} \textcolor{comment}{//  load new sector}
+856 
+857         \textcolor{comment}{// 2.3 copy as many bytes as possible in a single chunk}
+858         \textcolor{comment}{// take as much as fits in the current sector}
+859         \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos}+count < fp->top)
+860         \textcolor{comment}{// fits all in current sector}
+861             len = count;          
+862         \textcolor{keywordflow}{else} 
+863         \textcolor{comment}{// take a first chunk, there is more}
+864             len = fp->\hyperlink{struct_m_f_i_l_e_a5c1244c5c185fad943dea5b4ffb5cef5}{top} - fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos};    
+865 
+866         memcpy(dest, fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer} + fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos}, len);
+867 
+868         \textcolor{comment}{// 2.4 update all counters and pointers}
+869         count-= len;            \textcolor{comment}{// compute what is left}
+870         dest += len;            \textcolor{comment}{// advance destination pointer}
+871         fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos} += len;         \textcolor{comment}{// advance pointer in sector}
+872         fp->\hyperlink{struct_m_f_i_l_e_ae9fff3db126e97d7628ae0cf472e47b7}{seek} += len;        \textcolor{comment}{// advance the seek pointer}
+873 
+874     \} \textcolor{comment}{// while count}
+875 
+876     \textcolor{comment}{// 3. return number of bytes actually transferred }
+877     \textcolor{keywordflow}{return} size-count;
+878 
+879 \} \textcolor{comment}{// freadM}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_ae049dce0e1bb5fdb79d7110e9dc72206}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!fwrite\-M@{fwrite\-M}}
+\index{fwrite\-M@{fwrite\-M}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{fwrite\-M}]{\setlength{\rightskip}{0pt plus 5cm}unsigned fwrite\-M (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp, }
+\item[{void $\ast$}]{src, }
+\item[{unsigned}]{count}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_ae049dce0e1bb5fdb79d7110e9dc72206}
+
+
+Definition at line 940 of file fileio.\-c.
+
+
+
+References M\-F\-I\-L\-E\-::buffer, F\-A\-I\-L, F\-E\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-F\-I\-L\-E, F\-Error, M\-F\-I\-L\-E\-::mda, M\-F\-I\-L\-E\-::mode, new\-F\-A\-T(), M\-F\-I\-L\-E\-::pos, M\-F\-I\-L\-E\-::sec, M\-F\-I\-L\-E\-::seek, M\-F\-I\-L\-E\-::size, M\-E\-D\-I\-A\-::sxc, and write\-D\-A\-T\-A().
+
+
+\begin{DoxyCode}
+941 \{
+942     \hyperlink{struct_m_e_d_i_a}{MEDIA} *mda = fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda};
+943     \textcolor{keywordtype}{unsigned} len, size = count;
+944 
+945     \textcolor{comment}{// 1.  check if file is open}
+946     \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a000e34997df38c2005a83d63e67d9282}{mode} != \textcolor{charliteral}{'w'}) 
+947     \{   \textcolor{comment}{// file not valid or not open for writing}
+948         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_afd008abf4497f9ce222fe06c63159844}{FE\_INVALID\_FILE}; 
+949         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};
+950     \}
+951 
+952     \textcolor{comment}{// 2. loop writing count bytes }
+953     \textcolor{keywordflow}{while} (count>0)
+954     \{               
+955         \textcolor{comment}{// 2.1 copy as many bytes at a time as possible}
+956         \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos} + count < 512)
+957             len = count;
+958         \textcolor{keywordflow}{else} 
+959             len = 512 - fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos} ;
+960 
+961         memcpy(fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}+ fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos}, src, len);
+962 
+963         \textcolor{comment}{// 2.2 update all pointers and counters}
+964         fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos}+=len;       \textcolor{comment}{// advance buffer position}
+965         fp->\hyperlink{struct_m_f_i_l_e_ae9fff3db126e97d7628ae0cf472e47b7}{seek}+=len;      \textcolor{comment}{// count the added bytes}
+966         count-=len;         \textcolor{comment}{// update the counter}
+967         src+=len;           \textcolor{comment}{// advance the source pointer}
+968 
+969         \textcolor{comment}{// 2.3 update the file size too}
+970         \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_ae9fff3db126e97d7628ae0cf472e47b7}{seek} > fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size})
+971             fp->\hyperlink{struct_m_f_i_l_e_a439227feff9d7f55384e8780cfc2eb82}{size} = fp->\hyperlink{struct_m_f_i_l_e_ae9fff3db126e97d7628ae0cf472e47b7}{seek};
+972 
+973         \textcolor{comment}{// 2.4 if buffer full, write buffer to current sector }
+974         \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos} == 512) 
+975         \{   
+976             \textcolor{comment}{// 2.4.1 write buffer full of data}
+977             \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a11d8612e3cb3ffd3ad445b551ddf9cf0}{writeDATA}(fp))
+978                 \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};
+979 
+980             \textcolor{comment}{// 2.4.2 advance to next sector in cluster }
+981             fp->\hyperlink{struct_m_f_i_l_e_a23444e2bb0bb33d50004192d64be2590}{pos} = 0;
+982             fp->\hyperlink{struct_m_f_i_l_e_a2080d32eab8db36848f7e4af7976dd84}{sec}++;
+983 
+984             \textcolor{comment}{// 2.4.3 get a new cluster if necessary}
+985             \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a2080d32eab8db36848f7e4af7976dd84}{sec} == mda->\hyperlink{struct_m_e_d_i_a_ac9daa97bcbd38f1fda0f357dfa22aaa7}{sxc})
+986             \{
+987                 fp->\hyperlink{struct_m_f_i_l_e_a2080d32eab8db36848f7e4af7976dd84}{sec} = 0;
+988                 \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a4e5fcba44087d21084b9ddbd31d80576}{newFAT}(fp)== \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL})
+989                     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};
+990             \}
+991         \} \textcolor{comment}{//  store sector}
+992     \} \textcolor{comment}{// while count}
+993 
+994     \textcolor{comment}{// 3.  number of bytes actually written }
+995     \textcolor{keywordflow}{return} size-count;
+996 \} \textcolor{comment}{// fwriteM}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_aac7b2f6f53be66b71a1c61c90e0d4e9f}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!list\-T\-Y\-P\-E@{list\-T\-Y\-P\-E}}
+\index{list\-T\-Y\-P\-E@{list\-T\-Y\-P\-E}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{list\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}unsigned list\-T\-Y\-P\-E (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-I\-R\-T\-A\-B\-L\-E} $\ast$}]{list, }
+\item[{int}]{max, }
+\item[{const char $\ast$}]{ext}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_aac7b2f6f53be66b71a1c61c90e0d4e9f}
+
+
+Definition at line 1007 of file fileio.\-c.
+
+
+\begin{DoxyCode}
+1009 \{
+1010     \textcolor{keywordtype}{unsigned} eCount;        \textcolor{comment}{// current entry counter}
+1011     \textcolor{keywordtype}{unsigned} eOffs;         \textcolor{comment}{// current entry offset in buffer}
+1012     \textcolor{keywordtype}{unsigned} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, a, r;             
+1013     \hyperlink{struct_m_f_i_l_e}{MFILE} *fp;
+1014     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *b;
+1015 
+1016     x = 0;
+1017     r = 0;
+1018 
+1019     \textcolor{comment}{// 1.  check if storage device is mounted }
+1020     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D} == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})         \textcolor{comment}{// unmounted}
+1021     \{
+1022         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_adbe9e01457dbc7e83e9cbb099006d9be}{FE\_MEDIA\_NOT\_MNTD};
+1023         \textcolor{keywordflow}{return} 0;
+1024     \}
+1025 
+1026     \textcolor{comment}{// 2. allocate a buffer (blocks of 512 bytes) for the file}
+1027     b = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)malloc(512);
+1028     \textcolor{keywordflow}{if} (b == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+1029     \{   
+1030         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ad3117d88498c65662b3caebb1b712448}{FE\_MALLOC\_FAILED};
+1031         \textcolor{keywordflow}{return} 0;
+1032     \}
+1033 
+1034     \textcolor{comment}{// 3. allocate a MFILE structure on the heap}
+1035     fp = (\hyperlink{struct_m_f_i_l_e}{MFILE} *) malloc(\textcolor{keyword}{sizeof}(\hyperlink{struct_m_f_i_l_e}{MFILE}));
+1036     \textcolor{keywordflow}{if} (fp == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})        
+1037     \{   
+1038         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ad3117d88498c65662b3caebb1b712448}{FE\_MALLOC\_FAILED};
+1039         free(b);
+1040         \textcolor{keywordflow}{return} 0;
+1041     \}
+1042 
+1043     \textcolor{comment}{// 4. set pointers to the MEDIA structure and buffer}
+1044     fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D};
+1045     fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer} = b;
+1046 
+1047     \textcolor{comment}{// 5. start from first entry, load first sector from root}
+1048     eCount = 0;
+1049     eOffs = 0;
+1050     \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7784bb8fe3548575ceaaf0bfdcf9701d}{readDIR}(fp, eCount))
+1051     \{    \textcolor{comment}{//report error}
+1052         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_aa0e109b5541339105e26e766f912b3cf}{FE\_FIND\_ERROR};
+1053         \textcolor{keywordflow}{goto} ListExit;
+1054     \}
+1055     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7784bb8fe3548575ceaaf0bfdcf9701d}{readDIR}(fp, eCount);
+1056 
+1057     \textcolor{comment}{// 6. loop until you reach the end of the root directory}
+1058     \textcolor{keywordflow}{while} (\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})
+1059     \{
+1060         \textcolor{comment}{// 6.1 read the first char of the file name }
+1061         a =  fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[eOffs + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1399e8a4edfa03198e73b139c3eec47b}{DIR\_NAME}]; 
+1062 
+1063         \textcolor{comment}{// 6.2 terminate if it is empty (end of the list)        }
+1064         \textcolor{keywordflow}{if} (a == \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a91f26aee0bf76e8f186d565e23b64f75}{DIR\_EMPTY}) \textcolor{comment}{// 0}
+1065             \textcolor{keywordflow}{break};
+1066 
+1067         \textcolor{comment}{// 6.3 }
+1068         \textcolor{keywordflow}{if} (a != \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a656fe006524f6bfb2f63ab7578570dc9}{DIR\_DEL}) \textcolor{comment}{// 229}
+1069         \{
+1070             \textcolor{comment}{// if not hidden, print the file name and size}
+1071             a = fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[eOffs + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aa592e29c5a275b550f5a6d6065db8aad}{DIR\_ATTRIB}];
+1072             \textcolor{keywordflow}{if} (!(a & (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ac8011665141082ab84d80f00fb4e66d2}{ATT\_HIDE}|\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_afd50fc85d6978a4442cbcda86e7a4d47}{ATT\_DIR}))) 
+1073             \{   \textcolor{comment}{//  check the file extension}
+1074                 \textcolor{keywordflow}{if} (!memcmp(&fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[eOffs+\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a9c3293aeffc3d77b35e40d5f43e84181}{DIR\_EXT}], ext, 3))
+1075                 \{   
+1076                     \textcolor{comment}{// copy file name in playlist}
+1077                     memcpy(&list[x].filename, &fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[eOffs+\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1399e8a4edfa03198e73b139c3eec47b}{DIR\_NAME}], 8);
+1078                     list[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}].\hyperlink{struct_d_i_r_t_a_b_l_e_a9c43d1f94c4d6b1f667b553788897f4f}{filename}[8] = \textcolor{charliteral}{'\(\backslash\)0'};
+1079                     \textcolor{comment}{// copy file ext in playlist}
+1080                     memcpy(&list[x].ext, &fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[eOffs+\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a9c3293aeffc3d77b35e40d5f43e84181}{DIR\_EXT}], 3);
+1081                     list[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}].\hyperlink{struct_d_i_r_t_a_b_l_e_ac5896923235fc86c94be4dd54a255c3d}{ext}[3] = \textcolor{charliteral}{'\(\backslash\)0'};
+1082                     \textcolor{comment}{// copy file size in playlist}
+1083                     list[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}].\hyperlink{struct_d_i_r_t_a_b_l_e_a37363161b41c4165b98cba7abc7a9d95}{size} = fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[eOffs+\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aac52a71d47407de47c401baf9c827cdb}{DIR\_SIZE}];
+1084 
+1085                     \textcolor{keywordflow}{if} (++x >= \hyperlink{p8_2pinguino_2core_2macro_8h_affe776513b24d84b39af8ab0930fef7f}{max})
+1086                         \textcolor{keywordflow}{break};
+1087                 \}                        
+1088             \} \textcolor{comment}{// file}
+1089         \} \textcolor{comment}{// not deleted or hidden}
+1090 
+1091         \textcolor{comment}{// 6.4 get the next entry}
+1092         \textcolor{comment}{// exit the loop if reached the end or error}
+1093         eCount++;
+1094         \textcolor{keywordflow}{if} (eCount > fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_a78f14f8c25b8a0d73de86c9c96e068f9}{maxroot})
+1095             \textcolor{keywordflow}{break};              \textcolor{comment}{// last entry reached}
+1096 
+1097         eOffs += 32;
+1098         \textcolor{keywordflow}{if} (eOffs >= 512)
+1099         \{ 
+1100             eOffs = 0;
+1101             \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7784bb8fe3548575ceaaf0bfdcf9701d}{readDIR}(fp, eCount))
+1102             \{
+1103                 \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_aa0e109b5541339105e26e766f912b3cf}{FE\_FIND\_ERROR};
+1104                 \textcolor{keywordflow}{goto} ListExit;
+1105             \}
+1106         \}
+1107     \}\textcolor{comment}{// while }
+1108 
+1109     \textcolor{comment}{// 7. return the number of files found}
+1110     r = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x};
+1111 
+1112     ListExit:
+1113     \textcolor{comment}{// 8. free buffers and return}
+1114     free(fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer});
+1115     free(fp);
+1116     \textcolor{keywordflow}{return} r;
+1117 \} \textcolor{comment}{// listTYPE}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a5e3ce5c604a13f189e763de37fab581f}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!mount@{mount}}
+\index{mount@{mount}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{mount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-E\-D\-I\-A}$\ast$ mount (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a5e3ce5c604a13f189e763de37fab581f}
+
+
+Definition at line 65 of file fileio.\-c.
+
+
+
+Referenced by S\-D\-\_\-present().
+
+
+\begin{DoxyCode}
+66 \{ 
+67     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{LBA}  psize;      \textcolor{comment}{// number of sectors in partition}
+68     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{LBA}  firsts;     \textcolor{comment}{// first sector inside the first partition}
+69     \textcolor{keywordtype}{int} flag, i;
+70     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *buffer;
+71 
+72     \textcolor{comment}{// 0. init the I/Os}
+73     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a9470cb8f6ac9077bf21f815e37d13f09}{SDCS} = pin;
+74     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a469e8fffcf5a77dc542d8acea1cfea57}{initSD}();
+75 
+76     \textcolor{comment}{// 1. check if the card is in the slot }
+77     \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a333a9ed0bf9a0bcb9500528e812881ab}{getCD}()) 
+78     \{
+79         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2d17882685d6cc9640d022f640ded95b}{FE\_NOT\_PRESENT};
+80         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};    
+81     \}
+82 
+83     \textcolor{comment}{// 2. initialize the card    }
+84     \textcolor{keywordflow}{if} ((flag=\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a0a62982cc6fc4507eacea6f73767da72}{initMedia}()))
+85     \{ 
+86         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = flag;
+87         \textcolor{comment}{//FError = FE\_CANNOT\_INIT;}
+88         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+89     \}
+90 
+91     \textcolor{comment}{// 3. allocate space for a MEDIA structure }
+92     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D} = (\hyperlink{struct_m_e_d_i_a}{MEDIA} *) malloc(\textcolor{keyword}{sizeof}(\hyperlink{struct_m_e_d_i_a}{MEDIA}));
+93     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D} == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})            \textcolor{comment}{// report an error  }
+94     \{   
+95         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ad3117d88498c65662b3caebb1b712448}{FE\_MALLOC\_FAILED};
+96         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+97     \}
+98 
+99     \textcolor{comment}{// 4. allocate space for a temp sector buffer}
+100     buffer = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *) malloc(512);
+101     \textcolor{keywordflow}{if} (buffer == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})        \textcolor{comment}{// report an error  }
+102     \{   
+103         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ad3117d88498c65662b3caebb1b712448}{FE\_MALLOC\_FAILED};
+104         free((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D});
+105         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+106     \}
+107 
+108     \textcolor{comment}{// 5.  get the Master Boot Record }
+109     \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_aa852b20c06fce185a342322012a3b01e}{readSECTOR}(\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_abfeb8fcd27cd6a2e5a60a6d490e09996}{FO\_MBR}, buffer)) 
+110     \{
+111         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_ab4cc51c871c42ce2323af8642015b12b}{FE\_CANNOT\_READ\_MBR};
+112         free((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D});
+113         free(buffer);
+114         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+115     \}
+116 
+117     \textcolor{comment}{// 6. check if the MBR sector is valid }
+118     \textcolor{comment}{//      verify the signature word}
+119     \textcolor{keywordflow}{if} ((buffer[\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7969964918ef6b9822961bda8e61d2fe}{FO\_SIGN}] != 0x55) || (buffer[\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7969964918ef6b9822961bda8e61d2fe}{FO\_SIGN} +1] != 0xAA))
+120     \{
+121         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a872ef0fc4aab43f2923427803a76bb2d}{FE\_INVALID\_MBR};
+122         free((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D});
+123         free(buffer);
+124         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+125     \}
+126 
+127     \textcolor{comment}{//    Valid Master Boot Record Loaded}
+128 
+129     \textcolor{comment}{// 7. read the number of sectors in partition}
+130     psize = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2587e1fdf92ddc430e4f5355e84cdb38}{ReadL}(buffer, \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aace209212e98007d8326ee8693a4fa35}{FO\_FIRST\_SIZE});
+131 
+132     \textcolor{comment}{// 8. check if the partition type is acceptable}
+133     i = buffer[\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a4aab664a52485b0e434874ad1859ffb5}{FO\_FIRST\_TYPE}];
+134     \textcolor{keywordflow}{switch} (i)
+135     \{
+136         \textcolor{keywordflow}{case} 0x04:
+137         \textcolor{keywordflow}{case} 0x06:
+138         \textcolor{keywordflow}{case} 0x0E:
+139             \textcolor{comment}{// valid FAT16 options}
+140             \textcolor{keywordflow}{break};
+141         \textcolor{keywordflow}{default}:
+142             \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a9509b354eb0749ff6b1e6c879469183f}{FE\_PARTITION\_TYPE};
+143             free((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D});
+144             free(buffer);
+145             \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+146     \} \textcolor{comment}{// switch}
+147 
+148     \textcolor{comment}{// 9. get the first partition first sector -> Boot Record}
+149     \textcolor{comment}{//  get the 32 bit offset to the first partition }
+150     firsts = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2587e1fdf92ddc430e4f5355e84cdb38}{ReadL}(buffer, \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ad7b1157180a64e11f743c2cc620654cd}{FO\_FIRST\_SECT}); 
+151     \textcolor{comment}{// assuming FO\_MBR == 0 }
+152 
+153     \textcolor{comment}{// 10. get the sector loaded (boot record)}
+154     \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_aa852b20c06fce185a342322012a3b01e}{readSECTOR}(firsts, buffer)) 
+155     \{
+156         free((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D});
+157         free(buffer);
+158         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+159     \}
+160 
+161     \textcolor{comment}{// 11. check if the boot record is valid }
+162     \textcolor{comment}{//      verify the signature word}
+163     \textcolor{keywordflow}{if} ((buffer[\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7969964918ef6b9822961bda8e61d2fe}{FO\_SIGN}] != 0x55) || (buffer[\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7969964918ef6b9822961bda8e61d2fe}{FO\_SIGN} +1] != 0xAA))
+164     \{
+165         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_afcd14bffdeae57cebde87d3d3e3e4cbb}{FE\_INVALID\_BR};
+166         free((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D});
+167         free(buffer);
+168         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+169     \}
+170 
+171     \textcolor{comment}{// Valid Partition Boot Record Loaded       }
+172     \textcolor{comment}{// get the full partition/drive layout}
+173 
+174     \textcolor{comment}{// 12. determine the size of a cluster}
+175     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_ac9daa97bcbd38f1fda0f357dfa22aaa7}{sxc} = buffer[\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a445dcf32cf3282c36b52f196b17c675f}{BR\_SXC}];
+176     \textcolor{comment}{// this will also act as flag that the disk is mounted}
+177 
+178     \textcolor{comment}{// 13. determine fat, root and data LBAs}
+179     \textcolor{comment}{// FAT = first sector in partition }
+180     \textcolor{comment}{// (boot record) + reserved records}
+181     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_a8703e77c9af68598f5ba9fc70528c78e}{fat} = firsts + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a05105cc74388898b2be4ab11d2ba3375}{ReadW}(buffer, \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a82026dea9c622a43fb7eb75de1d2a157}{BR\_RES});
+182     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_a74af0e18d550fb61c6433afa4afcddae}{fatsize} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a05105cc74388898b2be4ab11d2ba3375}{ReadW}(buffer, \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ac8c38cace0621d8b40056257236e2893}{BR\_FAT\_SIZE});
+183     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_af0c81f9f766295c07fd33e1040d38318}{fatcopy} = buffer[\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1eeb9b6692e7c1a4ef7010098c0ff82b}{BR\_FAT\_CPY}];
+184 
+185     \textcolor{comment}{// 14. ROOT = FAT + (sectors per FAT *  copies of FAT)}
+186     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_a484ff55c205f0fa8283a246f2d77f94d}{root} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_a8703e77c9af68598f5ba9fc70528c78e}{fat} + (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_a74af0e18d550fb61c6433afa4afcddae}{fatsize} * \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_af0c81f9f766295c07fd33e1040d38318}{fatcopy});
+187 
+188     \textcolor{comment}{// 15. MAX ROOT is the maximum number of entries }
+189     \textcolor{comment}{//      in the root directory}
+190     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_a78f14f8c25b8a0d73de86c9c96e068f9}{maxroot} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a5b69686d3df946f340a4626e05ea5773}{ReadOddW}(buffer, \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1558f87b898b948cb6935560b1e424fc}{BR\_MAX\_ROOT}) ;
+191 
+192     \textcolor{comment}{// 16. DATA = ROOT + (MAXIMUM ROOT *32 / 512) }
+193     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_af5fb805503cd2d43d97b89362bd48dc8}{data} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_a484ff55c205f0fa8283a246f2d77f94d}{root} + (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_a78f14f8c25b8a0d73de86c9c96e068f9}{maxroot} >> 4); 
+194     \textcolor{comment}{// assuming maxroot % 16 == 0!!!}
+195 
+196     \textcolor{comment}{// 17. max clusters in this partition }
+197     \textcolor{comment}{//       = (tot sectors - sys sectors )/sxc}
+198     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_a188ac56cd2b9e488f7f16fec93bb02ab}{maxcls} = (psize - (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_af5fb805503cd2d43d97b89362bd48dc8}{data} - firsts)) / \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D}->\hyperlink{struct_m_e_d_i_a_ac9daa97bcbd38f1fda0f357dfa22aaa7}{sxc};
+199 
+200     \textcolor{comment}{// 18. free up the temporary buffer}
+201     free(buffer);
+202     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D};
+203 
+204 \} \textcolor{comment}{// mount}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_acef3556d119a7ad248aee3e968f6f882}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!new\-D\-I\-R@{new\-D\-I\-R}}
+\index{new\-D\-I\-R@{new\-D\-I\-R}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{new\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}unsigned new\-D\-I\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_acef3556d119a7ad248aee3e968f6f882}
+
+
+Definition at line 329 of file fileio.\-c.
+
+
+
+References M\-F\-I\-L\-E\-::buffer, D\-I\-R\-\_\-\-D\-E\-L, D\-I\-R\-\_\-\-E\-M\-P\-T\-Y, D\-I\-R\-\_\-\-E\-S\-I\-Z\-E, D\-I\-R\-\_\-\-N\-A\-M\-E, M\-F\-I\-L\-E\-::entry, F\-A\-I\-L, F\-O\-U\-N\-D, M\-E\-D\-I\-A\-::maxroot, M\-F\-I\-L\-E\-::mda, N\-O\-T\-\_\-\-F\-O\-U\-N\-D, and read\-D\-I\-R().
+
+
+
+Referenced by fopen\-M().
+
+
+\begin{DoxyCode}
+330 \{
+331     \textcolor{keywordtype}{unsigned} eCount;            \textcolor{comment}{// current entry counter}
+332     \textcolor{keywordtype}{unsigned} e;                 \textcolor{comment}{// current entry offset }
+333     \textcolor{keywordtype}{int} a;             
+334     \hyperlink{struct_m_e_d_i_a}{MEDIA} *mda = fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda};
+335 
+336     \textcolor{comment}{// 1. start from the first entry}
+337     eCount = 0;
+338     \textcolor{comment}{// load the first sector of root}
+339     \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7784bb8fe3548575ceaaf0bfdcf9701d}{readDIR}(fp, eCount)) 
+340     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};
+341 
+342     \textcolor{comment}{// 2. loop until you reach the end or find the file}
+343     \textcolor{keywordflow}{while} (1)
+344     \{
+345         \textcolor{comment}{// 2.0 determine the offset in current buffer}
+346         e = (eCount&0xf) * \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a69cef9ae7d8e3672a5a8194f3910dfef}{DIR\_ESIZE};
+347 
+348         \textcolor{comment}{// 2.1 read the first char of the file name }
+349         a = fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[e + \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a1399e8a4edfa03198e73b139c3eec47b}{DIR\_NAME}]; 
+350 
+351         \textcolor{comment}{// 2.2 terminate if it is empty (end of the list)or deleted }
+352         \textcolor{keywordflow}{if} ((a == \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a91f26aee0bf76e8f186d565e23b64f75}{DIR\_EMPTY}) ||(a == \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a656fe006524f6bfb2f63ab7578570dc9}{DIR\_DEL}))
+353         \{
+354             fp->\hyperlink{struct_m_f_i_l_e_aca0461bffb12ab51bb48e6684f46dc43}{entry} = eCount; 
+355             \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a841b291dedf074d07299e089dc0722e6}{FOUND};   
+356         \} \textcolor{comment}{// empty or deleted entry found}
+357 
+358 
+359         \textcolor{comment}{// 2.3 get the next entry}
+360         eCount++;
+361         \textcolor{keywordflow}{if} ((eCount & 0xf) == 0)
+362         \{ \textcolor{comment}{// load a new sector from the root}
+363             \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a7784bb8fe3548575ceaaf0bfdcf9701d}{readDIR}(fp, eCount))
+364                 \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};                   
+365         \}
+366 
+367         \textcolor{comment}{// 2.4 exit the loop if reached the end or error}
+368         \textcolor{keywordflow}{if} (eCount > mda->\hyperlink{struct_m_e_d_i_a_a78f14f8c25b8a0d73de86c9c96e068f9}{maxroot})
+369             \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a33bfc1f995233887a0414369c36936b8}{NOT\_FOUND};       \textcolor{comment}{// last entry reached}
+370     \}\textcolor{comment}{// while }
+371 
+372     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};
+373 \} \textcolor{comment}{// newDIR}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a4e5fcba44087d21084b9ddbd31d80576}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!new\-F\-A\-T@{new\-F\-A\-T}}
+\index{new\-F\-A\-T@{new\-F\-A\-T}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{new\-F\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}unsigned new\-F\-A\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a4e5fcba44087d21084b9ddbd31d80576}
+
+
+Definition at line 505 of file fileio.\-c.
+
+
+
+References c, M\-F\-I\-L\-E\-::ccls, F\-A\-I\-L, F\-A\-T\-\_\-\-E\-O\-F, F\-E\-\_\-\-M\-E\-D\-I\-A\-\_\-\-F\-U\-L\-L, F\-Error, M\-F\-I\-L\-E\-::fpage, M\-E\-D\-I\-A\-::maxcls, M\-F\-I\-L\-E\-::mda, read\-F\-A\-T(), T\-R\-U\-E, and write\-F\-A\-T().
+
+
+
+Referenced by fopen\-M(), and fwrite\-M().
+
+
+\begin{DoxyCode}
+506 \{
+507     \textcolor{keywordtype}{unsigned} i, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c} = fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls};
+508 
+509     \textcolor{comment}{// sequentially scan through the FAT }
+510     \textcolor{comment}{//    looking for an empty cluster}
+511     \textcolor{keywordflow}{do} \{
+512         c++;    \textcolor{comment}{// check next cluster in FAT}
+513         \textcolor{comment}{// check if reached last cluster in FAT, }
+514         \textcolor{comment}{// re-start from top}
+515         \textcolor{keywordflow}{if} (c >= fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_a188ac56cd2b9e488f7f16fec93bb02ab}{maxcls})
+516             c = 0;  
+517 
+518         \textcolor{comment}{// check if full circle done, media full}
+519         \textcolor{keywordflow}{if} (c == fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls})
+520         \{
+521             \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a1bed5082c8cee14ed40b23bd4610143f}{FE\_MEDIA\_FULL};
+522             \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};
+523         \}
+524 
+525         \textcolor{comment}{// look at its value }
+526         i = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a529f3dbb82d084c374d50f66c9e8d2d6}{readFAT}(fp, c);    
+527 
+528     \} \textcolor{keywordflow}{while} (i!=0);    \textcolor{comment}{// scanning for an empty cluster}
+529 
+530     \textcolor{comment}{// mark the new cluster as taken, and last in chain}
+531     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a8328b8a38f617e7484aedb335042f84e}{writeFAT}(fp, c, \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a6546c12ad09d8a707d32a7d9bd3a0acc}{FAT\_EOF});
+532 
+533     \textcolor{comment}{// if not first cluster, link current cluster to new one}
+534     \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls} >0)
+535         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a8328b8a38f617e7484aedb335042f84e}{writeFAT}(fp, fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls}, c);
+536 
+537     \textcolor{comment}{// update the MFILE structure}
+538     fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+539 
+540     \textcolor{comment}{// invalidate the FAT cache }
+541     \textcolor{comment}{//   (since it will soon be overwritten with data)}
+542     fp->\hyperlink{struct_m_f_i_l_e_a90e0ec4ff8507af26396f8eee99ebd52}{fpage} = -1;
+543 
+544     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+545 \} \textcolor{comment}{// newFAT}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a1648c2f15eef4cf931a5b43e4a51afd2}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!next\-F\-A\-T@{next\-F\-A\-T}}
+\index{next\-F\-A\-T@{next\-F\-A\-T}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{next\-F\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}unsigned next\-F\-A\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp, }
+\item[{unsigned}]{n}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a1648c2f15eef4cf931a5b43e4a51afd2}
+
+
+Definition at line 463 of file fileio.\-c.
+
+
+
+References c, M\-F\-I\-L\-E\-::ccls, F\-A\-I\-L, F\-A\-T\-\_\-\-M\-C\-L\-S\-T, F\-E\-\_\-\-F\-A\-T\-\_\-\-E\-O\-F, F\-E\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-L\-U\-S\-T\-E\-R, F\-Error, M\-E\-D\-I\-A\-::maxcls, M\-F\-I\-L\-E\-::mda, read\-F\-A\-T(), and T\-R\-U\-E.
+
+
+
+Referenced by fread\-M().
+
+
+\begin{DoxyCode}
+464 \{
+465     \textcolor{keywordtype}{unsigned}    \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+466     \hyperlink{struct_m_e_d_i_a}{MEDIA} * mda = fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda};
+467 
+468     \textcolor{comment}{// loop n times}
+469     \textcolor{keywordflow}{do} \{    
+470         \textcolor{comment}{// get the next cluster link from FAT}
+471         c = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a529f3dbb82d084c374d50f66c9e8d2d6}{readFAT}(fp, fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls});         
+472 
+473         \textcolor{comment}{// compare against max value of a cluster in FATxx        }
+474         \textcolor{comment}{// return if eof}
+475         \textcolor{keywordflow}{if} (c >= \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_aae698dd430232a22a3d834105a617420}{FAT\_MCLST})    \textcolor{comment}{// check against eof}
+476         \{
+477             \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a7c9c81137879026bbf08557d307f164e}{FE\_FAT\_EOF};
+478             \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};    \textcolor{comment}{// seeking beyond EOF}
+479         \}
+480 
+481         \textcolor{comment}{// check if cluster value is valid}
+482         \textcolor{keywordflow}{if} (c >= mda->\hyperlink{struct_m_e_d_i_a_a188ac56cd2b9e488f7f16fec93bb02ab}{maxcls})
+483         \{
+484             \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a4a6060bf388de840bcfa26e1a8e2259f}{FE\_INVALID\_CLUSTER};
+485             \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};
+486         \}
+487 
+488     \} \textcolor{keywordflow}{while} (--n > 0);\textcolor{comment}{// loop end}
+489 
+490     \textcolor{comment}{// update the MFILE structure}
+491     fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+492 
+493     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+494 \} \textcolor{comment}{// get next cluster}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_ae31ee89e781d7295cf44ec09b91ff997}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!read\-D\-A\-T\-A@{read\-D\-A\-T\-A}}
+\index{read\-D\-A\-T\-A@{read\-D\-A\-T\-A}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{read\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}unsigned read\-D\-A\-T\-A (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_ae31ee89e781d7295cf44ec09b91ff997}
+
+
+Definition at line 564 of file fileio.\-c.
+
+
+
+References M\-F\-I\-L\-E\-::buffer, M\-F\-I\-L\-E\-::ccls, M\-E\-D\-I\-A\-::data, M\-F\-I\-L\-E\-::fpage, M\-F\-I\-L\-E\-::mda, read\-S\-E\-C\-T\-O\-R(), M\-F\-I\-L\-E\-::sec, and M\-E\-D\-I\-A\-::sxc.
+
+
+
+Referenced by fopen\-M(), and fread\-M().
+
+
+\begin{DoxyCode}
+565 \{
+566     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{LBA} l;
+567 
+568     \textcolor{comment}{// calculate lba of cluster/sector}
+569     l = fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_af5fb805503cd2d43d97b89362bd48dc8}{data}+(\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{LBA})(fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls}-2) * fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_ac9daa97bcbd38f1fda0f357dfa22aaa7}{sxc}+fp->
+      \hyperlink{struct_m_f_i_l_e_a2080d32eab8db36848f7e4af7976dd84}{sec};
+570     fp->\hyperlink{struct_m_f_i_l_e_a90e0ec4ff8507af26396f8eee99ebd52}{fpage} = -1;         \textcolor{comment}{// invalidate FAT cache}
+571     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_aa852b20c06fce185a342322012a3b01e}{readSECTOR}(l, fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}));
+572 \} \textcolor{comment}{// readDATA}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a7784bb8fe3548575ceaaf0bfdcf9701d}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!read\-D\-I\-R@{read\-D\-I\-R}}
+\index{read\-D\-I\-R@{read\-D\-I\-R}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{read\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}unsigned read\-D\-I\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp, }
+\item[{unsigned}]{entry}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a7784bb8fe3548575ceaaf0bfdcf9701d}
+
+
+Definition at line 220 of file fileio.\-c.
+
+
+
+References M\-F\-I\-L\-E\-::buffer, M\-F\-I\-L\-E\-::fpage, M\-F\-I\-L\-E\-::mda, read\-S\-E\-C\-T\-O\-R(), and M\-E\-D\-I\-A\-::root.
+
+
+
+Referenced by fclose\-M(), find\-D\-I\-R(), list\-T\-Y\-P\-E(), and new\-D\-I\-R().
+
+
+\begin{DoxyCode}
+221 \{        
+222     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{LBA} l;
+223 
+224     \textcolor{comment}{// load the root sector containing the DIR entry "e"}
+225     l = fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_a484ff55c205f0fa8283a246f2d77f94d}{root} + (entry >> 4);
+226     fp->\hyperlink{struct_m_f_i_l_e_a90e0ec4ff8507af26396f8eee99ebd52}{fpage} = -1;             \textcolor{comment}{// invalidate FAT cache}
+227     \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_aa852b20c06fce185a342322012a3b01e}{readSECTOR}(l, fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer})); 
+228 \} \textcolor{comment}{// readDIR}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a529f3dbb82d084c374d50f66c9e8d2d6}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!read\-F\-A\-T@{read\-F\-A\-T}}
+\index{read\-F\-A\-T@{read\-F\-A\-T}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{read\-F\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}unsigned read\-F\-A\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp, }
+\item[{unsigned}]{ccls}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a529f3dbb82d084c374d50f66c9e8d2d6}
+
+
+Definition at line 388 of file fileio.\-c.
+
+
+
+References M\-F\-I\-L\-E\-::buffer, c, M\-E\-D\-I\-A\-::fat, F\-A\-T\-\_\-\-E\-O\-F, M\-F\-I\-L\-E\-::fpage, M\-F\-I\-L\-E\-::mda, Read\-Odd\-W, and read\-S\-E\-C\-T\-O\-R().
+
+
+
+Referenced by new\-F\-A\-T(), next\-F\-A\-T(), and write\-F\-A\-T().
+
+
+\begin{DoxyCode}
+389 \{
+390     \textcolor{keywordtype}{unsigned} p, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+391     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{LBA} l;
+392 
+393     \textcolor{comment}{// get page of current cluster in fat}
+394     p = ccls >>8;               \textcolor{comment}{// 256 clusters per sector  }
+395 
+396     \textcolor{comment}{// check if already cached}
+397     \textcolor{keywordflow}{if} (fp->\hyperlink{struct_m_f_i_l_e_a90e0ec4ff8507af26396f8eee99ebd52}{fpage} != p)
+398     \{   
+399         \textcolor{comment}{// load the fat sector containing the cluster}
+400         l = fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_a8703e77c9af68598f5ba9fc70528c78e}{fat} + p;   
+401         \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_aa852b20c06fce185a342322012a3b01e}{readSECTOR}(l, fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}))
+402             \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a6546c12ad09d8a707d32a7d9bd3a0acc}{FAT\_EOF};      \textcolor{comment}{// failed}
+403 
+404         \textcolor{comment}{// note the sector contains a valid FAT page cache }
+405         fp->\hyperlink{struct_m_f_i_l_e_a90e0ec4ff8507af26396f8eee99ebd52}{fpage} = ccls>>8;
+406     \}
+407 
+408     \textcolor{comment}{// get the next cluster value}
+409     \textcolor{comment}{// cluster = 0xabcd}
+410     \textcolor{comment}{// packed as:     0   |   1    |   2   |  3    |}
+411     \textcolor{comment}{// word p       0   1 |  2   3 | 4   5 | 6   7 |..}
+412     \textcolor{comment}{//              cd  ab|  cd  ab| cd  ab| cd  ab| }
+413     c = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a5b69686d3df946f340a4626e05ea5773}{ReadOddW}(fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}, ((ccls & 0xFF)<<1));
+414 
+415     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+416 \} \textcolor{comment}{// readFAT}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_ac87c06145b272705cfac7529b90e8f25}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!unmount@{unmount}}
+\index{unmount@{unmount}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{unmount}]{\setlength{\rightskip}{0pt plus 5cm}void unmount (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_ac87c06145b272705cfac7529b90e8f25}
+
+
+Definition at line 210 of file fileio.\-c.
+
+
+
+Referenced by mount(), and S\-D\-\_\-present().
+
+
+\begin{DoxyCode}
+211 \{ 
+212     free((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2234d091b955ea5958b54ef6331da612}{D});
+213 \} \textcolor{comment}{// unmount}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a11d8612e3cb3ffd3ad445b551ddf9cf0}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!write\-D\-A\-T\-A@{write\-D\-A\-T\-A}}
+\index{write\-D\-A\-T\-A@{write\-D\-A\-T\-A}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{write\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}unsigned write\-D\-A\-T\-A (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a11d8612e3cb3ffd3ad445b551ddf9cf0}
+
+
+Definition at line 551 of file fileio.\-c.
+
+
+
+References M\-F\-I\-L\-E\-::buffer, M\-F\-I\-L\-E\-::ccls, M\-E\-D\-I\-A\-::data, M\-F\-I\-L\-E\-::mda, M\-F\-I\-L\-E\-::sec, M\-E\-D\-I\-A\-::sxc, and write\-S\-E\-C\-T\-O\-R().
+
+
+
+Referenced by fclose\-M(), and fwrite\-M().
+
+
+\begin{DoxyCode}
+552 \{
+553     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{LBA} l;
+554 
+555     \textcolor{comment}{// calculate lba of cluster/sector}
+556     l = fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_af5fb805503cd2d43d97b89362bd48dc8}{data}+(\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{LBA})(fp->\hyperlink{struct_m_f_i_l_e_aca8da61849ae0d7b02b5cb16d10f49d9}{ccls}-2) * fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_ac9daa97bcbd38f1fda0f357dfa22aaa7}{sxc}+fp->
+      \hyperlink{struct_m_f_i_l_e_a2080d32eab8db36848f7e4af7976dd84}{sec};
+557     \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_aa8c1cd442ebabe63060d75c8e8de8cad}{writeSECTOR}(l, fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}));
+558 \} \textcolor{comment}{// writeDATA}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a66261acd7af71bf44ec600465081a20a}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!write\-D\-I\-R@{write\-D\-I\-R}}
+\index{write\-D\-I\-R@{write\-D\-I\-R}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{write\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}unsigned write\-D\-I\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp, }
+\item[{unsigned}]{entry}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a66261acd7af71bf44ec600465081a20a}
+
+
+Definition at line 235 of file fileio.\-c.
+
+
+
+References M\-F\-I\-L\-E\-::buffer, M\-F\-I\-L\-E\-::mda, M\-E\-D\-I\-A\-::root, and write\-S\-E\-C\-T\-O\-R().
+
+
+
+Referenced by fclose\-M(), and fopen\-M().
+
+
+\begin{DoxyCode}
+236 \{        
+237     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{LBA} l;
+238 
+239     \textcolor{comment}{// load the root sector containing the DIR entry "e"}
+240     l = fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_a484ff55c205f0fa8283a246f2d77f94d}{root} + (entry >> 4);
+241     \textcolor{comment}{// write the root sector }
+242     \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_aa8c1cd442ebabe63060d75c8e8de8cad}{writeSECTOR}(l, fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer})) ;
+243 \} \textcolor{comment}{// writeDIR}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2fileio_8c_a8328b8a38f617e7484aedb335042f84e}{\index{p8/pinguino/libraries/sd/fileio.\-c@{p8/pinguino/libraries/sd/fileio.\-c}!write\-F\-A\-T@{write\-F\-A\-T}}
+\index{write\-F\-A\-T@{write\-F\-A\-T}!p8/pinguino/libraries/sd/fileio.c@{p8/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{write\-F\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}unsigned write\-F\-A\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-F\-I\-L\-E} $\ast$}]{fp, }
+\item[{unsigned}]{cls, }
+\item[{unsigned}]{v}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2fileio_8c_a8328b8a38f617e7484aedb335042f84e}
+
+
+Definition at line 426 of file fileio.\-c.
+
+
+
+References M\-F\-I\-L\-E\-::buffer, F\-A\-I\-L, M\-E\-D\-I\-A\-::fat, M\-E\-D\-I\-A\-::fatcopy, M\-E\-D\-I\-A\-::fatsize, M\-F\-I\-L\-E\-::mda, read\-F\-A\-T(), T\-R\-U\-E, and write\-S\-E\-C\-T\-O\-R().
+
+
+
+Referenced by new\-F\-A\-T().
+
+
+\begin{DoxyCode}
+427 \{
+428     \textcolor{keywordtype}{int} i;
+429     \textcolor{keywordtype}{unsigned} p;
+430     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{LBA} l;
+431 
+432     \textcolor{comment}{// load the FAT page containing the requested cluster}
+433     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a529f3dbb82d084c374d50f66c9e8d2d6}{readFAT}(fp, cls);
+434 
+435     \textcolor{comment}{// cluster = 0xabcd}
+436     \textcolor{comment}{// packed as:     0   |   1    |   2   |  3    |}
+437     \textcolor{comment}{// word p       0   1 |  2   3 | 4   5 | 6   7 |..}
+438     \textcolor{comment}{//              cd  ab|  cd  ab| cd  ab| cd  ab| }
+439 
+440     \textcolor{comment}{// locate the cluster within the FAT page}
+441     p = (cls & 0xff)*2;    \textcolor{comment}{// 2 bytes per cluster }
+442 
+443     \textcolor{comment}{// get the next cluster value}
+444     fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[p] = v;       \textcolor{comment}{// lsb }
+445     fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}[p+1] = (v>>8);\textcolor{comment}{// msb}
+446 
+447     \textcolor{comment}{// update all FAT copies}
+448     l = fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_a8703e77c9af68598f5ba9fc70528c78e}{fat} + (cls>>8);
+449     \textcolor{keywordflow}{for} (i=0; i<fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_af0c81f9f766295c07fd33e1040d38318}{fatcopy}; i++, l += fp->\hyperlink{struct_m_f_i_l_e_a60a723e90d275009f5a327db27ba0972}{mda}->\hyperlink{struct_m_e_d_i_a_a74af0e18d550fb61c6433afa4afcddae}{fatsize})
+450     \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_aa8c1cd442ebabe63060d75c8e8de8cad}{writeSECTOR}(l, fp->\hyperlink{struct_m_f_i_l_e_a70e7ad2e1a45c8db5fba9ad4778bd400}{buffer}))
+451     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL}; 
+452 
+453     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+454 \} \textcolor{comment}{// writeFAT}
+\end{DoxyCode}

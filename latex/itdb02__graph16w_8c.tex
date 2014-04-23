@@ -1,0 +1,1674 @@
+\hypertarget{itdb02__graph16w_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/itdb02/itdb02\-\_\-graph16w.c File Reference}
+\label{itdb02__graph16w_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/itdb02/itdb02\-\_\-graph16w.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/itdb02/itdb02\-\_\-graph16w.\-c}}
+}
+{\ttfamily \#include $<$itdb02/itdb02\-\_\-graph16w.\-h$>$}\\*
+{\ttfamily \#include $<$integer\-\_\-math.\-c$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$delay.\-c$>$}\\*
+{\ttfamily \#include $<$itdb02/\-Small\-Font.\-c$>$}\\*
+{\ttfamily \#include $<$itdb02/\-Big\-Font.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{itdb02__graph16w_8c_ac4a9237756696f43f0415d16227166a0}{I\-T\-D\-B02\-\_\-\-Graph16w\-\_\-c}
+\item 
+\#define \hyperlink{itdb02__graph16w_8c_a182deb22e1bb98491d823e039f42b3cf}{I\-T\-D\-B02\-\_\-32w}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{itdb02__graph16w_8c_a68a468e798749e3454928bce17ed6274}{L\-C\-D\-\_\-\-Writ\-\_\-\-Bus} (int data)
+\item 
+void \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{L\-C\-D\-\_\-\-Write\-\_\-\-C\-O\-M} (int data)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A} (int data)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a31930695ce2790f86f071bff3b3f60a4}{Init\-L\-C\-D} (char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_ad3274afa69408ce3e36e151a4d4ad663}{orientation})
+\item 
+void \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{set\-X\-Y} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a69f5e0e04dc084dcfd8f11da497290d8}{draw\-Rect} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{itdb02__graph16w_8c_ac9699711101163b29a02dc191efff6a9}{draw\-Round\-Rect} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a63dbd4ad7b1c9de0e5d96851bb4fc4e3}{fill\-Rect} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a067d1eb3a441d46aea4777a3cdbff9bc}{fill\-Round\-Rect} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{itdb02__graph16w_8c_ae78bea676676698842bfcf44afa01fe7}{draw\-Circle} (int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, int radius)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a0684d2369cd27f4feffc1dffae0b8df5}{fill\-Circle} (int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, int radius)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a73920c4013fbde96824233e259429e1b}{clr\-Scr} ()
+\item 
+void \hyperlink{itdb02__graph16w_8c_ae158c0bcd8d7aa9680189fc207826f75}{fill\-Scr} (char r, char g, char b)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a8ad2141bfd226b29751953849b400abb}{set\-Color} (unsigned char r, unsigned char g, unsigned char b)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a3a4dc517aeb6b325f1b69b8e158b6bd7}{set\-Back\-Color} (unsigned char r, unsigned char g, unsigned char b)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a7f8d17fffb20a4e49c9a3174f1b6371c}{set\-Pixel} (int r, int g, int b)
+\item 
+void \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{draw\-Pixel} (int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y})
+\item 
+void \hyperlink{itdb02__graph16w_8c_a670eabe51fc97973e3ae3b909b9a57dc}{draw\-Line} (int x1, int y1, int x2, int y2)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{draw\-H\-Line} (int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, int l)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a7a83dd350446db4e8e79e8b322636460}{draw\-V\-Line} (int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, int l)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a2cdb0529037092472ca598c0ff71bd57}{print\-Char} (char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y})
+\item 
+void \hyperlink{itdb02__graph16w_8c_af0d9e8e9b974708c910c54d146ea7ffe}{rotate\-Char} (char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, int pos, int \hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})
+\item 
+void \hyperlink{itdb02__graph16w_8c_a021aa0e3035c215918243b6510f01a4a}{my\-G\-L\-C\-D16w\-\_\-print} (char $\ast$st, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, int \hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})
+\item 
+void \hyperlink{itdb02__graph16w_8c_ad098e3ca0bbfe340ecbfd867a461c34d}{print\-Num\-I} (long num, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y})
+\item 
+void \hyperlink{itdb02__graph16w_8c_a6c411c72529ddfb2f35792733bcc50fe}{print\-Num\-F} (double num, char dec, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y})
+\item 
+void \hyperlink{itdb02__graph16w_8c_a8e8d4c4966536a4068f54edd473baeff}{font\-Size} (char size)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a0770ef07e92f33d6d09ab46b60d929d9}{draw\-Bitmap} (int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, int sx, int sy, unsigned int $\ast$data, int scale)
+\item 
+void \hyperlink{itdb02__graph16w_8c_a3278845d5a4921a887a80767e485f828}{draw\-Bitmap\-R} (int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, int sx, int sy, unsigned int $\ast$data, int \hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg}, int rox, int roy)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{itdb02__graph16w_8c_a182deb22e1bb98491d823e039f42b3cf}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!I\-T\-D\-B02\-\_\-32w@{I\-T\-D\-B02\-\_\-32w}}
+\index{I\-T\-D\-B02\-\_\-32w@{I\-T\-D\-B02\-\_\-32w}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{I\-T\-D\-B02\-\_\-32w}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-T\-D\-B02\-\_\-32w}}\label{itdb02__graph16w_8c_a182deb22e1bb98491d823e039f42b3cf}
+
+
+Definition at line 61 of file itdb02\-\_\-graph16w.\-c.
+
+\hypertarget{itdb02__graph16w_8c_ac4a9237756696f43f0415d16227166a0}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!I\-T\-D\-B02\-\_\-\-Graph16w\-\_\-c@{I\-T\-D\-B02\-\_\-\-Graph16w\-\_\-c}}
+\index{I\-T\-D\-B02\-\_\-\-Graph16w\-\_\-c@{I\-T\-D\-B02\-\_\-\-Graph16w\-\_\-c}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{I\-T\-D\-B02\-\_\-\-Graph16w\-\_\-c}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-T\-D\-B02\-\_\-\-Graph16w\-\_\-c}}\label{itdb02__graph16w_8c_ac4a9237756696f43f0415d16227166a0}
+
+
+Definition at line 58 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{itdb02__graph16w_8c_a73920c4013fbde96824233e259429e1b}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!clr\-Scr@{clr\-Scr}}
+\index{clr\-Scr@{clr\-Scr}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{clr\-Scr}]{\setlength{\rightskip}{0pt plus 5cm}void clr\-Scr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a73920c4013fbde96824233e259429e1b}
+
+
+Definition at line 457 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References fast\-Write\-High, fast\-Write\-Low, L\-C\-D\-\_\-\-R\-S, L\-C\-D\-\_\-\-Writ\-\_\-\-Bus(), orient, P\-O\-R\-T\-R\-A\-I\-T, set\-Pixel(), and set\-X\-Y().
+
+
+\begin{DoxyCode}
+457              \{
+458     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} i;
+459     
+460     \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);
+461     \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+462         \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(0,0,239,399);
+463     \textcolor{keywordflow}{else}
+464         \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(0,0,399,239);
+465     
+466     \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a4781e073871c6f27f89b9463ad3a4ed1}{LCD\_RS});
+467     \textcolor{keywordflow}{for} (i=0; i<96000; i++)\{
+468         \hyperlink{itdb02__graph16w_8c_a68a468e798749e3454928bce17ed6274}{LCD\_Writ\_Bus}(0);
+469     \}
+470     \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);
+471 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a0770ef07e92f33d6d09ab46b60d929d9}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!draw\-Bitmap@{draw\-Bitmap}}
+\index{draw\-Bitmap@{draw\-Bitmap}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{draw\-Bitmap}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-Bitmap (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{sx, }
+\item[{int}]{sy, }
+\item[{unsigned int $\ast$}]{data, }
+\item[{int}]{scale}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a0770ef07e92f33d6d09ab46b60d929d9}
+
+
+Definition at line 996 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References fast\-Write\-High, fast\-Write\-Low, L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A(), orient, P\-O\-R\-T\-R\-A\-I\-T, and set\-X\-Y().
+
+
+
+Referenced by draw\-Bitmap\-R().
+
+
+\begin{DoxyCode}
+997 \{
+998     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} col;
+999     \textcolor{keywordtype}{int} tx, ty, tc, tsx, tsy;
+1000 
+1001     \textcolor{keywordflow}{if} (scale==1)
+1002     \{
+1003         \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+1004         \{
+1005             \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);  
+1006             \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+sx-1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+sy-1);
+1007             \textcolor{keywordflow}{for} (tc=0; tc<(sx*sy); tc++)
+1008             \{
+1009                 col=(\textcolor{keywordtype}{unsigned} int)(data[tc]);
+1010                 \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(col);
+1011             \}
+1012             \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);  
+1013         \}
+1014         \textcolor{keywordflow}{else}
+1015         \{
+1016             \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);  
+1017             \textcolor{keywordflow}{for} (ty=0; ty<sy; ty++)
+1018             \{
+1019                 \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+ty, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+sx-1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+ty);
+1020                 \textcolor{keywordflow}{for} (tx=sx; tx>=0; tx--)
+1021                 \{
+1022                     col=(\textcolor{keywordtype}{unsigned} int)(data[(ty*sx)+tx]);
+1023                     \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(col);
+1024                 \}
+1025             \}
+1026             \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);  
+1027         \}
+1028     \}
+1029     \textcolor{keywordflow}{else}
+1030     \{
+1031         \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+1032         \{
+1033             \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);  
+1034             \textcolor{keywordflow}{for} (ty=0; ty<sy; ty++)
+1035             \{
+1036                 \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+(ty*scale), \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+((sx*scale)-1), \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+(ty*scale)+scale);
+1037                 \textcolor{keywordflow}{for} (tsy=0; tsy<scale; tsy++)
+1038                     \textcolor{keywordflow}{for} (tx=0; tx<sx; tx++)
+1039                     \{
+1040                         col=(\textcolor{keywordtype}{unsigned} int)(data[(ty*sx)+tx]);
+1041                         \textcolor{keywordflow}{for} (tsx=0; tsx<scale; tsx++)
+1042                             \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(col);
+1043                     \}
+1044             \}
+1045             \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);  
+1046         \}
+1047         \textcolor{keywordflow}{else}
+1048         \{
+1049             \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);  
+1050             \textcolor{keywordflow}{for} (ty=0; ty<sy; ty++)
+1051             \{
+1052                 \textcolor{keywordflow}{for} (tsy=0; tsy<scale; tsy++)
+1053                 \{
+1054                     \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+(ty*scale)+tsy, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+((sx*scale)-1), \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+(ty*scale)+tsy);
+1055                     \textcolor{keywordflow}{for} (tx=sx; tx>=0; tx--)
+1056                     \{
+1057                         col=(\textcolor{keywordtype}{unsigned} int)(data[(ty*sx)+tx]);
+1058                         \textcolor{keywordflow}{for} (tsx=0; tsx<scale; tsx++)
+1059                             \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(col);
+1060                     \}
+1061                 \}
+1062             \}
+1063             \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);  
+1064         \}
+1065     \}
+1066 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a3278845d5a4921a887a80767e485f828}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!draw\-Bitmap\-R@{draw\-Bitmap\-R}}
+\index{draw\-Bitmap\-R@{draw\-Bitmap\-R}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{draw\-Bitmap\-R}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-Bitmap\-R (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{sx, }
+\item[{int}]{sy, }
+\item[{unsigned int $\ast$}]{data, }
+\item[{int}]{deg, }
+\item[{int}]{rox, }
+\item[{int}]{roy}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a3278845d5a4921a887a80767e485f828}
+
+
+Definition at line 1068 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References cosi(), draw\-Bitmap(), draw\-Pixel(), fast\-Write\-Data, set\-Color(), set\-X\-Y(), and sini().
+
+
+\begin{DoxyCode}
+1068                                                                                              \{
+1069     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} col;
+1070     \textcolor{keywordtype}{int} tx, ty, newx, newy;
+1071     \textcolor{comment}{//char r, g, b;}
+1072     \textcolor{comment}{//float vrad = 0;        }
+1073     \textcolor{comment}{//vrad=deg*0.0174533;}
+1074     
+1075     \textcolor{comment}{//vals = (int)(100000*sini(deg));}
+1076     
+1077     \textcolor{comment}{//SerialPrintf(COM, "x: sini(%d)= %d\(\backslash\)r\(\backslash\)n", deg, vals);}
+1078     
+1079     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg}==0)
+1080         \hyperlink{itdb02__graph16w_8c_a0770ef07e92f33d6d09ab46b60d929d9}{drawBitmap}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, sx, sy, data, 1);
+1081     \textcolor{keywordflow}{else} \{
+1082     \textcolor{keywordflow}{for} (ty=0; ty<sy; ty++)\{
+1083         \textcolor{keywordflow}{for} (tx=0; tx<sx; tx++)\{
+1084         col=(\textcolor{keywordtype}{unsigned} int)(data[(ty*sx)+tx]);
+1085         newx=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+rox+((tx-rox)*\hyperlink{integer__math_8c_a23a6057d030cef9c2419b9ab1e00e615}{cosi}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})-(ty-roy)*\hyperlink{integer__math_8c_a75c206deaa23373742a9b63b9d88547b}{sini}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg}));
+1086         newy=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+roy+((ty-roy)*\hyperlink{integer__math_8c_a23a6057d030cef9c2419b9ab1e00e615}{cosi}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})+(tx-rox)*\hyperlink{integer__math_8c_a75c206deaa23373742a9b63b9d88547b}{sini}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg}));
+1087         \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(newx, newy, newx, newy);
+1088         \hyperlink{itdb02__graph16_8h_a2132aed770256afe28833bb4ead40b38}{fastWriteData}(col);
+1089         \}
+1090     \}
+1091     \}
+1092 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_ae78bea676676698842bfcf44afa01fe7}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!draw\-Circle@{draw\-Circle}}
+\index{draw\-Circle@{draw\-Circle}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{draw\-Circle}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-Circle (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{radius}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_ae78bea676676698842bfcf44afa01fe7}
+
+
+Definition at line 415 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References draw\-Pixel().
+
+
+\begin{DoxyCode}
+415                                          \{
+416   \textcolor{keywordtype}{int} f = 1 - radius;
+417   \textcolor{keywordtype}{int} ddF\_x = 1;
+418   \textcolor{keywordtype}{int} ddF\_y = -2 * radius;
+419   \textcolor{keywordtype}{int} x1 = 0;
+420   \textcolor{keywordtype}{int} y1 = radius;
+421  
+422   \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} + radius);
+423   \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} - radius);
+424   \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} + radius, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+425   \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} - radius, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+426  
+427   \textcolor{keywordflow}{while}(x1 < y1)
+428   \{
+429     \textcolor{keywordflow}{if}(f >= 0) 
+430     \{
+431       y1--;
+432       ddF\_y += 2;
+433       f += ddF\_y;
+434     \}
+435     x1++;
+436     ddF\_x += 2;
+437     f += ddF\_x;    
+438     \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} + x1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} + y1);
+439     \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} - x1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} + y1);
+440     \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} + x1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} - y1);
+441     \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} - x1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} - y1);
+442     \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} + y1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} + x1);
+443     \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} - y1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} + x1);
+444     \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} + y1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} - x1);
+445     \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} - y1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} - x1);
+446   \}
+447 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!draw\-H\-Line@{draw\-H\-Line}}
+\index{draw\-H\-Line@{draw\-H\-Line}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{draw\-H\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-H\-Line (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{l}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}
+
+
+Definition at line 609 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References fast\-Set\-Pixel, fast\-Write\-High, fast\-Write\-Low, fcolorb, fcolorg, fcolorr, set\-Pixel(), and set\-X\-Y().
+
+
+
+Referenced by draw\-Line(), draw\-Rect(), draw\-Round\-Rect(), fill\-Rect(), and fill\-Round\-Rect().
+
+
+\begin{DoxyCode}
+610 \{
+611     \textcolor{keywordtype}{int} i;
+612     
+613     \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);  
+614     \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+l, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+615     \textcolor{keywordflow}{for} (i=0; i<l+1; i++)\{
+616         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr}, \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg}, \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb});
+617     \}
+618     \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);  
+619 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a670eabe51fc97973e3ae3b909b9a57dc}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!draw\-Line@{draw\-Line}}
+\index{draw\-Line@{draw\-Line}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{draw\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-Line (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a670eabe51fc97973e3ae3b909b9a57dc}
+
+
+Definition at line 519 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References abs(), draw\-H\-Line(), draw\-Pixel(), draw\-V\-Line(), fast\-Write\-High, fast\-Write\-Low, fcolorb, fcolorg, fcolorr, L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A(), orient, P\-O\-R\-T\-R\-A\-I\-T, and set\-X\-Y().
+
+
+\begin{DoxyCode}
+520 \{
+521     \textcolor{keywordtype}{int} tmp, i;
+522     \textcolor{keywordtype}{double} delta, tx, ty;
+523     \textcolor{keywordtype}{double} m, b, dx, dy;
+524 
+525     \textcolor{keywordflow}{if} (((x2-x1)<0))\{
+526         tmp=x1;
+527         x1=x2;
+528         x2=tmp;
+529         tmp=y1;
+530         y1=y2;
+531         y2=tmp;
+532     \}
+533     \textcolor{keywordflow}{if} (((y2-y1)<0))\{
+534         tmp=x1;
+535         x1=x2;
+536         x2=tmp;
+537         tmp=y1;
+538         y1=y2;
+539         y2=tmp;
+540     \}
+541 
+542     \textcolor{keywordflow}{if} (y1==y2)\{
+543         \textcolor{keywordflow}{if} (x1>x2)\{
+544             tmp=x1;
+545             x1=x2;
+546             x2=tmp;
+547         \}
+548         \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1, y1, x2-x1);
+549     \}
+550     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (x1==x2)\{
+551         \textcolor{keywordflow}{if} (y1>y2)\{
+552             tmp=y1;
+553             y1=y2;
+554             y2=tmp;
+555         \}
+556         \hyperlink{itdb02__graph16w_8c_a7a83dd350446db4e8e79e8b322636460}{drawVLine}(x1, y1, y2-y1);
+557     \}
+558     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{mathlib_8c_a55afa626cd6ca4a3271016cd75888ecb}{abs}(x2-x1)>\hyperlink{mathlib_8c_a55afa626cd6ca4a3271016cd75888ecb}{abs}(y2-y1))\{
+559         
+560         \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);
+561         
+562         delta=(double)(y2-y1)/(double)(x2-x1);
+563         ty=(double)y1;
+564         
+565         \textcolor{keywordflow}{if} (x1>x2)\{
+566             \textcolor{keywordflow}{for} (i=x1; i>=x2; i--)\{
+567                 \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(i, (\textcolor{keywordtype}{int})(ty+0.5), i, (\textcolor{keywordtype}{int})(ty+0.5));
+568                 \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(((\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr} & 0xF8)<<8) + ((
+      \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg} & 0xFC)<<3) + ((\hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb} & 0xF8)>>3));
+569                 ty=ty-delta;
+570             \}
+571         \}
+572         \textcolor{keywordflow}{else}\{
+573             \textcolor{keywordflow}{for} (i=x1; i<=x2; i++)\{
+574                 \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(i, (\textcolor{keywordtype}{int})(ty+0.5), i, (\textcolor{keywordtype}{int})(ty+0.5));
+575                 \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(((\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr} & 0xF8)<<8) + ((
+      \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg} & 0xFC)<<3) + ((\hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb} & 0xF8)>>3));
+576                 ty=ty+delta;
+577             \}
+578         \}
+579         \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);
+580     \}
+581     \textcolor{keywordflow}{else}\{
+582         \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);
+583         
+584         delta=(double)(x2-x1)/(double)(y2-y1);
+585         tx=(double)x1;
+586         \textcolor{keywordflow}{if} (y1>y2) \{
+587             \textcolor{keywordflow}{for} (i=y2+1; i>y1; i--)\{
+588                 \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}((\textcolor{keywordtype}{int})(tx+0.5), i, (\textcolor{keywordtype}{int})(tx+0.5), i);
+589                 \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(((\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr} & 0xF8)<<8) + ((
+      \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg} & 0xFC)<<3) + ((\hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb} & 0xF8)>>3));
+590                 tx=tx+delta;
+591             \}
+592         \}
+593         \textcolor{keywordflow}{else}\{
+594             \textcolor{keywordflow}{for} (i=y1; i<y2+1; i++)\{
+595                 \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}((\textcolor{keywordtype}{int})(tx+0.5), i, (\textcolor{keywordtype}{int})(tx+0.5), i);
+596                 \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(((\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr} & 0xF8)<<8) + ((
+      \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg} & 0xFC)<<3) + ((\hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb} & 0xF8)>>3));
+597                 tx=tx+delta;
+598             \}
+599         \}
+600         \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);
+601     \}
+602 
+603     \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+604         \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(0,0,239,399);
+605     \textcolor{keywordflow}{else}
+606         \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(0,0,399,239);
+607 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!draw\-Pixel@{draw\-Pixel}}
+\index{draw\-Pixel@{draw\-Pixel}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{draw\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-Pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}
+
+
+Definition at line 506 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References fast\-Write\-High, fast\-Write\-Low, fcolorb, fcolorg, fcolorr, L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A(), orient, P\-O\-R\-T\-R\-A\-I\-T, set\-Pixel(), and set\-X\-Y().
+
+
+
+Referenced by draw\-Circle(), draw\-Round\-Rect(), and fill\-Circle().
+
+
+\begin{DoxyCode}
+507 \{
+508     \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);  
+509     \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+510     \textcolor{comment}{//setPixel(fcolorr, fcolorg, fcolorb);}
+511     \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(((\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr} & 0xF8)<<8) + ((\hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg} & 0xFC)<<3) + ((
+      \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb} & 0xF8)>>3));
+512     \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+513         \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(0,0,239,399);
+514     \textcolor{keywordflow}{else}
+515         \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(0,0,399,239);
+516     \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);  
+517 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a69f5e0e04dc084dcfd8f11da497290d8}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!draw\-Rect@{draw\-Rect}}
+\index{draw\-Rect@{draw\-Rect}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{draw\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-Rect (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a69f5e0e04dc084dcfd8f11da497290d8}
+
+
+Definition at line 290 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References draw\-H\-Line(), and draw\-V\-Line().
+
+
+\begin{DoxyCode}
+291 \{
+292     \textcolor{keywordtype}{int} tmp;
+293 
+294     \textcolor{keywordflow}{if} (x1>x2)
+295     \{
+296         tmp=x1;
+297         x1=x2;
+298         x2=tmp;
+299     \}
+300     \textcolor{keywordflow}{if} (y1>y2)
+301     \{
+302         tmp=y1;
+303         y1=y2;
+304         y2=tmp;
+305     \}
+306 
+307     \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1, y1, x2-x1);
+308     \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1, y2, x2-x1);
+309     \hyperlink{itdb02__graph16w_8c_a7a83dd350446db4e8e79e8b322636460}{drawVLine}(x1, y1, y2-y1);
+310     \hyperlink{itdb02__graph16w_8c_a7a83dd350446db4e8e79e8b322636460}{drawVLine}(x2, y1, y2-y1);
+311 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_ac9699711101163b29a02dc191efff6a9}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!draw\-Round\-Rect@{draw\-Round\-Rect}}
+\index{draw\-Round\-Rect@{draw\-Round\-Rect}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{draw\-Round\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-Round\-Rect (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_ac9699711101163b29a02dc191efff6a9}
+
+
+Definition at line 313 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References draw\-H\-Line(), draw\-Pixel(), and draw\-V\-Line().
+
+
+\begin{DoxyCode}
+314 \{
+315     \textcolor{keywordtype}{int} tmp;
+316 
+317     \textcolor{keywordflow}{if} (x1>x2)
+318     \{
+319         tmp=x1;
+320         x1=x2;
+321         x2=tmp;
+322     \}
+323     \textcolor{keywordflow}{if} (y1>y2)
+324     \{
+325         tmp=y1;
+326         y1=y2;
+327         y2=tmp;
+328     \}
+329     \textcolor{keywordflow}{if} ((x2-x1)>4 && (y2-y1)>4)
+330     \{
+331         \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(x1+1,y1+1);
+332         \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(x2-1,y1+1);
+333         \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(x1+1,y2-1);
+334         \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(x2-1,y2-1);
+335         \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1+2, y1, x2-x1-4);
+336         \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1+2, y2, x2-x1-4);
+337         \hyperlink{itdb02__graph16w_8c_a7a83dd350446db4e8e79e8b322636460}{drawVLine}(x1, y1+2, y2-y1-4);
+338         \hyperlink{itdb02__graph16w_8c_a7a83dd350446db4e8e79e8b322636460}{drawVLine}(x2, y1+2, y2-y1-4);
+339     \}
+340 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a7a83dd350446db4e8e79e8b322636460}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!draw\-V\-Line@{draw\-V\-Line}}
+\index{draw\-V\-Line@{draw\-V\-Line}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{draw\-V\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void draw\-V\-Line (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{l}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a7a83dd350446db4e8e79e8b322636460}
+
+
+Definition at line 621 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References fast\-Set\-Pixel, fast\-Write\-High, fast\-Write\-Low, fcolorb, fcolorg, fcolorr, set\-Pixel(), and set\-X\-Y().
+
+
+
+Referenced by draw\-Line(), draw\-Rect(), draw\-Round\-Rect(), and fill\-Rect().
+
+
+\begin{DoxyCode}
+622 \{
+623     \textcolor{keywordtype}{int} i;
+624     \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);
+625     \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+l);
+626     \textcolor{keywordflow}{for} (i=0; i<l; i++) \{
+627         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr}, \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg}, \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb});
+628     \}
+629     \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);  
+630 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a0684d2369cd27f4feffc1dffae0b8df5}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!fill\-Circle@{fill\-Circle}}
+\index{fill\-Circle@{fill\-Circle}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{fill\-Circle}]{\setlength{\rightskip}{0pt plus 5cm}void fill\-Circle (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{radius}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a0684d2369cd27f4feffc1dffae0b8df5}
+
+
+Definition at line 449 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References draw\-Pixel().
+
+
+\begin{DoxyCode}
+449                                          \{
+450     \textcolor{keywordtype}{int} x1, y1;
+451     \textcolor{keywordflow}{for}(y1=-radius; y1<=radius; y1++) 
+452         \textcolor{keywordflow}{for}(x1=-radius; x1<=radius; x1++) 
+453             \textcolor{keywordflow}{if}(x1*x1+y1*y1 <= radius*radius) 
+454                 \hyperlink{itdb02__graph16w_8c_aa2dab771cbe8d68506897f90536f8d3f}{drawPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+x1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+y1); 
+455 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a63dbd4ad7b1c9de0e5d96851bb4fc4e3}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!fill\-Rect@{fill\-Rect}}
+\index{fill\-Rect@{fill\-Rect}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{fill\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}void fill\-Rect (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a63dbd4ad7b1c9de0e5d96851bb4fc4e3}
+
+
+Definition at line 342 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References draw\-H\-Line(), draw\-V\-Line(), orient, and P\-O\-R\-T\-R\-A\-I\-T.
+
+
+\begin{DoxyCode}
+343 \{
+344     \textcolor{keywordtype}{int} tmp, i;
+345 
+346     \textcolor{keywordflow}{if} (x1>x2)
+347     \{
+348         tmp=x1;
+349         x1=x2;
+350         x2=tmp;
+351     \}
+352     \textcolor{keywordflow}{if} (y1>y2)
+353     \{
+354         tmp=y1;
+355         y1=y2;
+356         y2=tmp;
+357     \}
+358 
+359     \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+360     \{
+361         \textcolor{keywordflow}{for} (i=0; i<((y2-y1)/2)+1; i++)
+362         \{
+363             \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1, y1+i, x2-x1);
+364             \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1, y2-i, x2-x1);
+365         \}
+366     \}
+367     \textcolor{keywordflow}{else}
+368     \{
+369         \textcolor{keywordflow}{for} (i=0; i<((x2-x1)/2)+1; i++)
+370         \{
+371             \hyperlink{itdb02__graph16w_8c_a7a83dd350446db4e8e79e8b322636460}{drawVLine}(x1+i, y1, y2-y1);
+372             \hyperlink{itdb02__graph16w_8c_a7a83dd350446db4e8e79e8b322636460}{drawVLine}(x2-i, y1, y2-y1);
+373         \}
+374     \}
+375 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a067d1eb3a441d46aea4777a3cdbff9bc}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!fill\-Round\-Rect@{fill\-Round\-Rect}}
+\index{fill\-Round\-Rect@{fill\-Round\-Rect}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{fill\-Round\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}void fill\-Round\-Rect (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a067d1eb3a441d46aea4777a3cdbff9bc}
+
+
+Definition at line 377 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References draw\-H\-Line().
+
+
+\begin{DoxyCode}
+377                                                   \{
+378     \textcolor{keywordtype}{int} tmp, i;
+379 
+380     \textcolor{keywordflow}{if} (x1>x2)
+381     \{
+382         tmp=x1;
+383         x1=x2;
+384         x2=tmp;
+385     \}
+386     \textcolor{keywordflow}{if} (y1>y2)
+387     \{
+388         tmp=y1;
+389         y1=y2;
+390         y2=tmp;
+391     \}
+392 
+393     \textcolor{keywordflow}{if} ((x2-x1)>4 && (y2-y1)>4)
+394     \{
+395         \textcolor{keywordflow}{for} (i=0; i<=((y2-y1)/2)+1; i++)
+396         \{
+397             \textcolor{keywordflow}{switch}(i)
+398             \{
+399             \textcolor{keywordflow}{case} 0:
+400                 \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1+2, y1+i, x2-x1-4);
+401                 \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1+2, y2-i, x2-x1-4);
+402                 \textcolor{keywordflow}{break};
+403             \textcolor{keywordflow}{case} 1:
+404                 \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1+1, y1+i, x2-x1-2);
+405                 \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1+1, y2-i, x2-x1-2);
+406                 \textcolor{keywordflow}{break};
+407             \textcolor{keywordflow}{default}:
+408                 \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1, y1+i, x2-x1);
+409                 \hyperlink{itdb02__graph16w_8c_a463d2f2b2de45e2d236ae7771257a165}{drawHLine}(x1, y2-i, x2-x1);
+410             \}
+411         \}
+412     \}
+413 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_ae158c0bcd8d7aa9680189fc207826f75}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!fill\-Scr@{fill\-Scr}}
+\index{fill\-Scr@{fill\-Scr}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{fill\-Scr}]{\setlength{\rightskip}{0pt plus 5cm}void fill\-Scr (
+\begin{DoxyParamCaption}
+\item[{char}]{r, }
+\item[{char}]{g, }
+\item[{char}]{b}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_ae158c0bcd8d7aa9680189fc207826f75}
+
+
+Definition at line 473 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References fast\-Write\-High, fast\-Write\-Low, L\-C\-D\-\_\-\-R\-S, L\-C\-D\-\_\-\-Writ\-\_\-\-Bus(), orient, P\-O\-R\-T\-R\-A\-I\-T, set\-Pixel(), and set\-X\-Y().
+
+
+\begin{DoxyCode}
+473                                     \{
+474     \textcolor{keywordtype}{long} i;
+475     
+476     \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS); 
+477     \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+478         \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(0,0,239,399);
+479     \textcolor{keywordflow}{else}
+480         \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(0,0,399,239);
+481         
+482     \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a4781e073871c6f27f89b9463ad3a4ed1}{LCD\_RS});    
+483     \textcolor{keywordflow}{for} (i=0; i<96000; i++) \{
+484         \textcolor{comment}{//setPixel(r, g, b);}
+485         \hyperlink{itdb02__graph16w_8c_a68a468e798749e3454928bce17ed6274}{LCD\_Writ\_Bus}(((r & 0xF8)<<8) + ((g & 0xFC)<<3) + ((b & 0xF8)>>3));
+486     \}
+487     \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS); 
+488 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a8e8d4c4966536a4068f54edd473baeff}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!font\-Size@{font\-Size}}
+\index{font\-Size@{font\-Size}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{font\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void font\-Size (
+\begin{DoxyParamCaption}
+\item[{char}]{size}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a8e8d4c4966536a4068f54edd473baeff}
+
+
+Definition at line 987 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References F\-O\-N\-T\-\_\-\-S\-M\-A\-L\-L, and fsize.
+
+
+\begin{DoxyCode}
+988 \{
+989 \textcolor{preprocessor}{#ifdef \_NO\_BIG\_FONT\_}
+990 \textcolor{preprocessor}{}    \hyperlink{itdb02__graph_8h_aa5154f1f2f741b1408f8726078a53e27}{fsize} = \hyperlink{itdb02__graph_8h_abc3b73da5871d66aa5843f50287102e5}{FONT\_SMALL};
+991 \textcolor{preprocessor}{#else}
+992 \textcolor{preprocessor}{}    \hyperlink{itdb02__graph_8h_aa5154f1f2f741b1408f8726078a53e27}{fsize} = size;
+993 \textcolor{preprocessor}{#endif}
+994 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a31930695ce2790f86f071bff3b3f60a4}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!Init\-L\-C\-D@{Init\-L\-C\-D}}
+\index{Init\-L\-C\-D@{Init\-L\-C\-D}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{Init\-L\-C\-D}]{\setlength{\rightskip}{0pt plus 5cm}void Init\-L\-C\-D (
+\begin{DoxyParamCaption}
+\item[{char}]{orientation}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a31930695ce2790f86f071bff3b3f60a4}
+
+
+Definition at line 141 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References Delayms(), fast\-Set\-Output\-Mode, fast\-Write\-High, fast\-Write\-Low, F\-O\-N\-T\-\_\-\-S\-M\-A\-L\-L, fsize, L\-C\-D\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R, L\-C\-D\-\_\-\-R\-S, L\-C\-D\-\_\-\-Write\-\_\-\-C\-O\-M(), L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A(), orient, orientation, set\-Back\-Color(), and set\-Color().
+
+
+\begin{DoxyCode}
+141                               \{
+142   \hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_ad3274afa69408ce3e36e151a4d4ad663}{orientation};
+143   
+144 \textcolor{comment}{//Pin Mode for Control Pins!}
+145 \textcolor{comment}{//OLIMEX BOARDS (Arduino Like Boards, using SHIELDs)}
+146 \textcolor{preprocessor}{#if defined(PIC32\_PINGUINO) || defined(PIC32\_PINGUINO\_OTG)}
+147 \textcolor{preprocessor}{}  \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7287a84fef726dc7e0cd3ffebc27a70d}{LCD\_DATA\_DIR} = 0x00;  \textcolor{comment}{//Output for All pins on DATA BUS}
+148   LCD\_DATA\_BUS = 0x00;
+149 
+150   \textcolor{comment}{//LCD DB0 to DB7}
+151   \textcolor{comment}{//0x4000,0x8000,0x200,0x100,0x80,0x40,0x02,0x04 (pins 8 - 15)}
+152   \textcolor{comment}{//1,1,6,6,6,6,1,1,}
+153   TRISBbits.TRISB14 = 0;
+154   TRISBbits.TRISB15 = 0;
+155   TRISGbits.TRISG9 = 0;
+156   TRISGbits.TRISG8 = 0;
+157   TRISGbits.TRISG7 = 0;
+158   TRISGbits.TRISG6 = 0;
+159   TRISBbits.TRISB1 = 0;
+160   TRISBbits.TRISB2 = 0;
+161 
+162   \hyperlink{itdb02__graph_8h_ad76b79573771a43e0619c47981d0aa42}{fastSetOutputMode}(dLCD\_RS);
+163   \hyperlink{itdb02__graph_8h_ad76b79573771a43e0619c47981d0aa42}{fastSetOutputMode}(dLCD\_WR);
+164   \hyperlink{itdb02__graph_8h_ad76b79573771a43e0619c47981d0aa42}{fastSetOutputMode}(dLCD\_CS);
+165   \hyperlink{itdb02__graph_8h_ad76b79573771a43e0619c47981d0aa42}{fastSetOutputMode}(dLCD\_REST);
+166   
+167   TRISDbits.TRISD4 = 1;     \textcolor{comment}{//RD4 is connected to D2, don't know why! :-P}
+168   PORTDbits.RD4 = 0;
+169 \textcolor{preprocessor}{#else}
+170 \textcolor{preprocessor}{}  \textcolor{comment}{//TODO: Maybe it cause some wrong signal on SERIAL?}
+171   \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7287a84fef726dc7e0cd3ffebc27a70d}{LCD\_DATA\_DIR} = 0x0000;  \textcolor{comment}{//Output for All pins on DATA BUS}
+172   LCD\_DATA\_BUS = 0x0000;
+173 
+174   \textcolor{comment}{//Pin Mode for Control Pins!}
+175   \hyperlink{itdb02__graph_8h_ad76b79573771a43e0619c47981d0aa42}{fastSetOutputMode}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a4781e073871c6f27f89b9463ad3a4ed1}{LCD\_RS});
+176   \hyperlink{itdb02__graph_8h_ad76b79573771a43e0619c47981d0aa42}{fastSetOutputMode}(LCD\_WR);
+177   \hyperlink{itdb02__graph_8h_ad76b79573771a43e0619c47981d0aa42}{fastSetOutputMode}(LCD\_CS);
+178   \hyperlink{itdb02__graph_8h_ad76b79573771a43e0619c47981d0aa42}{fastSetOutputMode}(LCD\_REST);
+179 \textcolor{preprocessor}{#endif}
+180 \textcolor{preprocessor}{}
+181   \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_REST);
+182   \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(5); 
+183   \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_REST);
+184   \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(5);
+185   \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_REST);
+186   \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(5);
+187 
+188   \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);
+189   
+190   \textcolor{comment}{//************* Start Initial Sequence *********/}
+191   \textcolor{comment}{//16x9 Aspect Display Size 399}
+192   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x00E9);
+193   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0020);
+194   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x0011); \textcolor{comment}{//Exit Sleep}
+195   \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(100);
+196   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x00D1); \textcolor{comment}{//VCOM Control}
+197   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0000);
+198   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0071);
+199   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0019);
+200   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x00D0); \textcolor{comment}{//Power\_Setting}
+201   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0007);
+202   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0001);
+203   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0008);
+204   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x0036); \textcolor{comment}{//Set\_address\_mode}
+205   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0048);
+206   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x003A); \textcolor{comment}{//Set\_pixel\_format}
+207   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0005);
+208   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x00C1); \textcolor{comment}{//Display\_Timing\_Setting for Normal/Partial Mode}
+209   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0010);
+210   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0010);
+211   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0002);
+212   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0002);
+213   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x00C0); \textcolor{comment}{//Set Default Gamma}
+214   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0000);
+215   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0035);
+216   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0000);
+217   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0000);
+218   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0001);
+219   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0002);
+220   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x00C5); \textcolor{comment}{//Set frame rate}
+221   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0004);\textcolor{comment}{//4 => 72Hz (Default)}
+222   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x00D2); \textcolor{comment}{//power setting}
+223   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0001);
+224   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0044);
+225   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x00C8); \textcolor{comment}{//Set Gamma}
+226   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0004);
+227   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0067);
+228   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0035);
+229   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0004);
+230   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0008);
+231   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0006);
+232   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0024);
+233   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0001);
+234   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0037);
+235   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0040);
+236   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0003);
+237   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0010);
+238   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0008);
+239   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0080);
+240   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0000);
+241   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x002A); \textcolor{comment}{//Set\_column\_address}
+242   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0000);
+243   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0000);
+244   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0000);
+245   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x00eF);
+246   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x002B); \textcolor{comment}{//Set\_page\_address}
+247   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0000);
+248   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0000);
+249   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x0001);
+250   \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(0x008F);
+251   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x0029); \textcolor{comment}{//display on      }
+252   \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x002C); \textcolor{comment}{//display on}
+253   
+254   \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);
+255 
+256   \hyperlink{itdb02__graph16w_8c_a8ad2141bfd226b29751953849b400abb}{setColor}(255, 255, 255);
+257   \hyperlink{itdb02__graph16w_8c_a3a4dc517aeb6b325f1b69b8e158b6bd7}{setBackColor}(0, 0, 0);
+258   \hyperlink{itdb02__graph_8h_aa5154f1f2f741b1408f8726078a53e27}{fsize} = \hyperlink{itdb02__graph_8h_abc3b73da5871d66aa5843f50287102e5}{FONT\_SMALL};
+259 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a68a468e798749e3454928bce17ed6274}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!L\-C\-D\-\_\-\-Writ\-\_\-\-Bus@{L\-C\-D\-\_\-\-Writ\-\_\-\-Bus}}
+\index{L\-C\-D\-\_\-\-Writ\-\_\-\-Bus@{L\-C\-D\-\_\-\-Writ\-\_\-\-Bus}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{L\-C\-D\-\_\-\-Writ\-\_\-\-Bus}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-D\-\_\-\-Writ\-\_\-\-Bus (
+\begin{DoxyParamCaption}
+\item[{int}]{data}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a68a468e798749e3454928bce17ed6274}
+
+
+Definition at line 111 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References fast\-Delay, fast\-Write\-High, and fast\-Write\-Low.
+
+
+
+Referenced by clr\-Scr(), fill\-Scr(), L\-C\-D\-\_\-\-Write\-\_\-\-C\-O\-M(), and L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A().
+
+
+\begin{DoxyCode}
+111                            \{
+112   LCD\_DATA\_BUS = data;
+113   \hyperlink{itdb02__graph_8h_a0ec8adc02325225664f16e26d144f500}{fastDelay}();
+114   \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_WR);
+115   \hyperlink{itdb02__graph_8h_a0ec8adc02325225664f16e26d144f500}{fastDelay}();
+116   \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_WR);
+117   \hyperlink{itdb02__graph_8h_a0ec8adc02325225664f16e26d144f500}{fastDelay}();
+118   \hyperlink{itdb02__graph_8h_a0ec8adc02325225664f16e26d144f500}{fastDelay}();
+119   \textcolor{comment}{/*LCD\_DATA\_BUS = VL;}
+120 \textcolor{comment}{  fastWriteLow(LCD\_WR);}
+121 \textcolor{comment}{  fastWriteHigh(LCD\_WR);*/}
+122 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!L\-C\-D\-\_\-\-Write\-\_\-\-C\-O\-M@{L\-C\-D\-\_\-\-Write\-\_\-\-C\-O\-M}}
+\index{L\-C\-D\-\_\-\-Write\-\_\-\-C\-O\-M@{L\-C\-D\-\_\-\-Write\-\_\-\-C\-O\-M}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{L\-C\-D\-\_\-\-Write\-\_\-\-C\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-D\-\_\-\-Write\-\_\-\-C\-O\-M (
+\begin{DoxyParamCaption}
+\item[{int}]{data}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}
+
+
+Definition at line 125 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References fast\-Delay, fast\-Write\-Low, L\-C\-D\-\_\-\-R\-S, and L\-C\-D\-\_\-\-Writ\-\_\-\-Bus().
+
+
+
+Referenced by Init\-L\-C\-D(), and set\-X\-Y().
+
+
+\begin{DoxyCode}
+125                             \{   
+126   \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a4781e073871c6f27f89b9463ad3a4ed1}{LCD\_RS});
+127   \hyperlink{itdb02__graph_8h_a0ec8adc02325225664f16e26d144f500}{fastDelay}();
+128   \hyperlink{itdb02__graph16w_8c_a68a468e798749e3454928bce17ed6274}{LCD\_Writ\_Bus}(data);
+129   \hyperlink{itdb02__graph_8h_a0ec8adc02325225664f16e26d144f500}{fastDelay}();
+130   \hyperlink{itdb02__graph_8h_a0ec8adc02325225664f16e26d144f500}{fastDelay}();
+131 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A@{L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A}}
+\index{L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A@{L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}void L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A (
+\begin{DoxyParamCaption}
+\item[{int}]{data}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}
+
+
+Definition at line 133 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References fast\-Delay, fast\-Write\-High, L\-C\-D\-\_\-\-R\-S, and L\-C\-D\-\_\-\-Writ\-\_\-\-Bus().
+
+
+
+Referenced by draw\-Bitmap(), draw\-Line(), draw\-Pixel(), Init\-L\-C\-D(), set\-Pixel(), and set\-X\-Y().
+
+
+\begin{DoxyCode}
+133                              \{
+134   \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a4781e073871c6f27f89b9463ad3a4ed1}{LCD\_RS});
+135   \hyperlink{itdb02__graph_8h_a0ec8adc02325225664f16e26d144f500}{fastDelay}();
+136   \hyperlink{itdb02__graph16w_8c_a68a468e798749e3454928bce17ed6274}{LCD\_Writ\_Bus}(data);
+137   \hyperlink{itdb02__graph_8h_a0ec8adc02325225664f16e26d144f500}{fastDelay}();
+138   \hyperlink{itdb02__graph_8h_a0ec8adc02325225664f16e26d144f500}{fastDelay}();
+139 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a021aa0e3035c215918243b6510f01a4a}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!my\-G\-L\-C\-D16w\-\_\-print@{my\-G\-L\-C\-D16w\-\_\-print}}
+\index{my\-G\-L\-C\-D16w\-\_\-print@{my\-G\-L\-C\-D16w\-\_\-print}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{my\-G\-L\-C\-D16w\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}void my\-G\-L\-C\-D16w\-\_\-print (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{st, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{deg}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a021aa0e3035c215918243b6510f01a4a}
+
+
+Definition at line 830 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References C\-E\-N\-T\-E\-R, F\-O\-N\-T\-\_\-\-S\-M\-A\-L\-L, fsize, orient, P\-O\-R\-T\-R\-A\-I\-T, print\-Char(), R\-I\-G\-H\-T, and rotate\-Char().
+
+
+
+Referenced by print\-Num\-F(), and print\-Num\-I().
+
+
+\begin{DoxyCode}
+831 \{
+832     \textcolor{keywordtype}{int} stl, i;
+833 
+834     stl = strlen(st);
+835 
+836     \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_aa5154f1f2f741b1408f8726078a53e27}{fsize}==\hyperlink{itdb02__graph_8h_abc3b73da5871d66aa5843f50287102e5}{FONT\_SMALL})
+837     \{
+838         \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+839         \{
+840         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}==\hyperlink{itdb02__graph_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT})
+841             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}=240-(stl*8);
+842         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}==\hyperlink{itdb02__graph_8h_a824fea1f256659e11e6cd8c82cb13338}{CENTER})
+843             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}=(240-(stl*8))/2;
+844         \}
+845         \textcolor{keywordflow}{else}
+846         \{
+847         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}==\hyperlink{itdb02__graph_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT})
+848             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}=400-(stl*8);
+849         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}==\hyperlink{itdb02__graph_8h_a824fea1f256659e11e6cd8c82cb13338}{CENTER})
+850             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}=(400-(stl*8))/2;
+851         \}
+852     \}
+853     \textcolor{keywordflow}{else}
+854     \{
+855         \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+856         \{
+857         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}==\hyperlink{itdb02__graph_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT})
+858             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}=240-(stl*16);
+859         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}==\hyperlink{itdb02__graph_8h_a824fea1f256659e11e6cd8c82cb13338}{CENTER})
+860             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}=(240-(stl*16))/2;
+861         \}
+862         \textcolor{keywordflow}{else}
+863         \{
+864         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}==\hyperlink{itdb02__graph_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT})
+865             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}=400-(stl*16);
+866         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}==\hyperlink{itdb02__graph_8h_a824fea1f256659e11e6cd8c82cb13338}{CENTER})
+867             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}=(400-(stl*16))/2;
+868         \}
+869     \}
+870 
+871     \textcolor{keywordflow}{for} (i=0; i<stl; i++)
+872         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg}==0)
+873             \hyperlink{itdb02__graph16w_8c_a2cdb0529037092472ca598c0ff71bd57}{printChar}(*st++, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} + (i*(\hyperlink{itdb02__graph_8h_aa5154f1f2f741b1408f8726078a53e27}{fsize}*8)), \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+874         \textcolor{keywordflow}{else}
+875             \hyperlink{itdb02__graph16w_8c_af0d9e8e9b974708c910c54d146ea7ffe}{rotateChar}(*st++, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, i, \hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg});
+876 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a2cdb0529037092472ca598c0ff71bd57}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!print\-Char@{print\-Char}}
+\index{print\-Char@{print\-Char}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{print\-Char}]{\setlength{\rightskip}{0pt plus 5cm}void print\-Char (
+\begin{DoxyParamCaption}
+\item[{char}]{c, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a2cdb0529037092472ca598c0ff71bd57}
+
+
+Definition at line 632 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References bcolorb, bcolorg, bcolorr, Big\-Font, fast\-Set\-Pixel, fast\-Write\-High, fast\-Write\-Low, fcolorb, fcolorg, fcolorr, F\-O\-N\-T\-\_\-\-S\-M\-A\-L\-L, fsize, orient, P\-O\-R\-T\-R\-A\-I\-T, set\-Pixel(), set\-X\-Y(), and Small\-Font.
+
+
+
+Referenced by my\-G\-L\-C\-D16w\-\_\-print().
+
+
+\begin{DoxyCode}
+632                                     \{
+633     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} i,j,ch;
+634     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} temp; 
+635 
+636     \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);   
+637   
+638     \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_aa5154f1f2f741b1408f8726078a53e27}{fsize}==\hyperlink{itdb02__graph_8h_abc3b73da5871d66aa5843f50287102e5}{FONT\_SMALL})
+639     \{
+640         \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+641         \{
+642             \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x},\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y},\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+7,\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+11);
+643           
+644             temp=((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}-32)*12);
+645             \textcolor{keywordflow}{for}(j=0;j<12;j++)
+646             \{
+647                 ch=(\hyperlink{_small_font_8c_a9bd757e32de8d945331c373df7d988b2}{SmallFont}[temp]);
+648                 \textcolor{keywordflow}{for}(i=0;i<8;i++)
+649                 \{   
+650                     \textcolor{keywordflow}{if}((ch&(1<<(7-i)))!=0)   
+651                     \{
+652                         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr}, \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg}, 
+      \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb});
+653                     \} 
+654                     \textcolor{keywordflow}{else}
+655                     \{
+656                         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_aab55ccd237d7ebcf802064d447665e35}{bcolorr}, \hyperlink{itdb02__graph_8h_a6a4ee9226b1a7d6d146289e8cb360821}{bcolorg}, 
+      \hyperlink{itdb02__graph_8h_aea6ecc92542d956fdbe6d94cbbb36f4a}{bcolorb});
+657                     \}   
+658                 \}
+659                 temp++;
+660             \}
+661         \}
+662         \textcolor{keywordflow}{else}
+663         \{
+664           
+665             temp=((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}-32)*12);
+666             \textcolor{keywordflow}{for}(j=0;j<12;j++)
+667             \{
+668                 \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x},\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+j,\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+7,\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+j);
+669                 ch=(\hyperlink{_small_font_8c_a9bd757e32de8d945331c373df7d988b2}{SmallFont}[temp]);
+670                 \textcolor{keywordflow}{for}(i=0;i<8;i++)
+671                 \{   
+672                     \textcolor{keywordflow}{if}((ch&(1<<i))!=0)   
+673                     \{
+674                         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr}, \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg}, 
+      \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb});
+675                     \} 
+676                     \textcolor{keywordflow}{else}
+677                     \{
+678                         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_aab55ccd237d7ebcf802064d447665e35}{bcolorr}, \hyperlink{itdb02__graph_8h_a6a4ee9226b1a7d6d146289e8cb360821}{bcolorg}, 
+      \hyperlink{itdb02__graph_8h_aea6ecc92542d956fdbe6d94cbbb36f4a}{bcolorb});
+679                     \}   
+680                 \}
+681                 temp++;
+682             \}
+683         \}
+684     \}
+685 \textcolor{preprocessor}{#ifndef \_NO\_BIG\_FONT\_}
+686 \textcolor{preprocessor}{}    \textcolor{keywordflow}{else}
+687     \{
+688         \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+689         \{
+690             \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x},\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y},\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+15,\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+15);
+691           
+692             temp=((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}-32)*32);
+693             \textcolor{keywordflow}{for}(j=0;j<32;j++)
+694             \{
+695                 ch=(\hyperlink{_big_font_8c_a606395c705e2200ffe98dfefbdcbc43e}{BigFont}[temp]);
+696                 \textcolor{keywordflow}{for}(i=0;i<8;i++)
+697                 \{   
+698                     \textcolor{keywordflow}{if}((ch&(1<<(7-i)))!=0)   
+699                     \{
+700                         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr}, \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg}, 
+      \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb});
+701                     \} 
+702                     \textcolor{keywordflow}{else}
+703                     \{
+704                         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_aab55ccd237d7ebcf802064d447665e35}{bcolorr}, \hyperlink{itdb02__graph_8h_a6a4ee9226b1a7d6d146289e8cb360821}{bcolorg}, 
+      \hyperlink{itdb02__graph_8h_aea6ecc92542d956fdbe6d94cbbb36f4a}{bcolorb});
+705                     \}   
+706                 \}
+707                 temp++;
+708             \}
+709         \}
+710         \textcolor{keywordflow}{else}
+711         \{
+712             temp=((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}-32)*32);
+713             \textcolor{keywordflow}{for}(j=0;j<32;j+=2)
+714             \{
+715                 \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x},\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+(j/2),\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+15,\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+(j/2));
+716                 ch=(\hyperlink{_big_font_8c_a606395c705e2200ffe98dfefbdcbc43e}{BigFont}[temp+1]);
+717                 \textcolor{keywordflow}{for}(i=0;i<8;i++)
+718                 \{   
+719                     \textcolor{keywordflow}{if}((ch&(1<<i))!=0)   
+720                     \{
+721                         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr}, \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg}, 
+      \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb});
+722                     \} 
+723                     \textcolor{keywordflow}{else}
+724                     \{
+725                         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_aab55ccd237d7ebcf802064d447665e35}{bcolorr}, \hyperlink{itdb02__graph_8h_a6a4ee9226b1a7d6d146289e8cb360821}{bcolorg}, 
+      \hyperlink{itdb02__graph_8h_aea6ecc92542d956fdbe6d94cbbb36f4a}{bcolorb});
+726                     \}   
+727                 \}
+728                 ch=(\hyperlink{_big_font_8c_a606395c705e2200ffe98dfefbdcbc43e}{BigFont}[temp]);
+729                 \textcolor{keywordflow}{for}(i=0;i<8;i++)
+730                 \{   
+731                     \textcolor{keywordflow}{if}((ch&(1<<i))!=0)   
+732                     \{
+733                         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr}, \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg}, 
+      \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb});
+734                     \} 
+735                     \textcolor{keywordflow}{else}
+736                     \{
+737                         \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_aab55ccd237d7ebcf802064d447665e35}{bcolorr}, \hyperlink{itdb02__graph_8h_a6a4ee9226b1a7d6d146289e8cb360821}{bcolorg}, 
+      \hyperlink{itdb02__graph_8h_aea6ecc92542d956fdbe6d94cbbb36f4a}{bcolorb});
+738                     \}   
+739                 \}
+740                 temp+=2;
+741             \}
+742         \}
+743     \}
+744 \textcolor{preprocessor}{#endif}
+745 \textcolor{preprocessor}{}    \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);
+746 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a6c411c72529ddfb2f35792733bcc50fe}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!print\-Num\-F@{print\-Num\-F}}
+\index{print\-Num\-F@{print\-Num\-F}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{print\-Num\-F}]{\setlength{\rightskip}{0pt plus 5cm}void print\-Num\-F (
+\begin{DoxyParamCaption}
+\item[{double}]{num, }
+\item[{char}]{dec, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a6c411c72529ddfb2f35792733bcc50fe}
+
+
+Definition at line 921 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References c, my\-G\-L\-C\-D16w\-\_\-print(), my\-G\-L\-C\-D\-\_\-print(), and powi().
+
+
+\begin{DoxyCode}
+922 \{
+923   \textcolor{keywordtype}{char} buf[25];
+924   \textcolor{keywordtype}{char} st[27];
+925   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} neg=0;
+926   \textcolor{keywordtype}{int} i,\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}=0;
+927   \textcolor{keywordtype}{int} c2;
+928   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} inum;
+929   
+930   \textcolor{keywordflow}{if} (num==0)
+931   \{
+932       st[0]=48;
+933       st[1]=46;
+934       \textcolor{keywordflow}{for} (i=0; i<dec; i++)
+935           st[2+i]=48;
+936       st[2+dec]=0;
+937   \}
+938   \textcolor{keywordflow}{else}
+939   \{
+940       \textcolor{keywordflow}{if} (num<0)
+941       \{
+942         neg=1;
+943         num=-num;
+944       \}
+945       
+946       \textcolor{keywordflow}{if} (dec<1)
+947         dec=1;
+948       \textcolor{keywordflow}{if} (dec>5)
+949         dec=5;
+950       
+951       inum=(long)(num*\hyperlink{integer__math_8c_a95c977034828ad73c4c90ca9f6ce14d8}{powi}(10,dec));
+952       
+953       \textcolor{keywordflow}{while} (inum>0) \{
+954         buf[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}]=48+(inum % 10);
+955         c++;
+956         inum=(inum-(inum % 10))/10;
+957       \}
+958       \textcolor{keywordflow}{if} ((num<1) && (num>0))
+959       \{
+960           buf[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}]=48;
+961           c++;
+962       \}
+963       buf[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}]=0;
+964       
+965       \textcolor{keywordflow}{if} (neg)
+966       \{
+967         st[0]=45;
+968       \}
+969       
+970       c2=neg;
+971       \textcolor{keywordflow}{for} (i=0; i<\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}; i++)
+972       \{
+973         st[c2]=buf[c-i-1];
+974         c2++;
+975         \textcolor{keywordflow}{if} ((c-(c2-neg))==dec)
+976         \{
+977           st[c2]=46;
+978           c2++;
+979         \}
+980       \}
+981       st[c2]=0;
+982   \}
+983 
+984   \hyperlink{itdb02__graph16w_8c_a021aa0e3035c215918243b6510f01a4a}{myGLCD16w\_print}(st,\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x},\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y},0);
+985 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_ad098e3ca0bbfe340ecbfd867a461c34d}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!print\-Num\-I@{print\-Num\-I}}
+\index{print\-Num\-I@{print\-Num\-I}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{print\-Num\-I}]{\setlength{\rightskip}{0pt plus 5cm}void print\-Num\-I (
+\begin{DoxyParamCaption}
+\item[{long}]{num, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_ad098e3ca0bbfe340ecbfd867a461c34d}
+
+
+Definition at line 878 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References c, my\-G\-L\-C\-D16w\-\_\-print(), and my\-G\-L\-C\-D\-\_\-print().
+
+
+\begin{DoxyCode}
+879 \{
+880   \textcolor{keywordtype}{char} buf[25];
+881   \textcolor{keywordtype}{char} st[27];
+882   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} neg=0;
+883   \textcolor{keywordtype}{int} i,\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}=0;
+884   
+885   \textcolor{keywordflow}{if} (num==0)
+886   \{
+887       st[0]=48;
+888       st[1]=0;
+889   \}
+890   \textcolor{keywordflow}{else}
+891   \{
+892       \textcolor{keywordflow}{if} (num<0)
+893       \{
+894         neg=1;
+895         num=-num;
+896       \}
+897       
+898       \textcolor{keywordflow}{while} (num>0)
+899       \{
+900         buf[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}]=48+(num % 10);
+901         c++;
+902         num=(num-(num % 10))/10;
+903       \}
+904       buf[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}]=0;
+905       
+906       \textcolor{keywordflow}{if} (neg)
+907       \{
+908         st[0]=45;
+909       \}
+910       
+911       \textcolor{keywordflow}{for} (i=0; i<\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}; i++)
+912       \{
+913         st[i+neg]=buf[c-i-1];
+914       \}
+915       st[c+neg]=0;
+916   \}
+917 
+918   \hyperlink{itdb02__graph16w_8c_a021aa0e3035c215918243b6510f01a4a}{myGLCD16w\_print}(st,\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x},\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y},0);
+919 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_af0d9e8e9b974708c910c54d146ea7ffe}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!rotate\-Char@{rotate\-Char}}
+\index{rotate\-Char@{rotate\-Char}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{rotate\-Char}]{\setlength{\rightskip}{0pt plus 5cm}void rotate\-Char (
+\begin{DoxyParamCaption}
+\item[{char}]{c, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{pos, }
+\item[{int}]{deg}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_af0d9e8e9b974708c910c54d146ea7ffe}
+
+
+Definition at line 748 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References bcolorb, bcolorg, bcolorr, Big\-Font, cosi(), fast\-Set\-Pixel, fast\-Write\-High, fast\-Write\-Low, fcolorb, fcolorg, fcolorr, F\-O\-N\-T\-\_\-\-S\-M\-A\-L\-L, fsize, set\-Pixel(), set\-X\-Y(), sini(), and Small\-Font.
+
+
+
+Referenced by my\-G\-L\-C\-D16w\-\_\-print().
+
+
+\begin{DoxyCode}
+749 \{
+750     \textcolor{keywordtype}{char} i,j,ch;
+751     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} temp;
+752     \textcolor{keywordtype}{int} newx,newy;
+753     \textcolor{comment}{//double radian;}
+754     \textcolor{comment}{//radian=deg*0.0175;  }
+755 
+756     \hyperlink{itdb02__graph_8h_a74e4ae0edd71e1c67148f2add614d458}{fastWriteLow}(LCD\_CS);   
+757     \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_aa5154f1f2f741b1408f8726078a53e27}{fsize}==\hyperlink{itdb02__graph_8h_abc3b73da5871d66aa5843f50287102e5}{FONT\_SMALL})
+758     \{
+759         temp=((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}-32)*12); 
+760         \textcolor{keywordflow}{for}(j=0;j<12;j++) 
+761         \{
+762             ch=(\hyperlink{_small_font_8c_a9bd757e32de8d945331c373df7d988b2}{SmallFont}[temp]); 
+763             \textcolor{keywordflow}{for}(i=0;i<8;i++)
+764             \{   
+765                 newx=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+(((i+(pos*8))*\hyperlink{integer__math_8c_a23a6057d030cef9c2419b9ab1e00e615}{cosi}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg}))-((j)*\hyperlink{integer__math_8c_a75c206deaa23373742a9b63b9d88547b}{sini}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})));
+766                 newy=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+(((j)*\hyperlink{integer__math_8c_a23a6057d030cef9c2419b9ab1e00e615}{cosi}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg}))+((i+(pos*8))*\hyperlink{integer__math_8c_a75c206deaa23373742a9b63b9d88547b}{sini}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})));
+767 
+768                 \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(newx,newy,newx+1,newy+1);
+769                 
+770                 \textcolor{keywordflow}{if}((ch&(1<<(7-i)))!=0)   
+771                 \{
+772                     \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr}, \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg}, 
+      \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb});
+773                 \} 
+774                 \textcolor{keywordflow}{else}  
+775                 \{
+776                     \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_aab55ccd237d7ebcf802064d447665e35}{bcolorr}, \hyperlink{itdb02__graph_8h_a6a4ee9226b1a7d6d146289e8cb360821}{bcolorg}, 
+      \hyperlink{itdb02__graph_8h_aea6ecc92542d956fdbe6d94cbbb36f4a}{bcolorb});
+777                 \}   
+778             \}
+779             temp++;
+780         \}
+781     \}
+782 \textcolor{preprocessor}{#ifndef \_NO\_BIG\_FONT\_}
+783 \textcolor{preprocessor}{}    \textcolor{keywordflow}{else}
+784     \{
+785         temp=((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}-32)*32); 
+786         \textcolor{keywordflow}{for}(j=0;j<16;j++) 
+787         \{
+788             ch=(\hyperlink{_big_font_8c_a606395c705e2200ffe98dfefbdcbc43e}{BigFont}[temp]); 
+789             \textcolor{keywordflow}{for}(i=0;i<8;i++)
+790             \{   
+791                 newx=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+(((i+(pos*16))*\hyperlink{integer__math_8c_a23a6057d030cef9c2419b9ab1e00e615}{cosi}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg}))-((j)*\hyperlink{integer__math_8c_a75c206deaa23373742a9b63b9d88547b}{sini}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})));
+792                 newy=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+(((j)*\hyperlink{integer__math_8c_a23a6057d030cef9c2419b9ab1e00e615}{cosi}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg}))+((i+(pos*16))*\hyperlink{integer__math_8c_a75c206deaa23373742a9b63b9d88547b}{sini}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})));
+793 
+794                 \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(newx,newy,newx+1,newy+1);
+795                 
+796                 \textcolor{keywordflow}{if}((ch&(1<<(7-i)))!=0)   
+797                 \{
+798                     \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr}, \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg}, 
+      \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb});
+799                 \} 
+800                 \textcolor{keywordflow}{else}  
+801                 \{
+802                     \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_aab55ccd237d7ebcf802064d447665e35}{bcolorr}, \hyperlink{itdb02__graph_8h_a6a4ee9226b1a7d6d146289e8cb360821}{bcolorg}, 
+      \hyperlink{itdb02__graph_8h_aea6ecc92542d956fdbe6d94cbbb36f4a}{bcolorb});
+803                 \}   
+804             \}
+805             temp++;
+806             ch=(\hyperlink{_big_font_8c_a606395c705e2200ffe98dfefbdcbc43e}{BigFont}[temp]); 
+807             \textcolor{keywordflow}{for}(i=8;i<16;i++)
+808             \{   
+809                 newx=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+(((i+(pos*16))*\hyperlink{integer__math_8c_a23a6057d030cef9c2419b9ab1e00e615}{cosi}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg}))-((j)*\hyperlink{integer__math_8c_a75c206deaa23373742a9b63b9d88547b}{sini}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})));
+810                 newy=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+(((j)*\hyperlink{integer__math_8c_a23a6057d030cef9c2419b9ab1e00e615}{cosi}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg}))+((i+(pos*16))*\hyperlink{integer__math_8c_a75c206deaa23373742a9b63b9d88547b}{sini}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})));
+811 
+812                 \hyperlink{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{setXY}(newx,newy,newx+1,newy+1);
+813                 
+814                 \textcolor{keywordflow}{if}((ch&(1<<(15-i)))!=0)   
+815                 \{
+816                     \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr}, \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg}, 
+      \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb});
+817                 \} 
+818                 \textcolor{keywordflow}{else}  
+819                 \{
+820                     \hyperlink{itdb02__graph16_8h_a43af3dd2647ae4e9d3ba0d84be7389e8}{fastSetPixel}(\hyperlink{itdb02__graph_8h_aab55ccd237d7ebcf802064d447665e35}{bcolorr}, \hyperlink{itdb02__graph_8h_a6a4ee9226b1a7d6d146289e8cb360821}{bcolorg}, 
+      \hyperlink{itdb02__graph_8h_aea6ecc92542d956fdbe6d94cbbb36f4a}{bcolorb});
+821                 \}   
+822             \}
+823             temp++;
+824         \}
+825     \}
+826 \textcolor{preprocessor}{#endif}
+827 \textcolor{preprocessor}{}    \hyperlink{itdb02__graph_8h_af1e7cb1f905d851b3d942f667c947cb0}{fastWriteHigh}(LCD\_CS);
+828 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a3a4dc517aeb6b325f1b69b8e158b6bd7}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!set\-Back\-Color@{set\-Back\-Color}}
+\index{set\-Back\-Color@{set\-Back\-Color}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{set\-Back\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Back\-Color (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{r, }
+\item[{unsigned char}]{g, }
+\item[{unsigned char}]{b}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a3a4dc517aeb6b325f1b69b8e158b6bd7}
+
+
+Definition at line 496 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References bcolorb, bcolorg, and bcolorr.
+
+
+
+Referenced by Init\-L\-C\-D().
+
+
+\begin{DoxyCode}
+496                                                                     \{
+497     \hyperlink{itdb02__graph_8h_aab55ccd237d7ebcf802064d447665e35}{bcolorr}=r;
+498     \hyperlink{itdb02__graph_8h_a6a4ee9226b1a7d6d146289e8cb360821}{bcolorg}=g;
+499     \hyperlink{itdb02__graph_8h_aea6ecc92542d956fdbe6d94cbbb36f4a}{bcolorb}=b;
+500 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a8ad2141bfd226b29751953849b400abb}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!set\-Color@{set\-Color}}
+\index{set\-Color@{set\-Color}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{set\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Color (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{r, }
+\item[{unsigned char}]{g, }
+\item[{unsigned char}]{b}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a8ad2141bfd226b29751953849b400abb}
+
+
+Definition at line 490 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References fcolorb, fcolorg, and fcolorr.
+
+
+
+Referenced by Init\-L\-C\-D().
+
+
+\begin{DoxyCode}
+490                                                                 \{
+491     \hyperlink{itdb02__graph_8h_af9eeedab519a40baff4f8d0ed8830e33}{fcolorr}=r;
+492     \hyperlink{itdb02__graph_8h_a934e3e58e847007d48ac84fdf56d1f2a}{fcolorg}=g;
+493     \hyperlink{itdb02__graph_8h_ac5121a4f1443445703b298ef807e4895}{fcolorb}=b;
+494 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_a7f8d17fffb20a4e49c9a3174f1b6371c}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!set\-Pixel@{set\-Pixel}}
+\index{set\-Pixel@{set\-Pixel}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{set\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}void set\-Pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_a7f8d17fffb20a4e49c9a3174f1b6371c}
+
+
+Definition at line 502 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A().
+
+
+\begin{DoxyCode}
+502                                 \{
+503     \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(((r & 0xF8)<<8) + ((g & 0xFC)<<3) + ((b & 0xF8)>>3));
+504 \}
+\end{DoxyCode}
+\hypertarget{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}{\index{itdb02\-\_\-graph16w.\-c@{itdb02\-\_\-graph16w.\-c}!set\-X\-Y@{set\-X\-Y}}
+\index{set\-X\-Y@{set\-X\-Y}!itdb02_graph16w.c@{itdb02\-\_\-graph16w.\-c}}
+\subsubsection[{set\-X\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void set\-X\-Y (
+\begin{DoxyParamCaption}
+\item[{int}]{x1, }
+\item[{int}]{y1, }
+\item[{int}]{x2, }
+\item[{int}]{y2}
+\end{DoxyParamCaption}
+)}}\label{itdb02__graph16w_8c_aed21aea13e8ef694f9e6566b769e3f64}
+
+
+Definition at line 261 of file itdb02\-\_\-graph16w.\-c.
+
+
+
+References L\-A\-N\-D\-S\-C\-A\-P\-E, L\-C\-D\-\_\-\-Write\-\_\-\-C\-O\-M(), L\-C\-D\-\_\-\-Write\-\_\-\-D\-A\-T\-A(), and orient.
+
+
+
+Referenced by clr\-Scr(), draw\-Bitmap(), draw\-Bitmap\-R(), draw\-H\-Line(), draw\-Line(), draw\-Pixel(), draw\-V\-Line(), fill\-Scr(), print\-Char(), and rotate\-Char().
+
+
+\begin{DoxyCode}
+261                                           \{
+262     \textcolor{keywordtype}{int} tmp;
+263 
+264     \textcolor{keywordflow}{if} (\hyperlink{itdb02__graph_8h_a5b4c182e9cc4615ab6206a6c629dc970}{orient}==\hyperlink{ili9325_8h_a211dd160685be8a5a4f43be3fc3195a4}{LANDSCAPE}) \{
+265         tmp=x1;
+266         x1=y1;
+267         y1=399-tmp;
+268         tmp=x2;
+269         x2=y2;
+270         y2=399-tmp;
+271         tmp=y1;
+272         y1=y2;
+273         y2=tmp;
+274     \}
+275 
+276 \textcolor{comment}{//TO-DO Parei aqui, falta ver no datasheet!}
+277     \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x002a); \textcolor{comment}{//Set\_column\_address}
+278     \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(x1>>8);
+279     \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(x1);
+280     \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(x2>>8);
+281     \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(x2);
+282     \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x002b); \textcolor{comment}{//Set\_page\_address}
+283     \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(y1>>8);
+284     \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(y1);
+285     \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(y2>>8);
+286     \hyperlink{itdb02__graph16w_8c_a253b6c5ca5a68d5dd2fb75ccb0e75911}{LCD\_Write\_DATA}(y2);
+287     \hyperlink{itdb02__graph16w_8c_aa890939ac0b0bfd700b5ea8803b3c249}{LCD\_Write\_COM}(0x002c); \textcolor{comment}{//Write\_memory\_start}
+288 \}
+\end{DoxyCode}

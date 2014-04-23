@@ -1,0 +1,74 @@
+\hypertarget{usb__config_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/usb\-\_\-config.c File Reference}
+\label{usb__config_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/usb\-\_\-config.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/usb\-\_\-config.\-c}}
+}
+{\ttfamily \#include \char`\"{}usb\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \hyperlink{usb__config_8c_aba39e9b533436c691c862c01da2dff6a}{lang} \mbox{[}$\,$\mbox{]}
+\item 
+const char \hyperlink{usb__config_8c_a6912e27b8d2c1e39f6bcd46a079e0980}{manu} \mbox{[}$\,$\mbox{]}
+\item 
+const char \hyperlink{usb__config_8c_a8c193a3cdb53e5576e8986e5c61f3547}{prod} \mbox{[}$\,$\mbox{]}
+\item 
+const char $\ast$const \hyperlink{usb__config_8c_a54002dfd77c49d181c86fb2069853a7a}{libstring\-\_\-descriptor} \mbox{[}$\,$\mbox{]} = \{ \hyperlink{usb__config_8c_aba39e9b533436c691c862c01da2dff6a}{lang}, \hyperlink{usb__config_8c_a6912e27b8d2c1e39f6bcd46a079e0980}{manu}, \hyperlink{usb__config_8c_a8c193a3cdb53e5576e8986e5c61f3547}{prod}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{usb__config_8c_aba39e9b533436c691c862c01da2dff6a}{\index{usb\-\_\-config.\-c@{usb\-\_\-config.\-c}!lang@{lang}}
+\index{lang@{lang}!usb_config.c@{usb\-\_\-config.\-c}}
+\subsubsection[{lang}]{\setlength{\rightskip}{0pt plus 5cm}const char lang\mbox{[}$\,$\mbox{]}}}\label{usb__config_8c_aba39e9b533436c691c862c01da2dff6a}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{\textcolor{keyword}{sizeof}(\hyperlink{usb__config_8c_aba39e9b533436c691c862c01da2dff6a}{lang}),  \hyperlink{pic_u_s_b_8h_a875e5da7a1540475d6ee1ca13f30cd00}{STRING\_DESCRIPTOR},
+    0x09,0x04\}
+\end{DoxyCode}
+This togehter with the coresponding usbconfig.\-c file needs to be filled up by the user according to implem ent the U\-S\-B functionality. The names are fixed since they are used inside the usb.\-h and usb.\-c file.\par
+ E\-P0 is always filled up by the library so you dont really need to worry about. The user just needs to prov ide the right device, config and interface descriptor for it.\par
+ The following things need to be filled up by the user (see pic\-U\-S\-B.\-h for a description of the structs)
+\begin{DoxyItemize}
+\item The device descriptor.
+\item One configuration descriptor (multiple configuration not yet suppoerted)
+\item One interface descriptor for each desired interface.
+\item One endpoint descriptor for each endpoint in each interface. 
+\end{DoxyItemize}
+
+Definition at line 176 of file usb\-\_\-config.\-c.
+
+\hypertarget{usb__config_8c_a54002dfd77c49d181c86fb2069853a7a}{\index{usb\-\_\-config.\-c@{usb\-\_\-config.\-c}!libstring\-\_\-descriptor@{libstring\-\_\-descriptor}}
+\index{libstring\-\_\-descriptor@{libstring\-\_\-descriptor}!usb_config.c@{usb\-\_\-config.\-c}}
+\subsubsection[{libstring\-\_\-descriptor}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ const libstring\-\_\-descriptor\mbox{[}$\,$\mbox{]} = \{ {\bf lang}, {\bf manu}, {\bf prod}\}}}\label{usb__config_8c_a54002dfd77c49d181c86fb2069853a7a}
+
+
+Definition at line 182 of file usb\-\_\-config.\-c.
+
+
+
+Referenced by \-\_\-\-\_\-at().
+
+\hypertarget{usb__config_8c_a6912e27b8d2c1e39f6bcd46a079e0980}{\index{usb\-\_\-config.\-c@{usb\-\_\-config.\-c}!manu@{manu}}
+\index{manu@{manu}!usb_config.c@{usb\-\_\-config.\-c}}
+\subsubsection[{manu}]{\setlength{\rightskip}{0pt plus 5cm}const char manu\mbox{[}$\,$\mbox{]}}}\label{usb__config_8c_a6912e27b8d2c1e39f6bcd46a079e0980}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{\textcolor{keyword}{sizeof}(\hyperlink{usb__config_8c_a6912e27b8d2c1e39f6bcd46a079e0980}{manu}),  \hyperlink{pic_u_s_b_8h_a875e5da7a1540475d6ee1ca13f30cd00}{STRING\_DESCRIPTOR},
+    \textcolor{charliteral}{'J'},0x00,\textcolor{charliteral}{'P'},0x00,\textcolor{charliteral}{' '},0x00,\textcolor{charliteral}{'M'},0x00,\textcolor{charliteral}{'A'},0x00,\textcolor{charliteral}{'N'},0x00,\textcolor{charliteral}{'D'},0x00,\textcolor{charliteral}{'O'},0x00,\textcolor{charliteral}{'N'},0x00,\textcolor{charliteral}{' '},0x00\}
+\end{DoxyCode}
+
+
+Definition at line 178 of file usb\-\_\-config.\-c.
+
+\hypertarget{usb__config_8c_a8c193a3cdb53e5576e8986e5c61f3547}{\index{usb\-\_\-config.\-c@{usb\-\_\-config.\-c}!prod@{prod}}
+\index{prod@{prod}!usb_config.c@{usb\-\_\-config.\-c}}
+\subsubsection[{prod}]{\setlength{\rightskip}{0pt plus 5cm}const char prod\mbox{[}$\,$\mbox{]}}}\label{usb__config_8c_a8c193a3cdb53e5576e8986e5c61f3547}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{\textcolor{keyword}{sizeof}(\hyperlink{usb__config_8c_a8c193a3cdb53e5576e8986e5c61f3547}{prod}),  \hyperlink{pic_u_s_b_8h_a875e5da7a1540475d6ee1ca13f30cd00}{STRING\_DESCRIPTOR},
+    \textcolor{charliteral}{'P'},0x00,\textcolor{charliteral}{'i'},0x00,\textcolor{charliteral}{'n'},0x00,\textcolor{charliteral}{'g'},0x00,\textcolor{charliteral}{'u'},0x00,\textcolor{charliteral}{'i'},0x00,\textcolor{charliteral}{'n'},0x00,\textcolor{charliteral}{'o'},0x00\}
+\end{DoxyCode}
+
+
+Definition at line 180 of file usb\-\_\-config.\-c.
+

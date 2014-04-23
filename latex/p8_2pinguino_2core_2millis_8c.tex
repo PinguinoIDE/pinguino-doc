@@ -1,0 +1,194 @@
+\hypertarget{p8_2pinguino_2core_2millis_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/millis.c File Reference}
+\label{p8_2pinguino_2core_2millis_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/millis.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/millis.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$oscillator.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2millis_8c_a363a97d58d1b28f370bc28268d787c02}{\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-C\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2core_2millis_8c_a2345a46c902ea7809c98056601ef54ba}{update\-Millis\-Reload\-Value} (void)
+\item 
+void \hyperlink{p8_2pinguino_2core_2millis_8c_afd4a6721fe3801e7290410fae0adf8c0}{millis\-\_\-init} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2millis_8c_a1925d1696cf6ba5345369583b7ff7708}{millis\-\_\-interrupt} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p8_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\-\_\-millis}
+\item 
+volatile \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p8_2pinguino_2core_2millis_8c_ad7988c831bbccf6e77c9546247fa6bce}{\-\_\-reload\-\_\-val}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2millis_8c_a363a97d58d1b28f370bc28268d787c02}{\index{p8/pinguino/core/millis.\-c@{p8/pinguino/core/millis.\-c}!\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-C\-\_\-@{\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-C\-\_\-}}
+\index{\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-C\-\_\-@{\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-C\-\_\-}!p8/pinguino/core/millis.c@{p8/pinguino/core/millis.\-c}}
+\subsubsection[{\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-C\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-C\-\_\-}}\label{p8_2pinguino_2core_2millis_8c_a363a97d58d1b28f370bc28268d787c02}
+
+
+Definition at line 8 of file millis.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{\index{p8/pinguino/core/millis.\-c@{p8/pinguino/core/millis.\-c}!millis@{millis}}
+\index{millis@{millis}!p8/pinguino/core/millis.c@{p8/pinguino/core/millis.\-c}}
+\subsubsection[{millis}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} millis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}
+
+
+Definition at line 57 of file millis.\-c.
+
+
+
+References \-\_\-millis.
+
+
+
+Referenced by Keypad\-\_\-get\-Key(), M\-C\-P342x\-\_\-loop(), M\-C\-P342x\-\_\-start\-Ch(), P\-I\-D\-\_\-\-Compute(), and P\-I\-D\-\_\-init().
+
+
+\begin{DoxyCode}
+58 \{
+59     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} temp;
+60     \textcolor{comment}{/* Atomic operation for multibyte value */}
+61     INTCONbits.TMR0IE = 0;\textcolor{comment}{//INT\_DISABLE;}
+62     temp = \hyperlink{p8_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\_millis};
+63     INTCONbits.TMR0IE = 1;\textcolor{comment}{//INT\_ENABLE;}
+64     \textcolor{keywordflow}{return}(temp);
+65 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2millis_8c_afd4a6721fe3801e7290410fae0adf8c0}{\index{p8/pinguino/core/millis.\-c@{p8/pinguino/core/millis.\-c}!millis\-\_\-init@{millis\-\_\-init}}
+\index{millis\-\_\-init@{millis\-\_\-init}!p8/pinguino/core/millis.c@{p8/pinguino/core/millis.\-c}}
+\subsubsection[{millis\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void millis\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2millis_8c_afd4a6721fe3801e7290410fae0adf8c0}
+
+
+Definition at line 27 of file millis.\-c.
+
+
+
+References \-\_\-millis, \-\_\-reload\-\_\-val, high8, low8, and System\-\_\-get\-Peripheral\-Frequency().
+
+
+\begin{DoxyCode}
+28 \{
+29 \textcolor{comment}{//    intUsed[INT\_TMR0] = INT\_USED;}
+30 
+31     \textcolor{comment}{/*}
+32 \textcolor{comment}{    T0CON = 0x80;       // TMR0 on, 16 bits counter, prescaler=2}
+33 \textcolor{comment}{    INTCON |= 0xA0;     // set GIE and TMR0IE}
+34 \textcolor{comment}{    */}
+35     
+36     \textcolor{comment}{// if Fosc = 48 MHz then Fosc/4 = 12MHz}
+37     \textcolor{comment}{// which means 12.E-06 cycles/sec = 12.000 cycles/ms}
+38     \textcolor{comment}{// if TMR0 is loaded with 65536 - 12000}
+39     \textcolor{comment}{// overload will occur after 12.000 cycles = 1ms}
+40     
+41     INTCONbits.GIEH    = 0;   \textcolor{comment}{// Disable global HP interrupts}
+42     INTCONbits.GIEL    = 0;   \textcolor{comment}{// Disable global LP interrupts}
+43     T0CON = 0b00001000;\textcolor{comment}{//T0\_OFF | T0\_16BIT | T0\_SOURCE\_INT | T0\_PS\_OFF;}
+44     \hyperlink{p8_2pinguino_2core_2millis_8c_ad7988c831bbccf6e77c9546247fa6bce}{\_reload\_val} = 0xFFFF - \hyperlink{oscillator_8c_a3eab518123550469cd841a0b71ee294d}{System\_getPeripheralFrequency}() / 1000 ;
+45     TMR0H = \hyperlink{p8_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}{high8}(\hyperlink{p8_2pinguino_2core_2millis_8c_ad7988c831bbccf6e77c9546247fa6bce}{\_reload\_val});
+46     TMR0L =  \hyperlink{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{low8}(\hyperlink{p8_2pinguino_2core_2millis_8c_ad7988c831bbccf6e77c9546247fa6bce}{\_reload\_val});
+47     INTCON2bits.TMR0IP = 1;\textcolor{comment}{//INT\_HIGH\_PRIORITY;}
+48     INTCONbits.TMR0IF  = 0;
+49     INTCONbits.TMR0IE  = 1;\textcolor{comment}{//INT\_ENABLE;}
+50     T0CONbits.TMR0ON   = 1;
+51     INTCONbits.GIEH    = 1;   \textcolor{comment}{// Enable global HP interrupts}
+52     INTCONbits.GIEL    = 1;   \textcolor{comment}{// Enable global LP interrupts}
+53 
+54     \hyperlink{p8_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\_millis} = 0;
+55 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2millis_8c_a1925d1696cf6ba5345369583b7ff7708}{\index{p8/pinguino/core/millis.\-c@{p8/pinguino/core/millis.\-c}!millis\-\_\-interrupt@{millis\-\_\-interrupt}}
+\index{millis\-\_\-interrupt@{millis\-\_\-interrupt}!p8/pinguino/core/millis.c@{p8/pinguino/core/millis.\-c}}
+\subsubsection[{millis\-\_\-interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void millis\-\_\-interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2millis_8c_a1925d1696cf6ba5345369583b7ff7708}
+
+
+Definition at line 68 of file millis.\-c.
+
+
+
+References \-\_\-millis, \-\_\-reload\-\_\-val, high8, and low8.
+
+
+\begin{DoxyCode}
+69 \{
+70     \textcolor{keywordflow}{if} (INTCONbits.TMR0IF)
+71     \{
+72         INTCONbits.TMR0IF = 0;
+73         TMR0H = \hyperlink{p8_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}{high8}(\hyperlink{p8_2pinguino_2core_2millis_8c_ad7988c831bbccf6e77c9546247fa6bce}{\_reload\_val});
+74         TMR0L =  \hyperlink{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{low8}(\hyperlink{p8_2pinguino_2core_2millis_8c_ad7988c831bbccf6e77c9546247fa6bce}{\_reload\_val});
+75         \hyperlink{p8_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\_millis}++;
+76     \}
+77 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2millis_8c_a2345a46c902ea7809c98056601ef54ba}{\index{p8/pinguino/core/millis.\-c@{p8/pinguino/core/millis.\-c}!update\-Millis\-Reload\-Value@{update\-Millis\-Reload\-Value}}
+\index{update\-Millis\-Reload\-Value@{update\-Millis\-Reload\-Value}!p8/pinguino/core/millis.c@{p8/pinguino/core/millis.\-c}}
+\subsubsection[{update\-Millis\-Reload\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void update\-Millis\-Reload\-Value (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2millis_8c_a2345a46c902ea7809c98056601ef54ba}
+
+
+Definition at line 19 of file millis.\-c.
+
+
+
+References \-\_\-reload\-\_\-val, and System\-\_\-get\-Peripheral\-Frequency().
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{comment}{/* Atomic operation */}
+22     INTCONbits.TMR0IE = 0;\textcolor{comment}{//INT\_DISABLE;}
+23     \hyperlink{p8_2pinguino_2core_2millis_8c_ad7988c831bbccf6e77c9546247fa6bce}{\_reload\_val} = 0xFFFF - \hyperlink{oscillator_8c_a3eab518123550469cd841a0b71ee294d}{System\_getPeripheralFrequency}() / 1000 ;
+24     INTCONbits.TMR0IE = 1;\textcolor{comment}{//INT\_ENABLE;}
+25 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\index{p8/pinguino/core/millis.\-c@{p8/pinguino/core/millis.\-c}!\-\_\-millis@{\-\_\-millis}}
+\index{\-\_\-millis@{\-\_\-millis}!p8/pinguino/core/millis.c@{p8/pinguino/core/millis.\-c}}
+\subsubsection[{\-\_\-millis}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf u32} \-\_\-millis}}\label{p8_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}
+
+
+Definition at line 16 of file millis.\-c.
+
+
+
+Referenced by micros(), millis(), millis\-\_\-init(), millis\-\_\-interrupt(), and Tmr2\-Interrupt().
+
+\hypertarget{p8_2pinguino_2core_2millis_8c_ad7988c831bbccf6e77c9546247fa6bce}{\index{p8/pinguino/core/millis.\-c@{p8/pinguino/core/millis.\-c}!\-\_\-reload\-\_\-val@{\-\_\-reload\-\_\-val}}
+\index{\-\_\-reload\-\_\-val@{\-\_\-reload\-\_\-val}!p8/pinguino/core/millis.c@{p8/pinguino/core/millis.\-c}}
+\subsubsection[{\-\_\-reload\-\_\-val}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf u32} \-\_\-reload\-\_\-val}}\label{p8_2pinguino_2core_2millis_8c_ad7988c831bbccf6e77c9546247fa6bce}
+
+
+Definition at line 17 of file millis.\-c.
+
+
+
+Referenced by millis\-\_\-init(), millis\-\_\-interrupt(), and update\-Millis\-Reload\-Value().
+

@@ -1,0 +1,275 @@
+\hypertarget{pinguinoserial4_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pinguinoserial4.c File Reference}
+\label{pinguinoserial4_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pinguinoserial4.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pinguinoserial4.\-c}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$printf.\-c$>$}\\*
+{\ttfamily \#include $<$serial.\-c$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pinguinoserial4_8c_a7bca3276eccae9d707daa605ea44b94d}{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L4\-\_\-\-C}
+\item 
+\#define \hyperlink{pinguinoserial4_8c_aa39e85c0a0d67165596ae312821f0705}{E\-N\-A\-B\-L\-E\-\_\-\-U\-A\-R\-T4}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pinguinoserial4_8c_ad8485378f5cb2d27b6eedf75c4791b5e}{serial4init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} speed)
+\item 
+void \hyperlink{pinguinoserial4_8c_a441da982d9ca30a50f4f05a578437a14}{serial4printf} (char $\ast$fmt,...)
+\item 
+void \hyperlink{pinguinoserial4_8c_a8ccd9881b4c40ae06fbcc820f68d7bc9}{serial4println} (char $\ast$fmt,...)
+\item 
+void \hyperlink{pinguinoserial4_8c_a500149416bac4b14cd99a9c3cf5a4407}{serial4write} (char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+char \hyperlink{pinguinoserial4_8c_aeaea11fe9fbfa784883b4f2a8e2751f2}{serial4getkey} (void)
+\item 
+char $\ast$ \hyperlink{pinguinoserial4_8c_a579ff514c4bd05cee0cfc8ced4cf236b}{serial4getstring} (void)
+\item 
+char \hyperlink{pinguinoserial4_8c_a457bfb8ec1b0ff8b4855023f6d0ebd0c}{serial4available} (void)
+\item 
+char \hyperlink{pinguinoserial4_8c_ae256b68638855575dc156ba94f5c6b3b}{serial4read} (void)
+\item 
+void \hyperlink{pinguinoserial4_8c_a1ce66cff163fa22ebc003d6f7db71cda}{serial4flush} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{pinguinoserial4_8c_ac37372a900273a47fa97a7ae1565b018}{serial4clearrxerror} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{pinguinoserial4_8c_a7bca3276eccae9d707daa605ea44b94d}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L4\-\_\-\-C@{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L4\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L4\-\_\-\-C@{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L4\-\_\-\-C}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L4\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L4\-\_\-\-C}}\label{pinguinoserial4_8c_a7bca3276eccae9d707daa605ea44b94d}
+
+
+Definition at line 26 of file pinguinoserial4.\-c.
+
+\hypertarget{pinguinoserial4_8c_aa39e85c0a0d67165596ae312821f0705}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!E\-N\-A\-B\-L\-E\-\_\-\-U\-A\-R\-T4@{E\-N\-A\-B\-L\-E\-\_\-\-U\-A\-R\-T4}}
+\index{E\-N\-A\-B\-L\-E\-\_\-\-U\-A\-R\-T4@{E\-N\-A\-B\-L\-E\-\_\-\-U\-A\-R\-T4}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{E\-N\-A\-B\-L\-E\-\_\-\-U\-A\-R\-T4}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-A\-B\-L\-E\-\_\-\-U\-A\-R\-T4}}\label{pinguinoserial4_8c_aa39e85c0a0d67165596ae312821f0705}
+
+
+Definition at line 29 of file pinguinoserial4.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{pinguinoserial4_8c_a457bfb8ec1b0ff8b4855023f6d0ebd0c}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!serial4available@{serial4available}}
+\index{serial4available@{serial4available}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{serial4available}]{\setlength{\rightskip}{0pt plus 5cm}char serial4available (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial4_8c_a457bfb8ec1b0ff8b4855023f6d0ebd0c}
+
+
+Definition at line 103 of file pinguinoserial4.\-c.
+
+
+
+References Serial\-Available().
+
+
+\begin{DoxyCode}
+104 \{
+105     \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a878269e804f48bb8a690ed20115c4ce4}{SerialAvailable}(UART4);
+106 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial4_8c_ac37372a900273a47fa97a7ae1565b018}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!serial4clearrxerror@{serial4clearrxerror}}
+\index{serial4clearrxerror@{serial4clearrxerror}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{serial4clearrxerror}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} serial4clearrxerror (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial4_8c_ac37372a900273a47fa97a7ae1565b018}
+
+
+Definition at line 119 of file pinguinoserial4.\-c.
+
+
+
+References Clear\-Rx\-Error().
+
+
+\begin{DoxyCode}
+120 \{
+121     \textcolor{keywordflow}{return}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a04655bb13327a2854dc93436881f61c6}{ClearRxError}(UART4));
+122 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial4_8c_a1ce66cff163fa22ebc003d6f7db71cda}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!serial4flush@{serial4flush}}
+\index{serial4flush@{serial4flush}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{serial4flush}]{\setlength{\rightskip}{0pt plus 5cm}void serial4flush (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial4_8c_a1ce66cff163fa22ebc003d6f7db71cda}
+
+
+Definition at line 113 of file pinguinoserial4.\-c.
+
+
+
+References Serial\-Flush().
+
+
+\begin{DoxyCode}
+114 \{
+115     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a26fe5a83dff28031ab497e5cafc6eeda}{SerialFlush}(UART4);
+116 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial4_8c_aeaea11fe9fbfa784883b4f2a8e2751f2}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!serial4getkey@{serial4getkey}}
+\index{serial4getkey@{serial4getkey}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{serial4getkey}]{\setlength{\rightskip}{0pt plus 5cm}char serial4getkey (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial4_8c_aeaea11fe9fbfa784883b4f2a8e2751f2}
+
+
+Definition at line 93 of file pinguinoserial4.\-c.
+
+
+
+References Serial\-Get\-Key().
+
+
+\begin{DoxyCode}
+94 \{
+95     \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ad174ce78bcebca3f280c3aa1ade802c4}{SerialGetKey}(UART4);
+96 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial4_8c_a579ff514c4bd05cee0cfc8ced4cf236b}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!serial4getstring@{serial4getstring}}
+\index{serial4getstring@{serial4getstring}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{serial4getstring}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ serial4getstring (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial4_8c_a579ff514c4bd05cee0cfc8ced4cf236b}
+
+
+Definition at line 98 of file pinguinoserial4.\-c.
+
+
+
+References Serial\-Get\-String().
+
+
+\begin{DoxyCode}
+99 \{
+100     \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7fbf2ad606a3010081b5d1b2d9880101}{SerialGetString}(UART4);
+101 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial4_8c_ad8485378f5cb2d27b6eedf75c4791b5e}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!serial4init@{serial4init}}
+\index{serial4init@{serial4init}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{serial4init}]{\setlength{\rightskip}{0pt plus 5cm}void serial4init (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{speed}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial4_8c_ad8485378f5cb2d27b6eedf75c4791b5e}
+
+
+Definition at line 37 of file pinguinoserial4.\-c.
+
+
+
+References Serial\-Configure(), U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E, and U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D.
+
+
+\begin{DoxyCode}
+38 \{
+39     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0f213d0381fb0d45af9bc0c6d0aa2127}{SerialConfigure}(UART4, \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aaaf6c77e3b8fec12ad625225a08c4f28}{UART\_ENABLE},   
+      \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a79e41610f669265a690114ac881f8a89}{UART\_RX\_TX\_ENABLED},   speed);
+40 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial4_8c_a441da982d9ca30a50f4f05a578437a14}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!serial4printf@{serial4printf}}
+\index{serial4printf@{serial4printf}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{serial4printf}]{\setlength{\rightskip}{0pt plus 5cm}void serial4printf (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial4_8c_a441da982d9ca30a50f4f05a578437a14}
+
+
+Definition at line 42 of file pinguinoserial4.\-c.
+
+
+
+References pprintf().
+
+
+
+Referenced by serial4println().
+
+
+\begin{DoxyCode}
+43 \{
+44     va\_list args;
+45 
+46     va\_start(args, fmt);
+47     \hyperlink{stdio_8c_a4f88403166e56608ac7db2b3ae57c315}{pprintf}(SerialUART4WriteChar, fmt, args);
+48     va\_end(args);
+49 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial4_8c_a8ccd9881b4c40ae06fbcc820f68d7bc9}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!serial4println@{serial4println}}
+\index{serial4println@{serial4println}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{serial4println}]{\setlength{\rightskip}{0pt plus 5cm}void serial4println (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial4_8c_a8ccd9881b4c40ae06fbcc820f68d7bc9}
+
+
+Definition at line 82 of file pinguinoserial4.\-c.
+
+
+
+References serial4printf().
+
+
+\begin{DoxyCode}
+83 \{
+84     \hyperlink{pinguinoserial4_8c_a441da982d9ca30a50f4f05a578437a14}{serial4printf}(fmt);
+85     \hyperlink{pinguinoserial4_8c_a441da982d9ca30a50f4f05a578437a14}{serial4printf}(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)r"});
+86 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial4_8c_ae256b68638855575dc156ba94f5c6b3b}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!serial4read@{serial4read}}
+\index{serial4read@{serial4read}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{serial4read}]{\setlength{\rightskip}{0pt plus 5cm}char serial4read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial4_8c_ae256b68638855575dc156ba94f5c6b3b}
+
+
+Definition at line 108 of file pinguinoserial4.\-c.
+
+
+
+References Serial\-Read().
+
+
+\begin{DoxyCode}
+109 \{
+110     \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a46b4e3730df878a192c4e1aeb3a4325d}{SerialRead}(UART4);
+111 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial4_8c_a500149416bac4b14cd99a9c3cf5a4407}{\index{pinguinoserial4.\-c@{pinguinoserial4.\-c}!serial4write@{serial4write}}
+\index{serial4write@{serial4write}!pinguinoserial4.c@{pinguinoserial4.\-c}}
+\subsubsection[{serial4write}]{\setlength{\rightskip}{0pt plus 5cm}void serial4write (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial4_8c_a500149416bac4b14cd99a9c3cf5a4407}
+
+
+Definition at line 88 of file pinguinoserial4.\-c.
+
+
+\begin{DoxyCode}
+89 \{
+90     SerialUART4WriteChar(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+91 \}
+\end{DoxyCode}

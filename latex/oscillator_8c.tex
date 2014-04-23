@@ -1,0 +1,228 @@
+\hypertarget{oscillator_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/oscillator.c File Reference}
+\label{oscillator_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/oscillator.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/oscillator.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{oscillator_8c_a2fc4eef2ebd8d05cf4244354b42dd0c5}{\-\_\-\-\_\-\-O\-S\-C\-I\-L\-L\-A\-T\-O\-R\-\_\-\-C}
+\item 
+\#define \hyperlink{oscillator_8c_a12cfaf33fd0b088a66297996b1dfea45}{C\-R\-Y\-S\-T\-A\-L}~8000000\-L
+\item 
+\#define \hyperlink{oscillator_8c_a89240614c8fe6ad32b1aee62fda3a660}{System\-\_\-set\-Ext\-Osc}()~do \{ O\-S\-C\-C\-O\-Nbits.\-S\-C\-S = 0b00; \} while (0)
+\item 
+\#define \hyperlink{oscillator_8c_a76081e038b0ba3dca87d7807b6dddb3e}{System\-\_\-set\-Timer1\-Osc}()~do \{ O\-S\-C\-C\-O\-Nbits.\-S\-C\-S = 0b01; \} while (0)
+\item 
+\#define \hyperlink{oscillator_8c_aba7ce12f728652830a4caffac96bde9c}{System\-Get\-Instruction\-Clock}()~\hyperlink{oscillator_8c_a3eab518123550469cd841a0b71ee294d}{System\-\_\-get\-Peripheral\-Frequency}()
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{oscillator_8c_acd194cdd9405aca05d1856b25025219e}{System\-\_\-get\-Cpu\-Frequency} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{oscillator_8c_a3eab518123550469cd841a0b71ee294d}{System\-\_\-get\-Peripheral\-Frequency} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{oscillator_8c_a420db93588b29b52159d736e71ebfebb}{\-\_\-cpu\-\_\-clock\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{oscillator_8c_a2fc4eef2ebd8d05cf4244354b42dd0c5}{\index{oscillator.\-c@{oscillator.\-c}!\-\_\-\-\_\-\-O\-S\-C\-I\-L\-L\-A\-T\-O\-R\-\_\-\-C@{\-\_\-\-\_\-\-O\-S\-C\-I\-L\-L\-A\-T\-O\-R\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-O\-S\-C\-I\-L\-L\-A\-T\-O\-R\-\_\-\-C@{\-\_\-\-\_\-\-O\-S\-C\-I\-L\-L\-A\-T\-O\-R\-\_\-\-C}!oscillator.c@{oscillator.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-O\-S\-C\-I\-L\-L\-A\-T\-O\-R\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-O\-S\-C\-I\-L\-L\-A\-T\-O\-R\-\_\-\-C}}\label{oscillator_8c_a2fc4eef2ebd8d05cf4244354b42dd0c5}
+
+
+Definition at line 30 of file oscillator.\-c.
+
+\hypertarget{oscillator_8c_a12cfaf33fd0b088a66297996b1dfea45}{\index{oscillator.\-c@{oscillator.\-c}!C\-R\-Y\-S\-T\-A\-L@{C\-R\-Y\-S\-T\-A\-L}}
+\index{C\-R\-Y\-S\-T\-A\-L@{C\-R\-Y\-S\-T\-A\-L}!oscillator.c@{oscillator.\-c}}
+\subsubsection[{C\-R\-Y\-S\-T\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-R\-Y\-S\-T\-A\-L~8000000\-L}}\label{oscillator_8c_a12cfaf33fd0b088a66297996b1dfea45}
+
+
+Definition at line 39 of file oscillator.\-c.
+
+
+
+Referenced by System\-\_\-get\-Cpu\-Frequency().
+
+\hypertarget{oscillator_8c_a89240614c8fe6ad32b1aee62fda3a660}{\index{oscillator.\-c@{oscillator.\-c}!System\-\_\-set\-Ext\-Osc@{System\-\_\-set\-Ext\-Osc}}
+\index{System\-\_\-set\-Ext\-Osc@{System\-\_\-set\-Ext\-Osc}!oscillator.c@{oscillator.\-c}}
+\subsubsection[{System\-\_\-set\-Ext\-Osc}]{\setlength{\rightskip}{0pt plus 5cm}\#define System\-\_\-set\-Ext\-Osc(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ O\-S\-C\-C\-O\-Nbits.\-S\-C\-S = 0b00; \} while (0)}}\label{oscillator_8c_a89240614c8fe6ad32b1aee62fda3a660}
+
+
+Definition at line 115 of file oscillator.\-c.
+
+\hypertarget{oscillator_8c_a76081e038b0ba3dca87d7807b6dddb3e}{\index{oscillator.\-c@{oscillator.\-c}!System\-\_\-set\-Timer1\-Osc@{System\-\_\-set\-Timer1\-Osc}}
+\index{System\-\_\-set\-Timer1\-Osc@{System\-\_\-set\-Timer1\-Osc}!oscillator.c@{oscillator.\-c}}
+\subsubsection[{System\-\_\-set\-Timer1\-Osc}]{\setlength{\rightskip}{0pt plus 5cm}\#define System\-\_\-set\-Timer1\-Osc(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ O\-S\-C\-C\-O\-Nbits.\-S\-C\-S = 0b01; \} while (0)}}\label{oscillator_8c_a76081e038b0ba3dca87d7807b6dddb3e}
+
+
+Definition at line 121 of file oscillator.\-c.
+
+\hypertarget{oscillator_8c_aba7ce12f728652830a4caffac96bde9c}{\index{oscillator.\-c@{oscillator.\-c}!System\-Get\-Instruction\-Clock@{System\-Get\-Instruction\-Clock}}
+\index{System\-Get\-Instruction\-Clock@{System\-Get\-Instruction\-Clock}!oscillator.c@{oscillator.\-c}}
+\subsubsection[{System\-Get\-Instruction\-Clock}]{\setlength{\rightskip}{0pt plus 5cm}\#define System\-Get\-Instruction\-Clock(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf System\-\_\-get\-Peripheral\-Frequency}()}}\label{oscillator_8c_aba7ce12f728652830a4caffac96bde9c}
+
+
+Definition at line 251 of file oscillator.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{oscillator_8c_acd194cdd9405aca05d1856b25025219e}{\index{oscillator.\-c@{oscillator.\-c}!System\-\_\-get\-Cpu\-Frequency@{System\-\_\-get\-Cpu\-Frequency}}
+\index{System\-\_\-get\-Cpu\-Frequency@{System\-\_\-get\-Cpu\-Frequency}!oscillator.c@{oscillator.\-c}}
+\subsubsection[{System\-\_\-get\-Cpu\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} System\-\_\-get\-Cpu\-Frequency (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{oscillator_8c_acd194cdd9405aca05d1856b25025219e}
+
+
+Definition at line 161 of file oscillator.\-c.
+
+
+
+References C\-R\-Y\-S\-T\-A\-L.
+
+
+
+Referenced by Serial\-\_\-begin(), and System\-\_\-get\-Peripheral\-Frequency().
+
+
+\begin{DoxyCode}
+162 \{
+163     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} CPUDIV;
+164 
+165 \textcolor{preprocessor}{    #if defined(\_\_18f2455)  || defined(\_\_18f4455)  || \(\backslash\)}
+166 \textcolor{preprocessor}{        defined(\_\_18f2550)  || defined(\_\_18f4550)}
+167 \textcolor{preprocessor}{}
+168     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} fosc, CPUDIV\_XTAL;
+169 
+170 \textcolor{preprocessor}{    #endif}
+171 \textcolor{preprocessor}{}
+172     \textcolor{keywordflow}{switch} (OSCCONbits.SCS)
+173     \{
+174         \textcolor{keywordflow}{case} 0: \textcolor{comment}{// primary osc. (internal or external / CPUDIV)}
+175 
+176 \textcolor{preprocessor}{            #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+177 \textcolor{preprocessor}{}            
+178             \textcolor{keywordflow}{if} (OSCCON2bits.PLLEN)
+179             \{
+180                 \textcolor{keywordflow}{return} 48000000L;
+181             \} 
+182             \textcolor{keywordflow}{else}
+183             \{
+184                 \textcolor{keywordflow}{return} \hyperlink{oscillator_8c_a12cfaf33fd0b088a66297996b1dfea45}{CRYSTAL};
+185             \}
+186             
+187 \textcolor{preprocessor}{            #endif}
+188 \textcolor{preprocessor}{}            
+189             \textcolor{comment}{// CPUDIV ?}
+190             
+191 \textcolor{preprocessor}{            #if defined(\_\_18f2455)  || defined(\_\_18f4455)  || \(\backslash\)}
+192 \textcolor{preprocessor}{                defined(\_\_18f2550)  || defined(\_\_18f4550)}
+193 \textcolor{preprocessor}{}                
+194             CPUDIV  = ( System\_readFlashMemory(\_\_CONFIG1L) & 0b00011000 ) >> 3;
+195             CPUDIV\_XTAL = cpudiv\_xtal[CPUDIV];
+196             fosc  = System\_readFlashMemory(\_\_CONFIG1H) & 0b00001111;
+197 
+198 \textcolor{preprocessor}{            #else // xxJ5x}
+199 \textcolor{preprocessor}{}
+200             CPUDIV  = System\_readFlashMemory(\_\_CONFIG1H) & 0b00000011;
+201 
+202 \textcolor{preprocessor}{            #endif}
+203 \textcolor{preprocessor}{}
+204             CPUDIV = cpudiv[CPUDIV];
+205             
+206             \textcolor{comment}{// PLL ?}
+207             
+208 \textcolor{preprocessor}{            #if defined(\_\_18f2455) || defined(\_\_18f4455) || \(\backslash\)}
+209 \textcolor{preprocessor}{                defined(\_\_18f2550) || defined(\_\_18f4550)}
+210 \textcolor{preprocessor}{}                  
+211             fosc >>=1;
+212             \textcolor{keywordflow}{if}( (fosc==0) || (fosc==2) || (fosc==6) )
+213             \{
+214                 \textcolor{keywordflow}{return} \hyperlink{oscillator_8c_a12cfaf33fd0b088a66297996b1dfea45}{CRYSTAL} / CPUDIV\_XTAL;
+215             \}
+216             \textcolor{keywordflow}{else}
+217             \{
+218                 \textcolor{keywordflow}{return} 96000000UL / CPUDIV;
+219             \}
+220             
+221 \textcolor{preprocessor}{            #elif defined(\_\_18f26j50) || defined(\_\_18f46j50) || \(\backslash\)}
+222 \textcolor{preprocessor}{                  defined(\_\_18f26j53) || defined(\_\_18f46j53) || \(\backslash\)}
+223 \textcolor{preprocessor}{                  defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+224 \textcolor{preprocessor}{}
+225             \textcolor{keywordflow}{if} (OSCTUNEbits.PLLEN)
+226             \{
+227                 \textcolor{keywordflow}{return} 48000000UL / CPUDIV;
+228             \} 
+229             \textcolor{keywordflow}{else}
+230             \{
+231                 \textcolor{keywordflow}{return} \hyperlink{oscillator_8c_a12cfaf33fd0b088a66297996b1dfea45}{CRYSTAL} / CPUDIV;
+232             \}
+233             
+234 \textcolor{preprocessor}{            #endif}
+235 \textcolor{preprocessor}{}            
+236         \textcolor{keywordflow}{case} 1: \textcolor{comment}{// secondary osc. (timer 1, most of the time 32768 Hz)}
+237             \textcolor{keywordflow}{return} 32768;
+238             
+239         \textcolor{keywordflow}{case} 2: \textcolor{comment}{// reserved or postscaled internal clock}
+240         \textcolor{keywordflow}{case} 3: \textcolor{comment}{// postscaled internal clock (IRCF)}
+241             \textcolor{keywordflow}{return} ircf[OSCCONbits.IRCF];
+242     \}
+243 \}
+\end{DoxyCode}
+\hypertarget{oscillator_8c_a3eab518123550469cd841a0b71ee294d}{\index{oscillator.\-c@{oscillator.\-c}!System\-\_\-get\-Peripheral\-Frequency@{System\-\_\-get\-Peripheral\-Frequency}}
+\index{System\-\_\-get\-Peripheral\-Frequency@{System\-\_\-get\-Peripheral\-Frequency}!oscillator.c@{oscillator.\-c}}
+\subsubsection[{System\-\_\-get\-Peripheral\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} System\-\_\-get\-Peripheral\-Frequency (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{oscillator_8c_a3eab518123550469cd841a0b71ee294d}
+
+
+Definition at line 253 of file oscillator.\-c.
+
+
+
+References System\-\_\-get\-Cpu\-Frequency().
+
+
+
+Referenced by millis\-\_\-init(), P\-W\-M\-\_\-set\-Frequency(), Stepper\-\_\-set\-Speed(), and update\-Millis\-Reload\-Value().
+
+
+\begin{DoxyCode}
+254 \{
+255     \textcolor{keywordflow}{return} \hyperlink{oscillator_8c_acd194cdd9405aca05d1856b25025219e}{System\_getCpuFrequency}() >> 2;
+256 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{oscillator_8c_a420db93588b29b52159d736e71ebfebb}{\index{oscillator.\-c@{oscillator.\-c}!\-\_\-cpu\-\_\-clock\-\_\-@{\-\_\-cpu\-\_\-clock\-\_\-}}
+\index{\-\_\-cpu\-\_\-clock\-\_\-@{\-\_\-cpu\-\_\-clock\-\_\-}!oscillator.c@{oscillator.\-c}}
+\subsubsection[{\-\_\-cpu\-\_\-clock\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} \-\_\-cpu\-\_\-clock\-\_\-}}\label{oscillator_8c_a420db93588b29b52159d736e71ebfebb}
+
+
+Definition at line 42 of file oscillator.\-c.
+

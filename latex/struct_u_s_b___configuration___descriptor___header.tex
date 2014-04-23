@@ -1,0 +1,105 @@
+\hypertarget{struct_u_s_b___configuration___descriptor___header}{\section{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header Struct Reference}
+\label{struct_u_s_b___configuration___descriptor___header}\index{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}}
+}
+
+
+{\ttfamily \#include $<$pic\-U\-S\-B.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___configuration___descriptor___header_a904ce9aea3e1db94a9a1ec5a0a22b65d}{b\-Length}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___configuration___descriptor___header_af6d6c7e334878414c973fc10e54cfb4e}{b\-Descriptor\-Type}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{struct_u_s_b___configuration___descriptor___header_a839de5e515458f253878f84601db72ee}{w\-Total\-Length}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___configuration___descriptor___header_a95e07e6c1b3f47969801be56a187e9f2}{b\-Num\-Interfaces}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___configuration___descriptor___header_a5cb9f9fbdc2e09c5d8b602ad41996186}{b\-Configuration\-Value}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___configuration___descriptor___header_a836aa4bfb503b80ec1fefbc48b13494a}{i\-Configuration}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___configuration___descriptor___header_a2733c047911192e6e1630eb85167cd42}{bm\-Attributes}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___configuration___descriptor___header_a4ff1fe48c47528b125bf17b470c5af44}{b\-Max\-Power}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Configuration Descriptors\par
+ A U\-S\-B device can have several different configurations although the majority of devices are simple and onl y have one. The configuration descriptor specifies how the device is powered, what the maximum power consu mption is, the number of interfaces it has. Therefore it is possible to have two configurations, one for w hen the device is bus powered and another when it is mains powered. As this is a \char`\"{}header\char`\"{} to the Interface descriptors, its also feasible to have one configuration using a different transfer mode to that of anoth er configuration.\par
+ Once all the configurations have been examined by the host, the host will send a Set\-Configuration command with a non zero value which matches the b\-Configuration\-Value of one of the configurations. This is used to select the desired configuration. 
+
+Definition at line 200 of file pic\-U\-S\-B.\-h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_u_s_b___configuration___descriptor___header_a5cb9f9fbdc2e09c5d8b602ad41996186}{\index{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}!b\-Configuration\-Value@{b\-Configuration\-Value}}
+\index{b\-Configuration\-Value@{b\-Configuration\-Value}!USB_Configuration_Descriptor_Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}}
+\subsubsection[{b\-Configuration\-Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Configuration\-Value}}\label{struct_u_s_b___configuration___descriptor___header_a5cb9f9fbdc2e09c5d8b602ad41996186}
+Value to use as an argument to select this configuration 
+
+Definition at line 206 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___configuration___descriptor___header_af6d6c7e334878414c973fc10e54cfb4e}{\index{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}!b\-Descriptor\-Type@{b\-Descriptor\-Type}}
+\index{b\-Descriptor\-Type@{b\-Descriptor\-Type}!USB_Configuration_Descriptor_Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}}
+\subsubsection[{b\-Descriptor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Descriptor\-Type}}\label{struct_u_s_b___configuration___descriptor___header_af6d6c7e334878414c973fc10e54cfb4e}
+Configuration Descriptor (0x02) 
+
+Definition at line 203 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___configuration___descriptor___header_a904ce9aea3e1db94a9a1ec5a0a22b65d}{\index{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}!b\-Length@{b\-Length}}
+\index{b\-Length@{b\-Length}!USB_Configuration_Descriptor_Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}}
+\subsubsection[{b\-Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Length}}\label{struct_u_s_b___configuration___descriptor___header_a904ce9aea3e1db94a9a1ec5a0a22b65d}
+Size of Descriptor in u8s 
+
+Definition at line 202 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___configuration___descriptor___header_a2733c047911192e6e1630eb85167cd42}{\index{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}!bm\-Attributes@{bm\-Attributes}}
+\index{bm\-Attributes@{bm\-Attributes}!USB_Configuration_Descriptor_Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}}
+\subsubsection[{bm\-Attributes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} bm\-Attributes}}\label{struct_u_s_b___configuration___descriptor___header_a2733c047911192e6e1630eb85167cd42}
+
+\begin{DoxyItemize}
+\item D7 Reserved, set to 1.(U\-S\-B 1.\-0 Bus Powered).
+\item D6 Self Powered.
+\item D5 Remote Wakeup.
+\item D4..0 Reserved, set to 0.
+\end{DoxyItemize}
+
+Definition at line 208 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___configuration___descriptor___header_a4ff1fe48c47528b125bf17b470c5af44}{\index{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}!b\-Max\-Power@{b\-Max\-Power}}
+\index{b\-Max\-Power@{b\-Max\-Power}!USB_Configuration_Descriptor_Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}}
+\subsubsection[{b\-Max\-Power}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Max\-Power}}\label{struct_u_s_b___configuration___descriptor___header_a4ff1fe48c47528b125bf17b470c5af44}
+Maximum Power Consumption in 2m\-A units 
+
+Definition at line 209 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___configuration___descriptor___header_a95e07e6c1b3f47969801be56a187e9f2}{\index{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}!b\-Num\-Interfaces@{b\-Num\-Interfaces}}
+\index{b\-Num\-Interfaces@{b\-Num\-Interfaces}!USB_Configuration_Descriptor_Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}}
+\subsubsection[{b\-Num\-Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Num\-Interfaces}}\label{struct_u_s_b___configuration___descriptor___header_a95e07e6c1b3f47969801be56a187e9f2}
+Number of Interfaces 
+
+Definition at line 205 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___configuration___descriptor___header_a836aa4bfb503b80ec1fefbc48b13494a}{\index{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}!i\-Configuration@{i\-Configuration}}
+\index{i\-Configuration@{i\-Configuration}!USB_Configuration_Descriptor_Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}}
+\subsubsection[{i\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} i\-Configuration}}\label{struct_u_s_b___configuration___descriptor___header_a836aa4bfb503b80ec1fefbc48b13494a}
+Index of String Descriptor describing this configuration 
+
+Definition at line 207 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___configuration___descriptor___header_a839de5e515458f253878f84601db72ee}{\index{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}!w\-Total\-Length@{w\-Total\-Length}}
+\index{w\-Total\-Length@{w\-Total\-Length}!USB_Configuration_Descriptor_Header@{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}}
+\subsubsection[{w\-Total\-Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} w\-Total\-Length}}\label{struct_u_s_b___configuration___descriptor___header_a839de5e515458f253878f84601db72ee}
+Total length in u8s of data returned (Configuration Descriptor + Interface Descriptor + n$\ast$ Endpoint Descriptor 
+
+Definition at line 204 of file pic\-U\-S\-B.\-h.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/\hyperlink{pic_u_s_b_8h}{pic\-U\-S\-B.\-h}\end{DoxyCompactItemize}

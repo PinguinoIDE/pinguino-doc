@@ -1,0 +1,19 @@
+Implementation notes
+
+This implementation only handles the P\-L\-L setup with \char`\"{}\-P\-L\-L input
+divider\char`\"{}, \char`\"{}\-P\-L\-L output divider\char`\"{}, \char`\"{}\-P\-L\-L multiplier\char`\"{}, and \char`\"{}\-Peripheral
+clock divider\char`\"{}. Other clocking schemes are not supported.
+
+See Clock Diagram
+
+Write the clock settings into the registers; this effectively applies the new settings, and will change the C\-P\-U frequency, peripheral frequency, and the number of flash wait states.
+
+This normally requires a call to \hyperlink{p32_2include_2pinguino_2core_2system_8c_afd2a7efda519abd86c744c9f408f7a48}{System\-Clocks\-Calc\-Cpu\-Clock\-Settings()}, and \hyperlink{p32_2include_2pinguino_2core_2system_8c_a76fffc8659a55a8d4a843bc32f79100f}{System\-Clocks\-Calc\-Peripheral\-Clock\-Settings()} before.
+
+\begin{DoxySeeAlso}{See Also}
+system.\-c\-::\-System\-Config()
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Nothing
+\end{DoxyReturn}
+P\-I\-C32\-M\-X Family Clock Diagram 

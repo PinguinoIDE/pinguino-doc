@@ -1,0 +1,366 @@
+\hypertarget{keypad_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/keypad.c File Reference}
+\label{keypad_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/keypad.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/keypad.\-c}}
+}
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$millis.\-c$>$}\\*
+{\ttfamily \#include $<$keypad.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{keypad_8h_a61b6e7f1ecb3d01e65e37480dd5cc1ff}{Keypad\-State} \hyperlink{keypad_8c_ab7f664d02a3e84d0bbd90ba7abb3d120}{Keypad\-\_\-get\-State} ()
+\item 
+void \hyperlink{keypad_8c_a43de705fe4e82ef7780ceb0e3a9449f6}{Keypad\-\_\-set\-Debounce\-Time} (unsigned int debounce)
+\item 
+void \hyperlink{keypad_8c_a3fdd62ea2bfe410753b86d04cedd6a89}{Keypad\-\_\-set\-Hold\-Time} (unsigned int hold)
+\item 
+void \hyperlink{keypad_8c_a3a355c67d44617666456a7f383f5ad0d}{Keypad\-\_\-transition\-To} (\hyperlink{keypad_8h_a61b6e7f1ecb3d01e65e37480dd5cc1ff}{Keypad\-State} new\-State)
+\item 
+void \hyperlink{keypad_8c_aa5df80d18c3261c4a6ecdc07b84babad}{Keypad\-\_\-initialize\-Pins} ()
+\item 
+void \hyperlink{keypad_8c_ae6a3f0e7e9a3c8209eac5297ca55081f}{Keypad\-\_\-init} (char $\ast$keypadmap, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} $\ast$rowp, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} $\ast$colp, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} rows, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} cols)
+\item 
+char \hyperlink{keypad_8c_a0730cd3be049b0cfa1deb9876d5dce74}{Keypad\-\_\-get\-Key} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} \hyperlink{keypad_8c_aa789725998eba36732ac6c447ef385a7}{keypad\-\_\-rows}
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} \hyperlink{keypad_8c_ab2b95532ff4c0f90d9a51ffaba47d11e}{keypad\-\_\-columns}
+\item 
+char $\ast$ \hyperlink{keypad_8c_a4d57ca90cc9704c6658648b771afed91}{user\-Keymap}
+\item 
+unsigned char $\ast$ \hyperlink{keypad_8c_abd0424a6c8b273b46a42ba12697bd680}{row\-Pins}
+\item 
+unsigned char $\ast$ \hyperlink{keypad_8c_a91e2382a9e6d2d4054b6ba8020e3c189}{column\-Pins}
+\item 
+\hyperlink{keypad_8h_a61b6e7f1ecb3d01e65e37480dd5cc1ff}{Keypad\-State} \hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}
+\item 
+char \hyperlink{keypad_8c_af4e2c26819ce97d39f25b16899a05c18}{current\-Key}
+\item 
+unsigned long \hyperlink{keypad_8c_a2f8814dab580b6262a7ece7de04405e6}{last\-Update}
+\item 
+unsigned int \hyperlink{keypad_8c_ab4bfda70906d95283267de6e82bfe9cf}{debounce\-Time}
+\item 
+unsigned int \hyperlink{keypad_8c_afe6cba0101f2d85edbb76354ba106ea5}{hold\-Time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{keypad_8c_a0730cd3be049b0cfa1deb9876d5dce74}{\index{keypad.\-c@{keypad.\-c}!Keypad\-\_\-get\-Key@{Keypad\-\_\-get\-Key}}
+\index{Keypad\-\_\-get\-Key@{Keypad\-\_\-get\-Key}!keypad.c@{keypad.\-c}}
+\subsubsection[{Keypad\-\_\-get\-Key}]{\setlength{\rightskip}{0pt plus 5cm}char Keypad\-\_\-get\-Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{keypad_8c_a0730cd3be049b0cfa1deb9876d5dce74}
+
+
+Definition at line 105 of file keypad.\-c.
+
+
+\begin{DoxyCode}
+105                     \{
+106     
+107     \textcolor{keywordtype}{char} key = \hyperlink{keypad_8h_a68d7f7b086c8b3e5c228ed73a97a85ff}{NO\_KEY}; \textcolor{comment}{// Assume that no key is pressed, this is the default return for getKey()}
+108     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c},r;    
+109 
+110     \textcolor{keywordflow}{for} (c=0; c<\hyperlink{keypad_8c_ab2b95532ff4c0f90d9a51ffaba47d11e}{keypad\_columns}; c++)\{
+111         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{keypad_8c_a91e2382a9e6d2d4054b6ba8020e3c189}{columnPins}[c],\hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});   \textcolor{comment}{// Activate the current column.}
+112         \textcolor{keywordflow}{for} (r=0; r<\hyperlink{keypad_8c_aa789725998eba36732ac6c447ef385a7}{keypad\_rows}; r++)\{   \textcolor{comment}{// Scan all the rows for a key press.}
+113             \textcolor{comment}{//  The user pressed a button for more then debounceTime microseconds.}
+114             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_af4e2c26819ce97d39f25b16899a05c18}{currentKey} == \hyperlink{keypad_8c_a4d57ca90cc9704c6658648b771afed91}{userKeymap}[c+(r*keypad\_columns)])\{
+115                 \textcolor{comment}{// Button hold}
+116                 \textcolor{keywordflow}{if} (((Millis()-\hyperlink{keypad_8c_a2f8814dab580b6262a7ece7de04405e6}{lastUpdate}) >= \hyperlink{keypad_8c_afe6cba0101f2d85edbb76354ba106ea5}{holdTime}) && 
+      \hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(\hyperlink{keypad_8c_abd0424a6c8b273b46a42ba12697bd680}{rowPins}[r]) == \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW})\{
+117                     \hyperlink{keypad_8c_a3a355c67d44617666456a7f383f5ad0d}{Keypad\_transitionTo}(\hyperlink{keypad_8h_a61b6e7f1ecb3d01e65e37480dd5cc1ffa9cfa27b414cab750fb14ec07cdf5cf6a}{HOLD});
+118                 \}
+119                 \textcolor{comment}{// Button release}
+120                 \textcolor{keywordflow}{if} (((Millis()-\hyperlink{keypad_8c_a2f8814dab580b6262a7ece7de04405e6}{lastUpdate}) >= \hyperlink{keypad_8c_ab4bfda70906d95283267de6e82bfe9cf}{debounceTime}) && 
+      \hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(\hyperlink{keypad_8c_abd0424a6c8b273b46a42ba12697bd680}{rowPins}[r]) == \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH})\{
+121                     \hyperlink{keypad_8c_a3a355c67d44617666456a7f383f5ad0d}{Keypad\_transitionTo}(\hyperlink{keypad_8h_a61b6e7f1ecb3d01e65e37480dd5cc1ffaa38d18fe73a7fc82c112b6917d0b5cd0}{RELEASED});
+122                     \hyperlink{keypad_8c_af4e2c26819ce97d39f25b16899a05c18}{currentKey} = \hyperlink{keypad_8h_a68d7f7b086c8b3e5c228ed73a97a85ff}{NO\_KEY};
+123                 \}
+124             \} 
+125             \textcolor{comment}{// Button pressed event.  The user pressed a button.}
+126             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (((Millis()-\hyperlink{keypad_8c_a2f8814dab580b6262a7ece7de04405e6}{lastUpdate}) >= \hyperlink{keypad_8c_ab4bfda70906d95283267de6e82bfe9cf}{debounceTime}) && 
+      \hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(\hyperlink{keypad_8c_abd0424a6c8b273b46a42ba12697bd680}{rowPins}[r]) == \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW})\{
+127                 \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{keypad_8c_a91e2382a9e6d2d4054b6ba8020e3c189}{columnPins}[c],\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH}); \textcolor{comment}{// De-activate the current
+       column.}
+128                 key = \hyperlink{keypad_8c_a4d57ca90cc9704c6658648b771afed91}{userKeymap}[c+(r*\hyperlink{keypad_8c_ab2b95532ff4c0f90d9a51ffaba47d11e}{keypad\_columns})];
+129                 \hyperlink{keypad_8c_a2f8814dab580b6262a7ece7de04405e6}{lastUpdate} = Millis();
+130                 \textcolor{keywordflow}{goto} EVALUATE\_KEY;          \textcolor{comment}{// Save resources and do not attempt to parse two keys at a
+       time}
+131             \} 
+132         \}
+133         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{keypad_8c_a91e2382a9e6d2d4054b6ba8020e3c189}{columnPins}[c],\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH}); \textcolor{comment}{// De-activate the current column.}
+134     \}
+135     
+136     EVALUATE\_KEY:
+137     \textcolor{keywordflow}{if} (key != \hyperlink{keypad_8h_a68d7f7b086c8b3e5c228ed73a97a85ff}{NO\_KEY} && key != \hyperlink{keypad_8c_af4e2c26819ce97d39f25b16899a05c18}{currentKey})\{ 
+138         \hyperlink{keypad_8c_af4e2c26819ce97d39f25b16899a05c18}{currentKey} = key;
+139         \hyperlink{keypad_8c_a3a355c67d44617666456a7f383f5ad0d}{Keypad\_transitionTo}(\hyperlink{keypad_8h_a61b6e7f1ecb3d01e65e37480dd5cc1ffa5ef9a100ac8b4b8d6dec477c377b7901}{PRESSED});
+140         \textcolor{keywordflow}{return} \hyperlink{keypad_8c_af4e2c26819ce97d39f25b16899a05c18}{currentKey};
+141     \} 
+142     \textcolor{keywordflow}{else}\{
+143         \textcolor{keywordflow}{return} \hyperlink{keypad_8h_a68d7f7b086c8b3e5c228ed73a97a85ff}{NO\_KEY};
+144     \}
+145 \}
+\end{DoxyCode}
+\hypertarget{keypad_8c_ab7f664d02a3e84d0bbd90ba7abb3d120}{\index{keypad.\-c@{keypad.\-c}!Keypad\-\_\-get\-State@{Keypad\-\_\-get\-State}}
+\index{Keypad\-\_\-get\-State@{Keypad\-\_\-get\-State}!keypad.c@{keypad.\-c}}
+\subsubsection[{Keypad\-\_\-get\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Keypad\-State} Keypad\-\_\-get\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{keypad_8c_ab7f664d02a3e84d0bbd90ba7abb3d120}
+
+
+Definition at line 42 of file keypad.\-c.
+
+
+\begin{DoxyCode}
+42                              \{
+43     \textcolor{keywordflow}{return} \hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state};
+44 \}
+\end{DoxyCode}
+\hypertarget{keypad_8c_ae6a3f0e7e9a3c8209eac5297ca55081f}{\index{keypad.\-c@{keypad.\-c}!Keypad\-\_\-init@{Keypad\-\_\-init}}
+\index{Keypad\-\_\-init@{Keypad\-\_\-init}!keypad.c@{keypad.\-c}}
+\subsubsection[{Keypad\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void Keypad\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{keypadmap, }
+\item[{{\bf uchar} $\ast$}]{rowp, }
+\item[{{\bf uchar} $\ast$}]{colp, }
+\item[{{\bf uchar}}]{rows, }
+\item[{{\bf uchar}}]{cols}
+\end{DoxyParamCaption}
+)}}\label{keypad_8c_ae6a3f0e7e9a3c8209eac5297ca55081f}
+
+
+Definition at line 85 of file keypad.\-c.
+
+
+\begin{DoxyCode}
+85                                                                                    \{
+86 
+87         \hyperlink{keypad_8c_a4d57ca90cc9704c6658648b771afed91}{userKeymap} = keypadmap;
+88     \hyperlink{keypad_8c_abd0424a6c8b273b46a42ba12697bd680}{rowPins} = rowp;
+89     \hyperlink{keypad_8c_a91e2382a9e6d2d4054b6ba8020e3c189}{columnPins} = colp;
+90     \hyperlink{keypad_8c_aa789725998eba36732ac6c447ef385a7}{keypad\_rows} = rows;
+91     \hyperlink{keypad_8c_ab2b95532ff4c0f90d9a51ffaba47d11e}{keypad\_columns} = cols;         
+92 
+93     \hyperlink{keypad_8c_a2f8814dab580b6262a7ece7de04405e6}{lastUpdate} = 0;
+94     \hyperlink{keypad_8c_ab4bfda70906d95283267de6e82bfe9cf}{debounceTime} = 50;
+95     \hyperlink{keypad_8c_afe6cba0101f2d85edbb76354ba106ea5}{holdTime} = 1000;
+96 \textcolor{comment}{//  keypadEventListener = 0;}
+97     \hyperlink{keypad_8c_af4e2c26819ce97d39f25b16899a05c18}{currentKey} = \hyperlink{keypad_8h_a68d7f7b086c8b3e5c228ed73a97a85ff}{NO\_KEY};
+98     \hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state} = \hyperlink{keypad_8h_a61b6e7f1ecb3d01e65e37480dd5cc1ffafd6a0e4343048b10646dd2976cc5ad18}{IDLE};
+99     
+100     \hyperlink{keypad_8c_aa5df80d18c3261c4a6ecdc07b84babad}{Keypad\_initializePins}();
+101 \}
+\end{DoxyCode}
+\hypertarget{keypad_8c_aa5df80d18c3261c4a6ecdc07b84babad}{\index{keypad.\-c@{keypad.\-c}!Keypad\-\_\-initialize\-Pins@{Keypad\-\_\-initialize\-Pins}}
+\index{Keypad\-\_\-initialize\-Pins@{Keypad\-\_\-initialize\-Pins}!keypad.c@{keypad.\-c}}
+\subsubsection[{Keypad\-\_\-initialize\-Pins}]{\setlength{\rightskip}{0pt plus 5cm}void Keypad\-\_\-initialize\-Pins (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{keypad_8c_aa5df80d18c3261c4a6ecdc07b84babad}
+
+
+Definition at line 69 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-init().
+
+
+\begin{DoxyCode}
+69                             \{
+70 
+71     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c},r;
+72 
+73     \textcolor{keywordflow}{for} (r=0; r<\hyperlink{keypad_8c_aa789725998eba36732ac6c447ef385a7}{keypad\_rows}; r++)\{
+74         \textcolor{keywordflow}{for} (c=0; c<\hyperlink{keypad_8c_ab2b95532ff4c0f90d9a51ffaba47d11e}{keypad\_columns}; c++)\{
+75             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{keypad_8c_a91e2382a9e6d2d4054b6ba8020e3c189}{columnPins}[c],\hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+76             \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{keypad_8c_a91e2382a9e6d2d4054b6ba8020e3c189}{columnPins}[c],\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+77         \}
+78         \textcolor{comment}{//configure row pin modes and states}
+79         \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{keypad_8c_abd0424a6c8b273b46a42ba12697bd680}{rowPins}[r],\hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT});
+80         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{keypad_8c_abd0424a6c8b273b46a42ba12697bd680}{rowPins}[r],\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+81     \}
+82 \}
+\end{DoxyCode}
+\hypertarget{keypad_8c_a43de705fe4e82ef7780ceb0e3a9449f6}{\index{keypad.\-c@{keypad.\-c}!Keypad\-\_\-set\-Debounce\-Time@{Keypad\-\_\-set\-Debounce\-Time}}
+\index{Keypad\-\_\-set\-Debounce\-Time@{Keypad\-\_\-set\-Debounce\-Time}!keypad.c@{keypad.\-c}}
+\subsubsection[{Keypad\-\_\-set\-Debounce\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void Keypad\-\_\-set\-Debounce\-Time (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{debounce}
+\end{DoxyParamCaption}
+)}}\label{keypad_8c_a43de705fe4e82ef7780ceb0e3a9449f6}
+
+
+Definition at line 46 of file keypad.\-c.
+
+
+\begin{DoxyCode}
+46                                                   \{
+47     \hyperlink{keypad_8c_ab4bfda70906d95283267de6e82bfe9cf}{debounceTime} = debounce;
+48 \}
+\end{DoxyCode}
+\hypertarget{keypad_8c_a3fdd62ea2bfe410753b86d04cedd6a89}{\index{keypad.\-c@{keypad.\-c}!Keypad\-\_\-set\-Hold\-Time@{Keypad\-\_\-set\-Hold\-Time}}
+\index{Keypad\-\_\-set\-Hold\-Time@{Keypad\-\_\-set\-Hold\-Time}!keypad.c@{keypad.\-c}}
+\subsubsection[{Keypad\-\_\-set\-Hold\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void Keypad\-\_\-set\-Hold\-Time (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{hold}
+\end{DoxyParamCaption}
+)}}\label{keypad_8c_a3fdd62ea2bfe410753b86d04cedd6a89}
+
+
+Definition at line 49 of file keypad.\-c.
+
+
+\begin{DoxyCode}
+49                                           \{
+50     \hyperlink{keypad_8c_afe6cba0101f2d85edbb76354ba106ea5}{holdTime} = hold;
+51 \}
+\end{DoxyCode}
+\hypertarget{keypad_8c_a3a355c67d44617666456a7f383f5ad0d}{\index{keypad.\-c@{keypad.\-c}!Keypad\-\_\-transition\-To@{Keypad\-\_\-transition\-To}}
+\index{Keypad\-\_\-transition\-To@{Keypad\-\_\-transition\-To}!keypad.c@{keypad.\-c}}
+\subsubsection[{Keypad\-\_\-transition\-To}]{\setlength{\rightskip}{0pt plus 5cm}void Keypad\-\_\-transition\-To (
+\begin{DoxyParamCaption}
+\item[{{\bf Keypad\-State}}]{new\-State}
+\end{DoxyParamCaption}
+)}}\label{keypad_8c_a3a355c67d44617666456a7f383f5ad0d}
+
+
+Definition at line 59 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-get\-Key().
+
+
+\begin{DoxyCode}
+59                                               \{
+60     \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}!=newState)\{
+61         \hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state} = newState;
+62 \textcolor{comment}{//      if (keypadEventListener!=NULL)\{ }
+63 \textcolor{comment}{//          keypadEventListener(currentKey);}
+64 \textcolor{comment}{//      \}}
+65     \}
+66 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{keypad_8c_a91e2382a9e6d2d4054b6ba8020e3c189}{\index{keypad.\-c@{keypad.\-c}!column\-Pins@{column\-Pins}}
+\index{column\-Pins@{column\-Pins}!keypad.c@{keypad.\-c}}
+\subsubsection[{column\-Pins}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ column\-Pins}}\label{keypad_8c_a91e2382a9e6d2d4054b6ba8020e3c189}
+
+
+Definition at line 28 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-get\-Key(), Keypad\-\_\-init(), and Keypad\-\_\-initialize\-Pins().
+
+\hypertarget{keypad_8c_af4e2c26819ce97d39f25b16899a05c18}{\index{keypad.\-c@{keypad.\-c}!current\-Key@{current\-Key}}
+\index{current\-Key@{current\-Key}!keypad.c@{keypad.\-c}}
+\subsubsection[{current\-Key}]{\setlength{\rightskip}{0pt plus 5cm}char current\-Key}}\label{keypad_8c_af4e2c26819ce97d39f25b16899a05c18}
+
+
+Definition at line 31 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-get\-Key(), and Keypad\-\_\-init().
+
+\hypertarget{keypad_8c_ab4bfda70906d95283267de6e82bfe9cf}{\index{keypad.\-c@{keypad.\-c}!debounce\-Time@{debounce\-Time}}
+\index{debounce\-Time@{debounce\-Time}!keypad.c@{keypad.\-c}}
+\subsubsection[{debounce\-Time}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int debounce\-Time}}\label{keypad_8c_ab4bfda70906d95283267de6e82bfe9cf}
+
+
+Definition at line 33 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-get\-Key(), Keypad\-\_\-init(), and Keypad\-\_\-set\-Debounce\-Time().
+
+\hypertarget{keypad_8c_afe6cba0101f2d85edbb76354ba106ea5}{\index{keypad.\-c@{keypad.\-c}!hold\-Time@{hold\-Time}}
+\index{hold\-Time@{hold\-Time}!keypad.c@{keypad.\-c}}
+\subsubsection[{hold\-Time}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int hold\-Time}}\label{keypad_8c_afe6cba0101f2d85edbb76354ba106ea5}
+
+
+Definition at line 34 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-get\-Key(), Keypad\-\_\-init(), and Keypad\-\_\-set\-Hold\-Time().
+
+\hypertarget{keypad_8c_ab2b95532ff4c0f90d9a51ffaba47d11e}{\index{keypad.\-c@{keypad.\-c}!keypad\-\_\-columns@{keypad\-\_\-columns}}
+\index{keypad\-\_\-columns@{keypad\-\_\-columns}!keypad.c@{keypad.\-c}}
+\subsubsection[{keypad\-\_\-columns}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uchar} keypad\-\_\-columns}}\label{keypad_8c_ab2b95532ff4c0f90d9a51ffaba47d11e}
+
+
+Definition at line 23 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-get\-Key(), Keypad\-\_\-init(), and Keypad\-\_\-initialize\-Pins().
+
+\hypertarget{keypad_8c_aa789725998eba36732ac6c447ef385a7}{\index{keypad.\-c@{keypad.\-c}!keypad\-\_\-rows@{keypad\-\_\-rows}}
+\index{keypad\-\_\-rows@{keypad\-\_\-rows}!keypad.c@{keypad.\-c}}
+\subsubsection[{keypad\-\_\-rows}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uchar} keypad\-\_\-rows}}\label{keypad_8c_aa789725998eba36732ac6c447ef385a7}
+
+
+Definition at line 22 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-get\-Key(), Keypad\-\_\-init(), and Keypad\-\_\-initialize\-Pins().
+
+\hypertarget{keypad_8c_a2f8814dab580b6262a7ece7de04405e6}{\index{keypad.\-c@{keypad.\-c}!last\-Update@{last\-Update}}
+\index{last\-Update@{last\-Update}!keypad.c@{keypad.\-c}}
+\subsubsection[{last\-Update}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long last\-Update}}\label{keypad_8c_a2f8814dab580b6262a7ece7de04405e6}
+
+
+Definition at line 32 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-get\-Key(), and Keypad\-\_\-init().
+
+\hypertarget{keypad_8c_abd0424a6c8b273b46a42ba12697bd680}{\index{keypad.\-c@{keypad.\-c}!row\-Pins@{row\-Pins}}
+\index{row\-Pins@{row\-Pins}!keypad.c@{keypad.\-c}}
+\subsubsection[{row\-Pins}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ row\-Pins}}\label{keypad_8c_abd0424a6c8b273b46a42ba12697bd680}
+
+
+Definition at line 27 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-get\-Key(), Keypad\-\_\-init(), and Keypad\-\_\-initialize\-Pins().
+
+\hypertarget{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{\index{keypad.\-c@{keypad.\-c}!state@{state}}
+\index{state@{state}!keypad.c@{keypad.\-c}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Keypad\-State} state}}\label{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}
+
+
+Definition at line 30 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-get\-State(), Keypad\-\_\-init(), Keypad\-\_\-transition\-To(), and toggle().
+
+\hypertarget{keypad_8c_a4d57ca90cc9704c6658648b771afed91}{\index{keypad.\-c@{keypad.\-c}!user\-Keymap@{user\-Keymap}}
+\index{user\-Keymap@{user\-Keymap}!keypad.c@{keypad.\-c}}
+\subsubsection[{user\-Keymap}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ user\-Keymap}}\label{keypad_8c_a4d57ca90cc9704c6658648b771afed91}
+
+
+Definition at line 25 of file keypad.\-c.
+
+
+
+Referenced by Keypad\-\_\-get\-Key(), and Keypad\-\_\-init().
+

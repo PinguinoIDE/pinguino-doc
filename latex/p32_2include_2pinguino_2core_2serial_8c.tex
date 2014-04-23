@@ -1,0 +1,1763 @@
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/serial.c File Reference}
+\label{p32_2include_2pinguino_2core_2serial_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/serial.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/serial.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$system.\-c$>$}\\*
+{\ttfamily \#include $<$interrupt.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$printf.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a43fa43691e9794b44a8bc74df8c706b4}{\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{U\-A\-R\-T1}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{U\-A\-R\-T2}~2
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a4dcc7d0ed182969113c1982b3d74733b}{U\-A\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E}~0x0000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aaaf6c77e3b8fec12ad625225a08c4f28}{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E}~0x8000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a2ba32769c28a9d4b2e18b3b1d3ba3703}{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-O\-P\-\_\-\-O\-N\-\_\-\-I\-D\-L\-E}~0x2000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a078ece57edf6b36022b1d5b718264f5d}{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-I\-R\-D\-A}~0x1000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acaff17d0c9a1bd2f627f8a7efb0321c2}{U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}~0x000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aba94d554116343d3c37620c298e0599a}{U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y}~0x800
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a690041a498fb6aa3b24005b51956028f}{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-B\-I\-T\-\_\-\-C\-L\-O\-C\-K}~0x300
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a2a3736d72596246b01ea6c42046a136c}{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-C\-T\-S\-\_\-\-R\-T\-S}~0x200
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a542aac4cc064ff9adf3f52493f9d6147}{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-R\-T\-S}~0x100
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a9b4a17e1610fc7ed4195a05315a4b1a6}{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-T\-X\-\_\-\-R\-X\-\_\-\-O\-N\-L\-Y}~0x000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_af252702d271ae5cd52cfe7ecf472fdb4}{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-W\-A\-K\-E\-\_\-\-O\-N\-\_\-\-S\-T\-A\-R\-T}~0x80
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ae93e392ec1c153d7adf54703126282ef}{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-L\-O\-O\-P\-B\-A\-C\-K}~0x40
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ac6942049eaf116118d10f476d6f0b302}{U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y}~0x10
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-H\-I\-G\-H\-\_\-\-S\-P\-E\-E\-D}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0a2ce5cd8889eb6605d0a3757ffd8521}{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-A\-N\-D\-A\-R\-D\-\_\-\-S\-P\-E\-E\-D}~0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a37f512bcb7469dcb0d44a8bfeda33bfc}{U\-A\-R\-T\-\_\-9\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y}~0x06
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a80050cd0c22c5776ac69c5106ead0727}{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-O\-D\-D\-\_\-\-P\-A\-R\-I\-T\-Y}~0x04
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ae1e6cdb0486aab5426d70214fa4617be}{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-E\-V\-E\-N\-\_\-\-P\-A\-R\-I\-T\-Y}~0x02
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_af77497759bc43e0aea32fc0db0d8fd20}{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y}~0x00
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ae6a1358ec412906d299a8ee4fa104796}{U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-2}~0x01
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8c4f4e1ad92fa1b49f3ce2247ba9af0e}{U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-1}~0x00
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aa60bf6c14b1ef50ca1a3071360650c56}{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-M\-P\-T\-Y}~0x8000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ad4939663b663f4fe8fc66bc96d8ea4a0}{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-D\-O\-N\-E}~0x4000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_af727f46bdaa63ddb79d06be81bd9d92f}{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}~0x0000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a469d9666540668c67c0d562420b4b054}{U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y}~0x2000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aacf3c9c4375854165077f5d18cb4a5db}{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}~0x1000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ae3f5615881fb44603b0fa63ee8780cbf}{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}~0x0000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aef3a5ec4a079d61ee4362ed52bb17e1e}{U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}~0x400
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a818776344f008804549591ea2a9f6c59}{U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}~0x000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a79e41610f669265a690114ac881f8a89}{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}~0x1400
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a85760b8eb14c492b82b825abaa4b7418}{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-F\-U\-L\-L}~0x\-C0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_af45d46994d7ccab2ae93720eb64fea2e}{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-H\-A\-L\-F\-\_\-\-F\-U\-L\-L}~0x40
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a499e8d915f9076574240494ed1d80c8a}{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y}~0x00
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0ec53c8b72c608510cd746ed514e3925}{U\-A\-R\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-\_\-\-I\-E\-E\-E\-\_\-485}~0x00000900
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a1680717bedabecebfe73d4b75ba9f439}{U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}~0x00000200
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ac98b77b1ce721a6aeaab23d602bdd382}{U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-E\-M\-P\-T\-Y}~0x00000100
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a76c32d7018c01476305b9b7269cd4ec3}{U\-A\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R\-\_\-\-I\-D\-L\-E}~0x00000010
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a946e3d317937e003d2057bf19e96dd1d}{U\-A\-R\-T\-\_\-\-P\-A\-R\-I\-T\-Y\-\_\-\-E\-R\-R\-O\-R}~0x00000008
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a1d37ef27139eda65ba7e8da0fbf4c1cc}{U\-A\-R\-T\-\_\-\-F\-R\-A\-M\-I\-N\-G\-\_\-\-E\-R\-R\-O\-R}~0x00000004
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a3183177e3613d8785d8cc8516931beb6}{U\-A\-R\-T\-\_\-\-O\-V\-E\-R\-R\-U\-N\-\_\-\-E\-R\-R\-O\-R}~0x00000002
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab9d7a42ffae1af33a0414609776a3251}{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-A\-D\-Y}~0x00000001
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}~128
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a57f8a57480d3cf22a1449d9784918514}{Serial\-Set\-Data\-Rate} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} baudrate)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a68077728769727a8aa5e3a2e2a81e081}{Serial\-Get\-Data\-Rate} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a59c7f6eb3bfb81516741659466c4d6e6}{Serial\-Enable} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} config)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_abf74ac07ead0f559939a94f2755f9f35}{Serial\-Set\-Line\-Control} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} config)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a26fe5a83dff28031ab497e5cafc6eeda}{Serial\-Flush} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a2213d458a6c9d27f0d408fc908862e31}{Serial\-Pin\-Configure} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a9ec6a8e39184ac9f8a20c193c6d6c08d}{Serial\-Int\-Configure} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} priority, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} subpriority)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0f213d0381fb0d45af9bc0c6d0aa2127}{Serial\-Configure} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} config, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} enable, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} baudrate)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_afd0e9a058cc758040a39e4df542b7726}{Serial\-U\-A\-R\-T1\-Write\-Char} (char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aa7354910d04ba38409e1a80b22d6f5a2}{Serial\-U\-A\-R\-T2\-Write\-Char} (char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a9e65e883f8f9d1922326b9ec17ea0a19}{Serial\-Put\-Char} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port, char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+char \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a878269e804f48bb8a690ed20115c4ce4}{Serial\-Available} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a46b4e3730df878a192c4e1aeb3a4325d}{Serial\-Read} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port)
+\item 
+char \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ad174ce78bcebca3f280c3aa1ade802c4}{Serial\-Get\-Key} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port)
+\item 
+char $\ast$ \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7fbf2ad606a3010081b5d1b2d9880101}{Serial\-Get\-String} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a6ff06623c25bc6ef7dfb92f4e3e81d42}{Serial\-Get\-Data\-Buffer} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a2297ae2f94b69ddb743005563fa180ef}{Serial1\-Interrupt} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a53997a6dfb9fceedcc14670bae630fa8}{Serial2\-Interrupt} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a04655bb13327a2854dc93436881f61c6}{Clear\-Rx\-Error} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} port)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile unsigned char \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0f5bfce4625ae4aaa0cb1d58b7a49098}{U\-A\-R\-T1\-Serial\-Buffer} \mbox{[}\hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}\mbox{]}
+\item 
+volatile unsigned char \hyperlink{p32_2include_2pinguino_2core_2serial_8c_af224791a6d6f98c42b8a100fc68c3fd7}{U\-A\-R\-T2\-Serial\-Buffer} \mbox{[}\hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}\mbox{]}
+\item 
+volatile long \hyperlink{p32_2include_2pinguino_2core_2serial_8c_af7c29f2714c296e667fb37d9417e69c7}{U\-A\-R\-T1wpointer}
+\item 
+volatile long \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a4dee7b9c8675873dea1b4516f690daf3}{U\-A\-R\-T1rpointer}
+\item 
+volatile long \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0fc1fd7912e30af9cff80106ea3a2feb}{U\-A\-R\-T2wpointer}
+\item 
+volatile long \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8240b2bc47ed08ca175ed77a312af5fe}{U\-A\-R\-T2rpointer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a43fa43691e9794b44a8bc74df8c706b4}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-}}\label{p32_2include_2pinguino_2core_2serial_8c_a43fa43691e9794b44a8bc74df8c706b4}
+
+
+Definition at line 32 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H@{S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}}
+\index{S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H@{S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H~128}}\label{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}
+
+
+Definition at line 157 of file serial.\-c.
+
+
+
+Referenced by Serial\-Get\-Data\-Buffer(), and Serial\-Read().
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T1@{U\-A\-R\-T1}}
+\index{U\-A\-R\-T1@{U\-A\-R\-T1}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T1}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T1~1}}\label{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}
+
+
+Definition at line 40 of file serial.\-c.
+
+
+
+Referenced by Clear\-Rx\-Error(), open(), read(), serial1available(), serial1clearrxerror(), serial1flush(), serial1getkey(), serial1getstring(), serial1init(), Serial1\-Interrupt(), serial1read(), serial2available(), serial2clearrxerror(), serial2flush(), serial2getkey(), serial2getstring(), serial2init(), serial2read(), Serial\-Available(), Serial\-Enable(), Serial\-Flush(), Serial\-Get\-Data\-Buffer(), Serial\-Get\-Data\-Rate(), Serial\-Int\-Configure(), Serial\-Pin\-Configure(), Serial\-Put\-Char(), Serial\-Read(), Serial\-Set\-Data\-Rate(), and Serial\-Set\-Line\-Control().
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T2@{U\-A\-R\-T2}}
+\index{U\-A\-R\-T2@{U\-A\-R\-T2}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T2}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T2~2}}\label{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}
+
+
+Definition at line 41 of file serial.\-c.
+
+
+
+Referenced by Clear\-Rx\-Error(), open(), serial1available(), serial1clearrxerror(), serial1flush(), serial1getkey(), serial1getstring(), serial1init(), serial1read(), serial2available(), serial2clearrxerror(), serial2flush(), serial2getkey(), serial2getstring(), serial2init(), Serial2\-Interrupt(), serial2read(), Serial\-Available(), Serial\-Enable(), Serial\-Flush(), Serial\-Get\-Data\-Buffer(), Serial\-Get\-Data\-Rate(), Serial\-Int\-Configure(), Serial\-Pin\-Configure(), Serial\-Put\-Char(), Serial\-Read(), Serial\-Set\-Data\-Rate(), and Serial\-Set\-Line\-Control().
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_ae1e6cdb0486aab5426d70214fa4617be}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-E\-V\-E\-N\-\_\-\-P\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-E\-V\-E\-N\-\_\-\-P\-A\-R\-I\-T\-Y}}
+\index{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-E\-V\-E\-N\-\_\-\-P\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-E\-V\-E\-N\-\_\-\-P\-A\-R\-I\-T\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-E\-V\-E\-N\-\_\-\-P\-A\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-E\-V\-E\-N\-\_\-\-P\-A\-R\-I\-T\-Y~0x02}}\label{p32_2include_2pinguino_2core_2serial_8c_ae1e6cdb0486aab5426d70214fa4617be}
+
+
+Definition at line 104 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_af77497759bc43e0aea32fc0db0d8fd20}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y}}
+\index{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y~0x00}}\label{p32_2include_2pinguino_2core_2serial_8c_af77497759bc43e0aea32fc0db0d8fd20}
+
+
+Definition at line 105 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a80050cd0c22c5776ac69c5106ead0727}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-O\-D\-D\-\_\-\-P\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-O\-D\-D\-\_\-\-P\-A\-R\-I\-T\-Y}}
+\index{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-O\-D\-D\-\_\-\-P\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-O\-D\-D\-\_\-\-P\-A\-R\-I\-T\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-O\-D\-D\-\_\-\-P\-A\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-8\-\_\-\-B\-I\-T\-S\-\_\-\-O\-D\-D\-\_\-\-P\-A\-R\-I\-T\-Y~0x04}}\label{p32_2include_2pinguino_2core_2serial_8c_a80050cd0c22c5776ac69c5106ead0727}
+
+
+Definition at line 103 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a37f512bcb7469dcb0d44a8bfeda33bfc}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-9\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-9\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y}}
+\index{U\-A\-R\-T\-\_\-9\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-9\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-9\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-9\-\_\-\-B\-I\-T\-S\-\_\-\-N\-O\-\_\-\-P\-A\-R\-I\-T\-Y~0x06}}\label{p32_2include_2pinguino_2core_2serial_8c_a37f512bcb7469dcb0d44a8bfeda33bfc}
+
+
+Definition at line 102 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_ab9d7a42ffae1af33a0414609776a3251}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-A\-D\-Y@{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-A\-D\-Y}}
+\index{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-A\-D\-Y@{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-A\-D\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-A\-D\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-D\-A\-T\-A\-\_\-\-R\-E\-A\-D\-Y~0x00000001}}\label{p32_2include_2pinguino_2core_2serial_8c_ab9d7a42ffae1af33a0414609776a3251}
+
+
+Definition at line 154 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a4dcc7d0ed182969113c1982b3d74733b}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E@{U\-A\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E}}
+\index{U\-A\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E@{U\-A\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E~0x0000}}\label{p32_2include_2pinguino_2core_2serial_8c_a4dcc7d0ed182969113c1982b3d74733b}
+
+
+Definition at line 61 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_aaaf6c77e3b8fec12ad625225a08c4f28}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E}}
+\index{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E~0x8000}}\label{p32_2include_2pinguino_2core_2serial_8c_aaaf6c77e3b8fec12ad625225a08c4f28}
+
+
+Definition at line 62 of file serial.\-c.
+
+
+
+Referenced by B\-T\-\_\-init(), open(), serial1init(), serial2init(), serial3init(), serial4init(), serial5init(), and serial6init().
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-H\-I\-G\-H\-\_\-\-S\-P\-E\-E\-D@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-H\-I\-G\-H\-\_\-\-S\-P\-E\-E\-D}}
+\index{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-H\-I\-G\-H\-\_\-\-S\-P\-E\-E\-D@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-H\-I\-G\-H\-\_\-\-S\-P\-E\-E\-D}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-H\-I\-G\-H\-\_\-\-S\-P\-E\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-H\-I\-G\-H\-\_\-\-S\-P\-E\-E\-D~1}}\label{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}
+
+
+Definition at line 97 of file serial.\-c.
+
+
+
+Referenced by Serial\-Get\-Data\-Rate(), and Serial\-Set\-Data\-Rate().
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a078ece57edf6b36022b1d5b718264f5d}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-I\-R\-D\-A@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-I\-R\-D\-A}}
+\index{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-I\-R\-D\-A@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-I\-R\-D\-A}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-I\-R\-D\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-I\-R\-D\-A~0x1000}}\label{p32_2include_2pinguino_2core_2serial_8c_a078ece57edf6b36022b1d5b718264f5d}
+
+
+Definition at line 72 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_ae93e392ec1c153d7adf54703126282ef}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-L\-O\-O\-P\-B\-A\-C\-K@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-L\-O\-O\-P\-B\-A\-C\-K}}
+\index{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-L\-O\-O\-P\-B\-A\-C\-K@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-L\-O\-O\-P\-B\-A\-C\-K}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-L\-O\-O\-P\-B\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-L\-O\-O\-P\-B\-A\-C\-K~0x40}}\label{p32_2include_2pinguino_2core_2serial_8c_ae93e392ec1c153d7adf54703126282ef}
+
+
+Definition at line 88 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a690041a498fb6aa3b24005b51956028f}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-B\-I\-T\-\_\-\-C\-L\-O\-C\-K@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-B\-I\-T\-\_\-\-C\-L\-O\-C\-K}}
+\index{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-B\-I\-T\-\_\-\-C\-L\-O\-C\-K@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-B\-I\-T\-\_\-\-C\-L\-O\-C\-K}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-B\-I\-T\-\_\-\-C\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-B\-I\-T\-\_\-\-C\-L\-O\-C\-K~0x300}}\label{p32_2include_2pinguino_2core_2serial_8c_a690041a498fb6aa3b24005b51956028f}
+
+
+Definition at line 79 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a2a3736d72596246b01ea6c42046a136c}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-C\-T\-S\-\_\-\-R\-T\-S@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-C\-T\-S\-\_\-\-R\-T\-S}}
+\index{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-C\-T\-S\-\_\-\-R\-T\-S@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-C\-T\-S\-\_\-\-R\-T\-S}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-C\-T\-S\-\_\-\-R\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-C\-T\-S\-\_\-\-R\-T\-S~0x200}}\label{p32_2include_2pinguino_2core_2serial_8c_a2a3736d72596246b01ea6c42046a136c}
+
+
+Definition at line 80 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a542aac4cc064ff9adf3f52493f9d6147}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-R\-T\-S@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-R\-T\-S}}
+\index{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-R\-T\-S@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-R\-T\-S}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-R\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-R\-T\-S~0x100}}\label{p32_2include_2pinguino_2core_2serial_8c_a542aac4cc064ff9adf3f52493f9d6147}
+
+
+Definition at line 81 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a9b4a17e1610fc7ed4195a05315a4b1a6}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-T\-X\-\_\-\-R\-X\-\_\-\-O\-N\-L\-Y@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-T\-X\-\_\-\-R\-X\-\_\-\-O\-N\-L\-Y}}
+\index{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-T\-X\-\_\-\-R\-X\-\_\-\-O\-N\-L\-Y@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-T\-X\-\_\-\-R\-X\-\_\-\-O\-N\-L\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-T\-X\-\_\-\-R\-X\-\_\-\-O\-N\-L\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-I\-N\-S\-\_\-\-T\-X\-\_\-\-R\-X\-\_\-\-O\-N\-L\-Y~0x000}}\label{p32_2include_2pinguino_2core_2serial_8c_a9b4a17e1610fc7ed4195a05315a4b1a6}
+
+
+Definition at line 82 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a0a2ce5cd8889eb6605d0a3757ffd8521}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-A\-N\-D\-A\-R\-D\-\_\-\-S\-P\-E\-E\-D@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-A\-N\-D\-A\-R\-D\-\_\-\-S\-P\-E\-E\-D}}
+\index{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-A\-N\-D\-A\-R\-D\-\_\-\-S\-P\-E\-E\-D@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-A\-N\-D\-A\-R\-D\-\_\-\-S\-P\-E\-E\-D}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-A\-N\-D\-A\-R\-D\-\_\-\-S\-P\-E\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-A\-N\-D\-A\-R\-D\-\_\-\-S\-P\-E\-E\-D~0}}\label{p32_2include_2pinguino_2core_2serial_8c_a0a2ce5cd8889eb6605d0a3757ffd8521}
+
+
+Definition at line 98 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a2ba32769c28a9d4b2e18b3b1d3ba3703}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-O\-P\-\_\-\-O\-N\-\_\-\-I\-D\-L\-E@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-O\-P\-\_\-\-O\-N\-\_\-\-I\-D\-L\-E}}
+\index{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-O\-P\-\_\-\-O\-N\-\_\-\-I\-D\-L\-E@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-O\-P\-\_\-\-O\-N\-\_\-\-I\-D\-L\-E}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-O\-P\-\_\-\-O\-N\-\_\-\-I\-D\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-S\-T\-O\-P\-\_\-\-O\-N\-\_\-\-I\-D\-L\-E~0x2000}}\label{p32_2include_2pinguino_2core_2serial_8c_a2ba32769c28a9d4b2e18b3b1d3ba3703}
+
+
+Definition at line 69 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_af252702d271ae5cd52cfe7ecf472fdb4}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-W\-A\-K\-E\-\_\-\-O\-N\-\_\-\-S\-T\-A\-R\-T@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-W\-A\-K\-E\-\_\-\-O\-N\-\_\-\-S\-T\-A\-R\-T}}
+\index{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-W\-A\-K\-E\-\_\-\-O\-N\-\_\-\-S\-T\-A\-R\-T@{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-W\-A\-K\-E\-\_\-\-O\-N\-\_\-\-S\-T\-A\-R\-T}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-W\-A\-K\-E\-\_\-\-O\-N\-\_\-\-S\-T\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-W\-A\-K\-E\-\_\-\-O\-N\-\_\-\-S\-T\-A\-R\-T~0x80}}\label{p32_2include_2pinguino_2core_2serial_8c_af252702d271ae5cd52cfe7ecf472fdb4}
+
+
+Definition at line 85 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a1d37ef27139eda65ba7e8da0fbf4c1cc}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-F\-R\-A\-M\-I\-N\-G\-\_\-\-E\-R\-R\-O\-R@{U\-A\-R\-T\-\_\-\-F\-R\-A\-M\-I\-N\-G\-\_\-\-E\-R\-R\-O\-R}}
+\index{U\-A\-R\-T\-\_\-\-F\-R\-A\-M\-I\-N\-G\-\_\-\-E\-R\-R\-O\-R@{U\-A\-R\-T\-\_\-\-F\-R\-A\-M\-I\-N\-G\-\_\-\-E\-R\-R\-O\-R}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-F\-R\-A\-M\-I\-N\-G\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-F\-R\-A\-M\-I\-N\-G\-\_\-\-E\-R\-R\-O\-R~0x00000004}}\label{p32_2include_2pinguino_2core_2serial_8c_a1d37ef27139eda65ba7e8da0fbf4c1cc}
+
+
+Definition at line 152 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a85760b8eb14c492b82b825abaa4b7418}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-F\-U\-L\-L@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-F\-U\-L\-L}}
+\index{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-F\-U\-L\-L@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-F\-U\-L\-L}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-F\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-F\-U\-L\-L~0x\-C0}}\label{p32_2include_2pinguino_2core_2serial_8c_a85760b8eb14c492b82b825abaa4b7418}
+
+
+Definition at line 138 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_af45d46994d7ccab2ae93720eb64fea2e}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-H\-A\-L\-F\-\_\-\-F\-U\-L\-L@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-H\-A\-L\-F\-\_\-\-F\-U\-L\-L}}
+\index{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-H\-A\-L\-F\-\_\-\-F\-U\-L\-L@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-H\-A\-L\-F\-\_\-\-F\-U\-L\-L}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-H\-A\-L\-F\-\_\-\-F\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-H\-A\-L\-F\-\_\-\-F\-U\-L\-L~0x40}}\label{p32_2include_2pinguino_2core_2serial_8c_af45d46994d7ccab2ae93720eb64fea2e}
+
+
+Definition at line 139 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a499e8d915f9076574240494ed1d80c8a}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y}}
+\index{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y~0x00}}\label{p32_2include_2pinguino_2core_2serial_8c_a499e8d915f9076574240494ed1d80c8a}
+
+
+Definition at line 140 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_aa60bf6c14b1ef50ca1a3071360650c56}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-M\-P\-T\-Y@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-M\-P\-T\-Y}}
+\index{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-M\-P\-T\-Y@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-M\-P\-T\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-M\-P\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-E\-M\-P\-T\-Y~0x8000}}\label{p32_2include_2pinguino_2core_2serial_8c_aa60bf6c14b1ef50ca1a3071360650c56}
+
+
+Definition at line 118 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_ad4939663b663f4fe8fc66bc96d8ea4a0}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-D\-O\-N\-E@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-D\-O\-N\-E}}
+\index{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-D\-O\-N\-E@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-D\-O\-N\-E}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-D\-O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-D\-O\-N\-E~0x4000}}\label{p32_2include_2pinguino_2core_2serial_8c_ad4939663b663f4fe8fc66bc96d8ea4a0}
+
+
+Definition at line 119 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_af727f46bdaa63ddb79d06be81bd9d92f}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}}
+\index{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L@{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-O\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L~0x0000}}\label{p32_2include_2pinguino_2core_2serial_8c_af727f46bdaa63ddb79d06be81bd9d92f}
+
+
+Definition at line 120 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_ac6942049eaf116118d10f476d6f0b302}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y}}
+\index{U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y~0x10}}\label{p32_2include_2pinguino_2core_2serial_8c_ac6942049eaf116118d10f476d6f0b302}
+
+
+Definition at line 93 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a469d9666540668c67c0d562420b4b054}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y}}
+\index{U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y@{U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-I\-N\-V\-E\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-\_\-\-P\-O\-L\-A\-R\-I\-T\-Y~0x2000}}\label{p32_2include_2pinguino_2core_2serial_8c_a469d9666540668c67c0d562420b4b054}
+
+
+Definition at line 123 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a3183177e3613d8785d8cc8516931beb6}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-O\-V\-E\-R\-R\-U\-N\-\_\-\-E\-R\-R\-O\-R@{U\-A\-R\-T\-\_\-\-O\-V\-E\-R\-R\-U\-N\-\_\-\-E\-R\-R\-O\-R}}
+\index{U\-A\-R\-T\-\_\-\-O\-V\-E\-R\-R\-U\-N\-\_\-\-E\-R\-R\-O\-R@{U\-A\-R\-T\-\_\-\-O\-V\-E\-R\-R\-U\-N\-\_\-\-E\-R\-R\-O\-R}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-O\-V\-E\-R\-R\-U\-N\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-O\-V\-E\-R\-R\-U\-N\-\_\-\-E\-R\-R\-O\-R~0x00000002}}\label{p32_2include_2pinguino_2core_2serial_8c_a3183177e3613d8785d8cc8516931beb6}
+
+
+Definition at line 153 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a946e3d317937e003d2057bf19e96dd1d}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-P\-A\-R\-I\-T\-Y\-\_\-\-E\-R\-R\-O\-R@{U\-A\-R\-T\-\_\-\-P\-A\-R\-I\-T\-Y\-\_\-\-E\-R\-R\-O\-R}}
+\index{U\-A\-R\-T\-\_\-\-P\-A\-R\-I\-T\-Y\-\_\-\-E\-R\-R\-O\-R@{U\-A\-R\-T\-\_\-\-P\-A\-R\-I\-T\-Y\-\_\-\-E\-R\-R\-O\-R}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-P\-A\-R\-I\-T\-Y\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-P\-A\-R\-I\-T\-Y\-\_\-\-E\-R\-R\-O\-R~0x00000008}}\label{p32_2include_2pinguino_2core_2serial_8c_a946e3d317937e003d2057bf19e96dd1d}
+
+
+Definition at line 151 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a76c32d7018c01476305b9b7269cd4ec3}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R\-\_\-\-I\-D\-L\-E@{U\-A\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R\-\_\-\-I\-D\-L\-E}}
+\index{U\-A\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R\-\_\-\-I\-D\-L\-E@{U\-A\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R\-\_\-\-I\-D\-L\-E}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R\-\_\-\-I\-D\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R\-\_\-\-I\-D\-L\-E~0x00000010}}\label{p32_2include_2pinguino_2core_2serial_8c_a76c32d7018c01476305b9b7269cd4ec3}
+
+
+Definition at line 150 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_acaff17d0c9a1bd2f627f8a7efb0321c2}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L@{U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}}
+\index{U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L@{U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-R\-X\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L~0x000}}\label{p32_2include_2pinguino_2core_2serial_8c_acaff17d0c9a1bd2f627f8a7efb0321c2}
+
+
+Definition at line 75 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_aba94d554116343d3c37620c298e0599a}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y@{U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y}}
+\index{U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y@{U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-R\-T\-S\-\_\-\-W\-H\-E\-N\-\_\-\-T\-X\-\_\-\-N\-O\-T\-\_\-\-E\-M\-P\-T\-Y~0x800}}\label{p32_2include_2pinguino_2core_2serial_8c_aba94d554116343d3c37620c298e0599a}
+
+
+Definition at line 76 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_ae3f5615881fb44603b0fa63ee8780cbf}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}}
+\index{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D~0x0000}}\label{p32_2include_2pinguino_2core_2serial_8c_ae3f5615881fb44603b0fa63ee8780cbf}
+
+
+Definition at line 127 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_aacf3c9c4375854165077f5d18cb4a5db}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D@{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\index{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D@{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D~0x1000}}\label{p32_2include_2pinguino_2core_2serial_8c_aacf3c9c4375854165077f5d18cb4a5db}
+
+
+Definition at line 126 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a79e41610f669265a690114ac881f8a89}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D@{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\index{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D@{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D~0x1400}}\label{p32_2include_2pinguino_2core_2serial_8c_a79e41610f669265a690114ac881f8a89}
+
+
+Definition at line 135 of file serial.\-c.
+
+
+
+Referenced by B\-T\-\_\-init(), open(), serial1init(), serial2init(), serial3init(), serial4init(), serial5init(), and serial6init().
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a8c4f4e1ad92fa1b49f3ce2247ba9af0e}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-1@{U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-1}}
+\index{U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-1@{U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-1}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-1~0x00}}\label{p32_2include_2pinguino_2core_2serial_8c_a8c4f4e1ad92fa1b49f3ce2247ba9af0e}
+
+
+Definition at line 109 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_ae6a1358ec412906d299a8ee4fa104796}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-2@{U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-2}}
+\index{U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-2@{U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-2}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-S\-T\-O\-P\-\_\-\-B\-I\-T\-S\-\_\-2~0x01}}\label{p32_2include_2pinguino_2core_2serial_8c_ae6a1358ec412906d299a8ee4fa104796}
+
+
+Definition at line 108 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a0ec53c8b72c608510cd746ed514e3925}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-\_\-\-I\-E\-E\-E\-\_\-485@{U\-A\-R\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-\_\-\-I\-E\-E\-E\-\_\-485}}
+\index{U\-A\-R\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-\_\-\-I\-E\-E\-E\-\_\-485@{U\-A\-R\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-\_\-\-I\-E\-E\-E\-\_\-485}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-\_\-\-I\-E\-E\-E\-\_\-485}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-S\-U\-P\-P\-O\-R\-T\-\_\-\-I\-E\-E\-E\-\_\-485~0x00000900}}\label{p32_2include_2pinguino_2core_2serial_8c_a0ec53c8b72c608510cd746ed514e3925}
+
+
+Definition at line 145 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_ac98b77b1ce721a6aeaab23d602bdd382}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-E\-M\-P\-T\-Y@{U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-E\-M\-P\-T\-Y}}
+\index{U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-E\-M\-P\-T\-Y@{U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-E\-M\-P\-T\-Y}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-E\-M\-P\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-E\-M\-P\-T\-Y~0x00000100}}\label{p32_2include_2pinguino_2core_2serial_8c_ac98b77b1ce721a6aeaab23d602bdd382}
+
+
+Definition at line 149 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a1680717bedabecebfe73d4b75ba9f439}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L@{U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}}
+\index{U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L@{U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R\-\_\-\-N\-O\-T\-\_\-\-F\-U\-L\-L~0x00000200}}\label{p32_2include_2pinguino_2core_2serial_8c_a1680717bedabecebfe73d4b75ba9f439}
+
+
+Definition at line 148 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a818776344f008804549591ea2a9f6c59}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}}
+\index{U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D~0x000}}\label{p32_2include_2pinguino_2core_2serial_8c_a818776344f008804549591ea2a9f6c59}
+
+
+Definition at line 133 of file serial.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_aef3a5ec4a079d61ee4362ed52bb17e1e}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D@{U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\index{U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D@{U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-A\-R\-T\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D~0x400}}\label{p32_2include_2pinguino_2core_2serial_8c_aef3a5ec4a079d61ee4362ed52bb17e1e}
+
+
+Definition at line 132 of file serial.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a04655bb13327a2854dc93436881f61c6}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Clear\-Rx\-Error@{Clear\-Rx\-Error}}
+\index{Clear\-Rx\-Error@{Clear\-Rx\-Error}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Clear\-Rx\-Error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} Clear\-Rx\-Error (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a04655bb13327a2854dc93436881f61c6}
+
+
+Definition at line 1368 of file serial.\-c.
+
+
+
+References F\-A\-L\-S\-E, T\-R\-U\-E, U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+
+Referenced by serial1clearrxerror(), serial2clearrxerror(), serial3clearrxerror(), serial4clearrxerror(), serial5clearrxerror(), and serial6clearrxerror().
+
+
+\begin{DoxyCode}
+1369 \{
+1370 
+1371     \textcolor{keywordflow}{switch} (port)
+1372     \{
+1373         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}:
+1374     \textcolor{keywordflow}{if} (U1STAbits.OERR != 0)
+1375      \{
+1376       U1STAbits.OERR = 0;
+1377       \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+1378      \}
+1379     \textcolor{keywordflow}{break};
+1380 
+1381         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}:
+1382     \textcolor{keywordflow}{if} (U2STAbits.OERR != 0)
+1383      \{
+1384       U2STAbits.OERR = 0;
+1385       \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+1386      \}
+1387         \textcolor{keywordflow}{break};
+1388 
+1389 \textcolor{preprocessor}{#ifdef ENABLE\_UART3}
+1390 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART3:
+1391     \textcolor{keywordflow}{if} (U3STAbits.OERR != 0)
+1392      \{
+1393       U3STAbits.OERR = 0;
+1394       \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+1395      \}
+1396         \textcolor{keywordflow}{break};
+1397 \textcolor{preprocessor}{#endif}
+1398 \textcolor{preprocessor}{}
+1399 \textcolor{preprocessor}{#ifdef ENABLE\_UART4}
+1400 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART4:
+1401     \textcolor{keywordflow}{if} (U4STAbits.OERR != 0)
+1402      \{
+1403       U4STAbits.OERR = 0;
+1404       \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+1405      \}
+1406         \textcolor{keywordflow}{break};
+1407 \textcolor{preprocessor}{#endif}
+1408 \textcolor{preprocessor}{}
+1409 \textcolor{preprocessor}{#ifdef ENABLE\_UART5}
+1410 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART5:
+1411     \textcolor{keywordflow}{if} (U5STAbits.OERR != 0)
+1412      \{
+1413       U5STAbits.OERR = 0;
+1414       \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+1415      \}
+1416         \textcolor{keywordflow}{break};
+1417 \textcolor{preprocessor}{#endif}
+1418 \textcolor{preprocessor}{}
+1419 \textcolor{preprocessor}{#ifdef ENABLE\_UART6}
+1420 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART6:
+1421     \textcolor{keywordflow}{if} (U6STAbits.OERR != 0)
+1422      \{
+1423       U6STAbits.OERR = 0;
+1424       \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+1425      \}
+1426         \textcolor{keywordflow}{break};
+1427 \textcolor{preprocessor}{#endif}
+1428 \textcolor{preprocessor}{}    \}
+1429  \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+1430 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a2297ae2f94b69ddb743005563fa180ef}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial1\-Interrupt@{Serial1\-Interrupt}}
+\index{Serial1\-Interrupt@{Serial1\-Interrupt}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial1\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void Serial1\-Interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a2297ae2f94b69ddb743005563fa180ef}
+
+
+Definition at line 1121 of file serial.\-c.
+
+
+
+References I\-N\-T\-\_\-\-U\-A\-R\-T1\-\_\-\-E\-R\-R\-O\-R, I\-N\-T\-\_\-\-U\-A\-R\-T1\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R, I\-N\-T\-\_\-\-U\-A\-R\-T1\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R, Int\-Clear\-Flag(), Int\-Get\-Flag(), Serial\-Get\-Data\-Buffer(), and U\-A\-R\-T1.
+
+
+\begin{DoxyCode}
+1122 \{
+1123     \textcolor{keywordtype}{char}    Dummy;
+1124 
+1125     \textcolor{comment}{// Is this an RX interrupt from UART1 ?}
+1126 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1127 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (IFS1bits.U1RXIF)
+1128 \textcolor{preprocessor}{    #else   }
+1129 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a39a57c6ba2a98e87154d50b2c2eb4c9d}{IntGetFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a4bbcabadbb3accaf6047bf7484cc0dda}{INT\_UART1\_RECEIVER}))
+1130 \textcolor{preprocessor}{    #endif}
+1131 \textcolor{preprocessor}{}    \{
+1132    \textcolor{keywordflow}{if} (U1STAbits.OERR != 0)
+1133     U1STAbits.OERR = 0;
+1134    \textcolor{keywordflow}{else}
+1135          \textcolor{keywordflow}{do}
+1136      \{
+1137       \textcolor{keywordflow}{if} ((U1STAbits.FERR != 0) || (U1STAbits.PERR != 0))
+1138        Dummy = U1RXREG;
+1139       \textcolor{keywordflow}{else}
+1140        \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a6ff06623c25bc6ef7dfb92f4e3e81d42}{SerialGetDataBuffer}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1});
+1141      \}
+1142     \textcolor{keywordflow}{while} (U1STAbits.URXDA != 0);
+1143 \textcolor{preprocessor}{        #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1144 \textcolor{preprocessor}{}        IFS1bits.U1RXIF=0;
+1145 \textcolor{preprocessor}{        #else   }
+1146 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a4bbcabadbb3accaf6047bf7484cc0dda}{INT\_UART1\_RECEIVER});
+1147 \textcolor{preprocessor}{        #endif}
+1148 \textcolor{preprocessor}{}    \}
+1149 
+1150     \textcolor{comment}{// Is this an TX interrupt from UART1 ?}
+1151 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1152 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (IFS1bits.U1TXIF)
+1153 \textcolor{preprocessor}{    #else       }
+1154 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a39a57c6ba2a98e87154d50b2c2eb4c9d}{IntGetFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_adeae16b6c2425def9be93b7b49c5261d}{INT\_UART1\_TRANSMITTER}))
+1155 \textcolor{preprocessor}{    #endif}
+1156 \textcolor{preprocessor}{}    \{
+1157 \textcolor{preprocessor}{        #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1158 \textcolor{preprocessor}{}        IFS1bits.U1TXIF=0;
+1159 \textcolor{preprocessor}{        #else           }
+1160 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_adeae16b6c2425def9be93b7b49c5261d}{INT\_UART1\_TRANSMITTER});
+1161 \textcolor{preprocessor}{        #endif}
+1162 \textcolor{preprocessor}{}    \}
+1163 
+1164     \textcolor{comment}{// Is this an ERROR interrupt from UART1 ?}
+1165 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1166 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (IFS1bits.U1EIF)
+1167 \textcolor{preprocessor}{    #else   }
+1168 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a39a57c6ba2a98e87154d50b2c2eb4c9d}{IntGetFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a28cf5785dea6d4c9800d89fad195516d}{INT\_UART1\_ERROR}))
+1169 \textcolor{preprocessor}{    #endif}
+1170 \textcolor{preprocessor}{}    \{
+1171 \textcolor{preprocessor}{        #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1172 \textcolor{preprocessor}{}        IFS1bits.U1EIF=0;
+1173 \textcolor{preprocessor}{        #else   }
+1174 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a28cf5785dea6d4c9800d89fad195516d}{INT\_UART1\_ERROR});
+1175 \textcolor{preprocessor}{        #endif}
+1176 \textcolor{preprocessor}{}    \}       
+1177 
+1178 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a53997a6dfb9fceedcc14670bae630fa8}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial2\-Interrupt@{Serial2\-Interrupt}}
+\index{Serial2\-Interrupt@{Serial2\-Interrupt}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial2\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void Serial2\-Interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a53997a6dfb9fceedcc14670bae630fa8}
+
+
+Definition at line 1181 of file serial.\-c.
+
+
+
+References I\-N\-T\-\_\-\-U\-A\-R\-T2\-\_\-\-E\-R\-R\-O\-R, I\-N\-T\-\_\-\-U\-A\-R\-T2\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R, I\-N\-T\-\_\-\-U\-A\-R\-T2\-\_\-\-T\-R\-A\-N\-S\-M\-I\-T\-T\-E\-R, Int\-Clear\-Flag(), Int\-Get\-Flag(), Serial\-Get\-Data\-Buffer(), and U\-A\-R\-T2.
+
+
+\begin{DoxyCode}
+1182 \{
+1183     \textcolor{keywordtype}{char}    Dummy;
+1184 
+1185     \textcolor{comment}{// Is this an RX interrupt from UART2 ?}
+1186 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1187 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (IFS1bits.U2RXIF)
+1188 \textcolor{preprocessor}{    #else}
+1189 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a39a57c6ba2a98e87154d50b2c2eb4c9d}{IntGetFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_abbfc97f8b16134d2ac1a2e04a7784a8f}{INT\_UART2\_RECEIVER}))
+1190 \textcolor{preprocessor}{    #endif}
+1191 \textcolor{preprocessor}{}    
+1192     \{
+1193    \textcolor{keywordflow}{if} (U2STAbits.OERR != 0)
+1194     U2STAbits.OERR = 0;
+1195    \textcolor{keywordflow}{else}
+1196          \textcolor{keywordflow}{do}
+1197      \{
+1198       \textcolor{keywordflow}{if} ((U2STAbits.FERR != 0) || (U2STAbits.PERR != 0))
+1199        Dummy = U2RXREG;
+1200       \textcolor{keywordflow}{else}
+1201        \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a6ff06623c25bc6ef7dfb92f4e3e81d42}{SerialGetDataBuffer}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2});
+1202      \}
+1203     \textcolor{keywordflow}{while} (U2STAbits.URXDA != 0);
+1204         \textcolor{comment}{//Toggle(REDLED);           // Toggle LED to indicate UART activity}
+1205 \textcolor{preprocessor}{        #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1206 \textcolor{preprocessor}{}        IFS1bits.U2RXIF=0;
+1207 \textcolor{preprocessor}{        #else       }
+1208 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_abbfc97f8b16134d2ac1a2e04a7784a8f}{INT\_UART2\_RECEIVER});
+1209 \textcolor{preprocessor}{        #endif}
+1210 \textcolor{preprocessor}{}    \}
+1211     \textcolor{comment}{// Is this an TX interrupt from UART2 ?}
+1212 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1213 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (IFS1bits.U2TXIF)
+1214 \textcolor{preprocessor}{    #else   }
+1215 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a39a57c6ba2a98e87154d50b2c2eb4c9d}{IntGetFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_af7963ec766610d60a6520b3701cab213}{INT\_UART2\_TRANSMITTER}))
+1216 \textcolor{preprocessor}{    #endif}
+1217 \textcolor{preprocessor}{}    \{
+1218 \textcolor{preprocessor}{        #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1219 \textcolor{preprocessor}{}        IFS1bits.U2TXIF=0;
+1220 \textcolor{preprocessor}{        #else   }
+1221 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_af7963ec766610d60a6520b3701cab213}{INT\_UART2\_TRANSMITTER});
+1222 \textcolor{preprocessor}{        #endif}
+1223 \textcolor{preprocessor}{}    \}
+1224     \textcolor{comment}{// Is this an ERROR interrupt from UART2 ?}
+1225 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1226 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (IFS1bits.U2EIF)
+1227 \textcolor{preprocessor}{    #else   }
+1228 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a39a57c6ba2a98e87154d50b2c2eb4c9d}{IntGetFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a79c37ebcf5cfcd7959843110499a01b5}{INT\_UART2\_ERROR}))
+1229 \textcolor{preprocessor}{    #endif}
+1230 \textcolor{preprocessor}{}    \{
+1231 \textcolor{preprocessor}{        #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+1232 \textcolor{preprocessor}{}        IFS1bits.U2EIF=0;
+1233 \textcolor{preprocessor}{        #else   }
+1234 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a79c37ebcf5cfcd7959843110499a01b5}{INT\_UART2\_ERROR});
+1235 \textcolor{preprocessor}{        #endif}
+1236 \textcolor{preprocessor}{}    \}   
+1237 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a878269e804f48bb8a690ed20115c4ce4}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Available@{Serial\-Available}}
+\index{Serial\-Available@{Serial\-Available}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Available}]{\setlength{\rightskip}{0pt plus 5cm}char Serial\-Available (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a878269e804f48bb8a690ed20115c4ce4}
+
+
+Definition at line 884 of file serial.\-c.
+
+
+
+References U\-A\-R\-T1, U\-A\-R\-T1rpointer, U\-A\-R\-T1wpointer, U\-A\-R\-T2, U\-A\-R\-T2rpointer, and U\-A\-R\-T2wpointer.
+
+
+
+Referenced by B\-T\-\_\-get\-Buffer(), serial1available(), serial2available(), serial3available(), serial4available(), serial5available(), serial6available(), Serial\-Get\-Key(), and Serial\-Read().
+
+
+\begin{DoxyCode}
+885 \{
+886     \textcolor{keywordflow}{switch} (port)
+887     \{
+888         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}: \textcolor{keywordflow}{return} (\hyperlink{p32_2include_2pinguino_2core_2serial_8c_af7c29f2714c296e667fb37d9417e69c7}{UART1wpointer} != \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a4dee7b9c8675873dea1b4516f690daf3}{UART1rpointer}); \textcolor{keywordflow}{break};
+889         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}:    \textcolor{keywordflow}{return} (\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0fc1fd7912e30af9cff80106ea3a2feb}{UART2wpointer} != \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8240b2bc47ed08ca175ed77a312af5fe}{UART2rpointer}); \textcolor{keywordflow}{break};
+890 \textcolor{preprocessor}{        #ifdef ENABLE\_UART3}
+891 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART3: \textcolor{keywordflow}{return} (UART3wpointer != UART3rpointer); \textcolor{keywordflow}{break};
+892 \textcolor{preprocessor}{        #endif}
+893 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART4}
+894 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART4: \textcolor{keywordflow}{return} (UART4wpointer != UART4rpointer); \textcolor{keywordflow}{break};
+895 \textcolor{preprocessor}{        #endif}
+896 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART5}
+897 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART5: \textcolor{keywordflow}{return} (UART5wpointer != UART5rpointer); \textcolor{keywordflow}{break};
+898 \textcolor{preprocessor}{        #endif}
+899 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART6}
+900 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART6: \textcolor{keywordflow}{return} (UART6wpointer != UART6rpointer); \textcolor{keywordflow}{break};
+901 \textcolor{preprocessor}{        #endif}
+902 \textcolor{preprocessor}{}    \}
+903 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a0f213d0381fb0d45af9bc0c6d0aa2127}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Configure@{Serial\-Configure}}
+\index{Serial\-Configure@{Serial\-Configure}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Configure}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-Configure (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port, }
+\item[{{\bf u32}}]{config, }
+\item[{{\bf u32}}]{enable, }
+\item[{{\bf u32}}]{baudrate}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a0f213d0381fb0d45af9bc0c6d0aa2127}
+
+
+Definition at line 598 of file serial.\-c.
+
+
+
+References I\-N\-T\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y\-\_\-3, I\-N\-T\-\_\-\-S\-U\-B\-P\-R\-I\-O\-R\-I\-T\-Y\-\_\-3, Serial\-Enable(), Serial\-Flush(), Serial\-Int\-Configure(), Serial\-Pin\-Configure(), Serial\-Set\-Data\-Rate(), and Serial\-Set\-Line\-Control().
+
+
+
+Referenced by B\-T\-\_\-init(), open(), serial1init(), serial2init(), serial3init(), serial4init(), serial5init(), and serial6init().
+
+
+\begin{DoxyCode}
+599 \{
+600     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a2213d458a6c9d27f0d408fc908862e31}{SerialPinConfigure}(port);
+601     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a57f8a57480d3cf22a1449d9784918514}{SerialSetDataRate}(port, baudrate);     \textcolor{comment}{// UxBRG}
+602     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_abf74ac07ead0f559939a94f2755f9f35}{SerialSetLineControl}(port, config);     \textcolor{comment}{// UxMODE}
+603     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a59c7f6eb3bfb81516741659466c4d6e6}{SerialEnable}(port, enable);             \textcolor{comment}{// UxSTA}
+604     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a9ec6a8e39184ac9f8a20c193c6d6c08d}{SerialIntConfigure}(port, \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_af3c84daf9c75a030246a01afa27a6138}{INT\_PRIORITY\_3}, 
+      \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a37a9eeb9616a41d7e6a888aaa9d15a1a}{INT\_SUBPRIORITY\_3});
+605     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a26fe5a83dff28031ab497e5cafc6eeda}{SerialFlush}(port);
+606 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a59c7f6eb3bfb81516741659466c4d6e6}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Enable@{Serial\-Enable}}
+\index{Serial\-Enable@{Serial\-Enable}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-Enable (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port, }
+\item[{{\bf u32}}]{config}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a59c7f6eb3bfb81516741659466c4d6e6}
+
+
+Definition at line 368 of file serial.\-c.
+
+
+
+References U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+
+Referenced by Serial\-Configure().
+
+
+\begin{DoxyCode}
+369 \{
+370     \textcolor{keywordflow}{switch} (port)
+371     \{
+372         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}: U1STASET = config; \textcolor{keywordflow}{break};
+373         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}:    U2STASET = config; \textcolor{keywordflow}{break};
+374 \textcolor{preprocessor}{#ifdef ENABLE\_UART3}
+375 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART3: U2ASTASET = config; \textcolor{keywordflow}{break};
+376 \textcolor{preprocessor}{#endif}
+377 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART4}
+378 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART4: U1BSTASET = config; \textcolor{keywordflow}{break};
+379 \textcolor{preprocessor}{#endif}
+380 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART5}
+381 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART5: U3BSTASET = config; \textcolor{keywordflow}{break};
+382 \textcolor{preprocessor}{#endif}
+383 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART6}
+384 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART6: U2BSTASET = config; \textcolor{keywordflow}{break};
+385 \textcolor{preprocessor}{#endif}
+386 \textcolor{preprocessor}{}    \}
+387 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a26fe5a83dff28031ab497e5cafc6eeda}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Flush@{Serial\-Flush}}
+\index{Serial\-Flush@{Serial\-Flush}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Flush}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-Flush (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a26fe5a83dff28031ab497e5cafc6eeda}
+
+
+Definition at line 420 of file serial.\-c.
+
+
+
+References U\-A\-R\-T1, U\-A\-R\-T1rpointer, U\-A\-R\-T1wpointer, U\-A\-R\-T2, U\-A\-R\-T2rpointer, and U\-A\-R\-T2wpointer.
+
+
+
+Referenced by B\-T\-\_\-send\-Command(), serial1flush(), serial2flush(), serial3flush(), serial4flush(), serial5flush(), serial6flush(), Serial\-Configure(), and Serial\-Get\-Key().
+
+
+\begin{DoxyCode}
+421 \{
+422     \textcolor{keywordflow}{switch} (port)
+423     \{
+424         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}:
+425             \hyperlink{p32_2include_2pinguino_2core_2serial_8c_af7c29f2714c296e667fb37d9417e69c7}{UART1wpointer} = 1;
+426             \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a4dee7b9c8675873dea1b4516f690daf3}{UART1rpointer} = 1;
+427             \textcolor{keywordflow}{break};
+428         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}:
+429             \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0fc1fd7912e30af9cff80106ea3a2feb}{UART2wpointer} = 1;
+430             \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8240b2bc47ed08ca175ed77a312af5fe}{UART2rpointer} = 1;
+431             \textcolor{keywordflow}{break};
+432 \textcolor{preprocessor}{        #ifdef ENABLE\_UART3}
+433 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART3:
+434             UART3wpointer = 1;
+435             UART3rpointer = 1;
+436             \textcolor{keywordflow}{break};
+437 \textcolor{preprocessor}{        #endif}
+438 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART4}
+439 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART4:
+440             UART4wpointer = 1;
+441             UART4rpointer = 1;
+442             \textcolor{keywordflow}{break};
+443 \textcolor{preprocessor}{        #endif}
+444 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART5}
+445 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART5:
+446             UART5wpointer = 1;
+447             UART5rpointer = 1;
+448             \textcolor{keywordflow}{break};
+449 \textcolor{preprocessor}{        #endif}
+450 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART6}
+451 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART6:
+452             UART6wpointer = 1;
+453             UART6rpointer = 1;
+454             \textcolor{keywordflow}{break};
+455 \textcolor{preprocessor}{        #endif}
+456 \textcolor{preprocessor}{}    \}
+457 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a6ff06623c25bc6ef7dfb92f4e3e81d42}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Get\-Data\-Buffer@{Serial\-Get\-Data\-Buffer}}
+\index{Serial\-Get\-Data\-Buffer@{Serial\-Get\-Data\-Buffer}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Get\-Data\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-Get\-Data\-Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a6ff06623c25bc6ef7dfb92f4e3e81d42}
+
+
+Definition at line 1005 of file serial.\-c.
+
+
+
+References S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H, U\-A\-R\-T1, U\-A\-R\-T1rpointer, U\-A\-R\-T1\-Serial\-Buffer, U\-A\-R\-T1wpointer, U\-A\-R\-T2, U\-A\-R\-T2rpointer, U\-A\-R\-T2\-Serial\-Buffer, and U\-A\-R\-T2wpointer.
+
+
+
+Referenced by Serial1\-Interrupt(), and Serial2\-Interrupt().
+
+
+\begin{DoxyCode}
+1006 \{
+1007     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} caractere;
+1008     \textcolor{keywordtype}{long} newwp;
+1009 
+1010     \textcolor{keywordflow}{switch} (port)
+1011     \{
+1012         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}:
+1013             caractere = U1RXREG;                            \textcolor{comment}{// read received char}
+1014             \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2serial_8c_af7c29f2714c296e667fb37d9417e69c7}{UART1wpointer} != \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH} - 1)   \textcolor{comment}{// if not last
+       place in buffer}
+1015                 newwp = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_af7c29f2714c296e667fb37d9417e69c7}{UART1wpointer} + 1;                 \textcolor{comment}{// place=place+1}
+1016             \textcolor{keywordflow}{else}
+1017                 newwp = 1;                                  \textcolor{comment}{// else place=1}
+1018 
+1019             \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a4dee7b9c8675873dea1b4516f690daf3}{UART1rpointer} != newwp)                        \textcolor{comment}{// if read pointer!=write
+       pointer}
+1020                 \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0f5bfce4625ae4aaa0cb1d58b7a49098}{UART1SerialBuffer}[\hyperlink{p32_2include_2pinguino_2core_2serial_8c_af7c29f2714c296e667fb37d9417e69c7}{UART1wpointer}++] = caractere;   \textcolor{comment}{// store
+       received char}
+1021 
+1022             \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2serial_8c_af7c29f2714c296e667fb37d9417e69c7}{UART1wpointer} == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})       \textcolor{comment}{// if write
+       pointer=length buffer}
+1023                 \hyperlink{p32_2include_2pinguino_2core_2serial_8c_af7c29f2714c296e667fb37d9417e69c7}{UART1wpointer} = 1;                         \textcolor{comment}{// write pointer = 1}
+1024 
+1025             \textcolor{comment}{//return UART1SerialBuffer;}
+1026             \textcolor{keywordflow}{break};
+1027 
+1028         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}:
+1029             caractere = U2RXREG;                            \textcolor{comment}{// read received char}
+1030             \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0fc1fd7912e30af9cff80106ea3a2feb}{UART2wpointer} != \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH} - 1)   \textcolor{comment}{// if not last
+       place in buffer}
+1031                 newwp = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0fc1fd7912e30af9cff80106ea3a2feb}{UART2wpointer} + 1;                 \textcolor{comment}{// place=place+1}
+1032             \textcolor{keywordflow}{else}
+1033                 newwp = 1;                                  \textcolor{comment}{// else place=1}
+1034 
+1035             \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8240b2bc47ed08ca175ed77a312af5fe}{UART2rpointer} != newwp)                        \textcolor{comment}{// if read pointer!=write
+       pointer}
+1036                 \hyperlink{p32_2include_2pinguino_2core_2serial_8c_af224791a6d6f98c42b8a100fc68c3fd7}{UART2SerialBuffer}[\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0fc1fd7912e30af9cff80106ea3a2feb}{UART2wpointer}++] = caractere;   \textcolor{comment}{// store
+       received char}
+1037 
+1038             \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0fc1fd7912e30af9cff80106ea3a2feb}{UART2wpointer} == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})       \textcolor{comment}{// if write
+       pointer=length buffer}
+1039                 \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0fc1fd7912e30af9cff80106ea3a2feb}{UART2wpointer} = 1;                             \textcolor{comment}{// write pointer = 1}
+1040 
+1041             \textcolor{comment}{//return UART2SerialBuffer;}
+1042             \textcolor{keywordflow}{break};
+1043 \textcolor{preprocessor}{        #ifdef ENABLE\_UART3}
+1044 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART3:
+1045             caractere = U2ARXREG;                           \textcolor{comment}{// read received char}
+1046             \textcolor{keywordflow}{if} (UART3wpointer != \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH} - 1)    \textcolor{comment}{// if not last place in
+       buffer}
+1047                 newwp = UART3wpointer + 1;                  \textcolor{comment}{// place=place+1}
+1048             \textcolor{keywordflow}{else}
+1049                 newwp = 1;                                  \textcolor{comment}{// else place=1}
+1050 
+1051             \textcolor{keywordflow}{if} (UART3rpointer != newwp)                     \textcolor{comment}{// if read pointer!=write pointer}
+1052                 UART3SerialBuffer[UART3wpointer++] = caractere; \textcolor{comment}{// store received char}
+1053 
+1054             \textcolor{keywordflow}{if} (UART3wpointer == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})        \textcolor{comment}{// if write pointer=length
+       buffer}
+1055                 UART3wpointer = 1;                          \textcolor{comment}{// write pointer = 1}
+1056 
+1057             \textcolor{comment}{//return UART3SerialBuffer;}
+1058             \textcolor{keywordflow}{break};
+1059 \textcolor{preprocessor}{        #endif}
+1060 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART4}
+1061 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART4:
+1062             caractere = U1BRXREG;                           \textcolor{comment}{// read received char}
+1063             \textcolor{keywordflow}{if} (UART4wpointer != \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH} - 1)    \textcolor{comment}{// if not last place in
+       buffer}
+1064                 newwp = UART4wpointer + 1;                  \textcolor{comment}{// place=place+1}
+1065             \textcolor{keywordflow}{else}
+1066                 newwp = 1;                                  \textcolor{comment}{// else place=1}
+1067 
+1068             \textcolor{keywordflow}{if} (UART4rpointer != newwp)                     \textcolor{comment}{// if read pointer!=write pointer}
+1069                 UART4SerialBuffer[UART4wpointer++] = caractere; \textcolor{comment}{// store received char}
+1070 
+1071             \textcolor{keywordflow}{if} (UART4wpointer == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})        \textcolor{comment}{// if write pointer=length
+       buffer}
+1072                 UART4wpointer = 1;                          \textcolor{comment}{// write pointer = 1}
+1073 
+1074             \textcolor{comment}{//return UART4SerialBuffer;}
+1075             \textcolor{keywordflow}{break};
+1076 \textcolor{preprocessor}{        #endif}
+1077 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART5}
+1078 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART5:
+1079             caractere = U3BRXREG;                           \textcolor{comment}{// read received char}
+1080             \textcolor{keywordflow}{if} (UART5wpointer != \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH} - 1)    \textcolor{comment}{// if not last place in
+       buffer}
+1081                 newwp = UART5wpointer + 1;                  \textcolor{comment}{// place=place+1}
+1082             \textcolor{keywordflow}{else}
+1083                 newwp = 1;                                  \textcolor{comment}{// else place=1}
+1084 
+1085             \textcolor{keywordflow}{if} (UART5rpointer != newwp)                     \textcolor{comment}{// if read pointer!=write pointer}
+1086                 UART5SerialBuffer[UART5wpointer++] = caractere; \textcolor{comment}{// store received char}
+1087 
+1088             \textcolor{keywordflow}{if} (UART5wpointer == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})        \textcolor{comment}{// if write pointer=length
+       buffer}
+1089                 UART5wpointer = 1;                          \textcolor{comment}{// write pointer = 1}
+1090 
+1091             \textcolor{comment}{//return UART5SerialBuffer;}
+1092             \textcolor{keywordflow}{break};
+1093 \textcolor{preprocessor}{        #endif}
+1094 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART6}
+1095 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART6:
+1096             caractere = U2BRXREG;                           \textcolor{comment}{// read received char}
+1097             \textcolor{keywordflow}{if} (UART6wpointer != \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH} - 1)    \textcolor{comment}{// if not last place in
+       buffer}
+1098                 newwp = UART6wpointer + 1;                  \textcolor{comment}{// place=place+1}
+1099             \textcolor{keywordflow}{else}
+1100                 newwp = 1;                                  \textcolor{comment}{// else place=1}
+1101 
+1102             \textcolor{keywordflow}{if} (UART6rpointer != newwp)                     \textcolor{comment}{// if read pointer!=write pointer}
+1103                 UART6SerialBuffer[UART6wpointer++] = caractere; \textcolor{comment}{// store received char}
+1104 
+1105             \textcolor{keywordflow}{if} (UART6wpointer == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})        \textcolor{comment}{// if write pointer=length
+       buffer}
+1106                 UART6wpointer = 1;                          \textcolor{comment}{// write pointer = 1}
+1107 
+1108             \textcolor{comment}{//return UART3SerialBuffer;}
+1109             \textcolor{keywordflow}{break};
+1110 \textcolor{preprocessor}{        #endif}
+1111 \textcolor{preprocessor}{}    \}
+1112 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a68077728769727a8aa5e3a2e2a81e081}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Get\-Data\-Rate@{Serial\-Get\-Data\-Rate}}
+\index{Serial\-Get\-Data\-Rate@{Serial\-Get\-Data\-Rate}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Get\-Data\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Serial\-Get\-Data\-Rate (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a68077728769727a8aa5e3a2e2a81e081}
+
+
+Definition at line 294 of file serial.\-c.
+
+
+
+References Get\-Peripheral\-Clock(), U\-A\-R\-T1, U\-A\-R\-T2, and U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-H\-I\-G\-H\-\_\-\-S\-P\-E\-E\-D.
+
+
+\begin{DoxyCode}
+295 \{
+296     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} speed;
+297     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} baudrate;
+298     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} pbclock;
+299 
+300     pbclock = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a78e9ff88927e18f2346bc9c33069c5ef}{GetPeripheralClock}();
+301 
+302     \textcolor{keywordflow}{switch} (port)
+303     \{
+304         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}:
+305             speed = U1MODEbits.BRGH;
+306             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+307                 baudrate = pbclock / (4 * (U1BRG + 1));
+308             \textcolor{keywordflow}{else}
+309                 baudrate = pbclock / (16 * (U1BRG + 1));
+310             \textcolor{keywordflow}{break};
+311         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}:
+312             speed = U2MODEbits.BRGH;
+313             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+314                 baudrate = pbclock / (4 * (U2BRG + 1));
+315             \textcolor{keywordflow}{else}
+316                 baudrate = pbclock / (16 * (U2BRG + 1));
+317             \textcolor{keywordflow}{break};
+318 \textcolor{preprocessor}{#ifdef ENABLE\_UART3}
+319 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART3:
+320             speed = U2AMODEbits.BRGH;
+321             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+322                 baudrate = pbclock / (4 * (U2ABRG + 1));
+323             \textcolor{keywordflow}{else}
+324                 baudrate = pbclock / (16 * (U2ABRG + 1));
+325             \textcolor{keywordflow}{break};
+326 \textcolor{preprocessor}{#endif}
+327 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART4}
+328 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART4:
+329             speed = U1BMODEbits.BRGH;
+330             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+331                 baudrate = pbclock / (4 * (U1BBRG + 1));
+332             \textcolor{keywordflow}{else}
+333                 baudrate = pbclock / (16 * (U1BBRG + 1));
+334             \textcolor{keywordflow}{break};
+335 \textcolor{preprocessor}{#endif}
+336 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART5}
+337 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART5:
+338             speed = U3BMODEbits.BRGH;
+339             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+340                 baudrate = pbclock / (4 * (U3BBRG + 1));
+341             \textcolor{keywordflow}{else}
+342                 baudrate = pbclock / (16 * (U3BBRG + 1));
+343             \textcolor{keywordflow}{break};
+344 \textcolor{preprocessor}{#endif}
+345 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART6}
+346 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART6:
+347             speed = U2BMODEbits.BRGH;
+348             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+349                 baudrate = pbclock / (4 * (U2BBRG + 1));
+350             \textcolor{keywordflow}{else}
+351                 baudrate = pbclock / (16 * (U2BBRG + 1));
+352             \textcolor{keywordflow}{break};
+353 \textcolor{preprocessor}{#endif}
+354 \textcolor{preprocessor}{}        \textcolor{keywordflow}{default}:
+355             baudrate = 0;
+356     \}
+357     \textcolor{keywordflow}{return} baudrate;
+358 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_ad174ce78bcebca3f280c3aa1ade802c4}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Get\-Key@{Serial\-Get\-Key}}
+\index{Serial\-Get\-Key@{Serial\-Get\-Key}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Get\-Key}]{\setlength{\rightskip}{0pt plus 5cm}char Serial\-Get\-Key (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_ad174ce78bcebca3f280c3aa1ade802c4}
+
+
+Definition at line 970 of file serial.\-c.
+
+
+
+References c, Serial\-Available(), Serial\-Flush(), and Serial\-Read().
+
+
+
+Referenced by serial1getkey(), serial2getkey(), serial3getkey(), serial4getkey(), serial5getkey(), serial6getkey(), and Serial\-Get\-String().
+
+
+\begin{DoxyCode}
+971 \{
+972     \textcolor{keywordtype}{char} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+973 
+974     \textcolor{keywordflow}{while} (!(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a878269e804f48bb8a690ed20115c4ce4}{SerialAvailable}(port)));
+975     c = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a46b4e3730df878a192c4e1aeb3a4325d}{SerialRead}(port);
+976     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a26fe5a83dff28031ab497e5cafc6eeda}{SerialFlush}(port);
+977     \textcolor{keywordflow}{return} (c);
+978 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a7fbf2ad606a3010081b5d1b2d9880101}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Get\-String@{Serial\-Get\-String}}
+\index{Serial\-Get\-String@{Serial\-Get\-String}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Get\-String}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Serial\-Get\-String (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a7fbf2ad606a3010081b5d1b2d9880101}
+
+
+Definition at line 985 of file serial.\-c.
+
+
+
+References c, and Serial\-Get\-Key().
+
+
+
+Referenced by serial1getstring(), serial2getstring(), serial3getstring(), serial4getstring(), serial5getstring(), and serial6getstring().
+
+
+\begin{DoxyCode}
+986 \{
+987     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i = 0;
+988     \textcolor{keywordtype}{char} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+989     \textcolor{keyword}{static} \textcolor{keywordtype}{char} buffer[80];
+990     
+991     \textcolor{keywordflow}{do} \{
+992         c = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ad174ce78bcebca3f280c3aa1ade802c4}{SerialGetKey}(port);
+993         SerialPrintf(port, \textcolor{stringliteral}{"%c"}, c);
+994         buffer[i++] = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+995     \} \textcolor{keywordflow}{while} (c != \textcolor{charliteral}{'\(\backslash\)r'});
+996     buffer[i] = \textcolor{charliteral}{'\(\backslash\)0'};
+997 
+998     \textcolor{keywordflow}{return} (buffer);
+999 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a9ec6a8e39184ac9f8a20c193c6d6c08d}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Int\-Configure@{Serial\-Int\-Configure}}
+\index{Serial\-Int\-Configure@{Serial\-Int\-Configure}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Int\-Configure}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-Int\-Configure (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port, }
+\item[{{\bf u8}}]{priority, }
+\item[{{\bf u8}}]{subpriority}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a9ec6a8e39184ac9f8a20c193c6d6c08d}
+
+
+Definition at line 537 of file serial.\-c.
+
+
+
+References I\-N\-T\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-M\-U\-L\-T\-\_\-\-V\-E\-C\-T\-O\-R, I\-N\-T\-\_\-\-U\-A\-R\-T1\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R, I\-N\-T\-\_\-\-U\-A\-R\-T1\-\_\-\-V\-E\-C\-T\-O\-R, I\-N\-T\-\_\-\-U\-A\-R\-T2\-\_\-\-R\-E\-C\-E\-I\-V\-E\-R, I\-N\-T\-\_\-\-U\-A\-R\-T2\-\_\-\-V\-E\-C\-T\-O\-R, Int\-Configure\-System(), Int\-Enable(), Int\-Set\-Vector\-Priority(), U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+
+Referenced by Serial\-Configure().
+
+
+\begin{DoxyCode}
+538 \{
+539     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a9e4ebfd3f20cf6de4cfda78c4043f872}{IntConfigureSystem}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a8b1e2aaa6d775c7a98062aa9c5de70bb}{INT\_SYSTEM\_CONFIG\_MULT\_VECTOR});
+540     
+541     \textcolor{keywordflow}{switch} (port)
+542     \{
+543         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}:
+544 \textcolor{preprocessor}{            #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+545 \textcolor{preprocessor}{}                IPC8bits.U1IP = priority;
+546                 IPC8bits.U1IS = subpriority;
+547                 IEC1bits.U1RXIE=1;
+548 \textcolor{preprocessor}{            #else       }
+549 \textcolor{preprocessor}{}            \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_acdb435df21146161ff09d20d610432ab}{IntSetVectorPriority}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a5d8c43d56eb32b23f8cfdae477ec9796}{INT\_UART1\_VECTOR}, priority, 
+      subpriority);
+550             \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a06f9af7832fa5c1b2bd93084df9831b1}{IntEnable}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a4bbcabadbb3accaf6047bf7484cc0dda}{INT\_UART1\_RECEIVER});
+551 \textcolor{preprocessor}{            #endif}
+552 \textcolor{preprocessor}{}            \textcolor{keywordflow}{break};
+553         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}:
+554 \textcolor{preprocessor}{            #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+555 \textcolor{preprocessor}{}                IPC9bits.U2IP = priority;
+556                 IPC9bits.U2IS = subpriority;
+557                 IEC1bits.U2RXIE=1;
+558 \textcolor{preprocessor}{            #else}
+559 \textcolor{preprocessor}{}            \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_acdb435df21146161ff09d20d610432ab}{IntSetVectorPriority}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a858416338ffa112376d5cb20f5afdd58}{INT\_UART2\_VECTOR}, priority, 
+      subpriority);
+560             \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a06f9af7832fa5c1b2bd93084df9831b1}{IntEnable}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_abbfc97f8b16134d2ac1a2e04a7784a8f}{INT\_UART2\_RECEIVER});
+561 \textcolor{preprocessor}{            #endif}
+562 \textcolor{preprocessor}{}            \textcolor{keywordflow}{break};
+563 \textcolor{preprocessor}{        #ifdef ENABLE\_UART3}
+564 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART3:
+565             \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_acdb435df21146161ff09d20d610432ab}{IntSetVectorPriority}(INT\_UART3\_VECTOR, priority, subpriority);
+566             \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a06f9af7832fa5c1b2bd93084df9831b1}{IntEnable}(INT\_UART3\_RECEIVER);
+567             \textcolor{keywordflow}{break};
+568 \textcolor{preprocessor}{        #endif}
+569 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART4}
+570 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART4: 
+571             \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_acdb435df21146161ff09d20d610432ab}{IntSetVectorPriority}(INT\_UART4\_VECTOR, priority, subpriority);
+572             \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a06f9af7832fa5c1b2bd93084df9831b1}{IntEnable}(INT\_UART4\_RECEIVER);
+573             \textcolor{keywordflow}{break};
+574 \textcolor{preprocessor}{        #endif}
+575 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART5}
+576 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART5:
+577             \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_acdb435df21146161ff09d20d610432ab}{IntSetVectorPriority}(INT\_UART5\_VECTOR, priority, subpriority);
+578             \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a06f9af7832fa5c1b2bd93084df9831b1}{IntEnable}(INT\_UART5\_RECEIVER);
+579             \textcolor{keywordflow}{break};
+580 \textcolor{preprocessor}{        #endif}
+581 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART6}
+582 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART6:
+583             \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_acdb435df21146161ff09d20d610432ab}{IntSetVectorPriority}(INT\_UART6\_VECTOR, priority, subpriority);
+584             \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a06f9af7832fa5c1b2bd93084df9831b1}{IntEnable}(INT\_UART6\_RECEIVER);
+585             \textcolor{keywordflow}{break};
+586 \textcolor{preprocessor}{        #endif}
+587 \textcolor{preprocessor}{}    \}
+588 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a2213d458a6c9d27f0d408fc908862e31}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Pin\-Configure@{Serial\-Pin\-Configure}}
+\index{Serial\-Pin\-Configure@{Serial\-Pin\-Configure}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Pin\-Configure}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-Pin\-Configure (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a2213d458a6c9d27f0d408fc908862e31}
+
+
+Definition at line 463 of file serial.\-c.
+
+
+
+References I\-N\-P\-U\-T, O\-U\-T\-P\-U\-T, U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+
+Referenced by Serial\-Configure().
+
+
+\begin{DoxyCode}
+464 \{
+465     \textcolor{keywordflow}{switch} (port)
+466     \{
+467         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}:
+468 \textcolor{preprocessor}{        #ifdef \_\_32MX460F512L\_\_}
+469 \textcolor{preprocessor}{}            TRISFbits.TRISF8 = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};    \textcolor{comment}{// RF8 / U1TX output}
+470             TRISFbits.TRISF2 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};  \textcolor{comment}{// RF2 / U1RX input}
+471 \textcolor{preprocessor}{        #endif}
+472 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_32MX440F256H\_\_}
+473 \textcolor{preprocessor}{}            TRISDbits.TRISD3 = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};    \textcolor{comment}{// RD3 / U1TX output}
+474             TRISDbits.TRISD2 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};  \textcolor{comment}{// RD2 / U1RX input}
+475 \textcolor{preprocessor}{        #endif}
+476 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef PIC32\_PINGUINO\_220}
+477 \textcolor{preprocessor}{}            TRISBbits.TRISB4 = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};    \textcolor{comment}{// RB4 / U1TX output}
+478             TRISAbits.TRISA4 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};  \textcolor{comment}{// RA4 / U1RX input}
+479 \textcolor{preprocessor}{        #endif          }
+480 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #if defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+481 \textcolor{preprocessor}{}            TRISBbits.TRISB2=\hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};        \textcolor{comment}{// RB2 is input ( RX )}
+482             TRISBbits.TRISB3=\hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};  \textcolor{comment}{// RB3 is output ( TX )}
+483 \textcolor{preprocessor}{        #endif}
+484 \textcolor{preprocessor}{}            \textcolor{keywordflow}{break};
+485         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}:
+486 \textcolor{preprocessor}{        #ifdef PIC32\_PINGUINO\_220}
+487 \textcolor{preprocessor}{}            TRISCbits.TRISC9 = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};    \textcolor{comment}{// RC9 / U2TX output}
+488             TRISCbits.TRISC8 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};  \textcolor{comment}{// RC8 / U2RX input             }
+489 \textcolor{preprocessor}{        #else}
+490 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #if defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+491 \textcolor{preprocessor}{}            TRISBbits.TRISB1=\hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};        \textcolor{comment}{// RB1 is input ( RX )}
+492             TRISBbits.TRISB0=\hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};  \textcolor{comment}{// RB0 is output ( TX )}
+493 \textcolor{preprocessor}{            #else}
+494 \textcolor{preprocessor}{}            TRISFbits.TRISF5 = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};    \textcolor{comment}{// RF5 / U2TX output}
+495             TRISFbits.TRISF4 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};  \textcolor{comment}{// RF4 / U2RX input}
+496 \textcolor{preprocessor}{            #endif}
+497 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #endif}
+498 \textcolor{preprocessor}{}            \textcolor{keywordflow}{break};
+499         \textcolor{comment}{//32MX4xx not have UART3,4,5 AND 6}
+500 \textcolor{preprocessor}{        #ifdef ENABLE\_UART3}
+501 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART3:
+502             TRISGbits.TRISG8 = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};    \textcolor{comment}{// RG8 / U3TX output}
+503             TRISGbits.TRISG7 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};  \textcolor{comment}{// RG7 / U3RX input}
+504             \textcolor{keywordflow}{break};
+505 \textcolor{preprocessor}{        #endif}
+506 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART4}
+507 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART4:
+508             TRISDbits.TRISD15 = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};   \textcolor{comment}{// RD15 / U4TX output}
+509             TRISDbits.TRISD14 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT}; \textcolor{comment}{// RD14 / U4RX input}
+510             \textcolor{keywordflow}{break};
+511 \textcolor{preprocessor}{        #endif}
+512 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART5}
+513 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #ifndef \_\_32MX220F032D\_\_}
+514 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} UART5:
+515                 TRISFbits.TRISF13 = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};   \textcolor{comment}{// RF13 / U5TX output}
+516                 TRISFbits.TRISF12 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT}; \textcolor{comment}{// RF12 / U5RX input}
+517                 \textcolor{keywordflow}{break};
+518 \textcolor{preprocessor}{            #endif}
+519 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #endif}
+520 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART6}
+521 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART6:
+522             TRISGbits.TRISG6 = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};    \textcolor{comment}{// RG6 / U6TX output}
+523             TRISGbits.TRISG9 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};  \textcolor{comment}{// RG9 / U6RX input}
+524             \textcolor{keywordflow}{break};
+525 \textcolor{preprocessor}{        #endif}
+526 \textcolor{preprocessor}{}    \}
+527 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a9e65e883f8f9d1922326b9ec17ea0a19}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Put\-Char@{Serial\-Put\-Char}}
+\index{Serial\-Put\-Char@{Serial\-Put\-Char}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Put\-Char}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-Put\-Char (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port, }
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a9e65e883f8f9d1922326b9ec17ea0a19}
+
+
+Definition at line 676 of file serial.\-c.
+
+
+
+References Serial\-U\-A\-R\-T1\-Write\-Char(), Serial\-U\-A\-R\-T2\-Write\-Char(), U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+\begin{DoxyCode}
+677 \{
+678     \textcolor{keywordflow}{switch} (port)
+679     \{
+680         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}:
+681             \hyperlink{p32_2include_2pinguino_2core_2serial_8c_afd0e9a058cc758040a39e4df542b7726}{SerialUART1WriteChar}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+682             \textcolor{keywordflow}{break};
+683         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}:
+684             \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aa7354910d04ba38409e1a80b22d6f5a2}{SerialUART2WriteChar}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+685             \textcolor{keywordflow}{break};
+686 \textcolor{preprocessor}{        #ifdef ENABLE\_UART3}
+687 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART3:
+688             SerialUART3WriteChar(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+689             \textcolor{keywordflow}{break};
+690 \textcolor{preprocessor}{        #endif}
+691 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART4}
+692 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART4:
+693             SerialUART4WriteChar(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+694             \textcolor{keywordflow}{break};
+695 \textcolor{preprocessor}{        #endif}
+696 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART5}
+697 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART5:
+698             SerialUART5WriteChar(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+699             \textcolor{keywordflow}{break};
+700 \textcolor{preprocessor}{        #endif}
+701 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART6}
+702 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART6:
+703             SerialUART6WriteChar(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+704             \textcolor{keywordflow}{break};
+705 \textcolor{preprocessor}{        #endif}
+706 \textcolor{preprocessor}{}    \}
+707 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a46b4e3730df878a192c4e1aeb3a4325d}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Read@{Serial\-Read}}
+\index{Serial\-Read@{Serial\-Read}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Read}]{\setlength{\rightskip}{0pt plus 5cm}int Serial\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a46b4e3730df878a192c4e1aeb3a4325d}
+
+
+Definition at line 909 of file serial.\-c.
+
+
+
+References S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H, Serial\-Available(), U\-A\-R\-T1, U\-A\-R\-T1rpointer, U\-A\-R\-T1\-Serial\-Buffer, U\-A\-R\-T2, U\-A\-R\-T2rpointer, and U\-A\-R\-T2\-Serial\-Buffer.
+
+
+
+Referenced by B\-T\-\_\-get\-Buffer(), B\-T\-\_\-ok(), read(), serial1read(), serial2read(), serial3read(), serial4read(), serial5read(), serial6read(), and Serial\-Get\-Key().
+
+
+\begin{DoxyCode}
+910 \{
+911     \textcolor{keywordtype}{int} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c} = 0;
+912 
+913     \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a878269e804f48bb8a690ed20115c4ce4}{SerialAvailable}(port))
+914     \{
+915         \textcolor{keywordflow}{switch} (port)
+916         \{
+917             \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}:
+918                 c = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0f5bfce4625ae4aaa0cb1d58b7a49098}{UART1SerialBuffer}[\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a4dee7b9c8675873dea1b4516f690daf3}{UART1rpointer}++];
+919                 \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a4dee7b9c8675873dea1b4516f690daf3}{UART1rpointer} == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})
+920                     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a4dee7b9c8675873dea1b4516f690daf3}{UART1rpointer}=1;
+921                 \textcolor{keywordflow}{return}(c);
+922                 \textcolor{keywordflow}{break};
+923             \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}:
+924                 c = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_af224791a6d6f98c42b8a100fc68c3fd7}{UART2SerialBuffer}[\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8240b2bc47ed08ca175ed77a312af5fe}{UART2rpointer}++];
+925                 \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8240b2bc47ed08ca175ed77a312af5fe}{UART2rpointer} == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})
+926                     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8240b2bc47ed08ca175ed77a312af5fe}{UART2rpointer}=1;
+927                 \textcolor{keywordflow}{return}(c);
+928                 \textcolor{keywordflow}{break};
+929 \textcolor{preprocessor}{        #ifdef ENABLE\_UART3}
+930 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} UART3:
+931                 c = UART3SerialBuffer[UART3rpointer++];
+932                 \textcolor{keywordflow}{if} (UART3rpointer == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})
+933                     UART3rpointer=1;
+934                 \textcolor{keywordflow}{return}(c);
+935                 \textcolor{keywordflow}{break};
+936 \textcolor{preprocessor}{        #endif}
+937 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART4}
+938 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} UART4:             
+939                 c = UART4SerialBuffer[UART4rpointer++];
+940                 \textcolor{keywordflow}{if} (UART4rpointer == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})
+941                     UART4rpointer=1;
+942                 \textcolor{keywordflow}{return}(c);
+943                 \textcolor{keywordflow}{break};
+944 \textcolor{preprocessor}{        #endif}
+945 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART5}
+946 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} UART5:
+947                 c = UART5SerialBuffer[UART5rpointer++];
+948                 \textcolor{keywordflow}{if} (UART5rpointer == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})
+949                     UART5rpointer=1;
+950                 \textcolor{keywordflow}{return}(c);
+951                 \textcolor{keywordflow}{break};
+952 \textcolor{preprocessor}{        #endif}
+953 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef ENABLE\_UART6}
+954 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} UART6:
+955                 c = UART6SerialBuffer[UART6rpointer++];
+956                 \textcolor{keywordflow}{if} (UART6rpointer == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ab480756b885ce7935e37b2c858a6cecc}{SERIAL\_BUFFERLENGTH})
+957                     UART6rpointer=1;
+958                 \textcolor{keywordflow}{return}(c);
+959                 \textcolor{keywordflow}{break};
+960 \textcolor{preprocessor}{        #endif}
+961 \textcolor{preprocessor}{}        \}
+962     \}
+963     \textcolor{keywordflow}{return}(-1);
+964 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a57f8a57480d3cf22a1449d9784918514}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Set\-Data\-Rate@{Serial\-Set\-Data\-Rate}}
+\index{Serial\-Set\-Data\-Rate@{Serial\-Set\-Data\-Rate}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Set\-Data\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-Set\-Data\-Rate (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port, }
+\item[{{\bf u32}}]{baudrate}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_a57f8a57480d3cf22a1449d9784918514}
+
+
+Definition at line 203 of file serial.\-c.
+
+
+
+References Get\-Peripheral\-Clock(), max, U\-A\-R\-T1, U\-A\-R\-T2, and U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-H\-I\-G\-H\-\_\-\-S\-P\-E\-E\-D.
+
+
+
+Referenced by Serial\-Configure().
+
+
+\begin{DoxyCode}
+204 \{
+205     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} speed;
+206     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p8_2pinguino_2core_2macro_8h_affe776513b24d84b39af8ab0930fef7f}{max}, max1, max2;
+207     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} min1, min2;
+208     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} pbclock;
+209 
+210     pbclock = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a78e9ff88927e18f2346bc9c33069c5ef}{GetPeripheralClock}();
+211     max1 = pbclock / 4;
+212     min1 = max1 / 65536;
+213     max2 = pbclock / 16;
+214     min2 = max2 / 65536;
+215     \textcolor{keywordflow}{if} (baudrate > max1) baudrate = max1;
+216     \textcolor{keywordflow}{if} (baudrate < min2) baudrate = min2;
+217     max = (min1 + max2) / 2;
+218     \textcolor{comment}{//if (baudrate > min2 && baudrate < max) speed = UART\_ENABLE\_STANDARD\_SPEED;}
+219     \textcolor{keywordflow}{if} (baudrate > max && baudrate < max1) speed = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED};
+220 
+221     \textcolor{keywordflow}{switch} (port)
+222     \{
+223         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}:
+224             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+225             \{
+226                 U1MODEbits.BRGH = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED};
+227                 U1BRG = ((pbclock / baudrate) / 4) - 1;
+228             \}
+229             \textcolor{keywordflow}{else}
+230                 U1BRG = ((pbclock / baudrate) / 16) - 1;
+231             \textcolor{keywordflow}{break};
+232         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}:
+233             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+234             \{
+235                 U2MODEbits.BRGH = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED};
+236                 U2BRG = ((pbclock / baudrate) / 4) - 1;
+237             \}
+238             \textcolor{keywordflow}{else}
+239                 U2BRG = ((pbclock / baudrate) / 16) - 1;
+240             \textcolor{keywordflow}{break};
+241 \textcolor{preprocessor}{#ifdef ENABLE\_UART3}
+242 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART3:
+243             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+244             \{
+245                 U2AMODEbits.BRGH = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED};
+246                 U2ABRG = ((pbclock / baudrate) / 4) - 1;
+247             \}
+248             \textcolor{keywordflow}{else}
+249                 U2ABRG = ((pbclock / baudrate) / 16) - 1;
+250             \textcolor{keywordflow}{break};
+251 \textcolor{preprocessor}{#endif}
+252 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART4}
+253 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART4:
+254             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+255             \{
+256                 U1BMODEbits.BRGH = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED};
+257                 U1BBRG = ((pbclock / baudrate) / 4) - 1;
+258             \}
+259             \textcolor{keywordflow}{else}
+260                 U1BBRG = ((pbclock / baudrate) / 16) - 1;
+261             \textcolor{keywordflow}{break};
+262 \textcolor{preprocessor}{#endif}
+263 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART5}
+264 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART5:
+265             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+266             \{
+267                 U3BMODEbits.BRGH = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED};
+268                 U3BBRG = ((pbclock / baudrate) / 4) - 1;
+269             \}
+270             \textcolor{keywordflow}{else}
+271                 U3BBRG = ((pbclock / baudrate) / 16) - 1;
+272             \textcolor{keywordflow}{break};
+273 \textcolor{preprocessor}{#endif}
+274 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART6}
+275 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART6:
+276             \textcolor{keywordflow}{if} (speed == \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED})
+277             \{
+278                 U2BMODEbits.BRGH = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_acc1ec7ef2f75840440e7a0c27a63c934}{UART\_ENABLE\_HIGH\_SPEED};
+279                 U2BBRG = ((pbclock / baudrate) / 4) - 1;
+280             \}
+281             \textcolor{keywordflow}{else}
+282                 U2BBRG = ((pbclock / baudrate) / 16) - 1;
+283             \textcolor{keywordflow}{break};
+284 \textcolor{preprocessor}{#endif}
+285 \textcolor{preprocessor}{}    \}
+286 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_abf74ac07ead0f559939a94f2755f9f35}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-Set\-Line\-Control@{Serial\-Set\-Line\-Control}}
+\index{Serial\-Set\-Line\-Control@{Serial\-Set\-Line\-Control}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-Set\-Line\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-Set\-Line\-Control (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{port, }
+\item[{{\bf u32}}]{config}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_abf74ac07ead0f559939a94f2755f9f35}
+
+
+Definition at line 395 of file serial.\-c.
+
+
+
+References U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+
+Referenced by Serial\-Configure().
+
+
+\begin{DoxyCode}
+396 \{
+397     \textcolor{keywordflow}{switch} (port)
+398     \{
+399         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}: U1MODESET = config; \textcolor{keywordflow}{break};
+400         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}: U2MODESET = config;    \textcolor{keywordflow}{break};
+401 \textcolor{preprocessor}{#ifdef ENABLE\_UART3}
+402 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART3: U2AMODESET = config; \textcolor{keywordflow}{break};
+403 \textcolor{preprocessor}{#endif}
+404 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART4}
+405 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART4: U1BMODESET = config; \textcolor{keywordflow}{break};
+406 \textcolor{preprocessor}{#endif}
+407 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART5}
+408 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART5: U3BMODESET = config; \textcolor{keywordflow}{break};
+409 \textcolor{preprocessor}{#endif}
+410 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef ENABLE\_UART6}
+411 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} UART6: U2BMODESET = config; \textcolor{keywordflow}{break};
+412 \textcolor{preprocessor}{#endif}
+413 \textcolor{preprocessor}{}    \}
+414 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_afd0e9a058cc758040a39e4df542b7726}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-U\-A\-R\-T1\-Write\-Char@{Serial\-U\-A\-R\-T1\-Write\-Char}}
+\index{Serial\-U\-A\-R\-T1\-Write\-Char@{Serial\-U\-A\-R\-T1\-Write\-Char}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-U\-A\-R\-T1\-Write\-Char}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-U\-A\-R\-T1\-Write\-Char (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_afd0e9a058cc758040a39e4df542b7726}
+
+
+Definition at line 612 of file serial.\-c.
+
+
+
+References c.
+
+
+
+Referenced by serial1write(), serial2printf(), serial2write(), Serial\-Put\-Char(), and write().
+
+
+\begin{DoxyCode}
+613 \{
+614     \textcolor{keywordflow}{while} (!U1STAbits.TRMT);                \textcolor{comment}{// wait transmitter is ready}
+615     U1TXREG = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+616 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_aa7354910d04ba38409e1a80b22d6f5a2}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!Serial\-U\-A\-R\-T2\-Write\-Char@{Serial\-U\-A\-R\-T2\-Write\-Char}}
+\index{Serial\-U\-A\-R\-T2\-Write\-Char@{Serial\-U\-A\-R\-T2\-Write\-Char}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-U\-A\-R\-T2\-Write\-Char}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-U\-A\-R\-T2\-Write\-Char (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2serial_8c_aa7354910d04ba38409e1a80b22d6f5a2}
+
+
+Definition at line 622 of file serial.\-c.
+
+
+
+References c.
+
+
+
+Referenced by serial1write(), serial2printf(), serial2write(), Serial\-Put\-Char(), and write().
+
+
+\begin{DoxyCode}
+623 \{
+624     \textcolor{keywordflow}{while} (!U2STAbits.TRMT);                \textcolor{comment}{// wait transmission has completed}
+625     U2TXREG = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+626 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a4dee7b9c8675873dea1b4516f690daf3}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T1rpointer@{U\-A\-R\-T1rpointer}}
+\index{U\-A\-R\-T1rpointer@{U\-A\-R\-T1rpointer}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T1rpointer}]{\setlength{\rightskip}{0pt plus 5cm}volatile long U\-A\-R\-T1rpointer}}\label{p32_2include_2pinguino_2core_2serial_8c_a4dee7b9c8675873dea1b4516f690daf3}
+
+
+Definition at line 175 of file serial.\-c.
+
+
+
+Referenced by Serial\-Available(), Serial\-Flush(), Serial\-Get\-Data\-Buffer(), and Serial\-Read().
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a0f5bfce4625ae4aaa0cb1d58b7a49098}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T1\-Serial\-Buffer@{U\-A\-R\-T1\-Serial\-Buffer}}
+\index{U\-A\-R\-T1\-Serial\-Buffer@{U\-A\-R\-T1\-Serial\-Buffer}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T1\-Serial\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}volatile unsigned char U\-A\-R\-T1\-Serial\-Buffer\mbox{[}{\bf S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}\mbox{]}}}\label{p32_2include_2pinguino_2core_2serial_8c_a0f5bfce4625ae4aaa0cb1d58b7a49098}
+
+
+Definition at line 160 of file serial.\-c.
+
+
+
+Referenced by Serial\-Get\-Data\-Buffer(), and Serial\-Read().
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_af7c29f2714c296e667fb37d9417e69c7}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T1wpointer@{U\-A\-R\-T1wpointer}}
+\index{U\-A\-R\-T1wpointer@{U\-A\-R\-T1wpointer}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T1wpointer}]{\setlength{\rightskip}{0pt plus 5cm}volatile long U\-A\-R\-T1wpointer}}\label{p32_2include_2pinguino_2core_2serial_8c_af7c29f2714c296e667fb37d9417e69c7}
+
+
+Definition at line 175 of file serial.\-c.
+
+
+
+Referenced by Serial\-Available(), Serial\-Flush(), and Serial\-Get\-Data\-Buffer().
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a8240b2bc47ed08ca175ed77a312af5fe}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T2rpointer@{U\-A\-R\-T2rpointer}}
+\index{U\-A\-R\-T2rpointer@{U\-A\-R\-T2rpointer}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T2rpointer}]{\setlength{\rightskip}{0pt plus 5cm}volatile long U\-A\-R\-T2rpointer}}\label{p32_2include_2pinguino_2core_2serial_8c_a8240b2bc47ed08ca175ed77a312af5fe}
+
+
+Definition at line 176 of file serial.\-c.
+
+
+
+Referenced by Serial\-Available(), Serial\-Flush(), Serial\-Get\-Data\-Buffer(), and Serial\-Read().
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_af224791a6d6f98c42b8a100fc68c3fd7}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T2\-Serial\-Buffer@{U\-A\-R\-T2\-Serial\-Buffer}}
+\index{U\-A\-R\-T2\-Serial\-Buffer@{U\-A\-R\-T2\-Serial\-Buffer}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T2\-Serial\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}volatile unsigned char U\-A\-R\-T2\-Serial\-Buffer\mbox{[}{\bf S\-E\-R\-I\-A\-L\-\_\-\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}\mbox{]}}}\label{p32_2include_2pinguino_2core_2serial_8c_af224791a6d6f98c42b8a100fc68c3fd7}
+
+
+Definition at line 161 of file serial.\-c.
+
+
+
+Referenced by Serial\-Get\-Data\-Buffer(), and Serial\-Read().
+
+\hypertarget{p32_2include_2pinguino_2core_2serial_8c_a0fc1fd7912e30af9cff80106ea3a2feb}{\index{p32/include/pinguino/core/serial.\-c@{p32/include/pinguino/core/serial.\-c}!U\-A\-R\-T2wpointer@{U\-A\-R\-T2wpointer}}
+\index{U\-A\-R\-T2wpointer@{U\-A\-R\-T2wpointer}!p32/include/pinguino/core/serial.c@{p32/include/pinguino/core/serial.\-c}}
+\subsubsection[{U\-A\-R\-T2wpointer}]{\setlength{\rightskip}{0pt plus 5cm}volatile long U\-A\-R\-T2wpointer}}\label{p32_2include_2pinguino_2core_2serial_8c_a0fc1fd7912e30af9cff80106ea3a2feb}
+
+
+Definition at line 176 of file serial.\-c.
+
+
+
+Referenced by Serial\-Available(), Serial\-Flush(), and Serial\-Get\-Data\-Buffer().
+

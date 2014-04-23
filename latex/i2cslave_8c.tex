@@ -1,0 +1,437 @@
+\hypertarget{i2cslave_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/i2cslave.c File Reference}
+\label{i2cslave_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/i2cslave.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/i2cslave.\-c}}
+}
+{\ttfamily \#include $<$delay.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{i2cslave_8c_a6458dbf193a0eef0470fc1b08400bfcd}{I2\-C\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~32
+\item 
+\#define \hyperlink{i2cslave_8c_a5d52cf02941fd4b75e431571b4f7245d}{L\-A7}~L\-A\-T\-Bbits.\-L\-A\-T\-B7
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{i2cslave_8c_a9b25e97a3cb84a51f19d3e25df4e9746}{receive\-Event} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{i2cslave_8c_a6c3b79f393d86646ee44e74751f07ee1}{request\-Event} (void)
+\item 
+void \hyperlink{i2cslave_8c_a80b75624f690758b26928c7a060934ca}{i2c\-\_\-hw\-\_\-slave\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} height\-\_\-bits\-\_\-icaddress)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cslave_8c_a00e3c1fea389b0cf2a965fc1e84764ed}{i2c\-\_\-hw\-\_\-slave\-\_\-read\-\_\-i2c} ()
+\item 
+void \hyperlink{i2cslave_8c_a179ab02bb5ebd7ea8bc37f002d2d3325}{i2c\-\_\-hw\-\_\-slave\-\_\-write\-\_\-i2c} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} what)
+\item 
+void \hyperlink{i2cslave_8c_ad07827afc115b5fc76316cc4714dfd58}{i2c\-\_\-call\-\_\-process\-\_\-message} ()
+\item 
+void \hyperlink{i2cslave_8c_af63042594ff30e83e361e145f7ceb118}{i2c\-\_\-call\-\_\-process\-\_\-message2} ()
+\item 
+void \hyperlink{i2cslave_8c_a9750c005ecb0b7e02c049c1bda1261c6}{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-error} ()
+\item 
+void \hyperlink{i2cslave_8c_a08ef85dd68b5121116c3763a593a08ee}{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-start} ()
+\item 
+void \hyperlink{i2cslave_8c_a3a3fedd3a143aea77b6f277df5c900eb}{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-stop} ()
+\item 
+void \hyperlink{i2cslave_8c_aa3b48bcabfe58ae2c6b01a2a859a9adb}{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-1} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \-\_\-trash)
+\item 
+void \hyperlink{i2cslave_8c_a185504aea2eee14fa26f9a5fef09c957}{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-2} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} rcv)
+\item 
+void \hyperlink{i2cslave_8c_a9a295353cabcfc1732a92f8097fdbfbe}{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-3} ()
+\item 
+void \hyperlink{i2cslave_8c_a99d2eb5cc60967c8442ace885af77d86}{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-4} ()
+\item 
+void \hyperlink{i2cslave_8c_a551b479294ded1fbe08170312757837a}{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-5} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cslave_8c_aeccfc42ca86e5de795ea4970f7fe101c}{i2c\-\_\-datapresent}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{i2cslave_8c_a6458dbf193a0eef0470fc1b08400bfcd}{\index{i2cslave.\-c@{i2cslave.\-c}!I2\-C\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{I2\-C\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{I2\-C\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{I2\-C\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{I2\-C\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E~32}}\label{i2cslave_8c_a6458dbf193a0eef0470fc1b08400bfcd}
+
+
+Definition at line 16 of file i2cslave.\-c.
+
+
+
+Referenced by i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-2().
+
+\hypertarget{i2cslave_8c_a5d52cf02941fd4b75e431571b4f7245d}{\index{i2cslave.\-c@{i2cslave.\-c}!L\-A7@{L\-A7}}
+\index{L\-A7@{L\-A7}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{L\-A7}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-A7~L\-A\-T\-Bbits.\-L\-A\-T\-B7}}\label{i2cslave_8c_a5d52cf02941fd4b75e431571b4f7245d}
+
+
+Definition at line 17 of file i2cslave.\-c.
+
+
+
+Referenced by i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-error().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{i2cslave_8c_ad07827afc115b5fc76316cc4714dfd58}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-call\-\_\-process\-\_\-message@{i2c\-\_\-call\-\_\-process\-\_\-message}}
+\index{i2c\-\_\-call\-\_\-process\-\_\-message@{i2c\-\_\-call\-\_\-process\-\_\-message}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-call\-\_\-process\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-call\-\_\-process\-\_\-message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_ad07827afc115b5fc76316cc4714dfd58}
+
+
+Definition at line 83 of file i2cslave.\-c.
+
+
+
+References i2c\-\_\-datapresent.
+
+
+
+Referenced by i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-1(), and i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-stop().
+
+
+\begin{DoxyCode}
+84 \{
+85    \textcolor{comment}{// let user process buffer}
+86    \textcolor{keywordflow}{if} (\hyperlink{i2cslave_8c_aeccfc42ca86e5de795ea4970f7fe101c}{i2c\_datapresent})
+87    \{
+88       \_i2c\_rxBufferIndex=0;
+89       \_i2c\_onReceive\_function(\_i2c\_rxBufferLength);  
+90       \hyperlink{i2cslave_8c_aeccfc42ca86e5de795ea4970f7fe101c}{i2c\_datapresent} = 0;
+91       \_i2c\_rxBufferLength = 0;
+92       \_i2c\_rxBufferIndex=0;
+93   \}
+94 
+95 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_af63042594ff30e83e361e145f7ceb118}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-call\-\_\-process\-\_\-message2@{i2c\-\_\-call\-\_\-process\-\_\-message2}}
+\index{i2c\-\_\-call\-\_\-process\-\_\-message2@{i2c\-\_\-call\-\_\-process\-\_\-message2}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-call\-\_\-process\-\_\-message2}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-call\-\_\-process\-\_\-message2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_af63042594ff30e83e361e145f7ceb118}
+
+
+Definition at line 97 of file i2cslave.\-c.
+
+
+
+Referenced by i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-3().
+
+
+\begin{DoxyCode}
+98 \{
+99 \textcolor{comment}{//when master requests data}
+100     \_i2c\_txBufferIndex = 0;
+101     \_i2c\_txBufferLength = 0;
+102 
+103     \_i2c\_onRequest\_function(); \textcolor{comment}{// call to slave to get data}
+104    \textcolor{keywordflow}{while} (!\_i2c\_txBufferLength);
+105 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_a80b75624f690758b26928c7a060934ca}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-hw\-\_\-slave\-\_\-init@{i2c\-\_\-hw\-\_\-slave\-\_\-init}}
+\index{i2c\-\_\-hw\-\_\-slave\-\_\-init@{i2c\-\_\-hw\-\_\-slave\-\_\-init}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-hw\-\_\-slave\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-hw\-\_\-slave\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{height\-\_\-bits\-\_\-icaddress}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a80b75624f690758b26928c7a060934ca}
+
+
+Definition at line 29 of file i2cslave.\-c.
+
+
+
+References \-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-, and i2c\-\_\-datapresent.
+
+
+
+Referenced by I2\-C\-\_\-begin().
+
+
+\begin{DoxyCode}
+30 \{
+31 \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+32    \textcolor{comment}{// only slave 7bit address}
+33    SSPCON1 = 0b00110110;
+34    SSPCON1 = SSPCON1 | 0b00001000;   \textcolor{comment}{// enable start/stop interrupts}
+35     \textcolor{comment}{// I2C slave hardware}
+36     \textcolor{comment}{// This address must not be one bit left-shifted when used for R/W operations}
+37     SSPADD = height\_bits\_icaddress;
+38 
+39 
+40     \textcolor{comment}{// init SSPSTAT}
+41     SSPSTATbits.BF = 0;
+42     SSPCON1bits.WCOL = 0;
+43     SSPCON1bits.SSPOV = 0;
+44     PIR1bits.SSPIF = 0;
+45     \textcolor{comment}{// enable interrupts}
+46     PIE1bits.SSPIE = 1;
+47     INTCONbits.GIE = 1;
+48     INTCONbits.PEIE = 1;
+49     
+50     \_i2c\_rxBufferIndex = 0;
+51     \_i2c\_txBufferIndex = 0;
+52     \_i2c\_rxBufferLength = 0;
+53     \hyperlink{i2cslave_8c_aeccfc42ca86e5de795ea4970f7fe101c}{i2c\_datapresent}=0; \textcolor{comment}{//received data}
+54     \_i2c\_txBufferLength = 0;
+55    \textcolor{keywordflow}{for} (i=0;i< \hyperlink{i2cmaster_8c_acb9380f67f6904888ceac6a5dd589b9d}{\_I2CBUFFERLENGTH\_};i++) \{\_i2c\_rxBuffer[i]=0; \_i2c\_txBuffer[i]=0;\}
+56 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_a9750c005ecb0b7e02c049c1bda1261c6}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-error@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-error}}
+\index{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-error@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-error}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a9750c005ecb0b7e02c049c1bda1261c6}
+
+
+Definition at line 109 of file i2cslave.\-c.
+
+
+
+References L\-A7.
+
+
+\begin{DoxyCode}
+110 \{
+111 \textcolor{keywordflow}{while}(1) \{\hyperlink{i2cslave_8c_a5d52cf02941fd4b75e431571b4f7245d}{LA7}=!\hyperlink{i2cslave_8c_a5d52cf02941fd4b75e431571b4f7245d}{LA7}; delay10ktcy(500);\}
+112    \textcolor{comment}{// Just tell user user something's got wrong}
+113 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_a08ef85dd68b5121116c3763a593a08ee}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-start@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-start}}
+\index{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-start@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-start}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a08ef85dd68b5121116c3763a593a08ee}
+
+
+Definition at line 114 of file i2cslave.\-c.
+
+
+\begin{DoxyCode}
+115 \{
+116 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_aa3b48bcabfe58ae2c6b01a2a859a9adb}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-1@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-1}}
+\index{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-1@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-1}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-1 (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{\-\_\-trash}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_aa3b48bcabfe58ae2c6b01a2a859a9adb}
+
+
+Definition at line 124 of file i2cslave.\-c.
+
+
+
+References i2c\-\_\-call\-\_\-process\-\_\-message().
+
+
+\begin{DoxyCode}
+125 \{
+126    \textcolor{comment}{// let user process buffer (there should not be one if the proper procedure is executed)}
+127    \hyperlink{i2cslave_8c_ad07827afc115b5fc76316cc4714dfd58}{i2c\_call\_process\_message}();
+128 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_a185504aea2eee14fa26f9a5fef09c957}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-2@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-2}}
+\index{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-2@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-2}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-2 (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{rcv}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a185504aea2eee14fa26f9a5fef09c957}
+
+
+Definition at line 131 of file i2cslave.\-c.
+
+
+
+References I2\-C\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E, and i2c\-\_\-datapresent.
+
+
+\begin{DoxyCode}
+132 \{
+133    \hyperlink{i2cslave_8c_aeccfc42ca86e5de795ea4970f7fe101c}{i2c\_datapresent}   = 1;      \textcolor{comment}{// Indicate we received data}
+134    \textcolor{comment}{// store data}
+135    \_i2c\_rxBuffer[\_i2c\_rxBufferIndex] = rcv; 
+136 
+137    \textcolor{keywordflow}{if} (\_i2c\_rxBufferIndex < \hyperlink{i2cslave_8c_a6458dbf193a0eef0470fc1b08400bfcd}{I2C\_BUFFER\_SIZE})
+138       \_i2c\_rxBufferIndex++;   \textcolor{comment}{// point to next position}
+139    \_i2c\_rxBufferLength = \_i2c\_rxBufferIndex;
+140 
+141 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_a9a295353cabcfc1732a92f8097fdbfbe}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-3@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-3}}
+\index{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-3@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-3}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a9a295353cabcfc1732a92f8097fdbfbe}
+
+
+Definition at line 145 of file i2cslave.\-c.
+
+
+
+References i2c\-\_\-call\-\_\-process\-\_\-message2(), and i2c\-\_\-hw\-\_\-slave\-\_\-write\-\_\-i2c().
+
+
+\begin{DoxyCode}
+146 \{   \textcolor{comment}{// let user process buffer}
+147      \hyperlink{i2cslave_8c_af63042594ff30e83e361e145f7ceb118}{i2c\_call\_process\_message2}();
+148    \textcolor{comment}{// send first byte to master}
+149    \hyperlink{i2cslave_8c_a179ab02bb5ebd7ea8bc37f002d2d3325}{i2c\_hw\_slave\_write\_i2c}(\_i2c\_txBuffer[0]);  \textcolor{comment}{// send first databyte}
+150    \_i2c\_txBufferIndex = 1;                          \textcolor{comment}{// point to next position}
+151 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_a99d2eb5cc60967c8442ace885af77d86}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-4@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-4}}
+\index{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-4@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-4}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a99d2eb5cc60967c8442ace885af77d86}
+
+
+Definition at line 156 of file i2cslave.\-c.
+
+
+
+References \-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-, and i2c\-\_\-hw\-\_\-slave\-\_\-write\-\_\-i2c().
+
+
+\begin{DoxyCode}
+157 \{
+158 
+159    \hyperlink{i2cslave_8c_a179ab02bb5ebd7ea8bc37f002d2d3325}{i2c\_hw\_slave\_write\_i2c}(\_i2c\_txBuffer[\_i2c\_txBufferIndex]);    \textcolor{comment}{// send data }
+160 
+161    \textcolor{keywordflow}{if} (\_i2c\_txBufferIndex < \hyperlink{i2cmaster_8c_acb9380f67f6904888ceac6a5dd589b9d}{\_I2CBUFFERLENGTH\_})
+162       \_i2c\_txBufferIndex++;   \textcolor{comment}{// point to next position}
+163 
+164 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_a551b479294ded1fbe08170312757837a}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-5@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-5}}
+\index{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-5@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-5}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-5 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a551b479294ded1fbe08170312757837a}
+
+
+Definition at line 169 of file i2cslave.\-c.
+
+
+\begin{DoxyCode}
+170 \{   \textcolor{comment}{// data = 0 }
+171 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_a3a3fedd3a143aea77b6f277df5c900eb}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-stop@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-stop}}
+\index{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-stop@{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-stop}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a3a3fedd3a143aea77b6f277df5c900eb}
+
+
+Definition at line 118 of file i2cslave.\-c.
+
+
+
+References i2c\-\_\-call\-\_\-process\-\_\-message().
+
+
+\begin{DoxyCode}
+119 \{   \textcolor{comment}{// let user process buffer}
+120    \hyperlink{i2cslave_8c_ad07827afc115b5fc76316cc4714dfd58}{i2c\_call\_process\_message}();
+121 \}                                
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_a00e3c1fea389b0cf2a965fc1e84764ed}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-hw\-\_\-slave\-\_\-read\-\_\-i2c@{i2c\-\_\-hw\-\_\-slave\-\_\-read\-\_\-i2c}}
+\index{i2c\-\_\-hw\-\_\-slave\-\_\-read\-\_\-i2c@{i2c\-\_\-hw\-\_\-slave\-\_\-read\-\_\-i2c}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-hw\-\_\-slave\-\_\-read\-\_\-i2c}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} i2c\-\_\-hw\-\_\-slave\-\_\-read\-\_\-i2c (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a00e3c1fea389b0cf2a965fc1e84764ed}
+
+
+Definition at line 60 of file i2cslave.\-c.
+
+
+\begin{DoxyCode}
+61 \{    \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} tmpbuf;
+62     tmpbuf = SSPBUF;
+63     \textcolor{keywordflow}{return} tmpbuf;
+64 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_a179ab02bb5ebd7ea8bc37f002d2d3325}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-hw\-\_\-slave\-\_\-write\-\_\-i2c@{i2c\-\_\-hw\-\_\-slave\-\_\-write\-\_\-i2c}}
+\index{i2c\-\_\-hw\-\_\-slave\-\_\-write\-\_\-i2c@{i2c\-\_\-hw\-\_\-slave\-\_\-write\-\_\-i2c}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-hw\-\_\-slave\-\_\-write\-\_\-i2c}]{\setlength{\rightskip}{0pt plus 5cm}void i2c\-\_\-hw\-\_\-slave\-\_\-write\-\_\-i2c (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{what}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a179ab02bb5ebd7ea8bc37f002d2d3325}
+
+
+Definition at line 68 of file i2cslave.\-c.
+
+
+
+Referenced by i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-3(), and i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-4().
+
+
+\begin{DoxyCode}
+70 \{  \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} dosend; 
+71    \textcolor{keywordflow}{while} ( SSPSTATbits.BF);
+72     dosend = 1;
+73     \textcolor{keywordflow}{while} (dosend) \{
+74         SSPCON1bits.WCOL = 0;
+75         \textcolor{comment}{// try to write into buffer, checking collision}
+76         SSPBUF = what;
+77         \textcolor{keywordflow}{if} (! SSPCON1bits.WCOL)
+78             dosend = 0;
+79     \}
+80     SSPCON1bits.CKP = 1;
+81 \}
+\end{DoxyCode}
+\hypertarget{i2cslave_8c_a9b25e97a3cb84a51f19d3e25df4e9746}{\index{i2cslave.\-c@{i2cslave.\-c}!receive\-Event@{receive\-Event}}
+\index{receive\-Event@{receive\-Event}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{receive\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void receive\-Event (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a9b25e97a3cb84a51f19d3e25df4e9746}
+\hypertarget{i2cslave_8c_a6c3b79f393d86646ee44e74751f07ee1}{\index{i2cslave.\-c@{i2cslave.\-c}!request\-Event@{request\-Event}}
+\index{request\-Event@{request\-Event}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{request\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void request\-Event (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{i2cslave_8c_a6c3b79f393d86646ee44e74751f07ee1}
+
+
+\subsection{Variable Documentation}
+\hypertarget{i2cslave_8c_aeccfc42ca86e5de795ea4970f7fe101c}{\index{i2cslave.\-c@{i2cslave.\-c}!i2c\-\_\-datapresent@{i2c\-\_\-datapresent}}
+\index{i2c\-\_\-datapresent@{i2c\-\_\-datapresent}!i2cslave.c@{i2cslave.\-c}}
+\subsubsection[{i2c\-\_\-datapresent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} i2c\-\_\-datapresent}}\label{i2cslave_8c_aeccfc42ca86e5de795ea4970f7fe101c}
+
+
+Definition at line 23 of file i2cslave.\-c.
+
+
+
+Referenced by i2c\-\_\-call\-\_\-process\-\_\-message(), i2c\-\_\-hw\-\_\-slave\-\_\-init(), and i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-2().
+

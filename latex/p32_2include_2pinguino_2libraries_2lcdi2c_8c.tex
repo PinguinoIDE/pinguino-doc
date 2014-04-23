@@ -1,0 +1,1045 @@
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/lcdi2c.c File Reference}
+\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/lcdi2c.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/lcdi2c.\-c}}
+}
+{\ttfamily \#include $<$lcdi2c.\-h$>$}\\*
+{\ttfamily \#include $<$pcf8574.\-h$>$}\\*
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$delay.\-c$>$}\\*
+{\ttfamily \#include $<$i2c.\-c$>$}\\*
+{\ttfamily \#include $<$printf.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a2a190fc462215c4ad7ccdbb73dd860b2}{\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a6fed840159d613d760e953b2b58eeae1}{lcdi2c\-\_\-backlight} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a2d19687699c822d8ddb0322a2443b273}{lcdi2c\-\_\-no\-Backlight} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ad8706638711296d9b56e1e19736eda65}{lcdi2c\-\_\-clear} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a44157bded9390cb461d708c87123b34a}{lcdi2c\-\_\-home} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a27ecdd09dca457e8de44839e2b277a5a}{lcdi2c\-\_\-no\-Autoscroll} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a6007a6c56b96012f1b5d4940a1290db9}{lcdi2c\-\_\-autoscroll} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ab376c4aa4b5436295980e016b2fd1f59}{lcdi2c\-\_\-right\-To\-Left} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a355edca1dad1d71e20910e2fdf1fa39a}{lcdi2c\-\_\-left\-To\-Right} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a85e0f0279cf08620e05c35546de39b47}{lcdi2c\-\_\-scroll\-Display\-Right} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a1441f85a7863ff497b66ae109d0e36b3}{lcdi2c\-\_\-scroll\-Display\-Left} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a423e9ba30d528a220a9ec2f4188cd1b3}{lcdi2c\-\_\-blink} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a92e424a99880e28e548224413d5d3272}{lcdi2c\-\_\-no\-Blink} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ab4aa357ab6043fec4eaef7f8c54efa31}{lcdi2c\-\_\-cursor} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aba946d613bf8ac8cb68a7986676a7a14}{lcdi2c\-\_\-no\-Cursor} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0d42397521ed45773af44ae479964738}{lcdi2c\-\_\-display} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_acf6600d39f537c1b779bb6a80b110905}{lcdi2c\-\_\-no\-Display} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a98b48a8aa22d15351de421c266eec8cb}{lcdi2c\-\_\-set\-Cursor} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} col, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} line)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0ce70898f52378af3d42840f280c5fed}{lcdi2c\-\_\-clear\-Line} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} line)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a74f4da01e2c083dc2c56fd7c58aa809a}{lcdi2c\-\_\-write} (char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a88598edb2c677300928a5daea800c5fc}{lcdi2c\-\_\-printf} (char $\ast$fmt,...)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ac23815c5f5baa1d0857cedcf60e6440d}{lcdi2c\-\_\-newchar} (const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} char\-\_\-code)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aa0bc6d24d026c55490c38bde6a3cf453}{lcdi2c\-\_\-newpattern} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a2bf1315bcd66c2ef441cd5604e33c41c}{lcdi2c\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} numcol, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} numline, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i2c\-\_\-address)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a107cd78ddfcfebd26a9b0d2e3d2749d6}{car0} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a24e5ef6cfd355b869075f6e513eb2ab4}{car1} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_adc6a407d44ffb17e581e6dac4f8c84ed}{car2} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_afa3ba6c254947e09115128c109377ef6}{car3} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aefd7ac3963d77f805ac68a385e131827}{car4} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_af803ad9374d2c87dbd52a69a3c995c68}{car5} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aa2f4df28ad8865d037476b8ec9fb3d8a}{car6} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0583ce45ea6aad9e65e38e3db727fc34}{car7} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a92105f5cfba3ed9acd294d2b2228612c}{car8} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0d2df920b7f57bada1628b410dfd4320}{car9} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_abe1a538800dec572a44be289b8f45669}{car10} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a380c12fe559190776b30b6f511cf93dd}{car11} \mbox{[}8\mbox{]}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aa1fc67e81ef480b1c0e5759fad0f6833}{car12} \mbox{[}8\mbox{]}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_af84b95b49cf4ace11e090ad2e3c2f5e9}{numcolmax}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a7e2e762a9601d95dad5dfe836311921a}{numlinemax}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aee57c298d3053b135e697931e6198d73}{Backlight} = 0
+\begin{DoxyCompactList}\small\item\em V\-A\-R\-I\-A\-B\-L\-E\-S G\-L\-O\-B\-A\-L\-E\-S. \end{DoxyCompactList}\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0fb2927fb224b8d3c421819848991f2d}{P\-C\-F8574\-\_\-address}
+\item 
+\hyperlink{union_p_c_f8574__t}{P\-C\-F8574\-\_\-t} \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a6f8949ac0959bc3dd22bddaca463e220}{P\-C\-F8574\-\_\-data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a2a190fc462215c4ad7ccdbb73dd860b2}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C@{\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C@{\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a2a190fc462215c4ad7ccdbb73dd860b2}
+
+
+Definition at line 73 of file lcdi2c.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a6007a6c56b96012f1b5d4940a1290db9}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-autoscroll@{lcdi2c\-\_\-autoscroll}}
+\index{lcdi2c\-\_\-autoscroll@{lcdi2c\-\_\-autoscroll}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-autoscroll}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-autoscroll (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a6007a6c56b96012f1b5d4940a1290db9}
+
+
+Definition at line 342 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D, and L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-S\-H\-I\-F\-T\-I\-N\-C\-R\-E\-M\-E\-N\-T.
+
+
+\begin{DoxyCode}
+343 \{
+344     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_aa2cf1d0f4a319e53c009cffe1184466c}{LCD\_ENTRYSHIFTINCREMENT}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+345 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a6fed840159d613d760e953b2b58eeae1}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-backlight@{lcdi2c\-\_\-backlight}}
+\index{lcdi2c\-\_\-backlight@{lcdi2c\-\_\-backlight}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-backlight}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-backlight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a6fed840159d613d760e953b2b58eeae1}
+
+
+Definition at line 291 of file lcdi2c.\-c.
+
+
+
+References Backlight, I2\-C1, I2\-C\-\_\-send(), L\-C\-D\-\_\-\-B\-L, P\-C\-F8574\-\_\-address, and P\-C\-F8574\-\_\-t\-::val.
+
+
+
+Referenced by lcdi2c\-\_\-init().
+
+
+\begin{DoxyCode}
+292 \{
+293     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aee57c298d3053b135e697931e6198d73}{Backlight} = 1; \textcolor{comment}{// 0 = ON since PCF8574 is logical inverted}
+294     \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a179007c8bbcc74e0f56c774d71d732f0}{LCD\_BL} = \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aee57c298d3053b135e697931e6198d73}{Backlight};
+295     \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a4d20ff8ca431b4ee969cd12754681081}{I2C\_send}(\hyperlink{p8_2pinguino_2core_2i2c_8c_ab45d257574da6fe1f091cc45b7eda6cc}{I2C1}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a0fb2927fb224b8d3c421819848991f2d}{PCF8574\_address}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_adf84f63aca7be2c7e0cc19d1fb9c0388}{PCF8574\_data}.
+      \hyperlink{union___byte___a5d0cde7a426451812b691b5ae4a01560}{val});
+296 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a423e9ba30d528a220a9ec2f4188cd1b3}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-blink@{lcdi2c\-\_\-blink}}
+\index{lcdi2c\-\_\-blink@{lcdi2c\-\_\-blink}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-blink}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-blink (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a423e9ba30d528a220a9ec2f4188cd1b3}
+
+
+Definition at line 387 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-B\-L\-I\-N\-K\-O\-N, and L\-C\-D\-\_\-\-C\-M\-D.
+
+
+\begin{DoxyCode}
+388 \{
+389     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_ac3b19d4e6553b9bbf18a23387e439206}{LCD\_BLINKON}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+390 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ad8706638711296d9b56e1e19736eda65}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-clear@{lcdi2c\-\_\-clear}}
+\index{lcdi2c\-\_\-clear@{lcdi2c\-\_\-clear}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ad8706638711296d9b56e1e19736eda65}
+
+
+Definition at line 313 of file lcdi2c.\-c.
+
+
+
+References Delayms(), L\-C\-D\-\_\-\-C\-M\-D, and L\-C\-D\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-C\-L\-E\-A\-R.
+
+
+
+Referenced by lcdi2c\-\_\-init().
+
+
+\begin{DoxyCode}
+314 \{
+315     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a48de81d41dd1a70f8ab5a593c40c0ef4}{LCD\_DISPLAY\_CLEAR}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+316     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(2);  \textcolor{comment}{// Wait for more than 1.64ms}
+317 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0ce70898f52378af3d42840f280c5fed}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-clear\-Line@{lcdi2c\-\_\-clear\-Line}}
+\index{lcdi2c\-\_\-clear\-Line@{lcdi2c\-\_\-clear\-Line}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-clear\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-clear\-Line (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{line}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0ce70898f52378af3d42840f280c5fed}
+
+
+Definition at line 458 of file lcdi2c.\-c.
+
+
+
+References E\-S\-P\-A\-C\-E, lcdi2c\-\_\-set\-Cursor(), lcdi2c\-\_\-write(), and numcolmax.
+
+
+\begin{DoxyCode}
+459 \{
+460     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+461 
+462     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a98b48a8aa22d15351de421c266eec8cb}{lcdi2c\_setCursor}(0, line);
+463     \textcolor{keywordflow}{for} (i = 0; i < \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_af84b95b49cf4ace11e090ad2e3c2f5e9}{numcolmax}; i++)
+464         \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_adc4f648a9f9e8793d81adfae858e4e4e}{lcdi2c\_write}(\hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8h_a9fd9ada12233a3a30a8c9e50a9bff39e}{ESPACE});  \textcolor{comment}{// affiche des espaces}
+465 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ab4aa357ab6043fec4eaef7f8c54efa31}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-cursor@{lcdi2c\-\_\-cursor}}
+\index{lcdi2c\-\_\-cursor@{lcdi2c\-\_\-cursor}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-cursor}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-cursor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ab4aa357ab6043fec4eaef7f8c54efa31}
+
+
+Definition at line 405 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D, and L\-C\-D\-\_\-\-C\-U\-R\-S\-O\-R\-O\-N.
+
+
+\begin{DoxyCode}
+406 \{
+407     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_ab67f0adccde68de88eee0513fdfc4574}{LCD\_CURSORON}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+408 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0d42397521ed45773af44ae479964738}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-display@{lcdi2c\-\_\-display}}
+\index{lcdi2c\-\_\-display@{lcdi2c\-\_\-display}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0d42397521ed45773af44ae479964738}
+
+
+Definition at line 423 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D, and L\-C\-D\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-O\-N.
+
+
+\begin{DoxyCode}
+424 \{
+425     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a76236ae8317b34bbc98ea56bc0a2639c}{LCD\_DISPLAYON}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+426 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a44157bded9390cb461d708c87123b34a}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-home@{lcdi2c\-\_\-home}}
+\index{lcdi2c\-\_\-home@{lcdi2c\-\_\-home}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-home}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-home (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a44157bded9390cb461d708c87123b34a}
+
+
+Definition at line 323 of file lcdi2c.\-c.
+
+
+
+References Delayms(), L\-C\-D\-\_\-\-C\-M\-D, and L\-C\-D\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-H\-O\-M\-E.
+
+
+
+Referenced by lcdi2c\-\_\-init().
+
+
+\begin{DoxyCode}
+324 \{
+325     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a9ef8c6297a6e150e9bd7c972e8d1428f}{LCD\_CURSOR\_HOME}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+326     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(2);  \textcolor{comment}{// Wait for more than 1.64ms}
+327 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a2bf1315bcd66c2ef441cd5604e33c41c}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-init@{lcdi2c\-\_\-init}}
+\index{lcdi2c\-\_\-init@{lcdi2c\-\_\-init}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{numcol, }
+\item[{{\bf u8}}]{numline, }
+\item[{{\bf u8}}]{i2c\-\_\-address}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a2bf1315bcd66c2ef441cd5604e33c41c}
+
+
+Definition at line 553 of file lcdi2c.\-c.
+
+
+
+References Delayms(), Delayus(), I2\-C1, I2\-C\-\_\-100\-K\-H\-Z, I2\-C\-\_\-1\-M\-H\-Z, I2\-C\-\_\-init(), I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E, L\-C\-D\-\_\-\-C\-M\-D, L\-C\-D\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-C\-L\-E\-A\-R, L\-C\-D\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-O\-N, L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-\_\-\-M\-O\-D\-E\-\_\-\-S\-E\-T, L\-C\-D\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-S\-E\-T\-\_\-4\-B\-I\-T\-S, lcdi2c\-\_\-backlight(), lcdi2c\-\_\-clear(), lcdi2c\-\_\-home(), numcolmax, numlinemax, P\-C\-F8574\-\_\-address, P\-C\-F8574\-\_\-t\-::val, and \-\_\-\-Byte\-\_\-\-::val.
+
+
+\begin{DoxyCode}
+554 \{
+555     \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_af84b95b49cf4ace11e090ad2e3c2f5e9}{numcolmax}  = numcol - 1;
+556     \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a7e2e762a9601d95dad5dfe836311921a}{numlinemax} = numline - 1;
+557     \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a0fb2927fb224b8d3c421819848991f2d}{PCF8574\_address} = 0b01001110 | i2c\_address;
+558     \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_adf84f63aca7be2c7e0cc19d1fb9c0388}{PCF8574\_data}.\hyperlink{union___byte___a5d0cde7a426451812b691b5ae4a01560}{val} = 0;
+559 
+560     \textcolor{comment}{//I2C\_init(I2C1, I2C\_MASTER\_MODE, I2C\_100KHZ);}
+561     \textcolor{comment}{//I2C\_init(I2C1, I2C\_MASTER\_MODE, I2C\_400KHZ);}
+562     \hyperlink{p8_2pinguino_2core_2i2c_8c_a294f9659c7a45647d2274c1b2d7ad849}{I2C\_init}(\hyperlink{p8_2pinguino_2core_2i2c_8c_ab45d257574da6fe1f091cc45b7eda6cc}{I2C1}, \hyperlink{p8_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{I2C\_MASTER\_MODE}, \hyperlink{p8_2pinguino_2core_2i2c_8c_a0342b9931f95c111ccce18e98c8d776a}{I2C\_1MHZ});
+563 
+564     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(15);                             \textcolor{comment}{// Wait more than 15 ms after VDD rises to 4.5V}
+565     lcdi2c\_send4(0x30, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});             \textcolor{comment}{// 0x30 - Mode 8 bits}
+566     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(5);                                  \textcolor{comment}{// Wait for more than 4.1 ms}
+567     lcdi2c\_send4(0x30, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});             \textcolor{comment}{// 0x30 - Mode 8 bits}
+568     \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(100);                                \textcolor{comment}{// Wait more than 100 μs}
+569     lcdi2c\_send4(0x30, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});             \textcolor{comment}{// 0x30 - Mode 8 bits}
+570     \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(100);                                \textcolor{comment}{// Wait more than 100 μs}
+571     lcdi2c\_send4(0x20, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});             \textcolor{comment}{// 0x20 - Mode 4 bits}
+572     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a16f560e708a18ce404f8425c5e5bed63}{LCD\_SYSTEM\_SET\_4BITS}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});\textcolor{comment}{// 0x28 - Mode 4 bits - 2 Lignes
+       - 5x8}
+573     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_ae5e77a91b0fef0c36af29424a1ee2da1}{LCD\_ENTRY\_MODE\_SET}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});  \textcolor{comment}{// 0x06 - Increment + Display not
+       shifted (Déplacement automatique du curseur)}
+574     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a6fed840159d613d760e953b2b58eeae1}{lcdi2c\_backlight}();                         \textcolor{comment}{// backlight on}
+575 \textcolor{comment}{/*}
+576 \textcolor{comment}{    lcdi2c\_display();}
+577 \textcolor{comment}{    lcdi2c\_noBlink();}
+578 \textcolor{comment}{    lcdi2c\_noCursor();}
+579 \textcolor{comment}{    lcdi2c\_noAutoscroll();}
+580 \textcolor{comment}{    lcdi2c\_setCursor(0, 0);}
+581 \textcolor{comment}{*/}
+582     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ad8706638711296d9b56e1e19736eda65}{lcdi2c\_clear}();
+583     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a44157bded9390cb461d708c87123b34a}{lcdi2c\_home}();
+584 \textcolor{preprocessor}{    #ifndef \_\_32MX220F032D\_\_}
+585 \textcolor{preprocessor}{}    \textcolor{comment}{//lcdi2c\_newpattern();                      // Implante les nouveaux caracteres}
+586 \textcolor{preprocessor}{    #endif}
+587 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a355edca1dad1d71e20910e2fdf1fa39a}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-left\-To\-Right@{lcdi2c\-\_\-left\-To\-Right}}
+\index{lcdi2c\-\_\-left\-To\-Right@{lcdi2c\-\_\-left\-To\-Right}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-left\-To\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-left\-To\-Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a355edca1dad1d71e20910e2fdf1fa39a}
+
+
+Definition at line 360 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D, and L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-L\-E\-F\-T.
+
+
+\begin{DoxyCode}
+361 \{
+362     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_ae7c6309fce6200bd7526d090a4a84dd0}{LCD\_ENTRYLEFT}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+363 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ac23815c5f5baa1d0857cedcf60e6440d}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-newchar@{lcdi2c\-\_\-newchar}}
+\index{lcdi2c\-\_\-newchar@{lcdi2c\-\_\-newchar}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-newchar}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-newchar (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8} $\ast$}]{c, }
+\item[{{\bf u8}}]{char\-\_\-code}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ac23815c5f5baa1d0857cedcf60e6440d}
+
+
+Definition at line 503 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-A\-D\-R\-E\-S\-S\-\_\-\-C\-G\-R\-A\-M, L\-C\-D\-\_\-\-C\-M\-D, and L\-C\-D\-\_\-\-D\-A\-T\-A.
+
+
+
+Referenced by lcdi2c\-\_\-newpattern().
+
+
+\begin{DoxyCode}
+504 \{
+505     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i, a;
+506 
+507     \textcolor{comment}{// les caractères sont logés dans le CGRAM du LCD à partir de l'adresse 0x40.}
+508     a = (char\_code << 3) | \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a30b7e5231bb11c9c4f7c0e9351df3c88}{LCD\_ADRESS\_CGRAM};
+509     \textcolor{keywordflow}{for}(i=0; i<8; i++)
+510     \{
+511         lcdi2c\_send8(a, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+512         lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}[i], \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a25e9d818788f36ed74d7c4579f87f2a6}{LCD\_DATA});
+513         a++;
+514     \};
+515 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aa0bc6d24d026c55490c38bde6a3cf453}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-newpattern@{lcdi2c\-\_\-newpattern}}
+\index{lcdi2c\-\_\-newpattern@{lcdi2c\-\_\-newpattern}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-newpattern}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-newpattern (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aa0bc6d24d026c55490c38bde6a3cf453}
+
+
+Definition at line 521 of file lcdi2c.\-c.
+
+
+
+References A\-C\-I\-R\-C, A\-G\-R\-A\-V\-E, car0, car1, car2, car3, car4, car5, car6, car7, C\-C\-E\-D\-I\-L, E\-A\-C\-U\-T\-E, E\-C\-I\-R\-C, E\-G\-R\-A\-V\-E, E\-T\-R\-E\-M\-A, E\-U\-R\-O, and lcdi2c\-\_\-newchar().
+
+
+\begin{DoxyCode}
+522 \{
+523     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ac23815c5f5baa1d0857cedcf60e6440d}{lcdi2c\_newchar}(\hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a107cd78ddfcfebd26a9b0d2e3d2749d6}{car0},  \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a67d6318d4bd4a25b3493a15baa674e13}{ACIRC});        \textcolor{comment}{// â}
+524     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ac23815c5f5baa1d0857cedcf60e6440d}{lcdi2c\_newchar}(\hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a24e5ef6cfd355b869075f6e513eb2ab4}{car1},  \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a8b4c5dda260fcc38ae9d351dc399873c}{AGRAVE});      \textcolor{comment}{// à}
+525 
+526     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ac23815c5f5baa1d0857cedcf60e6440d}{lcdi2c\_newchar}(\hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_adc6a407d44ffb17e581e6dac4f8c84ed}{car2},  \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_aa0484d81224b1a739db042dbce898fbb}{CCEDIL});      \textcolor{comment}{// ç}
+527 
+528     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ac23815c5f5baa1d0857cedcf60e6440d}{lcdi2c\_newchar}(\hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_afa3ba6c254947e09115128c109377ef6}{car3},  \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a02de4f00de2c67cf58c1fa1218c9d407}{EACUTE});      \textcolor{comment}{// é}
+529     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ac23815c5f5baa1d0857cedcf60e6440d}{lcdi2c\_newchar}(\hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aefd7ac3963d77f805ac68a385e131827}{car4},  \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a7b03bff7c0758fdf08cf0cdfc4ccf238}{EGRAVE});      \textcolor{comment}{// è}
+530     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ac23815c5f5baa1d0857cedcf60e6440d}{lcdi2c\_newchar}(\hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_af803ad9374d2c87dbd52a69a3c995c68}{car5},  \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a92fcdf1ed195af48f97aefe8d9679e07}{ECIRC});        \textcolor{comment}{// ê}
+531     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ac23815c5f5baa1d0857cedcf60e6440d}{lcdi2c\_newchar}(\hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aa2f4df28ad8865d037476b8ec9fb3d8a}{car6},  \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a44c8d8301a0b6c4f58a56e34a96f2db5}{ETREMA});      \textcolor{comment}{// ë}
+532     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ac23815c5f5baa1d0857cedcf60e6440d}{lcdi2c\_newchar}(\hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0583ce45ea6aad9e65e38e3db727fc34}{car7},  \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a5434fc5857bd1456b47ab1f89ad35098}{EURO});      \textcolor{comment}{// €}
+533 
+534     \textcolor{comment}{//lcdi2c\_newchar(car8,  ICIRC);     // î}
+535     \textcolor{comment}{//lcdi2c\_newchar(car9, ITREMA);     // ï}
+536 
+537     \textcolor{comment}{//lcdi2c\_newchar(car10,  OCIRC);    // ô}
+538 
+539     \textcolor{comment}{//lcdi2c\_newchar(car11,  UGRAVE);   // ù}
+540     \textcolor{comment}{//lcdi2c\_newchar(car12, UCIRC);     // û}
+541 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a27ecdd09dca457e8de44839e2b277a5a}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-no\-Autoscroll@{lcdi2c\-\_\-no\-Autoscroll}}
+\index{lcdi2c\-\_\-no\-Autoscroll@{lcdi2c\-\_\-no\-Autoscroll}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-no\-Autoscroll}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-no\-Autoscroll (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a27ecdd09dca457e8de44839e2b277a5a}
+
+
+Definition at line 333 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D, and L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-S\-H\-I\-F\-T\-D\-E\-C\-R\-E\-M\-E\-N\-T.
+
+
+\begin{DoxyCode}
+334 \{
+335     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a049ee97e98d04788c1da9a55590fbe42}{LCD\_ENTRYSHIFTDECREMENT}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+336 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a2d19687699c822d8ddb0322a2443b273}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-no\-Backlight@{lcdi2c\-\_\-no\-Backlight}}
+\index{lcdi2c\-\_\-no\-Backlight@{lcdi2c\-\_\-no\-Backlight}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-no\-Backlight}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-no\-Backlight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a2d19687699c822d8ddb0322a2443b273}
+
+
+Definition at line 302 of file lcdi2c.\-c.
+
+
+
+References Backlight, I2\-C1, I2\-C\-\_\-send(), L\-C\-D\-\_\-\-B\-L, P\-C\-F8574\-\_\-address, and P\-C\-F8574\-\_\-t\-::val.
+
+
+\begin{DoxyCode}
+303 \{
+304     \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aee57c298d3053b135e697931e6198d73}{Backlight} = 0; \textcolor{comment}{// 1 = OFF since PCF8574 is logical inverted}
+305     \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a179007c8bbcc74e0f56c774d71d732f0}{LCD\_BL} = \hyperlink{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aee57c298d3053b135e697931e6198d73}{Backlight};
+306     \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a4d20ff8ca431b4ee969cd12754681081}{I2C\_send}(\hyperlink{p8_2pinguino_2core_2i2c_8c_ab45d257574da6fe1f091cc45b7eda6cc}{I2C1}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a0fb2927fb224b8d3c421819848991f2d}{PCF8574\_address}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_adf84f63aca7be2c7e0cc19d1fb9c0388}{PCF8574\_data}.
+      \hyperlink{union___byte___a5d0cde7a426451812b691b5ae4a01560}{val});
+307 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a92e424a99880e28e548224413d5d3272}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-no\-Blink@{lcdi2c\-\_\-no\-Blink}}
+\index{lcdi2c\-\_\-no\-Blink@{lcdi2c\-\_\-no\-Blink}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-no\-Blink}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-no\-Blink (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a92e424a99880e28e548224413d5d3272}
+
+
+Definition at line 396 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-B\-L\-I\-N\-K\-O\-F\-F, and L\-C\-D\-\_\-\-C\-M\-D.
+
+
+\begin{DoxyCode}
+397 \{
+398     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a4b28243034cec656b0ed490ba6979752}{LCD\_BLINKOFF}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+399 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aba946d613bf8ac8cb68a7986676a7a14}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-no\-Cursor@{lcdi2c\-\_\-no\-Cursor}}
+\index{lcdi2c\-\_\-no\-Cursor@{lcdi2c\-\_\-no\-Cursor}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-no\-Cursor}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-no\-Cursor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aba946d613bf8ac8cb68a7986676a7a14}
+
+
+Definition at line 414 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D, and L\-C\-D\-\_\-\-C\-U\-R\-S\-O\-R\-O\-F\-F.
+
+
+\begin{DoxyCode}
+415 \{
+416     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a32b194a3adaa0a0bb69acee2e6a754fa}{LCD\_CURSOROFF}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+417 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_acf6600d39f537c1b779bb6a80b110905}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-no\-Display@{lcdi2c\-\_\-no\-Display}}
+\index{lcdi2c\-\_\-no\-Display@{lcdi2c\-\_\-no\-Display}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-no\-Display}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-no\-Display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_acf6600d39f537c1b779bb6a80b110905}
+
+
+Definition at line 432 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D, and L\-C\-D\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-O\-F\-F.
+
+
+\begin{DoxyCode}
+433 \{
+434     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a257ebe775cac7140cf82aa40d8ce545a}{LCD\_DISPLAYOFF}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+435 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a88598edb2c677300928a5daea800c5fc}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-printf@{lcdi2c\-\_\-printf}}
+\index{lcdi2c\-\_\-printf@{lcdi2c\-\_\-printf}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-printf}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-printf (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a88598edb2c677300928a5daea800c5fc}
+
+
+Definition at line 483 of file lcdi2c.\-c.
+
+
+
+References lcdi2c\-\_\-write(), and pprintf().
+
+
+\begin{DoxyCode}
+484 \{
+485     va\_list args;
+486 
+487     va\_start(args, fmt);
+488     \hyperlink{stdio_8c_a4f88403166e56608ac7db2b3ae57c315}{pprintf}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_adc4f648a9f9e8793d81adfae858e4e4e}{lcdi2c\_write}, fmt, args);
+489     va\_end(args);
+490 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ab376c4aa4b5436295980e016b2fd1f59}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-right\-To\-Left@{lcdi2c\-\_\-right\-To\-Left}}
+\index{lcdi2c\-\_\-right\-To\-Left@{lcdi2c\-\_\-right\-To\-Left}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-right\-To\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-right\-To\-Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_ab376c4aa4b5436295980e016b2fd1f59}
+
+
+Definition at line 351 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D, and L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-R\-I\-G\-H\-T.
+
+
+\begin{DoxyCode}
+352 \{
+353     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a43c26ba2e66880fac95ef640b56873ad}{LCD\_ENTRYRIGHT}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+354 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a1441f85a7863ff497b66ae109d0e36b3}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-scroll\-Display\-Left@{lcdi2c\-\_\-scroll\-Display\-Left}}
+\index{lcdi2c\-\_\-scroll\-Display\-Left@{lcdi2c\-\_\-scroll\-Display\-Left}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-scroll\-Display\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-scroll\-Display\-Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a1441f85a7863ff497b66ae109d0e36b3}
+
+
+Definition at line 378 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D, L\-C\-D\-\_\-\-C\-U\-R\-S\-O\-R\-S\-H\-I\-F\-T, L\-C\-D\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-M\-O\-V\-E, and L\-C\-D\-\_\-\-M\-O\-V\-E\-L\-E\-F\-T.
+
+
+\begin{DoxyCode}
+379 \{
+380     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a61f16a2b7550e4700f7898a7587c5594}{LCD\_CURSORSHIFT} | \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_ab2f7b67abfac33f610acfd5d7a971f40}{LCD\_DISPLAYMOVE} | 
+      \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_aafb86adb0dfca1e65d65b2cd1946a009}{LCD\_MOVELEFT}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+381 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a85e0f0279cf08620e05c35546de39b47}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-scroll\-Display\-Right@{lcdi2c\-\_\-scroll\-Display\-Right}}
+\index{lcdi2c\-\_\-scroll\-Display\-Right@{lcdi2c\-\_\-scroll\-Display\-Right}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-scroll\-Display\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-scroll\-Display\-Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a85e0f0279cf08620e05c35546de39b47}
+
+
+Definition at line 369 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D, L\-C\-D\-\_\-\-C\-U\-R\-S\-O\-R\-S\-H\-I\-F\-T, L\-C\-D\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-M\-O\-V\-E, and L\-C\-D\-\_\-\-M\-O\-V\-E\-R\-I\-G\-H\-T.
+
+
+\begin{DoxyCode}
+370 \{
+371     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a61f16a2b7550e4700f7898a7587c5594}{LCD\_CURSORSHIFT} | \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_ab2f7b67abfac33f610acfd5d7a971f40}{LCD\_DISPLAYMOVE} | 
+      \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_acf5999180233790bb2c9902efde58f7f}{LCD\_MOVERIGHT}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+372 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a98b48a8aa22d15351de421c266eec8cb}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-set\-Cursor@{lcdi2c\-\_\-set\-Cursor}}
+\index{lcdi2c\-\_\-set\-Cursor@{lcdi2c\-\_\-set\-Cursor}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-set\-Cursor}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-set\-Cursor (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{col, }
+\item[{{\bf u8}}]{line}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a98b48a8aa22d15351de421c266eec8cb}
+
+
+Definition at line 443 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D, L\-C\-D\-\_\-\-S\-E\-T\-D\-D\-R\-A\-M\-A\-D\-D\-R, numcolmax, and numlinemax.
+
+
+
+Referenced by lcdi2c\-\_\-clear\-Line().
+
+
+\begin{DoxyCode}
+444 \{
+445     \textcolor{keywordtype}{int} row\_offsets[] = \{ 0x00, 0x40, 0x14, 0x54 \};
+446 
+447     \textcolor{keywordflow}{if} ( line > \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a7e2e762a9601d95dad5dfe836311921a}{numlinemax} )
+448         line = \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a7e2e762a9601d95dad5dfe836311921a}{numlinemax} - 1;    \textcolor{comment}{// we count rows starting w/0}
+449     \textcolor{keywordflow}{if} ( col > \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_af84b95b49cf4ace11e090ad2e3c2f5e9}{numcolmax} )
+450         col = \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_af84b95b49cf4ace11e090ad2e3c2f5e9}{numcolmax} - 1;   \textcolor{comment}{// we count rows starting w/0}
+451     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a15008b832807a208d9d88c74e6751ebf}{LCD\_SETDDRAMADDR} | (col + row\_offsets[line]), 
+      \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});
+452 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a74f4da01e2c083dc2c56fd7c58aa809a}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-write@{lcdi2c\-\_\-write}}
+\index{lcdi2c\-\_\-write@{lcdi2c\-\_\-write}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a74f4da01e2c083dc2c56fd7c58aa809a}
+
+
+Definition at line 473 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-D\-A\-T\-A.
+
+
+\begin{DoxyCode}
+474 \{
+475     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a25e9d818788f36ed74d7c4579f87f2a6}{LCD\_DATA});
+476 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aee57c298d3053b135e697931e6198d73}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!Backlight@{Backlight}}
+\index{Backlight@{Backlight}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{Backlight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Backlight = 0}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aee57c298d3053b135e697931e6198d73}
+
+
+V\-A\-R\-I\-A\-B\-L\-E\-S G\-L\-O\-B\-A\-L\-E\-S. 
+
+
+
+Definition at line 229 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-backlight(), and lcdi2c\-\_\-no\-Backlight().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a107cd78ddfcfebd26a9b0d2e3d2749d6}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car0@{car0}}
+\index{car0@{car0}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car0}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car0\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a107cd78ddfcfebd26a9b0d2e3d2749d6}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00000100,      
+        0b00001010,
+        0b00001110,
+        0b00000001,
+        0b00001111,
+        0b00010001,
+        0b00001111,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 91 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-newpattern().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a24e5ef6cfd355b869075f6e513eb2ab4}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car1@{car1}}
+\index{car1@{car1}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car1}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car1\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a24e5ef6cfd355b869075f6e513eb2ab4}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00000100,     
+        0b00000010,
+        0b00001110,
+        0b00000001,
+        0b00001111,
+        0b00010001,
+        0b00001111,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 101 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-newpattern().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_abe1a538800dec572a44be289b8f45669}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car10@{car10}}
+\index{car10@{car10}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car10}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car10\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_abe1a538800dec572a44be289b8f45669}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00000100,     
+        0b00001010,
+        0b00001110,
+        0b00010001,
+        0b00010001,
+        0b00010001,
+        0b00001110,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 191 of file lcdi2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a380c12fe559190776b30b6f511cf93dd}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car11@{car11}}
+\index{car11@{car11}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car11}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car11\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a380c12fe559190776b30b6f511cf93dd}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00000100,     
+        0b00000010,
+        0b00010001,
+        0b00010001,
+        0b00010001,
+        0b00010011,
+        0b00001101,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 201 of file lcdi2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aa1fc67e81ef480b1c0e5759fad0f6833}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car12@{car12}}
+\index{car12@{car12}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car12}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car12\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aa1fc67e81ef480b1c0e5759fad0f6833}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00000100,     
+        0b00001010,
+        0b00010001,
+        0b00010001,
+        0b00010001,
+        0b00010011,
+        0b00001101,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 211 of file lcdi2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_adc6a407d44ffb17e581e6dac4f8c84ed}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car2@{car2}}
+\index{car2@{car2}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car2}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car2\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_adc6a407d44ffb17e581e6dac4f8c84ed}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00001110,     
+        0b00010000,
+        0b00010000,
+        0b00010001,
+        0b00001110,
+        0b00000100,
+        0b00001100,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 111 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-newpattern().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_afa3ba6c254947e09115128c109377ef6}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car3@{car3}}
+\index{car3@{car3}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car3}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car3\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_afa3ba6c254947e09115128c109377ef6}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00000100,     
+        0b00001000,
+        0b00001110,
+        0b00010001,
+        0b00011111,
+        0b00010000,
+        0b00001110,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 121 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-newpattern().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aefd7ac3963d77f805ac68a385e131827}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car4@{car4}}
+\index{car4@{car4}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car4}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car4\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aefd7ac3963d77f805ac68a385e131827}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00000100,     
+        0b00000010,
+        0b00001110,
+        0b00010001,
+        0b00011111,
+        0b00010000,
+        0b00001110,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 131 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-newpattern().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_af803ad9374d2c87dbd52a69a3c995c68}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car5@{car5}}
+\index{car5@{car5}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car5}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car5\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_af803ad9374d2c87dbd52a69a3c995c68}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00000100,     
+        0b00001010,
+        0b00001110,
+        0b00010001,
+        0b00011111,
+        0b00010000,
+        0b00001110,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 141 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-newpattern().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aa2f4df28ad8865d037476b8ec9fb3d8a}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car6@{car6}}
+\index{car6@{car6}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car6}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car6\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_aa2f4df28ad8865d037476b8ec9fb3d8a}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00001010,     
+        0b00000000,
+        0b00001110,
+        0b00010001,
+        0b00011111,
+        0b00010000,
+        0b00001110,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 151 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-newpattern().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0583ce45ea6aad9e65e38e3db727fc34}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car7@{car7}}
+\index{car7@{car7}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car7}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car7\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0583ce45ea6aad9e65e38e3db727fc34}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00000111,     
+        0b00001000,
+        0b00011110,
+        0b00001000,
+        0b00011110,
+        0b00001000,
+        0b00000111,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 161 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-newpattern().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a92105f5cfba3ed9acd294d2b2228612c}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car8@{car8}}
+\index{car8@{car8}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car8}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car8\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a92105f5cfba3ed9acd294d2b2228612c}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00000100,     
+        0b00001010,
+        0b00001100,
+        0b00000100,
+        0b00000100,
+        0b00000100,
+        0b00001110,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 171 of file lcdi2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0d2df920b7f57bada1628b410dfd4320}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!car9@{car9}}
+\index{car9@{car9}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{car9}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} car9\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0d2df920b7f57bada1628b410dfd4320}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+=\{
+        0b00001010,     
+        0b00000000,
+        0b00001100,
+        0b00000100,
+        0b00000100,
+        0b00000100,
+        0b00001110,
+        0b00000000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 181 of file lcdi2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_af84b95b49cf4ace11e090ad2e3c2f5e9}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!numcolmax@{numcolmax}}
+\index{numcolmax@{numcolmax}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{numcolmax}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} numcolmax}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_af84b95b49cf4ace11e090ad2e3c2f5e9}
+
+
+Definition at line 227 of file lcdi2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a7e2e762a9601d95dad5dfe836311921a}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!numlinemax@{numlinemax}}
+\index{numlinemax@{numlinemax}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{numlinemax}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} numlinemax}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a7e2e762a9601d95dad5dfe836311921a}
+
+
+Definition at line 228 of file lcdi2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0fb2927fb224b8d3c421819848991f2d}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!P\-C\-F8574\-\_\-address@{P\-C\-F8574\-\_\-address}}
+\index{P\-C\-F8574\-\_\-address@{P\-C\-F8574\-\_\-address}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{P\-C\-F8574\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} P\-C\-F8574\-\_\-address}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a0fb2927fb224b8d3c421819848991f2d}
+
+
+Definition at line 230 of file lcdi2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a6f8949ac0959bc3dd22bddaca463e220}{\index{p32/include/pinguino/libraries/lcdi2c.\-c@{p32/include/pinguino/libraries/lcdi2c.\-c}!P\-C\-F8574\-\_\-data@{P\-C\-F8574\-\_\-data}}
+\index{P\-C\-F8574\-\_\-data@{P\-C\-F8574\-\_\-data}!p32/include/pinguino/libraries/lcdi2c.c@{p32/include/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{P\-C\-F8574\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-C\-F8574\-\_\-t} P\-C\-F8574\-\_\-data}}\label{p32_2include_2pinguino_2libraries_2lcdi2c_8c_a6f8949ac0959bc3dd22bddaca463e220}
+
+
+Definition at line 231 of file lcdi2c.\-c.
+

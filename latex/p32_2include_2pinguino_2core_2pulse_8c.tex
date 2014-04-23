@@ -1,0 +1,72 @@
+\hypertarget{p32_2include_2pinguino_2core_2pulse_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pulse.c File Reference}
+\label{p32_2include_2pinguino_2core_2pulse_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pulse.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pulse.\-c}}
+}
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2pulse_8c_a018e5c478534dad75b15942e9113fe70}{\-\_\-\-\_\-\-P\-U\-L\-S\-E\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long \hyperlink{p32_2include_2pinguino_2core_2pulse_8c_ab56d18a2ad2b374ffa6b6cecfe053d9c}{pulse\-In} (unsigned char pin, unsigned char \hyperlink{keypad32_8c_a2dc73433524e44e05908b0250ce9d9de}{state}, unsigned long timeout)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2pulse_8c_a018e5c478534dad75b15942e9113fe70}{\index{p32/include/pinguino/core/pulse.\-c@{p32/include/pinguino/core/pulse.\-c}!\-\_\-\-\_\-\-P\-U\-L\-S\-E\-\_\-\-\_\-@{\-\_\-\-\_\-\-P\-U\-L\-S\-E\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-P\-U\-L\-S\-E\-\_\-\-\_\-@{\-\_\-\-\_\-\-P\-U\-L\-S\-E\-\_\-\-\_\-}!p32/include/pinguino/core/pulse.c@{p32/include/pinguino/core/pulse.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-P\-U\-L\-S\-E\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-P\-U\-L\-S\-E\-\_\-\-\_\-}}\label{p32_2include_2pinguino_2core_2pulse_8c_a018e5c478534dad75b15942e9113fe70}
+
+
+Definition at line 9 of file pulse.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2pulse_8c_ab56d18a2ad2b374ffa6b6cecfe053d9c}{\index{p32/include/pinguino/core/pulse.\-c@{p32/include/pinguino/core/pulse.\-c}!pulse\-In@{pulse\-In}}
+\index{pulse\-In@{pulse\-In}!p32/include/pinguino/core/pulse.c@{p32/include/pinguino/core/pulse.\-c}}
+\subsubsection[{pulse\-In}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long pulse\-In (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{pin, }
+\item[{unsigned char}]{state, }
+\item[{unsigned long}]{timeout}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2pulse_8c_ab56d18a2ad2b374ffa6b6cecfe053d9c}
+Measures the length (in microseconds) of a pulse on the pin; state is H\-I\-G\-H or L\-O\-W, the type of pulse to measure. Works on pulses from 2-\/3 microseconds to 3 minutes in length, but must be called at least a few dozen microseconds before the start of the pulse. 
+
+Definition at line 19 of file pulse.\-c.
+
+
+
+References digitalread(), and width.
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width} = 0; \textcolor{comment}{// keep initialization out of time critical area}
+22     
+23     \textcolor{comment}{// convert the timeout from microseconds to a number of times through}
+24     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} numloops = 0;
+25     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} maxloops = timeout / 10; \textcolor{comment}{//We have a microsecond by 10 loops (mean).}
+26     
+27     \textcolor{comment}{// wait for any previous pulse to end}
+28     \textcolor{keywordflow}{while} (\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(pin) == \hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state})
+29         \textcolor{keywordflow}{if} (numloops++ == maxloops)
+30             \textcolor{keywordflow}{return} 0;
+31     
+32     \textcolor{comment}{// wait for the pulse to start}
+33     \textcolor{keywordflow}{while} (\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(pin) != \hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state})
+34         \textcolor{keywordflow}{if} (numloops++ == maxloops)
+35             \textcolor{keywordflow}{return} 0;
+36     
+37     \textcolor{comment}{// wait for the pulse to stop}
+38     \textcolor{keywordflow}{while} (\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(pin) == \hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state})
+39         width++;
+40 
+41     \textcolor{comment}{//There will be some error introduced by the interrupt handlers.}
+42     \textcolor{comment}{//At last loop, each interaction have 12us + 60us from digitalRead() instructions}
+43     \textcolor{keywordflow}{return} width * 12 + 60; 
+44 \}
+\end{DoxyCode}

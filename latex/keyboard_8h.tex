@@ -1,0 +1,1059 @@
+\hypertarget{keyboard_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/keyboard.h File Reference}
+\label{keyboard_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/keyboard.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/keyboard.\-h}}
+}
+{\ttfamily \#include \char`\"{}ps2.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{keyboard_8h_a15e60e6e913679cc83c169a0d74f8023}{\-\_\-\-\_\-\-P\-S2\-K\-E\-Y\-B\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{keyboard_8h_af831259d4c1c7d8bfbc8aeadc47244d3}{keyboard\-\_\-init}()~\hyperlink{ps2_8h_a59b249c25ab2aafc894e53fc94eced6a}{ps2\-\_\-init}()
+\item 
+\#define \hyperlink{keyboard_8h_a6e442c38466e33ac9513ba9b5a2197c2}{keyboard\-\_\-interrupt}()~\hyperlink{ps2_8h_a7f1eb0e9e8391ca2a5ad163dffae3da2}{ps2\-\_\-isr}()
+\item 
+\#define \hyperlink{keyboard_8h_a997cb7ea475a993e21879a048bca4c31}{keyboard\-\_\-send}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~\hyperlink{ps2_8h_a17411cfcef345095b1083e4091ede4c8}{ps2\-\_\-write}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})
+\item 
+\#define \hyperlink{keyboard_8h_a3c8499e80fbb9d61c35a1c0d99dc903b}{E\-M\-P\-T\-Y\-\_\-\-B\-U\-F\-F\-E\-R}
+\item 
+\#define \hyperlink{keyboard_8h_a3d9d61b737455e139bf74b2a5f0ebdd8}{R\-E\-A\-D\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-L\-L}
+\item 
+\#define \hyperlink{keyboard_8h_a346cb9771d7c29052fe9bad0e6937c4b}{R\-E\-A\-D\-L\-I\-N\-E\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-R\-S}~20
+\item 
+\#define \hyperlink{keyboard_8h_a88c14c1220364b962ebc6ef8dac7c886}{V\-K\-\_\-\-A}~0x1\-C
+\item 
+\#define \hyperlink{keyboard_8h_a8ba406819068ece94ec12d6e3cdb005b}{V\-K\-\_\-\-B}~0x32
+\item 
+\#define \hyperlink{keyboard_8h_a741e642aa9526f847669bd6d9fb9fe24}{V\-K\-\_\-\-C}~0x21
+\item 
+\#define \hyperlink{keyboard_8h_a152a1533bc941e617aed27d9b485ba0a}{V\-K\-\_\-\-D}~0x23
+\item 
+\#define \hyperlink{keyboard_8h_a4008642a75463ea4d810fc2ad95d9c7e}{V\-K\-\_\-\-E}~0x24
+\item 
+\#define \hyperlink{keyboard_8h_a7db1627e3db3b620e021f2a6df438396}{V\-K\-\_\-\-F}~0x2\-B
+\item 
+\#define \hyperlink{keyboard_8h_a72d76f1133ea28328ceabd72962731a6}{V\-K\-\_\-\-G}~0x34
+\item 
+\#define \hyperlink{keyboard_8h_ac01550a2338bbaac58a5577821e10caf}{V\-K\-\_\-\-H}~0x33
+\item 
+\#define \hyperlink{keyboard_8h_a6d18888ef56ecbc75ec8f87d2e7c9142}{V\-K\-\_\-\-I}~0x43
+\item 
+\#define \hyperlink{keyboard_8h_a8f9fe9e7e3401f5305ae70a71cdebf39}{V\-K\-\_\-\-J}~0x3\-B
+\item 
+\#define \hyperlink{keyboard_8h_ab7db50920f49d7380d6f52c68f230f4b}{V\-K\-\_\-\-K}~0x42
+\item 
+\#define \hyperlink{keyboard_8h_ad1c583a994af20454a27c25fbf6088cb}{V\-K\-\_\-\-L}~0x4\-B
+\item 
+\#define \hyperlink{keyboard_8h_a73644288bc5d06fea9cb9392523b225f}{V\-K\-\_\-\-M}~0x3\-A
+\item 
+\#define \hyperlink{keyboard_8h_a7578282e14756d1ef3ff32477a219422}{V\-K\-\_\-\-N}~0x31
+\item 
+\#define \hyperlink{keyboard_8h_a748bf1daacf9d7abcf60669b556cc7d7}{V\-K\-\_\-\-O}~0x44
+\item 
+\#define \hyperlink{keyboard_8h_a8bd2b0b15e29247f8874f712ff7699a5}{V\-K\-\_\-\-P}~0x4\-D
+\item 
+\#define \hyperlink{keyboard_8h_a67cb6976cdad53b42036de3c8c32cf53}{V\-K\-\_\-\-Q}~0x15
+\item 
+\#define \hyperlink{keyboard_8h_abef161b63d5ad67cdcb765a4885b8b9a}{V\-K\-\_\-\-R}~0x2\-D
+\item 
+\#define \hyperlink{keyboard_8h_a85bfd49b27d95606f07e02f2d4eed52b}{V\-K\-\_\-\-S}~0x1\-B
+\item 
+\#define \hyperlink{keyboard_8h_ad707e147202ea0273addfff82d9279f8}{V\-K\-\_\-\-T}~0x2\-C
+\item 
+\#define \hyperlink{keyboard_8h_a454cc08f7dae5836b12c6b6e950f0577}{V\-K\-\_\-\-U}~0x3\-C
+\item 
+\#define \hyperlink{keyboard_8h_a24c0a2192f997b6107b74b715a478da2}{V\-K\-\_\-\-V}~0x2\-A
+\item 
+\#define \hyperlink{keyboard_8h_aaf02cb1d930f785b10a398eda50dbe13}{V\-K\-\_\-\-W}~0x1\-D
+\item 
+\#define \hyperlink{keyboard_8h_aa906bf609704891b18f8a0f87b250dbf}{V\-K\-\_\-\-X}~0x22
+\item 
+\#define \hyperlink{keyboard_8h_a2d2c0b3ea188c63545f0350de90883d3}{V\-K\-\_\-\-Y}~0x35
+\item 
+\#define \hyperlink{keyboard_8h_ae23ec14cce5f745acff0b9983c7dbb44}{V\-K\-\_\-\-Z}~0x1\-A
+\item 
+\#define \hyperlink{keyboard_8h_ad04b423713967d9cec592d64587d1b84}{V\-K\-\_\-0}~0x45
+\item 
+\#define \hyperlink{keyboard_8h_a6a75a9ddd28a10ec6d2dc2c1f7064432}{V\-K\-\_\-1}~0x16
+\item 
+\#define \hyperlink{keyboard_8h_a73e274c8a69ba304209c62020cf276b9}{V\-K\-\_\-2}~0x1\-E
+\item 
+\#define \hyperlink{keyboard_8h_a4750985be6d6bdd586719d8cf1053151}{V\-K\-\_\-3}~0x26
+\item 
+\#define \hyperlink{keyboard_8h_a23a11474f33ae50b8f6bd17087d656b4}{V\-K\-\_\-4}~0x25
+\item 
+\#define \hyperlink{keyboard_8h_a17f7d5a88ed2433373bc8928463a5ca2}{V\-K\-\_\-5}~0x2\-E
+\item 
+\#define \hyperlink{keyboard_8h_a2c7c5a575165365dbd20abeb5eb9ffb4}{V\-K\-\_\-6}~0x36
+\item 
+\#define \hyperlink{keyboard_8h_a177171b5531dab25d17e1896eb0b8bb9}{V\-K\-\_\-7}~0x3\-D
+\item 
+\#define \hyperlink{keyboard_8h_a4fa31f017860dad584379f9bbcaa2c42}{V\-K\-\_\-8}~0x3\-E
+\item 
+\#define \hyperlink{keyboard_8h_af90b5c91ee61518d7e72d280c31f551c}{V\-K\-\_\-9}~0x46
+\item 
+\#define \hyperlink{keyboard_8h_a5ff98d59a28fbc7491d8b13da1472ec0}{V\-K\-\_\-\-B\-A\-C\-K\-S\-P\-A\-C\-E}~0x66
+\item 
+\#define \hyperlink{keyboard_8h_a3c989cdf70f9b116d64e2a56cb878211}{V\-K\-\_\-\-S\-P\-A\-C\-E}~0x29
+\item 
+\#define \hyperlink{keyboard_8h_a16259796c1f88c8471051842370ac609}{V\-K\-\_\-\-T\-A\-B}~0x0\-D
+\item 
+\#define \hyperlink{keyboard_8h_ae97a7ab2db4ca2474d5b0328ad1b67c2}{V\-K\-\_\-\-C\-A\-P\-S}~0x58
+\item 
+\#define \hyperlink{keyboard_8h_a3cad4e968af2be01ec337e4ef3c0e787}{V\-K\-\_\-\-S\-H\-I\-F\-T\-L}~0x12
+\item 
+\#define \hyperlink{keyboard_8h_a51658f3e37dabe1cad40145d70e21b92}{V\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L}~0x14
+\item 
+\#define \hyperlink{keyboard_8h_aaf25e0574d3d0912904aaf368bcf250c}{V\-K\-\_\-\-A\-L\-T}~0x11
+\item 
+\#define \hyperlink{keyboard_8h_a213055427e4a5776f0e7e67b395d6701}{V\-K\-\_\-\-E\-N\-T\-E\-R}~0x5\-A
+\item 
+\#define \hyperlink{keyboard_8h_a2cca8acb088e683c6ba86c72f34e8c9c}{V\-K\-\_\-\-E\-S\-C}~0x76
+\item 
+\#define \hyperlink{keyboard_8h_a6f6b4af1cbb4671af24ce38e9cca5b64}{V\-K\-\_\-\-F1}~0x05
+\item 
+\#define \hyperlink{keyboard_8h_aff9167e4eb7be0ab775fec5ee7523175}{V\-K\-\_\-\-F2}~0x06
+\item 
+\#define \hyperlink{keyboard_8h_aacb83ecf66c70b6eed3fb22e92349385}{V\-K\-\_\-\-F3}~0x04
+\item 
+\#define \hyperlink{keyboard_8h_ab35b2e0b4b5d1dee80e45966ba4b772d}{V\-K\-\_\-\-F4}~0x0\-C
+\item 
+\#define \hyperlink{keyboard_8h_a90b6cd2ef046494641cf7b60564f908f}{V\-K\-\_\-\-F5}~0x03
+\item 
+\#define \hyperlink{keyboard_8h_a7215a07e88f067d431504b097bf0e1b3}{V\-K\-\_\-\-F6}~0x0\-B
+\item 
+\#define \hyperlink{keyboard_8h_af222f57fae9b15ae1cffaf4071df4ca4}{V\-K\-\_\-\-F7}~0x83
+\item 
+\#define \hyperlink{keyboard_8h_a9425bbc6e3fe5f41a16fa0612dff4f97}{V\-K\-\_\-\-F8}~0x0\-A
+\item 
+\#define \hyperlink{keyboard_8h_a1974b8ff0eb8a38091fa507354b4ff99}{V\-K\-\_\-\-F9}~0x01
+\item 
+\#define \hyperlink{keyboard_8h_a2a2a396b3faad714b3251e582580c9d1}{V\-K\-\_\-\-F10}~0x09
+\item 
+\#define \hyperlink{keyboard_8h_a931a21adc2a14389dd58efea289d7e85}{V\-K\-\_\-\-F11}~0x78
+\item 
+\#define \hyperlink{keyboard_8h_a12dd4c8fc1b7a9db934129125c10d1b1}{V\-K\-\_\-\-F12}~0x07
+\item 
+\#define \hyperlink{keyboard_8h_a408e0b5fa324b7ef8e13cbe1b67fdfe4}{V\-K\-\_\-\-P\-R\-I\-N\-T\-C\-R\-E\-E\-N}~0x12
+\item 
+\#define \hyperlink{keyboard_8h_a4b846ea3385e8c57315f31d80ba7c713}{V\-K\-\_\-\-S\-C\-R\-O\-L\-L}~0x7\-E
+\item 
+\#define \hyperlink{keyboard_8h_a7456d958530f550b6729f9eb02c8aaa8}{V\-K\-\_\-\-P\-A\-U\-S\-E}~0x77
+\item 
+\#define \hyperlink{keyboard_8h_af4e08c8eaec785dd4292b944ae5383c4}{V\-K\-\_\-\-I\-N\-S\-E\-R\-T}~0x70
+\item 
+\#define \hyperlink{keyboard_8h_a9972164a8a7632164cce64d99c7a9683}{V\-K\-\_\-\-H\-O\-M\-E}~0x6\-C
+\item 
+\#define \hyperlink{keyboard_8h_aa3833e7459f3dd1e22c7f8a4f6d4ebe5}{V\-K\-\_\-\-P\-A\-G\-E\-U\-P}~0x7\-D
+\item 
+\#define \hyperlink{keyboard_8h_accfd1dbbc99411fda7d6ae6de3864dea}{V\-K\-\_\-\-D\-E\-L\-E\-T\-E}~0x71
+\item 
+\#define \hyperlink{keyboard_8h_a98e57648807c288ea7e23b8907ab40da}{V\-K\-\_\-\-E\-N\-D}~0x69
+\item 
+\#define \hyperlink{keyboard_8h_a1abaf23b676d86dc4dd24ef8347e8598}{V\-K\-\_\-\-P\-A\-G\-E\-D\-O\-W\-N}~0x7\-A
+\item 
+\#define \hyperlink{keyboard_8h_a3d6c684899d01f9dbcf06fdfb7c37863}{V\-K\-\_\-\-A\-R\-R\-O\-W\-U\-P}~0x75
+\item 
+\#define \hyperlink{keyboard_8h_a08b6e50f13e29977f996ef95bd3c4e25}{V\-K\-\_\-\-A\-R\-R\-O\-W\-D\-O\-W\-N}~0x72
+\item 
+\#define \hyperlink{keyboard_8h_a6fbfced41061143f26ba1c0b4e9db42f}{V\-K\-\_\-\-A\-R\-R\-O\-W\-L\-E\-F\-T}~0x6\-B
+\item 
+\#define \hyperlink{keyboard_8h_a0b07ad651b96323210378559251307b1}{V\-K\-\_\-\-A\-R\-R\-O\-W\-R\-I\-G\-H\-T}~0x74
+\item 
+\#define \hyperlink{keyboard_8h_a25395c3448e1f7ad6d9a71bca561117b}{V\-K\-\_\-\-N\-U\-M}~0x77
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{keyboard_8h_a440c3aa7604a1506cb6b56a2a8efe49a}{keyboard\-\_\-readvk} ()
+\item 
+unsigned char \hyperlink{keyboard_8h_a215177194e9dacbf3946e79d6a02993d}{keyboard\-\_\-translate} (unsigned char vk)
+\item 
+unsigned char \hyperlink{keyboard_8h_a89d90e097f9606c769505c8b2d166f36}{keyboard\-\_\-read} ()
+\item 
+unsigned char $\ast$ \hyperlink{keyboard_8h_af62b0e7b8fd0edaaa9e35523c7f35012}{keyboard\-\_\-readline} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{keyboard_8h_a15e60e6e913679cc83c169a0d74f8023}{\index{keyboard.\-h@{keyboard.\-h}!\-\_\-\-\_\-\-P\-S2\-K\-E\-Y\-B\-\_\-\-\_\-@{\-\_\-\-\_\-\-P\-S2\-K\-E\-Y\-B\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-P\-S2\-K\-E\-Y\-B\-\_\-\-\_\-@{\-\_\-\-\_\-\-P\-S2\-K\-E\-Y\-B\-\_\-\-\_\-}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{\-\_\-\-\_\-\-P\-S2\-K\-E\-Y\-B\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-P\-S2\-K\-E\-Y\-B\-\_\-\-\_\-}}\label{keyboard_8h_a15e60e6e913679cc83c169a0d74f8023}
+
+
+Definition at line 8 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a3c8499e80fbb9d61c35a1c0d99dc903b}{\index{keyboard.\-h@{keyboard.\-h}!E\-M\-P\-T\-Y\-\_\-\-B\-U\-F\-F\-E\-R@{E\-M\-P\-T\-Y\-\_\-\-B\-U\-F\-F\-E\-R}}
+\index{E\-M\-P\-T\-Y\-\_\-\-B\-U\-F\-F\-E\-R@{E\-M\-P\-T\-Y\-\_\-\-B\-U\-F\-F\-E\-R}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{E\-M\-P\-T\-Y\-\_\-\-B\-U\-F\-F\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-M\-P\-T\-Y\-\_\-\-B\-U\-F\-F\-E\-R}}\label{keyboard_8h_a3c8499e80fbb9d61c35a1c0d99dc903b}
+
+
+Definition at line 18 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_af831259d4c1c7d8bfbc8aeadc47244d3}{\index{keyboard.\-h@{keyboard.\-h}!keyboard\-\_\-init@{keyboard\-\_\-init}}
+\index{keyboard\-\_\-init@{keyboard\-\_\-init}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{keyboard\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}\#define keyboard\-\_\-init(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf ps2\-\_\-init}()}}\label{keyboard_8h_af831259d4c1c7d8bfbc8aeadc47244d3}
+
+
+Definition at line 13 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a6e442c38466e33ac9513ba9b5a2197c2}{\index{keyboard.\-h@{keyboard.\-h}!keyboard\-\_\-interrupt@{keyboard\-\_\-interrupt}}
+\index{keyboard\-\_\-interrupt@{keyboard\-\_\-interrupt}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{keyboard\-\_\-interrupt}]{\setlength{\rightskip}{0pt plus 5cm}\#define keyboard\-\_\-interrupt(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf ps2\-\_\-isr}()}}\label{keyboard_8h_a6e442c38466e33ac9513ba9b5a2197c2}
+
+
+Definition at line 14 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a997cb7ea475a993e21879a048bca4c31}{\index{keyboard.\-h@{keyboard.\-h}!keyboard\-\_\-send@{keyboard\-\_\-send}}
+\index{keyboard\-\_\-send@{keyboard\-\_\-send}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{keyboard\-\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}\#define keyboard\-\_\-send(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~{\bf ps2\-\_\-write}({\bf x})}}\label{keyboard_8h_a997cb7ea475a993e21879a048bca4c31}
+
+
+Definition at line 15 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a3d9d61b737455e139bf74b2a5f0ebdd8}{\index{keyboard.\-h@{keyboard.\-h}!R\-E\-A\-D\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-L\-L@{R\-E\-A\-D\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-L\-L}}
+\index{R\-E\-A\-D\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-L\-L@{R\-E\-A\-D\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-L\-L}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{R\-E\-A\-D\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-A\-D\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-L\-L}}\label{keyboard_8h_a3d9d61b737455e139bf74b2a5f0ebdd8}
+
+
+Definition at line 21 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a346cb9771d7c29052fe9bad0e6937c4b}{\index{keyboard.\-h@{keyboard.\-h}!R\-E\-A\-D\-L\-I\-N\-E\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-R\-S@{R\-E\-A\-D\-L\-I\-N\-E\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-R\-S}}
+\index{R\-E\-A\-D\-L\-I\-N\-E\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-R\-S@{R\-E\-A\-D\-L\-I\-N\-E\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-R\-S}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{R\-E\-A\-D\-L\-I\-N\-E\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-A\-D\-L\-I\-N\-E\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-R\-S~20}}\label{keyboard_8h_a346cb9771d7c29052fe9bad0e6937c4b}
+
+
+Definition at line 24 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-readline().
+
+\hypertarget{keyboard_8h_ad04b423713967d9cec592d64587d1b84}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-0@{V\-K\-\_\-0}}
+\index{V\-K\-\_\-0@{V\-K\-\_\-0}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-0~0x45}}\label{keyboard_8h_ad04b423713967d9cec592d64587d1b84}
+
+
+Definition at line 53 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a6a75a9ddd28a10ec6d2dc2c1f7064432}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-1@{V\-K\-\_\-1}}
+\index{V\-K\-\_\-1@{V\-K\-\_\-1}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-1~0x16}}\label{keyboard_8h_a6a75a9ddd28a10ec6d2dc2c1f7064432}
+
+
+Definition at line 54 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a73e274c8a69ba304209c62020cf276b9}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-2@{V\-K\-\_\-2}}
+\index{V\-K\-\_\-2@{V\-K\-\_\-2}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-2~0x1\-E}}\label{keyboard_8h_a73e274c8a69ba304209c62020cf276b9}
+
+
+Definition at line 55 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a4750985be6d6bdd586719d8cf1053151}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-3@{V\-K\-\_\-3}}
+\index{V\-K\-\_\-3@{V\-K\-\_\-3}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-3~0x26}}\label{keyboard_8h_a4750985be6d6bdd586719d8cf1053151}
+
+
+Definition at line 56 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a23a11474f33ae50b8f6bd17087d656b4}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-4@{V\-K\-\_\-4}}
+\index{V\-K\-\_\-4@{V\-K\-\_\-4}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-4~0x25}}\label{keyboard_8h_a23a11474f33ae50b8f6bd17087d656b4}
+
+
+Definition at line 57 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a17f7d5a88ed2433373bc8928463a5ca2}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-5@{V\-K\-\_\-5}}
+\index{V\-K\-\_\-5@{V\-K\-\_\-5}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-5~0x2\-E}}\label{keyboard_8h_a17f7d5a88ed2433373bc8928463a5ca2}
+
+
+Definition at line 58 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a2c7c5a575165365dbd20abeb5eb9ffb4}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-6@{V\-K\-\_\-6}}
+\index{V\-K\-\_\-6@{V\-K\-\_\-6}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-6~0x36}}\label{keyboard_8h_a2c7c5a575165365dbd20abeb5eb9ffb4}
+
+
+Definition at line 59 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a177171b5531dab25d17e1896eb0b8bb9}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-7@{V\-K\-\_\-7}}
+\index{V\-K\-\_\-7@{V\-K\-\_\-7}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-7}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-7~0x3\-D}}\label{keyboard_8h_a177171b5531dab25d17e1896eb0b8bb9}
+
+
+Definition at line 60 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a4fa31f017860dad584379f9bbcaa2c42}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-8@{V\-K\-\_\-8}}
+\index{V\-K\-\_\-8@{V\-K\-\_\-8}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-8~0x3\-E}}\label{keyboard_8h_a4fa31f017860dad584379f9bbcaa2c42}
+
+
+Definition at line 61 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_af90b5c91ee61518d7e72d280c31f551c}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-9@{V\-K\-\_\-9}}
+\index{V\-K\-\_\-9@{V\-K\-\_\-9}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-9}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-9~0x46}}\label{keyboard_8h_af90b5c91ee61518d7e72d280c31f551c}
+
+
+Definition at line 62 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a88c14c1220364b962ebc6ef8dac7c886}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-A@{V\-K\-\_\-\-A}}
+\index{V\-K\-\_\-\-A@{V\-K\-\_\-\-A}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-A~0x1\-C}}\label{keyboard_8h_a88c14c1220364b962ebc6ef8dac7c886}
+
+
+Definition at line 27 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_aaf25e0574d3d0912904aaf368bcf250c}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-A\-L\-T@{V\-K\-\_\-\-A\-L\-T}}
+\index{V\-K\-\_\-\-A\-L\-T@{V\-K\-\_\-\-A\-L\-T}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-A\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-A\-L\-T~0x11}}\label{keyboard_8h_aaf25e0574d3d0912904aaf368bcf250c}
+
+
+Definition at line 69 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a08b6e50f13e29977f996ef95bd3c4e25}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-A\-R\-R\-O\-W\-D\-O\-W\-N@{V\-K\-\_\-\-A\-R\-R\-O\-W\-D\-O\-W\-N}}
+\index{V\-K\-\_\-\-A\-R\-R\-O\-W\-D\-O\-W\-N@{V\-K\-\_\-\-A\-R\-R\-O\-W\-D\-O\-W\-N}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-A\-R\-R\-O\-W\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-A\-R\-R\-O\-W\-D\-O\-W\-N~0x72}}\label{keyboard_8h_a08b6e50f13e29977f996ef95bd3c4e25}
+
+
+Definition at line 94 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a6fbfced41061143f26ba1c0b4e9db42f}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-A\-R\-R\-O\-W\-L\-E\-F\-T@{V\-K\-\_\-\-A\-R\-R\-O\-W\-L\-E\-F\-T}}
+\index{V\-K\-\_\-\-A\-R\-R\-O\-W\-L\-E\-F\-T@{V\-K\-\_\-\-A\-R\-R\-O\-W\-L\-E\-F\-T}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-A\-R\-R\-O\-W\-L\-E\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-A\-R\-R\-O\-W\-L\-E\-F\-T~0x6\-B}}\label{keyboard_8h_a6fbfced41061143f26ba1c0b4e9db42f}
+
+
+Definition at line 95 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a0b07ad651b96323210378559251307b1}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-A\-R\-R\-O\-W\-R\-I\-G\-H\-T@{V\-K\-\_\-\-A\-R\-R\-O\-W\-R\-I\-G\-H\-T}}
+\index{V\-K\-\_\-\-A\-R\-R\-O\-W\-R\-I\-G\-H\-T@{V\-K\-\_\-\-A\-R\-R\-O\-W\-R\-I\-G\-H\-T}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-A\-R\-R\-O\-W\-R\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-A\-R\-R\-O\-W\-R\-I\-G\-H\-T~0x74}}\label{keyboard_8h_a0b07ad651b96323210378559251307b1}
+
+
+Definition at line 96 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a3d6c684899d01f9dbcf06fdfb7c37863}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-A\-R\-R\-O\-W\-U\-P@{V\-K\-\_\-\-A\-R\-R\-O\-W\-U\-P}}
+\index{V\-K\-\_\-\-A\-R\-R\-O\-W\-U\-P@{V\-K\-\_\-\-A\-R\-R\-O\-W\-U\-P}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-A\-R\-R\-O\-W\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-A\-R\-R\-O\-W\-U\-P~0x75}}\label{keyboard_8h_a3d6c684899d01f9dbcf06fdfb7c37863}
+
+
+Definition at line 93 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a8ba406819068ece94ec12d6e3cdb005b}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-B@{V\-K\-\_\-\-B}}
+\index{V\-K\-\_\-\-B@{V\-K\-\_\-\-B}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-B~0x32}}\label{keyboard_8h_a8ba406819068ece94ec12d6e3cdb005b}
+
+
+Definition at line 28 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a5ff98d59a28fbc7491d8b13da1472ec0}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-B\-A\-C\-K\-S\-P\-A\-C\-E@{V\-K\-\_\-\-B\-A\-C\-K\-S\-P\-A\-C\-E}}
+\index{V\-K\-\_\-\-B\-A\-C\-K\-S\-P\-A\-C\-E@{V\-K\-\_\-\-B\-A\-C\-K\-S\-P\-A\-C\-E}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-B\-A\-C\-K\-S\-P\-A\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-B\-A\-C\-K\-S\-P\-A\-C\-E~0x66}}\label{keyboard_8h_a5ff98d59a28fbc7491d8b13da1472ec0}
+
+
+Definition at line 63 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a741e642aa9526f847669bd6d9fb9fe24}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-C@{V\-K\-\_\-\-C}}
+\index{V\-K\-\_\-\-C@{V\-K\-\_\-\-C}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-C~0x21}}\label{keyboard_8h_a741e642aa9526f847669bd6d9fb9fe24}
+
+
+Definition at line 29 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_ae97a7ab2db4ca2474d5b0328ad1b67c2}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-C\-A\-P\-S@{V\-K\-\_\-\-C\-A\-P\-S}}
+\index{V\-K\-\_\-\-C\-A\-P\-S@{V\-K\-\_\-\-C\-A\-P\-S}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-C\-A\-P\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-C\-A\-P\-S~0x58}}\label{keyboard_8h_ae97a7ab2db4ca2474d5b0328ad1b67c2}
+
+
+Definition at line 66 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a51658f3e37dabe1cad40145d70e21b92}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L@{V\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L}}
+\index{V\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L@{V\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-C\-O\-N\-T\-R\-O\-L~0x14}}\label{keyboard_8h_a51658f3e37dabe1cad40145d70e21b92}
+
+
+Definition at line 68 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a152a1533bc941e617aed27d9b485ba0a}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-D@{V\-K\-\_\-\-D}}
+\index{V\-K\-\_\-\-D@{V\-K\-\_\-\-D}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-D~0x23}}\label{keyboard_8h_a152a1533bc941e617aed27d9b485ba0a}
+
+
+Definition at line 30 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_accfd1dbbc99411fda7d6ae6de3864dea}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-D\-E\-L\-E\-T\-E@{V\-K\-\_\-\-D\-E\-L\-E\-T\-E}}
+\index{V\-K\-\_\-\-D\-E\-L\-E\-T\-E@{V\-K\-\_\-\-D\-E\-L\-E\-T\-E}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-D\-E\-L\-E\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-D\-E\-L\-E\-T\-E~0x71}}\label{keyboard_8h_accfd1dbbc99411fda7d6ae6de3864dea}
+
+
+Definition at line 90 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a4008642a75463ea4d810fc2ad95d9c7e}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-E@{V\-K\-\_\-\-E}}
+\index{V\-K\-\_\-\-E@{V\-K\-\_\-\-E}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-E~0x24}}\label{keyboard_8h_a4008642a75463ea4d810fc2ad95d9c7e}
+
+
+Definition at line 31 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a98e57648807c288ea7e23b8907ab40da}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-E\-N\-D@{V\-K\-\_\-\-E\-N\-D}}
+\index{V\-K\-\_\-\-E\-N\-D@{V\-K\-\_\-\-E\-N\-D}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-E\-N\-D~0x69}}\label{keyboard_8h_a98e57648807c288ea7e23b8907ab40da}
+
+
+Definition at line 91 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a213055427e4a5776f0e7e67b395d6701}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-E\-N\-T\-E\-R@{V\-K\-\_\-\-E\-N\-T\-E\-R}}
+\index{V\-K\-\_\-\-E\-N\-T\-E\-R@{V\-K\-\_\-\-E\-N\-T\-E\-R}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-E\-N\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-E\-N\-T\-E\-R~0x5\-A}}\label{keyboard_8h_a213055427e4a5776f0e7e67b395d6701}
+
+
+Definition at line 70 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a2cca8acb088e683c6ba86c72f34e8c9c}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-E\-S\-C@{V\-K\-\_\-\-E\-S\-C}}
+\index{V\-K\-\_\-\-E\-S\-C@{V\-K\-\_\-\-E\-S\-C}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-E\-S\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-E\-S\-C~0x76}}\label{keyboard_8h_a2cca8acb088e683c6ba86c72f34e8c9c}
+
+
+Definition at line 71 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a7db1627e3db3b620e021f2a6df438396}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F@{V\-K\-\_\-\-F}}
+\index{V\-K\-\_\-\-F@{V\-K\-\_\-\-F}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F~0x2\-B}}\label{keyboard_8h_a7db1627e3db3b620e021f2a6df438396}
+
+
+Definition at line 32 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a6f6b4af1cbb4671af24ce38e9cca5b64}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F1@{V\-K\-\_\-\-F1}}
+\index{V\-K\-\_\-\-F1@{V\-K\-\_\-\-F1}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F1}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F1~0x05}}\label{keyboard_8h_a6f6b4af1cbb4671af24ce38e9cca5b64}
+
+
+Definition at line 72 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a2a2a396b3faad714b3251e582580c9d1}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F10@{V\-K\-\_\-\-F10}}
+\index{V\-K\-\_\-\-F10@{V\-K\-\_\-\-F10}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F10}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F10~0x09}}\label{keyboard_8h_a2a2a396b3faad714b3251e582580c9d1}
+
+
+Definition at line 81 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a931a21adc2a14389dd58efea289d7e85}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F11@{V\-K\-\_\-\-F11}}
+\index{V\-K\-\_\-\-F11@{V\-K\-\_\-\-F11}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F11}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F11~0x78}}\label{keyboard_8h_a931a21adc2a14389dd58efea289d7e85}
+
+
+Definition at line 82 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a12dd4c8fc1b7a9db934129125c10d1b1}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F12@{V\-K\-\_\-\-F12}}
+\index{V\-K\-\_\-\-F12@{V\-K\-\_\-\-F12}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F12}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F12~0x07}}\label{keyboard_8h_a12dd4c8fc1b7a9db934129125c10d1b1}
+
+
+Definition at line 83 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_aff9167e4eb7be0ab775fec5ee7523175}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F2@{V\-K\-\_\-\-F2}}
+\index{V\-K\-\_\-\-F2@{V\-K\-\_\-\-F2}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F2}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F2~0x06}}\label{keyboard_8h_aff9167e4eb7be0ab775fec5ee7523175}
+
+
+Definition at line 73 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_aacb83ecf66c70b6eed3fb22e92349385}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F3@{V\-K\-\_\-\-F3}}
+\index{V\-K\-\_\-\-F3@{V\-K\-\_\-\-F3}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F3}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F3~0x04}}\label{keyboard_8h_aacb83ecf66c70b6eed3fb22e92349385}
+
+
+Definition at line 74 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_ab35b2e0b4b5d1dee80e45966ba4b772d}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F4@{V\-K\-\_\-\-F4}}
+\index{V\-K\-\_\-\-F4@{V\-K\-\_\-\-F4}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F4}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F4~0x0\-C}}\label{keyboard_8h_ab35b2e0b4b5d1dee80e45966ba4b772d}
+
+
+Definition at line 75 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a90b6cd2ef046494641cf7b60564f908f}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F5@{V\-K\-\_\-\-F5}}
+\index{V\-K\-\_\-\-F5@{V\-K\-\_\-\-F5}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F5}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F5~0x03}}\label{keyboard_8h_a90b6cd2ef046494641cf7b60564f908f}
+
+
+Definition at line 76 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a7215a07e88f067d431504b097bf0e1b3}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F6@{V\-K\-\_\-\-F6}}
+\index{V\-K\-\_\-\-F6@{V\-K\-\_\-\-F6}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F6}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F6~0x0\-B}}\label{keyboard_8h_a7215a07e88f067d431504b097bf0e1b3}
+
+
+Definition at line 77 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_af222f57fae9b15ae1cffaf4071df4ca4}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F7@{V\-K\-\_\-\-F7}}
+\index{V\-K\-\_\-\-F7@{V\-K\-\_\-\-F7}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F7}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F7~0x83}}\label{keyboard_8h_af222f57fae9b15ae1cffaf4071df4ca4}
+
+
+Definition at line 78 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a9425bbc6e3fe5f41a16fa0612dff4f97}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F8@{V\-K\-\_\-\-F8}}
+\index{V\-K\-\_\-\-F8@{V\-K\-\_\-\-F8}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F8}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F8~0x0\-A}}\label{keyboard_8h_a9425bbc6e3fe5f41a16fa0612dff4f97}
+
+
+Definition at line 79 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a1974b8ff0eb8a38091fa507354b4ff99}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-F9@{V\-K\-\_\-\-F9}}
+\index{V\-K\-\_\-\-F9@{V\-K\-\_\-\-F9}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-F9}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-F9~0x01}}\label{keyboard_8h_a1974b8ff0eb8a38091fa507354b4ff99}
+
+
+Definition at line 80 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a72d76f1133ea28328ceabd72962731a6}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-G@{V\-K\-\_\-\-G}}
+\index{V\-K\-\_\-\-G@{V\-K\-\_\-\-G}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-G~0x34}}\label{keyboard_8h_a72d76f1133ea28328ceabd72962731a6}
+
+
+Definition at line 33 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_ac01550a2338bbaac58a5577821e10caf}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-H@{V\-K\-\_\-\-H}}
+\index{V\-K\-\_\-\-H@{V\-K\-\_\-\-H}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-H~0x33}}\label{keyboard_8h_ac01550a2338bbaac58a5577821e10caf}
+
+
+Definition at line 34 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a9972164a8a7632164cce64d99c7a9683}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-H\-O\-M\-E@{V\-K\-\_\-\-H\-O\-M\-E}}
+\index{V\-K\-\_\-\-H\-O\-M\-E@{V\-K\-\_\-\-H\-O\-M\-E}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-H\-O\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-H\-O\-M\-E~0x6\-C}}\label{keyboard_8h_a9972164a8a7632164cce64d99c7a9683}
+
+
+Definition at line 88 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a6d18888ef56ecbc75ec8f87d2e7c9142}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-I@{V\-K\-\_\-\-I}}
+\index{V\-K\-\_\-\-I@{V\-K\-\_\-\-I}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-I~0x43}}\label{keyboard_8h_a6d18888ef56ecbc75ec8f87d2e7c9142}
+
+
+Definition at line 35 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_af4e08c8eaec785dd4292b944ae5383c4}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-I\-N\-S\-E\-R\-T@{V\-K\-\_\-\-I\-N\-S\-E\-R\-T}}
+\index{V\-K\-\_\-\-I\-N\-S\-E\-R\-T@{V\-K\-\_\-\-I\-N\-S\-E\-R\-T}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-I\-N\-S\-E\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-I\-N\-S\-E\-R\-T~0x70}}\label{keyboard_8h_af4e08c8eaec785dd4292b944ae5383c4}
+
+
+Definition at line 87 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a8f9fe9e7e3401f5305ae70a71cdebf39}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-J@{V\-K\-\_\-\-J}}
+\index{V\-K\-\_\-\-J@{V\-K\-\_\-\-J}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-J}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-J~0x3\-B}}\label{keyboard_8h_a8f9fe9e7e3401f5305ae70a71cdebf39}
+
+
+Definition at line 36 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_ab7db50920f49d7380d6f52c68f230f4b}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-K@{V\-K\-\_\-\-K}}
+\index{V\-K\-\_\-\-K@{V\-K\-\_\-\-K}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-K~0x42}}\label{keyboard_8h_ab7db50920f49d7380d6f52c68f230f4b}
+
+
+Definition at line 37 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_ad1c583a994af20454a27c25fbf6088cb}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-L@{V\-K\-\_\-\-L}}
+\index{V\-K\-\_\-\-L@{V\-K\-\_\-\-L}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-L~0x4\-B}}\label{keyboard_8h_ad1c583a994af20454a27c25fbf6088cb}
+
+
+Definition at line 38 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a73644288bc5d06fea9cb9392523b225f}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-M@{V\-K\-\_\-\-M}}
+\index{V\-K\-\_\-\-M@{V\-K\-\_\-\-M}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-M~0x3\-A}}\label{keyboard_8h_a73644288bc5d06fea9cb9392523b225f}
+
+
+Definition at line 39 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a7578282e14756d1ef3ff32477a219422}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-N@{V\-K\-\_\-\-N}}
+\index{V\-K\-\_\-\-N@{V\-K\-\_\-\-N}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-N~0x31}}\label{keyboard_8h_a7578282e14756d1ef3ff32477a219422}
+
+
+Definition at line 40 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a25395c3448e1f7ad6d9a71bca561117b}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-N\-U\-M@{V\-K\-\_\-\-N\-U\-M}}
+\index{V\-K\-\_\-\-N\-U\-M@{V\-K\-\_\-\-N\-U\-M}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-N\-U\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-N\-U\-M~0x77}}\label{keyboard_8h_a25395c3448e1f7ad6d9a71bca561117b}
+
+
+Definition at line 97 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a748bf1daacf9d7abcf60669b556cc7d7}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-O@{V\-K\-\_\-\-O}}
+\index{V\-K\-\_\-\-O@{V\-K\-\_\-\-O}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-O~0x44}}\label{keyboard_8h_a748bf1daacf9d7abcf60669b556cc7d7}
+
+
+Definition at line 41 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a8bd2b0b15e29247f8874f712ff7699a5}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-P@{V\-K\-\_\-\-P}}
+\index{V\-K\-\_\-\-P@{V\-K\-\_\-\-P}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-P~0x4\-D}}\label{keyboard_8h_a8bd2b0b15e29247f8874f712ff7699a5}
+
+
+Definition at line 42 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a1abaf23b676d86dc4dd24ef8347e8598}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-P\-A\-G\-E\-D\-O\-W\-N@{V\-K\-\_\-\-P\-A\-G\-E\-D\-O\-W\-N}}
+\index{V\-K\-\_\-\-P\-A\-G\-E\-D\-O\-W\-N@{V\-K\-\_\-\-P\-A\-G\-E\-D\-O\-W\-N}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-P\-A\-G\-E\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-P\-A\-G\-E\-D\-O\-W\-N~0x7\-A}}\label{keyboard_8h_a1abaf23b676d86dc4dd24ef8347e8598}
+
+
+Definition at line 92 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_aa3833e7459f3dd1e22c7f8a4f6d4ebe5}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-P\-A\-G\-E\-U\-P@{V\-K\-\_\-\-P\-A\-G\-E\-U\-P}}
+\index{V\-K\-\_\-\-P\-A\-G\-E\-U\-P@{V\-K\-\_\-\-P\-A\-G\-E\-U\-P}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-P\-A\-G\-E\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-P\-A\-G\-E\-U\-P~0x7\-D}}\label{keyboard_8h_aa3833e7459f3dd1e22c7f8a4f6d4ebe5}
+
+
+Definition at line 89 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a7456d958530f550b6729f9eb02c8aaa8}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-P\-A\-U\-S\-E@{V\-K\-\_\-\-P\-A\-U\-S\-E}}
+\index{V\-K\-\_\-\-P\-A\-U\-S\-E@{V\-K\-\_\-\-P\-A\-U\-S\-E}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-P\-A\-U\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-P\-A\-U\-S\-E~0x77}}\label{keyboard_8h_a7456d958530f550b6729f9eb02c8aaa8}
+
+
+Definition at line 86 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a408e0b5fa324b7ef8e13cbe1b67fdfe4}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-P\-R\-I\-N\-T\-C\-R\-E\-E\-N@{V\-K\-\_\-\-P\-R\-I\-N\-T\-C\-R\-E\-E\-N}}
+\index{V\-K\-\_\-\-P\-R\-I\-N\-T\-C\-R\-E\-E\-N@{V\-K\-\_\-\-P\-R\-I\-N\-T\-C\-R\-E\-E\-N}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-P\-R\-I\-N\-T\-C\-R\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-P\-R\-I\-N\-T\-C\-R\-E\-E\-N~0x12}}\label{keyboard_8h_a408e0b5fa324b7ef8e13cbe1b67fdfe4}
+
+
+Definition at line 84 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a67cb6976cdad53b42036de3c8c32cf53}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-Q@{V\-K\-\_\-\-Q}}
+\index{V\-K\-\_\-\-Q@{V\-K\-\_\-\-Q}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-Q~0x15}}\label{keyboard_8h_a67cb6976cdad53b42036de3c8c32cf53}
+
+
+Definition at line 43 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_abef161b63d5ad67cdcb765a4885b8b9a}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-R@{V\-K\-\_\-\-R}}
+\index{V\-K\-\_\-\-R@{V\-K\-\_\-\-R}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-R~0x2\-D}}\label{keyboard_8h_abef161b63d5ad67cdcb765a4885b8b9a}
+
+
+Definition at line 44 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a85bfd49b27d95606f07e02f2d4eed52b}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-S@{V\-K\-\_\-\-S}}
+\index{V\-K\-\_\-\-S@{V\-K\-\_\-\-S}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-S~0x1\-B}}\label{keyboard_8h_a85bfd49b27d95606f07e02f2d4eed52b}
+
+
+Definition at line 45 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a4b846ea3385e8c57315f31d80ba7c713}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-S\-C\-R\-O\-L\-L@{V\-K\-\_\-\-S\-C\-R\-O\-L\-L}}
+\index{V\-K\-\_\-\-S\-C\-R\-O\-L\-L@{V\-K\-\_\-\-S\-C\-R\-O\-L\-L}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-S\-C\-R\-O\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-S\-C\-R\-O\-L\-L~0x7\-E}}\label{keyboard_8h_a4b846ea3385e8c57315f31d80ba7c713}
+
+
+Definition at line 85 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a3cad4e968af2be01ec337e4ef3c0e787}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-S\-H\-I\-F\-T\-L@{V\-K\-\_\-\-S\-H\-I\-F\-T\-L}}
+\index{V\-K\-\_\-\-S\-H\-I\-F\-T\-L@{V\-K\-\_\-\-S\-H\-I\-F\-T\-L}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-S\-H\-I\-F\-T\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-S\-H\-I\-F\-T\-L~0x12}}\label{keyboard_8h_a3cad4e968af2be01ec337e4ef3c0e787}
+
+
+Definition at line 67 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a3c989cdf70f9b116d64e2a56cb878211}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-S\-P\-A\-C\-E@{V\-K\-\_\-\-S\-P\-A\-C\-E}}
+\index{V\-K\-\_\-\-S\-P\-A\-C\-E@{V\-K\-\_\-\-S\-P\-A\-C\-E}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-S\-P\-A\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-S\-P\-A\-C\-E~0x29}}\label{keyboard_8h_a3c989cdf70f9b116d64e2a56cb878211}
+
+
+Definition at line 64 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_ad707e147202ea0273addfff82d9279f8}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-T@{V\-K\-\_\-\-T}}
+\index{V\-K\-\_\-\-T@{V\-K\-\_\-\-T}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-T~0x2\-C}}\label{keyboard_8h_ad707e147202ea0273addfff82d9279f8}
+
+
+Definition at line 46 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a16259796c1f88c8471051842370ac609}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-T\-A\-B@{V\-K\-\_\-\-T\-A\-B}}
+\index{V\-K\-\_\-\-T\-A\-B@{V\-K\-\_\-\-T\-A\-B}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-T\-A\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-T\-A\-B~0x0\-D}}\label{keyboard_8h_a16259796c1f88c8471051842370ac609}
+
+
+Definition at line 65 of file keyboard.\-h.
+
+\hypertarget{keyboard_8h_a454cc08f7dae5836b12c6b6e950f0577}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-U@{V\-K\-\_\-\-U}}
+\index{V\-K\-\_\-\-U@{V\-K\-\_\-\-U}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-U}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-U~0x3\-C}}\label{keyboard_8h_a454cc08f7dae5836b12c6b6e950f0577}
+
+
+Definition at line 47 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a24c0a2192f997b6107b74b715a478da2}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-V@{V\-K\-\_\-\-V}}
+\index{V\-K\-\_\-\-V@{V\-K\-\_\-\-V}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-V~0x2\-A}}\label{keyboard_8h_a24c0a2192f997b6107b74b715a478da2}
+
+
+Definition at line 48 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_aaf02cb1d930f785b10a398eda50dbe13}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-W@{V\-K\-\_\-\-W}}
+\index{V\-K\-\_\-\-W@{V\-K\-\_\-\-W}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-W~0x1\-D}}\label{keyboard_8h_aaf02cb1d930f785b10a398eda50dbe13}
+
+
+Definition at line 49 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_aa906bf609704891b18f8a0f87b250dbf}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-X@{V\-K\-\_\-\-X}}
+\index{V\-K\-\_\-\-X@{V\-K\-\_\-\-X}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-X~0x22}}\label{keyboard_8h_aa906bf609704891b18f8a0f87b250dbf}
+
+
+Definition at line 50 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_a2d2c0b3ea188c63545f0350de90883d3}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-Y@{V\-K\-\_\-\-Y}}
+\index{V\-K\-\_\-\-Y@{V\-K\-\_\-\-Y}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-Y~0x35}}\label{keyboard_8h_a2d2c0b3ea188c63545f0350de90883d3}
+
+
+Definition at line 51 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+\hypertarget{keyboard_8h_ae23ec14cce5f745acff0b9983c7dbb44}{\index{keyboard.\-h@{keyboard.\-h}!V\-K\-\_\-\-Z@{V\-K\-\_\-\-Z}}
+\index{V\-K\-\_\-\-Z@{V\-K\-\_\-\-Z}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{V\-K\-\_\-\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-K\-\_\-\-Z~0x1\-A}}\label{keyboard_8h_ae23ec14cce5f745acff0b9983c7dbb44}
+
+
+Definition at line 52 of file keyboard.\-h.
+
+
+
+Referenced by keyboard\-\_\-translate().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{keyboard_8h_a89d90e097f9606c769505c8b2d166f36}{\index{keyboard.\-h@{keyboard.\-h}!keyboard\-\_\-read@{keyboard\-\_\-read}}
+\index{keyboard\-\_\-read@{keyboard\-\_\-read}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{keyboard\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char keyboard\-\_\-read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{keyboard_8h_a89d90e097f9606c769505c8b2d166f36}
+
+
+Definition at line 170 of file keyboard.\-h.
+
+
+
+References keyboard\-\_\-readvk(), and keyboard\-\_\-translate().
+
+
+
+Referenced by keyboard\-\_\-readline().
+
+
+\begin{DoxyCode}
+171 \{
+172     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} vk=\hyperlink{keyboard_8h_a440c3aa7604a1506cb6b56a2a8efe49a}{keyboard\_readvk}();
+173     \textcolor{keywordflow}{return} \hyperlink{keyboard_8h_a215177194e9dacbf3946e79d6a02993d}{keyboard\_translate}(vk);
+174 \}
+\end{DoxyCode}
+\hypertarget{keyboard_8h_af62b0e7b8fd0edaaa9e35523c7f35012}{\index{keyboard.\-h@{keyboard.\-h}!keyboard\-\_\-readline@{keyboard\-\_\-readline}}
+\index{keyboard\-\_\-readline@{keyboard\-\_\-readline}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{keyboard\-\_\-readline}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ keyboard\-\_\-readline (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{keyboard_8h_af62b0e7b8fd0edaaa9e35523c7f35012}
+
+
+Definition at line 177 of file keyboard.\-h.
+
+
+
+References keyboard\-\_\-read(), and R\-E\-A\-D\-L\-I\-N\-E\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-R\-S.
+
+
+\begin{DoxyCode}
+178 \{
+179     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} str[\hyperlink{keyboard_8h_a346cb9771d7c29052fe9bad0e6937c4b}{READLINE\_MAX\_CHARS}],i,tmp;
+180     \textcolor{keywordflow}{for}(i=0;i<\hyperlink{keyboard_8h_a346cb9771d7c29052fe9bad0e6937c4b}{READLINE\_MAX\_CHARS}-1;i++)
+181     \{
+182         tmp=\hyperlink{keyboard_8h_a89d90e097f9606c769505c8b2d166f36}{keyboard\_read}();
+183         \textcolor{keywordflow}{if}((tmp!=\textcolor{charliteral}{'\(\backslash\)n'})&&(tmp!=\textcolor{charliteral}{'\(\backslash\)r'}))
+184             str[i]=tmp;
+185         \textcolor{keywordflow}{else}
+186             \textcolor{keywordflow}{break};
+187     \}
+188     str[i]=\textcolor{charliteral}{'\(\backslash\)0'};
+189     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)str;
+190 \}
+\end{DoxyCode}
+\hypertarget{keyboard_8h_a440c3aa7604a1506cb6b56a2a8efe49a}{\index{keyboard.\-h@{keyboard.\-h}!keyboard\-\_\-readvk@{keyboard\-\_\-readvk}}
+\index{keyboard\-\_\-readvk@{keyboard\-\_\-readvk}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{keyboard\-\_\-readvk}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char keyboard\-\_\-readvk (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{keyboard_8h_a440c3aa7604a1506cb6b56a2a8efe49a}
+
+
+Definition at line 100 of file keyboard.\-h.
+
+
+
+References ps2\-\_\-available(), and ps2\-\_\-read().
+
+
+
+Referenced by keyboard\-\_\-read().
+
+
+\begin{DoxyCode}
+101 \{
+102     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} readed=\textcolor{charliteral}{'\(\backslash\)0'},i=2;
+103 \textcolor{preprocessor}{#ifdef EMPTY\_BUFFER}
+104 \textcolor{preprocessor}{}    \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_a3289ae03b20734d67c17ec8ee7517175}{ps2\_available}())
+105         \hyperlink{ps2_8h_a134e820367f965bcc2c3ae4d2ad22b01}{ps2\_read}();
+106 \textcolor{preprocessor}{#endif}
+107 \textcolor{preprocessor}{}    \textcolor{keywordflow}{while}(!\hyperlink{ps2_8h_a3289ae03b20734d67c17ec8ee7517175}{ps2\_available}());
+108     readed=\hyperlink{ps2_8h_a134e820367f965bcc2c3ae4d2ad22b01}{ps2\_read}();
+109     \textcolor{keywordflow}{while}(i>0)
+110     \{
+111         \textcolor{keywordflow}{while}(!\hyperlink{ps2_8h_a3289ae03b20734d67c17ec8ee7517175}{ps2\_available}());
+112         \hyperlink{ps2_8h_a134e820367f965bcc2c3ae4d2ad22b01}{ps2\_read}();
+113         i--;
+114     \}
+115     \textcolor{keywordflow}{return} readed;
+116 \}
+\end{DoxyCode}
+\hypertarget{keyboard_8h_a215177194e9dacbf3946e79d6a02993d}{\index{keyboard.\-h@{keyboard.\-h}!keyboard\-\_\-translate@{keyboard\-\_\-translate}}
+\index{keyboard\-\_\-translate@{keyboard\-\_\-translate}!keyboard.h@{keyboard.\-h}}
+\subsubsection[{keyboard\-\_\-translate}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char keyboard\-\_\-translate (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{vk}
+\end{DoxyParamCaption}
+)}}\label{keyboard_8h_a215177194e9dacbf3946e79d6a02993d}
+
+
+Definition at line 119 of file keyboard.\-h.
+
+
+
+References V\-K\-\_\-0, V\-K\-\_\-1, V\-K\-\_\-2, V\-K\-\_\-3, V\-K\-\_\-4, V\-K\-\_\-5, V\-K\-\_\-6, V\-K\-\_\-7, V\-K\-\_\-8, V\-K\-\_\-9, V\-K\-\_\-\-A, V\-K\-\_\-\-B, V\-K\-\_\-\-C, V\-K\-\_\-\-D, V\-K\-\_\-\-E, V\-K\-\_\-\-E\-N\-T\-E\-R, V\-K\-\_\-\-F, V\-K\-\_\-\-G, V\-K\-\_\-\-H, V\-K\-\_\-\-I, V\-K\-\_\-\-J, V\-K\-\_\-\-K, V\-K\-\_\-\-L, V\-K\-\_\-\-M, V\-K\-\_\-\-N, V\-K\-\_\-\-O, V\-K\-\_\-\-P, V\-K\-\_\-\-Q, V\-K\-\_\-\-R, V\-K\-\_\-\-S, V\-K\-\_\-\-S\-P\-A\-C\-E, V\-K\-\_\-\-T, V\-K\-\_\-\-U, V\-K\-\_\-\-V, V\-K\-\_\-\-W, V\-K\-\_\-\-X, V\-K\-\_\-\-Y, and V\-K\-\_\-\-Z.
+
+
+
+Referenced by keyboard\-\_\-read().
+
+
+\begin{DoxyCode}
+120 \{
+121     \textcolor{keywordflow}{switch}(vk)
+122     \{
+123         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a88c14c1220364b962ebc6ef8dac7c886}{VK\_A}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'a'};
+124         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a8ba406819068ece94ec12d6e3cdb005b}{VK\_B}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'b'};
+125         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a741e642aa9526f847669bd6d9fb9fe24}{VK\_C}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'c'};
+126         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a152a1533bc941e617aed27d9b485ba0a}{VK\_D}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'d'};
+127         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a4008642a75463ea4d810fc2ad95d9c7e}{VK\_E}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'e'};
+128         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a7db1627e3db3b620e021f2a6df438396}{VK\_F}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'f'};
+129         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a72d76f1133ea28328ceabd72962731a6}{VK\_G}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'g'};
+130         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_ac01550a2338bbaac58a5577821e10caf}{VK\_H}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'h'};
+131         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a6d18888ef56ecbc75ec8f87d2e7c9142}{VK\_I}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'i'};
+132         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a8f9fe9e7e3401f5305ae70a71cdebf39}{VK\_J}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'j'};
+133         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_ab7db50920f49d7380d6f52c68f230f4b}{VK\_K}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'k'};
+134         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_ad1c583a994af20454a27c25fbf6088cb}{VK\_L}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'l'};
+135         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a73644288bc5d06fea9cb9392523b225f}{VK\_M}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'m'};
+136         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a7578282e14756d1ef3ff32477a219422}{VK\_N}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'n'};
+137         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a748bf1daacf9d7abcf60669b556cc7d7}{VK\_O}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'o'};
+138         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a8bd2b0b15e29247f8874f712ff7699a5}{VK\_P}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'p'};
+139         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a67cb6976cdad53b42036de3c8c32cf53}{VK\_Q}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'q'};
+140         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_abef161b63d5ad67cdcb765a4885b8b9a}{VK\_R}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'r'};
+141         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a85bfd49b27d95606f07e02f2d4eed52b}{VK\_S}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'s'};
+142         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_ad707e147202ea0273addfff82d9279f8}{VK\_T}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'t'};
+143         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a454cc08f7dae5836b12c6b6e950f0577}{VK\_U}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'u'};
+144         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a24c0a2192f997b6107b74b715a478da2}{VK\_V}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'v'};
+145         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_aaf02cb1d930f785b10a398eda50dbe13}{VK\_W}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'w'};
+146         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_aa906bf609704891b18f8a0f87b250dbf}{VK\_X}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'x'};
+147         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a2d2c0b3ea188c63545f0350de90883d3}{VK\_Y}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'y'};
+148         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_ae23ec14cce5f745acff0b9983c7dbb44}{VK\_Z}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'z'};
+149         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_ad04b423713967d9cec592d64587d1b84}{VK\_0}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'0'};
+150         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a6a75a9ddd28a10ec6d2dc2c1f7064432}{VK\_1}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'1'};
+151         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a73e274c8a69ba304209c62020cf276b9}{VK\_2}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'2'};
+152         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a4750985be6d6bdd586719d8cf1053151}{VK\_3}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'3'};
+153         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a23a11474f33ae50b8f6bd17087d656b4}{VK\_4}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'4'};
+154         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a17f7d5a88ed2433373bc8928463a5ca2}{VK\_5}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'5'};
+155         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a2c7c5a575165365dbd20abeb5eb9ffb4}{VK\_6}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'6'};
+156         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a177171b5531dab25d17e1896eb0b8bb9}{VK\_7}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'7'};
+157         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a4fa31f017860dad584379f9bbcaa2c42}{VK\_8}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'8'};
+158         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_af90b5c91ee61518d7e72d280c31f551c}{VK\_9}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'9'};
+159         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a213055427e4a5776f0e7e67b395d6701}{VK\_ENTER}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'\(\backslash\)n'};
+160         \textcolor{keywordflow}{case} \hyperlink{keyboard_8h_a3c989cdf70f9b116d64e2a56cb878211}{VK\_SPACE}: \textcolor{keywordflow}{return} \textcolor{charliteral}{' '};
+161 \textcolor{preprocessor}{#ifdef READ\_DEFAULT\_NULL}
+162 \textcolor{preprocessor}{}        \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} \textcolor{charliteral}{'\(\backslash\)0'};
+163 \textcolor{preprocessor}{#else}
+164 \textcolor{preprocessor}{}        \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} vk;
+165 \textcolor{preprocessor}{#endif}
+166 \textcolor{preprocessor}{}    \}
+167 \}
+\end{DoxyCode}

@@ -1,0 +1,175 @@
+\hypertarget{eeprom_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/eeprom.c File Reference}
+\label{eeprom_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/eeprom.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/eeprom.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{eeprom_8c_aeb0f14c9b241b6ba7cb2c7a2e7b9aa49}{\-\_\-\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{eeprom_8c_a0ec7a3ec1c19f698f90a829ccd15a2dd}{E\-E\-P\-R\-O\-M\-\_\-read8} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} address)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{eeprom_8c_a0a85a62f58e7855aebad509294df00e1}{E\-E\-P\-R\-O\-M\-\_\-read16} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} address)
+\item 
+void \hyperlink{eeprom_8c_abdeb2ab6dc19d10f8e378986caf73eff}{E\-E\-P\-R\-O\-M\-\_\-write8} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} address, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} mydata)
+\item 
+void \hyperlink{eeprom_8c_a9cc1a27d5c7aa49f2473ced63e5d9c11}{E\-E\-P\-R\-O\-M\-\_\-write16} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} address, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} mydata)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{eeprom_8c_aeb0f14c9b241b6ba7cb2c7a2e7b9aa49}{\index{eeprom.\-c@{eeprom.\-c}!\-\_\-\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-C@{\-\_\-\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-C@{\-\_\-\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-C}!eeprom.c@{eeprom.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-E\-E\-P\-R\-O\-M\-\_\-\-C}}\label{eeprom_8c_aeb0f14c9b241b6ba7cb2c7a2e7b9aa49}
+
+
+Definition at line 29 of file eeprom.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{eeprom_8c_a0a85a62f58e7855aebad509294df00e1}{\index{eeprom.\-c@{eeprom.\-c}!E\-E\-P\-R\-O\-M\-\_\-read16@{E\-E\-P\-R\-O\-M\-\_\-read16}}
+\index{E\-E\-P\-R\-O\-M\-\_\-read16@{E\-E\-P\-R\-O\-M\-\_\-read16}!eeprom.c@{eeprom.\-c}}
+\subsubsection[{E\-E\-P\-R\-O\-M\-\_\-read16}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} E\-E\-P\-R\-O\-M\-\_\-read16 (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address}
+\end{DoxyParamCaption}
+)}}\label{eeprom_8c_a0a85a62f58e7855aebad509294df00e1}
+
+
+ \subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- my\-E\-E\-P\-R\-O\-M\-\_\-read16() }
+
+\subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- Routine de lecture d'un 16-\/bit en eeprom }
+
+Definition at line 62 of file eeprom.\-c.
+
+
+
+References E\-E\-P\-R\-O\-M\-\_\-read8().
+
+
+\begin{DoxyCode}
+63 \{
+64     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} hibyte;
+65     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} lobyte;
+66     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} mydata;
+67 
+68     hibyte = \hyperlink{eeprom_8c_a0ec7a3ec1c19f698f90a829ccd15a2dd}{EEPROM\_read8}(address);
+69     lobyte = \hyperlink{eeprom_8c_a0ec7a3ec1c19f698f90a829ccd15a2dd}{EEPROM\_read8}(address+1);
+70     mydata = (hibyte << 8) | lobyte;
+71     \textcolor{keywordflow}{return} mydata;
+72 \}
+\end{DoxyCode}
+\hypertarget{eeprom_8c_a0ec7a3ec1c19f698f90a829ccd15a2dd}{\index{eeprom.\-c@{eeprom.\-c}!E\-E\-P\-R\-O\-M\-\_\-read8@{E\-E\-P\-R\-O\-M\-\_\-read8}}
+\index{E\-E\-P\-R\-O\-M\-\_\-read8@{E\-E\-P\-R\-O\-M\-\_\-read8}!eeprom.c@{eeprom.\-c}}
+\subsubsection[{E\-E\-P\-R\-O\-M\-\_\-read8}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} E\-E\-P\-R\-O\-M\-\_\-read8 (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address}
+\end{DoxyParamCaption}
+)}}\label{eeprom_8c_a0ec7a3ec1c19f698f90a829ccd15a2dd}
+
+
+ \subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- my\-E\-E\-P\-R\-O\-M\-\_\-read8() }
+
+-\/-\/-\/-\/-\/-\/-\/--- Routine de lecture en eeprom \subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- (c) Raphael Wimmer. Licensed under G\-N\-U G\-P\-L v2 or higher }
+
+Definition at line 47 of file eeprom.\-c.
+
+
+
+Referenced by E\-E\-P\-R\-O\-M\-\_\-read16().
+
+
+\begin{DoxyCode}
+48 \{
+49     EEADR = address;
+50     EECON1bits.EEPGD = 0;
+51     EECON1bits.CFGS = 0;
+52     EECON1bits.RD = 1;
+53     \textcolor{keywordflow}{return} EEDATA;
+54 \}
+\end{DoxyCode}
+\hypertarget{eeprom_8c_a9cc1a27d5c7aa49f2473ced63e5d9c11}{\index{eeprom.\-c@{eeprom.\-c}!E\-E\-P\-R\-O\-M\-\_\-write16@{E\-E\-P\-R\-O\-M\-\_\-write16}}
+\index{E\-E\-P\-R\-O\-M\-\_\-write16@{E\-E\-P\-R\-O\-M\-\_\-write16}!eeprom.c@{eeprom.\-c}}
+\subsubsection[{E\-E\-P\-R\-O\-M\-\_\-write16}]{\setlength{\rightskip}{0pt plus 5cm}void E\-E\-P\-R\-O\-M\-\_\-write16 (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u16}}]{mydata}
+\end{DoxyParamCaption}
+)}}\label{eeprom_8c_a9cc1a27d5c7aa49f2473ced63e5d9c11}
+
+
+ \subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- my\-E\-E\-P\-R\-O\-M\-\_\-write16() }
+
+\subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- Routine d'écriture d'un 16-\/bit en eeprom }
+
+Definition at line 113 of file eeprom.\-c.
+
+
+
+References E\-E\-P\-R\-O\-M\-\_\-write8(), high8, and low8.
+
+
+\begin{DoxyCode}
+114 \{
+115     \textcolor{comment}{//u8 hibyte;}
+116     \textcolor{comment}{//u8 lobyte;}
+117 
+118     \textcolor{comment}{//lobyte = (u8)mydata;}
+119     \textcolor{comment}{//hibyte = (u8)(mydata >> 8);}
+120     \hyperlink{eeprom_8c_abdeb2ab6dc19d10f8e378986caf73eff}{EEPROM\_write8}(address,   \hyperlink{p8_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}{high8}(mydata));
+121     \hyperlink{eeprom_8c_abdeb2ab6dc19d10f8e378986caf73eff}{EEPROM\_write8}(address+1, \hyperlink{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{low8}(mydata));
+122 \}
+\end{DoxyCode}
+\hypertarget{eeprom_8c_abdeb2ab6dc19d10f8e378986caf73eff}{\index{eeprom.\-c@{eeprom.\-c}!E\-E\-P\-R\-O\-M\-\_\-write8@{E\-E\-P\-R\-O\-M\-\_\-write8}}
+\index{E\-E\-P\-R\-O\-M\-\_\-write8@{E\-E\-P\-R\-O\-M\-\_\-write8}!eeprom.c@{eeprom.\-c}}
+\subsubsection[{E\-E\-P\-R\-O\-M\-\_\-write8}]{\setlength{\rightskip}{0pt plus 5cm}void E\-E\-P\-R\-O\-M\-\_\-write8 (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8}}]{mydata}
+\end{DoxyParamCaption}
+)}}\label{eeprom_8c_abdeb2ab6dc19d10f8e378986caf73eff}
+
+
+ \subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- my\-E\-E\-P\-R\-O\-M\-\_\-write8() }
+
+-\/-\/-\/-\/-\/-\/-\/--- Routine d'écriture d'un 8-\/bit en eeprom \subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- (c) Raphael Wimmer. Licensed under G\-N\-U G\-P\-L v2 or higher }
+
+Definition at line 81 of file eeprom.\-c.
+
+
+
+Referenced by E\-E\-P\-R\-O\-M\-\_\-write16().
+
+
+\begin{DoxyCode}
+82 \{
+83     EEADR = address;
+84     EEDATA = mydata;
+85     \textcolor{comment}{// start write sequence as described in datasheet, page 91}
+86     EECON1bits.EEPGD = 0;
+87     EECON1bits.CFGS = 0;
+88     EECON1bits.WREN = 1;    \textcolor{comment}{// enable writes to data EEPROM}
+89     INTCONbits.GIE = 0;     \textcolor{comment}{// disable interrupts}
+90     EECON2 = 0x55;
+91     EECON2 = 0x0AA;
+92     EECON1bits.WR = 1;      \textcolor{comment}{// start writing}
+93     \textcolor{keywordflow}{while} (EECON1bits.WR)
+94     \{
+95         Nop();
+96     \}
+97     \textcolor{keywordflow}{if} (EECON1bits.WRERR)
+98     \{
+99 \textcolor{preprocessor}{    #ifdef DEBUG}
+100 \textcolor{preprocessor}{}        serial\_printf(\textcolor{stringliteral}{"Writing Error !"});
+101 \textcolor{preprocessor}{    #endif}
+102 \textcolor{preprocessor}{}    \}
+103     EECON1bits.WREN = 0;
+104     INTCONbits.GIE = 1; \textcolor{comment}{// enable interrupts}
+105 \}
+\end{DoxyCode}

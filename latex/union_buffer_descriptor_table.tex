@@ -1,0 +1,146 @@
+\hypertarget{union_buffer_descriptor_table}{\section{Buffer\-Descriptor\-Table Union Reference}
+\label{union_buffer_descriptor_table}\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}}
+}
+
+
+{\ttfamily \#include $<$pic\-U\-S\-B.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{union_b_d_stat}{BDStat} \hyperlink{union_buffer_descriptor_table_a6cd0cf5f5c11f77a2597bd70e392b4b8}{Stat}\\
+\>\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{union_buffer_descriptor_table_a9cb3e00771d7b26cb7d86fc95aa48492}{Cnt}\\
+\>\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{union_buffer_descriptor_table_a77e1802393acbdeaa4cb4b03cd835812}{ADRL}\\
+\>\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{union_buffer_descriptor_table_a4a0bc5412324724c0f8ee123276dc88b}{ADRH}\\
+\}; \\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>unsigned \hyperlink{union_buffer_descriptor_table_adf71f3d8410c1f1dbbc96680a92c49af}{\_\_pad0\_\_}:8\\
+\>unsigned \hyperlink{union_buffer_descriptor_table_acaf2d0924a107ec6e8d2e31febaf66f9}{\_\_pad1\_\_}:8\\
+\>\_\_data \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} $\ast$ \hyperlink{union_buffer_descriptor_table_ae370db99fcc6c8e4871c20ccfb6959f3}{ADDR}\\
+\}; \\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{union_b_d_stat}{BDStat} \hyperlink{union_buffer_descriptor_table_a6cd0cf5f5c11f77a2597bd70e392b4b8}{Stat}\\
+\>unsigned char \hyperlink{union_buffer_descriptor_table_a993db247f4d91af55d6e7d23e79af388}{Cnt}\\
+\>unsigned char \hyperlink{union_buffer_descriptor_table_ac844d9c6a5693226cd0a118457f1136b}{ADRL}\\
+\>unsigned char \hyperlink{union_buffer_descriptor_table_a88fd75c8c3e937291a788423a7958b8d}{ADRH}\\
+\}; \\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>unsigned \hyperlink{union_buffer_descriptor_table_adf71f3d8410c1f1dbbc96680a92c49af}{\_\_pad0\_\_}:8\\
+\>unsigned \hyperlink{union_buffer_descriptor_table_acaf2d0924a107ec6e8d2e31febaf66f9}{\_\_pad1\_\_}:8\\
+\>\_\_data unsigned char $\ast$ \hyperlink{union_buffer_descriptor_table_af9ea67355f60478b33f33e36a1fde262}{ADR}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Buffer Descriptor Table\par
+ See section 17.\-4 \char`\"{}\-Buffer Description and the Buffer Description Table\char`\"{} in datasheet page 171 
+
+Definition at line 140 of file pic\-U\-S\-B.\-h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{union_buffer_descriptor_table_ab3c4c2d0029792ac9cb6a88ad61dab92}{\subsubsection[{"@18}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \} }}\label{union_buffer_descriptor_table_ab3c4c2d0029792ac9cb6a88ad61dab92}
+\hypertarget{union_buffer_descriptor_table_ac1e507c1e557e3faa3c524a9c8d23241}{\subsubsection[{"@20}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \} }}\label{union_buffer_descriptor_table_ac1e507c1e557e3faa3c524a9c8d23241}
+\hypertarget{union_buffer_descriptor_table_a11bf734b6b32d8025372b1ffd9b3412a}{\subsubsection[{"@32}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \} }}\label{union_buffer_descriptor_table_a11bf734b6b32d8025372b1ffd9b3412a}
+\hypertarget{union_buffer_descriptor_table_a664cc7bfc3db99d97818d4c3d9357e3c}{\subsubsection[{"@34}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \} }}\label{union_buffer_descriptor_table_a664cc7bfc3db99d97818d4c3d9357e3c}
+\hypertarget{union_buffer_descriptor_table_adf71f3d8410c1f1dbbc96680a92c49af}{\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}!\-\_\-\-\_\-pad0\-\_\-\-\_\-@{\-\_\-\-\_\-pad0\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-pad0\-\_\-\-\_\-@{\-\_\-\-\_\-pad0\-\_\-\-\_\-}!BufferDescriptorTable@{Buffer\-Descriptor\-Table}}
+\subsubsection[{\-\_\-\-\_\-pad0\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}unsigned \-\_\-\-\_\-pad0\-\_\-\-\_\-}}\label{union_buffer_descriptor_table_adf71f3d8410c1f1dbbc96680a92c49af}
+
+
+Definition at line 151 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{union_buffer_descriptor_table_acaf2d0924a107ec6e8d2e31febaf66f9}{\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}!\-\_\-\-\_\-pad1\-\_\-\-\_\-@{\-\_\-\-\_\-pad1\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-pad1\-\_\-\-\_\-@{\-\_\-\-\_\-pad1\-\_\-\-\_\-}!BufferDescriptorTable@{Buffer\-Descriptor\-Table}}
+\subsubsection[{\-\_\-\-\_\-pad1\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}unsigned \-\_\-\-\_\-pad1\-\_\-\-\_\-}}\label{union_buffer_descriptor_table_acaf2d0924a107ec6e8d2e31febaf66f9}
+
+
+Definition at line 152 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{union_buffer_descriptor_table_ae370db99fcc6c8e4871c20ccfb6959f3}{\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}!A\-D\-D\-R@{A\-D\-D\-R}}
+\index{A\-D\-D\-R@{A\-D\-D\-R}!BufferDescriptorTable@{Buffer\-Descriptor\-Table}}
+\subsubsection[{A\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-data {\bf u16}$\ast$ A\-D\-D\-R}}\label{union_buffer_descriptor_table_ae370db99fcc6c8e4871c20ccfb6959f3}
+Buffer Address 
+
+Definition at line 153 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{union_buffer_descriptor_table_af9ea67355f60478b33f33e36a1fde262}{\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}!A\-D\-R@{A\-D\-R}}
+\index{A\-D\-R@{A\-D\-R}!BufferDescriptorTable@{Buffer\-Descriptor\-Table}}
+\subsubsection[{A\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-data unsigned char$\ast$ A\-D\-R}}\label{union_buffer_descriptor_table_af9ea67355f60478b33f33e36a1fde262}
+
+
+Definition at line 127 of file usb.\-h.
+
+\hypertarget{union_buffer_descriptor_table_a88fd75c8c3e937291a788423a7958b8d}{\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}!A\-D\-R\-H@{A\-D\-R\-H}}
+\index{A\-D\-R\-H@{A\-D\-R\-H}!BufferDescriptorTable@{Buffer\-Descriptor\-Table}}
+\subsubsection[{A\-D\-R\-H}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char A\-D\-R\-H}}\label{union_buffer_descriptor_table_a88fd75c8c3e937291a788423a7958b8d}
+
+
+Definition at line 121 of file usb.\-h.
+
+\hypertarget{union_buffer_descriptor_table_a4a0bc5412324724c0f8ee123276dc88b}{\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}!A\-D\-R\-H@{A\-D\-R\-H}}
+\index{A\-D\-R\-H@{A\-D\-R\-H}!BufferDescriptorTable@{Buffer\-Descriptor\-Table}}
+\subsubsection[{A\-D\-R\-H}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} A\-D\-R\-H}}\label{union_buffer_descriptor_table_a4a0bc5412324724c0f8ee123276dc88b}
+Buffer Address High 
+
+Definition at line 147 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{union_buffer_descriptor_table_ac844d9c6a5693226cd0a118457f1136b}{\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}!A\-D\-R\-L@{A\-D\-R\-L}}
+\index{A\-D\-R\-L@{A\-D\-R\-L}!BufferDescriptorTable@{Buffer\-Descriptor\-Table}}
+\subsubsection[{A\-D\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char A\-D\-R\-L}}\label{union_buffer_descriptor_table_ac844d9c6a5693226cd0a118457f1136b}
+
+
+Definition at line 120 of file usb.\-h.
+
+\hypertarget{union_buffer_descriptor_table_a77e1802393acbdeaa4cb4b03cd835812}{\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}!A\-D\-R\-L@{A\-D\-R\-L}}
+\index{A\-D\-R\-L@{A\-D\-R\-L}!BufferDescriptorTable@{Buffer\-Descriptor\-Table}}
+\subsubsection[{A\-D\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} A\-D\-R\-L}}\label{union_buffer_descriptor_table_a77e1802393acbdeaa4cb4b03cd835812}
+Buffer Address Low 
+
+Definition at line 146 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{union_buffer_descriptor_table_a993db247f4d91af55d6e7d23e79af388}{\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}!Cnt@{Cnt}}
+\index{Cnt@{Cnt}!BufferDescriptorTable@{Buffer\-Descriptor\-Table}}
+\subsubsection[{Cnt}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Cnt}}\label{union_buffer_descriptor_table_a993db247f4d91af55d6e7d23e79af388}
+
+
+Definition at line 119 of file usb.\-h.
+
+\hypertarget{union_buffer_descriptor_table_a9cb3e00771d7b26cb7d86fc95aa48492}{\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}!Cnt@{Cnt}}
+\index{Cnt@{Cnt}!BufferDescriptorTable@{Buffer\-Descriptor\-Table}}
+\subsubsection[{Cnt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Cnt}}\label{union_buffer_descriptor_table_a9cb3e00771d7b26cb7d86fc95aa48492}
+Number of u8s to send/sent/(that can be )received 
+
+Definition at line 145 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{union_buffer_descriptor_table_a6cd0cf5f5c11f77a2597bd70e392b4b8}{\index{Buffer\-Descriptor\-Table@{Buffer\-Descriptor\-Table}!Stat@{Stat}}
+\index{Stat@{Stat}!BufferDescriptorTable@{Buffer\-Descriptor\-Table}}
+\subsubsection[{Stat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-D\-Stat} Stat}}\label{union_buffer_descriptor_table_a6cd0cf5f5c11f77a2597bd70e392b4b8}
+Buffer Descriptor Status Register 
+
+Definition at line 144 of file pic\-U\-S\-B.\-h.
+
+
+
+The documentation for this union was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/\hyperlink{pic_u_s_b_8h}{pic\-U\-S\-B.\-h}\item 
+/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\hyperlink{usb_8h}{usb.\-h}\end{DoxyCompactItemize}

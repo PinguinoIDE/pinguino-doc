@@ -1,0 +1,119 @@
+\hypertarget{unionsetup_packet_struct}{\section{setup\-Packet\-Struct Union Reference}
+\label{unionsetup_packet_struct}\index{setup\-Packet\-Struct@{setup\-Packet\-Struct}}
+}
+
+
+{\ttfamily \#include $<$pic\-U\-S\-B.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{unionsetup_packet_struct_a9119649a830686614e70e2e8d42c91d3}{bmRequestType}\\
+\>\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{unionsetup_packet_struct_af819cb33a956603d06237735e0a40606}{bRequest}\\
+\>\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{unionsetup_packet_struct_a9ec22823f856325394796ecddc8c7cee}{wValue0}\\
+\>\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{unionsetup_packet_struct_ae02c3c2f43b18232e17336ffe81c72ea}{wValue1}\\
+\>\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{unionsetup_packet_struct_a91b8fd70af5ded5499b717e76e57ebdd}{wIndex0}\\
+\>\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{unionsetup_packet_struct_a69c3e2cd9dcf0b1d30b341f54296315a}{wIndex1}\\
+\>\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{unionsetup_packet_struct_a9fafd313816c51f76e621935f33a634a}{wLength}\\
+\}; \\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{unionsetup_packet_struct_a58bb89e8bf49d6ad691b92c4f9259933}{extra} \mbox{[}\hyperlink{pic_u_s_b_8h_a6f14b739a5aa3c5fe517de514f1ec7e2}{EP0\_BUFFER\_SIZE}\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Every device request starts with an 8 u8 setup packet (U\-S\-B 2.\-0, chap 9.\-3) with a standard layout. The meaning of w\-Value and w\-Index will vary depending on the request type and specific request. See also\-: \href{http://www.beyondlogic.org/usbnutshell/usb6.htm}{\tt http\-://www.\-beyondlogic.\-org/usbnutshell/usb6.\-htm} T\-O\-D\-O\-: split this Array up to be more precise T\-O\-D\-O\-: use word instead of L\-S\-B/\-M\-S\-B u8s 
+
+Definition at line 247 of file pic\-U\-S\-B.\-h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{unionsetup_packet_struct_adee8f6f4b5b95019dcf3a15910522a0c}{\subsubsection[{"@22}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \} }}\label{unionsetup_packet_struct_adee8f6f4b5b95019dcf3a15910522a0c}
+\hypertarget{unionsetup_packet_struct_a6f16f38fe8076d1ee4972cb6c227edb0}{\subsubsection[{"@24}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \} }}\label{unionsetup_packet_struct_a6f16f38fe8076d1ee4972cb6c227edb0}
+\hypertarget{unionsetup_packet_struct_a9119649a830686614e70e2e8d42c91d3}{\index{setup\-Packet\-Struct@{setup\-Packet\-Struct}!bm\-Request\-Type@{bm\-Request\-Type}}
+\index{bm\-Request\-Type@{bm\-Request\-Type}!setupPacketStruct@{setup\-Packet\-Struct}}
+\subsubsection[{bm\-Request\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} bm\-Request\-Type}}\label{unionsetup_packet_struct_a9119649a830686614e70e2e8d42c91d3}
+D7 Data Phase Transfer Direction
+\begin{DoxyItemize}
+\item 0 = Host to Device
+\item 1 = Device to Host
+\end{DoxyItemize}D6..5 Typ
+\begin{DoxyItemize}
+\item 0 = Standard
+\item 1 = Class
+\item 2 = Vendor
+\item 3 = Reserved
+\end{DoxyItemize}D4..0 Recipient
+\begin{DoxyItemize}
+\item 0 = Device
+\item 1 = Interface
+\item 2 = Endpoint
+\item 3 = Other
+\end{DoxyItemize}
+
+Definition at line 250 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{unionsetup_packet_struct_af819cb33a956603d06237735e0a40606}{\index{setup\-Packet\-Struct@{setup\-Packet\-Struct}!b\-Request@{b\-Request}}
+\index{b\-Request@{b\-Request}!setupPacketStruct@{setup\-Packet\-Struct}}
+\subsubsection[{b\-Request}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Request}}\label{unionsetup_packet_struct_af819cb33a956603d06237735e0a40606}
+
+
+Definition at line 251 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{unionsetup_packet_struct_a58bb89e8bf49d6ad691b92c4f9259933}{\index{setup\-Packet\-Struct@{setup\-Packet\-Struct}!extra@{extra}}
+\index{extra@{extra}!setupPacketStruct@{setup\-Packet\-Struct}}
+\subsubsection[{extra}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} extra\mbox{[}{\bf E\-P0\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}\mbox{]}}}\label{unionsetup_packet_struct_a58bb89e8bf49d6ad691b92c4f9259933}
+
+
+Definition at line 259 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{unionsetup_packet_struct_a91b8fd70af5ded5499b717e76e57ebdd}{\index{setup\-Packet\-Struct@{setup\-Packet\-Struct}!w\-Index0@{w\-Index0}}
+\index{w\-Index0@{w\-Index0}!setupPacketStruct@{setup\-Packet\-Struct}}
+\subsubsection[{w\-Index0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} w\-Index0}}\label{unionsetup_packet_struct_a91b8fd70af5ded5499b717e76e57ebdd}
+
+
+Definition at line 254 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{unionsetup_packet_struct_a69c3e2cd9dcf0b1d30b341f54296315a}{\index{setup\-Packet\-Struct@{setup\-Packet\-Struct}!w\-Index1@{w\-Index1}}
+\index{w\-Index1@{w\-Index1}!setupPacketStruct@{setup\-Packet\-Struct}}
+\subsubsection[{w\-Index1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} w\-Index1}}\label{unionsetup_packet_struct_a69c3e2cd9dcf0b1d30b341f54296315a}
+
+
+Definition at line 255 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{unionsetup_packet_struct_a9fafd313816c51f76e621935f33a634a}{\index{setup\-Packet\-Struct@{setup\-Packet\-Struct}!w\-Length@{w\-Length}}
+\index{w\-Length@{w\-Length}!setupPacketStruct@{setup\-Packet\-Struct}}
+\subsubsection[{w\-Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf word} w\-Length}}\label{unionsetup_packet_struct_a9fafd313816c51f76e621935f33a634a}
+
+
+Definition at line 256 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{unionsetup_packet_struct_a9ec22823f856325394796ecddc8c7cee}{\index{setup\-Packet\-Struct@{setup\-Packet\-Struct}!w\-Value0@{w\-Value0}}
+\index{w\-Value0@{w\-Value0}!setupPacketStruct@{setup\-Packet\-Struct}}
+\subsubsection[{w\-Value0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} w\-Value0}}\label{unionsetup_packet_struct_a9ec22823f856325394796ecddc8c7cee}
+
+
+Definition at line 252 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{unionsetup_packet_struct_ae02c3c2f43b18232e17336ffe81c72ea}{\index{setup\-Packet\-Struct@{setup\-Packet\-Struct}!w\-Value1@{w\-Value1}}
+\index{w\-Value1@{w\-Value1}!setupPacketStruct@{setup\-Packet\-Struct}}
+\subsubsection[{w\-Value1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} w\-Value1}}\label{unionsetup_packet_struct_ae02c3c2f43b18232e17336ffe81c72ea}
+
+
+Definition at line 253 of file pic\-U\-S\-B.\-h.
+
+
+
+The documentation for this union was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/\hyperlink{pic_u_s_b_8h}{pic\-U\-S\-B.\-h}\end{DoxyCompactItemize}

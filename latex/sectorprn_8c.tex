@@ -1,0 +1,33 @@
+\hypertarget{sectorprn_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/sectorprn.c File Reference}
+\label{sectorprn_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/sectorprn.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/sectorprn.\-c}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sectorprn_8c_a1ed73810e7e90f9282b4fbfa53c6083d}{disk\-\_\-printp} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$datx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{sectorprn_8c_a1ed73810e7e90f9282b4fbfa53c6083d}{\index{sectorprn.\-c@{sectorprn.\-c}!disk\-\_\-printp@{disk\-\_\-printp}}
+\index{disk\-\_\-printp@{disk\-\_\-printp}!sectorprn.c@{sectorprn.\-c}}
+\subsubsection[{disk\-\_\-printp}]{\setlength{\rightskip}{0pt plus 5cm}void disk\-\_\-printp (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{datx}
+\end{DoxyParamCaption}
+)}}\label{sectorprn_8c_a1ed73810e7e90f9282b4fbfa53c6083d}
+
+
+Definition at line 92 of file sectorprn.\-c.
+
+
+\begin{DoxyCode}
+93 \{
+94 \textcolor{preprocessor}{#ifdef SERIAL\_PRINT}
+95 \textcolor{preprocessor}{}  disk\_printp\_serial( datx);
+96 \textcolor{preprocessor}{#endif}
+97 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef CDC\_PRINT}
+98 \textcolor{preprocessor}{}  disk\_printp\_CDC( datx);
+99 \textcolor{preprocessor}{#endif}
+100 \textcolor{preprocessor}{}\}
+\end{DoxyCode}

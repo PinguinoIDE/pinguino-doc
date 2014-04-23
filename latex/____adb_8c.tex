@@ -1,0 +1,343 @@
+\hypertarget{____adb_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-\_\-\-\_\-adb.c File Reference}
+\label{____adb_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-\_\-\-\_\-adb.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-\_\-\-\_\-adb.\-c}}
+}
+{\ttfamily \#include $<$adb.\-h$>$}\\*
+{\ttfamily \#include $<$interrupt.\-c$>$}\\*
+{\ttfamily \#include $<$delay.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{____adb_8c_ac974ab76386b9623ee9b84db4e9ce609}{\-\_\-\-\_\-\-A\-D\-B\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{____adb_8c_a7bf8e1be4be10c48f1fcb67d873edacc}{A\-D\-B\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}~1024
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6}{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E} \{ \hyperlink{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6a2d2933deafa3da250dd2a13caa34b033}{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-C\-O\-N\-N\-E\-C\-T}, 
+\hyperlink{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6aeeaa7b9a74786213ae5b24a43055ac86}{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-O\-P\-E\-N}, 
+\hyperlink{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6a41a6fbfa76589e2be463ad10cc9ee3ea}{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-C\-V}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{____adb_8c_aadad9f828a9e098adee8edfad04d132e}{A\-D\-Breceive} (\hyperlink{adb_8h_a187e214cda79b479f5371031f18e26cd}{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E} \hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}, const void $\ast$data, unsigned int data\-\_\-len)
+\item 
+unsigned char \hyperlink{____adb_8c_a1aebed5bd39c40115cc7bdc13ad2e091}{\-\_\-\-A\-D\-B\-Init} ()
+\item 
+unsigned char \hyperlink{____adb_8c_ac54adf3432df918c6a0d86cbf1e2d715}{\-\_\-\-A\-D\-B\-Open} ()
+\item 
+unsigned char \hyperlink{____adb_8c_a808ac218fba48612b84981e16cc9d24f}{A\-D\-B\-Available} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{____adb_8c_ace70fa01ea760a5bb83122cf9ea25859}{A\-D\-B\-Read} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$buffer)
+\item 
+void \hyperlink{____adb_8c_a838ec690e119d4427b97b3f84e289d7c}{A\-D\-B\-Send} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$buffer, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} data\-\_\-len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{adb_8h_a187e214cda79b479f5371031f18e26cd}{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E} \hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{____adb_8c_a801f33592b931d8def698cc2ae37db35}{adbrpointer}
+\item 
+char \hyperlink{____adb_8c_a04790a7031b57cab5e87d4e9ab6a1bb7}{adbrx} \mbox{[}\hyperlink{____adb_8c_a7bf8e1be4be10c48f1fcb67d873edacc}{A\-D\-B\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{____adb_8c_ac974ab76386b9623ee9b84db4e9ce609}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!\-\_\-\-\_\-\-A\-D\-B\-\_\-\-\_\-@{\-\_\-\-\_\-\-A\-D\-B\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-A\-D\-B\-\_\-\-\_\-@{\-\_\-\-\_\-\-A\-D\-B\-\_\-\-\_\-}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-A\-D\-B\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-A\-D\-B\-\_\-\-\_\-}}\label{____adb_8c_ac974ab76386b9623ee9b84db4e9ce609}
+
+
+Definition at line 30 of file \-\_\-\-\_\-adb.\-c.
+
+\hypertarget{____adb_8c_a7bf8e1be4be10c48f1fcb67d873edacc}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!A\-D\-B\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H@{A\-D\-B\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}}
+\index{A\-D\-B\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H@{A\-D\-B\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{A\-D\-B\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-B\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H~1024}}\label{____adb_8c_a7bf8e1be4be10c48f1fcb67d873edacc}
+
+
+Definition at line 37 of file \-\_\-\-\_\-adb.\-c.
+
+
+
+Referenced by A\-D\-Breceive().
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E@{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E}}
+\index{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E@{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E}}}\label{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-C\-O\-N\-N\-E\-C\-T@{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-C\-O\-N\-N\-E\-C\-T}!\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}}\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-C\-O\-N\-N\-E\-C\-T@{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-C\-O\-N\-N\-E\-C\-T}}\item[{\em 
+\hypertarget{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6a2d2933deafa3da250dd2a13caa34b033}{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-C\-O\-N\-N\-E\-C\-T}\label{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6a2d2933deafa3da250dd2a13caa34b033}
+}]\index{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-O\-P\-E\-N@{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-O\-P\-E\-N}!\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}}\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-O\-P\-E\-N@{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-O\-P\-E\-N}}\item[{\em 
+\hypertarget{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6aeeaa7b9a74786213ae5b24a43055ac86}{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-W\-A\-I\-T\-\_\-\-O\-P\-E\-N}\label{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6aeeaa7b9a74786213ae5b24a43055ac86}
+}]\index{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-C\-V@{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-C\-V}!\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}}\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-C\-V@{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-C\-V}}\item[{\em 
+\hypertarget{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6a41a6fbfa76589e2be463ad10cc9ee3ea}{M\-A\-I\-N\-\_\-\-S\-T\-A\-T\-E\-\_\-\-R\-E\-C\-V}\label{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6a41a6fbfa76589e2be463ad10cc9ee3ea}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 40 of file \-\_\-\-\_\-adb.\-c.
+
+
+\begin{DoxyCode}
+40              \{
+41   \hyperlink{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6a2d2933deafa3da250dd2a13caa34b033}{MAIN\_STATE\_WAIT\_CONNECT},
+42   \hyperlink{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6aeeaa7b9a74786213ae5b24a43055ac86}{MAIN\_STATE\_WAIT\_OPEN},
+43   \hyperlink{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6a41a6fbfa76589e2be463ad10cc9ee3ea}{MAIN\_STATE\_RECV}
+44 \} \hyperlink{____adb_8c_a1a23c6311a15acc7e20c48157d0752c6}{MAIN\_STATE};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{____adb_8c_a1aebed5bd39c40115cc7bdc13ad2e091}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!\-\_\-\-A\-D\-B\-Init@{\-\_\-\-A\-D\-B\-Init}}
+\index{\-\_\-\-A\-D\-B\-Init@{\-\_\-\-A\-D\-B\-Init}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{\-\_\-\-A\-D\-B\-Init}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char \-\_\-\-A\-D\-B\-Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{____adb_8c_a1aebed5bd39c40115cc7bdc13ad2e091}
+
+
+Definition at line 94 of file \-\_\-\-\_\-adb.\-c.
+
+
+
+References A\-D\-B\-Init(), I\-N\-T\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-M\-U\-L\-T\-\_\-\-V\-E\-C\-T\-O\-R, and Int\-Configure\-System().
+
+
+\begin{DoxyCode}
+95 \{
+96     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a9e4ebfd3f20cf6de4cfda78c4043f872}{IntConfigureSystem}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a8b1e2aaa6d775c7a98062aa9c5de70bb}{INT\_SYSTEM\_CONFIG\_MULT\_VECTOR});
+97     \hyperlink{adb_8h_a22a6ad64672ac07fe7e1589d813a4ef3}{ADBInit}();
+98 \}
+\end{DoxyCode}
+\hypertarget{____adb_8c_ac54adf3432df918c6a0d86cbf1e2d715}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!\-\_\-\-A\-D\-B\-Open@{\-\_\-\-A\-D\-B\-Open}}
+\index{\-\_\-\-A\-D\-B\-Open@{\-\_\-\-A\-D\-B\-Open}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{\-\_\-\-A\-D\-B\-Open}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char \-\_\-\-A\-D\-B\-Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{____adb_8c_ac54adf3432df918c6a0d86cbf1e2d715}
+
+
+Definition at line 100 of file \-\_\-\-\_\-adb.\-c.
+
+
+
+References A\-D\-B\-Channel\-Ready(), A\-D\-B\-Open(), A\-D\-Breceive(), A\-D\-B\-Tasks(), Delayms(), F\-A\-L\-S\-E, h, and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+101 \{
+102     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} wait=0;
+103     
+104     \hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h} = \hyperlink{adb_8h_ab871420a329b9039dedc4720e7e11963}{ADBOpen}(\textcolor{stringliteral}{"tcp:2000"}, &\hyperlink{____adb_8c_aadad9f828a9e098adee8edfad04d132e}{ADBreceive});
+105     \textcolor{keywordflow}{while} ((wait<1000)&&(!\hyperlink{adb_8h_ab40ad08b4ba7388a3a3c5eda22e57325}{ADBChannelReady}(\hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}))) 
+106         \{
+107             \hyperlink{adb_8h_a9141c0e89797dadf875ae0d52a724e30}{ADBTasks}();
+108             \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(1);
+109             wait++;
+110         \}
+111     \textcolor{keywordflow}{if} (wait<1000) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+112     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+113 \}
+\end{DoxyCode}
+\hypertarget{____adb_8c_a808ac218fba48612b84981e16cc9d24f}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!A\-D\-B\-Available@{A\-D\-B\-Available}}
+\index{A\-D\-B\-Available@{A\-D\-B\-Available}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{A\-D\-B\-Available}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char A\-D\-B\-Available (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{____adb_8c_a808ac218fba48612b84981e16cc9d24f}
+
+
+Definition at line 115 of file \-\_\-\-\_\-adb.\-c.
+
+
+
+References adbrpointer, and adbwpointer.
+
+
+
+Referenced by A\-D\-B\-Read().
+
+
+\begin{DoxyCode}
+116 \{
+117     \textcolor{keywordflow}{return}(\hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}!=\hyperlink{____adb_8c_a801f33592b931d8def698cc2ae37db35}{adbrpointer});
+118 \}
+\end{DoxyCode}
+\hypertarget{____adb_8c_ace70fa01ea760a5bb83122cf9ea25859}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!A\-D\-B\-Read@{A\-D\-B\-Read}}
+\index{A\-D\-B\-Read@{A\-D\-B\-Read}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{A\-D\-B\-Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} A\-D\-B\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{____adb_8c_ace70fa01ea760a5bb83122cf9ea25859}
+
+
+Definition at line 120 of file \-\_\-\-\_\-adb.\-c.
+
+
+
+References A\-D\-B\-Available(), adbrpointer, and adbrx.
+
+
+\begin{DoxyCode}
+121 \{
+122     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} data\_len;
+123     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} i;
+124     
+125     \textcolor{keywordflow}{if} (\hyperlink{____adb_8c_a808ac218fba48612b84981e16cc9d24f}{ADBAvailable}())
+126         \{
+127             data\_len=\hyperlink{____adb_8c_a04790a7031b57cab5e87d4e9ab6a1bb7}{adbrx}[\hyperlink{____adb_8c_a801f33592b931d8def698cc2ae37db35}{adbrpointer}++];
+128             data\_len+=(\hyperlink{____adb_8c_a04790a7031b57cab5e87d4e9ab6a1bb7}{adbrx}[\hyperlink{____adb_8c_a801f33592b931d8def698cc2ae37db35}{adbrpointer}++]>>8);
+129             \textcolor{keywordflow}{for} (i=0;i<data\_len;i++)
+130                 buffer[i]=\hyperlink{____adb_8c_a04790a7031b57cab5e87d4e9ab6a1bb7}{adbrx}[\hyperlink{____adb_8c_a801f33592b931d8def698cc2ae37db35}{adbrpointer}++];
+131             \textcolor{keywordflow}{return}(data\_len);
+132         \}
+133 \}
+\end{DoxyCode}
+\hypertarget{____adb_8c_aadad9f828a9e098adee8edfad04d132e}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!A\-D\-Breceive@{A\-D\-Breceive}}
+\index{A\-D\-Breceive@{A\-D\-Breceive}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{A\-D\-Breceive}]{\setlength{\rightskip}{0pt plus 5cm}void A\-D\-Breceive (
+\begin{DoxyParamCaption}
+\item[{{\bf A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}}]{h, }
+\item[{const void $\ast$}]{data, }
+\item[{unsigned int}]{data\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{____adb_8c_aadad9f828a9e098adee8edfad04d132e}
+
+
+Definition at line 55 of file \-\_\-\-\_\-adb.\-c.
+
+
+
+References A\-D\-B\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H, adbrpointer, adbrx, and adbwpointer.
+
+
+
+Referenced by \-\_\-\-A\-D\-B\-Open().
+
+
+\begin{DoxyCode}
+56 \{   
+57     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} caractere;
+58     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} length;
+59     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} newwp;
+60     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} i;
+61     
+62     \textcolor{keywordflow}{for} (i=0;i<2;i++)                               \textcolor{comment}{// first store in buffer frame length}
+63         \{
+64             length=(data\_len>>(i*8));               \textcolor{comment}{// LSB first then MSB of frame length}
+65                     
+66             \textcolor{keywordflow}{if} (\hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}!=\hyperlink{____adb_8c_a7bf8e1be4be10c48f1fcb67d873edacc}{ADBBUFFERLENGTH}-1)       \textcolor{comment}{// if not last place in
+       buffer}
+67                 newwp=\hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}+1;             \textcolor{comment}{// place=place+1}
+68             \textcolor{keywordflow}{else}
+69                 newwp=1;                            \textcolor{comment}{// else place=1}
+70             \textcolor{keywordflow}{if} (\hyperlink{____adb_8c_a801f33592b931d8def698cc2ae37db35}{adbrpointer}!=newwp)                  \textcolor{comment}{// if read pointer!=write pointer}
+71                 \hyperlink{____adb_8c_a04790a7031b57cab5e87d4e9ab6a1bb7}{adbrx}[\hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}++]=length;        \textcolor{comment}{// store received char}
+72                     
+73             \textcolor{keywordflow}{if} (\hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}==\hyperlink{____adb_8c_a7bf8e1be4be10c48f1fcb67d873edacc}{ADBBUFFERLENGTH})     \textcolor{comment}{// if write pointer=length
+       buffer}
+74             \hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}=1;                           \textcolor{comment}{// write pointer = 1}
+75         \}
+76     
+77     \textcolor{keywordflow}{for} (i=0;i<data\_len;i++)                        \textcolor{comment}{// then store received byte}
+78         \{
+79             caractere=((\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *) data)[i];
+80             
+81             \textcolor{keywordflow}{if} (\hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}!=\hyperlink{____adb_8c_a7bf8e1be4be10c48f1fcb67d873edacc}{ADBBUFFERLENGTH}-1)       \textcolor{comment}{// if not last place in
+       buffer}
+82                 newwp=\hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}+1;             \textcolor{comment}{// place=place+1}
+83             \textcolor{keywordflow}{else}
+84                 newwp=1;                            \textcolor{comment}{// else place=1}
+85             \textcolor{keywordflow}{if} (\hyperlink{____adb_8c_a801f33592b931d8def698cc2ae37db35}{adbrpointer}!=newwp)                  \textcolor{comment}{// if read pointer!=write pointer}
+86                 \hyperlink{____adb_8c_a04790a7031b57cab5e87d4e9ab6a1bb7}{adbrx}[\hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}++]=caractere;     \textcolor{comment}{// store received char}
+87                     
+88             \textcolor{keywordflow}{if} (\hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}==\hyperlink{____adb_8c_a7bf8e1be4be10c48f1fcb67d873edacc}{ADBBUFFERLENGTH})     \textcolor{comment}{// if write pointer=length
+       buffer}
+89             \hyperlink{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{adbwpointer}=1;                           \textcolor{comment}{// write pointer = 1}
+90         \}           
+91             
+92 \}
+\end{DoxyCode}
+\hypertarget{____adb_8c_a838ec690e119d4427b97b3f84e289d7c}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!A\-D\-B\-Send@{A\-D\-B\-Send}}
+\index{A\-D\-B\-Send@{A\-D\-B\-Send}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{A\-D\-B\-Send}]{\setlength{\rightskip}{0pt plus 5cm}void A\-D\-B\-Send (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{buffer, }
+\item[{{\bf u16}}]{data\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{____adb_8c_a838ec690e119d4427b97b3f84e289d7c}
+
+
+Definition at line 135 of file \-\_\-\-\_\-adb.\-c.
+
+
+
+References A\-D\-B\-Write(), and h.
+
+
+\begin{DoxyCode}
+136 \{
+137     \hyperlink{adb_8h_a05d6b0a6bf687160fcea8d34907d1615}{ADBWrite}(\hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h},buffer,data\_len);
+138 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{____adb_8c_a801f33592b931d8def698cc2ae37db35}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!adbrpointer@{adbrpointer}}
+\index{adbrpointer@{adbrpointer}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{adbrpointer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} adbrpointer}}\label{____adb_8c_a801f33592b931d8def698cc2ae37db35}
+
+
+Definition at line 48 of file \-\_\-\-\_\-adb.\-c.
+
+
+
+Referenced by A\-D\-B\-Available(), A\-D\-B\-Read(), and A\-D\-Breceive().
+
+\hypertarget{____adb_8c_a04790a7031b57cab5e87d4e9ab6a1bb7}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!adbrx@{adbrx}}
+\index{adbrx@{adbrx}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{adbrx}]{\setlength{\rightskip}{0pt plus 5cm}char adbrx\mbox{[}{\bf A\-D\-B\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}\mbox{]}}}\label{____adb_8c_a04790a7031b57cab5e87d4e9ab6a1bb7}
+
+
+Definition at line 50 of file \-\_\-\-\_\-adb.\-c.
+
+
+
+Referenced by A\-D\-B\-Read(), and A\-D\-Breceive().
+
+\hypertarget{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!adbwpointer@{adbwpointer}}
+\index{adbwpointer@{adbwpointer}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{adbwpointer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} adbwpointer}}\label{____adb_8c_a02fff99af5e8fa54a657db3e1feb4f25}
+
+
+Definition at line 48 of file \-\_\-\-\_\-adb.\-c.
+
+
+
+Referenced by A\-D\-B\-Available(), and A\-D\-Breceive().
+
+\hypertarget{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{\index{\-\_\-\-\_\-adb.\-c@{\-\_\-\-\_\-adb.\-c}!h@{h}}
+\index{h@{h}!__adb.c@{\-\_\-\-\_\-adb.\-c}}
+\subsubsection[{h}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E} h}}\label{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}
+
+
+Definition at line 46 of file \-\_\-\-\_\-adb.\-c.
+
+
+
+Referenced by \-\_\-\-A\-D\-B\-Open(), A\-D\-B\-Send(), draw\-Bitmap(), Fill\-Rect(), Invert\-Rect(), S\-T7565\-\_\-draw\-Bitmap(), S\-T7565\-\_\-draw\-Rect(), and S\-T7565\-\_\-fill\-Rect().
+

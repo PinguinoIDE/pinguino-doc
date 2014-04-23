@@ -1,0 +1,484 @@
+\hypertarget{usb_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb.c File Reference}
+\label{usb_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$usb.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb_8c_aac6ce5e26cb8235050a68c55f819547b}{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-U\-S\-B}
+\item 
+\#define \hyperlink{usb_8c_a091544804b387fa4f0649dc01c4acbcd}{\-\_\-\-\_\-\-U\-S\-B\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{usb_8c_aaf1ef193fb3904f2732cd605719360da}{E\-P1\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~64
+\item 
+\#define \hyperlink{usb_8c_a0e9290fb2ccb2dede6b6c66d80db94e0}{E\-P2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~64
+\item 
+\#define \hyperlink{usb_8c_a8988294f906dbae3311d191e26bae281}{U\-S\-B\-R\-X\-S\-I\-Z\-E}~64
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{union_buffer_descriptor_table}{Buffer\-Descriptor\-Table} \hyperlink{usb_8c_ac54befa8230fcac0df633d14c200f7bb}{\-\_\-\-\_\-at} (0x400)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{usb_8c_afd179c1108be56e145d80e87fc796b32}{usbavailable} (void)
+\item 
+void \hyperlink{usb_8c_a1cc2100799f9be97c41297ccb4fe2570}{epapin\-\_\-init} (void)
+\item 
+void \hyperlink{usb_8c_ab075f4b206cdf4d5d727be9247dfbf04}{prepare\-\_\-ep2\-\_\-in} (void)
+\item 
+void \hyperlink{usb_8c_ad4a8ba96504fa48c9b67db73b60eb7ec}{usbsend} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$txpointer, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} length)
+\item 
+void \hyperlink{usb_8c_aaf7cfb729688bd4c81d03c75e742bad3}{epap\-\_\-in} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{usb_8c_af161af70e787836e3a9053ba7db70e9b}{usbread} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{usb_8c_ac04301f9638ebcff304c7348cc68ebb3}{usbreceive} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$rxpointer)
+\item 
+void \hyperlink{usb_8c_a120542c4c6fd4e66ebb30c999ff0bfe4}{epap\-\_\-out} (void)
+\item 
+void \hyperlink{usb_8c_a66ae5a8ff00cde4e30eac47045b200e7}{epapout\-\_\-init} (void)
+\item 
+void \hyperlink{usb_8c_ac23b20e0725a22906a7241bfa723964d}{usb\-\_\-interrupt} (void)
+\item 
+void \hyperlink{usb_8c_a47a88e792315e72b46fe9a81309cd76d}{usbputs} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$txpointer, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} length)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{usb_8c_a72a498b13e38e55bfd4a6305a78df0b5}{usbgets} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb_8c_aac6ce5e26cb8235050a68c55f819547b}{\index{usb.\-c@{usb.\-c}!\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-U\-S\-B@{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-U\-S\-B}}
+\index{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-U\-S\-B@{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-U\-S\-B}!usb.c@{usb.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-U\-S\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-U\-S\-B}}\label{usb_8c_aac6ce5e26cb8235050a68c55f819547b}
+
+
+Definition at line 9 of file usb.\-c.
+
+\hypertarget{usb_8c_a091544804b387fa4f0649dc01c4acbcd}{\index{usb.\-c@{usb.\-c}!\-\_\-\-\_\-\-U\-S\-B\-\_\-\-\_\-@{\-\_\-\-\_\-\-U\-S\-B\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-U\-S\-B\-\_\-\-\_\-@{\-\_\-\-\_\-\-U\-S\-B\-\_\-\-\_\-}!usb.c@{usb.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-U\-S\-B\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-U\-S\-B\-\_\-\-\_\-}}\label{usb_8c_a091544804b387fa4f0649dc01c4acbcd}
+
+
+Definition at line 17 of file usb.\-c.
+
+\hypertarget{usb_8c_aaf1ef193fb3904f2732cd605719360da}{\index{usb.\-c@{usb.\-c}!E\-P1\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{E\-P1\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{E\-P1\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{E\-P1\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!usb.c@{usb.\-c}}
+\subsubsection[{E\-P1\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P1\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E~64}}\label{usb_8c_aaf1ef193fb3904f2732cd605719360da}
+
+
+Referenced by epap\-\_\-out(), and epapout\-\_\-init().
+
+\hypertarget{usb_8c_a0e9290fb2ccb2dede6b6c66d80db94e0}{\index{usb.\-c@{usb.\-c}!E\-P2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{E\-P2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{E\-P2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{E\-P2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!usb.c@{usb.\-c}}
+\subsubsection[{E\-P2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E~64}}\label{usb_8c_a0e9290fb2ccb2dede6b6c66d80db94e0}
+
+
+Referenced by epap\-\_\-in(), and prepare\-\_\-ep2\-\_\-in().
+
+\hypertarget{usb_8c_a8988294f906dbae3311d191e26bae281}{\index{usb.\-c@{usb.\-c}!U\-S\-B\-R\-X\-S\-I\-Z\-E@{U\-S\-B\-R\-X\-S\-I\-Z\-E}}
+\index{U\-S\-B\-R\-X\-S\-I\-Z\-E@{U\-S\-B\-R\-X\-S\-I\-Z\-E}!usb.c@{usb.\-c}}
+\subsubsection[{U\-S\-B\-R\-X\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-R\-X\-S\-I\-Z\-E~64}}\label{usb_8c_a8988294f906dbae3311d191e26bae281}
+
+
+Referenced by epap\-\_\-out(), usbread(), and usbreceive().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{usb_8c_ac54befa8230fcac0df633d14c200f7bb}{\index{usb.\-c@{usb.\-c}!\-\_\-\-\_\-at@{\-\_\-\-\_\-at}}
+\index{\-\_\-\-\_\-at@{\-\_\-\-\_\-at}!usb.c@{usb.\-c}}
+\subsubsection[{\-\_\-\-\_\-at}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf Buffer\-Descriptor\-Table} \-\_\-\-\_\-at (
+\begin{DoxyParamCaption}
+\item[{0x400}]{}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_ac54befa8230fcac0df633d14c200f7bb}
+Buffer descriptors Table (see datasheet page 171) R\-A\-M Bank 4 (0x400 though 0x4ff) is used sp\-Ecifically for endpoint buffer control in a structure known as Buffer Descriptor Table (B\-D\-T\-Z). T\-O\-D\-O\-: find something smarter to allocate the buffer, like in usbmmap.\-c of the microchip firmware. If not all endpoints are used the space in R\-A\-M is wasted. 
+
+Definition at line 29 of file usb.\-c.
+
+
+
+References C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R, D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R, D\-E\-V\-I\-C\-E\-\_\-\-Q\-U\-A\-L\-I\-F\-I\-E\-R\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R, libconfiguration\-\_\-descriptor, libdevice\-\_\-descriptor, libstring\-\_\-descriptor, out\-Ptr, request\-Handled, S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R, and w\-Count.
+
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{comment}{// Enable Interrupt}
+60 \textcolor{preprocessor}{    #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+61 \textcolor{preprocessor}{}        PIR3bits.USBIF = 0;     \textcolor{comment}{// clear usb interrupt flag}
+62         PIE3bits.USBIE = 1;     \textcolor{comment}{// enable usb interrupt}
+63         IPR3bits.USBIP = 1;     \textcolor{comment}{// high priority interrupt}
+64 \textcolor{preprocessor}{    #else}
+65 \textcolor{preprocessor}{}        PIR2bits.USBIF = 0;     \textcolor{comment}{// clear usb interrupt flag}
+66         PIE2bits.USBIE = 1;     \textcolor{comment}{// enable usb interrupt}
+67         IPR2bits.USBIP = 1;     \textcolor{comment}{// high priority interrupt}
+68 \textcolor{preprocessor}{    #endif}
+69 \textcolor{preprocessor}{}    INTCONbits.GIEH = 1;   \textcolor{comment}{// Enable global HP interrupts}
+70     INTCONbits.GIEL = 1;   \textcolor{comment}{// Enable global LP interrupts}
+71 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_aaf7cfb729688bd4c81d03c75e742bad3}{\index{usb.\-c@{usb.\-c}!epap\-\_\-in@{epap\-\_\-in}}
+\index{epap\-\_\-in@{epap\-\_\-in}!usb.c@{usb.\-c}}
+\subsubsection[{epap\-\_\-in}]{\setlength{\rightskip}{0pt plus 5cm}void epap\-\_\-in (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_aaf7cfb729688bd4c81d03c75e742bad3}
+
+
+Definition at line 119 of file usb.\-c.
+
+
+
+References B\-D\-S\-\_\-\-D\-A\-T0, B\-D\-S\-\_\-\-D\-A\-T1, B\-D\-S\-\_\-\-D\-T\-S\-E\-N, B\-D\-S\-\_\-\-U\-S\-I\-E, E\-P2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E, and E\-P\-\_\-\-I\-N\-\_\-\-B\-D.
+
+
+\begin{DoxyCode}
+120 \{
+121     \textcolor{keywordflow}{if}((ep2\_num\_bytes\_to\_send == 0) && last\_send\_was\_null)
+122     \{
+123         \textcolor{keywordflow}{return};
+124     \}
+125     last\_send\_was\_null = (ep2\_num\_bytes\_to\_send < \hyperlink{usb_8c_a0e9290fb2ccb2dede6b6c66d80db94e0}{EP2\_BUFFER\_SIZE});
+126     \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(2).Cnt = ep2\_num\_bytes\_to\_send;
+127     
+128     \textcolor{comment}{/* import this from bootloader v2.12 ? */} 
+129     fill\_in\_buffer(2, &ep2\_source\_data, \hyperlink{usb_8c_a0e9290fb2ccb2dede6b6c66d80db94e0}{EP2\_BUFFER\_SIZE}, &ep2\_num\_bytes\_to\_send);
+130     
+131     \textcolor{keywordflow}{if}(\hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(2).Stat.DTS == 0)
+132     \{
+133         \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(2).Stat.uc = \hyperlink{usb_8h_a970b4b0415275c5cd6ddf9f8784a4548}{BDS\_USIE} | \hyperlink{pic_u_s_b_8h_a764042abd440b7e064a8a73faa2ff170}{BDS\_DAT1} | 
+      \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+134     \}
+135     \textcolor{keywordflow}{else}
+136     \{
+137         \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(2).Stat.uc = \hyperlink{usb_8h_a970b4b0415275c5cd6ddf9f8784a4548}{BDS\_USIE} | \hyperlink{pic_u_s_b_8h_a69597e34c9f34a0f28783a629ac0db62}{BDS\_DAT0} | 
+      \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+138     \}
+139 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_a120542c4c6fd4e66ebb30c999ff0bfe4}{\index{usb.\-c@{usb.\-c}!epap\-\_\-out@{epap\-\_\-out}}
+\index{epap\-\_\-out@{epap\-\_\-out}!usb.c@{usb.\-c}}
+\subsubsection[{epap\-\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}void epap\-\_\-out (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_a120542c4c6fd4e66ebb30c999ff0bfe4}
+
+
+Definition at line 168 of file usb.\-c.
+
+
+
+References B\-D\-S\-\_\-\-B\-S\-T\-A\-L\-L, B\-D\-S\-\_\-\-D\-A\-T0, B\-D\-S\-\_\-\-D\-A\-T1, B\-D\-S\-\_\-\-D\-T\-S\-E\-N, B\-D\-S\-\_\-\-U\-S\-I\-E, E\-P1\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E, E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D, and U\-S\-B\-R\-X\-S\-I\-Z\-E.
+
+
+\begin{DoxyCode}
+169 \{
+170     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} cpt;
+171     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} newusbwp;    
+172     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} caractere;
+173 
+174     \textcolor{keywordflow}{if}((\hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).Cnt >= 1) && ( \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).Cnt<
+      \hyperlink{usb_8c_aaf1ef193fb3904f2732cd605719360da}{EP1\_BUFFER\_SIZE}))
+175     \{
+176         \textcolor{keywordflow}{for} (cpt=0;cpt<\hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).Cnt;cpt++)
+177         \{
+178             caractere=RXbuffer[cpt];
+179             \textcolor{keywordflow}{if} (usbwp!=\hyperlink{usb_8c_a8988294f906dbae3311d191e26bae281}{USBRXSIZE}-1) newusbwp=usbwp+1;               
+180                 \textcolor{keywordflow}{else} newusbwp=1;
+181             \textcolor{keywordflow}{if} (usbrp!=newusbwp) usbrx[usbwp++]=caractere;
+182                 \textcolor{keywordflow}{if} (usbwp==\hyperlink{usb_8c_a8988294f906dbae3311d191e26bae281}{USBRXSIZE}) usbwp=1;
+183         \}
+184         \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).Cnt = \hyperlink{usb_8c_aaf1ef193fb3904f2732cd605719360da}{EP1\_BUFFER\_SIZE};
+185         \textcolor{keywordflow}{if}(\hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).Stat.DTS == 0)
+186         \{
+187             \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).Stat.uc = \hyperlink{usb_8h_a970b4b0415275c5cd6ddf9f8784a4548}{BDS\_USIE} | \hyperlink{pic_u_s_b_8h_a764042abd440b7e064a8a73faa2ff170}{BDS\_DAT1} | 
+      \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+188         \}
+189         \textcolor{keywordflow}{else}
+190         \{
+191             \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).Stat.uc = \hyperlink{usb_8h_a970b4b0415275c5cd6ddf9f8784a4548}{BDS\_USIE} | \hyperlink{pic_u_s_b_8h_a69597e34c9f34a0f28783a629ac0db62}{BDS\_DAT0} | 
+      \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+192         \}
+193     \}
+194     \textcolor{keywordflow}{else} \textcolor{comment}{// Raise an error}
+195     \{
+196         \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).Cnt = \hyperlink{usb_8c_aaf1ef193fb3904f2732cd605719360da}{EP1\_BUFFER\_SIZE};
+197         \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).ADR = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \_\_data *)&RXbuffer;
+198         \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).Stat.uc = \hyperlink{usb_8h_a970b4b0415275c5cd6ddf9f8784a4548}{BDS\_USIE} | \hyperlink{pic_u_s_b_8h_af8d7dca1fd5ea75549e9f547f55433d2}{BDS\_BSTALL};
+199     \}
+200 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_a1cc2100799f9be97c41297ccb4fe2570}{\index{usb.\-c@{usb.\-c}!epapin\-\_\-init@{epapin\-\_\-init}}
+\index{epapin\-\_\-init@{epapin\-\_\-init}!usb.c@{usb.\-c}}
+\subsubsection[{epapin\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void epapin\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_a1cc2100799f9be97c41297ccb4fe2570}
+
+
+Definition at line 80 of file usb.\-c.
+
+
+
+References B\-D\-S\-\_\-\-D\-A\-T1, B\-D\-S\-\_\-\-D\-T\-S\-E\-N, B\-D\-S\-\_\-\-U\-C\-P\-U, E\-P\-\_\-\-I\-N\-\_\-\-B\-D, E\-P\-C\-O\-N\-D\-I\-S\-\_\-\-E\-N, E\-P\-H\-S\-H\-K\-\_\-\-E\-N, and E\-P\-I\-N\-E\-N\-\_\-\-E\-N.
+
+
+\begin{DoxyCode}
+81 \{
+82     \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(2).Stat.uc = \hyperlink{usb_8h_a8ca2e66d8697cd96713f08604074b58d}{BDS\_UCPU} | \hyperlink{pic_u_s_b_8h_a764042abd440b7e064a8a73faa2ff170}{BDS\_DAT1} | 
+      \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+83     UEP2 = \hyperlink{usb_8h_a680a72293099d7d32d07fea0182638e2}{EPHSHK\_EN} | \hyperlink{usb_8h_a47b1952127c6a572c58829ba0062ce4e}{EPINEN\_EN} |  \hyperlink{usb_8h_a8fecc519a619b7b10465e81cd9eac3fb}{EPCONDIS\_EN};
+84 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_a66ae5a8ff00cde4e30eac47045b200e7}{\index{usb.\-c@{usb.\-c}!epapout\-\_\-init@{epapout\-\_\-init}}
+\index{epapout\-\_\-init@{epapout\-\_\-init}!usb.c@{usb.\-c}}
+\subsubsection[{epapout\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void epapout\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_a66ae5a8ff00cde4e30eac47045b200e7}
+
+
+Definition at line 202 of file usb.\-c.
+
+
+
+References B\-D\-S\-\_\-\-D\-A\-T0, B\-D\-S\-\_\-\-D\-T\-S\-E\-N, B\-D\-S\-\_\-\-U\-S\-I\-E, E\-P1\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E, E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D, E\-P\-C\-O\-N\-D\-I\-S\-\_\-\-E\-N, E\-P\-H\-S\-H\-K\-\_\-\-E\-N, and E\-P\-O\-U\-T\-E\-N\-\_\-\-E\-N.
+
+
+\begin{DoxyCode}
+203 \{
+204     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).Cnt = \hyperlink{usb_8c_aaf1ef193fb3904f2732cd605719360da}{EP1\_BUFFER\_SIZE};
+205     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).ADR = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \_\_data *)&RXbuffer;
+206     \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{EP\_OUT\_BD}(1).Stat.uc = \hyperlink{usb_8h_a970b4b0415275c5cd6ddf9f8784a4548}{BDS\_USIE} | \hyperlink{pic_u_s_b_8h_a69597e34c9f34a0f28783a629ac0db62}{BDS\_DAT0} | 
+      \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+207     UEP1 = \hyperlink{usb_8h_a680a72293099d7d32d07fea0182638e2}{EPHSHK\_EN} | \hyperlink{usb_8h_a52cca02ee20d6ba2bf27d6cfc9a33f99}{EPOUTEN\_EN} | \hyperlink{usb_8h_a8fecc519a619b7b10465e81cd9eac3fb}{EPCONDIS\_EN};          \textcolor{comment}{// Init EPAPPLI as
+       an OUT EP}
+208     usbwp=1;                        \textcolor{comment}{// init pointer for rx buffer pinguino}
+209     usbrp=1;
+210 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_ab075f4b206cdf4d5d727be9247dfbf04}{\index{usb.\-c@{usb.\-c}!prepare\-\_\-ep2\-\_\-in@{prepare\-\_\-ep2\-\_\-in}}
+\index{prepare\-\_\-ep2\-\_\-in@{prepare\-\_\-ep2\-\_\-in}!usb.c@{usb.\-c}}
+\subsubsection[{prepare\-\_\-ep2\-\_\-in}]{\setlength{\rightskip}{0pt plus 5cm}void prepare\-\_\-ep2\-\_\-in (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_ab075f4b206cdf4d5d727be9247dfbf04}
+
+
+Definition at line 86 of file usb.\-c.
+
+
+
+References B\-D\-S\-\_\-\-D\-A\-T0, B\-D\-S\-\_\-\-D\-A\-T1, B\-D\-S\-\_\-\-D\-T\-S\-E\-N, B\-D\-S\-\_\-\-U\-S\-I\-E, E\-P2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E, and E\-P\-\_\-\-I\-N\-\_\-\-B\-D.
+
+
+
+Referenced by usbsend().
+
+
+\begin{DoxyCode}
+87 \{
+88     last\_send\_was\_null = (ep2\_num\_bytes\_to\_send < \hyperlink{usb_8c_a0e9290fb2ccb2dede6b6c66d80db94e0}{EP2\_BUFFER\_SIZE});
+89     \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(2).Cnt = ep2\_num\_bytes\_to\_send;
+90     \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(2).ADR = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \_\_data *)&TXBuffer;
+91     fill\_in\_buffer(2, &ep2\_source\_data, \hyperlink{usb_8c_a0e9290fb2ccb2dede6b6c66d80db94e0}{EP2\_BUFFER\_SIZE}, &ep2\_num\_bytes\_to\_send);
+92     \textcolor{keywordflow}{if}(\hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(2).Stat.DTS == 0)
+93     \{
+94         \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(2).Stat.uc = \hyperlink{usb_8h_a970b4b0415275c5cd6ddf9f8784a4548}{BDS\_USIE} | \hyperlink{pic_u_s_b_8h_a764042abd440b7e064a8a73faa2ff170}{BDS\_DAT1} | 
+      \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+95     \}
+96     \textcolor{keywordflow}{else}
+97     \{
+98         \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{EP\_IN\_BD}(2).Stat.uc = \hyperlink{usb_8h_a970b4b0415275c5cd6ddf9f8784a4548}{BDS\_USIE} | \hyperlink{pic_u_s_b_8h_a69597e34c9f34a0f28783a629ac0db62}{BDS\_DAT0} | 
+      \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{BDS\_DTSEN};
+99     \}
+100 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_ac23b20e0725a22906a7241bfa723964d}{\index{usb.\-c@{usb.\-c}!usb\-\_\-interrupt@{usb\-\_\-interrupt}}
+\index{usb\-\_\-interrupt@{usb\-\_\-interrupt}!usb.c@{usb.\-c}}
+\subsubsection[{usb\-\_\-interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void usb\-\_\-interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_ac23b20e0725a22906a7241bfa723964d}
+
+
+Definition at line 212 of file usb.\-c.
+
+
+\begin{DoxyCode}
+213 \{
+214 \textcolor{preprocessor}{    #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+215 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if}(PIR3bits.USBIF)
+216 \textcolor{preprocessor}{    #else}
+217 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if}(PIR2bits.USBIF)
+218 \textcolor{preprocessor}{    #endif}
+219 \textcolor{preprocessor}{}    \{
+220         dispatch\_usb\_event();
+221         UIRbits.SOFIF = 0;
+222         UIRbits.URSTIF = 0;
+223         PIR2bits.USBIF = 0;
+224         UEIR = 0;
+225     \}
+226 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_afd179c1108be56e145d80e87fc796b32}{\index{usb.\-c@{usb.\-c}!usbavailable@{usbavailable}}
+\index{usbavailable@{usbavailable}!usb.c@{usb.\-c}}
+\subsubsection[{usbavailable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} usbavailable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_afd179c1108be56e145d80e87fc796b32}
+
+
+Definition at line 73 of file usb.\-c.
+
+
+
+Referenced by usbread(), and usbreceive().
+
+
+\begin{DoxyCode}
+74 \{
+75     \textcolor{keywordflow}{return} (usbwp!=usbrp);
+76 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_a72a498b13e38e55bfd4a6305a78df0b5}{\index{usb.\-c@{usb.\-c}!usbgets@{usbgets}}
+\index{usbgets@{usbgets}!usb.c@{usb.\-c}}
+\subsubsection[{usbgets}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} usbgets (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_a72a498b13e38e55bfd4a6305a78df0b5}
+
+
+Definition at line 233 of file usb.\-c.
+
+
+
+References usbread().
+
+
+\begin{DoxyCode}
+234 \{
+235     \textcolor{keywordflow}{return}(\hyperlink{usb_8c_af161af70e787836e3a9053ba7db70e9b}{usbread}()); \textcolor{comment}{// one only character is returned}
+236 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_a47a88e792315e72b46fe9a81309cd76d}{\index{usb.\-c@{usb.\-c}!usbputs@{usbputs}}
+\index{usbputs@{usbputs}!usb.c@{usb.\-c}}
+\subsubsection[{usbputs}]{\setlength{\rightskip}{0pt plus 5cm}void usbputs (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{txpointer, }
+\item[{{\bf u8}}]{length}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_a47a88e792315e72b46fe9a81309cd76d}
+
+
+Definition at line 228 of file usb.\-c.
+
+
+
+References usbsend().
+
+
+\begin{DoxyCode}
+229 \{
+230     \hyperlink{usb_8c_ad4a8ba96504fa48c9b67db73b60eb7ec}{usbsend}(txpointer, length);
+231 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_af161af70e787836e3a9053ba7db70e9b}{\index{usb.\-c@{usb.\-c}!usbread@{usbread}}
+\index{usbread@{usbread}!usb.c@{usb.\-c}}
+\subsubsection[{usbread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} usbread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_af161af70e787836e3a9053ba7db70e9b}
+
+
+Definition at line 143 of file usb.\-c.
+
+
+
+References usbavailable(), and U\-S\-B\-R\-X\-S\-I\-Z\-E.
+
+
+
+Referenced by usbgets().
+
+
+\begin{DoxyCode}
+144 \{
+145     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} caractere=0;
+146 
+147     \textcolor{keywordflow}{if} (\hyperlink{usb_8c_afd179c1108be56e145d80e87fc796b32}{usbavailable})
+148     \{
+149         caractere=usbrx[usbrp++];
+150         \textcolor{keywordflow}{if} (usbrp==\hyperlink{usb_8c_a8988294f906dbae3311d191e26bae281}{USBRXSIZE})
+151             usbrp=1;
+152     \}
+153     \textcolor{keywordflow}{return}(caractere);
+154 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_ac04301f9638ebcff304c7348cc68ebb3}{\index{usb.\-c@{usb.\-c}!usbreceive@{usbreceive}}
+\index{usbreceive@{usbreceive}!usb.c@{usb.\-c}}
+\subsubsection[{usbreceive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} usbreceive (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{rxpointer}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_ac04301f9638ebcff304c7348cc68ebb3}
+
+
+Definition at line 156 of file usb.\-c.
+
+
+
+References usbavailable(), and U\-S\-B\-R\-X\-S\-I\-Z\-E.
+
+
+\begin{DoxyCode}
+157 \{
+158     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} rp = 0;
+159     \textcolor{keywordflow}{while} (\hyperlink{usb_8c_afd179c1108be56e145d80e87fc796b32}{usbavailable}())
+160     \{
+161         rxpointer[rp++]= usbrx[usbrp++];
+162         \textcolor{keywordflow}{if} (usbrp==\hyperlink{usb_8c_a8988294f906dbae3311d191e26bae281}{USBRXSIZE})
+163             usbrp=1;
+164     \}
+165     \textcolor{keywordflow}{return}(rp);
+166 \}
+\end{DoxyCode}
+\hypertarget{usb_8c_ad4a8ba96504fa48c9b67db73b60eb7ec}{\index{usb.\-c@{usb.\-c}!usbsend@{usbsend}}
+\index{usbsend@{usbsend}!usb.c@{usb.\-c}}
+\subsubsection[{usbsend}]{\setlength{\rightskip}{0pt plus 5cm}void usbsend (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{txpointer, }
+\item[{{\bf u8}}]{length}
+\end{DoxyParamCaption}
+)}}\label{usb_8c_ad4a8ba96504fa48c9b67db73b60eb7ec}
+
+
+Definition at line 102 of file usb.\-c.
+
+
+
+References prepare\-\_\-ep2\-\_\-in().
+
+
+
+Referenced by usbputs().
+
+
+\begin{DoxyCode}
+103 \{
+104     ep2\_source\_data=txpointer;
+105     ep2\_num\_bytes\_to\_send=length;
+106     \hyperlink{usb_8c_ab075f4b206cdf4d5d727be9247dfbf04}{prepare\_ep2\_in}();
+107 \}
+\end{DoxyCode}

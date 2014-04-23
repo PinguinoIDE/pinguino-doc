@@ -1,0 +1,413 @@
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/sd/fileio.c File Reference}
+\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/sd/fileio.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/sd/fileio.\-c}}
+}
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$sd/fileio.\-h$>$}\\*
+{\ttfamily \#include $<$sd/sdmmc.\-c$>$}\\*
+{\ttfamily \#include \char`\"{}ff.\-c\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}diskio.\-c\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_af053caa28c3846e3ea96509b7fb9e82d}{\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_ace1d86c00d79f861e1a0214666df74d3}{mount} (unsigned char pin)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_ac87c06145b272705cfac7529b90e8f25}{unmount} (void)
+\item 
+char \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a17f67486a820e1f675ae88e3e18326aa}{S\-D\-\_\-present} (unsigned char pin)
+\item 
+unsigned \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_aac7b2f6f53be66b71a1c61c90e0d4e9f}{list\-T\-Y\-P\-E} (\hyperlink{struct_d_i_r_t_a_b_l_e}{D\-I\-R\-T\-A\-B\-L\-E} $\ast$list, int \hyperlink{p32_2include_2pinguino_2core_2macro_8h_affe776513b24d84b39af8ab0930fef7f}{max}, const char $\ast$ext)
+\item 
+unsigned \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a401c4ee837ef45cbcb4e5ea0f149f194}{list\-Dir} (const char $\ast$path)
+\item 
+char \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_abd587a7f6d4d49bb20d215031a5c8918}{is\-Directory} (\hyperlink{struct_f_i_l_i_n_f_o}{F\-I\-L\-I\-N\-F\-O} file)
+\item 
+char \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a31b4f1336b282d27d5ca16a8546aa874}{is\-Read\-Only} (\hyperlink{struct_f_i_l_i_n_f_o}{F\-I\-L\-I\-N\-F\-O} file)
+\item 
+char \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a83d2cf45542c3875ccd4ddaeeeb735f9}{is\-Hidden} (\hyperlink{struct_f_i_l_i_n_f_o}{F\-I\-L\-I\-N\-F\-O} file)
+\item 
+char \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a7d890824787ddb4c87e63db89034dd84}{is\-System} (\hyperlink{struct_f_i_l_i_n_f_o}{F\-I\-L\-I\-N\-F\-O} file)
+\item 
+char \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_af43f2c11001aaf191a293edec349e3a2}{is\-Archive} (\hyperlink{struct_f_i_l_i_n_f_o}{F\-I\-L\-I\-N\-F\-O} file)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_af053caa28c3846e3ea96509b7fb9e82d}{\index{p32/include/pinguino/libraries/sd/fileio.\-c@{p32/include/pinguino/libraries/sd/fileio.\-c}!\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-}!p32/include/pinguino/libraries/sd/fileio.c@{p32/include/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-F\-I\-L\-E\-I\-O\-\_\-\-C\-\_\-\-\_\-}}\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_af053caa28c3846e3ea96509b7fb9e82d}
+
+
+Definition at line 21 of file fileio.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_af43f2c11001aaf191a293edec349e3a2}{\index{p32/include/pinguino/libraries/sd/fileio.\-c@{p32/include/pinguino/libraries/sd/fileio.\-c}!is\-Archive@{is\-Archive}}
+\index{is\-Archive@{is\-Archive}!p32/include/pinguino/libraries/sd/fileio.c@{p32/include/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{is\-Archive}]{\setlength{\rightskip}{0pt plus 5cm}char is\-Archive (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L\-I\-N\-F\-O}}]{file}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_af43f2c11001aaf191a293edec349e3a2}
+
+
+Definition at line 250 of file fileio.\-c.
+
+
+
+References A\-M\-\_\-\-A\-R\-C, False, F\-I\-L\-I\-N\-F\-O\-::fattrib, and True.
+
+
+\begin{DoxyCode}
+250                              \{
+251     \textcolor{keywordflow}{if} (file.\hyperlink{struct_f_i_l_i_n_f_o_af5fa689ce021720b227a97f69eb06dfe}{fattrib} & \hyperlink{pff_8h_ae8174d00798e34e7c9e95898cb9e1a09}{AM\_ARC}) \{
+252         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True};
+253     \} \textcolor{keywordflow}{else} \{
+254         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False};
+255     \}
+256 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_abd587a7f6d4d49bb20d215031a5c8918}{\index{p32/include/pinguino/libraries/sd/fileio.\-c@{p32/include/pinguino/libraries/sd/fileio.\-c}!is\-Directory@{is\-Directory}}
+\index{is\-Directory@{is\-Directory}!p32/include/pinguino/libraries/sd/fileio.c@{p32/include/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{is\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}char is\-Directory (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L\-I\-N\-F\-O}}]{file}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_abd587a7f6d4d49bb20d215031a5c8918}
+
+
+Definition at line 218 of file fileio.\-c.
+
+
+
+References A\-M\-\_\-\-D\-I\-R, False, F\-I\-L\-I\-N\-F\-O\-::fattrib, and True.
+
+
+\begin{DoxyCode}
+218                                \{
+219     \textcolor{keywordflow}{if} (file.\hyperlink{struct_f_i_l_i_n_f_o_af5fa689ce021720b227a97f69eb06dfe}{fattrib} & \hyperlink{pff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}{AM\_DIR}) \{
+220         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True};
+221     \} \textcolor{keywordflow}{else} \{
+222         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False};
+223     \}
+224 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a83d2cf45542c3875ccd4ddaeeeb735f9}{\index{p32/include/pinguino/libraries/sd/fileio.\-c@{p32/include/pinguino/libraries/sd/fileio.\-c}!is\-Hidden@{is\-Hidden}}
+\index{is\-Hidden@{is\-Hidden}!p32/include/pinguino/libraries/sd/fileio.c@{p32/include/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{is\-Hidden}]{\setlength{\rightskip}{0pt plus 5cm}char is\-Hidden (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L\-I\-N\-F\-O}}]{file}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a83d2cf45542c3875ccd4ddaeeeb735f9}
+
+
+Definition at line 234 of file fileio.\-c.
+
+
+
+References A\-M\-\_\-\-H\-I\-D, False, F\-I\-L\-I\-N\-F\-O\-::fattrib, and True.
+
+
+\begin{DoxyCode}
+234                             \{
+235     \textcolor{keywordflow}{if} (file.\hyperlink{struct_f_i_l_i_n_f_o_af5fa689ce021720b227a97f69eb06dfe}{fattrib} & \hyperlink{pff_8h_aa90c4c921c1955fd407d8bbf17f1674e}{AM\_HID}) \{
+236         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True};
+237     \} \textcolor{keywordflow}{else} \{
+238         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False};
+239     \}
+240 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a31b4f1336b282d27d5ca16a8546aa874}{\index{p32/include/pinguino/libraries/sd/fileio.\-c@{p32/include/pinguino/libraries/sd/fileio.\-c}!is\-Read\-Only@{is\-Read\-Only}}
+\index{is\-Read\-Only@{is\-Read\-Only}!p32/include/pinguino/libraries/sd/fileio.c@{p32/include/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{is\-Read\-Only}]{\setlength{\rightskip}{0pt plus 5cm}char is\-Read\-Only (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L\-I\-N\-F\-O}}]{file}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a31b4f1336b282d27d5ca16a8546aa874}
+
+
+Definition at line 226 of file fileio.\-c.
+
+
+
+References A\-M\-\_\-\-R\-D\-O, False, F\-I\-L\-I\-N\-F\-O\-::fattrib, and True.
+
+
+\begin{DoxyCode}
+226                               \{
+227     \textcolor{keywordflow}{if} (file.\hyperlink{struct_f_i_l_i_n_f_o_af5fa689ce021720b227a97f69eb06dfe}{fattrib} & \hyperlink{pff_8h_add6d85d1e7a02b4f6188783ef91a5f1e}{AM\_RDO}) \{
+228         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True};
+229     \} \textcolor{keywordflow}{else} \{
+230         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False};
+231     \}
+232 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a7d890824787ddb4c87e63db89034dd84}{\index{p32/include/pinguino/libraries/sd/fileio.\-c@{p32/include/pinguino/libraries/sd/fileio.\-c}!is\-System@{is\-System}}
+\index{is\-System@{is\-System}!p32/include/pinguino/libraries/sd/fileio.c@{p32/include/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{is\-System}]{\setlength{\rightskip}{0pt plus 5cm}char is\-System (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L\-I\-N\-F\-O}}]{file}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a7d890824787ddb4c87e63db89034dd84}
+
+
+Definition at line 242 of file fileio.\-c.
+
+
+
+References A\-M\-\_\-\-S\-Y\-S, False, F\-I\-L\-I\-N\-F\-O\-::fattrib, and True.
+
+
+\begin{DoxyCode}
+242                             \{
+243     \textcolor{keywordflow}{if} (file.\hyperlink{struct_f_i_l_i_n_f_o_af5fa689ce021720b227a97f69eb06dfe}{fattrib} & \hyperlink{pff_8h_a1f25d5c17b5a3a6397b3398add8cdc15}{AM\_SYS}) \{
+244         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True};
+245     \} \textcolor{keywordflow}{else} \{
+246         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False};
+247     \}
+248 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a401c4ee837ef45cbcb4e5ea0f149f194}{\index{p32/include/pinguino/libraries/sd/fileio.\-c@{p32/include/pinguino/libraries/sd/fileio.\-c}!list\-Dir@{list\-Dir}}
+\index{list\-Dir@{list\-Dir}!p32/include/pinguino/libraries/sd/fileio.c@{p32/include/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{list\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}unsigned list\-Dir (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a401c4ee837ef45cbcb4e5ea0f149f194}
+
+
+Definition at line 165 of file fileio.\-c.
+
+
+
+References A\-M\-\_\-\-D\-I\-R, dir, f\-\_\-opendir(), f\-\_\-readdir(), F\-I\-L\-I\-N\-F\-O\-::fattrib, Finfo, F\-I\-L\-I\-N\-F\-O\-::fname, F\-R\-\_\-\-O\-K, F\-I\-L\-I\-N\-F\-O\-::fsize, and res.
+
+
+\begin{DoxyCode}
+165                                    \{
+166     \textcolor{comment}{//TODO: remove all CDC references}
+167     \textcolor{keywordtype}{long} p1;
+168     \hyperlink{p32_2include_2pinguino_2libraries_2sd_2integer_8h_aa1e36ce100a7ff1291e95b4515d42e65}{PF\_BYTE} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res}, b;
+169     \hyperlink{p8_2pinguino_2libraries_2integer_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT} s1, s2;
+170     \hyperlink{struct_d_i_r}{DIR} \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}; \textcolor{comment}{/* Directory object */}
+171 
+172     res = \hyperlink{tff_8c_a758444a30920784a7a1ac7dcd481bb1c}{f\_opendir}(&dir, \textcolor{stringliteral}{"/"});
+173 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+174 \textcolor{preprocessor}{}    CDCprintf(\textcolor{stringliteral}{"f\_opendir? "});
+175     put\_rc(res);
+176 \textcolor{preprocessor}{#endif}
+177 \textcolor{preprocessor}{}    p1 = s1 = s2 = 0;
+178     CDCprintln(\textcolor{stringliteral}{"\(\backslash\)nf\_readdir('%s'): "}, path);
+179     \textcolor{keywordflow}{for} (;;) \{
+180         res = \hyperlink{tff_8c_a7fb1cd8728766e81e10339307e68a795}{f\_readdir}(&dir, &\hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_a1353aae9dda59b9c05f9a18f0a7f2a4d}{Finfo});
+181 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+182 \textcolor{preprocessor}{}        put\_rc(res);
+183 \textcolor{preprocessor}{#endif}
+184 \textcolor{preprocessor}{}        \textcolor{keywordflow}{if} ((res != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) || !\hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_a1353aae9dda59b9c05f9a18f0a7f2a4d}{Finfo}.\hyperlink{struct_f_i_l_i_n_f_o_a5a78da1cb66644bf00efc71578d7fbba}{fname}[0]) \{
+185             \textcolor{keywordflow}{break};
+186         \}
+187 
+188         \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_a1353aae9dda59b9c05f9a18f0a7f2a4d}{Finfo}.\hyperlink{struct_f_i_l_i_n_f_o_af5fa689ce021720b227a97f69eb06dfe}{fattrib} & \hyperlink{pff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}{AM\_DIR}) \{
+189             s2++;
+190         \} \textcolor{keywordflow}{else} \{
+191             s1++;
+192             p1 += \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_a1353aae9dda59b9c05f9a18f0a7f2a4d}{Finfo}.\hyperlink{struct_f_i_l_i_n_f_o_a7582a0b3a658c0543f6cdc7585d84f7c}{fsize};
+193         \}
+194 \textcolor{comment}{/* what about other outputs ?}
+195 \textcolor{comment}{        CDCprintf("%c%c%c%c%c ",}
+196 \textcolor{comment}{                (Finfo.fattrib & AM\_DIR) ? 'D' : '-',}
+197 \textcolor{comment}{                (Finfo.fattrib & AM\_RDO) ? 'R' : '-',}
+198 \textcolor{comment}{                (Finfo.fattrib & AM\_HID) ? 'H' : '-',}
+199 \textcolor{comment}{                (Finfo.fattrib & AM\_SYS) ? 'S' : '-',}
+200 \textcolor{comment}{                (Finfo.fattrib & AM\_ARC) ? 'A' : '-');}
+201 \textcolor{comment}{        CDCprintf("%u/%02u/%02u %02u:%02u ",}
+202 \textcolor{comment}{                (Finfo.fdate >> 9) + 1980,}
+203 \textcolor{comment}{                (Finfo.fdate >> 5) & 15, Finfo.fdate & 31, (Finfo.ftime >> 11),}
+204 \textcolor{comment}{                (Finfo.ftime >> 5) & 63);}
+205 \textcolor{comment}{        CDCprintf(" %9u ", Finfo.fsize);}
+206 \textcolor{comment}{        CDCprintln(" %-12s %s", Finfo.fname,}
+207 \textcolor{comment}{#if \_USE\_LFN}
+208 \textcolor{comment}{                Lfname);}
+209 \textcolor{comment}{#else}
+210 \textcolor{comment}{                "");}
+211 \textcolor{comment}{#endif}
+212 \textcolor{comment}{*/}
+213     \}
+214 
+215     \textcolor{keywordflow}{return} s1;
+216 \} \textcolor{comment}{// listDir}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_aac7b2f6f53be66b71a1c61c90e0d4e9f}{\index{p32/include/pinguino/libraries/sd/fileio.\-c@{p32/include/pinguino/libraries/sd/fileio.\-c}!list\-T\-Y\-P\-E@{list\-T\-Y\-P\-E}}
+\index{list\-T\-Y\-P\-E@{list\-T\-Y\-P\-E}!p32/include/pinguino/libraries/sd/fileio.c@{p32/include/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{list\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}unsigned list\-T\-Y\-P\-E (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-I\-R\-T\-A\-B\-L\-E} $\ast$}]{list, }
+\item[{int}]{max, }
+\item[{const char $\ast$}]{ext}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_aac7b2f6f53be66b71a1c61c90e0d4e9f}
+
+
+Definition at line 156 of file fileio.\-c.
+
+
+
+References A\-T\-T\-\_\-\-D\-I\-R, A\-T\-T\-\_\-\-H\-I\-D\-E, M\-F\-I\-L\-E\-::buffer, D, D\-I\-R\-\_\-\-A\-T\-T\-R\-I\-B, D\-I\-R\-\_\-\-D\-E\-L, D\-I\-R\-\_\-\-E\-M\-P\-T\-Y, D\-I\-R\-\_\-\-E\-X\-T, D\-I\-R\-\_\-\-N\-A\-M\-E, D\-I\-R\-\_\-\-S\-I\-Z\-E, D\-I\-R\-T\-A\-B\-L\-E\-::ext, F\-E\-\_\-\-F\-I\-N\-D\-\_\-\-E\-R\-R\-O\-R, F\-E\-\_\-\-M\-A\-L\-L\-O\-C\-\_\-\-F\-A\-I\-L\-E\-D, F\-E\-\_\-\-M\-E\-D\-I\-A\-\_\-\-N\-O\-T\-\_\-\-M\-N\-T\-D, F\-Error, D\-I\-R\-T\-A\-B\-L\-E\-::filename, M\-E\-D\-I\-A\-::maxroot, M\-F\-I\-L\-E\-::mda, N\-U\-L\-L, read\-D\-I\-R(), D\-I\-R\-T\-A\-B\-L\-E\-::size, T\-R\-U\-E, and x.
+
+
+\begin{DoxyCode}
+158 \{
+159     \textcolor{comment}{//TODO: implement}
+160 
+161     \textcolor{keywordflow}{return} 0;
+162 \} \textcolor{comment}{// listTYPE}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_ace1d86c00d79f861e1a0214666df74d3}{\index{p32/include/pinguino/libraries/sd/fileio.\-c@{p32/include/pinguino/libraries/sd/fileio.\-c}!mount@{mount}}
+\index{mount@{mount}!p32/include/pinguino/libraries/sd/fileio.c@{p32/include/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{mount}]{\setlength{\rightskip}{0pt plus 5cm}char mount (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_ace1d86c00d79f861e1a0214666df74d3}
+
+
+Definition at line 47 of file fileio.\-c.
+
+
+
+References B\-R\-\_\-\-F\-A\-T\-\_\-\-C\-P\-Y, B\-R\-\_\-\-F\-A\-T\-\_\-\-S\-I\-Z\-E, B\-R\-\_\-\-M\-A\-X\-\_\-\-R\-O\-O\-T, B\-R\-\_\-\-R\-E\-S, B\-R\-\_\-\-S\-X\-C, D, M\-E\-D\-I\-A\-::data, f\-\_\-mount(), False, M\-E\-D\-I\-A\-::fat, Fat, M\-E\-D\-I\-A\-::fatcopy, M\-E\-D\-I\-A\-::fatsize, F\-E\-\_\-\-C\-A\-N\-N\-O\-T\-\_\-\-R\-E\-A\-D\-\_\-\-M\-B\-R, F\-E\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-B\-R, F\-E\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-M\-B\-R, F\-E\-\_\-\-M\-A\-L\-L\-O\-C\-\_\-\-F\-A\-I\-L\-E\-D, F\-E\-\_\-\-N\-O\-T\-\_\-\-P\-R\-E\-S\-E\-N\-T, F\-E\-\_\-\-P\-A\-R\-T\-I\-T\-I\-O\-N\-\_\-\-T\-Y\-P\-E, F\-Error, F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-E\-C\-T, F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-S\-I\-Z\-E, F\-O\-\_\-\-F\-I\-R\-S\-T\-\_\-\-T\-Y\-P\-E, F\-O\-\_\-\-M\-B\-R, F\-O\-\_\-\-S\-I\-G\-N, F\-R\-\_\-\-O\-K, get\-C\-D(), init\-Media(), init\-S\-D(), M\-E\-D\-I\-A\-::maxcls, M\-E\-D\-I\-A\-::maxroot, N\-U\-L\-L, Read\-L, Read\-Odd\-W, read\-S\-E\-C\-T\-O\-R(), Read\-W, M\-E\-D\-I\-A\-::root, S\-D\-C\-S, M\-E\-D\-I\-A\-::sxc, True, and unmount().
+
+
+\begin{DoxyCode}
+47                               \{
+48     \textcolor{keywordtype}{int} flag, i;
+49     \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{FRESULT} r;
+50 
+51     \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a9470cb8f6ac9077bf21f815e37d13f09}{SDCS} = pin;
+52 
+53     \textcolor{comment}{// 0. init the I/Os}
+54 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+55 \textcolor{preprocessor}{}    CDCprintln(\textcolor{stringliteral}{"Initializing I/Os... "});
+56 \textcolor{preprocessor}{#endif}
+57 \textcolor{preprocessor}{}    \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a469e8fffcf5a77dc542d8acea1cfea57}{initSD}();
+58 
+59 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+60 \textcolor{preprocessor}{}    CDCprintf(\textcolor{stringliteral}{"Looking for SD slot... "});
+61 \textcolor{preprocessor}{#endif}
+62 \textcolor{preprocessor}{}    \textcolor{comment}{// 1. check if the card is in the slot}
+63     \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a333a9ed0bf9a0bcb9500528e812881ab}{getCD}()) \{
+64         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a2d17882685d6cc9640d022f640ded95b}{FE\_NOT\_PRESENT};
+65 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+66 \textcolor{preprocessor}{}        CDCprintln(\textcolor{stringliteral}{"Failed!"});
+67 \textcolor{preprocessor}{#endif}
+68 \textcolor{preprocessor}{}        \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False};
+69     \}
+70 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+71 \textcolor{preprocessor}{}    CDCprintln(\textcolor{stringliteral}{"OK"});
+72 \textcolor{preprocessor}{#endif}
+73 \textcolor{preprocessor}{}
+74     \textcolor{comment}{// 2. initialize the card}
+75 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+76 \textcolor{preprocessor}{}    CDCprintf(\textcolor{stringliteral}{"Initializing SD card... "});
+77 \textcolor{preprocessor}{#endif}
+78 \textcolor{preprocessor}{}    \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a0a62982cc6fc4507eacea6f73767da72}{initMedia}();
+79 
+80     \textcolor{comment}{// We're skipping the old step 3 because there's no need for malloc}
+81     \textcolor{comment}{// This takes 6k off the code size if malloc is not used elsewhere.}
+82     \textcolor{comment}{// Instead, just point it to our \_Fat var.}
+83     \textcolor{comment}{// The FATFS struct takes only 560 bytes of mem.}
+84     \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat} = &\_Fat;
+85 
+86     \textcolor{comment}{// Mount media}
+87 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+88 \textcolor{preprocessor}{}    CDCprintf(\textcolor{stringliteral}{"Mounting FAT filesystem... "});
+89 \textcolor{preprocessor}{#endif}
+90 \textcolor{preprocessor}{}    r = \hyperlink{tff_8c_af9bf08d8cf178eaf220d5b4e2370bcf6}{f\_mount}(0, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat});
+91     \textcolor{keywordflow}{if} (r != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{
+92         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = r;
+93 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+94 \textcolor{preprocessor}{}        CDCprintln(\textcolor{stringliteral}{"Failed!"});
+95 \textcolor{preprocessor}{#endif}
+96 \textcolor{preprocessor}{}        \textcolor{comment}{//free(Fat);}
+97         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False};
+98     \}
+99 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+100 \textcolor{preprocessor}{}    CDCprintln(\textcolor{stringliteral}{"OK"});
+101 \textcolor{preprocessor}{#endif}
+102 \textcolor{preprocessor}{}
+103 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+104 \textcolor{preprocessor}{}    CDCprintf(\textcolor{stringliteral}{"Checking FAT filesystem... "});
+105 \textcolor{preprocessor}{#endif}
+106 \textcolor{preprocessor}{}    \textcolor{keyword}{const} \hyperlink{ff_8h_a03bdb8ce5895c7e261aadc2529637546}{TCHAR} * pth = \textcolor{stringliteral}{"/"};
+107     r = chk\_mounted(&pth, &\hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}, 0);
+108     \textcolor{keywordflow}{if} (r != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{
+109         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a59794c1d9dab3f997dd8e06884e54d0e}{FError} = r;
+110 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+111 \textcolor{preprocessor}{}        CDCprintln(\textcolor{stringliteral}{"Failed!"});
+112         put\_rc(r);
+113 \textcolor{preprocessor}{#endif}
+114 \textcolor{preprocessor}{}        \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ac87c06145b272705cfac7529b90e8f25}{unmount}();
+115         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False};
+116     \}
+117 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+118 \textcolor{preprocessor}{}    CDCprintln(\textcolor{stringliteral}{"OK"});
+119 \textcolor{preprocessor}{#endif}
+120 \textcolor{preprocessor}{}
+121     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True};
+122 \} \textcolor{comment}{// mount}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a17f67486a820e1f675ae88e3e18326aa}{\index{p32/include/pinguino/libraries/sd/fileio.\-c@{p32/include/pinguino/libraries/sd/fileio.\-c}!S\-D\-\_\-present@{S\-D\-\_\-present}}
+\index{S\-D\-\_\-present@{S\-D\-\_\-present}!p32/include/pinguino/libraries/sd/fileio.c@{p32/include/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{S\-D\-\_\-present}]{\setlength{\rightskip}{0pt plus 5cm}char S\-D\-\_\-present (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_a17f67486a820e1f675ae88e3e18326aa}
+
+
+Definition at line 138 of file fileio.\-c.
+
+
+
+References False, mount(), True, and unmount().
+
+
+\begin{DoxyCode}
+138                                    \{
+139     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_a5e3ce5c604a13f189e763de37fab581f}{mount}(pin)) \{
+140         \hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8c_ac87c06145b272705cfac7529b90e8f25}{unmount}();
+141         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True};
+142     \} \textcolor{keywordflow}{else} \{
+143         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False};
+144     \}
+145 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_ac87c06145b272705cfac7529b90e8f25}{\index{p32/include/pinguino/libraries/sd/fileio.\-c@{p32/include/pinguino/libraries/sd/fileio.\-c}!unmount@{unmount}}
+\index{unmount@{unmount}!p32/include/pinguino/libraries/sd/fileio.c@{p32/include/pinguino/libraries/sd/fileio.\-c}}
+\subsubsection[{unmount}]{\setlength{\rightskip}{0pt plus 5cm}void unmount (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2fileio_8c_ac87c06145b272705cfac7529b90e8f25}
+
+
+Definition at line 128 of file fileio.\-c.
+
+
+
+References D, f\-\_\-mount(), and N\-U\-L\-L.
+
+
+\begin{DoxyCode}
+128                    \{
+129     \hyperlink{tff_8c_af9bf08d8cf178eaf220d5b4e2370bcf6}{f\_mount}(0, \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL});
+130     \textcolor{comment}{//free(Fat);}
+131     SPI2CONCLR = 0x8000; \textcolor{comment}{// SPI2 OFF}
+132 \} \textcolor{comment}{// unmount}
+\end{DoxyCode}

@@ -1,0 +1,273 @@
+\hypertarget{p8_2pinguino_2core_2pwm_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/pwm.c File Reference}
+\label{p8_2pinguino_2core_2pwm_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/pwm.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/pwm.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$pin.\-h$>$}\\*
+{\ttfamily \#include $<$digitalp.\-c$>$}\\*
+{\ttfamily \#include $<$oscillator.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pwm_8c_af290a5db9ad64217a6f56888aacdbf5b}{\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2core_2pwm_8c_a66096cd9427363197f1a2544eab81f38}{P\-W\-M\-\_\-set\-Frequency} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} freq)
+\item 
+void \hyperlink{p8_2pinguino_2core_2pwm_8c_a15388295f1bc60181ed2581d588eb878}{P\-W\-M\-\_\-set\-Duty\-Cycle} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} duty)
+\item 
+void \hyperlink{p8_2pinguino_2core_2pwm_8c_ad79c2597ad3679319968d279d23efbc6}{P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} percent)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\-\_\-pr2\-\_\-plus1} = 256
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2core_2pwm_8c_acf020b983c21c8a2556c9fac553a95e6}{\-\_\-t2con}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2pwm_8c_af290a5db9ad64217a6f56888aacdbf5b}{\index{p8/pinguino/core/pwm.\-c@{p8/pinguino/core/pwm.\-c}!\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-@{\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-@{\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-}!p8/pinguino/core/pwm.c@{p8/pinguino/core/pwm.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-}}\label{p8_2pinguino_2core_2pwm_8c_af290a5db9ad64217a6f56888aacdbf5b}
+
+
+Definition at line 34 of file pwm.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2pwm_8c_a15388295f1bc60181ed2581d588eb878}{\index{p8/pinguino/core/pwm.\-c@{p8/pinguino/core/pwm.\-c}!P\-W\-M\-\_\-set\-Duty\-Cycle@{P\-W\-M\-\_\-set\-Duty\-Cycle}}
+\index{P\-W\-M\-\_\-set\-Duty\-Cycle@{P\-W\-M\-\_\-set\-Duty\-Cycle}!p8/pinguino/core/pwm.c@{p8/pinguino/core/pwm.\-c}}
+\subsubsection[{P\-W\-M\-\_\-set\-Duty\-Cycle}]{\setlength{\rightskip}{0pt plus 5cm}void P\-W\-M\-\_\-set\-Duty\-Cycle (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u16}}]{duty}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pwm_8c_a15388295f1bc60181ed2581d588eb878}
+
+
+Definition at line 113 of file pwm.\-c.
+
+
+
+References \-\_\-pr2\-\_\-plus1, \-\_\-t2con, O\-U\-T\-P\-U\-T, and pinmode().
+
+
+
+Referenced by P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle().
+
+
+\begin{DoxyCode}
+114 \{
+115     \textcolor{keywordflow}{if} (duty > 1023) duty = 1023;       \textcolor{comment}{// upper limit (10-bit)}
+116 
+117     \textcolor{comment}{// 1- Set the PWM period by writing to the PR2 (PR4) register.}
+118 
+119     PR2 = \hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\_pr2\_plus1} - 1;             \textcolor{comment}{// set PWM period}
+120 
+121 \textcolor{preprocessor}{    #if defined(\_\_18f26j53) || defined(\_\_18f46j53) || \(\backslash\)}
+122 \textcolor{preprocessor}{        defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+123 \textcolor{preprocessor}{}
+124     CCPTMRS1 = 0;                       \textcolor{comment}{// assign Timer2 to all CCP pins}
+125     CCPTMRS2 = 0;
+126 
+127 \textcolor{preprocessor}{    #endif}
+128 \textcolor{preprocessor}{}    
+129     \textcolor{comment}{// 2- Set the PWM duty cycle by writing to the CCPRxL register and}
+130     \textcolor{comment}{// CCPxCON<5:4> bits.}
+131 
+132     \textcolor{keywordflow}{switch} (pin)
+133     \{
+134 \textcolor{preprocessor}{        #if defined(\_\_18f26j53) || defined(\_\_18f46j53) || \(\backslash\)}
+135 \textcolor{preprocessor}{            defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+136 \textcolor{preprocessor}{}
+137         \textcolor{keywordflow}{case} CCP4:
+138             CCP4CON  = 0b00001100;
+139             CCPR4L   = ( duty >> 2 ) & 0xFF; \textcolor{comment}{// 8 LSB}
+140             CCP4CON |= (duty & 0x300) >> 4;  \textcolor{comment}{// 2 MSB in <5:4>}
+141             \textcolor{keywordflow}{break};
+142 
+143         \textcolor{keywordflow}{case} CCP5:
+144             CCP5CON  = 0b00001100;
+145             CCPR5L   = ( duty >> 2 ) & 0xFF; \textcolor{comment}{// 8 LSB}
+146             CCP5CON |= (duty & 0x300) >> 4;  \textcolor{comment}{// 2 MSB in <5:4>}
+147             \textcolor{keywordflow}{break};
+148 
+149         \textcolor{keywordflow}{case} CCP6:
+150             CCP6CON  = 0b00001100;
+151             CCPR6L   = ( duty >> 2 ) & 0xFF; \textcolor{comment}{// 8 LSB}
+152             CCP6CON |= (duty & 0x300) >> 4;  \textcolor{comment}{// 2 MSB in <5:4>}
+153             \textcolor{keywordflow}{break};
+154 
+155         \textcolor{keywordflow}{case} CCP7:
+156             CCP7CON  = 0b00001100;
+157             CCPR7L   = ( duty >> 2 ) & 0xFF; \textcolor{comment}{// 8 LSB}
+158             CCP7CON |= (duty & 0x300) >> 4;  \textcolor{comment}{// 2 MSB in <5:4>}
+159             \textcolor{keywordflow}{break};
+160 
+161         \textcolor{keywordflow}{case} CCP8:
+162             CCP8CON  = 0b00001100;
+163             CCPR8L   = ( duty >> 2 ) & 0xFF; \textcolor{comment}{// 8 LSB}
+164             CCP8CON |= (duty & 0x300) >> 4;  \textcolor{comment}{// 2 MSB in <5:4>}
+165             \textcolor{keywordflow}{break};
+166 
+167         \textcolor{keywordflow}{case} CCP9:
+168             CCP9CON  = 0b00001100;
+169             CCPR9L   = ( duty >> 2 ) & 0xFF; \textcolor{comment}{// 8 LSB}
+170             CCP9CON |= (duty & 0x300) >> 4;  \textcolor{comment}{// 2 MSB in <5:4>}
+171             \textcolor{keywordflow}{break};
+172 
+173         \textcolor{keywordflow}{case} CCP10:
+174             CCP10CON  = 0b00001100;
+175             CCPR10L   = ( duty >> 2 ) & 0xFF; \textcolor{comment}{// 8 LSB}
+176             CCP10CON |= (duty & 0x300) >> 4;  \textcolor{comment}{// 2 MSB in <5:4>}
+177             \textcolor{keywordflow}{break};
+178 
+179 \textcolor{preprocessor}{        #else}
+180 \textcolor{preprocessor}{}
+181         \textcolor{keywordflow}{case} CCP1:
+182             CCP1CON  = 0b00001100;
+183             CCPR1L   = ( duty >> 2 ) & 0xFF; \textcolor{comment}{// 8 LSB}
+184             CCP1CON |= (duty & 0x300) >> 4;  \textcolor{comment}{// 2 MSB in <5:4>}
+185             \textcolor{keywordflow}{break};
+186 
+187         \textcolor{keywordflow}{case} CCP2:
+188             CCP2CON  = 0b00001100;
+189             CCPR2L   = ( duty >> 2 ) & 0xFF; \textcolor{comment}{// 8 LSB}
+190             CCP1CON |= (duty & 0x300) >> 4;  \textcolor{comment}{// 2 MSB in <5:4>}
+191             \textcolor{keywordflow}{break};
+192 
+193 \textcolor{preprocessor}{        #endif}
+194 \textcolor{preprocessor}{}            
+195         \textcolor{keywordflow}{default}:
+196 \textcolor{preprocessor}{            #ifdef DEBUG}
+197 \textcolor{preprocessor}{}\textcolor{preprocessor}{                #error "Invalid CCPx Pin"}
+198 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #endif}
+199 \textcolor{preprocessor}{}    \}
+200 
+201     \textcolor{comment}{// 3- Make the CCPx pin an output by clearing the appropriate TRIS bit.}
+202 
+203     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(pin, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});              \textcolor{comment}{// PWM pin as OUTPUT}
+204 
+205     \textcolor{comment}{// 4- Set the TMR2 prescale value, then enable Timer2 by writing to T2CON}
+206 
+207     T2CON = \hyperlink{p8_2pinguino_2core_2pwm_8c_acf020b983c21c8a2556c9fac553a95e6}{\_t2con};                       \textcolor{comment}{// Timer2 prescaler + ON}
+208 
+209     \textcolor{comment}{// 5- Configure the CCPx module for PWM operation}
+210 
+211     \textcolor{comment}{//PIR1bits.TMR2IF = 0;              // Reset interrupt flag}
+212 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pwm_8c_a66096cd9427363197f1a2544eab81f38}{\index{p8/pinguino/core/pwm.\-c@{p8/pinguino/core/pwm.\-c}!P\-W\-M\-\_\-set\-Frequency@{P\-W\-M\-\_\-set\-Frequency}}
+\index{P\-W\-M\-\_\-set\-Frequency@{P\-W\-M\-\_\-set\-Frequency}!p8/pinguino/core/pwm.c@{p8/pinguino/core/pwm.\-c}}
+\subsubsection[{P\-W\-M\-\_\-set\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}void P\-W\-M\-\_\-set\-Frequency (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{freq}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pwm_8c_a66096cd9427363197f1a2544eab81f38}
+
+
+Definition at line 66 of file pwm.\-c.
+
+
+
+References \-\_\-pr2\-\_\-plus1, \-\_\-t2con, and System\-\_\-get\-Peripheral\-Frequency().
+
+
+
+Referenced by no\-Tone(), and Tone().
+
+
+\begin{DoxyCode}
+67 \{
+68     \textcolor{comment}{// PR2+1 calculation}
+69     \hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\_pr2\_plus1} = \hyperlink{oscillator_8c_a3eab518123550469cd841a0b71ee294d}{System\_getPeripheralFrequency}() / freq; \textcolor{comment}{// FOSC /
+       (4 * PWM Frequency)}
+70 
+71     \textcolor{comment}{// Timer2 prescaler calculation}
+72     \textcolor{comment}{// PR2 max value is 255, so PR2+1 max value is 256}
+73     \textcolor{comment}{// highest prescaler value is 16}
+74     \textcolor{comment}{// 16 * 256 = 4096 so :}
+75     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\_pr2\_plus1} <= 4096)                   \textcolor{comment}{// check if it's not too high}
+76     \{
+77         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\_pr2\_plus1} <= 256)                \textcolor{comment}{// no needs of any prescaler}
+78         \{
+79             \hyperlink{p8_2pinguino_2core_2pwm_8c_acf020b983c21c8a2556c9fac553a95e6}{\_t2con} = 0b00000100;          \textcolor{comment}{// prescaler is 1, Timer2 On}
+80         \}
+81         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\_pr2\_plus1} <= 1024)      \textcolor{comment}{// needs prescaler 1:4}
+82         \{
+83             \hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\_pr2\_plus1} = \hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\_pr2\_plus1} >> 2;   \textcolor{comment}{// divided by 4}
+84             \hyperlink{p8_2pinguino_2core_2pwm_8c_acf020b983c21c8a2556c9fac553a95e6}{\_t2con} = 0b00000101;          \textcolor{comment}{// prescaler is 4, Timer2 On}
+85         \}
+86         \textcolor{keywordflow}{else}                                \textcolor{comment}{// needs prescaler 1:6}
+87         \{
+88             \hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\_pr2\_plus1} = \hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\_pr2\_plus1} >> 4;   \textcolor{comment}{// divided by 16}
+89             \hyperlink{p8_2pinguino_2core_2pwm_8c_acf020b983c21c8a2556c9fac553a95e6}{\_t2con} = 0b00000110;          \textcolor{comment}{// prescaler is 16, Timer2 On}
+90         \}
+91     \}
+92 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pwm_8c_ad79c2597ad3679319968d279d23efbc6}{\index{p8/pinguino/core/pwm.\-c@{p8/pinguino/core/pwm.\-c}!P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle@{P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle}}
+\index{P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle@{P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle}!p8/pinguino/core/pwm.c@{p8/pinguino/core/pwm.\-c}}
+\subsubsection[{P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle}]{\setlength{\rightskip}{0pt plus 5cm}void P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u8}}]{percent}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pwm_8c_ad79c2597ad3679319968d279d23efbc6}
+
+
+Definition at line 225 of file pwm.\-c.
+
+
+
+References \-\_\-pr2\-\_\-plus1, and P\-W\-M\-\_\-set\-Duty\-Cycle().
+
+
+
+Referenced by I\-Rsend\-\_\-mark(), I\-Rsend\-\_\-space(), no\-Tone(), and Tone().
+
+
+\begin{DoxyCode}
+226 \{
+227     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} duty;
+228 
+229     \textcolor{keywordflow}{if} (percent == 0)
+230         duty = 0;
+231     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (percent >= 100)
+232         duty = \hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\_pr2\_plus1} - 1;
+233     \textcolor{keywordflow}{else}
+234         duty = percent * (\hyperlink{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\_pr2\_plus1} / 4) / 25;   \textcolor{comment}{// (factor PR2/100)}
+235 
+236     \hyperlink{p8_2pinguino_2core_2pwm_8c_a15388295f1bc60181ed2581d588eb878}{PWM\_setDutyCycle}(pin, duty << 2);
+237 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}{\index{p8/pinguino/core/pwm.\-c@{p8/pinguino/core/pwm.\-c}!\-\_\-pr2\-\_\-plus1@{\-\_\-pr2\-\_\-plus1}}
+\index{\-\_\-pr2\-\_\-plus1@{\-\_\-pr2\-\_\-plus1}!p8/pinguino/core/pwm.c@{p8/pinguino/core/pwm.\-c}}
+\subsubsection[{\-\_\-pr2\-\_\-plus1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} \-\_\-pr2\-\_\-plus1 = 256}}\label{p8_2pinguino_2core_2pwm_8c_a50a4b31769e7971f40c1f07e3ec19bb4}
+
+
+Definition at line 47 of file pwm.\-c.
+
+
+
+Referenced by P\-W\-M\-\_\-set\-Duty\-Cycle(), P\-W\-M\-\_\-set\-Frequency(), and P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle().
+
+\hypertarget{p8_2pinguino_2core_2pwm_8c_acf020b983c21c8a2556c9fac553a95e6}{\index{p8/pinguino/core/pwm.\-c@{p8/pinguino/core/pwm.\-c}!\-\_\-t2con@{\-\_\-t2con}}
+\index{\-\_\-t2con@{\-\_\-t2con}!p8/pinguino/core/pwm.c@{p8/pinguino/core/pwm.\-c}}
+\subsubsection[{\-\_\-t2con}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} \-\_\-t2con}}\label{p8_2pinguino_2core_2pwm_8c_acf020b983c21c8a2556c9fac553a95e6}
+
+
+Definition at line 48 of file pwm.\-c.
+
+
+
+Referenced by P\-W\-M\-\_\-set\-Duty\-Cycle(), and P\-W\-M\-\_\-set\-Frequency().
+

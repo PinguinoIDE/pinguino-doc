@@ -1,0 +1,597 @@
+\hypertarget{p8_2pinguino_2core_2i2c_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/i2c.c File Reference}
+\label{p8_2pinguino_2core_2i2c_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/i2c.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/i2c.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-c$>$}\\*
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_af8a7c9502827eeb0e589a69c0cb14fbe}{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-\_\-\-I2\-C\-\_\-\-C}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_a75263ea52a908b8e983892153c37bbb7}{\-\_\-\-\_\-\-I2\-C\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_ab45d257574da6fe1f091cc45b7eda6cc}{I2\-C1}~1
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_afa60ac20c1921ef1002083bb3e1f5d16}{I2\-C2}~2
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_a9536bf85bced4f4e549a82fb18eb6140}{I2\-C\-\_\-\-W\-R\-I\-T\-E}~0
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_ab5c0fbe837494c5f9130a5914854250d}{I2\-C\-\_\-\-R\-E\-A\-D}~1
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}~0
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_aa6bde6f87c55b879889545bc072173fd}{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}~1
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_a27cf310dac6c98eca59bf4b9884d9102}{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}~0
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_a562c5b9c555d183bb173819d1508e4e3}{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}~1
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_a30c06a423a78e6ded9ae0d26aa3fb541}{I2\-C\-\_\-100\-K\-H\-Z}~100
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_af20d0f07302cb39d69cd7d517c4b44a6}{I2\-C\-\_\-400\-K\-H\-Z}~400
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_a0342b9931f95c111ccce18e98c8d776a}{I2\-C\-\_\-1\-M\-H\-Z}~1000
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2\-C\-\_\-idle}()~while (((S\-S\-P\-C\-O\-N2 \& 0x1\-F) $>$ 0) $\vert$ (\-S\-S\-P\-S\-T\-A\-Tbits.\-R\-\_\-\-W))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2core_2i2c_8c_a9663e0448c34403ef58a5f99b66d5ff3}{I2\-C\-\_\-master} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\begin{DoxyCompactList}\small\item\em P\-R\-O\-T\-O\-T\-Y\-P\-E\-S. \end{DoxyCompactList}\item 
+void \hyperlink{p8_2pinguino_2core_2i2c_8c_ab41207d342a68cdfb5f78d0a449d1b06}{I2\-C\-\_\-slave} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{p8_2pinguino_2core_2i2c_8c_a294f9659c7a45647d2274c1b2d7ad849}{I2\-C\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2core_2i2c_8c_a39120f62e823d8bc3523d07093d3993d}{I2\-C\-\_\-write} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2core_2i2c_8c_ae8f073ed5b503fde322dd21330ba56e6}{I2\-C\-\_\-read} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2i2c_8c_a933dcd2787f6662c015bec24f3bce106}{I2\-C\-\_\-wait} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2i2c_8c_a263c74ce484e3680c05a9118707fadb7}{I2\-C\-\_\-start} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2i2c_8c_af8dcc1bcb3e1c6c0fcdca4cf599a239b}{I2\-C\-\_\-stop} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2i2c_8c_a5c5db4ac8c3c6ac4bf3b358d00a9e9c3}{I2\-C\-\_\-restart} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2i2c_8c_a509b10df2156a43d231bd9c7d2e9d848}{I2\-C\-\_\-send\-Nack} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2i2c_8c_a7f5eeebeea47eafb764e4a04d47f979b}{I2\-C\-\_\-send\-Ack} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a75263ea52a908b8e983892153c37bbb7}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!\-\_\-\-\_\-\-I2\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-I2\-C\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-I2\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-I2\-C\-\_\-\-\_\-}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-I2\-C\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-I2\-C\-\_\-\-\_\-}}\label{p8_2pinguino_2core_2i2c_8c_a75263ea52a908b8e983892153c37bbb7}
+
+
+Definition at line 53 of file i2c.\-c.
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_af8a7c9502827eeb0e589a69c0cb14fbe}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-\_\-\-I2\-C\-\_\-\-C@{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-\_\-\-I2\-C\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-\_\-\-I2\-C\-\_\-\-C@{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-\_\-\-I2\-C\-\_\-\-C}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-\_\-\-I2\-C\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-\_\-\-I2\-C\-\_\-\-C}}\label{p8_2pinguino_2core_2i2c_8c_af8a7c9502827eeb0e589a69c0cb14fbe}
+
+
+Definition at line 51 of file i2c.\-c.
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_ab45d257574da6fe1f091cc45b7eda6cc}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C1@{I2\-C1}}
+\index{I2\-C1@{I2\-C1}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C1~1}}\label{p8_2pinguino_2core_2i2c_8c_ab45d257574da6fe1f091cc45b7eda6cc}
+
+
+Definition at line 70 of file i2c.\-c.
+
+
+
+Referenced by I2\-C1\-\_\-get(), I2\-C1\-\_\-init(), I2\-C1\-\_\-readchar(), I2\-C1\-\_\-readchar\-Ack(), I2\-C1\-\_\-restart(), I2\-C1\-\_\-send(), I2\-C1\-\_\-send\-Ack(), I2\-C1\-\_\-send\-I\-D(), I2\-C1\-\_\-send\-Nack(), I2\-C1\-\_\-start(), I2\-C1\-\_\-stop(), I2\-C1\-\_\-wait(), I2\-C1\-\_\-write(), I2\-C1\-\_\-writechar(), lcdi2c\-\_\-backlight(), lcdi2c\-\_\-init(), and lcdi2c\-\_\-no\-Backlight().
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_afa60ac20c1921ef1002083bb3e1f5d16}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C2@{I2\-C2}}
+\index{I2\-C2@{I2\-C2}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C2~2}}\label{p8_2pinguino_2core_2i2c_8c_afa60ac20c1921ef1002083bb3e1f5d16}
+
+
+Definition at line 71 of file i2c.\-c.
+
+
+
+Referenced by I2\-C2\-\_\-get(), I2\-C2\-\_\-init(), I2\-C2\-\_\-readchar(), I2\-C2\-\_\-readchar\-Ack(), I2\-C2\-\_\-restart(), I2\-C2\-\_\-send(), I2\-C2\-\_\-send\-Ack(), I2\-C2\-\_\-send\-I\-D(), I2\-C2\-\_\-send\-Nack(), I2\-C2\-\_\-start(), I2\-C2\-\_\-stop(), I2\-C2\-\_\-wait(), I2\-C2\-\_\-write(), and I2\-C2\-\_\-writechar().
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a30c06a423a78e6ded9ae0d26aa3fb541}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-100\-K\-H\-Z@{I2\-C\-\_\-100\-K\-H\-Z}}
+\index{I2\-C\-\_\-100\-K\-H\-Z@{I2\-C\-\_\-100\-K\-H\-Z}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-100\-K\-H\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-100\-K\-H\-Z~100}}\label{p8_2pinguino_2core_2i2c_8c_a30c06a423a78e6ded9ae0d26aa3fb541}
+
+
+Definition at line 82 of file i2c.\-c.
+
+
+
+Referenced by I2\-C1\-\_\-init(), I2\-C\-\_\-init(), lcdi2c\-\_\-init(), and P\-C\-F8574\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a0342b9931f95c111ccce18e98c8d776a}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-1\-M\-H\-Z@{I2\-C\-\_\-1\-M\-H\-Z}}
+\index{I2\-C\-\_\-1\-M\-H\-Z@{I2\-C\-\_\-1\-M\-H\-Z}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-1\-M\-H\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-1\-M\-H\-Z~1000}}\label{p8_2pinguino_2core_2i2c_8c_a0342b9931f95c111ccce18e98c8d776a}
+
+
+Definition at line 84 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-init(), and lcdi2c\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_af20d0f07302cb39d69cd7d517c4b44a6}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-400\-K\-H\-Z@{I2\-C\-\_\-400\-K\-H\-Z}}
+\index{I2\-C\-\_\-400\-K\-H\-Z@{I2\-C\-\_\-400\-K\-H\-Z}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-400\-K\-H\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-400\-K\-H\-Z~400}}\label{p8_2pinguino_2core_2i2c_8c_af20d0f07302cb39d69cd7d517c4b44a6}
+
+
+Definition at line 83 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-idle@{I2\-C\-\_\-idle}}
+\index{I2\-C\-\_\-idle@{I2\-C\-\_\-idle}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-idle}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-idle(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~while (((S\-S\-P\-C\-O\-N2 \& 0x1\-F) $>$ 0) $\vert$ (\-S\-S\-P\-S\-T\-A\-Tbits.\-R\-\_\-\-W))}}\label{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}
+
+
+Definition at line 86 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-read(), I2\-C\-\_\-restart(), I2\-C\-\_\-send\-Ack(), I2\-C\-\_\-send\-Nack(), I2\-C\-\_\-start(), I2\-C\-\_\-stop(), and I2\-C\-\_\-write().
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}}
+\index{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E~0}}\label{p8_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}
+
+
+Definition at line 76 of file i2c.\-c.
+
+
+
+Referenced by I2\-C1\-\_\-init(), I2\-C2\-\_\-init(), I2\-C\-\_\-init(), I2\-C\-\_\-master(), lcdi2c\-\_\-init(), and P\-C\-F8574\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_ab5c0fbe837494c5f9130a5914854250d}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-R\-E\-A\-D@{I2\-C\-\_\-\-R\-E\-A\-D}}
+\index{I2\-C\-\_\-\-R\-E\-A\-D@{I2\-C\-\_\-\-R\-E\-A\-D}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-R\-E\-A\-D~1}}\label{p8_2pinguino_2core_2i2c_8c_ab5c0fbe837494c5f9130a5914854250d}
+
+
+Definition at line 75 of file i2c.\-c.
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_aa6bde6f87c55b879889545bc072173fd}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}}
+\index{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E~1}}\label{p8_2pinguino_2core_2i2c_8c_aa6bde6f87c55b879889545bc072173fd}
+
+
+Definition at line 77 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-init(), and I2\-C\-\_\-slave().
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a27cf310dac6c98eca59bf4b9884d9102}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}}
+\index{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F~0}}\label{p8_2pinguino_2core_2i2c_8c_a27cf310dac6c98eca59bf4b9884d9102}
+
+
+Definition at line 78 of file i2c.\-c.
+
+
+
+Referenced by I2\-C2\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a562c5b9c555d183bb173819d1508e4e3}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}}
+\index{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N~1}}\label{p8_2pinguino_2core_2i2c_8c_a562c5b9c555d183bb173819d1508e4e3}
+
+
+Definition at line 79 of file i2c.\-c.
+
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a9536bf85bced4f4e549a82fb18eb6140}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-W\-R\-I\-T\-E@{I2\-C\-\_\-\-W\-R\-I\-T\-E}}
+\index{I2\-C\-\_\-\-W\-R\-I\-T\-E@{I2\-C\-\_\-\-W\-R\-I\-T\-E}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-W\-R\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-W\-R\-I\-T\-E~0}}\label{p8_2pinguino_2core_2i2c_8c_a9536bf85bced4f4e549a82fb18eb6140}
+
+
+Definition at line 74 of file i2c.\-c.
+
+
+
+Referenced by P\-C\-F8574\-\_\-write().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a294f9659c7a45647d2274c1b2d7ad849}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-init@{I2\-C\-\_\-init}}
+\index{I2\-C\-\_\-init@{I2\-C\-\_\-init}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{mode, }
+\item[{{\bf u16}}]{sora}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2i2c_8c_a294f9659c7a45647d2274c1b2d7ad849}
+
+
+Definition at line 167 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-100\-K\-H\-Z, I2\-C\-\_\-1\-M\-H\-Z, I2\-C\-\_\-400\-K\-H\-Z, I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E, I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E, and I\-N\-P\-U\-T.
+
+
+
+Referenced by I2\-C1\-\_\-init(), I2\-C2\-\_\-init(), I2\-C\-\_\-master(), I2\-C\-\_\-slave(), lcdi2c\-\_\-init(), and P\-C\-F8574\-\_\-init().
+
+
+\begin{DoxyCode}
+168 \{
+169     \textcolor{comment}{// In Slave mode, the SCL and SDA pins must be configured as inputs}
+170 \textcolor{preprocessor}{    #if defined(\_\_18f26j50) || defined(\_\_18f46j50) || \(\backslash\)}
+171 \textcolor{preprocessor}{        defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+172 \textcolor{preprocessor}{}    TRISBbits.TRISB5 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};          \textcolor{comment}{// SDA = INPUT}
+173     TRISBbits.TRISB4 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};          \textcolor{comment}{// SCL = INPUT}
+174 \textcolor{preprocessor}{    #else}
+175 \textcolor{preprocessor}{}    TRISBbits.TRISB0 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};          \textcolor{comment}{// SDA = INPUT}
+176     TRISBbits.TRISB1 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};          \textcolor{comment}{// SCL = INPUT}
+177 
+178 \textcolor{preprocessor}{    #endif}
+179 \textcolor{preprocessor}{}
+180     \textcolor{keywordflow}{switch} (mode)
+181     \{
+182         \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2i2c_8c_aa6bde6f87c55b879889545bc072173fd}{I2C\_SLAVE\_MODE}:
+183             \textcolor{comment}{//intUsed[INT\_SSP] = INT\_USED;}
+184             \textcolor{comment}{// Enabling interrupts (peripheral & general)}
+185             \textcolor{comment}{//INTCONbits.PEIE=1;}
+186             \textcolor{comment}{//INTCONbits.GIE=1;}
+187             \textcolor{keywordflow}{if} (sora > 0x80)
+188                 SSPCON1= 0b00101111;    \textcolor{comment}{// Slave mode, 10-bit address with Start and Stop bit interrupts
+       enabled}
+189             \textcolor{keywordflow}{else}
+190                 SSPCON1= 0b00101110;    \textcolor{comment}{// 00101110Slave mode,  7-bit address with Start and Stop bit
+       interrupts enabled}
+191     \textcolor{comment}{/*------------------------------------------------------------------------*/}
+192             SSPADD= sora;               \textcolor{comment}{// Slave 7-bit address}
+193             \textcolor{comment}{// TODO                     // Slave 10-bit address}
+194     \textcolor{comment}{/*------------------------------------------------------------------------*/}
+195             \textcolor{keywordflow}{break};
+196 
+197         \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{I2C\_MASTER\_MODE}:
+198         \textcolor{keywordflow}{default}:\textcolor{comment}{// I2C\_MASTER\_MODE}
+199             SSPCON1= 0b00101000;        \textcolor{comment}{// Master Mode, clock = FOSC/(4 * (SSPADD + 1))}
+200             \textcolor{comment}{// datasheet p208}
+201             \textcolor{keywordflow}{switch} (sora)
+202             \{
+203                 \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2i2c_8c_a0342b9931f95c111ccce18e98c8d776a}{I2C\_1MHZ}:
+204                     \textcolor{comment}{// SMP = 1 = Slew rate control disabled for Standard Speed mode (100 kHz and 1 MHz)}
+205                     SSPSTATbits.SMP = 1;    \textcolor{comment}{// Slew Mode Off}
+206                     SSPADD= 11;            \textcolor{comment}{// 1MHz = FOSC/(4 * (SSPADD + 1))}
+207                     \textcolor{keywordflow}{break};                  \textcolor{comment}{// SSPADD = 48 000 / (4*1000) - 1}
+208                     
+209                 \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2i2c_8c_af20d0f07302cb39d69cd7d517c4b44a6}{I2C\_400KHZ}:
+210                     \textcolor{comment}{// SMP = 0 = Slew rate control enabled for High-Speed mode (400 kHz)}
+211                     SSPSTATbits.SMP = 0;    \textcolor{comment}{// Slew Mode On}
+212                     SSPADD= 29;            \textcolor{comment}{// 400kHz = FOSC/(4 * (SSPADD + 1))}
+213                     \textcolor{keywordflow}{break};           \textcolor{comment}{// SSPADD = 48 000 / (4*400) - 1}
+214                 \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2i2c_8c_a30c06a423a78e6ded9ae0d26aa3fb541}{I2C\_100KHZ}:
+215                 \textcolor{keywordflow}{default}:
+216                     \textcolor{comment}{// SMP = 1 = Slew rate control disabled for Standard Speed mode (100 kHz and 1 MHz)}
+217                     SSPSTATbits.SMP = 1;    \textcolor{comment}{// Slew Mode Off}
+218                     SSPADD= 119;           \textcolor{comment}{// 100kHz = FOSC/(4 * (SSPADD + 1))}
+219                     \textcolor{keywordflow}{break};                  \textcolor{comment}{// SSPADD = 48 000 / (4*100) - 1}
+220             \}
+221             \textcolor{keywordflow}{break};
+222     \}
+223     SSPCON2= 0;
+224     PIR1bits.SSPIF = 0; \textcolor{comment}{// MSSP Interrupt Flag}
+225     PIR2bits.BCLIF = 0; \textcolor{comment}{// Bus Collision Interrupt Flag}
+226     \textcolor{comment}{//Delayms(1000);}
+227 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a9663e0448c34403ef58a5f99b66d5ff3}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-master@{I2\-C\-\_\-master}}
+\index{I2\-C\-\_\-master@{I2\-C\-\_\-master}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-master}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-master (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{speed}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2i2c_8c_a9663e0448c34403ef58a5f99b66d5ff3}
+
+
+P\-R\-O\-T\-O\-T\-Y\-P\-E\-S. 
+
+
+
+Definition at line 144 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-init(), and I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E.
+
+
+
+Referenced by I2\-C\-\_\-begin().
+
+
+\begin{DoxyCode}
+145 \{
+146     \hyperlink{p8_2pinguino_2core_2i2c_8c_a294f9659c7a45647d2274c1b2d7ad849}{I2C\_init}(\hyperlink{p8_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{I2C\_MASTER\_MODE}, speed);
+147 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_ae8f073ed5b503fde322dd21330ba56e6}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-read@{I2\-C\-\_\-read}}
+\index{I2\-C\-\_\-read@{I2\-C\-\_\-read}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2i2c_8c_ae8f073ed5b503fde322dd21330ba56e6}
+
+
+Definition at line 290 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C\-\_\-read\-From().
+
+
+\begin{DoxyCode}
+291 \{
+292 \textcolor{comment}{//rz    u8 r;}
+293     
+294     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                 \textcolor{comment}{// Wait the MSSP module is inactive}
+295     \textcolor{comment}{//PIR1bits.SSPIF = 0;         // Clear SSP interrupt flag}
+296     SSPCON2bits.RCEN = 1;       \textcolor{comment}{// Initiate reception of byte}
+297     \textcolor{comment}{//while (!PIR1bits.SSPIF);    // Wait the interrupt flag is set}
+298 
+299     PIR1bits.SSPIF = 0;         \textcolor{comment}{// Clear SSP interrupt flag}
+300     
+301 \textcolor{comment}{//rz    r = SSPBUF;}
+302     
+303     \textcolor{keywordflow}{while} (!PIR1bits.SSPIF);    \textcolor{comment}{// Wait the interrupt flag is set}
+304     PIR1bits.SSPIF=0; \textcolor{comment}{// ROlf clear SSPIF}
+305 \textcolor{comment}{//rz    r = SSPBUF;}
+306     PIR1bits.SSPIF=0; \textcolor{comment}{// ROlf clear SSPIF}
+307     \textcolor{comment}{//while (!SSPSTATbits.BF);    // Wait until buffer is full}
+308     \textcolor{comment}{//while (SSPCON2bits.RCEN);    // Wait until RCEN is cleared}
+309 
+310 \textcolor{comment}{//rz    return r;}
+311     \textcolor{keywordflow}{return} SSPBUF;
+312 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a5c5db4ac8c3c6ac4bf3b358d00a9e9c3}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-restart@{I2\-C\-\_\-restart}}
+\index{I2\-C\-\_\-restart@{I2\-C\-\_\-restart}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-restart}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-restart (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2i2c_8c_a5c5db4ac8c3c6ac4bf3b358d00a9e9c3}
+
+
+Definition at line 418 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-restart(), I2\-C2\-\_\-restart(), I2\-C\-\_\-get(), I2\-C\-\_\-read\-From(), and I2\-C\-\_\-send\-I\-D().
+
+
+\begin{DoxyCode}
+419 \{
+420     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait module is inactive}
+421     \textcolor{comment}{//PIR1bits.SSPIF = 0;             // Clear SSP interrupt flag}
+422     SSPCON2bits.RSEN = 1;           \textcolor{comment}{// Send restart bit}
+423     \textcolor{keywordflow}{while} (SSPCON2bits.RSEN);       \textcolor{comment}{// Wait until RSEN is cleared  }
+424     \textcolor{comment}{//while (!PIR1bits.SSPIF);        // Wait the interrupt flag is set}
+425 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a7f5eeebeea47eafb764e4a04d47f979b}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-send\-Ack@{I2\-C\-\_\-send\-Ack}}
+\index{I2\-C\-\_\-send\-Ack@{I2\-C\-\_\-send\-Ack}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-send\-Ack}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-send\-Ack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2i2c_8c_a7f5eeebeea47eafb764e4a04d47f979b}
+
+
+Definition at line 434 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-send\-Ack(), I2\-C2\-\_\-send\-Ack(), and I2\-C\-\_\-read\-From().
+
+
+\begin{DoxyCode}
+435 \{
+436     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait module is inactive}
+437     SSPCON2bits.ACKDT = 0;          \textcolor{comment}{// We want an Ack}
+438     PIR1bits.SSPIF = 0;             \textcolor{comment}{// Clear SSP interrupt flag}
+439     SSPCON2bits.ACKEN = 1;          \textcolor{comment}{// Send it now}
+440     \textcolor{keywordflow}{while} (!PIR1bits.SSPIF);        \textcolor{comment}{// Wait the interrupt flag is set}
+441 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a509b10df2156a43d231bd9c7d2e9d848}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-send\-Nack@{I2\-C\-\_\-send\-Nack}}
+\index{I2\-C\-\_\-send\-Nack@{I2\-C\-\_\-send\-Nack}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-send\-Nack}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-send\-Nack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2i2c_8c_a509b10df2156a43d231bd9c7d2e9d848}
+
+
+Definition at line 450 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-send\-Nack(), I2\-C2\-\_\-send\-Nack(), I2\-C\-\_\-get(), and I2\-C\-\_\-read\-From().
+
+
+\begin{DoxyCode}
+451 \{
+452     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait module is inactive}
+453     SSPCON2bits.ACKDT = 1;          \textcolor{comment}{// We want a No Ack}
+454     PIR1bits.SSPIF = 0;             \textcolor{comment}{// Clear SSP interrupt flag}
+455     SSPCON2bits.ACKEN = 1;          \textcolor{comment}{// Send it now}
+456     \textcolor{keywordflow}{while} (!PIR1bits.SSPIF);        \textcolor{comment}{// Wait the interrupt flag is set}
+457 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_ab41207d342a68cdfb5f78d0a449d1b06}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-slave@{I2\-C\-\_\-slave}}
+\index{I2\-C\-\_\-slave@{I2\-C\-\_\-slave}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-slave}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-slave (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{Device\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2i2c_8c_ab41207d342a68cdfb5f78d0a449d1b06}
+
+
+Definition at line 149 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-init(), and I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E.
+
+
+\begin{DoxyCode}
+150 \{
+151     \hyperlink{p8_2pinguino_2core_2i2c_8c_a294f9659c7a45647d2274c1b2d7ad849}{I2C\_init}(\hyperlink{p8_2pinguino_2core_2i2c_8c_aa6bde6f87c55b879889545bc072173fd}{I2C\_SLAVE\_MODE}, DeviceID);
+152 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a263c74ce484e3680c05a9118707fadb7}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-start@{I2\-C\-\_\-start}}
+\index{I2\-C\-\_\-start@{I2\-C\-\_\-start}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2i2c_8c_a263c74ce484e3680c05a9118707fadb7}
+
+
+Definition at line 386 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-start(), I2\-C2\-\_\-start(), I2\-C\-\_\-read\-From(), I2\-C\-\_\-send(), I2\-C\-\_\-send\-I\-D(), I2\-C\-\_\-write\-To(), and P\-C\-F8574\-\_\-write().
+
+
+\begin{DoxyCode}
+387 \{
+388     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait module is inactive}
+389     \textcolor{comment}{//PIR1bits.SSPIF = 0;             // Clear SSP interrupt flag}
+390     SSPCON2bits.SEN = 1;            \textcolor{comment}{// Send start bit}
+391     \textcolor{keywordflow}{while} (SSPCON2bits.SEN);        \textcolor{comment}{// Wait until SEN is cleared }
+392     \textcolor{comment}{//while (!PIR1bits.SSPIF);        // Wait the interrupt flag is set}
+393 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_af8dcc1bcb3e1c6c0fcdca4cf599a239b}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-stop@{I2\-C\-\_\-stop}}
+\index{I2\-C\-\_\-stop@{I2\-C\-\_\-stop}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2i2c_8c_af8dcc1bcb3e1c6c0fcdca4cf599a239b}
+
+
+Definition at line 403 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-stop(), I2\-C2\-\_\-stop(), I2\-C\-\_\-get(), I2\-C\-\_\-read\-From(), I2\-C\-\_\-send(), I2\-C\-\_\-write\-To(), and P\-C\-F8574\-\_\-write().
+
+
+\begin{DoxyCode}
+404 \{
+405     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait module is inactive}
+406     \textcolor{comment}{//PIR1bits.SSPIF = 0;             // Clear SSP interrupt flag}
+407     SSPCON2bits.PEN = 1;            \textcolor{comment}{// Send stop bit}
+408     \textcolor{keywordflow}{while} (SSPCON2bits.PEN);        \textcolor{comment}{// Wait until PEN is cleared }
+409     \textcolor{comment}{//while (!PIR1bits.SSPIF);        // Wait the interrupt flag is set}
+410 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a933dcd2787f6662c015bec24f3bce106}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-wait@{I2\-C\-\_\-wait}}
+\index{I2\-C\-\_\-wait@{I2\-C\-\_\-wait}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-wait}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-wait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2i2c_8c_a933dcd2787f6662c015bec24f3bce106}
+
+
+Definition at line 330 of file i2c.\-c.
+
+
+
+Referenced by I2\-C1\-\_\-wait(), I2\-C2\-\_\-wait(), I2\-C\-\_\-readchar(), I2\-C\-\_\-restart(), I2\-C\-\_\-send\-Ack(), I2\-C\-\_\-send\-Nack(), I2\-C\-\_\-start(), I2\-C\-\_\-stop(), and I2\-C\-\_\-writechar().
+
+
+\begin{DoxyCode}
+331 \{
+332     \textcolor{keywordflow}{while} (!PIR1bits.SSPIF);        \textcolor{comment}{// Wait the interrupt flag is set}
+333     PIR1bits.SSPIF = 0;             \textcolor{comment}{// Clear SSP interrupt flag}
+334 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2i2c_8c_a39120f62e823d8bc3523d07093d3993d}{\index{p8/pinguino/core/i2c.\-c@{p8/pinguino/core/i2c.\-c}!I2\-C\-\_\-write@{I2\-C\-\_\-write}}
+\index{I2\-C\-\_\-write@{I2\-C\-\_\-write}!p8/pinguino/core/i2c.c@{p8/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2i2c_8c_a39120f62e823d8bc3523d07093d3993d}
+
+
+Definition at line 256 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-write(), I2\-C2\-\_\-write(), I2\-C\-\_\-read\-From(), I2\-C\-\_\-write\-To(), and P\-C\-F8574\-\_\-write().
+
+
+\begin{DoxyCode}
+257 \{
+258     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait the MSSP module is inactive}
+259     SSPBUF = value;                 \textcolor{comment}{// Write byte to SSPBUF (BF is set to 1)}
+260     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait the MSSP module is inactive}
+261 \textcolor{comment}{/*}
+262 \textcolor{comment}{    while (SSPCON1bits.WCOL)        // Send again if write collision occurred }
+263 \textcolor{comment}{    \{}
+264 \textcolor{comment}{        LATCbits.LATC2 = 1;}
+265 \textcolor{comment}{        SSPCON1bits.WCOL = 0;       // Must be cleared by software}
+266 \textcolor{comment}{        SSPBUF = value;             // Write byte to SSPBUF (BF is set to 1)}
+267 \textcolor{comment}{    \}}
+268 \textcolor{comment}{*/}
+269 \textcolor{comment}{//    while (SSPSTATbits.BF);         // Wait until buffer is empty (BF set to 0)}
+270     \textcolor{comment}{// ACKSTAT can be returned now because it was loaded before BF was cleared}
+271     \textcolor{keywordflow}{return} (!SSPCON2bits.ACKSTAT);  \textcolor{comment}{// 1 if Ack, 0 if NAck}
+272 \}
+\end{DoxyCode}

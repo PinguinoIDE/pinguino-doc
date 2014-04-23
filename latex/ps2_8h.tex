@@ -1,0 +1,394 @@
+\hypertarget{ps2_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/ps2.h File Reference}
+\label{ps2_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/ps2.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/ps2.\-h}}
+}
+{\ttfamily \#include $<$delay.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N}~P\-O\-R\-T\-Bbits.\-R\-B0
+\item 
+\#define \hyperlink{ps2_8h_a9de0e05d896f00ad46cc166cd0d0146b}{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N}~P\-O\-R\-T\-Bbits.\-R\-B1
+\item 
+\#define \hyperlink{ps2_8h_aabf10b3dcf93dd5dd019b28c9a797bb2}{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R}~T\-R\-I\-S\-Bbits.\-T\-R\-I\-S\-B0
+\item 
+\#define \hyperlink{ps2_8h_aae1bd1c244000c501be59a1659c13361}{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R}~T\-R\-I\-S\-Bbits.\-T\-R\-I\-S\-B1
+\item 
+\#define \hyperlink{ps2_8h_a8565e4dc4d8e9c25ddc9909d3cf24a87}{ps2\-\_\-wait\-\_\-idle}()~while(\hyperlink{ps2_8h_a9de0e05d896f00ad46cc166cd0d0146b}{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N}==0$\vert$\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N}==0)
+\item 
+\#define \hyperlink{ps2_8h_a1300ff9de2ae0a755a51a05994dbcb70}{ps2\-\_\-inhibit}()~\hyperlink{ps2_8h_aabf10b3dcf93dd5dd019b28c9a797bb2}{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R}==0;\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N}==0;\hyperlink{delay_8c_ab09145dc7b9482aae3522adce06f2dac}{Delayus}(100)
+\item 
+\#define \hyperlink{ps2_8h_a0f4716ddd1843a097000d7865c58470f}{ps2\-\_\-rts}()~\hyperlink{ps2_8h_aae1bd1c244000c501be59a1659c13361}{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R}=0;\hyperlink{ps2_8h_a9de0e05d896f00ad46cc166cd0d0146b}{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N}=0;\hyperlink{ps2_8h_aabf10b3dcf93dd5dd019b28c9a797bb2}{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R}=1
+\item 
+\#define \hyperlink{ps2_8h_a3b3e72edfc3fce8421b548b9deb69663}{P\-S2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~30
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ps2_8h_a59b249c25ab2aafc894e53fc94eced6a}{ps2\-\_\-init} ()
+\item 
+unsigned char \hyperlink{ps2_8h_af0c0a299575067d1f29a3f79abe43f6c}{ps2\-\_\-readfrom} ()
+\item 
+void \hyperlink{ps2_8h_a17411cfcef345095b1083e4091ede4c8}{ps2\-\_\-write} (unsigned char dta)
+\item 
+unsigned char \hyperlink{ps2_8h_a3289ae03b20734d67c17ec8ee7517175}{ps2\-\_\-available} ()
+\item 
+unsigned char \hyperlink{ps2_8h_a134e820367f965bcc2c3ae4d2ad22b01}{ps2\-\_\-read} ()
+\item 
+void \hyperlink{ps2_8h_a7f1eb0e9e8391ca2a5ad163dffae3da2}{ps2\-\_\-isr} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile unsigned char \hyperlink{ps2_8h_a27f76035526f740d5c47680718ea605b}{ps2\-\_\-rxpointer}
+\item 
+volatile unsigned char \hyperlink{ps2_8h_a318caf39bfc08b6c70296f804d2c7efc}{ps2\-\_\-txpointer}
+\item 
+volatile unsigned char \hyperlink{ps2_8h_ae08435fd1269f63d8b1296c7b9d3f2a7}{ps2\-\_\-buffer} \mbox{[}\hyperlink{ps2_8h_a3b3e72edfc3fce8421b548b9deb69663}{P\-S2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}\mbox{]}
+\item 
+const unsigned char \hyperlink{ps2_8h_aa600e9c0068e9a3523bdf9b2bd53efbc}{vett} \mbox{[}$\,$\mbox{]} =\{1,2,4,8,16,32,64,128\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{ps2_8h_a3b3e72edfc3fce8421b548b9deb69663}{\index{ps2.\-h@{ps2.\-h}!P\-S2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{P\-S2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{P\-S2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{P\-S2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!ps2.h@{ps2.\-h}}
+\subsubsection[{P\-S2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-S2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E~30}}\label{ps2_8h_a3b3e72edfc3fce8421b548b9deb69663}
+
+
+Definition at line 43 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-isr(), and ps2\-\_\-read().
+
+\hypertarget{ps2_8h_aabf10b3dcf93dd5dd019b28c9a797bb2}{\index{ps2.\-h@{ps2.\-h}!P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R@{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R}}
+\index{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R@{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R}!ps2.h@{ps2.\-h}}
+\subsubsection[{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R~T\-R\-I\-S\-Bbits.\-T\-R\-I\-S\-B0}}\label{ps2_8h_aabf10b3dcf93dd5dd019b28c9a797bb2}
+
+
+Definition at line 30 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-init().
+
+\hypertarget{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{\index{ps2.\-h@{ps2.\-h}!P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N@{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N}}
+\index{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N@{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N}!ps2.h@{ps2.\-h}}
+\subsubsection[{P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N~P\-O\-R\-T\-Bbits.\-R\-B0}}\label{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}
+
+
+Definition at line 26 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-isr(), ps2\-\_\-readfrom(), and ps2\-\_\-write().
+
+\hypertarget{ps2_8h_aae1bd1c244000c501be59a1659c13361}{\index{ps2.\-h@{ps2.\-h}!P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R@{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R}}
+\index{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R@{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R}!ps2.h@{ps2.\-h}}
+\subsubsection[{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R~T\-R\-I\-S\-Bbits.\-T\-R\-I\-S\-B1}}\label{ps2_8h_aae1bd1c244000c501be59a1659c13361}
+
+
+Definition at line 31 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-init(), and ps2\-\_\-write().
+
+\hypertarget{ps2_8h_a9de0e05d896f00ad46cc166cd0d0146b}{\index{ps2.\-h@{ps2.\-h}!P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N@{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N}}
+\index{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N@{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N}!ps2.h@{ps2.\-h}}
+\subsubsection[{P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N~P\-O\-R\-T\-Bbits.\-R\-B1}}\label{ps2_8h_a9de0e05d896f00ad46cc166cd0d0146b}
+
+
+Definition at line 27 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-readfrom(), and ps2\-\_\-write().
+
+\hypertarget{ps2_8h_a1300ff9de2ae0a755a51a05994dbcb70}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-inhibit@{ps2\-\_\-inhibit}}
+\index{ps2\-\_\-inhibit@{ps2\-\_\-inhibit}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-inhibit}]{\setlength{\rightskip}{0pt plus 5cm}\#define ps2\-\_\-inhibit(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R}==0;{\bf P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N}==0;{\bf Delayus}(100)}}\label{ps2_8h_a1300ff9de2ae0a755a51a05994dbcb70}
+
+
+Definition at line 37 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-write().
+
+\hypertarget{ps2_8h_a0f4716ddd1843a097000d7865c58470f}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-rts@{ps2\-\_\-rts}}
+\index{ps2\-\_\-rts@{ps2\-\_\-rts}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-rts}]{\setlength{\rightskip}{0pt plus 5cm}\#define ps2\-\_\-rts(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R}=0;{\bf P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N}=0;{\bf P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R}=1}}\label{ps2_8h_a0f4716ddd1843a097000d7865c58470f}
+
+
+Definition at line 40 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-write().
+
+\hypertarget{ps2_8h_a8565e4dc4d8e9c25ddc9909d3cf24a87}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-wait\-\_\-idle@{ps2\-\_\-wait\-\_\-idle}}
+\index{ps2\-\_\-wait\-\_\-idle@{ps2\-\_\-wait\-\_\-idle}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-wait\-\_\-idle}]{\setlength{\rightskip}{0pt plus 5cm}\#define ps2\-\_\-wait\-\_\-idle(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~while({\bf P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N}==0$\vert${\bf P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N}==0)}}\label{ps2_8h_a8565e4dc4d8e9c25ddc9909d3cf24a87}
+
+
+Definition at line 34 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-readfrom(), and ps2\-\_\-write().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{ps2_8h_a3289ae03b20734d67c17ec8ee7517175}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-available@{ps2\-\_\-available}}
+\index{ps2\-\_\-available@{ps2\-\_\-available}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-available}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char ps2\-\_\-available (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ps2_8h_a3289ae03b20734d67c17ec8ee7517175}
+
+
+Definition at line 106 of file ps2.\-h.
+
+
+
+References ps2\-\_\-rxpointer, and ps2\-\_\-txpointer.
+
+
+
+Referenced by keyboard\-\_\-readvk().
+
+
+\begin{DoxyCode}
+107 \{
+108     \textcolor{keywordflow}{return} (\hyperlink{ps2_8h_a27f76035526f740d5c47680718ea605b}{ps2\_rxpointer}!=\hyperlink{ps2_8h_a318caf39bfc08b6c70296f804d2c7efc}{ps2\_txpointer});
+109 \}
+\end{DoxyCode}
+\hypertarget{ps2_8h_a59b249c25ab2aafc894e53fc94eced6a}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-init@{ps2\-\_\-init}}
+\index{ps2\-\_\-init@{ps2\-\_\-init}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void ps2\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ps2_8h_a59b249c25ab2aafc894e53fc94eced6a}
+
+
+Definition at line 51 of file ps2.\-h.
+
+
+
+References P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-R, P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R, ps2\-\_\-rxpointer, and ps2\-\_\-txpointer.
+
+
+\begin{DoxyCode}
+52 \{
+53     \hyperlink{ps2_8h_aabf10b3dcf93dd5dd019b28c9a797bb2}{PS2\_CLOCK\_DIR}=1;
+54     \hyperlink{ps2_8h_aae1bd1c244000c501be59a1659c13361}{PS2\_DATA\_DIR}=1;
+55     \hyperlink{ps2_8h_a27f76035526f740d5c47680718ea605b}{ps2\_rxpointer}=0;
+56     \hyperlink{ps2_8h_a318caf39bfc08b6c70296f804d2c7efc}{ps2\_txpointer}=0;
+57     INTCONbits.INT0IE=1;
+58     INTCON2bits.INTEDG0=0;
+59     INTCONbits.GIE=1;
+60 \}
+\end{DoxyCode}
+\hypertarget{ps2_8h_a7f1eb0e9e8391ca2a5ad163dffae3da2}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-isr@{ps2\-\_\-isr}}
+\index{ps2\-\_\-isr@{ps2\-\_\-isr}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-isr}]{\setlength{\rightskip}{0pt plus 5cm}void ps2\-\_\-isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ps2_8h_a7f1eb0e9e8391ca2a5ad163dffae3da2}
+
+
+Definition at line 123 of file ps2.\-h.
+
+
+
+References ps2\-\_\-buffer, P\-S2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E, P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N, ps2\-\_\-readfrom(), and ps2\-\_\-rxpointer.
+
+
+\begin{DoxyCode}
+124 \{
+125     \textcolor{keywordflow}{if}(INTCONbits.INT0IF)
+126     \{
+127         \textcolor{keywordflow}{if}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==0)
+128         \{
+129             \hyperlink{ps2_8h_ae08435fd1269f63d8b1296c7b9d3f2a7}{ps2\_buffer}[\hyperlink{ps2_8h_a27f76035526f740d5c47680718ea605b}{ps2\_rxpointer}]=\hyperlink{ps2_8h_af0c0a299575067d1f29a3f79abe43f6c}{ps2\_readfrom}();
+130             \textcolor{keywordflow}{if}(\hyperlink{ps2_8h_a27f76035526f740d5c47680718ea605b}{ps2\_rxpointer}<\hyperlink{ps2_8h_a3b3e72edfc3fce8421b548b9deb69663}{PS2\_BUFFER\_SIZE})
+131                 \hyperlink{ps2_8h_a27f76035526f740d5c47680718ea605b}{ps2\_rxpointer}++;
+132             \textcolor{keywordflow}{else}
+133                 \hyperlink{ps2_8h_a27f76035526f740d5c47680718ea605b}{ps2\_rxpointer}=0;
+134             INTCONbits.INT0IF=0;
+135         \}
+136     \}
+137 \}
+\end{DoxyCode}
+\hypertarget{ps2_8h_a134e820367f965bcc2c3ae4d2ad22b01}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-read@{ps2\-\_\-read}}
+\index{ps2\-\_\-read@{ps2\-\_\-read}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char ps2\-\_\-read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ps2_8h_a134e820367f965bcc2c3ae4d2ad22b01}
+
+
+Definition at line 112 of file ps2.\-h.
+
+
+
+References ps2\-\_\-buffer, P\-S2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E, and ps2\-\_\-txpointer.
+
+
+
+Referenced by keyboard\-\_\-readvk().
+
+
+\begin{DoxyCode}
+113 \{
+114     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} tmp=\hyperlink{ps2_8h_ae08435fd1269f63d8b1296c7b9d3f2a7}{ps2\_buffer}[\hyperlink{ps2_8h_a318caf39bfc08b6c70296f804d2c7efc}{ps2\_txpointer}];
+115     \textcolor{keywordflow}{if}(\hyperlink{ps2_8h_a318caf39bfc08b6c70296f804d2c7efc}{ps2\_txpointer}<\hyperlink{ps2_8h_a3b3e72edfc3fce8421b548b9deb69663}{PS2\_BUFFER\_SIZE})
+116         \hyperlink{ps2_8h_a318caf39bfc08b6c70296f804d2c7efc}{ps2\_txpointer}++;
+117     \textcolor{keywordflow}{else}
+118         \hyperlink{ps2_8h_a318caf39bfc08b6c70296f804d2c7efc}{ps2\_txpointer}=0;
+119     \textcolor{keywordflow}{return} tmp;
+120 \}
+\end{DoxyCode}
+\hypertarget{ps2_8h_af0c0a299575067d1f29a3f79abe43f6c}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-readfrom@{ps2\-\_\-readfrom}}
+\index{ps2\-\_\-readfrom@{ps2\-\_\-readfrom}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-readfrom}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char ps2\-\_\-readfrom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ps2_8h_af0c0a299575067d1f29a3f79abe43f6c}
+
+
+Definition at line 62 of file ps2.\-h.
+
+
+
+References P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N, P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N, ps2\-\_\-wait\-\_\-idle, and vett.
+
+
+
+Referenced by ps2\-\_\-isr().
+
+
+\begin{DoxyCode}
+63 \{
+64     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} readed=0,i;
+65     \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==0);
+66     \textcolor{keywordflow}{for}(i=0;i<8;i++)
+67     \{
+68         \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==1);
+69         readed+=(\hyperlink{ps2_8h_a9de0e05d896f00ad46cc166cd0d0146b}{PS2\_DATA\_PIN}*\hyperlink{ps2_8h_aa600e9c0068e9a3523bdf9b2bd53efbc}{vett}[i]);
+70         \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==0);
+71     \}
+72     \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==1);
+73     \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==0);
+74     \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==1);
+75     \hyperlink{ps2_8h_a8565e4dc4d8e9c25ddc9909d3cf24a87}{ps2\_wait\_idle}();
+76     \textcolor{keywordflow}{return} readed;
+77 \}
+\end{DoxyCode}
+\hypertarget{ps2_8h_a17411cfcef345095b1083e4091ede4c8}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-write@{ps2\-\_\-write}}
+\index{ps2\-\_\-write@{ps2\-\_\-write}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}void ps2\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{dta}
+\end{DoxyParamCaption}
+)}}\label{ps2_8h_a17411cfcef345095b1083e4091ede4c8}
+
+
+Definition at line 80 of file ps2.\-h.
+
+
+
+References P\-S2\-\_\-\-C\-L\-O\-C\-K\-\_\-\-P\-I\-N, P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-D\-I\-R, P\-S2\-\_\-\-D\-A\-T\-A\-\_\-\-P\-I\-N, ps2\-\_\-inhibit, ps2\-\_\-rts, and ps2\-\_\-wait\-\_\-idle.
+
+
+\begin{DoxyCode}
+81 \{
+82     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} i,p=1;
+83     INTCONbits.INT0IE=0;
+84     \hyperlink{ps2_8h_a1300ff9de2ae0a755a51a05994dbcb70}{ps2\_inhibit}();
+85     \hyperlink{ps2_8h_a0f4716ddd1843a097000d7865c58470f}{ps2\_rts}();
+86     \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==1);
+87     \textcolor{keywordflow}{for}(i=0;i<8;i++)
+88     \{
+89         \hyperlink{ps2_8h_a9de0e05d896f00ad46cc166cd0d0146b}{PS2\_DATA\_PIN}=dta;
+90         p=p^\hyperlink{ps2_8h_a9de0e05d896f00ad46cc166cd0d0146b}{PS2\_DATA\_PIN};
+91         dta=dta>>1;
+92         \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==0);
+93         \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==1);
+94     \}
+95     PS2\_DATA\_PIN=p;
+96     \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==0);
+97     \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==1);
+98     \hyperlink{ps2_8h_aae1bd1c244000c501be59a1659c13361}{PS2\_DATA\_DIR}=1;
+99     \textcolor{keywordflow}{while}(PS2\_DATA\_PIN==1);
+100     \textcolor{keywordflow}{while}(\hyperlink{ps2_8h_aca51e1a5333b2e42e6a68eef69feb95c}{PS2\_CLOCK\_PIN}==1);
+101     \hyperlink{ps2_8h_a8565e4dc4d8e9c25ddc9909d3cf24a87}{ps2\_wait\_idle}();
+102     INTCONbits.INT0IE=1;
+103 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{ps2_8h_ae08435fd1269f63d8b1296c7b9d3f2a7}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-buffer@{ps2\-\_\-buffer}}
+\index{ps2\-\_\-buffer@{ps2\-\_\-buffer}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}volatile unsigned char ps2\-\_\-buffer\mbox{[}{\bf P\-S2\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}\mbox{]}}}\label{ps2_8h_ae08435fd1269f63d8b1296c7b9d3f2a7}
+
+
+Definition at line 47 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-isr(), and ps2\-\_\-read().
+
+\hypertarget{ps2_8h_a27f76035526f740d5c47680718ea605b}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-rxpointer@{ps2\-\_\-rxpointer}}
+\index{ps2\-\_\-rxpointer@{ps2\-\_\-rxpointer}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-rxpointer}]{\setlength{\rightskip}{0pt plus 5cm}volatile unsigned char ps2\-\_\-rxpointer}}\label{ps2_8h_a27f76035526f740d5c47680718ea605b}
+
+
+Definition at line 46 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-available(), ps2\-\_\-init(), and ps2\-\_\-isr().
+
+\hypertarget{ps2_8h_a318caf39bfc08b6c70296f804d2c7efc}{\index{ps2.\-h@{ps2.\-h}!ps2\-\_\-txpointer@{ps2\-\_\-txpointer}}
+\index{ps2\-\_\-txpointer@{ps2\-\_\-txpointer}!ps2.h@{ps2.\-h}}
+\subsubsection[{ps2\-\_\-txpointer}]{\setlength{\rightskip}{0pt plus 5cm}volatile unsigned char ps2\-\_\-txpointer}}\label{ps2_8h_a318caf39bfc08b6c70296f804d2c7efc}
+
+
+Definition at line 46 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-available(), ps2\-\_\-init(), and ps2\-\_\-read().
+
+\hypertarget{ps2_8h_aa600e9c0068e9a3523bdf9b2bd53efbc}{\index{ps2.\-h@{ps2.\-h}!vett@{vett}}
+\index{vett@{vett}!ps2.h@{ps2.\-h}}
+\subsubsection[{vett}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char vett\mbox{[}$\,$\mbox{]} =\{1,2,4,8,16,32,64,128\}}}\label{ps2_8h_aa600e9c0068e9a3523bdf9b2bd53efbc}
+
+
+Definition at line 48 of file ps2.\-h.
+
+
+
+Referenced by ps2\-\_\-readfrom().
+

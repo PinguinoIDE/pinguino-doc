@@ -1,0 +1,726 @@
+\hypertarget{ecn28j60_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/ethernet/ecn28j60.c File Reference}
+\label{ecn28j60_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/ethernet/ecn28j60.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/ethernet/ecn28j60.\-c}}
+}
+{\ttfamily \#include \char`\"{}enc28j60.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$spi.\-c$>$}\\*
+{\ttfamily \#include $<$delay.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ecn28j60_8c_a59dec9ef2eb47cfd1af2ea675c6ccdd6}{E\-N\-C28\-J60\-\_\-\-C}
+\item 
+\#define \hyperlink{ecn28j60_8c_a3ffd28945de70d42e88ba739277b8134}{C\-S\-A\-C\-T\-I\-V\-E}~\hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_abe70b99273000241a05b4e03d8e8104d}{digitalwrite}(E\-N\-C28\-J60\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-C\-S, \hyperlink{p32_2include_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{L\-O\-W})
+\item 
+\#define \hyperlink{ecn28j60_8c_adf1112b42b6a400e4c4b88792eaae1bd}{C\-S\-P\-A\-S\-S\-I\-V\-E}~\hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_abe70b99273000241a05b4e03d8e8104d}{digitalwrite}(E\-N\-C28\-J60\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-C\-S, \hyperlink{p32_2include_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{H\-I\-G\-H})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} \hyperlink{ecn28j60_8c_acee2471817866ee365e276ce8e649595}{enc28j60\-Read\-Op} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} op, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} address)
+\item 
+void \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60\-Write\-Op} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} op, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} address, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} data)
+\item 
+void \hyperlink{ecn28j60_8c_ada0d92b7a9b2e26a7187fded85795c7f}{enc28j60\-Read\-Buffer} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} len, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$data)
+\item 
+void \hyperlink{ecn28j60_8c_aada178045c110bad8625bdd61ceca11b}{enc28j60\-Write\-Buffer} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} len, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$data)
+\item 
+void \hyperlink{ecn28j60_8c_a92310c73dae6ff7ea5f2ad8e1307630f}{enc28j60\-Set\-Bank} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} address)
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} \hyperlink{ecn28j60_8c_ac6c9cbfa6cacb1949692f1ea82d15576}{enc28j60\-Read} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} address)
+\item 
+void \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60\-Write} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} address, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} data)
+\item 
+void \hyperlink{ecn28j60_8c_a2ad5c16d7e1dca38e098224d1f8e5ce8}{enc28j60\-Phy\-Write} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} address, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} data)
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} \hyperlink{ecn28j60_8c_aa00c8c0c911a72f29822062be4195752}{enc28j60\-Phy\-Read\-H} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} address)
+\item 
+void \hyperlink{ecn28j60_8c_a10d3b9a4acecba0f303767321b40c8af}{enc28j60clkout} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} clk)
+\item 
+void \hyperlink{ecn28j60_8c_a6f3d5021417fb8cafb5d85ecbbe45d70}{enc28j60\-Init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$macaddr)
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} \hyperlink{ecn28j60_8c_a6cd9c9c1cb8dafbe0283fa85f2b839b3}{enc28j60getrev} (void)
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} \hyperlink{ecn28j60_8c_a6c8324ea13d91209db6cb5298e1b81bb}{enc28j60linkup} (void)
+\item 
+void \hyperlink{ecn28j60_8c_aed668455f7269eec646050b897827d86}{enc28j60\-Packet\-Send} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} len, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$packet)
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} \hyperlink{ecn28j60_8c_afdb3759f39d4cad14ccdfe7d4054d81e}{enc28j60has\-Rx\-Pkt} (void)
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} \hyperlink{ecn28j60_8c_a8dcece6d3a763c4435845e89e927e51a}{enc28j60\-Packet\-Receive} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} maxlen, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$packet)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{ecn28j60_8c_a3ffd28945de70d42e88ba739277b8134}{\index{ecn28j60.\-c@{ecn28j60.\-c}!C\-S\-A\-C\-T\-I\-V\-E@{C\-S\-A\-C\-T\-I\-V\-E}}
+\index{C\-S\-A\-C\-T\-I\-V\-E@{C\-S\-A\-C\-T\-I\-V\-E}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{C\-S\-A\-C\-T\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-S\-A\-C\-T\-I\-V\-E~{\bf digitalwrite}(E\-N\-C28\-J60\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-C\-S, {\bf L\-O\-W})}}\label{ecn28j60_8c_a3ffd28945de70d42e88ba739277b8134}
+
+
+Definition at line 29 of file ecn28j60.\-c.
+
+
+
+Referenced by enc28j60\-Read\-Buffer(), enc28j60\-Read\-Op(), enc28j60\-Write\-Buffer(), and enc28j60\-Write\-Op().
+
+\hypertarget{ecn28j60_8c_adf1112b42b6a400e4c4b88792eaae1bd}{\index{ecn28j60.\-c@{ecn28j60.\-c}!C\-S\-P\-A\-S\-S\-I\-V\-E@{C\-S\-P\-A\-S\-S\-I\-V\-E}}
+\index{C\-S\-P\-A\-S\-S\-I\-V\-E@{C\-S\-P\-A\-S\-S\-I\-V\-E}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{C\-S\-P\-A\-S\-S\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-S\-P\-A\-S\-S\-I\-V\-E~{\bf digitalwrite}(E\-N\-C28\-J60\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-C\-S, {\bf H\-I\-G\-H})}}\label{ecn28j60_8c_adf1112b42b6a400e4c4b88792eaae1bd}
+
+
+Definition at line 30 of file ecn28j60.\-c.
+
+
+
+Referenced by enc28j60\-Init(), enc28j60\-Read\-Buffer(), enc28j60\-Read\-Op(), enc28j60\-Write\-Buffer(), and enc28j60\-Write\-Op().
+
+\hypertarget{ecn28j60_8c_a59dec9ef2eb47cfd1af2ea675c6ccdd6}{\index{ecn28j60.\-c@{ecn28j60.\-c}!E\-N\-C28\-J60\-\_\-\-C@{E\-N\-C28\-J60\-\_\-\-C}}
+\index{E\-N\-C28\-J60\-\_\-\-C@{E\-N\-C28\-J60\-\_\-\-C}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{E\-N\-C28\-J60\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-C28\-J60\-\_\-\-C}}\label{ecn28j60_8c_a59dec9ef2eb47cfd1af2ea675c6ccdd6}
+
+
+Definition at line 18 of file ecn28j60.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{ecn28j60_8c_a10d3b9a4acecba0f303767321b40c8af}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60clkout@{enc28j60clkout}}
+\index{enc28j60clkout@{enc28j60clkout}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60clkout}]{\setlength{\rightskip}{0pt plus 5cm}void enc28j60clkout (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t}}]{clk}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_a10d3b9a4acecba0f303767321b40c8af}
+
+
+Definition at line 154 of file ecn28j60.\-c.
+
+
+
+References E\-C\-O\-C\-O\-N, and enc28j60\-Write().
+
+
+\begin{DoxyCode}
+155 \{
+156         \textcolor{comment}{//setup clkout: 2 is 12.5MHz:}
+157     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a023f4ef8ad02a85b4dcfae743368eb87}{ECOCON}, clk & 0x7);
+158 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_a6cd9c9c1cb8dafbe0283fa85f2b839b3}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60getrev@{enc28j60getrev}}
+\index{enc28j60getrev@{enc28j60getrev}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60getrev}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\-\_\-t} enc28j60getrev (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_a6cd9c9c1cb8dafbe0283fa85f2b839b3}
+
+
+Definition at line 250 of file ecn28j60.\-c.
+
+
+
+References enc28j60\-Read(), and E\-R\-E\-V\-I\-D.
+
+
+\begin{DoxyCode}
+251 \{
+252     \textcolor{keywordflow}{return}(\hyperlink{ecn28j60_8c_ac6c9cbfa6cacb1949692f1ea82d15576}{enc28j60Read}(\hyperlink{ecn28j60_8h_a5eec0cbe196f0a26a9b2f30a74e70c60}{EREVID}));
+253 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_afdb3759f39d4cad14ccdfe7d4054d81e}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60has\-Rx\-Pkt@{enc28j60has\-Rx\-Pkt}}
+\index{enc28j60has\-Rx\-Pkt@{enc28j60has\-Rx\-Pkt}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60has\-Rx\-Pkt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\-\_\-t} enc28j60has\-Rx\-Pkt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_afdb3759f39d4cad14ccdfe7d4054d81e}
+
+
+Definition at line 290 of file ecn28j60.\-c.
+
+
+
+References enc28j60\-Read(), and E\-P\-K\-T\-C\-N\-T.
+
+
+\begin{DoxyCode}
+291 \{
+292     \textcolor{keywordflow}{if}( \hyperlink{ecn28j60_8c_ac6c9cbfa6cacb1949692f1ea82d15576}{enc28j60Read}(\hyperlink{ecn28j60_8h_a029f8b5f05e4e5182aa9a73e31c4a4f0}{EPKTCNT}) ==0 )\{
+293         \textcolor{keywordflow}{return}(0);
+294         \}
+295         \textcolor{keywordflow}{return}(1);
+296 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_a6f3d5021417fb8cafb5d85ecbbe45d70}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Init@{enc28j60\-Init}}
+\index{enc28j60\-Init@{enc28j60\-Init}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void enc28j60\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{macaddr}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_a6f3d5021417fb8cafb5d85ecbbe45d70}
+
+
+Definition at line 159 of file ecn28j60.\-c.
+
+
+
+References C\-S\-P\-A\-S\-S\-I\-V\-E, Delayms(), E\-C\-O\-N1, E\-C\-O\-N1\-\_\-\-R\-X\-E\-N, E\-I\-E, E\-N\-C28\-J60\-\_\-\-B\-I\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-S\-E\-T, E\-N\-C28\-J60\-\_\-\-S\-O\-F\-T\-\_\-\-R\-E\-S\-E\-T, enc28j60\-Phy\-Write(), enc28j60\-Set\-Bank(), enc28j60\-Write(), enc28j60\-Write\-Op(), E\-P\-M\-C\-S\-H, E\-P\-M\-C\-S\-L, E\-P\-M\-M0, E\-P\-M\-M1, E\-R\-X\-F\-C\-O\-N, E\-R\-X\-F\-C\-O\-N\-\_\-\-C\-R\-C\-E\-N, E\-R\-X\-N\-D\-H, E\-R\-X\-N\-D\-L, E\-R\-X\-R\-D\-P\-T\-H, E\-R\-X\-R\-D\-P\-T\-L, E\-R\-X\-S\-T\-H, E\-R\-X\-S\-T\-L, E\-T\-X\-N\-D\-H, E\-T\-X\-N\-D\-L, E\-T\-X\-S\-T\-H, E\-T\-X\-S\-T\-L, M\-A\-A\-D\-R0, M\-A\-A\-D\-R1, M\-A\-A\-D\-R2, M\-A\-A\-D\-R3, M\-A\-A\-D\-R4, M\-A\-A\-D\-R5, M\-A\-B\-B\-I\-P\-G, M\-A\-C\-O\-N1, M\-A\-C\-O\-N1\-\_\-\-M\-A\-R\-X\-E\-N, M\-A\-C\-O\-N1\-\_\-\-R\-X\-P\-A\-U\-S, M\-A\-C\-O\-N1\-\_\-\-T\-X\-P\-A\-U\-S, M\-A\-C\-O\-N2, M\-A\-C\-O\-N3, M\-A\-C\-O\-N3\-\_\-\-F\-R\-M\-L\-N\-E\-N, M\-A\-C\-O\-N3\-\_\-\-P\-A\-D\-C\-F\-G0, M\-A\-C\-O\-N3\-\_\-\-T\-X\-C\-R\-C\-E\-N, M\-A\-I\-P\-G\-H, M\-A\-I\-P\-G\-L, M\-A\-M\-X\-F\-L\-H, M\-A\-M\-X\-F\-L\-L, M\-A\-X\-\_\-\-F\-R\-A\-M\-E\-L\-E\-N, O\-U\-T\-P\-U\-T, P\-H\-C\-O\-N2, P\-H\-C\-O\-N2\-\_\-\-H\-D\-L\-D\-I\-S, pinmode(), R\-X\-S\-T\-A\-R\-T\-\_\-\-I\-N\-I\-T, R\-X\-S\-T\-O\-P\-\_\-\-I\-N\-I\-T, S\-P\-I\-\_\-init(), T\-X\-S\-T\-A\-R\-T\-\_\-\-I\-N\-I\-T, and T\-X\-S\-T\-O\-P\-\_\-\-I\-N\-I\-T.
+
+
+\begin{DoxyCode}
+160 \{
+161     \textcolor{comment}{// initialize I/O}
+162     \textcolor{comment}{// ss as output:}
+163     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(ENC28J60\_CONTROL\_CS, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+164     \hyperlink{ecn28j60_8c_adf1112b42b6a400e4c4b88792eaae1bd}{CSPASSIVE}; \textcolor{comment}{// ss=0}
+165     \textcolor{comment}{// init SPI module  }
+166     \hyperlink{spi_8h_ac0055f801ff78bc7fafccc46e3e15ba7}{SPI\_init}();
+167     
+168 
+169     \textcolor{comment}{// perform system reset}
+170     \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_ae1ae45ce0e49f35d25bb1641f7c6942c}{ENC28J60\_SOFT\_RESET}, 0, 
+      \hyperlink{ecn28j60_8h_ae1ae45ce0e49f35d25bb1641f7c6942c}{ENC28J60\_SOFT\_RESET});
+171     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);
+172     \textcolor{comment}{// check CLKRDY bit to see if reset is complete}
+173     \textcolor{comment}{// The CLKRDY does not work. See Rev. B4 Silicon Errata point. Just wait.}
+174     \textcolor{comment}{//while(!(enc28j60Read(ESTAT) & ESTAT\_CLKRDY));}
+175     \textcolor{comment}{// do bank 0 stuff}
+176     \textcolor{comment}{// initialize receive buffer}
+177     \textcolor{comment}{// 16-bit transfers, must write low byte first}
+178     \textcolor{comment}{// set receive buffer start address}
+179     NextPacketPtr = \hyperlink{ecn28j60_8h_a30fc7709c1cdffc38bd8949480456470}{RXSTART\_INIT};
+180     \textcolor{comment}{// Rx start}
+181     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a387e1ac675539e1c0c7f158f59eafd51}{ERXSTL}, \hyperlink{ecn28j60_8h_a30fc7709c1cdffc38bd8949480456470}{RXSTART\_INIT}&0xFF);
+182     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_ad4c2a40d74ded1e155f7eb18effb76ba}{ERXSTH}, \hyperlink{ecn28j60_8h_a30fc7709c1cdffc38bd8949480456470}{RXSTART\_INIT}>>8);
+183     \textcolor{comment}{// set receive pointer address}
+184     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a0e4345b59cc531bd8daee2cd8c8e906b}{ERXRDPTL}, \hyperlink{ecn28j60_8h_a30fc7709c1cdffc38bd8949480456470}{RXSTART\_INIT}&0xFF);
+185     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a1668b845f0bc37dbb515c2358357a690}{ERXRDPTH}, \hyperlink{ecn28j60_8h_a30fc7709c1cdffc38bd8949480456470}{RXSTART\_INIT}>>8);
+186     \textcolor{comment}{// RX end}
+187     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a9fa6592ccdfa66aa5a1854dd95b6329c}{ERXNDL}, \hyperlink{ecn28j60_8h_a410181bf68959f297703e3afdf73454b}{RXSTOP\_INIT}&0xFF);
+188     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a19ee05a22525dcd9e4124734a3aec1b0}{ERXNDH}, \hyperlink{ecn28j60_8h_a410181bf68959f297703e3afdf73454b}{RXSTOP\_INIT}>>8);
+189     \textcolor{comment}{// TX start}
+190     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a45a38712c4d618bb5cb013e3d781db46}{ETXSTL}, \hyperlink{ecn28j60_8h_aa9108e0c4b3004b06668c1f213cbfbad}{TXSTART\_INIT}&0xFF);
+191     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_adfc695618aa5a32160cc9e2b0234c714}{ETXSTH}, \hyperlink{ecn28j60_8h_aa9108e0c4b3004b06668c1f213cbfbad}{TXSTART\_INIT}>>8);
+192     \textcolor{comment}{// TX end}
+193     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_ad79a19cc60b7dc19cec9df691e658714}{ETXNDL}, \hyperlink{ecn28j60_8h_ac199471e69f679cbf9e5e69c1d34bcef}{TXSTOP\_INIT}&0xFF);
+194     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a24597e8d914818adae20bf39c4ac7d0e}{ETXNDH}, \hyperlink{ecn28j60_8h_ac199471e69f679cbf9e5e69c1d34bcef}{TXSTOP\_INIT}>>8);
+195     \textcolor{comment}{// do bank 1 stuff, packet filter:}
+196         \textcolor{comment}{// For broadcast packets we allow only ARP packtets}
+197         \textcolor{comment}{// All other packets should be unicast only for our mac (MAADR)}
+198         \textcolor{comment}{//}
+199         \textcolor{comment}{// The pattern to match on is therefore}
+200         \textcolor{comment}{// Type     ETH.DST}
+201         \textcolor{comment}{// ARP      BROADCAST}
+202         \textcolor{comment}{// 06 08 -- ff ff ff ff ff ff -> ip checksum for theses bytes=f7f9}
+203         \textcolor{comment}{// in binary these poitions are:11 0000 0011 1111}
+204         \textcolor{comment}{// This is hex 303F->EPMM0=0x3f,EPMM1=0x30}
+205     \textcolor{comment}{//enc28j60Write(ERXFCON, ERXFCON\_UCEN|ERXFCON\_CRCEN|ERXFCON\_PMEN);}
+206     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_ac5ff36d9b43977e5dd6548170ec93ddc}{ERXFCON}, \hyperlink{ecn28j60_8h_ab24fd0fbd4dd4ef84ee86db0d20f655c}{ERXFCON\_CRCEN});
+207     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a7231ae8160a585d71a3e96d93358970c}{EPMM0}, 0x3f);
+208     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a1a0b4ba274784466f2094833facc6792}{EPMM1}, 0x30);
+209     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a63e21e6d3b5926b59207f79ff66f977d}{EPMCSL}, 0xf9);
+210     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_aea835cc109c3eb4cfedc6f3ad4d7c410}{EPMCSH}, 0xf7);
+211         \textcolor{comment}{//}
+212         \textcolor{comment}{//}
+213     \textcolor{comment}{// do bank 2 stuff}
+214     \textcolor{comment}{// enable MAC receive}
+215     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_ab64add14e73a7308bd32343c45caf79d}{MACON1}, \hyperlink{ecn28j60_8h_acca2bd606f4beb5ecf4051879d3f8484}{MACON1\_MARXEN}|
+      \hyperlink{ecn28j60_8h_adad2d7dff2675636ec7625e5e3661da1}{MACON1\_TXPAUS}|\hyperlink{ecn28j60_8h_af2966ecb11b3dccc4a6eead5321b268d}{MACON1\_RXPAUS});
+216     \textcolor{comment}{// bring MAC out of reset}
+217     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a01501b400de6174cd44cd52cf9da0950}{MACON2}, 0x00);
+218     \textcolor{comment}{// enable automatic padding to 60bytes and CRC operations}
+219     \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_af19457b6e7f2859f8ef8d7eff7867c65}{ENC28J60\_BIT\_FIELD\_SET}, 
+      \hyperlink{ecn28j60_8h_a37e80f66673c39e7db383e0b11a159ea}{MACON3}, \hyperlink{ecn28j60_8h_a92092773c7b76344f6c318f416007f5c}{MACON3\_PADCFG0}|\hyperlink{ecn28j60_8h_a73e8f004b429cdbc2161d418b8e2e4c2}{MACON3\_TXCRCEN}|
+      \hyperlink{ecn28j60_8h_a9cbf4c5171f6d945f142b8150aaf9c0e}{MACON3\_FRMLNEN});
+220     \textcolor{comment}{// set inter-frame gap (non-back-to-back)}
+221     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a8daa7f7ef529828ef4cc3d90a48ff730}{MAIPGL}, 0x12);
+222     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a70b21ea01d623429bf3bd1abf583c80f}{MAIPGH}, 0x0C);
+223     \textcolor{comment}{// set inter-frame gap (back-to-back)}
+224     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a0aa3bb65f69bc921f3b4020410f7efc2}{MABBIPG}, 0x12);
+225     \textcolor{comment}{// Set the maximum packet size which the controller will accept}
+226         \textcolor{comment}{// Do not send packets longer than MAX\_FRAMELEN:}
+227     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a4ed708903a040c0ea4fc071707863ffc}{MAMXFLL}, \hyperlink{ecn28j60_8h_a685a78b7765b2e4683a6e156cb08f553}{MAX\_FRAMELEN}&0xFF);  
+228     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a294e961d04adc72cbc8b866bb6506e8d}{MAMXFLH}, \hyperlink{ecn28j60_8h_a685a78b7765b2e4683a6e156cb08f553}{MAX\_FRAMELEN}>>8);
+229     \textcolor{comment}{// do bank 3 stuff}
+230         \textcolor{comment}{// write MAC address}
+231         \textcolor{comment}{// NOTE: MAC address in ENC28J60 is byte-backward}
+232         \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_ab09dce1b21cca7564099bf5c2977027d}{MAADR5}, macaddr[0]);
+233         \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_ab5bd94627c03b8c599997934df7f0091}{MAADR4}, macaddr[1]);
+234         \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_adab05794c311d260abaaec301a942be5}{MAADR3}, macaddr[2]);
+235         \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a12821080889b4c07b4d6592fbcb67aca}{MAADR2}, macaddr[3]);
+236         \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_ae90f98e596cd117bc03ec08e12303948}{MAADR1}, macaddr[4]);
+237         \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a120bccb0df5d68a311c7030cfb96cb60}{MAADR0}, macaddr[5]);
+238     \textcolor{comment}{// no loopback of transmitted frames}
+239     \hyperlink{ecn28j60_8c_a2ad5c16d7e1dca38e098224d1f8e5ce8}{enc28j60PhyWrite}(\hyperlink{ecn28j60_8h_a9cf7f25d840eaf2d2101797ee0e2e29e}{PHCON2}, \hyperlink{ecn28j60_8h_a67f4baba49a56729548246a2c4cf60c4}{PHCON2\_HDLDIS});
+240     \textcolor{comment}{// switch to bank 0}
+241     \hyperlink{ecn28j60_8c_a92310c73dae6ff7ea5f2ad8e1307630f}{enc28j60SetBank}(\hyperlink{ecn28j60_8h_a461b29cd8a06dc2f331f664eb0f9165a}{ECON1});
+242     \textcolor{comment}{// enable interrutps}
+243     \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_af19457b6e7f2859f8ef8d7eff7867c65}{ENC28J60\_BIT\_FIELD\_SET}, 
+      \hyperlink{ecn28j60_8h_a72ac42db94893a565a52821f5ae95856}{EIE}, 0);
+244     \textcolor{comment}{//enc28j60WriteOp(ENC28J60\_BIT\_FIELD\_SET, EIE, EIE\_INTIE|EIE\_PKTIE);}
+245     \textcolor{comment}{// enable packet reception}
+246     \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_af19457b6e7f2859f8ef8d7eff7867c65}{ENC28J60\_BIT\_FIELD\_SET}, 
+      \hyperlink{ecn28j60_8h_a461b29cd8a06dc2f331f664eb0f9165a}{ECON1}, \hyperlink{ecn28j60_8h_ace8508fae6ed0c6d29e8879194de5fbc}{ECON1\_RXEN});
+247 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_a6c8324ea13d91209db6cb5298e1b81bb}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60linkup@{enc28j60linkup}}
+\index{enc28j60linkup@{enc28j60linkup}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60linkup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\-\_\-t} enc28j60linkup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_a6c8324ea13d91209db6cb5298e1b81bb}
+
+
+Definition at line 256 of file ecn28j60.\-c.
+
+
+
+References enc28j60\-Phy\-Read\-H(), and P\-H\-S\-T\-A\-T2.
+
+
+\begin{DoxyCode}
+257 \{
+258         \textcolor{comment}{// bit 10 (= bit 3 in upper reg)}
+259     \textcolor{keywordflow}{return}(\hyperlink{ecn28j60_8c_aa00c8c0c911a72f29822062be4195752}{enc28j60PhyReadH}(\hyperlink{ecn28j60_8h_aec37b8c76a880a3c2b8205920f8b911d}{PHSTAT2}) && 4);
+260 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_a8dcece6d3a763c4435845e89e927e51a}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Packet\-Receive@{enc28j60\-Packet\-Receive}}
+\index{enc28j60\-Packet\-Receive@{enc28j60\-Packet\-Receive}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Packet\-Receive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\-\_\-t} enc28j60\-Packet\-Receive (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\-\_\-t}}]{maxlen, }
+\item[{{\bf uint8\-\_\-t} $\ast$}]{packet}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_a8dcece6d3a763c4435845e89e927e51a}
+
+
+Definition at line 303 of file ecn28j60.\-c.
+
+
+
+References E\-C\-O\-N2, E\-C\-O\-N2\-\_\-\-P\-K\-T\-D\-E\-C, E\-N\-C28\-J60\-\_\-\-B\-I\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-S\-E\-T, E\-N\-C28\-J60\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-\_\-\-M\-E\-M, enc28j60\-Read(), enc28j60\-Read\-Buffer(), enc28j60\-Read\-Op(), enc28j60\-Write(), enc28j60\-Write\-Op(), E\-P\-K\-T\-C\-N\-T, E\-R\-D\-P\-T\-H, E\-R\-D\-P\-T\-L, E\-R\-X\-R\-D\-P\-T\-H, E\-R\-X\-R\-D\-P\-T\-L, R\-X\-S\-T\-A\-R\-T\-\_\-\-I\-N\-I\-T, and R\-X\-S\-T\-O\-P\-\_\-\-I\-N\-I\-T.
+
+
+\begin{DoxyCode}
+304 \{
+305     \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\_t} rxstat;
+306     \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\_t} len;
+307     \textcolor{comment}{// check if a packet has been received and buffered}
+308     \textcolor{comment}{//if( !(enc28j60Read(EIR) & EIR\_PKTIF) )\{}
+309         \textcolor{comment}{// The above does not work. See Rev. B4 Silicon Errata point 6.}
+310     \textcolor{keywordflow}{if}( \hyperlink{ecn28j60_8c_ac6c9cbfa6cacb1949692f1ea82d15576}{enc28j60Read}(\hyperlink{ecn28j60_8h_a029f8b5f05e4e5182aa9a73e31c4a4f0}{EPKTCNT}) ==0 )\{
+311         \textcolor{keywordflow}{return}(0);
+312         \}
+313 
+314     \textcolor{comment}{// Set the read pointer to the start of the received packet}
+315     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a04e5f3a270ebf2b1a1121b38fef2a62e}{ERDPTL}, (NextPacketPtr &0xFF));
+316     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a63011487c82b6f6d1fcc749b55e5511e}{ERDPTH}, (NextPacketPtr)>>8);
+317     \textcolor{comment}{// read the next packet pointer}
+318     NextPacketPtr  = \hyperlink{ecn28j60_8c_acee2471817866ee365e276ce8e649595}{enc28j60ReadOp}(\hyperlink{ecn28j60_8h_a2df968e548600d1a94988d3fa73f9a90}{ENC28J60\_READ\_BUF\_MEM}, 0);
+319     NextPacketPtr |= \hyperlink{ecn28j60_8c_acee2471817866ee365e276ce8e649595}{enc28j60ReadOp}(\hyperlink{ecn28j60_8h_a2df968e548600d1a94988d3fa73f9a90}{ENC28J60\_READ\_BUF\_MEM}, 0)<<8;
+320     \textcolor{comment}{// read the packet length (see datasheet page 43)}
+321     len  = \hyperlink{ecn28j60_8c_acee2471817866ee365e276ce8e649595}{enc28j60ReadOp}(\hyperlink{ecn28j60_8h_a2df968e548600d1a94988d3fa73f9a90}{ENC28J60\_READ\_BUF\_MEM}, 0);
+322     len |= \hyperlink{ecn28j60_8c_acee2471817866ee365e276ce8e649595}{enc28j60ReadOp}(\hyperlink{ecn28j60_8h_a2df968e548600d1a94988d3fa73f9a90}{ENC28J60\_READ\_BUF\_MEM}, 0)<<8;
+323         len-=4; \textcolor{comment}{//remove the CRC count}
+324     \textcolor{comment}{// read the receive status (see datasheet page 43)}
+325     rxstat  = \hyperlink{ecn28j60_8c_acee2471817866ee365e276ce8e649595}{enc28j60ReadOp}(\hyperlink{ecn28j60_8h_a2df968e548600d1a94988d3fa73f9a90}{ENC28J60\_READ\_BUF\_MEM}, 0);
+326     rxstat |= ((\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\_t})\hyperlink{ecn28j60_8c_acee2471817866ee365e276ce8e649595}{enc28j60ReadOp}(
+      \hyperlink{ecn28j60_8h_a2df968e548600d1a94988d3fa73f9a90}{ENC28J60\_READ\_BUF\_MEM}, 0))<<8;
+327     \textcolor{comment}{// limit retrieve length}
+328         \textcolor{keywordflow}{if} (len>maxlen-1)\{
+329                 len=maxlen-1;
+330         \}
+331         \textcolor{comment}{// check CRC and symbol errors (see datasheet page 44, table 7-3):}
+332         \textcolor{comment}{// The ERXFCON.CRCEN is set by default. Normally we should not}
+333         \textcolor{comment}{// need to check this.}
+334         \textcolor{keywordflow}{if} ((rxstat & 0x80)==0)\{
+335                 \textcolor{comment}{// invalid}
+336                 len=0;
+337         \}\textcolor{keywordflow}{else}\{
+338                 \textcolor{comment}{// copy the packet from the receive buffer}
+339                 \hyperlink{ecn28j60_8c_ada0d92b7a9b2e26a7187fded85795c7f}{enc28j60ReadBuffer}(len, packet);
+340         \}
+341     \textcolor{comment}{// Move the RX read pointer to the start of the next received packet}
+342     \textcolor{comment}{// This frees the memory we just read out}
+343     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a0e4345b59cc531bd8daee2cd8c8e906b}{ERXRDPTL}, (NextPacketPtr &0xFF));
+344     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a1668b845f0bc37dbb515c2358357a690}{ERXRDPTH}, (NextPacketPtr)>>8);
+345         \textcolor{comment}{// Move the RX read pointer to the start of the next received packet}
+346         \textcolor{comment}{// This frees the memory we just read out.}
+347         \textcolor{comment}{// However, compensate for the errata point 13, rev B4: enver write an even address!}
+348         \textcolor{keywordflow}{if} ((NextPacketPtr - 1 < \hyperlink{ecn28j60_8h_a30fc7709c1cdffc38bd8949480456470}{RXSTART\_INIT})
+349                 || (NextPacketPtr -1 > \hyperlink{ecn28j60_8h_a410181bf68959f297703e3afdf73454b}{RXSTOP\_INIT})) \{
+350                 \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a0e4345b59cc531bd8daee2cd8c8e906b}{ERXRDPTL}, (\hyperlink{ecn28j60_8h_a410181bf68959f297703e3afdf73454b}{RXSTOP\_INIT})&0xFF);
+351                 \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a1668b845f0bc37dbb515c2358357a690}{ERXRDPTH}, (\hyperlink{ecn28j60_8h_a410181bf68959f297703e3afdf73454b}{RXSTOP\_INIT})>>8);
+352         \} \textcolor{keywordflow}{else} \{
+353                 \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a0e4345b59cc531bd8daee2cd8c8e906b}{ERXRDPTL}, (NextPacketPtr-1)&0xFF);
+354                 \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a1668b845f0bc37dbb515c2358357a690}{ERXRDPTH}, (NextPacketPtr-1)>>8);
+355         \}
+356     \textcolor{comment}{// decrement the packet counter indicate we are done with this packet}
+357     \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_af19457b6e7f2859f8ef8d7eff7867c65}{ENC28J60\_BIT\_FIELD\_SET}, 
+      \hyperlink{ecn28j60_8h_a86d77e305cc8d23f335fb733870a873c}{ECON2}, \hyperlink{ecn28j60_8h_a1fab919c4d16b2e96072b0479fc4b617}{ECON2\_PKTDEC});
+358     \textcolor{keywordflow}{return}(len);
+359 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_aed668455f7269eec646050b897827d86}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Packet\-Send@{enc28j60\-Packet\-Send}}
+\index{enc28j60\-Packet\-Send@{enc28j60\-Packet\-Send}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Packet\-Send}]{\setlength{\rightskip}{0pt plus 5cm}void enc28j60\-Packet\-Send (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\-\_\-t}}]{len, }
+\item[{{\bf uint8\-\_\-t} $\ast$}]{packet}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_aed668455f7269eec646050b897827d86}
+
+
+Definition at line 262 of file ecn28j60.\-c.
+
+
+
+References E\-C\-O\-N1, E\-C\-O\-N1\-\_\-\-T\-X\-R\-S\-T, E\-C\-O\-N1\-\_\-\-T\-X\-R\-T\-S, E\-N\-C28\-J60\-\_\-\-B\-I\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-C\-L\-R, E\-N\-C28\-J60\-\_\-\-B\-I\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-S\-E\-T, E\-N\-C28\-J60\-\_\-\-R\-E\-A\-D\-\_\-\-C\-T\-R\-L\-\_\-\-R\-E\-G, E\-N\-C28\-J60\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-\_\-\-M\-E\-M, enc28j60\-Read\-Op(), enc28j60\-Write(), enc28j60\-Write\-Buffer(), enc28j60\-Write\-Op(), E\-T\-X\-N\-D\-H, E\-T\-X\-N\-D\-L, E\-W\-R\-P\-T\-H, E\-W\-R\-P\-T\-L, and T\-X\-S\-T\-A\-R\-T\-\_\-\-I\-N\-I\-T.
+
+
+
+Referenced by make\-\_\-arp\-\_\-answer\-\_\-from\-\_\-request(), make\-\_\-echo\-\_\-reply\-\_\-from\-\_\-request(), and make\-\_\-udp\-\_\-reply\-\_\-from\-\_\-request().
+
+
+\begin{DoxyCode}
+263 \{
+264         \textcolor{comment}{// Check no transmit in progress}
+265         \textcolor{keywordflow}{while} (\hyperlink{ecn28j60_8c_acee2471817866ee365e276ce8e649595}{enc28j60ReadOp}(\hyperlink{ecn28j60_8h_a608ce779a7d649d80e6ae75b1efe4e68}{ENC28J60\_READ\_CTRL\_REG}, 
+      \hyperlink{ecn28j60_8h_a461b29cd8a06dc2f331f664eb0f9165a}{ECON1}) & \hyperlink{ecn28j60_8h_a3a2e731dca9ed10137c429b3d2db006f}{ECON1\_TXRTS})
+266         \{
+267                 \textcolor{comment}{// Reset the transmit logic problem. See Rev. B4 Silicon Errata point 12.}
+268                 \textcolor{comment}{//if( (enc28j60Read(EIR) & EIR\_TXERIF) ) }
+269                 \{
+270                         \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_af19457b6e7f2859f8ef8d7eff7867c65}{ENC28J60\_BIT\_FIELD\_SET}, 
+      \hyperlink{ecn28j60_8h_a461b29cd8a06dc2f331f664eb0f9165a}{ECON1}, \hyperlink{ecn28j60_8h_a671b1bccaaf1d135073b3604c85a8ff2}{ECON1\_TXRST});
+271                         \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_a59f396f9aefa5b448d786be7dec45cab}{ENC28J60\_BIT\_FIELD\_CLR}, 
+      \hyperlink{ecn28j60_8h_a461b29cd8a06dc2f331f664eb0f9165a}{ECON1}, \hyperlink{ecn28j60_8h_a671b1bccaaf1d135073b3604c85a8ff2}{ECON1\_TXRST});
+272                 \}
+273         \}
+274 
+275     \textcolor{comment}{// Set the write pointer to start of transmit buffer area}
+276     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a684dfa8cb9097ee131a2c9d2ee65d573}{EWRPTL}, \hyperlink{ecn28j60_8h_aa9108e0c4b3004b06668c1f213cbfbad}{TXSTART\_INIT}&0xFF);
+277     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a7bda37d486623efbe3ac2055198d356a}{EWRPTH}, \hyperlink{ecn28j60_8h_aa9108e0c4b3004b06668c1f213cbfbad}{TXSTART\_INIT}>>8);
+278     \textcolor{comment}{// Set the TXND pointer to correspond to the packet size given}
+279     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_ad79a19cc60b7dc19cec9df691e658714}{ETXNDL}, (\hyperlink{ecn28j60_8h_aa9108e0c4b3004b06668c1f213cbfbad}{TXSTART\_INIT}+len)&0xFF);
+280     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a24597e8d914818adae20bf39c4ac7d0e}{ETXNDH}, (\hyperlink{ecn28j60_8h_aa9108e0c4b3004b06668c1f213cbfbad}{TXSTART\_INIT}+len)>>8);
+281     \textcolor{comment}{// write per-packet control byte (0x00 means use macon3 settings)}
+282     \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_a767136e24c87ed51e701f78724ebc78d}{ENC28J60\_WRITE\_BUF\_MEM}, 0, 0x00);
+283     \textcolor{comment}{// copy the packet into the transmit buffer}
+284     \hyperlink{ecn28j60_8c_aada178045c110bad8625bdd61ceca11b}{enc28j60WriteBuffer}(len, packet);
+285     \textcolor{comment}{// send the contents of the transmit buffer onto the network}
+286     \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_af19457b6e7f2859f8ef8d7eff7867c65}{ENC28J60\_BIT\_FIELD\_SET}, 
+      \hyperlink{ecn28j60_8h_a461b29cd8a06dc2f331f664eb0f9165a}{ECON1}, ECON1\_TXRTS);
+287 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_aa00c8c0c911a72f29822062be4195752}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Phy\-Read\-H@{enc28j60\-Phy\-Read\-H}}
+\index{enc28j60\-Phy\-Read\-H@{enc28j60\-Phy\-Read\-H}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Phy\-Read\-H}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\-\_\-t} enc28j60\-Phy\-Read\-H (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t}}]{address}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_aa00c8c0c911a72f29822062be4195752}
+
+
+Definition at line 136 of file ecn28j60.\-c.
+
+
+
+References Delayus(), enc28j60\-Read(), enc28j60\-Write(), M\-I\-C\-M\-D, M\-I\-C\-M\-D\-\_\-\-M\-I\-I\-R\-D, M\-I\-R\-D\-H, M\-I\-R\-E\-G\-A\-D\-R, M\-I\-S\-T\-A\-T, and M\-I\-S\-T\-A\-T\-\_\-\-B\-U\-S\-Y.
+
+
+
+Referenced by enc28j60linkup().
+
+
+\begin{DoxyCode}
+137 \{
+138 
+139     \textcolor{comment}{// Set the right address and start the register read operation}
+140     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a01fb4e4ea7a7b71cbf2b341b0ebd77a3}{MIREGADR}, address);
+141     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a6ca2ed513306c83432028d8ad3d49354}{MICMD}, \hyperlink{ecn28j60_8h_a5c468f805202bfc0737c024cbd1be32c}{MICMD\_MIIRD});
+142         \textcolor{comment}{//\_delay\_loop\_1(40); // 10us}
+143         \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(15);
+144 
+145     \textcolor{comment}{// wait until the PHY read completes}
+146     \textcolor{keywordflow}{while}(\hyperlink{ecn28j60_8c_ac6c9cbfa6cacb1949692f1ea82d15576}{enc28j60Read}(\hyperlink{ecn28j60_8h_abd6aab564bb58e789243684804aff335}{MISTAT}) & \hyperlink{ecn28j60_8h_a22b9a31e2a6d031cd672eed1ad883ba8}{MISTAT\_BUSY});
+147 
+148     \textcolor{comment}{// reset reading bit}
+149     \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a6ca2ed513306c83432028d8ad3d49354}{MICMD}, 0x00);
+150     
+151     \textcolor{keywordflow}{return} (\hyperlink{ecn28j60_8c_ac6c9cbfa6cacb1949692f1ea82d15576}{enc28j60Read}(\hyperlink{ecn28j60_8h_ab2316c2a713dc20c6d0f892faa5c618b}{MIRDH}));
+152 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_a2ad5c16d7e1dca38e098224d1f8e5ce8}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Phy\-Write@{enc28j60\-Phy\-Write}}
+\index{enc28j60\-Phy\-Write@{enc28j60\-Phy\-Write}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Phy\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void enc28j60\-Phy\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t}}]{address, }
+\item[{{\bf uint16\-\_\-t}}]{data}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_a2ad5c16d7e1dca38e098224d1f8e5ce8}
+
+
+Definition at line 122 of file ecn28j60.\-c.
+
+
+
+References Delayus(), enc28j60\-Read(), enc28j60\-Write(), M\-I\-R\-E\-G\-A\-D\-R, M\-I\-S\-T\-A\-T, M\-I\-S\-T\-A\-T\-\_\-\-B\-U\-S\-Y, M\-I\-W\-R\-H, and M\-I\-W\-R\-L.
+
+
+
+Referenced by enc28j60\-Init().
+
+
+\begin{DoxyCode}
+123 \{
+124         \textcolor{comment}{// set the PHY register address}
+125         \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a01fb4e4ea7a7b71cbf2b341b0ebd77a3}{MIREGADR}, address);
+126         \textcolor{comment}{// write the PHY data}
+127         \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_a18aba35be6189e6150a9b4e2c2c29b69}{MIWRL}, data);
+128         \hyperlink{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{enc28j60Write}(\hyperlink{ecn28j60_8h_af5d129bad4e0df51b5a2f9f7ee0f2da4}{MIWRH}, data>>8);
+129         \textcolor{comment}{// wait until the PHY write completes}
+130         \textcolor{keywordflow}{while}(\hyperlink{ecn28j60_8c_ac6c9cbfa6cacb1949692f1ea82d15576}{enc28j60Read}(\hyperlink{ecn28j60_8h_abd6aab564bb58e789243684804aff335}{MISTAT}) & \hyperlink{ecn28j60_8h_a22b9a31e2a6d031cd672eed1ad883ba8}{MISTAT\_BUSY})\{
+131                 \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(15);
+132         \}
+133 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_ac6c9cbfa6cacb1949692f1ea82d15576}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Read@{enc28j60\-Read}}
+\index{enc28j60\-Read@{enc28j60\-Read}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\-\_\-t} enc28j60\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t}}]{address}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_ac6c9cbfa6cacb1949692f1ea82d15576}
+
+
+Definition at line 106 of file ecn28j60.\-c.
+
+
+
+References E\-N\-C28\-J60\-\_\-\-R\-E\-A\-D\-\_\-\-C\-T\-R\-L\-\_\-\-R\-E\-G, enc28j60\-Read\-Op(), and enc28j60\-Set\-Bank().
+
+
+
+Referenced by enc28j60getrev(), enc28j60has\-Rx\-Pkt(), enc28j60\-Packet\-Receive(), enc28j60\-Phy\-Read\-H(), and enc28j60\-Phy\-Write().
+
+
+\begin{DoxyCode}
+107 \{
+108         \textcolor{comment}{// set the bank}
+109         \hyperlink{ecn28j60_8c_a92310c73dae6ff7ea5f2ad8e1307630f}{enc28j60SetBank}(address);
+110         \textcolor{comment}{// do the read}
+111         \textcolor{keywordflow}{return} \hyperlink{ecn28j60_8c_acee2471817866ee365e276ce8e649595}{enc28j60ReadOp}(\hyperlink{ecn28j60_8h_a608ce779a7d649d80e6ae75b1efe4e68}{ENC28J60\_READ\_CTRL\_REG}, address);
+112 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_ada0d92b7a9b2e26a7187fded85795c7f}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Read\-Buffer@{enc28j60\-Read\-Buffer}}
+\index{enc28j60\-Read\-Buffer@{enc28j60\-Read\-Buffer}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Read\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void enc28j60\-Read\-Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\-\_\-t}}]{len, }
+\item[{{\bf uint8\-\_\-t} $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_ada0d92b7a9b2e26a7187fded85795c7f}
+
+
+Definition at line 61 of file ecn28j60.\-c.
+
+
+
+References C\-S\-A\-C\-T\-I\-V\-E, C\-S\-P\-A\-S\-S\-I\-V\-E, E\-N\-C28\-J60\-\_\-\-R\-E\-A\-D\-\_\-\-B\-U\-F\-\_\-\-M\-E\-M, S\-P\-I\-\_\-read(), and S\-P\-I\-\_\-write().
+
+
+
+Referenced by enc28j60\-Packet\-Receive().
+
+
+\begin{DoxyCode}
+62 \{
+63 \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} received\_byte;
+64         \hyperlink{ecn28j60_8c_a3ffd28945de70d42e88ba739277b8134}{CSACTIVE};
+65         \textcolor{comment}{// issue read command}
+66         \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}( \hyperlink{ecn28j60_8h_a2df968e548600d1a94988d3fa73f9a90}{ENC28J60\_READ\_BUF\_MEM} );
+67         \textcolor{keywordflow}{while}(len)
+68         \{
+69                 len--;
+70                 \textcolor{comment}{// read data}
+71                 received\_byte=\hyperlink{p8_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{SPI\_read}();
+72                 *data = received\_byte;
+73                 data++;
+74         \}
+75         *data=\textcolor{charliteral}{'\(\backslash\)0'};
+76         \hyperlink{ecn28j60_8c_adf1112b42b6a400e4c4b88792eaae1bd}{CSPASSIVE};
+77 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_acee2471817866ee365e276ce8e649595}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Read\-Op@{enc28j60\-Read\-Op}}
+\index{enc28j60\-Read\-Op@{enc28j60\-Read\-Op}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Read\-Op}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\-\_\-t} enc28j60\-Read\-Op (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t}}]{op, }
+\item[{{\bf uint8\-\_\-t}}]{address}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_acee2471817866ee365e276ce8e649595}
+
+
+Definition at line 32 of file ecn28j60.\-c.
+
+
+
+References A\-D\-D\-R\-\_\-\-M\-A\-S\-K, C\-S\-A\-C\-T\-I\-V\-E, C\-S\-P\-A\-S\-S\-I\-V\-E, S\-P\-I\-\_\-read(), and S\-P\-I\-\_\-write().
+
+
+
+Referenced by enc28j60\-Packet\-Receive(), enc28j60\-Packet\-Send(), and enc28j60\-Read().
+
+
+\begin{DoxyCode}
+33 \{
+34 \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} received\_byte;
+35 
+36         \hyperlink{ecn28j60_8c_a3ffd28945de70d42e88ba739277b8134}{CSACTIVE};
+37         \textcolor{comment}{// issue read command}
+38         \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(op | (address & \hyperlink{ecn28j60_8h_a15b16c1073c60f0be255caf0a60251be}{ADDR\_MASK}));
+39         \textcolor{comment}{// read data}
+40         received\_byte=\hyperlink{p8_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{SPI\_read}();
+41         \textcolor{comment}{// do dummy read if needed (for mac and mii, see datasheet page 29)}
+42         \textcolor{keywordflow}{if}(address & 0x80)
+43         \{
+44             received\_byte=\hyperlink{p8_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{SPI\_read}();
+45         \}
+46         \textcolor{comment}{// release CS}
+47         \hyperlink{ecn28j60_8c_adf1112b42b6a400e4c4b88792eaae1bd}{CSPASSIVE};
+48         \textcolor{keywordflow}{return}(received\_byte);
+49 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_a92310c73dae6ff7ea5f2ad8e1307630f}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Set\-Bank@{enc28j60\-Set\-Bank}}
+\index{enc28j60\-Set\-Bank@{enc28j60\-Set\-Bank}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Set\-Bank}]{\setlength{\rightskip}{0pt plus 5cm}void enc28j60\-Set\-Bank (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t}}]{address}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_a92310c73dae6ff7ea5f2ad8e1307630f}
+
+
+Definition at line 94 of file ecn28j60.\-c.
+
+
+
+References B\-A\-N\-K\-\_\-\-M\-A\-S\-K, E\-C\-O\-N1, E\-C\-O\-N1\-\_\-\-B\-S\-E\-L0, E\-C\-O\-N1\-\_\-\-B\-S\-E\-L1, E\-N\-C28\-J60\-\_\-\-B\-I\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-C\-L\-R, E\-N\-C28\-J60\-\_\-\-B\-I\-T\-\_\-\-F\-I\-E\-L\-D\-\_\-\-S\-E\-T, and enc28j60\-Write\-Op().
+
+
+
+Referenced by enc28j60\-Init(), enc28j60\-Read(), and enc28j60\-Write().
+
+
+\begin{DoxyCode}
+95 \{
+96         \textcolor{comment}{// set the bank (if needed)}
+97         \textcolor{keywordflow}{if}((address & \hyperlink{ecn28j60_8h_ac60597badc76e6f2c5ce64d862746c67}{BANK\_MASK}) != Enc28j60Bank)
+98         \{
+99                 \textcolor{comment}{// set the bank}
+100                 \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_a59f396f9aefa5b448d786be7dec45cab}{ENC28J60\_BIT\_FIELD\_CLR}, 
+      \hyperlink{ecn28j60_8h_a461b29cd8a06dc2f331f664eb0f9165a}{ECON1}, (\hyperlink{ecn28j60_8h_a81c320643a8fcfb3c91f4e059a14c2c0}{ECON1\_BSEL1}|\hyperlink{ecn28j60_8h_ac05b5a98cc41d8736c62a6a96c248940}{ECON1\_BSEL0}));
+101                 \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_af19457b6e7f2859f8ef8d7eff7867c65}{ENC28J60\_BIT\_FIELD\_SET}, 
+      \hyperlink{ecn28j60_8h_a461b29cd8a06dc2f331f664eb0f9165a}{ECON1}, (address & BANK\_MASK)>>5);
+102                 Enc28j60Bank = (address & \hyperlink{ecn28j60_8h_ac60597badc76e6f2c5ce64d862746c67}{BANK\_MASK});
+103         \}
+104 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Write@{enc28j60\-Write}}
+\index{enc28j60\-Write@{enc28j60\-Write}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void enc28j60\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t}}]{address, }
+\item[{{\bf uint8\-\_\-t}}]{data}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_a91b234db2c1a946f678b4616c236dd78}
+
+
+Definition at line 114 of file ecn28j60.\-c.
+
+
+
+References E\-N\-C28\-J60\-\_\-\-W\-R\-I\-T\-E\-\_\-\-C\-T\-R\-L\-\_\-\-R\-E\-G, enc28j60\-Set\-Bank(), and enc28j60\-Write\-Op().
+
+
+
+Referenced by enc28j60clkout(), enc28j60\-Init(), enc28j60\-Packet\-Receive(), enc28j60\-Packet\-Send(), enc28j60\-Phy\-Read\-H(), and enc28j60\-Phy\-Write().
+
+
+\begin{DoxyCode}
+115 \{
+116         \textcolor{comment}{// set the bank}
+117         \hyperlink{ecn28j60_8c_a92310c73dae6ff7ea5f2ad8e1307630f}{enc28j60SetBank}(address);
+118         \textcolor{comment}{// do the write}
+119         \hyperlink{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{enc28j60WriteOp}(\hyperlink{ecn28j60_8h_ab1b6d259b563e0360243658157a023b2}{ENC28J60\_WRITE\_CTRL\_REG}, address, data);
+120 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_aada178045c110bad8625bdd61ceca11b}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Write\-Buffer@{enc28j60\-Write\-Buffer}}
+\index{enc28j60\-Write\-Buffer@{enc28j60\-Write\-Buffer}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Write\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void enc28j60\-Write\-Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf uint16\-\_\-t}}]{len, }
+\item[{{\bf uint8\-\_\-t} $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_aada178045c110bad8625bdd61ceca11b}
+
+
+Definition at line 79 of file ecn28j60.\-c.
+
+
+
+References C\-S\-A\-C\-T\-I\-V\-E, C\-S\-P\-A\-S\-S\-I\-V\-E, E\-N\-C28\-J60\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-\_\-\-M\-E\-M, and S\-P\-I\-\_\-write().
+
+
+
+Referenced by enc28j60\-Packet\-Send().
+
+
+\begin{DoxyCode}
+80 \{
+81         \hyperlink{ecn28j60_8c_a3ffd28945de70d42e88ba739277b8134}{CSACTIVE};
+82         \textcolor{comment}{// issue write command}
+83         \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}( \hyperlink{ecn28j60_8h_a767136e24c87ed51e701f78724ebc78d}{ENC28J60\_WRITE\_BUF\_MEM} );
+84         \textcolor{keywordflow}{while}(len)
+85         \{
+86                 len--;
+87                 \textcolor{comment}{// write data}
+88                 \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}( *data );
+89                 data++;
+90         \}
+91         \hyperlink{ecn28j60_8c_adf1112b42b6a400e4c4b88792eaae1bd}{CSPASSIVE};
+92 \}
+\end{DoxyCode}
+\hypertarget{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}{\index{ecn28j60.\-c@{ecn28j60.\-c}!enc28j60\-Write\-Op@{enc28j60\-Write\-Op}}
+\index{enc28j60\-Write\-Op@{enc28j60\-Write\-Op}!ecn28j60.c@{ecn28j60.\-c}}
+\subsubsection[{enc28j60\-Write\-Op}]{\setlength{\rightskip}{0pt plus 5cm}void enc28j60\-Write\-Op (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t}}]{op, }
+\item[{{\bf uint8\-\_\-t}}]{address, }
+\item[{{\bf uint8\-\_\-t}}]{data}
+\end{DoxyParamCaption}
+)}}\label{ecn28j60_8c_a1929956bb717eff8451245f9fb2e9784}
+
+
+Definition at line 51 of file ecn28j60.\-c.
+
+
+
+References A\-D\-D\-R\-\_\-\-M\-A\-S\-K, C\-S\-A\-C\-T\-I\-V\-E, C\-S\-P\-A\-S\-S\-I\-V\-E, and S\-P\-I\-\_\-write().
+
+
+
+Referenced by enc28j60\-Init(), enc28j60\-Packet\-Receive(), enc28j60\-Packet\-Send(), enc28j60\-Set\-Bank(), and enc28j60\-Write().
+
+
+\begin{DoxyCode}
+52 \{
+53         \hyperlink{ecn28j60_8c_a3ffd28945de70d42e88ba739277b8134}{CSACTIVE};
+54         \textcolor{comment}{// issue write command}
+55         \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}( op | (address & \hyperlink{ecn28j60_8h_a15b16c1073c60f0be255caf0a60251be}{ADDR\_MASK}) );
+56         \textcolor{comment}{// write data}
+57         \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(data);
+58         \hyperlink{ecn28j60_8c_adf1112b42b6a400e4c4b88792eaae1bd}{CSPASSIVE};
+59 \}
+\end{DoxyCode}

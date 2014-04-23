@@ -1,0 +1,150 @@
+\hypertarget{stdio_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/stdio.c File Reference}
+\label{stdio_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/stdio.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/stdio.\-c}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{stdio_8c_a7fa348d1f5a41a2bdda333e29ce52593}{\-\_\-\-\_\-\-P\-R\-I\-N\-T\-F\-\_\-\-C}
+\item 
+\#define \hyperlink{stdio_8c_ae1baac1db572fc88b7b6f923e1fac7dd}{P\-R\-I\-N\-T\-F\-\_\-\-B\-U\-F\-\_\-\-L\-E\-N}~12
+\item 
+\#define \hyperlink{stdio_8c_a6fd5dddc97219412ab1c4483ce144aef}{P\-A\-D\-\_\-\-R\-I\-G\-H\-T}~1
+\item 
+\#define \hyperlink{stdio_8c_a0b08e2c1689b9348d321cdc8846950af}{P\-A\-D\-\_\-\-Z\-E\-R\-O}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{stdio_8c_a29dcbb00a315f85af3fc2ad7061fdf46}{funcout} )(\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{stdio_8c_a4f88403166e56608ac7db2b3ae57c315}{pprintf} (\hyperlink{printf_8c_a65764f2ebf884f352582c2c16e3f7451}{funcout} func, const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$format, va\-\_\-list args)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{stdio_8c_a4753750faef0898e1b4bda1560f3783b}{psprintf2} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$out, const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$format, va\-\_\-list args)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{stdio_8c_a93eff6365eac353b1696c7109602939d}{psprintf} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$out, const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$format,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{stdio_8c_a7fa348d1f5a41a2bdda333e29ce52593}{\index{stdio.\-c@{stdio.\-c}!\-\_\-\-\_\-\-P\-R\-I\-N\-T\-F\-\_\-\-C@{\-\_\-\-\_\-\-P\-R\-I\-N\-T\-F\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-P\-R\-I\-N\-T\-F\-\_\-\-C@{\-\_\-\-\_\-\-P\-R\-I\-N\-T\-F\-\_\-\-C}!stdio.c@{stdio.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-P\-R\-I\-N\-T\-F\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-P\-R\-I\-N\-T\-F\-\_\-\-C}}\label{stdio_8c_a7fa348d1f5a41a2bdda333e29ce52593}
+
+
+Definition at line 28 of file stdio.\-c.
+
+\hypertarget{stdio_8c_a6fd5dddc97219412ab1c4483ce144aef}{\index{stdio.\-c@{stdio.\-c}!P\-A\-D\-\_\-\-R\-I\-G\-H\-T@{P\-A\-D\-\_\-\-R\-I\-G\-H\-T}}
+\index{P\-A\-D\-\_\-\-R\-I\-G\-H\-T@{P\-A\-D\-\_\-\-R\-I\-G\-H\-T}!stdio.c@{stdio.\-c}}
+\subsubsection[{P\-A\-D\-\_\-\-R\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-A\-D\-\_\-\-R\-I\-G\-H\-T~1}}\label{stdio_8c_a6fd5dddc97219412ab1c4483ce144aef}
+
+
+Definition at line 55 of file stdio.\-c.
+
+\hypertarget{stdio_8c_a0b08e2c1689b9348d321cdc8846950af}{\index{stdio.\-c@{stdio.\-c}!P\-A\-D\-\_\-\-Z\-E\-R\-O@{P\-A\-D\-\_\-\-Z\-E\-R\-O}}
+\index{P\-A\-D\-\_\-\-Z\-E\-R\-O@{P\-A\-D\-\_\-\-Z\-E\-R\-O}!stdio.c@{stdio.\-c}}
+\subsubsection[{P\-A\-D\-\_\-\-Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-A\-D\-\_\-\-Z\-E\-R\-O~2}}\label{stdio_8c_a0b08e2c1689b9348d321cdc8846950af}
+
+
+Definition at line 56 of file stdio.\-c.
+
+\hypertarget{stdio_8c_ae1baac1db572fc88b7b6f923e1fac7dd}{\index{stdio.\-c@{stdio.\-c}!P\-R\-I\-N\-T\-F\-\_\-\-B\-U\-F\-\_\-\-L\-E\-N@{P\-R\-I\-N\-T\-F\-\_\-\-B\-U\-F\-\_\-\-L\-E\-N}}
+\index{P\-R\-I\-N\-T\-F\-\_\-\-B\-U\-F\-\_\-\-L\-E\-N@{P\-R\-I\-N\-T\-F\-\_\-\-B\-U\-F\-\_\-\-L\-E\-N}!stdio.c@{stdio.\-c}}
+\subsubsection[{P\-R\-I\-N\-T\-F\-\_\-\-B\-U\-F\-\_\-\-L\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-I\-N\-T\-F\-\_\-\-B\-U\-F\-\_\-\-L\-E\-N~12}}\label{stdio_8c_ae1baac1db572fc88b7b6f923e1fac7dd}
+
+
+Definition at line 33 of file stdio.\-c.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{stdio_8c_a29dcbb00a315f85af3fc2ad7061fdf46}{\index{stdio.\-c@{stdio.\-c}!funcout@{funcout}}
+\index{funcout@{funcout}!stdio.c@{stdio.\-c}}
+\subsubsection[{funcout}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ funcout)({\bf u8})}}\label{stdio_8c_a29dcbb00a315f85af3fc2ad7061fdf46}
+
+
+Definition at line 35 of file stdio.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{stdio_8c_a4f88403166e56608ac7db2b3ae57c315}{\index{stdio.\-c@{stdio.\-c}!pprintf@{pprintf}}
+\index{pprintf@{pprintf}!stdio.c@{stdio.\-c}}
+\subsubsection[{pprintf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} pprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf funcout}}]{func, }
+\item[{const {\bf u8} $\ast$}]{format, }
+\item[{va\-\_\-list}]{args}
+\end{DoxyParamCaption}
+)}}\label{stdio_8c_a4f88403166e56608ac7db2b3ae57c315}
+
+
+Definition at line 486 of file stdio.\-c.
+
+
+
+Referenced by \-\_\-lcd\-\_\-printf(), lcdi2c\-\_\-printf(), serial2printf(), serial3printf(), serial4printf(), serial5printf(), and serial6printf().
+
+
+\begin{DoxyCode}
+487 \{
+488     \textcolor{comment}{//va\_list args;}
+489     
+490     pputchar = func;
+491     \textcolor{comment}{//va\_start( args, format );}
+492     \textcolor{keywordflow}{return} pprint(0, format, args);
+493 \}
+\end{DoxyCode}
+\hypertarget{stdio_8c_a93eff6365eac353b1696c7109602939d}{\index{stdio.\-c@{stdio.\-c}!psprintf@{psprintf}}
+\index{psprintf@{psprintf}!stdio.c@{stdio.\-c}}
+\subsubsection[{psprintf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} psprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{out, }
+\item[{const {\bf u8} $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{stdio_8c_a93eff6365eac353b1696c7109602939d}
+
+
+Definition at line 506 of file stdio.\-c.
+
+
+
+Referenced by scan\-\_\-files().
+
+
+\begin{DoxyCode}
+507 \{
+508     va\_list args;
+509 
+510     va\_start(args, format);
+511     \textcolor{keywordflow}{return} pprint(&out, format, args);
+512 \}
+\end{DoxyCode}
+\hypertarget{stdio_8c_a4753750faef0898e1b4bda1560f3783b}{\index{stdio.\-c@{stdio.\-c}!psprintf2@{psprintf2}}
+\index{psprintf2@{psprintf2}!stdio.c@{stdio.\-c}}
+\subsubsection[{psprintf2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} psprintf2 (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{out, }
+\item[{const {\bf u8} $\ast$}]{format, }
+\item[{va\-\_\-list}]{args}
+\end{DoxyParamCaption}
+)}}\label{stdio_8c_a4753750faef0898e1b4bda1560f3783b}
+
+
+Definition at line 500 of file stdio.\-c.
+
+
+
+Referenced by I\-L\-I9325\-\_\-printf().
+
+
+\begin{DoxyCode}
+501 \{
+502     \textcolor{keywordflow}{return} pprint(&out, format, args);
+503 \}
+\end{DoxyCode}

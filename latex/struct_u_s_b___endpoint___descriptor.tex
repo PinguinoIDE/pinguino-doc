@@ -1,0 +1,107 @@
+\hypertarget{struct_u_s_b___endpoint___descriptor}{\section{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor Struct Reference}
+\label{struct_u_s_b___endpoint___descriptor}\index{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}}
+}
+
+
+{\ttfamily \#include $<$pic\-U\-S\-B.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___endpoint___descriptor_a904ce9aea3e1db94a9a1ec5a0a22b65d}{b\-Length}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___endpoint___descriptor_af6d6c7e334878414c973fc10e54cfb4e}{b\-Descriptor\-Type}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___endpoint___descriptor_a8351ae3c49da08fc3a37d58d4a0e2d84}{b\-Endpoint\-Address}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___endpoint___descriptor_a2733c047911192e6e1630eb85167cd42}{bm\-Attributes}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{struct_u_s_b___endpoint___descriptor_a6b9f4ee406e56ca4242b5c7502060842}{w\-Max\-Packet\-Size}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___endpoint___descriptor_a7284387b387d9ade2b7537ee8f87372e}{b\-Interval}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Endpoint Descriptor 
+
+Definition at line 285 of file pic\-U\-S\-B.\-h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_u_s_b___endpoint___descriptor_af6d6c7e334878414c973fc10e54cfb4e}{\index{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}!b\-Descriptor\-Type@{b\-Descriptor\-Type}}
+\index{b\-Descriptor\-Type@{b\-Descriptor\-Type}!USB_Endpoint_Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}}
+\subsubsection[{b\-Descriptor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Descriptor\-Type}}\label{struct_u_s_b___endpoint___descriptor_af6d6c7e334878414c973fc10e54cfb4e}
+Endpoint Descriptor (0x05) 
+
+Definition at line 288 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___endpoint___descriptor_a8351ae3c49da08fc3a37d58d4a0e2d84}{\index{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}!b\-Endpoint\-Address@{b\-Endpoint\-Address}}
+\index{b\-Endpoint\-Address@{b\-Endpoint\-Address}!USB_Endpoint_Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}}
+\subsubsection[{b\-Endpoint\-Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Endpoint\-Address}}\label{struct_u_s_b___endpoint___descriptor_a8351ae3c49da08fc3a37d58d4a0e2d84}
+Endpoint Address
+\begin{DoxyItemize}
+\item Bits 0..3b Endpoint Number.
+\item Bits 4..6b Reserved. Set to Zero
+\item Bits 7 Direction 0 = Out, 1 = In (Ignored for Control Endpoints)
+\end{DoxyItemize}
+
+Definition at line 289 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___endpoint___descriptor_a7284387b387d9ade2b7537ee8f87372e}{\index{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}!b\-Interval@{b\-Interval}}
+\index{b\-Interval@{b\-Interval}!USB_Endpoint_Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}}
+\subsubsection[{b\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Interval}}\label{struct_u_s_b___endpoint___descriptor_a7284387b387d9ade2b7537ee8f87372e}
+Interval for polling endpoint data transfers. Value in frame counts. Ignored for Bulk \& Control Endpoints. Isochronous must equal 1 and field may range from 1 to 255 for interrupt endpoints. 
+
+Definition at line 292 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___endpoint___descriptor_a904ce9aea3e1db94a9a1ec5a0a22b65d}{\index{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}!b\-Length@{b\-Length}}
+\index{b\-Length@{b\-Length}!USB_Endpoint_Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}}
+\subsubsection[{b\-Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Length}}\label{struct_u_s_b___endpoint___descriptor_a904ce9aea3e1db94a9a1ec5a0a22b65d}
+Size of Descriptor in u8s (7 u8s) 
+
+Definition at line 287 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___endpoint___descriptor_a2733c047911192e6e1630eb85167cd42}{\index{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}!bm\-Attributes@{bm\-Attributes}}
+\index{bm\-Attributes@{bm\-Attributes}!USB_Endpoint_Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}}
+\subsubsection[{bm\-Attributes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} bm\-Attributes}}\label{struct_u_s_b___endpoint___descriptor_a2733c047911192e6e1630eb85167cd42}
+Bits 0..1 Transfer Type\par
+
+\begin{DoxyItemize}
+\item 00 = Control
+\item 01 = Isochronous
+\item 10 = Bulk
+\item 11 = Interrupt
+\end{DoxyItemize}\par
+Bits 2..7 are reserved. If Isochronous endpoint,\par
+Bits 3..2 = Synchronisation Type (Iso Mode)\par
+
+\begin{DoxyItemize}
+\item 00 = No Synchonisation
+\item 01 = Asynchronous
+\item 10 = Adaptive
+\item 11 = Synchronous
+\end{DoxyItemize}\par
+Bits 5..4 = Usage Type (Iso Mode)
+\begin{DoxyItemize}
+\item 00 = Data Endpoint
+\item 01 = Feedback Endpoint
+\item 10 = Explicit Feedback Data Endpoint
+\item 11 = Reserved
+\end{DoxyItemize}
+
+Definition at line 290 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___endpoint___descriptor_a6b9f4ee406e56ca4242b5c7502060842}{\index{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}!w\-Max\-Packet\-Size@{w\-Max\-Packet\-Size}}
+\index{w\-Max\-Packet\-Size@{w\-Max\-Packet\-Size}!USB_Endpoint_Descriptor@{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}}
+\subsubsection[{w\-Max\-Packet\-Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} w\-Max\-Packet\-Size}}\label{struct_u_s_b___endpoint___descriptor_a6b9f4ee406e56ca4242b5c7502060842}
+Maximum Packet Size this endpoint is capable of sending or receiving 
+
+Definition at line 291 of file pic\-U\-S\-B.\-h.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/\hyperlink{pic_u_s_b_8h}{pic\-U\-S\-B.\-h}\end{DoxyCompactItemize}

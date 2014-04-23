@@ -1,0 +1,122 @@
+\hypertarget{class_led}{\section{Led Class Reference}
+\label{class_led}\index{Led@{Led}}
+}
+
+
+{\ttfamily \#include $<$led.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_led_a693b867007ea3d4fdec5aa1114981273}{Led} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{class_led_af5a2f93105e0a24634af5793d2c5c5b8}{on} ()
+\item 
+void \hyperlink{class_led_a2f241b422ebdbd7a570178ceaebdd2fa}{off} ()
+\item 
+void \hyperlink{class_led_ad277193b2dca0bab1e0ad24d45407dc3}{toggle} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file led.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_led_a693b867007ea3d4fdec5aa1114981273}{\index{Led@{Led}!Led@{Led}}
+\index{Led@{Led}!Led@{Led}}
+\subsubsection[{Led}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Led} (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin}
+\end{DoxyParamCaption}
+)}}\label{class_led_a693b867007ea3d4fdec5aa1114981273}
+
+
+Definition at line 10 of file led.\-c.
+
+
+
+References O\-U\-T\-P\-U\-T, and pinmode().
+
+
+\begin{DoxyCode}
+11 \{
+12     \_pin = pin;
+13     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\_pin, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+14 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_led_a2f241b422ebdbd7a570178ceaebdd2fa}{\index{Led@{Led}!off@{off}}
+\index{off@{off}!Led@{Led}}
+\subsubsection[{off}]{\setlength{\rightskip}{0pt plus 5cm}void off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_led_a2f241b422ebdbd7a570178ceaebdd2fa}
+
+
+Definition at line 21 of file led.\-c.
+
+
+
+References digitalwrite(), and O\-F\-F.
+
+
+\begin{DoxyCode}
+22 \{
+23     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\_pin, \hyperlink{p8_2pinguino_2core_2const_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF});
+24 \}
+\end{DoxyCode}
+\hypertarget{class_led_af5a2f93105e0a24634af5793d2c5c5b8}{\index{Led@{Led}!on@{on}}
+\index{on@{on}!Led@{Led}}
+\subsubsection[{on}]{\setlength{\rightskip}{0pt plus 5cm}void on (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_led_af5a2f93105e0a24634af5793d2c5c5b8}
+
+
+Definition at line 16 of file led.\-c.
+
+
+
+References digitalwrite(), and O\-N.
+
+
+\begin{DoxyCode}
+17 \{
+18     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\_pin, \hyperlink{p8_2pinguino_2core_2const_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON});
+19 \}
+\end{DoxyCode}
+\hypertarget{class_led_ad277193b2dca0bab1e0ad24d45407dc3}{\index{Led@{Led}!toggle@{toggle}}
+\index{toggle@{toggle}!Led@{Led}}
+\subsubsection[{toggle}]{\setlength{\rightskip}{0pt plus 5cm}void toggle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_led_ad277193b2dca0bab1e0ad24d45407dc3}
+
+
+Definition at line 26 of file led.\-c.
+
+
+
+References digitalread(), and digitalwrite().
+
+
+\begin{DoxyCode}
+27 \{
+28     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\_pin, \hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(\_pin) ^ 1);
+29 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/\hyperlink{led_8h}{led.\-h}\item 
+/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/\hyperlink{led_8c}{led.\-c}\end{DoxyCompactItemize}

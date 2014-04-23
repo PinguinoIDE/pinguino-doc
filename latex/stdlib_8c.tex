@@ -1,0 +1,335 @@
+\hypertarget{stdlib_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/stdlib.c File Reference}
+\label{stdlib_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/stdlib.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/stdlib.\-c}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{stdlib_8c_a8584b3bc2a465f92593b7c2f723a868d}{\-\_\-\-\_\-\-S\-T\-D\-L\-I\-B\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{stdlib_8c_a1e715b6962e2f429293740b244342d41}{pitoa} (int value, char $\ast$string, int base)
+\item 
+char $\ast$ \hyperlink{stdlib_8c_a1d81088516fc5f87de3eb2e4f4e53d4e}{pltoa} (long value, char $\ast$string, int base)
+\item 
+char $\ast$ \hyperlink{stdlib_8c_a0fd2697260e3d354b1bb812508470946}{pultoa} (unsigned long value, char $\ast$string, int base)
+\item 
+void \hyperlink{stdlib_8c_a25779d0e16a124e128405ea939184f98}{pftoa} (float value, char $\ast$buffer)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{stdlib_8c_a8584b3bc2a465f92593b7c2f723a868d}{\index{stdlib.\-c@{stdlib.\-c}!\-\_\-\-\_\-\-S\-T\-D\-L\-I\-B\-\_\-\-C@{\-\_\-\-\_\-\-S\-T\-D\-L\-I\-B\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-S\-T\-D\-L\-I\-B\-\_\-\-C@{\-\_\-\-\_\-\-S\-T\-D\-L\-I\-B\-\_\-\-C}!stdlib.c@{stdlib.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-S\-T\-D\-L\-I\-B\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-S\-T\-D\-L\-I\-B\-\_\-\-C}}\label{stdlib_8c_a8584b3bc2a465f92593b7c2f723a868d}
+
+
+Definition at line 12 of file stdlib.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{stdlib_8c_a25779d0e16a124e128405ea939184f98}{\index{stdlib.\-c@{stdlib.\-c}!pftoa@{pftoa}}
+\index{pftoa@{pftoa}!stdlib.c@{stdlib.\-c}}
+\subsubsection[{pftoa}]{\setlength{\rightskip}{0pt plus 5cm}void pftoa (
+\begin{DoxyParamCaption}
+\item[{float}]{value, }
+\item[{char $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{stdlib_8c_a25779d0e16a124e128405ea939184f98}
+
+
+Definition at line 161 of file stdlib.\-c.
+
+
+
+References if(), and itoa().
+
+
+\begin{DoxyCode}
+162 \{
+163     \textcolor{keyword}{union}
+164     \{
+165         \textcolor{keywordtype}{float} f;
+166         \textcolor{keyword}{struct}
+167         \{
+168            \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mantissa\_lo : 16;
+169            \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mantissa\_hi : 7;    
+170            \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} exponent : 8;
+171            \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sign : 1;
+172         \};
+173     \} helper;
+174     
+175     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} mantissa;
+176     \textcolor{keywordtype}{signed} \textcolor{keywordtype}{char} exponent;
+177     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} int\_part;
+178     \textcolor{keywordtype}{char} frac\_part[3];
+179     \textcolor{keywordtype}{int} i, count = 0;
+180     
+181     helper.f = value;
+182     \textcolor{comment}{//mantissa is LS 23 bits}
+183     mantissa = helper.mantissa\_lo;
+184     mantissa += ((\textcolor{keywordtype}{unsigned} long) helper.mantissa\_hi << 16);
+185     \textcolor{comment}{//add the 24th bit to get 1.mmmm^eeee format}
+186     mantissa += 0x00800000;
+187     \textcolor{comment}{//exponent is biased by 127}
+188     exponent = (\textcolor{keywordtype}{signed} char) helper.exponent - 127;
+189     
+190     \textcolor{comment}{//too big to shove into 8 chars}
+191     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_af84ca11bf86c56a1f74027a99d48218d}{if} (exponent > 18)
+192     \{
+193         buffer[0] = \textcolor{charliteral}{'I'};
+194         buffer[1] = \textcolor{charliteral}{'n'};
+195         buffer[2] = \textcolor{charliteral}{'f'};
+196         buffer[3] = \textcolor{charliteral}{'\(\backslash\)0'};
+197         \textcolor{keywordflow}{return};
+198     \}
+199     
+200     \textcolor{comment}{//too small to resolve (resolution of 1/8)}
+201     \textcolor{keywordflow}{if} (exponent < -3)
+202     \{
+203         buffer[0] = \textcolor{charliteral}{'0'};
+204         buffer[1] = \textcolor{charliteral}{'\(\backslash\)0'};
+205         \textcolor{keywordflow}{return};
+206     \}
+207     
+208     count = 0;
+209     
+210     \textcolor{comment}{//add negative sign (if applicable)}
+211     \textcolor{keywordflow}{if} (helper.sign)
+212     \{
+213         buffer[0] = \textcolor{charliteral}{'-'};
+214         count++;
+215     \}
+216     
+217     \textcolor{comment}{//get the integer part}
+218     int\_part = mantissa >> (23 - exponent);    
+219     \textcolor{comment}{//convert to string}
+220     \hyperlink{itoa_8c_a80edb36f87fd9a03669733b4b4d5a9dd}{itoa}(int\_part, &buffer[count], 10);
+221     
+222     \textcolor{comment}{//find the end of the integer}
+223     \textcolor{keywordflow}{for} (i = 0; i < 8; i++)
+224         \textcolor{keywordflow}{if} (buffer[i] == \textcolor{charliteral}{'\(\backslash\)0'})
+225         \{
+226            count = i;
+227            \textcolor{keywordflow}{break};
+228         \}      
+229  
+230     \textcolor{comment}{//not enough room in the buffer for the frac part    }
+231     \textcolor{keywordflow}{if} (count > 5)
+232         \textcolor{keywordflow}{return};
+233     
+234     \textcolor{comment}{//add the decimal point    }
+235     buffer[count++] = \textcolor{charliteral}{'.'};
+236     
+237     \textcolor{comment}{//use switch to resolve the fractional part}
+238     \textcolor{keywordflow}{switch} (0x7 & (mantissa  >> (20 - exponent)))
+239     \{
+240         \textcolor{keywordflow}{case} 0:
+241            frac\_part[0] = \textcolor{charliteral}{'0'};
+242            frac\_part[1] = \textcolor{charliteral}{'0'};
+243            frac\_part[2] = \textcolor{charliteral}{'0'};
+244            \textcolor{keywordflow}{break};
+245         \textcolor{keywordflow}{case} 1:
+246            frac\_part[0] = \textcolor{charliteral}{'1'};
+247            frac\_part[1] = \textcolor{charliteral}{'2'};
+248            frac\_part[2] = \textcolor{charliteral}{'5'};        
+249            \textcolor{keywordflow}{break};
+250         \textcolor{keywordflow}{case} 2:
+251            frac\_part[0] = \textcolor{charliteral}{'2'};
+252            frac\_part[1] = \textcolor{charliteral}{'5'};
+253            frac\_part[2] = \textcolor{charliteral}{'0'};        
+254            \textcolor{keywordflow}{break};
+255         \textcolor{keywordflow}{case} 3:
+256            frac\_part[0] = \textcolor{charliteral}{'3'};
+257            frac\_part[1] = \textcolor{charliteral}{'7'};
+258            frac\_part[2] = \textcolor{charliteral}{'5'};        
+259            \textcolor{keywordflow}{break};
+260         \textcolor{keywordflow}{case} 4:
+261            frac\_part[0] = \textcolor{charliteral}{'5'};
+262            frac\_part[1] = \textcolor{charliteral}{'0'};
+263            frac\_part[2] = \textcolor{charliteral}{'0'};        
+264            \textcolor{keywordflow}{break};
+265         \textcolor{keywordflow}{case} 5:
+266            frac\_part[0] = \textcolor{charliteral}{'6'};
+267            frac\_part[1] = \textcolor{charliteral}{'2'};
+268            frac\_part[2] = \textcolor{charliteral}{'5'};        
+269            \textcolor{keywordflow}{break};
+270         \textcolor{keywordflow}{case} 6:
+271            frac\_part[0] = \textcolor{charliteral}{'7'};
+272            frac\_part[1] = \textcolor{charliteral}{'5'};
+273            frac\_part[2] = \textcolor{charliteral}{'0'};        
+274            \textcolor{keywordflow}{break};
+275         \textcolor{keywordflow}{case} 7:
+276            frac\_part[0] = \textcolor{charliteral}{'8'};
+277            frac\_part[1] = \textcolor{charliteral}{'7'};
+278            frac\_part[2] = \textcolor{charliteral}{'5'};              
+279            \textcolor{keywordflow}{break};
+280     \}
+281     
+282     \textcolor{comment}{//add the fractional part to the output string}
+283     \textcolor{keywordflow}{for} (i = 0; i < 3; i++)
+284         \textcolor{keywordflow}{if} (count < 7)
+285            buffer[count++] = frac\_part[i];
+286     
+287     \textcolor{comment}{//make sure the output is terminated}
+288     buffer[count] = \textcolor{charliteral}{'\(\backslash\)0'};
+289 \}
+\end{DoxyCode}
+\hypertarget{stdlib_8c_a1e715b6962e2f429293740b244342d41}{\index{stdlib.\-c@{stdlib.\-c}!pitoa@{pitoa}}
+\index{pitoa@{pitoa}!stdlib.c@{stdlib.\-c}}
+\subsubsection[{pitoa}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ pitoa (
+\begin{DoxyParamCaption}
+\item[{int}]{value, }
+\item[{char $\ast$}]{string, }
+\item[{int}]{base}
+\end{DoxyParamCaption}
+)}}\label{stdlib_8c_a1e715b6962e2f429293740b244342d41}
+
+
+Definition at line 22 of file stdlib.\-c.
+
+
+\begin{DoxyCode}
+23 \{
+24     \textcolor{keywordtype}{char} tmp[33];
+25     \textcolor{keywordtype}{char} *tp = tmp;
+26     \textcolor{keywordtype}{int} i;
+27     \textcolor{keywordtype}{unsigned} v;
+28     \textcolor{keywordtype}{int} sign;
+29     \textcolor{keywordtype}{char} *sp;
+30 
+31     \textcolor{keywordflow}{if} (base > 36 || base <= 1)
+32         \textcolor{keywordflow}{return} 0;
+33 
+34     sign = (base == 10 && value < 0);
+35     \textcolor{keywordflow}{if} (sign)
+36         v = -value;
+37     \textcolor{keywordflow}{else}
+38         v = (unsigned)value;
+39 
+40     \textcolor{keywordflow}{while} (v || tp == tmp)
+41     \{
+42         i = v % base;
+43         v = v / base;
+44         \textcolor{keywordflow}{if} (i < 10)
+45             *tp++ = i+\textcolor{charliteral}{'0'};
+46         \textcolor{keywordflow}{else}
+47             *tp++ = i + \textcolor{charliteral}{'a'} - 10;
+48     \}
+49 
+50     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string} == 0)
+51         \textcolor{keywordtype}{string} = (\textcolor{keywordtype}{char} *)malloc((tp-tmp)+sign+1);
+52     sp = string;
+53 
+54     \textcolor{keywordflow}{if} (sign)
+55         *sp++ = \textcolor{charliteral}{'-'};
+56     \textcolor{keywordflow}{while} (tp > tmp)
+57         *sp++ = *--tp;
+58     *sp = 0;
+59 
+60     \textcolor{keywordflow}{return} string;
+61 \}
+\end{DoxyCode}
+\hypertarget{stdlib_8c_a1d81088516fc5f87de3eb2e4f4e53d4e}{\index{stdlib.\-c@{stdlib.\-c}!pltoa@{pltoa}}
+\index{pltoa@{pltoa}!stdlib.c@{stdlib.\-c}}
+\subsubsection[{pltoa}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ pltoa (
+\begin{DoxyParamCaption}
+\item[{long}]{value, }
+\item[{char $\ast$}]{string, }
+\item[{int}]{base}
+\end{DoxyParamCaption}
+)}}\label{stdlib_8c_a1d81088516fc5f87de3eb2e4f4e53d4e}
+
+
+Definition at line 69 of file stdlib.\-c.
+
+
+\begin{DoxyCode}
+70 \{
+71     \textcolor{keywordtype}{char} tmp[33];
+72     \textcolor{keywordtype}{char} *tp = tmp;
+73     \textcolor{keywordtype}{long} i;
+74     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} v;
+75     \textcolor{keywordtype}{int} sign;
+76     \textcolor{keywordtype}{char} *sp;
+77 
+78     \textcolor{keywordflow}{if} (base > 36 || base <= 1)
+79         \textcolor{keywordflow}{return} 0;
+80 
+81     sign = (base == 10 && value < 0);
+82     \textcolor{keywordflow}{if} (sign)
+83         v = -value;
+84     \textcolor{keywordflow}{else}
+85         v = (\textcolor{keywordtype}{unsigned} long)value;
+86     \textcolor{keywordflow}{while} (v || tp == tmp)
+87     \{
+88         i = v % base;
+89         v = v / base;
+90         \textcolor{keywordflow}{if} (i < 10)
+91             *tp++ = i+\textcolor{charliteral}{'0'};
+92         \textcolor{keywordflow}{else}
+93             *tp++ = i + \textcolor{charliteral}{'a'} - 10;
+94     \}
+95 
+96     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string} == 0)
+97         \textcolor{keywordtype}{string} = (\textcolor{keywordtype}{char} *)malloc((tp-tmp)+sign+1);
+98     sp = string;
+99 
+100     \textcolor{keywordflow}{if} (sign)
+101         *sp++ = \textcolor{charliteral}{'-'};
+102     \textcolor{keywordflow}{while} (tp > tmp)
+103         *sp++ = *--tp;
+104     *sp = 0;
+105 
+106     \textcolor{keywordflow}{return} string;
+107 \}
+\end{DoxyCode}
+\hypertarget{stdlib_8c_a0fd2697260e3d354b1bb812508470946}{\index{stdlib.\-c@{stdlib.\-c}!pultoa@{pultoa}}
+\index{pultoa@{pultoa}!stdlib.c@{stdlib.\-c}}
+\subsubsection[{pultoa}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ pultoa (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{value, }
+\item[{char $\ast$}]{string, }
+\item[{int}]{base}
+\end{DoxyParamCaption}
+)}}\label{stdlib_8c_a0fd2697260e3d354b1bb812508470946}
+
+
+Definition at line 115 of file stdlib.\-c.
+
+
+\begin{DoxyCode}
+116 \{
+117     \textcolor{keywordtype}{char} tmp[33];
+118     \textcolor{keywordtype}{char} *tp = tmp;
+119     \textcolor{keywordtype}{long} i;
+120     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} v = value;
+121     \textcolor{keywordtype}{char} *sp;
+122 
+123     \textcolor{keywordflow}{if} (base > 36 || base <= 1)
+124         \textcolor{keywordflow}{return} 0;
+125  
+126     \textcolor{keywordflow}{while} (v || tp == tmp)
+127     \{
+128         i = v % base;
+129         v = v / base;
+130         \textcolor{keywordflow}{if} (i < 10)
+131             *tp++ = i+\textcolor{charliteral}{'0'};
+132         \textcolor{keywordflow}{else}
+133             *tp++ = i + \textcolor{charliteral}{'a'} - 10;
+134     \}
+135 
+136     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string} == 0)
+137         \textcolor{keywordtype}{string} = (\textcolor{keywordtype}{char} *)malloc((tp-tmp)+1);
+138     sp = string;
+139 
+140  
+141     \textcolor{keywordflow}{while} (tp > tmp)
+142         *sp++ = *--tp;
+143     *sp = 0;
+144     \textcolor{keywordflow}{return} string;
+145 \}
+\end{DoxyCode}

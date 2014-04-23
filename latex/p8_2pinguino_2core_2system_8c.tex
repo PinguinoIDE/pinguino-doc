@@ -1,0 +1,61 @@
+\hypertarget{p8_2pinguino_2core_2system_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/system.c File Reference}
+\label{p8_2pinguino_2core_2system_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/system.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/system.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2system_8c_a9d62781e2ebd9bf34bc02be0fa406f7a}{\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2system_8c_afbef410e8efee26877151678bdbd7a92}{System\-Unlock}()~do \{ E\-E\-C\-O\-N2 = 0x55; E\-E\-C\-O\-N2 = 0x\-A\-A;\} while (0)
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2system_8c_a7e3258d344dfb594f4ad7a6d329db55b}{System\-Disable\-Peripheral\-Interrupt}()~do \{ P\-I\-E1 = 0; P\-I\-E2 = 0;\} while (0)
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2system_8c_a382bb4c39c4c3bb376420ccacd96c949}{System\-Reset}()~\hyperlink{p8_2pinguino_2core_2macro_8h_adff1ae9368523be49ce8ef497d4ca902}{reset}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2system_8c_a9d62781e2ebd9bf34bc02be0fa406f7a}{\index{p8/pinguino/core/system.\-c@{p8/pinguino/core/system.\-c}!\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C@{\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C@{\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C}!p8/pinguino/core/system.c@{p8/pinguino/core/system.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C}}\label{p8_2pinguino_2core_2system_8c_a9d62781e2ebd9bf34bc02be0fa406f7a}
+
+
+Definition at line 32 of file system.\-c.
+
+\hypertarget{p8_2pinguino_2core_2system_8c_a7e3258d344dfb594f4ad7a6d329db55b}{\index{p8/pinguino/core/system.\-c@{p8/pinguino/core/system.\-c}!System\-Disable\-Peripheral\-Interrupt@{System\-Disable\-Peripheral\-Interrupt}}
+\index{System\-Disable\-Peripheral\-Interrupt@{System\-Disable\-Peripheral\-Interrupt}!p8/pinguino/core/system.c@{p8/pinguino/core/system.\-c}}
+\subsubsection[{System\-Disable\-Peripheral\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}\#define System\-Disable\-Peripheral\-Interrupt(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ P\-I\-E1 = 0; P\-I\-E2 = 0;\} while (0)}}\label{p8_2pinguino_2core_2system_8c_a7e3258d344dfb594f4ad7a6d329db55b}
+
+
+Definition at line 49 of file system.\-c.
+
+\hypertarget{p8_2pinguino_2core_2system_8c_a382bb4c39c4c3bb376420ccacd96c949}{\index{p8/pinguino/core/system.\-c@{p8/pinguino/core/system.\-c}!System\-Reset@{System\-Reset}}
+\index{System\-Reset@{System\-Reset}!p8/pinguino/core/system.c@{p8/pinguino/core/system.\-c}}
+\subsubsection[{System\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}\#define System\-Reset(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf reset}()}}\label{p8_2pinguino_2core_2system_8c_a382bb4c39c4c3bb376420ccacd96c949}
+
+
+Definition at line 54 of file system.\-c.
+
+\hypertarget{p8_2pinguino_2core_2system_8c_afbef410e8efee26877151678bdbd7a92}{\index{p8/pinguino/core/system.\-c@{p8/pinguino/core/system.\-c}!System\-Unlock@{System\-Unlock}}
+\index{System\-Unlock@{System\-Unlock}!p8/pinguino/core/system.c@{p8/pinguino/core/system.\-c}}
+\subsubsection[{System\-Unlock}]{\setlength{\rightskip}{0pt plus 5cm}\#define System\-Unlock(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ E\-E\-C\-O\-N2 = 0x55; E\-E\-C\-O\-N2 = 0x\-A\-A;\} while (0)}}\label{p8_2pinguino_2core_2system_8c_afbef410e8efee26877151678bdbd7a92}
+
+
+Definition at line 44 of file system.\-c.
+

@@ -1,0 +1,330 @@
+\hypertarget{p8_2pinguino_2core_2serial_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/serial.c File Reference}
+\label{p8_2pinguino_2core_2serial_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/serial.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/serial.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$delayms.\-c$>$}\\*
+{\ttfamily \#include $<$oscillator.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2serial_8c_a43fa43691e9794b44a8bc74df8c706b4}{\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2serial_8c_a89dc3d9764e5d2a40fb86c72a6643ae8}{R\-X\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}~128
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2core_2serial_8c_ab016fd36b611fe9c7823ed7b5b7e1210}{Serial\-\_\-begin} (unsigned long baudrate)
+\item 
+unsigned char \hyperlink{p8_2pinguino_2core_2serial_8c_ae520d39780ca71dc0a5e796770f2cb91}{Serial\-\_\-available} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2serial_8c_a743f790d2dd9d0517041a594e6b96621}{Serial\-\_\-flush} (void)
+\item 
+void \hyperlink{p8_2pinguino_2core_2serial_8c_abf25dba858661de8b55c6a40224627a1}{serial\-\_\-interrupt} (void)
+\item 
+void \hyperlink{p8_2pinguino_2core_2serial_8c_a593b8e510a547d02b393a72c10a50063}{Serial\-\_\-putchar} (unsigned char caractere)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{p8_2pinguino_2core_2serial_8c_a64ae21cc10dfc8fdc3416a98a70b56b8}{rx} \mbox{[}\hyperlink{p8_2pinguino_2core_2serial_8c_a89dc3d9764e5d2a40fb86c72a6643ae8}{R\-X\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}\mbox{]}
+\item 
+unsigned char \hyperlink{p8_2pinguino_2core_2serial_8c_a41f462d4c1cad3e0513155d6b792e321}{wpointer}
+\item 
+unsigned char \hyperlink{p8_2pinguino_2core_2serial_8c_ab0fd0066c2d4e42328325e2390d511cc}{rpointer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2serial_8c_a43fa43691e9794b44a8bc74df8c706b4}{\index{p8/pinguino/core/serial.\-c@{p8/pinguino/core/serial.\-c}!\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-}!p8/pinguino/core/serial.c@{p8/pinguino/core/serial.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-S\-E\-R\-I\-A\-L\-\_\-\-\_\-}}\label{p8_2pinguino_2core_2serial_8c_a43fa43691e9794b44a8bc74df8c706b4}
+
+
+Definition at line 32 of file serial.\-c.
+
+\hypertarget{p8_2pinguino_2core_2serial_8c_a89dc3d9764e5d2a40fb86c72a6643ae8}{\index{p8/pinguino/core/serial.\-c@{p8/pinguino/core/serial.\-c}!R\-X\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H@{R\-X\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}}
+\index{R\-X\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H@{R\-X\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}!p8/pinguino/core/serial.c@{p8/pinguino/core/serial.\-c}}
+\subsubsection[{R\-X\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-X\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H~128}}\label{p8_2pinguino_2core_2serial_8c_a89dc3d9764e5d2a40fb86c72a6643ae8}
+
+
+Definition at line 53 of file serial.\-c.
+
+
+
+Referenced by serial\-\_\-interrupt().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2serial_8c_ae520d39780ca71dc0a5e796770f2cb91}{\index{p8/pinguino/core/serial.\-c@{p8/pinguino/core/serial.\-c}!Serial\-\_\-available@{Serial\-\_\-available}}
+\index{Serial\-\_\-available@{Serial\-\_\-available}!p8/pinguino/core/serial.c@{p8/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-\_\-available}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Serial\-\_\-available (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2serial_8c_ae520d39780ca71dc0a5e796770f2cb91}
+
+
+Definition at line 148 of file serial.\-c.
+
+
+
+References rpointer, and wpointer.
+
+
+\begin{DoxyCode}
+149 \{
+150     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2serial_8c_a41f462d4c1cad3e0513155d6b792e321}{wpointer}!=\hyperlink{p8_2pinguino_2core_2serial_8c_ab0fd0066c2d4e42328325e2390d511cc}{rpointer});
+151 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2serial_8c_ab016fd36b611fe9c7823ed7b5b7e1210}{\index{p8/pinguino/core/serial.\-c@{p8/pinguino/core/serial.\-c}!Serial\-\_\-begin@{Serial\-\_\-begin}}
+\index{Serial\-\_\-begin@{Serial\-\_\-begin}!p8/pinguino/core/serial.c@{p8/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-\_\-begin (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{baudrate}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2serial_8c_ab016fd36b611fe9c7823ed7b5b7e1210}
+
+
+Definition at line 65 of file serial.\-c.
+
+
+
+References rpointer, System\-\_\-get\-Cpu\-Frequency(), and wpointer.
+
+
+\begin{DoxyCode}
+66 \{
+67     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} spbrg;
+68     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} highbyte,lowbyte;
+69 
+70     \textcolor{comment}{//spbrg=(48000000/(4*baudrate))-1;}
+71     \textcolor{comment}{//spbrg=(\_cpu\_clock\_/(4*baudrate))-1;}
+72     \textcolor{comment}{//spbrg=(SystemGetClock()/(4*baudrate))-1;}
+73     spbrg=(\hyperlink{oscillator_8c_acd194cdd9405aca05d1856b25025219e}{System\_getCpuFrequency}()/(4*baudrate))-1;
+74 
+75     highbyte=spbrg/256;
+76     lowbyte=spbrg%256;
+77     
+78 \textcolor{preprocessor}{    #if defined(\_\_18f1220) || defined(\_\_18f1320) || \(\backslash\)}
+79 \textcolor{preprocessor}{        defined(\_\_18f14k22) || defined(\_\_18lf14k22)}
+80 \textcolor{preprocessor}{}        TXSTAbits.BRGH=1;                       \textcolor{comment}{// set BRGH bit}
+81         BAUDCTLbits.BRG16=1;                    \textcolor{comment}{// set 16 bits SPBRG}
+82         SPBRGH=highbyte;                        \textcolor{comment}{// set UART speed SPBRGH}
+83         SPBRG=lowbyte;                          \textcolor{comment}{// set UART speed SPBRGL}
+84         RCSTA=0x90;                             \textcolor{comment}{// set RCEN and SPEN}
+85         BAUDCTLbits.RCIDL=1;                    \textcolor{comment}{// set receive active}
+86         PIE1bits.RCIE=1;                        \textcolor{comment}{// enable interrupt on RX}
+87         IPR1bits.RCIP=1;                        \textcolor{comment}{// define high priority for RX interrupt}
+88         TXSTAbits.TXEN=1;                       \textcolor{comment}{// enable TX}
+89 
+90 \textcolor{preprocessor}{    #elif defined(\_\_18f2455) || defined(\_\_18f4455) || \(\backslash\)}
+91 \textcolor{preprocessor}{          defined(\_\_18f2550) || defined(\_\_18f4550) || \(\backslash\)}
+92 \textcolor{preprocessor}{          defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+93 \textcolor{preprocessor}{}        TRISCbits.TRISC7    = 1;                    \textcolor{comment}{/* Rx1  set input */}
+94         TXSTAbits.BRGH=1;                       \textcolor{comment}{// set BRGH bit}
+95         BAUDCONbits.BRG16=1;                    \textcolor{comment}{// set 16 bits SPBRG}
+96         SPBRGH=highbyte;                        \textcolor{comment}{// set UART speed SPBRGH}
+97         SPBRG=lowbyte;                          \textcolor{comment}{// set UART speed SPBRGL}
+98         RCSTA=0x90;                             \textcolor{comment}{// set RCEN and SPEN}
+99         BAUDCONbits.RCIDL=1;                    \textcolor{comment}{// set receive active}
+100         TXSTAbits.TXEN=1;                       \textcolor{comment}{// enable TX}
+101 
+102         PIR1bits.RCIF = 0;                      \textcolor{comment}{// Clear interrupt flag}
+103         PIE1bits.RCIE=1;                        \textcolor{comment}{// enable interrupt on RX}
+104         IPR1bits.RCIP=1;                        \textcolor{comment}{// define high priority for RX interrupt}
+105 
+106 \textcolor{preprocessor}{    #elif defined(\_\_18f26j50) || defined(\_\_18f46j50) || \(\backslash\)}
+107 \textcolor{preprocessor}{          defined(\_\_18f26j53) || defined(\_\_18f46j53) || \(\backslash\)}
+108 \textcolor{preprocessor}{          defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+109 \textcolor{preprocessor}{}        TRISCbits.TRISC7    = 1;                    \textcolor{comment}{/* Rx1  set input */}
+110         TXSTA1bits.BRGH=1;                      \textcolor{comment}{// set BRGH bit}
+111         BAUDCON1bits.BRG16=1;                   \textcolor{comment}{// set 16 bits SPBRG}
+112         SPBRGH1=highbyte;                       \textcolor{comment}{// set UART speed SPBRGH}
+113         SPBRG1=lowbyte;                         \textcolor{comment}{// set UART speed SPBRGL}
+114         RCSTA1=0x90;                            \textcolor{comment}{// set RCEN and SPEN}
+115         BAUDCON1bits.RCIDL=1;                   \textcolor{comment}{// set receive active}
+116         TXSTA1bits.TXEN=1;                      \textcolor{comment}{// enable TX}
+117 
+118         PIR1bits.RC1IF = 0;                     \textcolor{comment}{// Clear interrupt flag}
+119         PIE1bits.RC1IE=1;                       \textcolor{comment}{// enable interrupt on RX}
+120         IPR1bits.RC1IP=1;                       \textcolor{comment}{// define high priority for RX interrupt}
+121 
+122         PIR1bits.TX1IF=0;  \textcolor{comment}{//}
+123         PIE1bits.TX1IE=0;  \textcolor{comment}{//}
+124 
+125 \textcolor{preprocessor}{    #else}
+126 \textcolor{preprocessor}{}
+127 \textcolor{preprocessor}{        #error "Processor Not Yet Supported. Please, Take Contact with Developpers."}
+128 \textcolor{preprocessor}{}
+129 \textcolor{preprocessor}{    #endif}
+130 \textcolor{preprocessor}{}
+131     \hyperlink{p8_2pinguino_2core_2serial_8c_a41f462d4c1cad3e0513155d6b792e321}{wpointer}=1;                             \textcolor{comment}{// initialize write pointer}
+132     \hyperlink{p8_2pinguino_2core_2serial_8c_ab0fd0066c2d4e42328325e2390d511cc}{rpointer}=1;                             \textcolor{comment}{// initialize read pointer}
+133     
+134     \textcolor{comment}{//RB: IPEN is managed both by bootloader and main.c}
+135     \textcolor{comment}{//RCONbits.IPEN = 1;                      //  enable interrupt priorities}
+136     INTCONbits.GIEH = 1;                    \textcolor{comment}{// Enable global HP interrupts}
+137     INTCONbits.GIEL = 1;                    \textcolor{comment}{// Enable global LP interrupts}
+138     INTCONbits.PEIE = 1;                    \textcolor{comment}{// Enable peripheral interrupts}
+139 
+140     \textcolor{comment}{//Delayms(1000);                           // AG : 12-11-2012}
+141 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2serial_8c_a743f790d2dd9d0517041a594e6b96621}{\index{p8/pinguino/core/serial.\-c@{p8/pinguino/core/serial.\-c}!Serial\-\_\-flush@{Serial\-\_\-flush}}
+\index{Serial\-\_\-flush@{Serial\-\_\-flush}!p8/pinguino/core/serial.c@{p8/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-\_\-flush}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-\_\-flush (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2serial_8c_a743f790d2dd9d0517041a594e6b96621}
+
+
+Definition at line 158 of file serial.\-c.
+
+
+
+References rpointer, and wpointer.
+
+
+\begin{DoxyCode}
+159 \{
+160     \hyperlink{p8_2pinguino_2core_2serial_8c_a41f462d4c1cad3e0513155d6b792e321}{wpointer}=1;
+161     \hyperlink{p8_2pinguino_2core_2serial_8c_ab0fd0066c2d4e42328325e2390d511cc}{rpointer}=1;
+162 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2serial_8c_abf25dba858661de8b55c6a40224627a1}{\index{p8/pinguino/core/serial.\-c@{p8/pinguino/core/serial.\-c}!serial\-\_\-interrupt@{serial\-\_\-interrupt}}
+\index{serial\-\_\-interrupt@{serial\-\_\-interrupt}!p8/pinguino/core/serial.c@{p8/pinguino/core/serial.\-c}}
+\subsubsection[{serial\-\_\-interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void serial\-\_\-interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2serial_8c_abf25dba858661de8b55c6a40224627a1}
+
+
+Definition at line 168 of file serial.\-c.
+
+
+
+References rpointer, rx, R\-X\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H, and wpointer.
+
+
+\begin{DoxyCode}
+169 \{
+170     \textcolor{keywordtype}{char} caractere;
+171     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} newwp;
+172 
+173 \textcolor{preprocessor}{    #if defined(\_\_18f1220)  || defined(\_\_18f1320)   || \(\backslash\)}
+174 \textcolor{preprocessor}{        defined(\_\_18f14k22) || defined(\_\_18lf14k22) || \(\backslash\)}
+175 \textcolor{preprocessor}{        defined(\_\_18f2550)  || defined(\_\_18f4550)   || \(\backslash\)}
+176 \textcolor{preprocessor}{        defined(\_\_18f25k50) || defined(\_\_18f45k50)  || \(\backslash\)}
+177 \textcolor{preprocessor}{        defined(\_\_18f2455)  || defined(\_\_18f4455)}
+178 \textcolor{preprocessor}{}
+179     \textcolor{keywordflow}{if} (PIR1bits.RCIF)
+180     \{ 
+181         PIR1bits.RCIF=0;                \textcolor{comment}{// clear RX interrupt flag}
+182         caractere=RCREG;                \textcolor{comment}{// take received char}
+183 
+184 \textcolor{preprocessor}{    #elif defined(\_\_18f26j50) || defined(\_\_18f46j50) || \(\backslash\)}
+185 \textcolor{preprocessor}{          defined(\_\_18f26j53) || defined(\_\_18f46j53) || \(\backslash\)}
+186 \textcolor{preprocessor}{          defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+187 \textcolor{preprocessor}{}
+188     \textcolor{keywordflow}{if} (PIR1bits.RC1IF) 
+189     \{
+190         PIR1bits.RC1IF=0;               \textcolor{comment}{// clear RX interrupt flag}
+191         caractere=RCREG1;               \textcolor{comment}{// take received char}
+192 
+193 \textcolor{preprocessor}{    #else}
+194 \textcolor{preprocessor}{}
+195 \textcolor{preprocessor}{        #error "Processor Not Yet Supported. Please, Take Contact with Developpers."}
+196 \textcolor{preprocessor}{}
+197 \textcolor{preprocessor}{    #endif}
+198 \textcolor{preprocessor}{}
+199         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2serial_8c_a41f462d4c1cad3e0513155d6b792e321}{wpointer}!=\hyperlink{p8_2pinguino_2core_2serial_8c_a89dc3d9764e5d2a40fb86c72a6643ae8}{RXBUFFERLENGTH}-1)   \textcolor{comment}{// if not last place in buffer}
+200             newwp=\hyperlink{p8_2pinguino_2core_2serial_8c_a41f462d4c1cad3e0513155d6b792e321}{wpointer}+1;           \textcolor{comment}{// place=place+1}
+201 
+202         \textcolor{keywordflow}{else}
+203             newwp=1;                    \textcolor{comment}{// else place=1}
+204 
+205         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2serial_8c_ab0fd0066c2d4e42328325e2390d511cc}{rpointer}!=newwp)            \textcolor{comment}{// if read pointer!=write pointer}
+206             \hyperlink{p8_2pinguino_2core_2serial_8c_a64ae21cc10dfc8fdc3416a98a70b56b8}{rx}[\hyperlink{p8_2pinguino_2core_2serial_8c_a41f462d4c1cad3e0513155d6b792e321}{wpointer}++]=caractere; \textcolor{comment}{// store received char}
+207 
+208         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2serial_8c_a41f462d4c1cad3e0513155d6b792e321}{wpointer}==\hyperlink{p8_2pinguino_2core_2serial_8c_a89dc3d9764e5d2a40fb86c72a6643ae8}{RXBUFFERLENGTH}) \textcolor{comment}{// if write pointer=length buffer}
+209             \hyperlink{p8_2pinguino_2core_2serial_8c_a41f462d4c1cad3e0513155d6b792e321}{wpointer}=1;                 \textcolor{comment}{// write pointer = 1}
+210     \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2serial_8c_a593b8e510a547d02b393a72c10a50063}{\index{p8/pinguino/core/serial.\-c@{p8/pinguino/core/serial.\-c}!Serial\-\_\-putchar@{Serial\-\_\-putchar}}
+\index{Serial\-\_\-putchar@{Serial\-\_\-putchar}!p8/pinguino/core/serial.c@{p8/pinguino/core/serial.\-c}}
+\subsubsection[{Serial\-\_\-putchar}]{\setlength{\rightskip}{0pt plus 5cm}void Serial\-\_\-putchar (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{caractere}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2serial_8c_a593b8e510a547d02b393a72c10a50063}
+
+
+Definition at line 218 of file serial.\-c.
+
+
+\begin{DoxyCode}
+219 \{
+220 \textcolor{preprocessor}{    #if defined(\_\_18f1220) || defined(\_\_18f1320)    || \(\backslash\)}
+221 \textcolor{preprocessor}{        defined(\_\_18f14k22) || defined(\_\_18lf14k22) || \(\backslash\)}
+222 \textcolor{preprocessor}{        defined(\_\_18f2455)                          || \(\backslash\)}
+223 \textcolor{preprocessor}{        defined(\_\_18f2550) || defined(\_\_18f4550)    || \(\backslash\)}
+224 \textcolor{preprocessor}{        defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+225 \textcolor{preprocessor}{}
+226         \textcolor{keywordflow}{while} (!TXSTAbits.TRMT);
+227         TXREG=caractere;                \textcolor{comment}{// yes, send char}
+228 
+229 \textcolor{preprocessor}{    #elif defined(\_\_18f26j50) || defined(\_\_18f46j50) || \(\backslash\)}
+230 \textcolor{preprocessor}{          defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+231 \textcolor{preprocessor}{}
+232         \textcolor{keywordflow}{while} (!TXSTA1bits.TRMT);
+233         TXREG1=caractere;               \textcolor{comment}{// yes, send char}
+234 
+235 \textcolor{preprocessor}{    #else}
+236 \textcolor{preprocessor}{}
+237 \textcolor{preprocessor}{        #error "Processor Not Yet Supported. Please, Take Contact with Developpers."}
+238 \textcolor{preprocessor}{}
+239 \textcolor{preprocessor}{    #endif}
+240 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2core_2serial_8c_ab0fd0066c2d4e42328325e2390d511cc}{\index{p8/pinguino/core/serial.\-c@{p8/pinguino/core/serial.\-c}!rpointer@{rpointer}}
+\index{rpointer@{rpointer}!p8/pinguino/core/serial.c@{p8/pinguino/core/serial.\-c}}
+\subsubsection[{rpointer}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char rpointer}}\label{p8_2pinguino_2core_2serial_8c_ab0fd0066c2d4e42328325e2390d511cc}
+
+
+Definition at line 58 of file serial.\-c.
+
+
+
+Referenced by Serial\-\_\-available(), Serial\-\_\-begin(), Serial\-\_\-flush(), and serial\-\_\-interrupt().
+
+\hypertarget{p8_2pinguino_2core_2serial_8c_a64ae21cc10dfc8fdc3416a98a70b56b8}{\index{p8/pinguino/core/serial.\-c@{p8/pinguino/core/serial.\-c}!rx@{rx}}
+\index{rx@{rx}!p8/pinguino/core/serial.c@{p8/pinguino/core/serial.\-c}}
+\subsubsection[{rx}]{\setlength{\rightskip}{0pt plus 5cm}char rx\mbox{[}{\bf R\-X\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H}\mbox{]}}}\label{p8_2pinguino_2core_2serial_8c_a64ae21cc10dfc8fdc3416a98a70b56b8}
+
+
+Definition at line 57 of file serial.\-c.
+
+
+
+Referenced by serial\-\_\-interrupt().
+
+\hypertarget{p8_2pinguino_2core_2serial_8c_a41f462d4c1cad3e0513155d6b792e321}{\index{p8/pinguino/core/serial.\-c@{p8/pinguino/core/serial.\-c}!wpointer@{wpointer}}
+\index{wpointer@{wpointer}!p8/pinguino/core/serial.c@{p8/pinguino/core/serial.\-c}}
+\subsubsection[{wpointer}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char wpointer}}\label{p8_2pinguino_2core_2serial_8c_a41f462d4c1cad3e0513155d6b792e321}
+
+
+Definition at line 58 of file serial.\-c.
+
+
+
+Referenced by Serial\-\_\-available(), Serial\-\_\-begin(), Serial\-\_\-flush(), and serial\-\_\-interrupt().
+

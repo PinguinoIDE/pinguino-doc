@@ -1,0 +1,627 @@
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/stepper.c File Reference}
+\label{p8_2pinguino_2libraries_2stepper_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/stepper.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/stepper.\-c}}
+}
+{\ttfamily \#include $<$system.\-c$>$}\\*
+{\ttfamily \#include $<$digitalp.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$oscillator.\-c$>$}\\*
+{\ttfamily \#include $<$interrupt.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a9c71f5f37f2b7802c45d505e35ca2e3d}{\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-C}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ae23fce6fa0ca0ab3ff792ca6066d64d6}{\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a9c5926bdfced7c44e74e93325fb72e47}{Stepper\-\_\-init} (int, int, int, int, int)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af99d620af1f582d9f964eaff6169580f}{Stepper\-\_\-step\-Motor} (int)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a37b87ac1331cad0542e431b4f804f385}{Stepper\-\_\-set\-Speed} (long)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a62db9dba1cb06e6c336e545a165628d5}{Stepper\-\_\-step} (int)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a69a7a213dd5d8f7ad1e1e638f14feb90}{stepper\-\_\-interrupt} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a2503adc19fda7416b9bfd990001b30a8}{this\-\_\-direction}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ae4cb24bc2647aaf9531a94a1d5e14d1a}{this\-\_\-steps\-\_\-per\-\_\-rev}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a963defafabda57aa16be1e15af46686a}{this\-\_\-number\-\_\-of\-\_\-steps}
+\item 
+volatile int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a7cf49afbff0bb4cf343eb10c87672962}{this\-\_\-current\-\_\-step}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af9a52e5b5bf7b37562c77d24901545d6}{this\-\_\-number\-\_\-of\-\_\-microsteps} =2
+\item 
+volatile int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a5f8e01c2732c76a831d6ad4f2d5f02be}{this\-\_\-steps\-\_\-left} =0
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a4b3086c7f9fa63085d94b639de82b518}{this\-\_\-pin\-\_\-count}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a9f55c6a5105dcba1690995a6adefae3c}{this\-\_\-jump}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad3012bfda0d56a0f487cb46ebe3608f9}{cycles\-\_\-per\-\_\-step}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\-\_\-motor\-\_\-pin\-\_\-\-A}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\-\_\-motor\-\_\-pin\-\_\-\-B}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{this\-\_\-motor\-\_\-pin\-\_\-\-C}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{this\-\_\-motor\-\_\-pin\-\_\-\-D}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af7dd8eb11fbc6ae084a749231452170b}{wave\-\_\-table} \mbox{[}4\mbox{]}
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2stepper_8c_acf75c9f82f840c5ad9f22643cf37c6ea}{steps\-\_\-table} \mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_ae23fce6fa0ca0ab3ff792ca6066d64d6}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-\_\-}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-\_\-}}\label{p8_2pinguino_2libraries_2stepper_8c_ae23fce6fa0ca0ab3ff792ca6066d64d6}
+
+
+Definition at line 101 of file stepper.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a9c71f5f37f2b7802c45d505e35ca2e3d}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-C@{\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-C@{\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-C}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-S\-T\-E\-P\-P\-E\-R\-\_\-\-C}}\label{p8_2pinguino_2libraries_2stepper_8c_a9c71f5f37f2b7802c45d505e35ca2e3d}
+
+
+Definition at line 99 of file stepper.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a9c5926bdfced7c44e74e93325fb72e47}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!Stepper\-\_\-init@{Stepper\-\_\-init}}
+\index{Stepper\-\_\-init@{Stepper\-\_\-init}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{Stepper\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void Stepper\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{int}]{number\-\_\-of\-\_\-steps, }
+\item[{int}]{motor\-\_\-pin\-\_\-\-A, }
+\item[{int}]{motor\-\_\-pin\-\_\-\-B, }
+\item[{int}]{motor\-\_\-pin\-\_\-\-C, }
+\item[{int}]{motor\-\_\-pin\-\_\-\-D}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2stepper_8c_a9c5926bdfced7c44e74e93325fb72e47}
+
+
+ Constructor for two and four-\/pin version \subsubsection*{Sets which wires should control the motor. }
+
+Definition at line 197 of file stepper.\-c.
+
+
+
+References O\-U\-T\-P\-U\-T, pinmode(), this\-\_\-current\-\_\-step, this\-\_\-direction, this\-\_\-jump, this\-\_\-motor\-\_\-pin\-\_\-\-A, this\-\_\-motor\-\_\-pin\-\_\-\-B, this\-\_\-motor\-\_\-pin\-\_\-\-C, this\-\_\-motor\-\_\-pin\-\_\-\-D, this\-\_\-number\-\_\-of\-\_\-microsteps, this\-\_\-number\-\_\-of\-\_\-steps, this\-\_\-pin\-\_\-count, this\-\_\-steps\-\_\-left, and this\-\_\-steps\-\_\-per\-\_\-rev.
+
+
+\begin{DoxyCode}
+198 \{
+199     \textcolor{keywordflow}{if} ((motor\_pin\_C + motor\_pin\_D) == 0)
+200     \{
+201         \textcolor{comment}{// Pinguino pins for the motor control connection:}
+202         \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\_motor\_pin\_A} = motor\_pin\_A;
+203         \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\_motor\_pin\_B} = motor\_pin\_B;
+204 
+205         \textcolor{comment}{// setup the pins on the microcontroller:}
+206         \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\_motor\_pin\_A}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+207         \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\_motor\_pin\_B}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+208 
+209         \textcolor{comment}{// When there are only 2 pins, set the other two to 0:}
+210         \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{this\_motor\_pin\_C} = 0;
+211         \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{this\_motor\_pin\_D} = 0;
+212 
+213         \textcolor{comment}{// pin\_count is used by the stepMotor() method:}
+214         \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a4b3086c7f9fa63085d94b639de82b518}{this\_pin\_count} = 2;
+215     \}
+216 
+217     \textcolor{keywordflow}{else}
+218     \{
+219         \textcolor{comment}{// Pinguino pins for the motor control connection:}
+220         \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\_motor\_pin\_A} = motor\_pin\_A;
+221         \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\_motor\_pin\_B} = motor\_pin\_B;
+222         \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{this\_motor\_pin\_C} = motor\_pin\_C;
+223         \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{this\_motor\_pin\_D} = motor\_pin\_D;
+224 
+225         \textcolor{comment}{// setup the pins on the microcontroller:}
+226         \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\_motor\_pin\_A}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+227         \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\_motor\_pin\_B}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+228         \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{this\_motor\_pin\_C}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+229         \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{this\_motor\_pin\_D}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+230 
+231         \textcolor{comment}{// pin\_count is used by the stepMotor() method:  }
+232         \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a4b3086c7f9fa63085d94b639de82b518}{this\_pin\_count} = 4;  
+233     \}
+234 
+235     \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ae4cb24bc2647aaf9531a94a1d5e14d1a}{this\_steps\_per\_rev} = number\_of\_steps;\textcolor{comment}{// total number of steps for this motor}
+236     \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a7cf49afbff0bb4cf343eb10c87672962}{this\_current\_step} = 0;              \textcolor{comment}{// which step the motor is on}
+237     \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a2503adc19fda7416b9bfd990001b30a8}{this\_direction} = 0;                 \textcolor{comment}{// motor direction}
+238     \textcolor{comment}{//this\_last\_step\_time = 0;          // time stamp in ms of the last step taken}
+239     \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af9a52e5b5bf7b37562c77d24901545d6}{this\_number\_of\_microsteps} = 2;      \textcolor{comment}{// full steps per default}
+240     \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a9f55c6a5105dcba1690995a6adefae3c}{this\_jump} = 1;
+241     \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a5f8e01c2732c76a831d6ad4f2d5f02be}{this\_steps\_left} = 0;
+242     \textcolor{comment}{// change number of steps}
+243     \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a963defafabda57aa16be1e15af46686a}{this\_number\_of\_steps} = \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ae4cb24bc2647aaf9531a94a1d5e14d1a}{this\_steps\_per\_rev} * 
+      \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af9a52e5b5bf7b37562c77d24901545d6}{this\_number\_of\_microsteps};
+244 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a69a7a213dd5d8f7ad1e1e638f14feb90}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!stepper\-\_\-interrupt@{stepper\-\_\-interrupt}}
+\index{stepper\-\_\-interrupt@{stepper\-\_\-interrupt}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{stepper\-\_\-interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void stepper\-\_\-interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2stepper_8c_a69a7a213dd5d8f7ad1e1e638f14feb90}
+
+
+Definition at line 513 of file stepper.\-c.
+
+
+
+References cycles\-\_\-per\-\_\-step, high8, low8, Stepper\-\_\-step\-Motor(), this\-\_\-current\-\_\-step, this\-\_\-direction, this\-\_\-number\-\_\-of\-\_\-steps, and this\-\_\-steps\-\_\-left.
+
+
+
+Referenced by I\-S\-R\-\_\-wrapper\-\_\-vector\-\_\-4().
+
+
+\begin{DoxyCode}
+514 \{
+515     \textcolor{keywordflow}{if} (PIR2bits.TMR3IF)
+516     \{
+517         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a5f8e01c2732c76a831d6ad4f2d5f02be}{this\_steps\_left} > 0)
+518         \{
+519             \textcolor{comment}{// increment the step number,}
+520             \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a2503adc19fda7416b9bfd990001b30a8}{this\_direction} == 1)
+521             \{
+522                 \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a7cf49afbff0bb4cf343eb10c87672962}{this\_current\_step} += 1;
+523                 \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a7cf49afbff0bb4cf343eb10c87672962}{this\_current\_step} == \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a963defafabda57aa16be1e15af46686a}{this\_number\_of\_steps})
+524                     \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a7cf49afbff0bb4cf343eb10c87672962}{this\_current\_step} = 0;
+525             \} 
+526 
+527             \textcolor{comment}{// decrement the step number,}
+528             \textcolor{keywordflow}{else}
+529             \{ 
+530                 \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a7cf49afbff0bb4cf343eb10c87672962}{this\_current\_step} == 0)
+531                     \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a7cf49afbff0bb4cf343eb10c87672962}{this\_current\_step} = \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a963defafabda57aa16be1e15af46686a}{this\_number\_of\_steps};
+532                 \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a7cf49afbff0bb4cf343eb10c87672962}{this\_current\_step} -= 1;
+533             \}
+534             
+535             \textcolor{comment}{// decrement the steps left:}
+536             \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a5f8e01c2732c76a831d6ad4f2d5f02be}{this\_steps\_left} -= 1;
+537 
+538             \textcolor{comment}{// step the motor}
+539             \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af99d620af1f582d9f964eaff6169580f}{Stepper\_stepMotor}(\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a7cf49afbff0bb4cf343eb10c87672962}{this\_current\_step});
+540         \}
+541 
+542         \textcolor{comment}{// load Timer again}
+543         TMR3H = \hyperlink{p8_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}{high8}(0xFFFF - \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad3012bfda0d56a0f487cb46ebe3608f9}{cycles\_per\_step});
+544         TMR3L =  \hyperlink{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{low8}(0xFFFF - \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad3012bfda0d56a0f487cb46ebe3608f9}{cycles\_per\_step});
+545         PIR2bits.TMR3IF = 0;
+546     \}
+547 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a37b87ac1331cad0542e431b4f804f385}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!Stepper\-\_\-set\-Speed@{Stepper\-\_\-set\-Speed}}
+\index{Stepper\-\_\-set\-Speed@{Stepper\-\_\-set\-Speed}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{Stepper\-\_\-set\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Stepper\-\_\-set\-Speed (
+\begin{DoxyParamCaption}
+\item[{long}]{revolution\-Per\-Minute}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2stepper_8c_a37b87ac1331cad0542e431b4f804f385}
+
+
+ Sets microsteps per full step full steps = 1 half steps = 2 \subsubsection*{microsteps = 4, 8, 16 or 32 per full step. }
+
+\subsubsection*{Sets the speed in revs per minute }
+
+Definition at line 310 of file stepper.\-c.
+
+
+
+References cycles\-\_\-per\-\_\-step, high8, low8, System\-\_\-get\-Peripheral\-Frequency(), and this\-\_\-number\-\_\-of\-\_\-steps.
+
+
+\begin{DoxyCode}
+311 \{
+312     \textcolor{comment}{//int delay\_ms\_per\_move;              // delay for the whole move}
+313     \textcolor{keywordtype}{int} delay\_us\_per\_step;              \textcolor{comment}{// delay between 2 steps}
+314     \textcolor{keywordtype}{int} prescaler = 0;                  \textcolor{comment}{// 0 = 1:1 default prescale value}
+315                                         \textcolor{comment}{// 1 = 1:8 prescale value}
+316                                         \textcolor{comment}{// 2 = 1:64 prescale value}
+317                                         \textcolor{comment}{// 3 = 1:256 prescale value}
+318 
+319     \textcolor{comment}{// delay between 2 steps (1 mn = 60 * 1000 * 1000 us)}
+320     delay\_us\_per\_step = 60 * 1000 * 1000 / revolutionPerMinute / 
+      \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a963defafabda57aa16be1e15af46686a}{this\_number\_of\_steps};
+321     \textcolor{comment}{//delay\_ms\_per\_move = delay\_us\_per\_step * steps\_to\_move / 1000;}
+322     \textcolor{comment}{// number of CPU cycles between 2 steps}
+323     \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad3012bfda0d56a0f487cb46ebe3608f9}{cycles\_per\_step}   = delay\_us\_per\_step * ( 
+      \hyperlink{oscillator_8c_a3eab518123550469cd841a0b71ee294d}{System\_getPeripheralFrequency}() / 1000 / 1000 );
+324     
+325     \textcolor{keywordflow}{while} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad3012bfda0d56a0f487cb46ebe3608f9}{cycles\_per\_step} > 0xFFFF)
+326     \{
+327         prescaler += 1;
+328         \textcolor{keywordflow}{if} (prescaler > 2)
+329         \{
+330             prescaler = 3;
+331             \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad3012bfda0d56a0f487cb46ebe3608f9}{cycles\_per\_step} /= 4;
+332         \}
+333         \textcolor{keywordflow}{else}
+334         \{
+335             \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad3012bfda0d56a0f487cb46ebe3608f9}{cycles\_per\_step} /= 8;
+336         \}
+337     \}
+338 
+339     \textcolor{comment}{// Timer3 config.}
+340     INTCONbits.GIEH = 0;    \textcolor{comment}{// enable global HP interrupts}
+341     INTCONbits.GIEL = 0;    \textcolor{comment}{// enable global LP interrupts}
+342     TMR3H = \hyperlink{p8_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}{high8}(0xFFFF - \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad3012bfda0d56a0f487cb46ebe3608f9}{cycles\_per\_step});
+343     TMR3L =  \hyperlink{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{low8}(0xFFFF - \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad3012bfda0d56a0f487cb46ebe3608f9}{cycles\_per\_step});
+344     T3CON = prescaler << 4; \textcolor{comment}{// prescaler, internal peripheral clock}
+345     IPR2bits.TMR3IP = 1;    \textcolor{comment}{// interrupt has high priority}
+346     PIR2bits.TMR3IF = 0;    \textcolor{comment}{// reset interrupt flag}
+347     T3CONbits.TMR3ON = 1;   \textcolor{comment}{// Timer3 ON;}
+348     PIE2bits.TMR3IE = 1;    \textcolor{comment}{// enable interrupt }
+349     INTCONbits.GIEH = 1;    \textcolor{comment}{// enable global HP interrupts}
+350     INTCONbits.GIEL = 1;    \textcolor{comment}{// enable global LP interrupts}
+351 
+352     \textcolor{comment}{//  return time (ms) to revolve the whole steps to move}
+353     \textcolor{comment}{//return ( delay\_ms\_per\_move );}
+354 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a62db9dba1cb06e6c336e545a165628d5}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!Stepper\-\_\-step@{Stepper\-\_\-step}}
+\index{Stepper\-\_\-step@{Stepper\-\_\-step}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{Stepper\-\_\-step}]{\setlength{\rightskip}{0pt plus 5cm}void Stepper\-\_\-step (
+\begin{DoxyParamCaption}
+\item[{int}]{steps\-\_\-to\-\_\-move}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2stepper_8c_a62db9dba1cb06e6c336e545a165628d5}
+
+
+ Moves the motor of steps\-\_\-to\-\_\-move steps. \subsubsection*{If the number is negative, the motor moves in the reverse direction. }
+
+Definition at line 362 of file stepper.\-c.
+
+
+
+References this\-\_\-direction, and this\-\_\-steps\-\_\-left.
+
+
+\begin{DoxyCode}
+363 \{
+364     \textcolor{comment}{// if previous command is not finished}
+365     \textcolor{keywordflow}{while} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a5f8e01c2732c76a831d6ad4f2d5f02be}{this\_steps\_left} > 0);
+366     \textcolor{comment}{//this\_steps\_left += steps\_to\_move;}
+367 
+368     \textcolor{comment}{// determine direction based on whether steps\_to\_move is + or -:}
+369     \textcolor{keywordflow}{if} (steps\_to\_move > 0) \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a2503adc19fda7416b9bfd990001b30a8}{this\_direction} = 1;
+370     \textcolor{keywordflow}{if} (steps\_to\_move < 0) \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a2503adc19fda7416b9bfd990001b30a8}{this\_direction} = 0;
+371 
+372     \textcolor{comment}{//steps\_to\_move = this\_number\_of\_steps;}
+373     \textcolor{comment}{//steps\_to\_move *= this\_number\_of\_microsteps;}
+374 
+375     \textcolor{comment}{// how many steps to take ?}
+376     \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a5f8e01c2732c76a831d6ad4f2d5f02be}{this\_steps\_left} = steps\_to\_move > 0 ? steps\_to\_move : -steps\_to\_move;
+377 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_af99d620af1f582d9f964eaff6169580f}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!Stepper\-\_\-step\-Motor@{Stepper\-\_\-step\-Motor}}
+\index{Stepper\-\_\-step\-Motor@{Stepper\-\_\-step\-Motor}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{Stepper\-\_\-step\-Motor}]{\setlength{\rightskip}{0pt plus 5cm}void Stepper\-\_\-step\-Motor (
+\begin{DoxyParamCaption}
+\item[{int}]{this\-Step}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2stepper_8c_af99d620af1f582d9f964eaff6169580f}
+
+
+ Moves the motor forward or backwards. \subsubsection*{Private function. }In practice, the current in one winding is kept constant over half of the complete step and current in the other winding is varied as a function of sinθ to maximize the motor torque.
+
+Definition at line 384 of file stepper.\-c.
+
+
+
+References analogwrite(), digitalwrite(), I\-N\-D\-E\-X\-\_\-\-M\-A\-S\-K, sine\-\_\-table, steps\-\_\-table, this\-\_\-jump, this\-\_\-motor\-\_\-pin\-\_\-\-A, this\-\_\-motor\-\_\-pin\-\_\-\-B, this\-\_\-motor\-\_\-pin\-\_\-\-C, this\-\_\-motor\-\_\-pin\-\_\-\-D, this\-\_\-number\-\_\-of\-\_\-microsteps, this\-\_\-pin\-\_\-count, and wave\-\_\-table.
+
+
+
+Referenced by stepper\-\_\-interrupt().
+
+
+\begin{DoxyCode}
+385 \{
+386     \textcolor{keywordtype}{int} index;
+387     \textcolor{keywordtype}{int} current\_microstep;
+388     \textcolor{keywordtype}{int} t, inc, dec;
+389 
+390     \textcolor{comment}{// wave-step}
+391     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_af9a52e5b5bf7b37562c77d24901545d6}{this\_number\_of\_microsteps} == 0)
+392     \{
+393         \textcolor{comment}{// step the motor to step number 0, 1, 2, or 3:}
+394         t = \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af7dd8eb11fbc6ae084a749231452170b}{wave\_table} [ (thisStep % 4) ];
+395 
+396         \textcolor{comment}{// Winding A}
+397         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\_motor\_pin\_A}, t >> 0 & 1); \textcolor{comment}{// bit 0}
+398         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\_motor\_pin\_B}, t >> 1 & 1); \textcolor{comment}{// bit 1}
+399 
+400         \textcolor{comment}{// Winding B}
+401         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a4b3086c7f9fa63085d94b639de82b518}{this\_pin\_count} == 4)
+402         \{
+403             \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{this\_motor\_pin\_C}, t >> 2 & 1); \textcolor{comment}{// bit 2}
+404             \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{this\_motor\_pin\_D}, t >> 3 & 1); \textcolor{comment}{// bit 3}
+405         \}
+406     \}
+407 
+408     \textcolor{comment}{// full-step}
+409     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_af9a52e5b5bf7b37562c77d24901545d6}{this\_number\_of\_microsteps} == 1)
+410     \{
+411         \textcolor{comment}{// step the motor to step number 0, 1, 2, or 3:}
+412         t = \hyperlink{p8_2pinguino_2libraries_2stepper_8c_acf75c9f82f840c5ad9f22643cf37c6ea}{steps\_table} [ (thisStep % 4) * 2 ];
+413 
+414         \textcolor{comment}{// Winding A}
+415         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\_motor\_pin\_A}, t >> 0 & 1); \textcolor{comment}{// bit 0}
+416         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\_motor\_pin\_B}, t >> 1 & 1); \textcolor{comment}{// bit 1}
+417 
+418         \textcolor{comment}{// Winding B}
+419         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a4b3086c7f9fa63085d94b639de82b518}{this\_pin\_count} == 4)
+420         \{
+421             \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{this\_motor\_pin\_C}, t >> 2 & 1); \textcolor{comment}{// bit 2}
+422             \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{this\_motor\_pin\_D}, t >> 3 & 1); \textcolor{comment}{// bit 3}
+423         \}
+424     \}
+425 
+426     \textcolor{comment}{// half-step}
+427     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_af9a52e5b5bf7b37562c77d24901545d6}{this\_number\_of\_microsteps} == 2)
+428     \{
+429         \textcolor{comment}{// step the motor to step number 0, 1, 2, 3, 4, 5, 6 or 7}
+430         t = \hyperlink{p8_2pinguino_2libraries_2stepper_8c_acf75c9f82f840c5ad9f22643cf37c6ea}{steps\_table} [ thisStep % 8 ];
+431 
+432         \textcolor{comment}{// Winding A}
+433         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\_motor\_pin\_A}, t >> 0 & 1); \textcolor{comment}{// bit 0}
+434         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\_motor\_pin\_B}, t >> 1 & 1); \textcolor{comment}{// bit 1}
+435 
+436         \textcolor{comment}{// Winding B}
+437         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_a4b3086c7f9fa63085d94b639de82b518}{this\_pin\_count} == 4)
+438         \{
+439             \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{this\_motor\_pin\_C}, t >> 2 & 1); \textcolor{comment}{// bit 2}
+440             \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{this\_motor\_pin\_D}, t >> 3 & 1); \textcolor{comment}{// bit 3}
+441         \}
+442     \}
+443     
+444     \textcolor{comment}{// microstepping (4, 8, 16 or 32 microsteps / step)}
+445 \textcolor{preprocessor}{    #ifdef \_\_MICROSTEPPING\_\_}
+446 \textcolor{preprocessor}{}    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2stepper_8c_af9a52e5b5bf7b37562c77d24901545d6}{this\_number\_of\_microsteps} > 2)
+447     \{
+455         \textcolor{comment}{// from 0 to total number of microsteps - 1}
+456         current\_microstep = ( thisStep % \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af9a52e5b5bf7b37562c77d24901545d6}{this\_number\_of\_microsteps} );\textcolor{comment}{// + 1;}
+457         
+458         \textcolor{comment}{// table index is function of total microsteps number}
+459         \textcolor{comment}{// this\_jump = (TABLE\_DEPTH / this\_number\_of\_microsteps);}
+460         index = current\_microstep * \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a9f55c6a5105dcba1690995a6adefae3c}{this\_jump};
+461 
+462         \textcolor{comment}{// from 0 to 90 degrees (from 0 to 1023)}
+463         \textcolor{comment}{// increase current in next active coil}
+464         inc = \hyperlink{p32_2include_2pinguino_2libraries_2stepper_8c_aa9ad58d9035d82f622fd22e6159f74bf}{sine\_table}[ index & \hyperlink{p32_2include_2pinguino_2libraries_2stepper_8c_a29f839928f4752b73c8858d6dbb55294}{INDEX\_MASK} ]; 
+465 
+466         \textcolor{comment}{// from 90 to 0 degrees (from 1023 to 0)}
+467         \textcolor{comment}{// decrease current in active coil}
+468         dec = \hyperlink{p32_2include_2pinguino_2libraries_2stepper_8c_aa9ad58d9035d82f622fd22e6159f74bf}{sine\_table}[ \hyperlink{p32_2include_2pinguino_2libraries_2stepper_8c_a29f839928f4752b73c8858d6dbb55294}{INDEX\_MASK} - (index & \hyperlink{p32_2include_2pinguino_2libraries_2stepper_8c_a29f839928f4752b73c8858d6dbb55294}{INDEX\_MASK}) ];
+469 
+470         \textcolor{keywordflow}{switch} ( (thisStep / \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af9a52e5b5bf7b37562c77d24901545d6}{this\_number\_of\_microsteps}) % 4 )
+471         \{
+472             \textcolor{keywordflow}{case} 0: \textcolor{comment}{// from A to C}
+473                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\_motor\_pin\_A}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) dec );
+474                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\_motor\_pin\_B}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) 0 );
+475                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{this\_motor\_pin\_C}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) inc );
+476                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{this\_motor\_pin\_D}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) 0 );
+477                 \textcolor{keywordflow}{break};
+478 
+479             \textcolor{keywordflow}{case} 1: \textcolor{comment}{// from C to B}
+480                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\_motor\_pin\_A}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) 0 );
+481                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\_motor\_pin\_B}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) inc );
+482                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{this\_motor\_pin\_C}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) dec );
+483                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{this\_motor\_pin\_D}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) 0 );
+484                 \textcolor{keywordflow}{break};
+485 
+486             \textcolor{keywordflow}{case} 2: \textcolor{comment}{// from B to D}
+487                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\_motor\_pin\_A}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) 0 );
+488                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\_motor\_pin\_B}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) dec );
+489                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{this\_motor\_pin\_C}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) 0 );
+490                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{this\_motor\_pin\_D}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) inc );
+491                 \textcolor{keywordflow}{break};
+492 
+493             \textcolor{keywordflow}{case} 3: \textcolor{comment}{// from D to A}
+494                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{this\_motor\_pin\_A}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) inc );
+495                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{this\_motor\_pin\_B}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) 0 );
+496                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{this\_motor\_pin\_C}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) 0 );
+497                 \hyperlink{p8_2pinguino_2core_2analog_8c_a14bff5a5e8a928b7fba5e30931f65e56}{analogwrite}( \hyperlink{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{this\_motor\_pin\_D}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}) dec );
+498                 \textcolor{keywordflow}{break};
+499         \}
+500     \}
+501 \textcolor{preprocessor}{    #endif}
+502 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_ad3012bfda0d56a0f487cb46ebe3608f9}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!cycles\-\_\-per\-\_\-step@{cycles\-\_\-per\-\_\-step}}
+\index{cycles\-\_\-per\-\_\-step@{cycles\-\_\-per\-\_\-step}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{cycles\-\_\-per\-\_\-step}]{\setlength{\rightskip}{0pt plus 5cm}int cycles\-\_\-per\-\_\-step}}\label{p8_2pinguino_2libraries_2stepper_8c_ad3012bfda0d56a0f487cb46ebe3608f9}
+
+
+Definition at line 139 of file stepper.\-c.
+
+
+
+Referenced by stepper\-\_\-interrupt(), Stepper\-\_\-set\-Speed(), and Stepper\-\_\-step().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_acf75c9f82f840c5ad9f22643cf37c6ea}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!steps\-\_\-table@{steps\-\_\-table}}
+\index{steps\-\_\-table@{steps\-\_\-table}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{steps\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}int steps\-\_\-table\mbox{[}8\mbox{]}}}\label{p8_2pinguino_2libraries_2stepper_8c_acf75c9f82f840c5ad9f22643cf37c6ea}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+    0b1010, 0b0010, 0b0110, 0b0100, 0b0101, 0b0001, 0b1001, 0b1000
+    \}
+\end{DoxyCode}
+
+
+Definition at line 152 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-step\-Motor().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a7cf49afbff0bb4cf343eb10c87672962}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-current\-\_\-step@{this\-\_\-current\-\_\-step}}
+\index{this\-\_\-current\-\_\-step@{this\-\_\-current\-\_\-step}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-current\-\_\-step}]{\setlength{\rightskip}{0pt plus 5cm}volatile int this\-\_\-current\-\_\-step}}\label{p8_2pinguino_2libraries_2stepper_8c_a7cf49afbff0bb4cf343eb10c87672962}
+
+
+Definition at line 133 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), and stepper\-\_\-interrupt().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a2503adc19fda7416b9bfd990001b30a8}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-direction@{this\-\_\-direction}}
+\index{this\-\_\-direction@{this\-\_\-direction}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-direction}]{\setlength{\rightskip}{0pt plus 5cm}int this\-\_\-direction}}\label{p8_2pinguino_2libraries_2stepper_8c_a2503adc19fda7416b9bfd990001b30a8}
+
+
+Definition at line 130 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), stepper\-\_\-interrupt(), and Stepper\-\_\-step().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a9f55c6a5105dcba1690995a6adefae3c}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-jump@{this\-\_\-jump}}
+\index{this\-\_\-jump@{this\-\_\-jump}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-jump}]{\setlength{\rightskip}{0pt plus 5cm}int this\-\_\-jump}}\label{p8_2pinguino_2libraries_2stepper_8c_a9f55c6a5105dcba1690995a6adefae3c}
+
+
+Definition at line 137 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), Stepper\-\_\-step(), and Stepper\-\_\-step\-Motor().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-motor\-\_\-pin\-\_\-\-A@{this\-\_\-motor\-\_\-pin\-\_\-\-A}}
+\index{this\-\_\-motor\-\_\-pin\-\_\-\-A@{this\-\_\-motor\-\_\-pin\-\_\-\-A}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-motor\-\_\-pin\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}int this\-\_\-motor\-\_\-pin\-\_\-\-A}}\label{p8_2pinguino_2libraries_2stepper_8c_a942cb3da0b3e70dbe6da2a95028940e7}
+
+
+Definition at line 142 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), and Stepper\-\_\-step\-Motor().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-motor\-\_\-pin\-\_\-\-B@{this\-\_\-motor\-\_\-pin\-\_\-\-B}}
+\index{this\-\_\-motor\-\_\-pin\-\_\-\-B@{this\-\_\-motor\-\_\-pin\-\_\-\-B}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-motor\-\_\-pin\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}int this\-\_\-motor\-\_\-pin\-\_\-\-B}}\label{p8_2pinguino_2libraries_2stepper_8c_a50a7b6fab522e70191412cf35930fea0}
+
+
+Definition at line 143 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), and Stepper\-\_\-step\-Motor().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-motor\-\_\-pin\-\_\-\-C@{this\-\_\-motor\-\_\-pin\-\_\-\-C}}
+\index{this\-\_\-motor\-\_\-pin\-\_\-\-C@{this\-\_\-motor\-\_\-pin\-\_\-\-C}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-motor\-\_\-pin\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}int this\-\_\-motor\-\_\-pin\-\_\-\-C}}\label{p8_2pinguino_2libraries_2stepper_8c_af688145938d38e7d9bede0b4650eeae8}
+
+
+Definition at line 144 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), and Stepper\-\_\-step\-Motor().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-motor\-\_\-pin\-\_\-\-D@{this\-\_\-motor\-\_\-pin\-\_\-\-D}}
+\index{this\-\_\-motor\-\_\-pin\-\_\-\-D@{this\-\_\-motor\-\_\-pin\-\_\-\-D}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-motor\-\_\-pin\-\_\-\-D}]{\setlength{\rightskip}{0pt plus 5cm}int this\-\_\-motor\-\_\-pin\-\_\-\-D}}\label{p8_2pinguino_2libraries_2stepper_8c_ad8b199f456f95b694ae0d5ecebd6d3d3}
+
+
+Definition at line 145 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), and Stepper\-\_\-step\-Motor().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_af9a52e5b5bf7b37562c77d24901545d6}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-number\-\_\-of\-\_\-microsteps@{this\-\_\-number\-\_\-of\-\_\-microsteps}}
+\index{this\-\_\-number\-\_\-of\-\_\-microsteps@{this\-\_\-number\-\_\-of\-\_\-microsteps}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-number\-\_\-of\-\_\-microsteps}]{\setlength{\rightskip}{0pt plus 5cm}int this\-\_\-number\-\_\-of\-\_\-microsteps =2}}\label{p8_2pinguino_2libraries_2stepper_8c_af9a52e5b5bf7b37562c77d24901545d6}
+
+
+Definition at line 134 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), Stepper\-\_\-step(), and Stepper\-\_\-step\-Motor().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a963defafabda57aa16be1e15af46686a}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-number\-\_\-of\-\_\-steps@{this\-\_\-number\-\_\-of\-\_\-steps}}
+\index{this\-\_\-number\-\_\-of\-\_\-steps@{this\-\_\-number\-\_\-of\-\_\-steps}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-number\-\_\-of\-\_\-steps}]{\setlength{\rightskip}{0pt plus 5cm}int this\-\_\-number\-\_\-of\-\_\-steps}}\label{p8_2pinguino_2libraries_2stepper_8c_a963defafabda57aa16be1e15af46686a}
+
+
+Definition at line 132 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), stepper\-\_\-interrupt(), Stepper\-\_\-set\-Speed(), and Stepper\-\_\-step().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a4b3086c7f9fa63085d94b639de82b518}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-pin\-\_\-count@{this\-\_\-pin\-\_\-count}}
+\index{this\-\_\-pin\-\_\-count@{this\-\_\-pin\-\_\-count}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-pin\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}int this\-\_\-pin\-\_\-count}}\label{p8_2pinguino_2libraries_2stepper_8c_a4b3086c7f9fa63085d94b639de82b518}
+
+
+Definition at line 136 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), and Stepper\-\_\-step\-Motor().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_a5f8e01c2732c76a831d6ad4f2d5f02be}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-steps\-\_\-left@{this\-\_\-steps\-\_\-left}}
+\index{this\-\_\-steps\-\_\-left@{this\-\_\-steps\-\_\-left}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-steps\-\_\-left}]{\setlength{\rightskip}{0pt plus 5cm}volatile int this\-\_\-steps\-\_\-left =0}}\label{p8_2pinguino_2libraries_2stepper_8c_a5f8e01c2732c76a831d6ad4f2d5f02be}
+
+
+Definition at line 135 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), stepper\-\_\-interrupt(), and Stepper\-\_\-step().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_ae4cb24bc2647aaf9531a94a1d5e14d1a}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!this\-\_\-steps\-\_\-per\-\_\-rev@{this\-\_\-steps\-\_\-per\-\_\-rev}}
+\index{this\-\_\-steps\-\_\-per\-\_\-rev@{this\-\_\-steps\-\_\-per\-\_\-rev}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{this\-\_\-steps\-\_\-per\-\_\-rev}]{\setlength{\rightskip}{0pt plus 5cm}int this\-\_\-steps\-\_\-per\-\_\-rev}}\label{p8_2pinguino_2libraries_2stepper_8c_ae4cb24bc2647aaf9531a94a1d5e14d1a}
+
+
+Definition at line 131 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-init(), and Stepper\-\_\-step().
+
+\hypertarget{p8_2pinguino_2libraries_2stepper_8c_af7dd8eb11fbc6ae084a749231452170b}{\index{p8/pinguino/libraries/stepper.\-c@{p8/pinguino/libraries/stepper.\-c}!wave\-\_\-table@{wave\-\_\-table}}
+\index{wave\-\_\-table@{wave\-\_\-table}!p8/pinguino/libraries/stepper.c@{p8/pinguino/libraries/stepper.\-c}}
+\subsubsection[{wave\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}int wave\-\_\-table\mbox{[}4\mbox{]}}}\label{p8_2pinguino_2libraries_2stepper_8c_af7dd8eb11fbc6ae084a749231452170b}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+    0b1000, 0b0010, 0b0100, 0b0001
+    \}
+\end{DoxyCode}
+
+
+Definition at line 148 of file stepper.\-c.
+
+
+
+Referenced by Stepper\-\_\-step\-Motor().
+

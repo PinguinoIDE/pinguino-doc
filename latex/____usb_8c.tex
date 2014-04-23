@@ -1,0 +1,80 @@
+\hypertarget{____usb_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-\_\-\-\_\-usb.c File Reference}
+\label{____usb_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-\_\-\-\_\-usb.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-\_\-\-\_\-usb.\-c}}
+}
+{\ttfamily \#include $<$usb/usb\-\_\-cdc.\-h$>$}\\*
+{\ttfamily \#include $<$usb/usb\-\_\-config.\-c$>$}\\*
+{\ttfamily \#include $<$usb/pic\-U\-S\-B.\-c$>$}\\*
+{\ttfamily \#include $<$usb/usb\-\_\-cdc.\-c$>$}\\*
+{\ttfamily \#include $<$delayms.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{____usb_8c_a4607ffda9dac39b25d25cd69c5a755f8}{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}
+\item 
+\#define \hyperlink{____usb_8c_aad3b551dbffd0335af717e740fa8abad}{U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{____usb_8c_a0967472d9f2dfc7be435c5030c44ad31}{init\-\_\-\-C\-D\-C} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{____usb_8c_a4607ffda9dac39b25d25cd69c5a755f8}{\index{\-\_\-\-\_\-usb.\-c@{\-\_\-\-\_\-usb.\-c}!\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C@{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}}
+\index{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C@{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}!__usb.c@{\-\_\-\-\_\-usb.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}}\label{____usb_8c_a4607ffda9dac39b25d25cd69c5a755f8}
+
+
+Definition at line 5 of file \-\_\-\-\_\-usb.\-c.
+
+\hypertarget{____usb_8c_aad3b551dbffd0335af717e740fa8abad}{\index{\-\_\-\-\_\-usb.\-c@{\-\_\-\-\_\-usb.\-c}!U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C@{U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C}}
+\index{U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C@{U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C}!__usb.c@{\-\_\-\-\_\-usb.\-c}}
+\subsubsection[{U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C}}\label{____usb_8c_aad3b551dbffd0335af717e740fa8abad}
+
+
+Definition at line 7 of file \-\_\-\-\_\-usb.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{____usb_8c_a0967472d9f2dfc7be435c5030c44ad31}{\index{\-\_\-\-\_\-usb.\-c@{\-\_\-\-\_\-usb.\-c}!init\-\_\-\-C\-D\-C@{init\-\_\-\-C\-D\-C}}
+\index{init\-\_\-\-C\-D\-C@{init\-\_\-\-C\-D\-C}!__usb.c@{\-\_\-\-\_\-usb.\-c}}
+\subsubsection[{init\-\_\-\-C\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-\-C\-D\-C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{____usb_8c_a0967472d9f2dfc7be435c5030c44ad31}
+
+
+Definition at line 15 of file \-\_\-\-\_\-usb.\-c.
+
+
+
+References C\-O\-N\-F\-I\-G\-U\-R\-E\-D, current\-Configuration, Delayms(), D\-E\-T\-A\-C\-H\-E\-D, device\-State, Enable\-U\-S\-B\-Module(), Process\-U\-S\-B\-Transactions(), and remote\-Wakeup.
+
+
+\begin{DoxyCode}
+16 \{
+17     INTCON=0;
+18     INTCON2=0xC0;
+19     UCON=0;
+20     UCFG=0;
+21     UEP0=0;UEP1=0;UEP2=0;UEP3=0;UEP4=0;UEP5=0;
+22     UEP6=0;UEP7=0;UEP8=0;UEP9=0;UEP10=0;UEP11=0;
+23     UEP12=0;UEP13=0;UEP14=0;UEP15=0;
+24     \textcolor{comment}{// and wait 5 seconds}
+25     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(2000);
+26     \textcolor{comment}{// Initialize USB for CDC}
+27     UCFG = 0x14;                \textcolor{comment}{// Enable pullup resistors; full speed mode}
+28     \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} = \hyperlink{pic_u_s_b_8h_a7dead3b2c769570340a638dbc6c07339}{DETACHED};
+29     \hyperlink{pic_u_s_b_8c_a8f6657264342ba68ae2efa649f018cf9}{remoteWakeup} = 0x00;
+30     \hyperlink{pic_u_s_b_8c_a1c07dc041da5fe22f47633438dc0c0ac}{currentConfiguration} = 0x00;
+31     \textcolor{comment}{// And enable USB module}
+32     \textcolor{keywordflow}{while}(\hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} != \hyperlink{pic_u_s_b_8h_a514476189fbaf15c716d5e846955d2b8}{CONFIGURED})
+33     \{
+34       \hyperlink{pic_u_s_b_8c_a7ce360ecb075203865186f441fe72574}{EnableUSBModule}();
+35       \hyperlink{pic_u_s_b_8c_a72d2fa72a0db42721bb8d9b9de26b431}{ProcessUSBTransactions}();
+36     \}
+37 \}
+\end{DoxyCode}

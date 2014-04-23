@@ -1,0 +1,542 @@
+\hypertarget{p32_2include_2pinguino_2core_2pwm_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pwm.c File Reference}
+\label{p32_2include_2pinguino_2core_2pwm_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pwm.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pwm.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$system.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_af290a5db9ad64217a6f56888aacdbf5b}{\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_aadae3fe77e36cbf9643a22eeb99fb01e}{P\-W\-M\-\_\-init} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a19de8aa2bf36d099c6e32709ce6556c5}{analogwrite} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} setpoint)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a19ce387f37babe4ae7c25b09ccda4567}{P\-W\-M\-\_\-set\-\_\-frequency} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} freq)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a6b14eb0b3fbca814e813957dbe97edf8}{P\-W\-M\-\_\-set\-\_\-dutycycle} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} duty)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_aa77aed30a6d400b39562621889701093}{P\-W\-M\-\_\-set\-\_\-percent\-\_\-dutycycle} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} percent)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\-\_\-pr3\-\_\-plus1} = 0xffff + 1
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}{\-\_\-t3con}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2pwm_8c_af290a5db9ad64217a6f56888aacdbf5b}{\index{p32/include/pinguino/core/pwm.\-c@{p32/include/pinguino/core/pwm.\-c}!\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-@{\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-@{\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-}!p32/include/pinguino/core/pwm.c@{p32/include/pinguino/core/pwm.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-P\-W\-M\-\_\-\-\_\-}}\label{p32_2include_2pinguino_2core_2pwm_8c_af290a5db9ad64217a6f56888aacdbf5b}
+
+
+Definition at line 34 of file pwm.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2pwm_8c_a19de8aa2bf36d099c6e32709ce6556c5}{\index{p32/include/pinguino/core/pwm.\-c@{p32/include/pinguino/core/pwm.\-c}!analogwrite@{analogwrite}}
+\index{analogwrite@{analogwrite}!p32/include/pinguino/core/pwm.c@{p32/include/pinguino/core/pwm.\-c}}
+\subsubsection[{analogwrite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} analogwrite (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u16}}]{setpoint}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2pwm_8c_a19de8aa2bf36d099c6e32709ce6556c5}
+
+
+Definition at line 66 of file pwm.\-c.
+
+
+
+References O\-U\-T\-P\-U\-T, and pinmode().
+
+
+
+Referenced by P\-W\-M\-\_\-set\-\_\-dutycycle().
+
+
+\begin{DoxyCode}
+67 \{
+68 \textcolor{preprocessor}{#if defined(PIC32\_PINGUINO\_220)}
+69 \textcolor{preprocessor}{}    \textcolor{keywordflow}{switch} (pin)
+70     \{
+71         \textcolor{keywordflow}{case} 2:
+72             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(2, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+73             OC3CON=0;       \textcolor{comment}{// PWM Off}
+74             OC3R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+75             OC3RS=setpoint;
+76             OC3CON=0x000E;
+77             OC3CON|=0x8000; \textcolor{comment}{// PWM On}
+78             \textcolor{keywordflow}{return} 1;
+79         \textcolor{keywordflow}{case} 3:
+80             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(3, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+81             OC4CON=0;       \textcolor{comment}{// PWM Off}
+82             OC4R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+83             OC4RS=setpoint;
+84             OC4CON=0x000E;
+85             OC4CON|=0x8000; \textcolor{comment}{// PWM On}
+86             \textcolor{keywordflow}{return} 1;
+87         \textcolor{keywordflow}{case} 11:
+88             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(11, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+89             OC2CON=0;       \textcolor{comment}{// PWM Off}
+90             OC2R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+91             OC2RS=setpoint;
+92             OC2CON=0x000E;
+93             OC2CON|=0x8000; \textcolor{comment}{// PWM On}
+94             \textcolor{keywordflow}{return} 1;
+95         \textcolor{keywordflow}{case} 12:
+96             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(12, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+97             OC5CON=0;       \textcolor{comment}{// PWM Off}
+98             OC5R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+99             OC5RS=setpoint;
+100             OC5CON=0x000E;
+101             OC5CON|=0x8000; \textcolor{comment}{// PWM On}
+102             \textcolor{keywordflow}{return} 1;
+103         \textcolor{keywordflow}{case} 13:
+104             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(13, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+105             OC1CON=0;       \textcolor{comment}{// PWM Off}
+106             OC1R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+107             OC1RS=setpoint;
+108             OC1CON=0x000E;
+109             OC1CON|=0x8000; \textcolor{comment}{// PWM On}
+110             \textcolor{keywordflow}{return} 1;
+111         \textcolor{keywordflow}{default}:
+112             \textcolor{keywordflow}{return} 0;
+113     \}
+114 \textcolor{preprocessor}{#endif}
+115 \textcolor{preprocessor}{}
+116 \textcolor{preprocessor}{#if defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+117 \textcolor{preprocessor}{}    \textcolor{keywordflow}{switch} (pin)
+118     \{
+119         \textcolor{keywordflow}{case} 1:\textcolor{comment}{// PWM4}
+120             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(1, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+121             OC3CON=0;       \textcolor{comment}{// PWM Off}
+122             OC3R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+123             OC3RS=setpoint;
+124             OC3CON=0x000E;
+125             OC3CON|=0x8000; \textcolor{comment}{// PWM On}
+126             \textcolor{keywordflow}{return} 1;
+127         \textcolor{keywordflow}{case} 2:\textcolor{comment}{// PWM3}
+128             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(2, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+129             OC4CON=0;       \textcolor{comment}{// PWM Off}
+130             OC4R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+131             OC4RS=setpoint;
+132             OC4CON=0x000E;
+133             OC4CON|=0x8000; \textcolor{comment}{// PWM On}
+134             \textcolor{keywordflow}{return} 1;
+135         \textcolor{keywordflow}{case} 6:\textcolor{comment}{// PWM2}
+136             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(6, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+137             OC2CON=0;       \textcolor{comment}{// PWM Off}
+138             OC2R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+139             OC2RS=setpoint;
+140             OC2CON=0x000E;
+141             OC2CON|=0x8000; \textcolor{comment}{// PWM On}
+142             \textcolor{keywordflow}{return} 1;
+143         \textcolor{keywordflow}{case} 7:\textcolor{comment}{// PWM1}
+144             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(7, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+145             OC5CON=0;       \textcolor{comment}{// PWM Off}
+146             OC5R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+147             OC5RS=setpoint;
+148             OC5CON=0x000E;
+149             OC5CON|=0x8000; \textcolor{comment}{// PWM On}
+150             \textcolor{keywordflow}{return} 1;
+151         \textcolor{keywordflow}{case} 8:\textcolor{comment}{// PWM0}
+152             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(8, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+153             OC1CON=0;       \textcolor{comment}{// PWM Off}
+154             OC1R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+155             OC1RS=setpoint;
+156             OC1CON=0x000E;
+157             OC1CON|=0x8000; \textcolor{comment}{// PWM On}
+158             \textcolor{keywordflow}{return} 1;
+159         \textcolor{keywordflow}{default}:
+160             \textcolor{keywordflow}{return} 0;
+161     \}
+162 \textcolor{preprocessor}{#endif}
+163 \textcolor{preprocessor}{}    
+164 \textcolor{preprocessor}{#if defined(PIC32\_PINGUINO\_MICRO)}
+165 \textcolor{preprocessor}{}    \textcolor{keywordflow}{switch} (pin)
+166     \{
+167         \textcolor{keywordflow}{case} 10:
+168             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(pin, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+169             OC2CON=0;       \textcolor{comment}{// PWM Off}
+170             OC2R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+171             OC2RS=setpoint;
+172             OC2CON=0x000E;
+173             OC2CON|=0x8000; \textcolor{comment}{// PWM On}
+174             \textcolor{keywordflow}{return} 1;
+175         \textcolor{keywordflow}{case} 11:
+176             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(pin, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+177             OC3CON=0;       \textcolor{comment}{// PWM Off}
+178             OC3R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+179             OC3RS=setpoint;
+180             OC3CON=0x000E;
+181             OC3CON|=0x8000; \textcolor{comment}{// PWM On}
+182             \textcolor{keywordflow}{return} 1;
+183         \textcolor{keywordflow}{case} 12:
+184             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(pin, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+185             OC4CON=0;       \textcolor{comment}{// PWM Off}
+186             OC4R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+187             OC4RS=setpoint;
+188             OC4CON=0x000E;
+189             OC4CON|=0x8000; \textcolor{comment}{// PWM On}
+190             \textcolor{keywordflow}{return} 1;
+191         \textcolor{keywordflow}{case} 13:
+192             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(pin, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+193             OC5CON=0;       \textcolor{comment}{// PWM Off}
+194             OC5R=setpoint;  \textcolor{comment}{// Timer3 will be compared to this values}
+195             OC5RS=setpoint;
+196             OC5CON=0x000E;
+197             OC5CON|=0x8000; \textcolor{comment}{// PWM On}
+198             \textcolor{keywordflow}{return} 1;
+199         \textcolor{keywordflow}{default}:
+200             \textcolor{keywordflow}{return} 0;
+201     \}
+202 \textcolor{preprocessor}{#endif}
+203 \textcolor{preprocessor}{}
+204 \textcolor{preprocessor}{#if defined(PIC32\_PINGUINO) || defined(PIC32\_PINGUINO\_OTG)}
+205 \textcolor{preprocessor}{}    \textcolor{keywordflow}{switch} (pin)
+206     \{
+207         \textcolor{keywordflow}{case} 2:
+208             TRISDSET=0x10;
+209             TRISDCLR=0x01;
+210             OC1CON=0;
+211             OC1R=setpoint;
+212             OC1RS=setpoint;
+213             OC1CON=0x000E;
+214             OC1CON|=0x8000;
+215             \textcolor{keywordflow}{return} 1;
+216             \textcolor{keywordflow}{break};
+217         \textcolor{keywordflow}{case} 1:
+218             TRISDCLR=0x08;
+219             OC4CON=0;
+220             OC4R=setpoint;
+221             OC4RS=setpoint;
+222             OC4CON=0x000E;
+223             OC4CON|=0x8000;
+224             \textcolor{keywordflow}{return} 1;
+225             \textcolor{keywordflow}{break};
+226         \textcolor{keywordflow}{case} 0:
+227             TRISDCLR=0x04;
+228             OC3CON=0;
+229             OC3R=setpoint;
+230             OC3RS=setpoint;
+231             OC3CON=0x000E;
+232             OC3CON|=0x8000;
+233             \textcolor{keywordflow}{return} 1;
+234             \textcolor{keywordflow}{break};
+235         \textcolor{keywordflow}{default}:
+236             \textcolor{keywordflow}{return} 0;
+237     \}       
+238 \textcolor{preprocessor}{#endif}
+239 \textcolor{preprocessor}{}\textcolor{preprocessor}{#if defined(EMPEROR460) || defined(EMPEROR795)}
+240 \textcolor{preprocessor}{}    \textcolor{keywordflow}{switch} (pin)
+241         \{
+242             \textcolor{keywordflow}{case}  0:
+243             \textcolor{keywordflow}{case} 72: TRISDCLR=0x01;
+244                      OC1CON=0;
+245                      OC1R=setpoint;
+246                      OC1RS=setpoint;
+247                      OC1CON=0x000E;
+248                      OC1CON|=0x8000;
+249                      \textcolor{keywordflow}{return} 1;
+250                      \textcolor{keywordflow}{break};
+251             \textcolor{keywordflow}{case}  1:
+252             \textcolor{keywordflow}{case} 69: TRISDCLR=0x02;
+253                      OC2CON=0;
+254                      OC2R=setpoint;
+255                      OC2RS=setpoint;
+256                      OC2CON=0x000E;
+257                      OC2CON|=0x8000;
+258                      \textcolor{keywordflow}{return} 1;
+259                      \textcolor{keywordflow}{break};
+260             \textcolor{keywordflow}{case}  2:
+261             \textcolor{keywordflow}{case} 68: TRISDCLR=0x04;
+262                      OC3CON=0;
+263                      OC3R=setpoint;
+264                      OC3RS=setpoint;
+265                      OC3CON=0x000E;
+266                      OC3CON|=0x8000;
+267                      \textcolor{keywordflow}{return} 1;
+268                      \textcolor{keywordflow}{break};
+269             \textcolor{keywordflow}{case}  3:
+270             \textcolor{keywordflow}{case} 67: TRISDCLR=0x08;
+271                      OC4CON=0;
+272                      OC4R=setpoint;
+273                      OC4RS=setpoint;
+274                      OC4CON=0x000E;
+275                      OC4CON|=0x8000;
+276                      \textcolor{keywordflow}{return} 1;
+277                      \textcolor{keywordflow}{break};
+278             \textcolor{keywordflow}{case}  4:
+279             \textcolor{keywordflow}{case} 66: TRISDCLR=0x10;
+280                      OC5CON=0;
+281                      OC5R=setpoint;
+282                      OC5RS=setpoint;
+283                      OC5CON=0x000E;
+284                      OC5CON|=0x8000;
+285                      \textcolor{keywordflow}{return} 1;
+286                      \textcolor{keywordflow}{break};
+287             \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} 0;
+288         \}       
+289 \textcolor{preprocessor}{#endif}
+290 \textcolor{preprocessor}{}\textcolor{preprocessor}{#if defined(UBW32\_460) || defined(UBW32\_795) || defined(PIC32\_PINGUINO\_T795)}
+291 \textcolor{preprocessor}{}    \textcolor{keywordflow}{switch} (pin)
+292         \{
+293             \textcolor{keywordflow}{case}  0:
+294             \textcolor{keywordflow}{case} 24:
+295             \textcolor{keywordflow}{case} 40: TRISDCLR=0x01;
+296                      OC1CON=0;
+297                      OC1R=setpoint;
+298                      OC1RS=setpoint;
+299                      OC1CON=0x000E;
+300                      OC1CON|=0x8000;
+301                      \textcolor{keywordflow}{return} 1;
+302                      \textcolor{keywordflow}{break};
+303             \textcolor{keywordflow}{case}  1:
+304             \textcolor{keywordflow}{case}  9:
+305             \textcolor{keywordflow}{case} 43: TRISDCLR=0x02;
+306                      OC2CON=0;
+307                      OC2R=setpoint;
+308                      OC2RS=setpoint;
+309                      OC2CON=0x000E;
+310                      OC2CON|=0x8000;
+311                      \textcolor{keywordflow}{return} 1;
+312                      \textcolor{keywordflow}{break};
+313             \textcolor{keywordflow}{case}  2:
+314             \textcolor{keywordflow}{case}  8:
+315             \textcolor{keywordflow}{case} 44: TRISDCLR=0x04;
+316                      OC3CON=0;
+317                      OC3R=setpoint;
+318                      OC3RS=setpoint;
+319                      OC3CON=0x000E;
+320                      OC3CON|=0x8000;
+321                      \textcolor{keywordflow}{return} 1;
+322                      \textcolor{keywordflow}{break};
+323             \textcolor{keywordflow}{case}  3:
+324             \textcolor{keywordflow}{case}  7:
+325             \textcolor{keywordflow}{case} 45: TRISDCLR=0x08;
+326                      OC4CON=0;
+327                      OC4R=setpoint;
+328                      OC4RS=setpoint;
+329                      OC4CON=0x000E;
+330                      OC4CON|=0x8000;
+331                      \textcolor{keywordflow}{return} 1;
+332                      \textcolor{keywordflow}{break};
+333             \textcolor{keywordflow}{case}  4:
+334             \textcolor{keywordflow}{case} 25:
+335             \textcolor{keywordflow}{case} 60: TRISDCLR=0x010;
+336                      OC5CON=0;
+337                      OC5R=setpoint;
+338                      OC5RS=setpoint;
+339                      OC5CON=0x000E;
+340                      OC5CON|=0x8000;
+341                      \textcolor{keywordflow}{return} 1;
+342                      \textcolor{keywordflow}{break};
+343             \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} 0;
+344         \}       
+345 \textcolor{preprocessor}{#endif}
+346 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2pwm_8c_aadae3fe77e36cbf9643a22eeb99fb01e}{\index{p32/include/pinguino/core/pwm.\-c@{p32/include/pinguino/core/pwm.\-c}!P\-W\-M\-\_\-init@{P\-W\-M\-\_\-init}}
+\index{P\-W\-M\-\_\-init@{P\-W\-M\-\_\-init}!p32/include/pinguino/core/pwm.c@{p32/include/pinguino/core/pwm.\-c}}
+\subsubsection[{P\-W\-M\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-W\-M\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2pwm_8c_aadae3fe77e36cbf9643a22eeb99fb01e}
+
+
+Definition at line 60 of file pwm.\-c.
+
+
+
+Referenced by Stepper\-\_\-step().
+
+
+\begin{DoxyCode}
+61 \{
+62     T3CON|=0x8010;      \textcolor{comment}{// timer 3 use a 1:4 prescaler for PWM 20 khz}
+63     PR3=1023;           \textcolor{comment}{// resolution is 10 bits ( 0..1023 )}
+64 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2pwm_8c_a6b14eb0b3fbca814e813957dbe97edf8}{\index{p32/include/pinguino/core/pwm.\-c@{p32/include/pinguino/core/pwm.\-c}!P\-W\-M\-\_\-set\-\_\-dutycycle@{P\-W\-M\-\_\-set\-\_\-dutycycle}}
+\index{P\-W\-M\-\_\-set\-\_\-dutycycle@{P\-W\-M\-\_\-set\-\_\-dutycycle}!p32/include/pinguino/core/pwm.c@{p32/include/pinguino/core/pwm.\-c}}
+\subsubsection[{P\-W\-M\-\_\-set\-\_\-dutycycle}]{\setlength{\rightskip}{0pt plus 5cm}void P\-W\-M\-\_\-set\-\_\-dutycycle (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u16}}]{duty}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2pwm_8c_a6b14eb0b3fbca814e813957dbe97edf8}
+
+
+Definition at line 432 of file pwm.\-c.
+
+
+
+References \-\_\-pr3\-\_\-plus1, \-\_\-t3con, analogwrite(), and O\-N.
+
+
+
+Referenced by P\-W\-M\-\_\-set\-\_\-percent\-\_\-dutycycle().
+
+
+\begin{DoxyCode}
+433 \{
+434     \textcolor{comment}{//u8 temp;}
+435 
+436     \textcolor{comment}{// PWM period}
+437     PR3 = \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} - 1;                     \textcolor{comment}{// set PR3 (max or PWM\_set\_frequency)}
+438 
+439     \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a19de8aa2bf36d099c6e32709ce6556c5}{analogwrite}(pin, duty);
+440 
+441     \textcolor{comment}{// TMR2 configuration}
+442     \textcolor{comment}{// TODO:intUsed[INT\_TMR3] = INT\_USED;       // tell interrupt.c we use TMR3}
+443     \textcolor{comment}{//PIR1bits.TMR2IF = 0;                          // reset this flag for the next test}
+444     T3CONbits.TCKPS = \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}{\_t3con};                     \textcolor{comment}{// Timer3 prescaler}
+445     T3CONbits.TON = \hyperlink{p8_2pinguino_2core_2const_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON};                                   \textcolor{comment}{// enable Timer3}
+446     \textcolor{comment}{//while (PIR1bits.TMR3IF == 0);             // Wait until TMR2 overflows}
+447 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2pwm_8c_a19ce387f37babe4ae7c25b09ccda4567}{\index{p32/include/pinguino/core/pwm.\-c@{p32/include/pinguino/core/pwm.\-c}!P\-W\-M\-\_\-set\-\_\-frequency@{P\-W\-M\-\_\-set\-\_\-frequency}}
+\index{P\-W\-M\-\_\-set\-\_\-frequency@{P\-W\-M\-\_\-set\-\_\-frequency}!p32/include/pinguino/core/pwm.c@{p32/include/pinguino/core/pwm.\-c}}
+\subsubsection[{P\-W\-M\-\_\-set\-\_\-frequency}]{\setlength{\rightskip}{0pt plus 5cm}void P\-W\-M\-\_\-set\-\_\-frequency (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{freq}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2pwm_8c_a19ce387f37babe4ae7c25b09ccda4567}
+
+
+Definition at line 363 of file pwm.\-c.
+
+
+
+References \-\_\-pr3\-\_\-plus1, \-\_\-t3con, and Get\-Peripheral\-Clock().
+
+
+
+Referenced by no\-Tone(), Stepper\-\_\-step(), and Tone().
+
+
+\begin{DoxyCode}
+364 \{
+365     \textcolor{comment}{// PR3+1 calculation}
+366     \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a78e9ff88927e18f2346bc9c33069c5ef}{GetPeripheralClock}() / freq;   \textcolor{comment}{// FOSC /  PWM Frequency}
+367 
+368     \textcolor{comment}{// Timer3 prescaler calculation}
+369     \textcolor{comment}{// PR3 max value is 0xffff, so PR3+1 max value is 0x10000 = 65536}
+370     \textcolor{comment}{// highest prescaler value is 256}
+371     \textcolor{comment}{// 256 * 65536 = 0x1000000 = 16777216 so :}
+372     \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} <= 0x1000000)          \textcolor{comment}{// check if it's not too high}
+373     \{
+374         \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} <= 256)                \textcolor{comment}{// no needs of any prescaler}
+375         \{
+376             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}{\_t3con} = 0b000;                   \textcolor{comment}{// prescaler is 1}
+377         \}
+378         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} <= 512)       \textcolor{comment}{// needs prescaler 1:2}
+379         \{
+380             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} = \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} >> 1;   \textcolor{comment}{// divided by 2}
+381             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}{\_t3con} = 0b001;                   \textcolor{comment}{// prescaler is 2}
+382         \}
+383         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} <= 1024)      \textcolor{comment}{// needs prescaler 1:4}
+384         \{
+385             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} = \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} >> 2;   \textcolor{comment}{// divided by 4}
+386             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}{\_t3con} = 0b010;                   \textcolor{comment}{// prescaler is 4}
+387         \}
+388         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} <= 2048)      \textcolor{comment}{// needs prescaler 1:8}
+389         \{
+390             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} = \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} >> 3;   \textcolor{comment}{// divided by 8}
+391             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}{\_t3con} = 0b011;                   \textcolor{comment}{// prescaler is 8}
+392         \}
+393         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} <= 4096)      \textcolor{comment}{// needs prescaler 1:16}
+394         \{
+395             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} = \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} >> 4;   \textcolor{comment}{// divided by 16}
+396             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}{\_t3con} = 0b100;                   \textcolor{comment}{// prescaler is 16}
+397         \}
+398         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} <= 8192)      \textcolor{comment}{// needs prescaler 1:32}
+399         \{
+400             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} = \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} >> 5;   \textcolor{comment}{// divided by 32}
+401             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}{\_t3con} = 0b101;                   \textcolor{comment}{// prescaler is 32}
+402         \}
+403         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} <= 16384)     \textcolor{comment}{// needs prescaler 1:64}
+404         \{
+405             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} = \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} >> 6;   \textcolor{comment}{// divided by 64}
+406             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}{\_t3con} = 0b110;                   \textcolor{comment}{// prescaler is 64}
+407         \}
+408         \textcolor{keywordflow}{else}                                        \textcolor{comment}{// needs prescaler 1:256}
+409         \{
+410             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} = \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} >> 8;   \textcolor{comment}{// divided by 256}
+411             \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}{\_t3con} = 0b111;                   \textcolor{comment}{// prescaler is 256}
+412         \}
+413 \textcolor{comment}{//      return(\_pr3\_plus1);}
+414     \}
+415 \textcolor{comment}{//  else return 0;}
+416 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2pwm_8c_aa77aed30a6d400b39562621889701093}{\index{p32/include/pinguino/core/pwm.\-c@{p32/include/pinguino/core/pwm.\-c}!P\-W\-M\-\_\-set\-\_\-percent\-\_\-dutycycle@{P\-W\-M\-\_\-set\-\_\-percent\-\_\-dutycycle}}
+\index{P\-W\-M\-\_\-set\-\_\-percent\-\_\-dutycycle@{P\-W\-M\-\_\-set\-\_\-percent\-\_\-dutycycle}!p32/include/pinguino/core/pwm.c@{p32/include/pinguino/core/pwm.\-c}}
+\subsubsection[{P\-W\-M\-\_\-set\-\_\-percent\-\_\-dutycycle}]{\setlength{\rightskip}{0pt plus 5cm}void P\-W\-M\-\_\-set\-\_\-percent\-\_\-dutycycle (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u8}}]{percent}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2pwm_8c_aa77aed30a6d400b39562621889701093}
+
+
+Definition at line 460 of file pwm.\-c.
+
+
+
+References \-\_\-pr3\-\_\-plus1, and P\-W\-M\-\_\-set\-\_\-dutycycle().
+
+
+
+Referenced by no\-Tone(), and Tone().
+
+
+\begin{DoxyCode}
+461 \{
+462     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} duty;
+463     \textcolor{keywordflow}{if} (percent == 0)
+464         duty = 0;
+465     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (percent >= 100)
+466         duty = \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1} - 1;
+467     \textcolor{keywordflow}{else}
+468         duty=(percent*\hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\_pr3\_plus1})/100;
+469     \hyperlink{p32_2include_2pinguino_2core_2pwm_8c_a6b14eb0b3fbca814e813957dbe97edf8}{PWM\_set\_dutycycle}(pin,duty);
+470 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}{\index{p32/include/pinguino/core/pwm.\-c@{p32/include/pinguino/core/pwm.\-c}!\-\_\-pr3\-\_\-plus1@{\-\_\-pr3\-\_\-plus1}}
+\index{\-\_\-pr3\-\_\-plus1@{\-\_\-pr3\-\_\-plus1}!p32/include/pinguino/core/pwm.c@{p32/include/pinguino/core/pwm.\-c}}
+\subsubsection[{\-\_\-pr3\-\_\-plus1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} \-\_\-pr3\-\_\-plus1 = 0xffff + 1}}\label{p32_2include_2pinguino_2core_2pwm_8c_a0b925700c6f239f78f0af8d57f9dd7bd}
+
+
+Definition at line 46 of file pwm.\-c.
+
+
+
+Referenced by P\-W\-M\-\_\-set\-\_\-dutycycle(), P\-W\-M\-\_\-set\-\_\-frequency(), and P\-W\-M\-\_\-set\-\_\-percent\-\_\-dutycycle().
+
+\hypertarget{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}{\index{p32/include/pinguino/core/pwm.\-c@{p32/include/pinguino/core/pwm.\-c}!\-\_\-t3con@{\-\_\-t3con}}
+\index{\-\_\-t3con@{\-\_\-t3con}!p32/include/pinguino/core/pwm.c@{p32/include/pinguino/core/pwm.\-c}}
+\subsubsection[{\-\_\-t3con}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} \-\_\-t3con}}\label{p32_2include_2pinguino_2core_2pwm_8c_a06034296f403093c5d8294d5196f4d9b}
+
+
+Definition at line 47 of file pwm.\-c.
+
+
+
+Referenced by P\-W\-M\-\_\-set\-\_\-dutycycle(), and P\-W\-M\-\_\-set\-\_\-frequency().
+

@@ -1,0 +1,190 @@
+\hypertarget{p32_2include_2pinguino_2core_2millis_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/millis.c File Reference}
+\label{p32_2include_2pinguino_2core_2millis_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/millis.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/millis.\-c}}
+}
+{\ttfamily \#include $<$interrupt.\-c$>$}\\*
+{\ttfamily \#include $<$system.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2millis_8c_ae34408a99fd9706d3632f5c2e27bfbe1}{\-\_\-\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2millis_8c_afd4a6721fe3801e7290410fae0adf8c0}{millis\-\_\-init} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2millis_8c_aaabc08bb525a4810267f401ea73ba574}{micros} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2millis_8c_a9a42681b7f2940db19540f5698bcab19}{Tmr2\-Interrupt} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\-\_\-millis}
+\item 
+volatile \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2millis_8c_a4832df7b479932473527845c01e76de7}{\-\_\-micros}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2millis_8c_ae34408a99fd9706d3632f5c2e27bfbe1}{\index{p32/include/pinguino/core/millis.\-c@{p32/include/pinguino/core/millis.\-c}!\-\_\-\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-\_\-@{\-\_\-\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-\_\-@{\-\_\-\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-\_\-}!p32/include/pinguino/core/millis.c@{p32/include/pinguino/core/millis.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-M\-I\-L\-L\-I\-S\-\_\-\-\_\-}}\label{p32_2include_2pinguino_2core_2millis_8c_ae34408a99fd9706d3632f5c2e27bfbe1}
+
+
+Definition at line 29 of file millis.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2millis_8c_aaabc08bb525a4810267f401ea73ba574}{\index{p32/include/pinguino/core/millis.\-c@{p32/include/pinguino/core/millis.\-c}!micros@{micros}}
+\index{micros@{micros}!p32/include/pinguino/core/millis.c@{p32/include/pinguino/core/millis.\-c}}
+\subsubsection[{micros}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} micros (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2millis_8c_aaabc08bb525a4810267f401ea73ba574}
+
+
+Definition at line 77 of file millis.\-c.
+
+
+
+References \-\_\-micros, and \-\_\-millis.
+
+
+\begin{DoxyCode}
+78 \{
+79 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+80 \textcolor{preprocessor}{}        \textcolor{comment}{// The code for the 220 has not been tested!}
+81        \textcolor{comment}{// return 1000*\_millis + (1000*(65535-TMR2))/\_tmr2; // Tested but gives more microsseconds}
+82        \hyperlink{p32_2include_2pinguino_2core_2millis_8c_a4832df7b479932473527845c01e76de7}{\_micros} = 1000*\hyperlink{p8_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\_millis} + (1000*(TMR2 - \_tmr2))/\_tmr2; \textcolor{comment}{// working good micros()}
+83        \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2millis_8c_a4832df7b479932473527845c01e76de7}{\_micros};
+84 \textcolor{preprocessor}{    #else}
+85 \textcolor{preprocessor}{}        \textcolor{keywordflow}{return} 1000*\hyperlink{p8_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\_millis} + (1000*TMR2)/PR2;
+86 \textcolor{preprocessor}{    #endif}
+87 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{\index{p32/include/pinguino/core/millis.\-c@{p32/include/pinguino/core/millis.\-c}!millis@{millis}}
+\index{millis@{millis}!p32/include/pinguino/core/millis.c@{p32/include/pinguino/core/millis.\-c}}
+\subsubsection[{millis}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} millis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}
+
+
+Definition at line 72 of file millis.\-c.
+
+
+
+References \-\_\-millis.
+
+
+\begin{DoxyCode}
+73 \{
+74     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\_millis});
+75 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2millis_8c_afd4a6721fe3801e7290410fae0adf8c0}{\index{p32/include/pinguino/core/millis.\-c@{p32/include/pinguino/core/millis.\-c}!millis\-\_\-init@{millis\-\_\-init}}
+\index{millis\-\_\-init@{millis\-\_\-init}!p32/include/pinguino/core/millis.c@{p32/include/pinguino/core/millis.\-c}}
+\subsubsection[{millis\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void millis\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2millis_8c_afd4a6721fe3801e7290410fae0adf8c0}
+
+
+Definition at line 46 of file millis.\-c.
+
+
+
+References \-\_\-millis, Get\-Peripheral\-Clock(), I\-N\-T\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-M\-U\-L\-T\-\_\-\-V\-E\-C\-T\-O\-R, and Int\-Configure\-System().
+
+
+\begin{DoxyCode}
+47 \{
+48     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} pf;          \textcolor{comment}{// peripheral bus frequency}
+49 
+50     pf = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a78e9ff88927e18f2346bc9c33069c5ef}{GetPeripheralClock}();
+51     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a9e4ebfd3f20cf6de4cfda78c4043f872}{IntConfigureSystem}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a8b1e2aaa6d775c7a98062aa9c5de70bb}{INT\_SYSTEM\_CONFIG\_MULT\_VECTOR});
+52     T2CON=0;
+53 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+54 \textcolor{preprocessor}{}    \_tmr2 = pf / 1000 / 2; \textcolor{comment}{// 27 - 08- 2013: preserve this for the micros() function}
+55     TMR2 = 65535 - \_tmr2;
+56    \_tmr2\_upd= TMR2;   \textcolor{comment}{// 26-02-2013 : correction : we will need to refresh in the interrupt with 65535 -
+       \_tmr2 to give the 1mS in the next interrupts}
+57     IPC2bits.T2IP=1;
+58     IPC2bits.T2IS=1;
+59     IFS0bits.T2IF=0;
+60     IEC0bits.T2IE=1;
+61 \textcolor{preprocessor}{    #else}
+62 \textcolor{preprocessor}{}    TMR2=0x00;
+63     PR2 = pf / 1000 / 2; \textcolor{comment}{//0x4E00;}
+64     IPC2SET = 0x0000000D;
+65     IFS0CLR = 0x00000100;
+66     IEC0SET = 0x00000100;
+67 \textcolor{preprocessor}{    #endif}
+68 \textcolor{preprocessor}{}    T2CONSET = 0x8010;      \textcolor{comment}{// prescale=1/2}
+69     \hyperlink{p8_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\_millis} = 0;
+70 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2millis_8c_a9a42681b7f2940db19540f5698bcab19}{\index{p32/include/pinguino/core/millis.\-c@{p32/include/pinguino/core/millis.\-c}!Tmr2\-Interrupt@{Tmr2\-Interrupt}}
+\index{Tmr2\-Interrupt@{Tmr2\-Interrupt}!p32/include/pinguino/core/millis.c@{p32/include/pinguino/core/millis.\-c}}
+\subsubsection[{Tmr2\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void Tmr2\-Interrupt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2millis_8c_a9a42681b7f2940db19540f5698bcab19}
+
+
+Definition at line 94 of file millis.\-c.
+
+
+
+References \-\_\-millis, I\-N\-T\-\_\-\-T\-I\-M\-E\-R2, Int\-Clear\-Flag(), and Int\-Get\-Flag().
+
+
+\begin{DoxyCode}
+95 \{
+96     \textcolor{comment}{// is this an TMR2 interrupt ?}
+97 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+98 \textcolor{preprocessor}{}    TMR2 = \_tmr2\_upd; \textcolor{comment}{// 0xD910;    // because PR2 don't work on PIC32MX220F032D}
+99     \textcolor{keywordflow}{if} (IFS0bits.T2IF)
+100 \textcolor{preprocessor}{    #else}
+101 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a39a57c6ba2a98e87154d50b2c2eb4c9d}{IntGetFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a8f4aa48df33790d0e23cf9da6d2ca792}{INT\_TIMER2})) \textcolor{comment}{// TODO : add PIC32\_PINGUINO\_220 support}
+102 \textcolor{preprocessor}{    #endif}
+103 \textcolor{preprocessor}{}    \{
+104 \textcolor{preprocessor}{        #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+105 \textcolor{preprocessor}{}        IFS0bits.T2IF=0;
+106 \textcolor{preprocessor}{        #else}
+107 \textcolor{preprocessor}{}        \textcolor{comment}{//IFS0CLR=0x00000100;}
+108         \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a8f4aa48df33790d0e23cf9da6d2ca792}{INT\_TIMER2});
+109 \textcolor{preprocessor}{        #endif}
+110 \textcolor{preprocessor}{}        \hyperlink{p8_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\_millis}++;
+111     \}
+112 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2millis_8c_a4832df7b479932473527845c01e76de7}{\index{p32/include/pinguino/core/millis.\-c@{p32/include/pinguino/core/millis.\-c}!\-\_\-micros@{\-\_\-micros}}
+\index{\-\_\-micros@{\-\_\-micros}!p32/include/pinguino/core/millis.c@{p32/include/pinguino/core/millis.\-c}}
+\subsubsection[{\-\_\-micros}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf u32} \-\_\-micros}}\label{p32_2include_2pinguino_2core_2millis_8c_a4832df7b479932473527845c01e76de7}
+
+
+Definition at line 39 of file millis.\-c.
+
+
+
+Referenced by micros().
+
+\hypertarget{p32_2include_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}{\index{p32/include/pinguino/core/millis.\-c@{p32/include/pinguino/core/millis.\-c}!\-\_\-millis@{\-\_\-millis}}
+\index{\-\_\-millis@{\-\_\-millis}!p32/include/pinguino/core/millis.c@{p32/include/pinguino/core/millis.\-c}}
+\subsubsection[{\-\_\-millis}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf u32} \-\_\-millis}}\label{p32_2include_2pinguino_2core_2millis_8c_a10153dbb3c15ae351cc33911579abcf4}
+This variable is accessed both by the I\-S\-R and \char`\"{}normal\char`\"{} code. It must be declared as \char`\"{}volatile\char`\"{} to prevent caching. 
+
+Definition at line 38 of file millis.\-c.
+

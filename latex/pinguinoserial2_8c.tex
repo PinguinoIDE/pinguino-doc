@@ -1,0 +1,384 @@
+\hypertarget{pinguinoserial2_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pinguinoserial2.c File Reference}
+\label{pinguinoserial2_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pinguinoserial2.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/pinguinoserial2.\-c}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$printf.\-c$>$}\\*
+{\ttfamily \#include $<$serial.\-c$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pinguinoserial2_8c_a41306b0e3e981091812f674a42339484}{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L2\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pinguinoserial2_8c_a7c1ae73f9b470de097965f144a8d05dd}{serial2init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} speed)
+\item 
+void \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf} (char $\ast$fmt,...)
+\item 
+void \hyperlink{pinguinoserial2_8c_acc78eab5c2c348f6e9db818d70b45dab}{serial2print} (char $\ast$fmt,...)
+\item 
+void \hyperlink{pinguinoserial2_8c_a3c2a7ac961f884fd6a6a5f4196327b78}{serial2println} (char $\ast$fmt,...)
+\item 
+void \hyperlink{pinguinoserial2_8c_ab7dbd4dde7cdc62a89c3b9b44873f120}{serial2write} (char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+char \hyperlink{pinguinoserial2_8c_a4f0470fb68d3b378c61d9c0e4083d557}{serial2getkey} (void)
+\item 
+char $\ast$ \hyperlink{pinguinoserial2_8c_a52f66e2deaaae5c1d9dbd8cdead4d415}{serial2getstring} (void)
+\item 
+char \hyperlink{pinguinoserial2_8c_ac321b2db1da637e096ed310f2ae8e099}{serial2available} (void)
+\item 
+char \hyperlink{pinguinoserial2_8c_a2c61d8d4175acf8a053134c70be4f144}{serial2read} (void)
+\item 
+void \hyperlink{pinguinoserial2_8c_a52e598378c3e0f1935762e62fc14ecdc}{serial2flush} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{pinguinoserial2_8c_a18dfc0779f3e51240925a61b588a881d}{serial2clearrxerror} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{pinguinoserial2_8c_a41306b0e3e981091812f674a42339484}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L2\-\_\-\-C@{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L2\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L2\-\_\-\-C@{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L2\-\_\-\-C}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L2\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-P\-I\-N\-G\-U\-I\-N\-O\-S\-E\-R\-I\-A\-L2\-\_\-\-C}}\label{pinguinoserial2_8c_a41306b0e3e981091812f674a42339484}
+
+
+Definition at line 27 of file pinguinoserial2.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{pinguinoserial2_8c_ac321b2db1da637e096ed310f2ae8e099}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!serial2available@{serial2available}}
+\index{serial2available@{serial2available}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{serial2available}]{\setlength{\rightskip}{0pt plus 5cm}char serial2available (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial2_8c_ac321b2db1da637e096ed310f2ae8e099}
+
+
+Definition at line 161 of file pinguinoserial2.\-c.
+
+
+
+References Serial\-Available(), U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+
+Referenced by modbuss\-\_\-\-Serial\-Available().
+
+
+\begin{DoxyCode}
+162 \{
+163 \textcolor{preprocessor}{#ifdef PIC32\_PINGUINO\_220}
+164 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a878269e804f48bb8a690ed20115c4ce4}{SerialAvailable}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1});
+165 \textcolor{preprocessor}{#else}
+166 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a878269e804f48bb8a690ed20115c4ce4}{SerialAvailable}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2});
+167 \textcolor{preprocessor}{#endif}
+168 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{pinguinoserial2_8c_a18dfc0779f3e51240925a61b588a881d}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!serial2clearrxerror@{serial2clearrxerror}}
+\index{serial2clearrxerror@{serial2clearrxerror}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{serial2clearrxerror}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} serial2clearrxerror (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial2_8c_a18dfc0779f3e51240925a61b588a881d}
+
+
+Definition at line 188 of file pinguinoserial2.\-c.
+
+
+
+References Clear\-Rx\-Error(), U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+
+Referenced by modbuss\-\_\-\-Serial\-Clear\-Rx\-Error().
+
+
+\begin{DoxyCode}
+189 \{
+190 \textcolor{preprocessor}{#ifdef PIC32\_PINGUINO\_220}
+191 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a04655bb13327a2854dc93436881f61c6}{ClearRxError}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}));
+192 \textcolor{preprocessor}{#else}
+193 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a04655bb13327a2854dc93436881f61c6}{ClearRxError}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}));
+194 \textcolor{preprocessor}{#endif}
+195 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{pinguinoserial2_8c_a52e598378c3e0f1935762e62fc14ecdc}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!serial2flush@{serial2flush}}
+\index{serial2flush@{serial2flush}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{serial2flush}]{\setlength{\rightskip}{0pt plus 5cm}void serial2flush (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial2_8c_a52e598378c3e0f1935762e62fc14ecdc}
+
+
+Definition at line 179 of file pinguinoserial2.\-c.
+
+
+
+References Serial\-Flush(), U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+
+Referenced by modbuss\-\_\-\-Serial\-Flush().
+
+
+\begin{DoxyCode}
+180 \{
+181 \textcolor{preprocessor}{#ifdef PIC32\_PINGUINO\_220}
+182 \textcolor{preprocessor}{}    \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a26fe5a83dff28031ab497e5cafc6eeda}{SerialFlush}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1});
+183 \textcolor{preprocessor}{#else}
+184 \textcolor{preprocessor}{}    \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a26fe5a83dff28031ab497e5cafc6eeda}{SerialFlush}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2});
+185 \textcolor{preprocessor}{#endif}
+186 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{pinguinoserial2_8c_a4f0470fb68d3b378c61d9c0e4083d557}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!serial2getkey@{serial2getkey}}
+\index{serial2getkey@{serial2getkey}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{serial2getkey}]{\setlength{\rightskip}{0pt plus 5cm}char serial2getkey (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial2_8c_a4f0470fb68d3b378c61d9c0e4083d557}
+
+
+Definition at line 143 of file pinguinoserial2.\-c.
+
+
+
+References Serial\-Get\-Key(), U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+\begin{DoxyCode}
+144 \{
+145 \textcolor{preprocessor}{#ifdef PIC32\_PINGUINO\_220}
+146 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ad174ce78bcebca3f280c3aa1ade802c4}{SerialGetKey}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1});
+147 \textcolor{preprocessor}{#else}
+148 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_ad174ce78bcebca3f280c3aa1ade802c4}{SerialGetKey}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2});
+149 \textcolor{preprocessor}{#endif}
+150 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{pinguinoserial2_8c_a52f66e2deaaae5c1d9dbd8cdead4d415}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!serial2getstring@{serial2getstring}}
+\index{serial2getstring@{serial2getstring}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{serial2getstring}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ serial2getstring (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial2_8c_a52f66e2deaaae5c1d9dbd8cdead4d415}
+
+
+Definition at line 152 of file pinguinoserial2.\-c.
+
+
+
+References Serial\-Get\-String(), U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+\begin{DoxyCode}
+153 \{
+154 \textcolor{preprocessor}{#ifdef PIC32\_PINGUINO\_220}
+155 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7fbf2ad606a3010081b5d1b2d9880101}{SerialGetString}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1});
+156 \textcolor{preprocessor}{#else}
+157 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7fbf2ad606a3010081b5d1b2d9880101}{SerialGetString}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2});
+158 \textcolor{preprocessor}{#endif}
+159 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{pinguinoserial2_8c_a7c1ae73f9b470de097965f144a8d05dd}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!serial2init@{serial2init}}
+\index{serial2init@{serial2init}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{serial2init}]{\setlength{\rightskip}{0pt plus 5cm}void serial2init (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{speed}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial2_8c_a7c1ae73f9b470de097965f144a8d05dd}
+
+
+Definition at line 34 of file pinguinoserial2.\-c.
+
+
+
+References Serial\-Configure(), U\-A\-R\-T1, U\-A\-R\-T2, U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E, and U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D.
+
+
+
+Referenced by debug(), and modbuss\-\_\-\-Serial\-Begin().
+
+
+\begin{DoxyCode}
+35 \{
+36 \textcolor{preprocessor}{    #ifdef PIC32\_PINGUINO\_220}
+37 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0f213d0381fb0d45af9bc0c6d0aa2127}{SerialConfigure}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}, \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aaaf6c77e3b8fec12ad625225a08c4f28}{UART\_ENABLE},  
+      \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a79e41610f669265a690114ac881f8a89}{UART\_RX\_TX\_ENABLED},   speed);
+38 \textcolor{preprocessor}{    #else}
+39 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0f213d0381fb0d45af9bc0c6d0aa2127}{SerialConfigure}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}, \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aaaf6c77e3b8fec12ad625225a08c4f28}{UART\_ENABLE},  
+      \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a79e41610f669265a690114ac881f8a89}{UART\_RX\_TX\_ENABLED},   speed);
+40 \textcolor{preprocessor}{    #endif}
+41 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{pinguinoserial2_8c_acc78eab5c2c348f6e9db818d70b45dab}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!serial2print@{serial2print}}
+\index{serial2print@{serial2print}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{serial2print}]{\setlength{\rightskip}{0pt plus 5cm}void serial2print (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial2_8c_acc78eab5c2c348f6e9db818d70b45dab}
+
+
+Definition at line 62 of file pinguinoserial2.\-c.
+
+
+
+References B\-I\-N, D\-E\-C, H\-E\-X, O\-C\-T, and serial2printf().
+
+
+\begin{DoxyCode}
+63 \{
+64     \textcolor{comment}{//  unsigned char *s;}
+65     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} s;
+66     va\_list args;                   \textcolor{comment}{// list of arguments}
+67 
+68     va\_start(args, fmt);            \textcolor{comment}{// initialize the list}
+69     \textcolor{comment}{// s = va\_start(args, fmt);}
+70     s = (\textcolor{keywordtype}{unsigned} char) va\_arg(args, \textcolor{keywordtype}{int});      \textcolor{comment}{// get the first variable arg.}
+71 
+72     \textcolor{comment}{//switch (*s)}
+73     \textcolor{keywordflow}{switch} (s)
+74     \{
+75         \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2const_8h_afe38ec6126e35e40049e27fdf4586ba5}{DEC}:
+76             \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf}(\textcolor{stringliteral}{"%d"},fmt);
+77             \textcolor{keywordflow}{break};
+78         \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2const_8h_a9075d93e0ab26ccd6e059fa06aa4e3de}{HEX}:
+79             \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf}(\textcolor{stringliteral}{"%x"},fmt);
+80             \textcolor{keywordflow}{break};
+81         \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2libraries_2integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}:
+82             \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf}(\textcolor{stringliteral}{"%d"},fmt);
+83             \textcolor{keywordflow}{break};
+84         \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2const_8h_a904777e8f3d21de0a6679d2c9f0f1eec}{OCT}:
+85             \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf}(\textcolor{stringliteral}{"%o"},fmt);
+86             \textcolor{keywordflow}{break};
+87         \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2const_8h_a75267cdfa3fa9e52c7c1f1094f9387b7}{BIN}:
+88             \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf}(\textcolor{stringliteral}{"%b"},fmt);
+89             \textcolor{keywordflow}{break};           
+90         \textcolor{keywordflow}{default}:
+91             \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf}(fmt);
+92             \textcolor{keywordflow}{break};
+93     \}
+94 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!serial2printf@{serial2printf}}
+\index{serial2printf@{serial2printf}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{serial2printf}]{\setlength{\rightskip}{0pt plus 5cm}void serial2printf (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}
+
+
+Definition at line 43 of file pinguinoserial2.\-c.
+
+
+
+References pprintf(), Serial\-U\-A\-R\-T1\-Write\-Char(), and Serial\-U\-A\-R\-T2\-Write\-Char().
+
+
+
+Referenced by debug(), serial2print(), and serial2println().
+
+
+\begin{DoxyCode}
+44 \{
+45     va\_list args;
+46 
+47     va\_start(args, fmt);
+48 \textcolor{preprocessor}{    #ifdef PIC32\_PINGUINO\_220}
+49 \textcolor{preprocessor}{}        \hyperlink{stdio_8c_a4f88403166e56608ac7db2b3ae57c315}{pprintf}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_afd0e9a058cc758040a39e4df542b7726}{SerialUART1WriteChar}, fmt, args);
+50 \textcolor{preprocessor}{    #else}
+51 \textcolor{preprocessor}{}        \hyperlink{stdio_8c_a4f88403166e56608ac7db2b3ae57c315}{pprintf}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_aa7354910d04ba38409e1a80b22d6f5a2}{SerialUART2WriteChar}, fmt, args);
+52 \textcolor{preprocessor}{    #endif}
+53 \textcolor{preprocessor}{}    va\_end(args);
+54 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial2_8c_a3c2a7ac961f884fd6a6a5f4196327b78}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!serial2println@{serial2println}}
+\index{serial2println@{serial2println}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{serial2println}]{\setlength{\rightskip}{0pt plus 5cm}void serial2println (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial2_8c_a3c2a7ac961f884fd6a6a5f4196327b78}
+
+
+Definition at line 128 of file pinguinoserial2.\-c.
+
+
+
+References serial2printf().
+
+
+\begin{DoxyCode}
+129 \{
+130     \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf}(fmt);
+131     \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});
+132 \}
+\end{DoxyCode}
+\hypertarget{pinguinoserial2_8c_a2c61d8d4175acf8a053134c70be4f144}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!serial2read@{serial2read}}
+\index{serial2read@{serial2read}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{serial2read}]{\setlength{\rightskip}{0pt plus 5cm}char serial2read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial2_8c_a2c61d8d4175acf8a053134c70be4f144}
+
+
+Definition at line 170 of file pinguinoserial2.\-c.
+
+
+
+References Serial\-Read(), U\-A\-R\-T1, and U\-A\-R\-T2.
+
+
+
+Referenced by modbuss\-\_\-\-Serial\-Read().
+
+
+\begin{DoxyCode}
+171 \{
+172 \textcolor{preprocessor}{#ifdef PIC32\_PINGUINO\_220}
+173 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a46b4e3730df878a192c4e1aeb3a4325d}{SerialRead}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1});
+174 \textcolor{preprocessor}{#else}
+175 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a46b4e3730df878a192c4e1aeb3a4325d}{SerialRead}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2});
+176 \textcolor{preprocessor}{#endif}
+177 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{pinguinoserial2_8c_ab7dbd4dde7cdc62a89c3b9b44873f120}{\index{pinguinoserial2.\-c@{pinguinoserial2.\-c}!serial2write@{serial2write}}
+\index{serial2write@{serial2write}!pinguinoserial2.c@{pinguinoserial2.\-c}}
+\subsubsection[{serial2write}]{\setlength{\rightskip}{0pt plus 5cm}void serial2write (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{pinguinoserial2_8c_ab7dbd4dde7cdc62a89c3b9b44873f120}
+
+
+Definition at line 134 of file pinguinoserial2.\-c.
+
+
+
+References Serial\-U\-A\-R\-T1\-Write\-Char(), and Serial\-U\-A\-R\-T2\-Write\-Char().
+
+
+
+Referenced by modbuss\-\_\-\-Serial\-Write().
+
+
+\begin{DoxyCode}
+135 \{
+136 \textcolor{preprocessor}{#ifdef PIC32\_PINGUINO\_220}
+137 \textcolor{preprocessor}{}    \hyperlink{p32_2include_2pinguino_2core_2serial_8c_afd0e9a058cc758040a39e4df542b7726}{SerialUART1WriteChar}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+138 \textcolor{preprocessor}{#else}
+139 \textcolor{preprocessor}{}    \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aa7354910d04ba38409e1a80b22d6f5a2}{SerialUART2WriteChar}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+140 \textcolor{preprocessor}{#endif}
+141 \textcolor{preprocessor}{}\}
+\end{DoxyCode}

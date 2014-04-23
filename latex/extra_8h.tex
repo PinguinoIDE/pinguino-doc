@@ -1,0 +1,150 @@
+\hypertarget{extra_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/sd/extra.h File Reference}
+\label{extra_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/sd/extra.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/sd/extra.\-h}}
+}
+{\ttfamily \#include \char`\"{}fileio.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{extra_8h_a5b5eab639d7574b5e51ae3577da95c83}{scan\-\_\-files} (char $\ast$path)
+\item 
+void \hyperlink{extra_8h_a33aa980f67477357e5a8ce7758c7467b}{sd\-\_\-status} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{extra_8h_a5b5eab639d7574b5e51ae3577da95c83}{\index{extra.\-h@{extra.\-h}!scan\-\_\-files@{scan\-\_\-files}}
+\index{scan\-\_\-files@{scan\-\_\-files}!extra.h@{extra.\-h}}
+\subsubsection[{scan\-\_\-files}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} scan\-\_\-files (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}}\label{extra_8h_a5b5eab639d7574b5e51ae3577da95c83}
+
+
+Definition at line 870 of file pff.\-c.
+
+
+
+References \-\_\-\-F\-S\-\_\-\-R\-P\-A\-T\-H, Acc\-Dirs, Acc\-Files, Acc\-Size, A\-M\-\_\-\-D\-I\-R, dir, f\-\_\-opendir(), f\-\_\-readdir(), F\-I\-L\-I\-N\-F\-O\-::fattrib, Finfo, fn, F\-I\-L\-I\-N\-F\-O\-::fname, F\-R\-\_\-\-O\-K, F\-I\-L\-I\-N\-F\-O\-::fsize, pf\-\_\-opendir(), pf\-\_\-readdir(), psprintf(), res, and scan\-\_\-files().
+
+
+
+Referenced by scan\-\_\-files(), and sd\-\_\-status().
+
+
+\begin{DoxyCode}
+871 \{
+872     \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{FRESULT} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+873     \hyperlink{struct_f_i_l_i_n_f_o}{FILINFO} fno;
+874     \hyperlink{struct_d_i_r}{DIR} \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir};
+875     \textcolor{keywordtype}{char} bufpath[12];
+876     res = \hyperlink{pff_8h_a5ac606cf92330f73b13da516cc6bacd9}{pf\_opendir}(&dir, path);
+877     \textcolor{keywordflow}{if} (res == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{
+878         \textcolor{keywordflow}{for} (;;) \{
+879             res = \hyperlink{pff_8h_a24babb6d58831f1859734a1d0bfc4a9e}{pf\_readdir}(&dir, &fno);
+880            \textcolor{keywordflow}{if} (res != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK} || fno.\hyperlink{struct_f_i_l_i_n_f_o_a5a78da1cb66644bf00efc71578d7fbba}{fname}[0] == 0) \textcolor{keywordflow}{break};
+881             \textcolor{keywordflow}{if} (fno.\hyperlink{struct_f_i_l_i_n_f_o_af5fa689ce021720b227a97f69eb06dfe}{fattrib} & \hyperlink{pff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}{AM\_DIR}) \{
+882                 \hyperlink{stdio_8c_a93eff6365eac353b1696c7109602939d}{psprintf}(bufpath, \textcolor{stringliteral}{"/%s"}, fno.\hyperlink{struct_f_i_l_i_n_f_o_a5a78da1cb66644bf00efc71578d7fbba}{fname});
+883                 res = \hyperlink{pff_8c_a5b5eab639d7574b5e51ae3577da95c83}{scan\_files}(bufpath);
+884                 \textcolor{keywordflow}{if} (res != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{break};
+885             \} \textcolor{keywordflow}{else} \{
+886 \textcolor{preprocessor}{                #ifdef SERIAL\_PRINT}
+887 \textcolor{preprocessor}{}                serial\_printf(\textcolor{stringliteral}{"%s/"}, path);
+888                 serial\_printf(\textcolor{stringliteral}{"%s\(\backslash\)r\(\backslash\)n"}, fno.\hyperlink{struct_f_i_l_i_n_f_o_a5a78da1cb66644bf00efc71578d7fbba}{fname});
+889 \textcolor{preprocessor}{                #endif}
+890 \textcolor{preprocessor}{}\textcolor{preprocessor}{                #ifdef CDC\_PRINT}
+891 \textcolor{preprocessor}{}                CDCprintf(\textcolor{stringliteral}{"%s/"}, path);
+892                 CDCprintf(\textcolor{stringliteral}{"%s\(\backslash\)r\(\backslash\)n"}, fno.\hyperlink{struct_f_i_l_i_n_f_o_a5a78da1cb66644bf00efc71578d7fbba}{fname});
+893 \textcolor{preprocessor}{                #endif}
+894 \textcolor{preprocessor}{}            \}
+895         \}
+896     \}
+897 
+898     \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+899 \}
+\end{DoxyCode}
+\hypertarget{extra_8h_a33aa980f67477357e5a8ce7758c7467b}{\index{extra.\-h@{extra.\-h}!sd\-\_\-status@{sd\-\_\-status}}
+\index{sd\-\_\-status@{sd\-\_\-status}!extra.h@{extra.\-h}}
+\subsubsection[{sd\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}void sd\-\_\-status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{extra_8h_a33aa980f67477357e5a8ce7758c7467b}
+
+
+Definition at line 61 of file extra.\-c.
+
+
+
+References Acc\-Dirs, Acc\-Files, Acc\-Size, F\-A\-T\-F\-S\-::csize, F\-A\-T\-F\-S\-::database, F\-A\-T\-F\-S\-::dirbase, disk\-\_\-ioctl(), f\-\_\-getfree(), Fat, F\-A\-T\-F\-S\-::fatbase, F\-A\-T\-F\-S\-::fs\-\_\-type, F\-A\-T\-F\-S\-::fsize, G\-E\-T\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E, G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-C\-O\-U\-N\-T, M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-T\-Y\-P\-E, F\-A\-T\-F\-S\-::n\-\_\-fatent, F\-A\-T\-F\-S\-::n\-\_\-fats, F\-A\-T\-F\-S\-::n\-\_\-rootdir, res, R\-E\-S\-\_\-\-O\-K, and scan\-\_\-files().
+
+
+\begin{DoxyCode}
+61                      \{
+62     \textcolor{keywordtype}{long} p2;
+63     \hyperlink{p32_2include_2pinguino_2libraries_2sd_2integer_8h_aa1e36ce100a7ff1291e95b4515d42e65}{PF\_BYTE} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res}, b;
+64     \textcolor{keyword}{const} \hyperlink{p32_2include_2pinguino_2libraries_2sd_2integer_8h_aa1e36ce100a7ff1291e95b4515d42e65}{PF\_BYTE} ft[] = \{ 0, 12, 16, 32 \};
+65 
+66     CDCprintln(\textcolor{stringliteral}{"\(\backslash\)nf\_getfree(): "});
+67     res = \hyperlink{tff_8c_a461a4663cbd92d479ad78449483d5cd1}{f\_getfree}(\textcolor{stringliteral}{"/"}, (\hyperlink{p8_2pinguino_2libraries_2integer_8h_ad342ac907eb044443153a22f964bf0af}{DWORD}*) &p2, &\hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat});
+68     \textcolor{keywordflow}{if} (!res) \{
+69         CDCprintln(\textcolor{stringliteral}{" FAT type = FAT%u"}, ft[\hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_aee58d0bf64f06146927e78ad026b06ac}{fs\_type} & 3]);
+70         CDCprintln(\textcolor{stringliteral}{" Bytes/Cluster = %u"}, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_af8143a50ac7be72544022dd46a7013da}{csize} * 512UL);
+71         CDCprintln(\textcolor{stringliteral}{" Number of FATs = %u"}, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_a0ab8d1f18fe8f3574790959cadf4a8fb}{n\_fats});
+72         CDCprintln(\textcolor{stringliteral}{" Root DIR entries = %u"}, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_a5d3e6d5008f57fc6450f4bfd072c5b81}{n\_rootdir});
+73         CDCprintln(\textcolor{stringliteral}{" Sectors/FAT = %u"}, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_af70a0afd16367837984d6205cbfca308}{fsize});
+74         CDCprintln(\textcolor{stringliteral}{" Number of clusters = %u"}, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_a388eb0fa0f3f1449a6ab88c6674e16fc}{n\_fatent} - 2);
+75         CDCprintln(\textcolor{stringliteral}{" FAT start (lba) = %u"}, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_a4c158f002bd87f70c1595baef8888d96}{fatbase});
+76         CDCprintln(\textcolor{stringliteral}{" DIR start (lba,cluster) = %u"}, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_a2152449dba421b7671f09ec7fcc7fa4e}{dirbase});
+77         CDCprintln(\textcolor{stringliteral}{" Data start (lba) = %u"}, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_ae3045fb3d76867c0cd17e6513000146b}{database});
+78 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+79 \textcolor{preprocessor}{}    \} \textcolor{keywordflow}{else} \{
+80         put\_rc(res);
+81 \textcolor{preprocessor}{#endif}
+82 \textcolor{preprocessor}{}    \}
+83 
+84     \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_a1e9c5ddcfdf89c9a42c96ee1d2196876}{AccSize} = \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_add55e437dbd39deb79cfa380d58e83c0}{AccFiles} = \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ac0752a97ce705aba34b02a22f8815921}{AccDirs} = 0;
+85     CDCprintln(\textcolor{stringliteral}{"\(\backslash\)nscan\_files(): "});
+86     res = \hyperlink{extra_8c_a5b5eab639d7574b5e51ae3577da95c83}{scan\_files}(\textcolor{stringliteral}{"/"});
+87     \textcolor{keywordflow}{if} (!res) \{
+88         CDCprintln(\textcolor{stringliteral}{" %u files, %u bytes."}, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_add55e437dbd39deb79cfa380d58e83c0}{AccFiles}, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_a1e9c5ddcfdf89c9a42c96ee1d2196876}{AccSize});
+89         CDCprintln(\textcolor{stringliteral}{" %u folders."}, \hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ac0752a97ce705aba34b02a22f8815921}{AccDirs});
+90         CDCprintln(\textcolor{stringliteral}{" %u KB total disk space."}, (\hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_a388eb0fa0f3f1449a6ab88c6674e16fc}{n\_fatent} - 2)
+91                 * (\hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_af8143a50ac7be72544022dd46a7013da}{csize} / 2));
+92         CDCprintln(\textcolor{stringliteral}{" %u KB available.\(\backslash\)r\(\backslash\)n"}, p2 * (\hyperlink{p32_2include_2pinguino_2libraries_2sd_2fileio_8h_ae76c5b1aa71bec99420b685485d5fe13}{Fat}->\hyperlink{struct_f_a_t_f_s_af8143a50ac7be72544022dd46a7013da}{csize} / 2));
+93 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+94 \textcolor{preprocessor}{}    \} \textcolor{keywordflow}{else} \{
+95         CDCprintln(\textcolor{stringliteral}{"Failed!"});
+96         put\_rc(res);
+97 \textcolor{preprocessor}{#endif}
+98 \textcolor{preprocessor}{}    \}
+99 
+100     \textcolor{keywordflow}{if} ((res = \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a53886c98a2899543b4112044d7b2ec0e}{disk\_ioctl}(0, \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aba3a81a9a47c7d1bf3ac7749bc72dcfd}{MMC\_GET\_TYPE}, &b)) == \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}{RES\_OK}) \{
+101         CDCprintln(\textcolor{stringliteral}{"MMC/SDC type: %u"}, b);
+102 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+103 \textcolor{preprocessor}{}    \} \textcolor{keywordflow}{else} \{
+104         CDCprintf(\textcolor{stringliteral}{"Could not determine card type. "});
+105         put\_rc(res);
+106 \textcolor{preprocessor}{#endif}
+107 \textcolor{preprocessor}{}    \}
+108     \textcolor{keywordflow}{if} ((res = \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a53886c98a2899543b4112044d7b2ec0e}{disk\_ioctl}(0, \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a570216006f6a8fc4e1698b1bbb2d1dde}{GET\_SECTOR\_COUNT}, &p2)) == 
+      \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}{RES\_OK}) \{
+109         CDCprintln(\textcolor{stringliteral}{"Drive size: %u sectors"}, p2);
+110 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+111 \textcolor{preprocessor}{}    \} \textcolor{keywordflow}{else} \{
+112         CDCprintf(\textcolor{stringliteral}{"Could not determine drive size. "});
+113         put\_rc(res);
+114 \textcolor{preprocessor}{#endif}
+115 \textcolor{preprocessor}{}    \}
+116     \textcolor{keywordflow}{if} ((res = \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a53886c98a2899543b4112044d7b2ec0e}{disk\_ioctl}(0, \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aec3bb4dfe075d0ba2f3b07b300a95500}{GET\_BLOCK\_SIZE}, &p2)) == 
+      \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}{RES\_OK}) \{
+117         CDCprintln(\textcolor{stringliteral}{"Erase block: %u sectors"}, p2);
+118 \textcolor{preprocessor}{#ifdef SD\_DEBUG}
+119 \textcolor{preprocessor}{}    \} \textcolor{keywordflow}{else} \{
+120         CDCprintf(\textcolor{stringliteral}{"Could not determine Erase block size. "});
+121         put\_rc(res);
+122 \textcolor{preprocessor}{#endif}
+123 \textcolor{preprocessor}{}    \}
+124 
+125 \}
+\end{DoxyCode}

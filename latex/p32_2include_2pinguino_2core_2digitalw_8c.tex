@@ -1,0 +1,730 @@
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/digitalw.c File Reference}
+\label{p32_2include_2pinguino_2core_2digitalw_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/digitalw.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/digitalw.\-c}}
+}
+{\ttfamily \#include $<$p32xxxx.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2338b7732120fc740980bbe6d83cd132}{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-C}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{p\-A}~0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{p\-B}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{p\-C}~2
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{p\-D}~3
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{p\-E}~4
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}{p\-F}~5
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}{p\-G}~6
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a58cb9ae0b8cdc26197d6ad2bcbe290ef}{\-\_\-0}~1$<$$<$0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a78675b7c6a3a45cbefa0c63695a7d56c}{\-\_\-1}~1$<$$<$1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a3d37341ef4cc8a76b3568d4c4fc1c047}{\-\_\-2}~1$<$$<$2
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a71101de983f7aa4639d7c805a0f25ad6}{\-\_\-3}~1$<$$<$3
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_af663c2ac4b7229460c4b55f64257ed39}{\-\_\-4}~1$<$$<$4
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a69da188114d23e916584c8c5dd64a63c}{\-\_\-5}~1$<$$<$5
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a6aeef62349d63341b1592a75422bdaa6}{\-\_\-6}~1$<$$<$6
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a8641bb4900a710d06d4338602be3c2f7}{\-\_\-7}~1$<$$<$7
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a1963c6e0e04c77914cb67f0af34fdc3a}{\-\_\-8}~1$<$$<$8
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa1f70746f7c7ad1448bb9bce84d3ae87}{\-\_\-9}~1$<$$<$9
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a1d98f2957b367a48e6109b4d7bf96244}{\-\_\-10}~1$<$$<$10
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aabc18bb471d97bad92b375d4ae40bb6b}{\-\_\-11}~1$<$$<$11
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aed88a1cd3e0cf4178becc586d1048b66}{\-\_\-12}~1$<$$<$12
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a3eb900321da31ee7fc5fae934f94c1a6}{\-\_\-13}~1$<$$<$13
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_acf67839d0b2c9ec145a52ca24a443be0}{\-\_\-14}~1$<$$<$14
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a0043b69c8672fa02b7dc8e2fd792effa}{\-\_\-15}~1$<$$<$15
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ad035a828a7349e1e9bca37280b6b9065}{pinmode} (int pin, int \hyperlink{keypad32_8c_a2dc73433524e44e05908b0250ce9d9de}{state})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a7715db926d5919c5ed8b53d966abe165}{output} (int pin)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a837043076a9270519f50c5427e795cca}{input} (int pin)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa1c9a22bd9f995b5bd9520bf55761835}{pinread} (int pin)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_abe70b99273000241a05b4e03d8e8104d}{digitalwrite} (int pin, int \hyperlink{keypad32_8c_a2dc73433524e44e05908b0250ce9d9de}{state})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a4d9825708f3b6cae156e4e5f1e1647f6}{high} (int pin)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ab6b4677f42acfb2273127492d13a7e05}{low} (int pin)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a58e5609c0c1d059fb21d09bc413a5854}{digitalread} (int pin)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a92fb12363f5e6a5f66e65c2a87121681}{toggle} (int pin)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a58cb9ae0b8cdc26197d6ad2bcbe290ef}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-0@{\-\_\-0}}
+\index{\-\_\-0@{\-\_\-0}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-0~1$<$$<$0}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a58cb9ae0b8cdc26197d6ad2bcbe290ef}
+
+
+Definition at line 53 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a78675b7c6a3a45cbefa0c63695a7d56c}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-1@{\-\_\-1}}
+\index{\-\_\-1@{\-\_\-1}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-1~1$<$$<$1}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a78675b7c6a3a45cbefa0c63695a7d56c}
+
+
+Definition at line 54 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a1d98f2957b367a48e6109b4d7bf96244}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-10@{\-\_\-10}}
+\index{\-\_\-10@{\-\_\-10}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-10~1$<$$<$10}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a1d98f2957b367a48e6109b4d7bf96244}
+
+
+Definition at line 63 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_aabc18bb471d97bad92b375d4ae40bb6b}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-11@{\-\_\-11}}
+\index{\-\_\-11@{\-\_\-11}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-11}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-11~1$<$$<$11}}\label{p32_2include_2pinguino_2core_2digitalw_8c_aabc18bb471d97bad92b375d4ae40bb6b}
+
+
+Definition at line 64 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_aed88a1cd3e0cf4178becc586d1048b66}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-12@{\-\_\-12}}
+\index{\-\_\-12@{\-\_\-12}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-12}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-12~1$<$$<$12}}\label{p32_2include_2pinguino_2core_2digitalw_8c_aed88a1cd3e0cf4178becc586d1048b66}
+
+
+Definition at line 65 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a3eb900321da31ee7fc5fae934f94c1a6}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-13@{\-\_\-13}}
+\index{\-\_\-13@{\-\_\-13}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-13}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-13~1$<$$<$13}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a3eb900321da31ee7fc5fae934f94c1a6}
+
+
+Definition at line 66 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_acf67839d0b2c9ec145a52ca24a443be0}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-14@{\-\_\-14}}
+\index{\-\_\-14@{\-\_\-14}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-14}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-14~1$<$$<$14}}\label{p32_2include_2pinguino_2core_2digitalw_8c_acf67839d0b2c9ec145a52ca24a443be0}
+
+
+Definition at line 67 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a0043b69c8672fa02b7dc8e2fd792effa}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-15@{\-\_\-15}}
+\index{\-\_\-15@{\-\_\-15}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-15}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-15~1$<$$<$15}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a0043b69c8672fa02b7dc8e2fd792effa}
+
+
+Definition at line 68 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a3d37341ef4cc8a76b3568d4c4fc1c047}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-2@{\-\_\-2}}
+\index{\-\_\-2@{\-\_\-2}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-2~1$<$$<$2}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a3d37341ef4cc8a76b3568d4c4fc1c047}
+
+
+Definition at line 55 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a71101de983f7aa4639d7c805a0f25ad6}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-3@{\-\_\-3}}
+\index{\-\_\-3@{\-\_\-3}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-3~1$<$$<$3}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a71101de983f7aa4639d7c805a0f25ad6}
+
+
+Definition at line 56 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_af663c2ac4b7229460c4b55f64257ed39}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-4@{\-\_\-4}}
+\index{\-\_\-4@{\-\_\-4}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-4~1$<$$<$4}}\label{p32_2include_2pinguino_2core_2digitalw_8c_af663c2ac4b7229460c4b55f64257ed39}
+
+
+Definition at line 57 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a69da188114d23e916584c8c5dd64a63c}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-5@{\-\_\-5}}
+\index{\-\_\-5@{\-\_\-5}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-5~1$<$$<$5}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a69da188114d23e916584c8c5dd64a63c}
+
+
+Definition at line 58 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a6aeef62349d63341b1592a75422bdaa6}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-6@{\-\_\-6}}
+\index{\-\_\-6@{\-\_\-6}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-6~1$<$$<$6}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a6aeef62349d63341b1592a75422bdaa6}
+
+
+Definition at line 59 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a8641bb4900a710d06d4338602be3c2f7}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-7@{\-\_\-7}}
+\index{\-\_\-7@{\-\_\-7}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-7}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-7~1$<$$<$7}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a8641bb4900a710d06d4338602be3c2f7}
+
+
+Definition at line 60 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a1963c6e0e04c77914cb67f0af34fdc3a}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-8@{\-\_\-8}}
+\index{\-\_\-8@{\-\_\-8}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-8~1$<$$<$8}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a1963c6e0e04c77914cb67f0af34fdc3a}
+
+
+Definition at line 61 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_aa1f70746f7c7ad1448bb9bce84d3ae87}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-9@{\-\_\-9}}
+\index{\-\_\-9@{\-\_\-9}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-9}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-9~1$<$$<$9}}\label{p32_2include_2pinguino_2core_2digitalw_8c_aa1f70746f7c7ad1448bb9bce84d3ae87}
+
+
+Definition at line 62 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a2338b7732120fc740980bbe6d83cd132}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-C@{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-C@{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-C}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-C}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a2338b7732120fc740980bbe6d83cd132}
+
+
+Definition at line 40 of file digitalw.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!p\-A@{p\-A}}
+\index{p\-A@{p\-A}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{p\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define p\-A~0}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}
+
+
+Definition at line 45 of file digitalw.\-c.
+
+
+
+Referenced by digitalread(), digitalwrite(), high(), input(), low(), output(), pinmode(), pinread(), and toggle().
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!p\-B@{p\-B}}
+\index{p\-B@{p\-B}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{p\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define p\-B~1}}\label{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}
+
+
+Definition at line 46 of file digitalw.\-c.
+
+
+
+Referenced by digitalread(), digitalwrite(), high(), input(), low(), output(), pinmode(), pinread(), and toggle().
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!p\-C@{p\-C}}
+\index{p\-C@{p\-C}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{p\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define p\-C~2}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}
+
+
+Definition at line 47 of file digitalw.\-c.
+
+
+
+Referenced by digitalread(), digitalwrite(), high(), input(), low(), output(), pinmode(), pinread(), and toggle().
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!p\-D@{p\-D}}
+\index{p\-D@{p\-D}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{p\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define p\-D~3}}\label{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}
+
+
+Definition at line 48 of file digitalw.\-c.
+
+
+
+Referenced by digitalread(), digitalwrite(), high(), input(), low(), output(), pinmode(), pinread(), and toggle().
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!p\-E@{p\-E}}
+\index{p\-E@{p\-E}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{p\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define p\-E~4}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}
+
+
+Definition at line 49 of file digitalw.\-c.
+
+
+
+Referenced by digitalread(), digitalwrite(), high(), input(), low(), output(), pinmode(), pinread(), and toggle().
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!p\-F@{p\-F}}
+\index{p\-F@{p\-F}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{p\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define p\-F~5}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}
+
+
+Definition at line 50 of file digitalw.\-c.
+
+
+
+Referenced by digitalread(), digitalwrite(), high(), input(), low(), output(), pinmode(), pinread(), and toggle().
+
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!p\-G@{p\-G}}
+\index{p\-G@{p\-G}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{p\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define p\-G~6}}\label{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}
+
+
+Definition at line 51 of file digitalw.\-c.
+
+
+
+Referenced by digitalread(), digitalwrite(), high(), input(), low(), output(), pinmode(), pinread(), and toggle().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a58e5609c0c1d059fb21d09bc413a5854}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!digitalread@{digitalread}}
+\index{digitalread@{digitalread}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{digitalread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} digitalread (
+\begin{DoxyParamCaption}
+\item[{int}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a58e5609c0c1d059fb21d09bc413a5854}
+
+
+Definition at line 478 of file digitalw.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, p\-E, p\-F, and p\-G.
+
+
+\begin{DoxyCode}
+479 \{
+480     \textcolor{keywordflow}{switch} (portmask[pin])
+481     \{
+482 \textcolor{preprocessor}{        #ifndef \_\_32MX440F256H\_\_}
+483 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #ifndef \_\_32MX795F512H\_\_}
+484 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{pA}: \textcolor{keywordflow}{return}((PORTA&pinmask[pin])!=0);
+485                 \textcolor{keywordflow}{break};
+486 \textcolor{preprocessor}{            #endif}
+487 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #endif}
+488 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}: \textcolor{keywordflow}{return}((PORTB&pinmask[pin])!=0);
+489                 \textcolor{keywordflow}{break};
+490 \textcolor{preprocessor}{        #ifndef \_\_32MX250F128B\_\_}
+491 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #ifndef \_\_32MX220F032B\_\_                }
+492 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}: \textcolor{keywordflow}{return}((PORTC&pinmask[pin])!=0);
+493                     \textcolor{keywordflow}{break};
+494 \textcolor{preprocessor}{            #endif}
+495 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #endif}
+496 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifndef \_\_32MX220F032D\_\_}
+497 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #ifndef \_\_32MX250F128B\_\_}
+498 \textcolor{preprocessor}{}\textcolor{preprocessor}{                #ifndef \_\_32MX220F032B\_\_        }
+499 \textcolor{preprocessor}{}                \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{pD}: \textcolor{keywordflow}{return}((PORTD&pinmask[pin])!=0);
+500                         \textcolor{keywordflow}{break};
+501                 \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{pE}: \textcolor{keywordflow}{return}((PORTE&pinmask[pin])!=0);
+502                         \textcolor{keywordflow}{break};
+503                 \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}{pF}: \textcolor{keywordflow}{return}((PORTF&pinmask[pin])!=0);
+504                         \textcolor{keywordflow}{break};
+505                 \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}{pG}: \textcolor{keywordflow}{return}((PORTG&pinmask[pin])!=0);
+506                         \textcolor{keywordflow}{break};
+507 \textcolor{preprocessor}{                #endif}
+508 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #endif}
+509 \textcolor{preprocessor}{}        
+510 \textcolor{preprocessor}{        #endif}
+511 \textcolor{preprocessor}{}        \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} 255;
+512     \}
+513     \textcolor{keywordflow}{return} 255;
+514 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_abe70b99273000241a05b4e03d8e8104d}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!digitalwrite@{digitalwrite}}
+\index{digitalwrite@{digitalwrite}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{digitalwrite}]{\setlength{\rightskip}{0pt plus 5cm}void digitalwrite (
+\begin{DoxyParamCaption}
+\item[{int}]{pin, }
+\item[{int}]{state}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2digitalw_8c_abe70b99273000241a05b4e03d8e8104d}
+
+
+Definition at line 379 of file digitalw.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, p\-E, p\-F, and p\-G.
+
+
+\begin{DoxyCode}
+380 \{
+381     \textcolor{keywordflow}{switch} (portmask[pin])
+382     \{
+383 \textcolor{preprocessor}{        #if !defined(\_\_32MX440F256H\_\_) && !defined(\_\_32MX795F512H\_\_)}
+384 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{pA}:
+385             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) PORTASET=pinmask[pin];
+386             \textcolor{keywordflow}{else} PORTACLR=pinmask[pin];
+387             \textcolor{keywordflow}{break};
+388 \textcolor{preprocessor}{        #endif}
+389 \textcolor{preprocessor}{}        
+390         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}:
+391             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) PORTBSET=pinmask[pin];
+392             \textcolor{keywordflow}{else} PORTBCLR=pinmask[pin];
+393             \textcolor{keywordflow}{break};
+394             
+395 \textcolor{preprocessor}{        #if !defined(\_\_32MX250F128B\_\_) && !defined(\_\_32MX220F032B\_\_)}
+396 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}:
+397             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) PORTCSET=pinmask[pin];
+398             \textcolor{keywordflow}{else} PORTCCLR=pinmask[pin];
+399             \textcolor{keywordflow}{break};
+400 \textcolor{preprocessor}{        #endif}
+401 \textcolor{preprocessor}{}
+402 \textcolor{preprocessor}{        #if !defined(\_\_32MX220F032D\_\_) && !defined(\_\_32MX250F128B\_\_) && \(\backslash\)}
+403 \textcolor{preprocessor}{            !defined(\_\_32MX220F032B\_\_)}
+404 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{pD}:
+405             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) PORTDSET=pinmask[pin];
+406             \textcolor{keywordflow}{else} PORTDCLR=pinmask[pin];
+407             \textcolor{keywordflow}{break};
+408         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{pE}:
+409             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) PORTESET=pinmask[pin];
+410             \textcolor{keywordflow}{else} PORTECLR=pinmask[pin];
+411             \textcolor{keywordflow}{break};
+412         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}{pF}:
+413             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) PORTFSET=pinmask[pin];
+414             \textcolor{keywordflow}{else} PORTFCLR=pinmask[pin];
+415             \textcolor{keywordflow}{break};
+416         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}{pG}:
+417             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) PORTGSET=pinmask[pin];
+418             \textcolor{keywordflow}{else} PORTGCLR=pinmask[pin];
+419             \textcolor{keywordflow}{break};
+420 \textcolor{preprocessor}{        #endif}
+421 \textcolor{preprocessor}{}    \}
+422 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a4d9825708f3b6cae156e4e5f1e1647f6}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!high@{high}}
+\index{high@{high}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{high}]{\setlength{\rightskip}{0pt plus 5cm}void high (
+\begin{DoxyParamCaption}
+\item[{int}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a4d9825708f3b6cae156e4e5f1e1647f6}
+
+
+Definition at line 426 of file digitalw.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, p\-E, p\-F, and p\-G.
+
+
+\begin{DoxyCode}
+427 \{
+428     \textcolor{keywordflow}{switch} (portmask[pin])
+429     \{
+430 \textcolor{preprocessor}{        #if !defined(\_\_32MX440F256H\_\_) && !defined(\_\_32MX795F512H\_\_)}
+431 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{pA}: PORTASET=pinmask[pin]; \textcolor{keywordflow}{break};
+432 \textcolor{preprocessor}{        #endif}
+433 \textcolor{preprocessor}{}        
+434         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}: PORTBSET=pinmask[pin]; \textcolor{keywordflow}{break};
+435             
+436 \textcolor{preprocessor}{        #if !defined(\_\_32MX250F128B\_\_) && !defined(\_\_32MX220F032B\_\_)}
+437 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}: PORTCSET=pinmask[pin]; \textcolor{keywordflow}{break};
+438 \textcolor{preprocessor}{        #endif}
+439 \textcolor{preprocessor}{}
+440 \textcolor{preprocessor}{        #if !defined(\_\_32MX220F032D\_\_) && !defined(\_\_32MX250F128B\_\_) && \(\backslash\)}
+441 \textcolor{preprocessor}{            !defined(\_\_32MX220F032B\_\_)}
+442 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{pD}: PORTDSET=pinmask[pin]; \textcolor{keywordflow}{break};
+443         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{pE}: PORTESET=pinmask[pin]; \textcolor{keywordflow}{break};
+444         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}{pF}: PORTFSET=pinmask[pin]; \textcolor{keywordflow}{break};
+445         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}{pG}: PORTGSET=pinmask[pin]; \textcolor{keywordflow}{break};
+446 \textcolor{preprocessor}{        #endif}
+447 \textcolor{preprocessor}{}    \}
+448 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a837043076a9270519f50c5427e795cca}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!input@{input}}
+\index{input@{input}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{input}]{\setlength{\rightskip}{0pt plus 5cm}void input (
+\begin{DoxyParamCaption}
+\item[{int}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a837043076a9270519f50c5427e795cca}
+
+
+Definition at line 303 of file digitalw.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, p\-E, p\-F, and p\-G.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute().
+
+
+\begin{DoxyCode}
+304 \{
+305     \textcolor{keywordflow}{switch} (portmask[pin])
+306     \{
+307 \textcolor{preprocessor}{        #if !defined(\_\_32MX440F256H\_\_) && !defined(\_\_32MX795F512H\_\_)}
+308 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{pA}: TRISASET=pinmask[pin]; \textcolor{keywordflow}{break};
+309 \textcolor{preprocessor}{        #endif}
+310 \textcolor{preprocessor}{}
+311         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}: TRISBSET=pinmask[pin]; \textcolor{keywordflow}{break};
+312 
+313 \textcolor{preprocessor}{        #if !defined(\_\_32MX250F128B\_\_) && !defined(\_\_32MX220F032B\_\_)}
+314 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}: TRISCSET=pinmask[pin]; \textcolor{keywordflow}{break};
+315 \textcolor{preprocessor}{        #endif}
+316 \textcolor{preprocessor}{}
+317 \textcolor{preprocessor}{        #if !defined(\_\_32MX220F032D\_\_) && !defined(\_\_32MX250F128B\_\_) && \(\backslash\)}
+318 \textcolor{preprocessor}{            !defined(\_\_32MX220F032B\_\_)}
+319 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{pD}: TRISDSET=pinmask[pin]; \textcolor{keywordflow}{break};
+320         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{pE}: TRISESET=pinmask[pin]; \textcolor{keywordflow}{break};
+321         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}{pF}: TRISFSET=pinmask[pin]; \textcolor{keywordflow}{break};
+322         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}{pG}: TRISGSET=pinmask[pin]; \textcolor{keywordflow}{break};
+323 \textcolor{preprocessor}{        #endif}
+324 \textcolor{preprocessor}{}    \}
+325 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_ab6b4677f42acfb2273127492d13a7e05}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!low@{low}}
+\index{low@{low}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{low}]{\setlength{\rightskip}{0pt plus 5cm}void low (
+\begin{DoxyParamCaption}
+\item[{int}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2digitalw_8c_ab6b4677f42acfb2273127492d13a7e05}
+
+
+Definition at line 452 of file digitalw.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, p\-E, p\-F, and p\-G.
+
+
+\begin{DoxyCode}
+453 \{
+454     \textcolor{keywordflow}{switch} (portmask[pin])
+455     \{
+456 \textcolor{preprocessor}{        #if !defined(\_\_32MX440F256H\_\_) && !defined(\_\_32MX795F512H\_\_)}
+457 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{pA}: PORTACLR=pinmask[pin]; \textcolor{keywordflow}{break};
+458 \textcolor{preprocessor}{        #endif}
+459 \textcolor{preprocessor}{}        
+460         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}: PORTBCLR=pinmask[pin]; \textcolor{keywordflow}{break};
+461             
+462 \textcolor{preprocessor}{        #if !defined(\_\_32MX250F128B\_\_) && !defined(\_\_32MX220F032B\_\_)}
+463 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}: PORTCCLR=pinmask[pin]; \textcolor{keywordflow}{break};
+464 \textcolor{preprocessor}{        #endif}
+465 \textcolor{preprocessor}{}
+466 \textcolor{preprocessor}{        #if !defined(\_\_32MX220F032D\_\_) && !defined(\_\_32MX250F128B\_\_) && \(\backslash\)}
+467 \textcolor{preprocessor}{            !defined(\_\_32MX220F032B\_\_)}
+468 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{pD}: PORTDCLR=pinmask[pin]; \textcolor{keywordflow}{break};
+469         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{pE}: PORTECLR=pinmask[pin]; \textcolor{keywordflow}{break};
+470         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}{pF}: PORTFCLR=pinmask[pin]; \textcolor{keywordflow}{break};
+471         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}{pG}: PORTGCLR=pinmask[pin]; \textcolor{keywordflow}{break};
+472 \textcolor{preprocessor}{        #endif}
+473 \textcolor{preprocessor}{}    \}
+474 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a7715db926d5919c5ed8b53d966abe165}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!output@{output}}
+\index{output@{output}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{output}]{\setlength{\rightskip}{0pt plus 5cm}void output (
+\begin{DoxyParamCaption}
+\item[{int}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a7715db926d5919c5ed8b53d966abe165}
+
+
+Definition at line 277 of file digitalw.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, p\-E, p\-F, and p\-G.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute().
+
+
+\begin{DoxyCode}
+278 \{
+279     \textcolor{keywordflow}{switch} (portmask[pin])
+280     \{
+281 \textcolor{preprocessor}{        #if !defined(\_\_32MX440F256H\_\_) && !defined(\_\_32MX795F512H\_\_)}
+282 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{pA}: TRISACLR=pinmask[pin]; \textcolor{keywordflow}{break};
+283 \textcolor{preprocessor}{        #endif}
+284 \textcolor{preprocessor}{}
+285         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}: TRISBCLR=pinmask[pin]; \textcolor{keywordflow}{break};
+286 
+287 \textcolor{preprocessor}{        #if !defined(\_\_32MX250F128B\_\_) && !defined(\_\_32MX220F032B\_\_)}
+288 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}: TRISCCLR=pinmask[pin]; \textcolor{keywordflow}{break};
+289 \textcolor{preprocessor}{        #endif}
+290 \textcolor{preprocessor}{}
+291 \textcolor{preprocessor}{        #if !defined(\_\_32MX220F032D\_\_) && !defined(\_\_32MX250F128B\_\_) && \(\backslash\)}
+292 \textcolor{preprocessor}{            !defined(\_\_32MX220F032B\_\_)}
+293 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{pD}: TRISDCLR=pinmask[pin]; \textcolor{keywordflow}{break};
+294         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{pE}: TRISECLR=pinmask[pin]; \textcolor{keywordflow}{break};
+295         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}{pF}: TRISFCLR=pinmask[pin]; \textcolor{keywordflow}{break};
+296         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}{pG}: TRISGCLR=pinmask[pin]; \textcolor{keywordflow}{break};
+297 \textcolor{preprocessor}{        #endif}
+298 \textcolor{preprocessor}{}    \}
+299 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_ad035a828a7349e1e9bca37280b6b9065}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!pinmode@{pinmode}}
+\index{pinmode@{pinmode}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{pinmode}]{\setlength{\rightskip}{0pt plus 5cm}void pinmode (
+\begin{DoxyParamCaption}
+\item[{int}]{pin, }
+\item[{int}]{state}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2digitalw_8c_ad035a828a7349e1e9bca37280b6b9065}
+
+
+Definition at line 230 of file digitalw.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, p\-E, p\-F, and p\-G.
+
+
+\begin{DoxyCode}
+231 \{
+232     \textcolor{keywordflow}{switch} (portmask[pin])
+233     \{
+234 \textcolor{preprocessor}{        #if !defined(\_\_32MX440F256H\_\_) && !defined(\_\_32MX795F512H\_\_)}
+235 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{pA}:
+236             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISASET=pinmask[pin];
+237             \textcolor{keywordflow}{else} TRISACLR=pinmask[pin];
+238             \textcolor{keywordflow}{break};
+239 \textcolor{preprocessor}{        #endif}
+240 \textcolor{preprocessor}{}
+241         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}:
+242             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISBSET=pinmask[pin];
+243             \textcolor{keywordflow}{else} TRISBCLR=pinmask[pin];
+244             \textcolor{keywordflow}{break};
+245 
+246 \textcolor{preprocessor}{        #if !defined(\_\_32MX250F128B\_\_) && !defined(\_\_32MX220F032B\_\_)}
+247 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}:
+248             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISCSET=pinmask[pin];
+249             \textcolor{keywordflow}{else} TRISCCLR=pinmask[pin];
+250             \textcolor{keywordflow}{break};
+251 \textcolor{preprocessor}{        #endif}
+252 \textcolor{preprocessor}{}
+253 \textcolor{preprocessor}{        #if !defined(\_\_32MX220F032D\_\_) && !defined(\_\_32MX250F128B\_\_) && \(\backslash\)}
+254 \textcolor{preprocessor}{            !defined(\_\_32MX220F032B\_\_)}
+255 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{pD}:
+256             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISDSET=pinmask[pin];
+257             \textcolor{keywordflow}{else} TRISDCLR=pinmask[pin];
+258             \textcolor{keywordflow}{break};
+259         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{pE}:
+260             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISESET=pinmask[pin];
+261             \textcolor{keywordflow}{else} TRISECLR=pinmask[pin];
+262             \textcolor{keywordflow}{break};
+263         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}{pF}:
+264             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISFSET=pinmask[pin];
+265             \textcolor{keywordflow}{else} TRISFCLR=pinmask[pin];
+266             \textcolor{keywordflow}{break};
+267         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}{pG}:
+268             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISGSET=pinmask[pin];
+269             \textcolor{keywordflow}{else} TRISGCLR=pinmask[pin];
+270             \textcolor{keywordflow}{break};
+271 \textcolor{preprocessor}{        #endif}
+272 \textcolor{preprocessor}{}    \}
+273 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_aa1c9a22bd9f995b5bd9520bf55761835}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!pinread@{pinread}}
+\index{pinread@{pinread}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{pinread}]{\setlength{\rightskip}{0pt plus 5cm}int pinread (
+\begin{DoxyParamCaption}
+\item[{int}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2digitalw_8c_aa1c9a22bd9f995b5bd9520bf55761835}
+
+
+Definition at line 329 of file digitalw.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, p\-E, p\-F, and p\-G.
+
+
+\begin{DoxyCode}
+330 \{
+331     \textcolor{keywordtype}{int} reg = 0;
+332 
+333     \textcolor{keywordflow}{switch} (portmask[pin])
+334     \{
+335 \textcolor{preprocessor}{        #ifndef \_\_32MX440F256H\_\_}
+336 \textcolor{preprocessor}{}\textcolor{preprocessor}{           #ifndef \_\_32MX795F512H\_\_}
+337 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{pA}:
+338                 reg = TRISA;
+339                 \textcolor{keywordflow}{break};
+340 \textcolor{preprocessor}{            #endif}
+341 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #endif}
+342 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}:
+343             reg = TRISB;
+344             \textcolor{keywordflow}{break};
+345 \textcolor{preprocessor}{        #ifndef \_\_32MX250F128B\_\_}
+346 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #ifndef \_\_32MX220F032B\_\_            }
+347 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}:
+348                 reg = TRISC;
+349                 \textcolor{keywordflow}{break};
+350 \textcolor{preprocessor}{            #endif}
+351 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #endif}
+352 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifndef \_\_32MX220F032D\_\_}
+353 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #ifndef \_\_32MX250F128B\_\_}
+354 \textcolor{preprocessor}{}\textcolor{preprocessor}{                #ifndef \_\_32MX220F032B\_\_        }
+355 \textcolor{preprocessor}{}                \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{pD}:
+356                     reg = TRISD;
+357                     \textcolor{keywordflow}{break};
+358                 \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{pE}:
+359                     reg = TRISE;
+360                     \textcolor{keywordflow}{break};
+361                 \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}{pF}:
+362                     reg = TRISF;
+363                     \textcolor{keywordflow}{break};
+364                 \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}{pG}:
+365                     reg = TRISG;
+366                     \textcolor{keywordflow}{break};
+367 \textcolor{preprocessor}{                #endif}
+368 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #endif}
+369 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #endif}
+370 \textcolor{preprocessor}{}    \}
+371     \textcolor{keywordflow}{if} ((reg & pinmask[pin])!=0)
+372         \textcolor{keywordflow}{return} 1;
+373     \textcolor{keywordflow}{else}
+374         \textcolor{keywordflow}{return} 0;
+375 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2digitalw_8c_a92fb12363f5e6a5f66e65c2a87121681}{\index{p32/include/pinguino/core/digitalw.\-c@{p32/include/pinguino/core/digitalw.\-c}!toggle@{toggle}}
+\index{toggle@{toggle}!p32/include/pinguino/core/digitalw.c@{p32/include/pinguino/core/digitalw.\-c}}
+\subsubsection[{toggle}]{\setlength{\rightskip}{0pt plus 5cm}void toggle (
+\begin{DoxyParamCaption}
+\item[{int}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2digitalw_8c_a92fb12363f5e6a5f66e65c2a87121681}
+
+
+Definition at line 518 of file digitalw.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, p\-E, p\-F, and p\-G.
+
+
+\begin{DoxyCode}
+519 \{
+520     \textcolor{comment}{//digitalwrite(pin, digitalread(pin)^1);}
+521 
+522     \textcolor{keywordflow}{switch} (portmask[pin])
+523     \{
+524 \textcolor{preprocessor}{        #if !defined(\_\_32MX440F256H\_\_) && !defined(\_\_32MX795F512H\_\_)}
+525 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{pA}: PORTAINV=pinmask[pin]; \textcolor{keywordflow}{break};
+526 \textcolor{preprocessor}{        #endif}
+527 \textcolor{preprocessor}{}
+528         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}: PORTBINV=pinmask[pin]; \textcolor{keywordflow}{break};
+529 
+530 \textcolor{preprocessor}{        #if !defined(\_\_32MX250F128B\_\_) && !defined(\_\_32MX220F032B\_\_)}
+531 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}: PORTCINV=pinmask[pin]; \textcolor{keywordflow}{break};
+532 \textcolor{preprocessor}{        #endif}
+533 \textcolor{preprocessor}{}
+534 \textcolor{preprocessor}{        #if !defined(\_\_32MX220F032B\_\_) && !defined(\_\_32MX220F032D\_\_) && \(\backslash\)}
+535 \textcolor{preprocessor}{            !defined(\_\_32MX250F128B\_\_)}
+536 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{pD}: PORTDINV=pinmask[pin]; \textcolor{keywordflow}{break};
+537         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{pE}: PORTEINV=pinmask[pin]; \textcolor{keywordflow}{break};
+538         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a253177bee303a3fa05dd3ded2a661fb8}{pF}: PORTFINV=pinmask[pin]; \textcolor{keywordflow}{break};
+539         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ae69fc4f0a85c314ed8fc228e30f7a91b}{pG}: PORTGINV=pinmask[pin]; \textcolor{keywordflow}{break};
+540 \textcolor{preprocessor}{        #endif}
+541 \textcolor{preprocessor}{}    \}
+542 \}
+\end{DoxyCode}

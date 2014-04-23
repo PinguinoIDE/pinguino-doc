@@ -1,0 +1,62 @@
+\hypertarget{p32_2include_2pinguino_2core_2bcd_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/bcd.c File Reference}
+\label{p32_2include_2pinguino_2core_2bcd_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/bcd.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/bcd.\-c}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2bcd_8c_a567cd63bfd004260de4f1fff88563bc0}{\-\_\-\-\_\-\-B\-C\-D\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2bcd_8c_a5849b0c19c836953a8170c589f376385}{bin2bcd} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} dec)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} bcd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2bcd_8c_a567cd63bfd004260de4f1fff88563bc0}{\index{p32/include/pinguino/core/bcd.\-c@{p32/include/pinguino/core/bcd.\-c}!\-\_\-\-\_\-\-B\-C\-D\-\_\-\-C@{\-\_\-\-\_\-\-B\-C\-D\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-B\-C\-D\-\_\-\-C@{\-\_\-\-\_\-\-B\-C\-D\-\_\-\-C}!p32/include/pinguino/core/bcd.c@{p32/include/pinguino/core/bcd.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-B\-C\-D\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-B\-C\-D\-\_\-\-C}}\label{p32_2include_2pinguino_2core_2bcd_8c_a567cd63bfd004260de4f1fff88563bc0}
+
+
+Definition at line 25 of file bcd.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{\index{p32/include/pinguino/core/bcd.\-c@{p32/include/pinguino/core/bcd.\-c}!bcd2bin@{bcd2bin}}
+\index{bcd2bin@{bcd2bin}!p32/include/pinguino/core/bcd.c@{p32/include/pinguino/core/bcd.\-c}}
+\subsubsection[{bcd2bin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} bcd2bin (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{bcd}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}
+
+
+Definition at line 40 of file bcd.\-c.
+
+
+\begin{DoxyCode}
+41 \{
+42     \textcolor{keywordflow}{return} ((bcd >> 4) * 10) + bcd % 16;
+43 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2bcd_8c_a5849b0c19c836953a8170c589f376385}{\index{p32/include/pinguino/core/bcd.\-c@{p32/include/pinguino/core/bcd.\-c}!bin2bcd@{bin2bcd}}
+\index{bin2bcd@{bin2bcd}!p32/include/pinguino/core/bcd.c@{p32/include/pinguino/core/bcd.\-c}}
+\subsubsection[{bin2bcd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} bin2bcd (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{dec}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2bcd_8c_a5849b0c19c836953a8170c589f376385}
+
+
+Definition at line 31 of file bcd.\-c.
+
+
+\begin{DoxyCode}
+32 \{
+33     \textcolor{keywordflow}{return} ((dec/10) << 4) + (dec % 10);
+34 \}
+\end{DoxyCode}

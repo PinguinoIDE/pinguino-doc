@@ -1,0 +1,1145 @@
+\hypertarget{_s_t7565_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-S\-T7565.c File Reference}
+\label{_s_t7565_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-S\-T7565.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-S\-T7565.\-c}}
+}
+{\ttfamily \#include $<$S\-T7565.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$delayms.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_s_t7565_8c_a75acaba9e781937468d0911423bc0c35}{P\-R\-O\-G\-M\-E\-M}~/$\ast$ empty $\ast$/
+\item 
+\#define \hyperlink{_s_t7565_8c_ab7ad001d0fc6bc6ac48af63aba8778b4}{pgm\-\_\-read\-\_\-byte}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~($\ast$((char $\ast$)\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}))
+\item 
+\#define \hyperlink{_s_t7565_8c_a0d3defab4b1a38cb61f943c1d0da516c}{S\-T7565\-\_\-\-S\-T\-A\-R\-T\-B\-Y\-T\-E\-S}~1
+\item 
+\#define \hyperlink{_s_t7565_8c_a11643f271076024c395a93800b3d9546}{\-\_\-\-B\-V}(bit)~(1 $<$$<$ (bit))
+\item 
+\#define \hyperlink{_s_t7565_8c_a5811613d98580676f67f0dde8125433e}{L\-S\-B\-F\-I\-R\-S\-T}~0
+\item 
+\#define \hyperlink{_s_t7565_8c_a1c7ef42eff02618bde70868af4944d81}{M\-S\-B\-F\-I\-R\-S\-T}~1
+\item 
+\#define \hyperlink{_s_t7565_8c_a3aa069ac3980707dae1e0530f50d59e4}{abs}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}$>$=0)?x\-:-\/\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}
+\item 
+\#define \hyperlink{_s_t7565_8c_ace0904a59b043c60c7c4a77c305bef0b}{enable\-Partial\-Update}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_s_t7565_8c_a41c5995cabf4db5592b7166bb7ca9aaa}{S\-T7565\-\_\-draw\-Bitmap} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$bitmap, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} w, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{_s_t7565_8c_a53c75daddf26f85323c1a447517157f0}{S\-T7565\-\_\-draw\-String} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} line, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{_s_t7565_8c_ad9c028af1fafb58111bed04a97c0bdfe}{S\-T7565\-\_\-draw\-String\-\_\-\-P} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} line, const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$str)
+\item 
+void \hyperlink{_s_t7565_8c_ac33fdebf0d0c2085338857b7079e4b7c}{S\-T7565\-\_\-draw\-Char} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} line, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{_s_t7565_8c_a85c2762d1a8063db2b37536af24a2cff}{S\-T7565\-\_\-draw\-Line} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} x0, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} y0, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} x1, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} y1, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{_s_t7565_8c_af3fcf7bcfa62304cb0792c699b17ca1f}{S\-T7565\-\_\-fill\-Rect} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} w, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{_s_t7565_8c_aecd31bb968eb7a428fbbcd8156864edd}{S\-T7565\-\_\-draw\-Rect} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} w, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{_s_t7565_8c_ac20b9cebcea7aefd45895e462a025fb2}{S\-T7565\-\_\-draw\-Circle} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} x0, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} y0, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} r, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{_s_t7565_8c_a56b83cead84fa85a750e2fd5ed237951}{S\-T7565\-\_\-fill\-Circle} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} x0, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} y0, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} r, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{S\-T7565\-\_\-my\-\_\-set\-Pixel} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{_s_t7565_8c_a6ffbe4fe3b69583ac45f13ec2f7b1e75}{S\-T7565\-\_\-set\-Pixel} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_s_t7565_8c_aadf6f83cd4aa48255664eed6e4a5996e}{S\-T7565\-\_\-get\-Pixel} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y})
+\item 
+void \hyperlink{_s_t7565_8c_a6d9d8287c1d1953e4ef85db87c09f738}{S\-T7565\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} S\-I\-D, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} S\-C\-L\-K, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} D\-C, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} R\-S\-T, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} C\-S)
+\item 
+void \hyperlink{_s_t7565_8c_ac051766b0cbd26fee6c10a03b2cdca87}{S\-T7565\-\_\-shift\-Out} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} data\-Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} clock\-Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} bit\-Order, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} val)
+\item 
+void \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{S\-T7565\-\_\-command} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{_s_t7565_8c_a1772109190633fa7797d0639e66f492a}{S\-T7565\-\_\-data} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{_s_t7565_8c_ac93105261e5fb485635870cdd90b88eb}{S\-T7565\-\_\-set\-Brightness} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} val)
+\item 
+void \hyperlink{_s_t7565_8c_a2893397c6552341d2dcafa7395e66e88}{S\-T7565\-\_\-refresh} (void)
+\item 
+void \hyperlink{_s_t7565_8c_a81e4c30ee2f3becdce1035296b1e958a}{S\-T7565\-\_\-clear} (void)
+\item 
+void \hyperlink{_s_t7565_8c_a4235a15787fae7f10fea6c62ece56938}{S\-T7565\-\_\-clear\-Display} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_s_t7565_8c_ab3a1360f626953af80398c1523291aef}{is\-\_\-reversed} = 0
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_s_t7565_8c_a092884ee9857dfa44baaf040ccb9ed6c}{sid}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_s_t7565_8c_ae797386e065be60420c8a64785f2a607}{sclk}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_s_t7565_8c_a2895a68380d0928d0df66c2654fa1281}{dc}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_s_t7565_8c_a709cb1f161a6612e2bd5285f6f197eec}{rst}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_s_t7565_8c_aa327f6cf46d6317dfc2e70b8b628d54d}{cs}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_s_t7565_8c_a6d23b1ebc8d5846a9292202e2d908414}{pagemap} \mbox{[}$\,$\mbox{]} = \{ 3, 2, 1, 0, 7, 6, 5, 4 \}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_s_t7565_8c_afc019ed26f2d57e2b415e12fb53ae54a}{font} \mbox{[}1275\mbox{]}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_s_t7565_8c_abc0fff4990a9ebc783a670f18c2443bd}{S\-T7565\-\_\-buffer} \mbox{[}1024\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_s_t7565_8c_a11643f271076024c395a93800b3d9546}{\index{S\-T7565.\-c@{S\-T7565.\-c}!\-\_\-\-B\-V@{\-\_\-\-B\-V}}
+\index{\-\_\-\-B\-V@{\-\_\-\-B\-V}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{\-\_\-\-B\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-B\-V(
+\begin{DoxyParamCaption}
+\item[{}]{bit}
+\end{DoxyParamCaption}
+)~(1 $<$$<$ (bit))}}\label{_s_t7565_8c_a11643f271076024c395a93800b3d9546}
+
+
+Definition at line 48 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-draw\-Bitmap(), S\-T7565\-\_\-my\-\_\-set\-Pixel(), and S\-T7565\-\_\-set\-Pixel().
+
+\hypertarget{_s_t7565_8c_a3aa069ac3980707dae1e0530f50d59e4}{\index{S\-T7565.\-c@{S\-T7565.\-c}!abs@{abs}}
+\index{abs@{abs}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{abs}]{\setlength{\rightskip}{0pt plus 5cm}\#define abs(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~({\bf x}$>$=0)?x\-:-\/{\bf x}}}\label{_s_t7565_8c_a3aa069ac3980707dae1e0530f50d59e4}
+
+
+Definition at line 51 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-draw\-Line().
+
+\hypertarget{_s_t7565_8c_ace0904a59b043c60c7c4a77c305bef0b}{\index{S\-T7565.\-c@{S\-T7565.\-c}!enable\-Partial\-Update@{enable\-Partial\-Update}}
+\index{enable\-Partial\-Update@{enable\-Partial\-Update}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{enable\-Partial\-Update}]{\setlength{\rightskip}{0pt plus 5cm}\#define enable\-Partial\-Update}}\label{_s_t7565_8c_ace0904a59b043c60c7c4a77c305bef0b}
+
+
+Definition at line 424 of file S\-T7565.\-c.
+
+\hypertarget{_s_t7565_8c_a5811613d98580676f67f0dde8125433e}{\index{S\-T7565.\-c@{S\-T7565.\-c}!L\-S\-B\-F\-I\-R\-S\-T@{L\-S\-B\-F\-I\-R\-S\-T}}
+\index{L\-S\-B\-F\-I\-R\-S\-T@{L\-S\-B\-F\-I\-R\-S\-T}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{L\-S\-B\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-S\-B\-F\-I\-R\-S\-T~0}}\label{_s_t7565_8c_a5811613d98580676f67f0dde8125433e}
+
+
+Definition at line 49 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-shift\-Out().
+
+\hypertarget{_s_t7565_8c_a1c7ef42eff02618bde70868af4944d81}{\index{S\-T7565.\-c@{S\-T7565.\-c}!M\-S\-B\-F\-I\-R\-S\-T@{M\-S\-B\-F\-I\-R\-S\-T}}
+\index{M\-S\-B\-F\-I\-R\-S\-T@{M\-S\-B\-F\-I\-R\-S\-T}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{M\-S\-B\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-B\-F\-I\-R\-S\-T~1}}\label{_s_t7565_8c_a1c7ef42eff02618bde70868af4944d81}
+
+
+Definition at line 50 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-command(), and S\-T7565\-\_\-data().
+
+\hypertarget{_s_t7565_8c_ab7ad001d0fc6bc6ac48af63aba8778b4}{\index{S\-T7565.\-c@{S\-T7565.\-c}!pgm\-\_\-read\-\_\-byte@{pgm\-\_\-read\-\_\-byte}}
+\index{pgm\-\_\-read\-\_\-byte@{pgm\-\_\-read\-\_\-byte}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{pgm\-\_\-read\-\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\-\_\-read\-\_\-byte(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~($\ast$((char $\ast$){\bf x}))}}\label{_s_t7565_8c_ab7ad001d0fc6bc6ac48af63aba8778b4}
+
+
+Definition at line 46 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-draw\-Bitmap(), and S\-T7565\-\_\-draw\-String\-\_\-\-P().
+
+\hypertarget{_s_t7565_8c_a75acaba9e781937468d0911423bc0c35}{\index{S\-T7565.\-c@{S\-T7565.\-c}!P\-R\-O\-G\-M\-E\-M@{P\-R\-O\-G\-M\-E\-M}}
+\index{P\-R\-O\-G\-M\-E\-M@{P\-R\-O\-G\-M\-E\-M}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{P\-R\-O\-G\-M\-E\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-O\-G\-M\-E\-M~/$\ast$ empty $\ast$/}}\label{_s_t7565_8c_a75acaba9e781937468d0911423bc0c35}
+C\-H\-A\-N\-G\-E\-L\-O\-G \-: R\-B -\/ Mar. 2014 -\/ Renamed all function names to S\-T7565\-\_\-xxxx()
+
+T\-O\-D\-O \-: Add print, printf, print\-Number, print\-Float, set\-Font, ... see \-: S\-S\-D1306, P\-C\-D8544, lcdlib, ... 
+
+Definition at line 45 of file S\-T7565.\-c.
+
+\hypertarget{_s_t7565_8c_a0d3defab4b1a38cb61f943c1d0da516c}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-\-S\-T\-A\-R\-T\-B\-Y\-T\-E\-S@{S\-T7565\-\_\-\-S\-T\-A\-R\-T\-B\-Y\-T\-E\-S}}
+\index{S\-T7565\-\_\-\-S\-T\-A\-R\-T\-B\-Y\-T\-E\-S@{S\-T7565\-\_\-\-S\-T\-A\-R\-T\-B\-Y\-T\-E\-S}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-\-S\-T\-A\-R\-T\-B\-Y\-T\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T7565\-\_\-\-S\-T\-A\-R\-T\-B\-Y\-T\-E\-S~1}}\label{_s_t7565_8c_a0d3defab4b1a38cb61f943c1d0da516c}
+
+
+Definition at line 47 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-refresh().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_s_t7565_8c_a81e4c30ee2f3becdce1035296b1e958a}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-clear@{S\-T7565\-\_\-clear}}
+\index{S\-T7565\-\_\-clear@{S\-T7565\-\_\-clear}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_a81e4c30ee2f3becdce1035296b1e958a}
+
+
+Definition at line 889 of file S\-T7565.\-c.
+
+
+
+References L\-C\-D\-H\-E\-I\-G\-H\-T, L\-C\-D\-W\-I\-D\-T\-H, and S\-T7565\-\_\-buffer.
+
+
+\begin{DoxyCode}
+890 \{
+891   memset(\hyperlink{_s_t7565_8c_abc0fff4990a9ebc783a670f18c2443bd}{ST7565\_buffer}, 0, 1024);
+892   updateBoundingBox(0, 0, \hyperlink{_s_t7565_8h_ab878ba9c08d0b28da2e47e738293d1f1}{LCDWIDTH}-1, \hyperlink{_s_t7565_8h_ab8003ea933023d0013b73e43360a351d}{LCDHEIGHT}-1);
+893 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_a4235a15787fae7f10fea6c62ece56938}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-clear\-Display@{S\-T7565\-\_\-clear\-Display}}
+\index{S\-T7565\-\_\-clear\-Display@{S\-T7565\-\_\-clear\-Display}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-clear\-Display}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-clear\-Display (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_a4235a15787fae7f10fea6c62ece56938}
+
+
+Definition at line 897 of file S\-T7565.\-c.
+
+
+
+References c, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-U\-M\-N\-\_\-\-L\-O\-W\-E\-R, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-U\-M\-N\-\_\-\-U\-P\-P\-E\-R, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-P\-A\-G\-E, S\-T7565\-\_\-command(), and S\-T7565\-\_\-data().
+
+
+\begin{DoxyCode}
+898 \{
+899   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} p, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+900   
+901   \textcolor{keywordflow}{for}(p = 0; p < 8; p++) \{
+902     \textcolor{comment}{/*}
+903 \textcolor{comment}{      putstring("new page! ");}
+904 \textcolor{comment}{      uart\_putw\_dec(p);}
+905 \textcolor{comment}{      putstring\_nl("");}
+906 \textcolor{comment}{    */}
+907 
+908     \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a4983ac890d3b490f780c71647270d91a}{CMD\_SET\_PAGE} | p);
+909     \textcolor{keywordflow}{for}(c = 0; c < 129; c++) \{
+910       \textcolor{comment}{//uart\_putw\_dec(c);}
+911       \textcolor{comment}{//uart\_putchar(' ');}
+912       \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a5f7f818dafb2e85c4e064fed5cb2ef4d}{CMD\_SET\_COLUMN\_LOWER} | (c & 0xf));
+913       \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_aef81ea08df8c15289277acaae5cdc90b}{CMD\_SET\_COLUMN\_UPPER} | ((c >> 4) & 0xf));
+914       \hyperlink{_s_t7565_8c_a1772109190633fa7797d0639e66f492a}{ST7565\_data}(0x0);
+915     \}     
+916   \}
+917 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-command@{S\-T7565\-\_\-command}}
+\index{S\-T7565\-\_\-command@{S\-T7565\-\_\-command}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-command}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-command (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{c}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}
+
+
+Definition at line 811 of file S\-T7565.\-c.
+
+
+
+References dc, digitalwrite(), L\-O\-W, M\-S\-B\-F\-I\-R\-S\-T, sclk, sid, and S\-T7565\-\_\-shift\-Out().
+
+
+
+Referenced by S\-T7565\-\_\-clear\-Display(), S\-T7565\-\_\-init(), S\-T7565\-\_\-refresh(), and S\-T7565\-\_\-set\-Brightness().
+
+
+\begin{DoxyCode}
+812 \{
+813   \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{_s_t7565_8c_a2895a68380d0928d0df66c2654fa1281}{dc}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+814   \hyperlink{_s_t7565_8c_ac051766b0cbd26fee6c10a03b2cdca87}{ST7565\_shiftOut}(\hyperlink{_s_t7565_8c_a092884ee9857dfa44baaf040ccb9ed6c}{sid}, \hyperlink{_s_t7565_8c_ae797386e065be60420c8a64785f2a607}{sclk}, \hyperlink{_s_t7565_8c_a1c7ef42eff02618bde70868af4944d81}{MSBFIRST}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+815 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_a1772109190633fa7797d0639e66f492a}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-data@{S\-T7565\-\_\-data}}
+\index{S\-T7565\-\_\-data@{S\-T7565\-\_\-data}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{c}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_a1772109190633fa7797d0639e66f492a}
+
+
+Definition at line 817 of file S\-T7565.\-c.
+
+
+
+References dc, digitalwrite(), H\-I\-G\-H, M\-S\-B\-F\-I\-R\-S\-T, sclk, sid, and S\-T7565\-\_\-shift\-Out().
+
+
+
+Referenced by S\-T7565\-\_\-clear\-Display(), and S\-T7565\-\_\-refresh().
+
+
+\begin{DoxyCode}
+818 \{
+819   \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{_s_t7565_8c_a2895a68380d0928d0df66c2654fa1281}{dc}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+820   \hyperlink{_s_t7565_8c_ac051766b0cbd26fee6c10a03b2cdca87}{ST7565\_shiftOut}(\hyperlink{_s_t7565_8c_a092884ee9857dfa44baaf040ccb9ed6c}{sid}, \hyperlink{_s_t7565_8c_ae797386e065be60420c8a64785f2a607}{sclk}, \hyperlink{_s_t7565_8c_a1c7ef42eff02618bde70868af4944d81}{MSBFIRST}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+821 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_a41c5995cabf4db5592b7166bb7ca9aaa}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-draw\-Bitmap@{S\-T7565\-\_\-draw\-Bitmap}}
+\index{S\-T7565\-\_\-draw\-Bitmap@{S\-T7565\-\_\-draw\-Bitmap}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-draw\-Bitmap}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-draw\-Bitmap (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y, }
+\item[{const {\bf u8} $\ast$}]{bitmap, }
+\item[{{\bf u8}}]{w, }
+\item[{{\bf u8}}]{h, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_a41c5995cabf4db5592b7166bb7ca9aaa}
+
+
+Definition at line 439 of file S\-T7565.\-c.
+
+
+
+References \-\_\-\-B\-V, h, pgm\-\_\-read\-\_\-byte, and S\-T7565\-\_\-my\-\_\-set\-Pixel().
+
+
+\begin{DoxyCode}
+440 \{
+441     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} j, i;
+442   \textcolor{keywordflow}{for} (j=0; j<\hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}; j++) 
+443   \{
+444     \textcolor{keywordflow}{for} (i=0; i<w; i++ ) 
+445     \{
+446       \textcolor{keywordflow}{if} (\hyperlink{_s_t7565_8c_ab7ad001d0fc6bc6ac48af63aba8778b4}{pgm\_read\_byte}(bitmap + i + (j/8)*w) & \hyperlink{_s_t7565_8c_a11643f271076024c395a93800b3d9546}{\_BV}(j%8)) 
+447       \{
+448         \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+i, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+j, color);
+449       \}
+450     \}
+451   \}
+452 
+453   updateBoundingBox(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+w, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+h);
+454 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_ac33fdebf0d0c2085338857b7079e4b7c}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-draw\-Char@{S\-T7565\-\_\-draw\-Char}}
+\index{S\-T7565\-\_\-draw\-Char@{S\-T7565\-\_\-draw\-Char}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-draw\-Char}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-draw\-Char (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{line, }
+\item[{{\bf u8}}]{c}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_ac33fdebf0d0c2085338857b7079e4b7c}
+
+
+Definition at line 513 of file S\-T7565.\-c.
+
+
+
+References font, and S\-T7565\-\_\-buffer.
+
+
+
+Referenced by S\-T7565\-\_\-draw\-String(), and S\-T7565\-\_\-draw\-String\-\_\-\-P().
+
+
+\begin{DoxyCode}
+514 \{
+515     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+516   \textcolor{keywordflow}{for} (i =0; i<5; i++ ) 
+517   \{
+518     \hyperlink{_s_t7565_8c_abc0fff4990a9ebc783a670f18c2443bd}{ST7565\_buffer}[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} + (line*128) ] = \hyperlink{_s_t7565_8c_afc019ed26f2d57e2b415e12fb53ae54a}{font}[(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}*5)+i];
+519     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}++;
+520   \}
+521 
+522   updateBoundingBox(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, line*8, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+5, line*8 + 8);
+523 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_ac20b9cebcea7aefd45895e462a025fb2}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-draw\-Circle@{S\-T7565\-\_\-draw\-Circle}}
+\index{S\-T7565\-\_\-draw\-Circle@{S\-T7565\-\_\-draw\-Circle}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-draw\-Circle}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-draw\-Circle (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x0, }
+\item[{{\bf u8}}]{y0, }
+\item[{{\bf u8}}]{r, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_ac20b9cebcea7aefd45895e462a025fb2}
+
+
+Definition at line 610 of file S\-T7565.\-c.
+
+
+
+References S\-T7565\-\_\-my\-\_\-set\-Pixel(), x, and y.
+
+
+\begin{DoxyCode}
+611 \{
+612   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} f, ddF\_x, ddF\_y, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y};
+613   
+614   updateBoundingBox(x0-r, y0-r, x0+r, y0+r);
+615 
+616   f = 1 - r;
+617   ddF\_x = 1;
+618   ddF\_y = -2 * r;
+619   x = 0;
+620   y = r;
+621 
+622   \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0, y0+r, color);
+623   \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0, y0-r, color);
+624   \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0+r, y0, color);
+625   \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0-r, y0, color);
+626 
+627   \textcolor{keywordflow}{while} (x<y) 
+628   \{
+629     \textcolor{keywordflow}{if} (f >= 0) \{
+630       y--;
+631       ddF\_y += 2;
+632       f += ddF\_y;
+633     \}
+634     x++;
+635     ddF\_x += 2;
+636     f += ddF\_x;
+637   
+638     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0 + x, y0 + y, color);
+639     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0 - x, y0 + y, color);
+640     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0 + x, y0 - y, color);
+641     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0 - x, y0 - y, color);
+642     
+643     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0 + y, y0 + x, color);
+644     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0 - y, y0 + x, color);
+645     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0 + y, y0 - x, color);
+646     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0 - y, y0 - x, color);
+647     
+648   \}
+649 
+650 
+651 
+652 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_a85c2762d1a8063db2b37536af24a2cff}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-draw\-Line@{S\-T7565\-\_\-draw\-Line}}
+\index{S\-T7565\-\_\-draw\-Line@{S\-T7565\-\_\-draw\-Line}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-draw\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-draw\-Line (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x0, }
+\item[{{\bf u8}}]{y0, }
+\item[{{\bf u8}}]{x1, }
+\item[{{\bf u8}}]{y1, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_a85c2762d1a8063db2b37536af24a2cff}
+
+
+Definition at line 527 of file S\-T7565.\-c.
+
+
+
+References abs, S\-T7565\-\_\-my\-\_\-set\-Pixel(), and swap.
+
+
+\begin{DoxyCode}
+528 \{
+529   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} dx, dy, steep = \hyperlink{_s_t7565_8c_a3aa069ac3980707dae1e0530f50d59e4}{abs}(y1 - y0) > \hyperlink{_s_t7565_8c_a3aa069ac3980707dae1e0530f50d59e4}{abs}(x1 - x0);
+530   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} err, ystep;
+531   \textcolor{keywordflow}{if} (steep) 
+532   \{
+533     \hyperlink{p8_2pinguino_2core_2macro_8h_a3ca5ecd34b04d6a243c054ac3a57f68d}{swap}(x0, y0);
+534     \hyperlink{p8_2pinguino_2core_2macro_8h_a3ca5ecd34b04d6a243c054ac3a57f68d}{swap}(x1, y1);
+535   \}
+536 
+537   \textcolor{keywordflow}{if} (x0 > x1) 
+538   \{
+539     \hyperlink{p8_2pinguino_2core_2macro_8h_a3ca5ecd34b04d6a243c054ac3a57f68d}{swap}(x0, x1);
+540     \hyperlink{p8_2pinguino_2core_2macro_8h_a3ca5ecd34b04d6a243c054ac3a57f68d}{swap}(y0, y1);
+541   \}
+542 
+543   \textcolor{comment}{// much faster to put the test here, since we've already sorted the points}
+544   updateBoundingBox(x0, y0, x1, y1);
+545 
+546   dx = x1 - x0;
+547   dy = \hyperlink{_s_t7565_8c_a3aa069ac3980707dae1e0530f50d59e4}{abs}(y1 - y0);
+548 
+549   err = dx / 2;
+550 
+551   \textcolor{keywordflow}{if} (y0 < y1) 
+552   \{
+553     ystep = 1;
+554   \} \textcolor{keywordflow}{else} \{
+555     ystep = -1;\}
+556 
+557   \textcolor{keywordflow}{for} (; x0<=x1; x0++) 
+558   \{
+559     \textcolor{keywordflow}{if} (steep) 
+560     \{
+561       \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(y0, x0, color);
+562     \} \textcolor{keywordflow}{else} \{
+563       \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0, y0, color);
+564     \}
+565     err -= dy;
+566     \textcolor{keywordflow}{if} (err < 0) 
+567     \{
+568       y0 += ystep;
+569       err += dx;
+570     \}
+571   \}
+572 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_aecd31bb968eb7a428fbbcd8156864edd}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-draw\-Rect@{S\-T7565\-\_\-draw\-Rect}}
+\index{S\-T7565\-\_\-draw\-Rect@{S\-T7565\-\_\-draw\-Rect}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-draw\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-draw\-Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y, }
+\item[{{\bf u8}}]{w, }
+\item[{{\bf u8}}]{h, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_aecd31bb968eb7a428fbbcd8156864edd}
+
+
+Definition at line 591 of file S\-T7565.\-c.
+
+
+
+References h, and S\-T7565\-\_\-my\-\_\-set\-Pixel().
+
+
+\begin{DoxyCode}
+592 \{
+593     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+594   \textcolor{comment}{// stupidest version - just pixels - but fast with internal buffer!}
+595   \textcolor{keywordflow}{for} (i=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}; i<\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+w; i++) 
+596   \{
+597     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(i, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, color);
+598     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(i, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+\hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}-1, color);
+599   \}
+600   \textcolor{keywordflow}{for} (i=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}; i<\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+\hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}; i++) 
+601   \{
+602     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, i, color);
+603     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+w-1, i, color);
+604   \} 
+605 
+606   updateBoundingBox(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+w, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+h);
+607 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_a53c75daddf26f85323c1a447517157f0}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-draw\-String@{S\-T7565\-\_\-draw\-String}}
+\index{S\-T7565\-\_\-draw\-String@{S\-T7565\-\_\-draw\-String}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-draw\-String}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-draw\-String (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{line, }
+\item[{{\bf u8} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_a53c75daddf26f85323c1a447517157f0}
+
+
+Definition at line 456 of file S\-T7565.\-c.
+
+
+
+References L\-C\-D\-H\-E\-I\-G\-H\-T, L\-C\-D\-W\-I\-D\-T\-H, and S\-T7565\-\_\-draw\-Char().
+
+
+\begin{DoxyCode}
+457 \{
+458   \textcolor{keywordflow}{while} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}[0] != 0) 
+459   \{
+460     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}[0] == 10)
+461     \{
+462         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} = 0;    \textcolor{comment}{// ran out of this line}
+463         line++;
+464         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}++;
+465     \}
+466     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}[0]>127)&&(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}[1]>127))
+467     \{
+468         \hyperlink{_s_t7565_8c_ac33fdebf0d0c2085338857b7079e4b7c}{ST7565\_drawChar}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, line, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}[1]+\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}[0]);
+469         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} += 6; \textcolor{comment}{// 6 pixels wide}
+470         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} + 6 >= \hyperlink{_s_t7565_8h_ab878ba9c08d0b28da2e47e738293d1f1}{LCDWIDTH})
+471         \{
+472         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} = 0;    \textcolor{comment}{// ran out of this line}
+473         line++;
+474         \}
+475         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}+=2;
+476     \}
+477     \textcolor{keywordflow}{else}
+478     \{
+479         \hyperlink{_s_t7565_8c_ac33fdebf0d0c2085338857b7079e4b7c}{ST7565\_drawChar}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, line, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}[0]);
+480         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} += 6; \textcolor{comment}{// 6 pixels wide}
+481         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} + 6 >= \hyperlink{_s_t7565_8h_ab878ba9c08d0b28da2e47e738293d1f1}{LCDWIDTH})
+482         \{
+483         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} = 0;    \textcolor{comment}{// ran out of this line}
+484         line++;
+485         \}
+486         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}++;
+487     \}
+488     \textcolor{keywordflow}{if} (line >= (\hyperlink{_s_t7565_8h_ab8003ea933023d0013b73e43360a351d}{LCDHEIGHT}/8))
+489       \textcolor{keywordflow}{return};        \textcolor{comment}{// ran out of space :(}
+490   \}
+491 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_ad9c028af1fafb58111bed04a97c0bdfe}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-draw\-String\-\_\-\-P@{S\-T7565\-\_\-draw\-String\-\_\-\-P}}
+\index{S\-T7565\-\_\-draw\-String\-\_\-\-P@{S\-T7565\-\_\-draw\-String\-\_\-\-P}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-draw\-String\-\_\-\-P}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-draw\-String\-\_\-\-P (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{line, }
+\item[{const {\bf u8} $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_ad9c028af1fafb58111bed04a97c0bdfe}
+
+
+Definition at line 494 of file S\-T7565.\-c.
+
+
+
+References c, L\-C\-D\-H\-E\-I\-G\-H\-T, L\-C\-D\-W\-I\-D\-T\-H, pgm\-\_\-read\-\_\-byte, and S\-T7565\-\_\-draw\-Char().
+
+
+\begin{DoxyCode}
+495 \{
+496     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+497   \textcolor{keywordflow}{while} (1) 
+498   \{
+499     c = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})\hyperlink{_s_t7565_8c_ab7ad001d0fc6bc6ac48af63aba8778b4}{pgm\_read\_byte}(str++);
+500     \textcolor{keywordflow}{if} (! c)
+501       \textcolor{keywordflow}{return};
+502     \hyperlink{_s_t7565_8c_ac33fdebf0d0c2085338857b7079e4b7c}{ST7565\_drawChar}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, line, c);
+503     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} += 6; \textcolor{comment}{// 6 pixels wide}
+504     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} + 6 >= \hyperlink{_s_t7565_8h_ab878ba9c08d0b28da2e47e738293d1f1}{LCDWIDTH}) \{
+505       \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} = 0;    \textcolor{comment}{// ran out of this line}
+506       line++;
+507     \}
+508     \textcolor{keywordflow}{if} (line >= (\hyperlink{_s_t7565_8h_ab8003ea933023d0013b73e43360a351d}{LCDHEIGHT}/8))
+509       \textcolor{keywordflow}{return};        \textcolor{comment}{// ran out of space :(}
+510   \}
+511 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_a56b83cead84fa85a750e2fd5ed237951}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-fill\-Circle@{S\-T7565\-\_\-fill\-Circle}}
+\index{S\-T7565\-\_\-fill\-Circle@{S\-T7565\-\_\-fill\-Circle}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-fill\-Circle}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-fill\-Circle (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x0, }
+\item[{{\bf u8}}]{y0, }
+\item[{{\bf u8}}]{r, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_a56b83cead84fa85a750e2fd5ed237951}
+
+
+Definition at line 654 of file S\-T7565.\-c.
+
+
+
+References S\-T7565\-\_\-my\-\_\-set\-Pixel(), x, and y.
+
+
+\begin{DoxyCode}
+655 \{
+656   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} f, ddF\_x, ddF\_y, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y};
+657   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+658   updateBoundingBox(x0-r, y0-r, x0+r, y0+r);
+659 
+660   f = 1 - r;
+661   ddF\_x = 1;
+662   ddF\_y = -2 * r;
+663   x = 0;
+664   y = r;
+665 
+666   \textcolor{keywordflow}{for} (i=y0-r; i<=y0+r; i++) 
+667   \{
+668     \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0, i, color);
+669   \}
+670 
+671   \textcolor{keywordflow}{while} (x<y) 
+672   \{
+673     \textcolor{keywordflow}{if} (f >= 0) 
+674     \{
+675       y--;
+676       ddF\_y += 2;
+677       f += ddF\_y;
+678     \}
+679     x++;
+680     ddF\_x += 2;
+681     f += ddF\_x;
+682   
+683     \textcolor{keywordflow}{for} (i=y0-y; i<=y0+\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}; i++) 
+684     \{
+685       \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0+x, i, color);
+686       \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0-x, i, color);
+687     \} 
+688     \textcolor{keywordflow}{for} (i=y0-x; i<=y0+\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}; i++) 
+689     \{
+690       \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0+y, i, color);
+691       \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(x0-y, i, color);
+692     \}    
+693   \}
+694 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_af3fcf7bcfa62304cb0792c699b17ca1f}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-fill\-Rect@{S\-T7565\-\_\-fill\-Rect}}
+\index{S\-T7565\-\_\-fill\-Rect@{S\-T7565\-\_\-fill\-Rect}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-fill\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-fill\-Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y, }
+\item[{{\bf u8}}]{w, }
+\item[{{\bf u8}}]{h, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_af3fcf7bcfa62304cb0792c699b17ca1f}
+
+
+Definition at line 575 of file S\-T7565.\-c.
+
+
+
+References h, and S\-T7565\-\_\-my\-\_\-set\-Pixel().
+
+
+\begin{DoxyCode}
+576 \{
+577     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i, j;
+578   \textcolor{comment}{// stupidest version - just pixels - but fast with internal buffer!}
+579   \textcolor{keywordflow}{for} (i=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}; i<\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+w; i++) 
+580   \{
+581     \textcolor{keywordflow}{for} (j=\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}; j<\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+\hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}; j++) 
+582     \{
+583       \hyperlink{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{ST7565\_my\_setPixel}(i, j, color);
+584     \}
+585   \}
+586 
+587   updateBoundingBox(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+w, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+\hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h});
+588 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_aadf6f83cd4aa48255664eed6e4a5996e}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-get\-Pixel@{S\-T7565\-\_\-get\-Pixel}}
+\index{S\-T7565\-\_\-get\-Pixel@{S\-T7565\-\_\-get\-Pixel}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-get\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} S\-T7565\-\_\-get\-Pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_aadf6f83cd4aa48255664eed6e4a5996e}
+
+
+Definition at line 725 of file S\-T7565.\-c.
+
+
+
+References L\-C\-D\-H\-E\-I\-G\-H\-T, L\-C\-D\-W\-I\-D\-T\-H, and S\-T7565\-\_\-buffer.
+
+
+\begin{DoxyCode}
+726 \{
+727   \textcolor{keywordflow}{if} ((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} >= \hyperlink{_s_t7565_8h_ab878ba9c08d0b28da2e47e738293d1f1}{LCDWIDTH}) || (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} >= \hyperlink{_s_t7565_8h_ab8003ea933023d0013b73e43360a351d}{LCDHEIGHT}))
+728     \textcolor{keywordflow}{return} 0;
+729 
+730   \textcolor{keywordflow}{return} (\hyperlink{_s_t7565_8c_abc0fff4990a9ebc783a670f18c2443bd}{ST7565\_buffer}[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+ (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}/8)*128] >> (7-(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}%8))) & 0x1;  
+731 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_a6d9d8287c1d1953e4ef85db87c09f738}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-init@{S\-T7565\-\_\-init}}
+\index{S\-T7565\-\_\-init@{S\-T7565\-\_\-init}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{S\-I\-D, }
+\item[{{\bf u8}}]{S\-C\-L\-K, }
+\item[{{\bf u8}}]{D\-C, }
+\item[{{\bf u8}}]{R\-S\-T, }
+\item[{{\bf u8}}]{C\-S}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_a6d9d8287c1d1953e4ef85db87c09f738}
+
+
+Definition at line 733 of file S\-T7565.\-c.
+
+
+
+References C\-M\-D\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-\_\-\-O\-N, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-A\-D\-C\-\_\-\-N\-O\-R\-M\-A\-L, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-A\-L\-L\-P\-T\-S\-\_\-\-N\-O\-R\-M\-A\-L, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-B\-I\-A\-S\-\_\-7, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-C\-O\-M\-\_\-\-N\-O\-R\-M\-A\-L, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-D\-I\-S\-P\-\_\-\-S\-T\-A\-R\-T\-\_\-\-L\-I\-N\-E, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-P\-O\-W\-E\-R\-\_\-\-C\-O\-N\-T\-R\-O\-L, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-R\-E\-S\-I\-S\-T\-O\-R\-\_\-\-R\-A\-T\-I\-O, cs, dc, Delayms(), digitalwrite(), H\-I\-G\-H, L\-C\-D\-H\-E\-I\-G\-H\-T, L\-C\-D\-W\-I\-D\-T\-H, L\-O\-W, O\-U\-T\-P\-U\-T, pinmode(), rst, sclk, sid, S\-T7565\-\_\-command(), and S\-T7565\-\_\-set\-Brightness().
+
+
+\begin{DoxyCode}
+734 \{
+735     \hyperlink{_s_t7565_8c_a092884ee9857dfa44baaf040ccb9ed6c}{sid} = SID;
+736     \hyperlink{_s_t7565_8c_ae797386e065be60420c8a64785f2a607}{sclk} = SCLK;
+737     \hyperlink{_s_t7565_8c_a2895a68380d0928d0df66c2654fa1281}{dc} = DC;
+738     \hyperlink{_s_t7565_8c_a709cb1f161a6612e2bd5285f6f197eec}{rst} = RST;
+739     \hyperlink{_s_t7565_8c_aa327f6cf46d6317dfc2e70b8b628d54d}{cs} = CS;
+740 
+741   \textcolor{comment}{// set pin directions}
+742   \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{_s_t7565_8c_a092884ee9857dfa44baaf040ccb9ed6c}{sid}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+743   \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{_s_t7565_8c_ae797386e065be60420c8a64785f2a607}{sclk}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+744   \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{_s_t7565_8c_a2895a68380d0928d0df66c2654fa1281}{dc}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+745   \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{_s_t7565_8c_a709cb1f161a6612e2bd5285f6f197eec}{rst}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+746   \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{_s_t7565_8c_aa327f6cf46d6317dfc2e70b8b628d54d}{cs}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+747 
+748   \textcolor{comment}{// toggle RST low to reset; CS low so it'll listen to us}
+749   \textcolor{keywordflow}{if} (\hyperlink{_s_t7565_8c_aa327f6cf46d6317dfc2e70b8b628d54d}{cs} > 0)
+750     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{_s_t7565_8c_aa327f6cf46d6317dfc2e70b8b628d54d}{cs}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+751 
+752   \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{_s_t7565_8c_a709cb1f161a6612e2bd5285f6f197eec}{rst}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+753   \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(500);
+754   \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{_s_t7565_8c_a709cb1f161a6612e2bd5285f6f197eec}{rst}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+755 
+756   \textcolor{comment}{// LCD bias select}
+757   \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a2e464aa6af1ceb9963873fb2d786234a}{CMD\_SET\_BIAS\_7});
+758   \textcolor{comment}{// ADC select}
+759   \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a01cd1bbc6aebb4bb7964e5632245a298}{CMD\_SET\_ADC\_NORMAL});
+760   \textcolor{comment}{// SHL select}
+761   \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a8f067ae98fd2f85bf35ac3dcf074ebef}{CMD\_SET\_COM\_NORMAL});
+762   \textcolor{comment}{// Initial display line}
+763   \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a0aadc0773d2c68985728aaeaf5242710}{CMD\_SET\_DISP\_START\_LINE});
+764 
+765   \textcolor{comment}{// turn on voltage converter (VC=1, VR=0, VF=0)}
+766   \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a0f474195e91abbccc79dfa4984d4ff41}{CMD\_SET\_POWER\_CONTROL} | 0x4);
+767   \textcolor{comment}{// wait for 50% rising}
+768   \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);
+769 
+770   \textcolor{comment}{// turn on voltage regulator (VC=1, VR=1, VF=0)}
+771   \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a0f474195e91abbccc79dfa4984d4ff41}{CMD\_SET\_POWER\_CONTROL} | 0x6);
+772   \textcolor{comment}{// wait >=50ms}
+773   \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);
+774 
+775   \textcolor{comment}{// turn on voltage follower (VC=1, VR=1, VF=1)}
+776   \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a0f474195e91abbccc79dfa4984d4ff41}{CMD\_SET\_POWER\_CONTROL} | 0x7);
+777   \textcolor{comment}{// wait}
+778   \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(10);
+779 
+780   \textcolor{comment}{// set lcd operating voltage (regulator resistor, ref voltage resistor)}
+781   \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_ab390be617af573ecdd5d897714ca7fc0}{CMD\_SET\_RESISTOR\_RATIO} | 0x6);
+782 
+783   \textcolor{comment}{// initial display line}
+784   \textcolor{comment}{// set page address}
+785   \textcolor{comment}{// set column address}
+786   \textcolor{comment}{// write display data}
+787 
+788   \textcolor{comment}{// set up a bounding box for screen updates}
+789 
+790   updateBoundingBox(0, 0, \hyperlink{_s_t7565_8h_ab878ba9c08d0b28da2e47e738293d1f1}{LCDWIDTH}-1, \hyperlink{_s_t7565_8h_ab8003ea933023d0013b73e43360a351d}{LCDHEIGHT}-1);
+791 
+792   \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a1d811ed7f4bbdbe75186cf216e9cd63e}{CMD\_DISPLAY\_ON});
+793   \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a015bf1e70f8e2d9f66763cc48e901768}{CMD\_SET\_ALLPTS\_NORMAL});
+794   \hyperlink{_s_t7565_8c_ac93105261e5fb485635870cdd90b88eb}{ST7565\_setBrightness}(0x18);
+795 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-my\-\_\-set\-Pixel@{S\-T7565\-\_\-my\-\_\-set\-Pixel}}
+\index{S\-T7565\-\_\-my\-\_\-set\-Pixel@{S\-T7565\-\_\-my\-\_\-set\-Pixel}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-my\-\_\-set\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-my\-\_\-set\-Pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_a9809c841a880aefae9c0c06f1b6d5ff4}
+
+
+Definition at line 696 of file S\-T7565.\-c.
+
+
+
+References \-\_\-\-B\-V, L\-C\-D\-H\-E\-I\-G\-H\-T, L\-C\-D\-W\-I\-D\-T\-H, and S\-T7565\-\_\-buffer.
+
+
+
+Referenced by S\-T7565\-\_\-draw\-Bitmap(), S\-T7565\-\_\-draw\-Circle(), S\-T7565\-\_\-draw\-Line(), S\-T7565\-\_\-draw\-Rect(), S\-T7565\-\_\-fill\-Circle(), and S\-T7565\-\_\-fill\-Rect().
+
+
+\begin{DoxyCode}
+697 \{
+698   \textcolor{keywordflow}{if} ((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} >= \hyperlink{_s_t7565_8h_ab878ba9c08d0b28da2e47e738293d1f1}{LCDWIDTH}) || (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} >= \hyperlink{_s_t7565_8h_ab8003ea933023d0013b73e43360a351d}{LCDHEIGHT}))
+699     \textcolor{keywordflow}{return};
+700 
+701   \textcolor{comment}{// x is which column}
+702   \textcolor{keywordflow}{if} (color) 
+703     \hyperlink{_s_t7565_8c_abc0fff4990a9ebc783a670f18c2443bd}{ST7565\_buffer}[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+ (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}/8)*128] |= \hyperlink{_s_t7565_8c_a11643f271076024c395a93800b3d9546}{\_BV}(7-(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}%8));  
+704   \textcolor{keywordflow}{else}
+705     \hyperlink{_s_t7565_8c_abc0fff4990a9ebc783a670f18c2443bd}{ST7565\_buffer}[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+ (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}/8)*128] &= ~\hyperlink{_s_t7565_8c_a11643f271076024c395a93800b3d9546}{\_BV}(7-(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}%8)); 
+706 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_a2893397c6552341d2dcafa7395e66e88}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-refresh@{S\-T7565\-\_\-refresh}}
+\index{S\-T7565\-\_\-refresh@{S\-T7565\-\_\-refresh}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-refresh}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-refresh (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_a2893397c6552341d2dcafa7395e66e88}
+
+
+Definition at line 830 of file S\-T7565.\-c.
+
+
+
+References C\-M\-D\-\_\-\-R\-M\-W, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-U\-M\-N\-\_\-\-L\-O\-W\-E\-R, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-C\-O\-L\-U\-M\-N\-\_\-\-U\-P\-P\-E\-R, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-P\-A\-G\-E, L\-C\-D\-H\-E\-I\-G\-H\-T, L\-C\-D\-W\-I\-D\-T\-H, pagemap, S\-T7565\-\_\-buffer, S\-T7565\-\_\-command(), S\-T7565\-\_\-data(), and S\-T7565\-\_\-\-S\-T\-A\-R\-T\-B\-Y\-T\-E\-S.
+
+
+\begin{DoxyCode}
+831 \{
+832   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} col, maxcol, p;
+833 
+834   \textcolor{comment}{/*}
+835 \textcolor{comment}{  Serial.print("Refresh ("); Serial.print(xUpdateMin, DEC); }
+836 \textcolor{comment}{  Serial.print(", "); Serial.print(xUpdateMax, DEC);}
+837 \textcolor{comment}{  Serial.print(","); Serial.print(yUpdateMin, DEC); }
+838 \textcolor{comment}{  Serial.print(", "); Serial.print(yUpdateMax, DEC); Serial.println(")");}
+839 \textcolor{comment}{  */}
+840 
+841   \textcolor{keywordflow}{for}(p = 0; p < 8; p++) \{
+842     \textcolor{comment}{/*}
+843 \textcolor{comment}{      putstring("new page! ");}
+844 \textcolor{comment}{      uart\_putw\_dec(p);}
+845 \textcolor{comment}{      putstring\_nl("");}
+846 \textcolor{comment}{    */}
+847 \textcolor{preprocessor}{#ifdef enablePartialUpdate}
+848 \textcolor{preprocessor}{}    \textcolor{comment}{// check if this page is part of update}
+849     \textcolor{keywordflow}{if} ( yUpdateMin >= ((p+1)*8) ) \{
+850       \textcolor{keywordflow}{continue};   \textcolor{comment}{// nope, skip it!}
+851     \}
+852     \textcolor{keywordflow}{if} (yUpdateMax < p*8) \{
+853       \textcolor{keywordflow}{break};
+854     \}
+855 \textcolor{preprocessor}{#endif}
+856 \textcolor{preprocessor}{}
+857     \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a4983ac890d3b490f780c71647270d91a}{CMD\_SET\_PAGE} | \hyperlink{_s_t7565_8c_a6d23b1ebc8d5846a9292202e2d908414}{pagemap}[p]);
+858 
+859 
+860 \textcolor{preprocessor}{#ifdef enablePartialUpdate}
+861 \textcolor{preprocessor}{}    col = xUpdateMin;
+862     maxcol = xUpdateMax;
+863 \textcolor{preprocessor}{#else}
+864 \textcolor{preprocessor}{}    \textcolor{comment}{// start at the beginning of the row}
+865     col = 0;
+866     maxcol = \hyperlink{_s_t7565_8h_ab878ba9c08d0b28da2e47e738293d1f1}{LCDWIDTH}-1;
+867 \textcolor{preprocessor}{#endif}
+868 \textcolor{preprocessor}{}
+869     \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a5f7f818dafb2e85c4e064fed5cb2ef4d}{CMD\_SET\_COLUMN\_LOWER} | ((col+
+      \hyperlink{_s_t7565_8c_a0d3defab4b1a38cb61f943c1d0da516c}{ST7565\_STARTBYTES}) & 0xf));
+870     \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_aef81ea08df8c15289277acaae5cdc90b}{CMD\_SET\_COLUMN\_UPPER} | (((col+
+      \hyperlink{_s_t7565_8c_a0d3defab4b1a38cb61f943c1d0da516c}{ST7565\_STARTBYTES}) >> 4) & 0x0F));
+871     \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_afdf746c22b360b916a370b32892783ef}{CMD\_RMW});
+872     
+873     \textcolor{keywordflow}{for}(; col <= maxcol; col++) \{
+874       \textcolor{comment}{//uart\_putw\_dec(col);}
+875       \textcolor{comment}{//uart\_putchar(' ');}
+876       \hyperlink{_s_t7565_8c_a1772109190633fa7797d0639e66f492a}{ST7565\_data}(\hyperlink{_s_t7565_8c_abc0fff4990a9ebc783a670f18c2443bd}{ST7565\_buffer}[(128*p)+col]);
+877     \}
+878   \}
+879 
+880 \textcolor{preprocessor}{#ifdef enablePartialUpdate}
+881 \textcolor{preprocessor}{}  xUpdateMin = \hyperlink{_s_t7565_8h_ab878ba9c08d0b28da2e47e738293d1f1}{LCDWIDTH} - 1;
+882   xUpdateMax = 0;
+883   yUpdateMin = \hyperlink{_s_t7565_8h_ab8003ea933023d0013b73e43360a351d}{LCDHEIGHT}-1;
+884   yUpdateMax = 0;
+885 \textcolor{preprocessor}{#endif}
+886 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_ac93105261e5fb485635870cdd90b88eb}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-set\-Brightness@{S\-T7565\-\_\-set\-Brightness}}
+\index{S\-T7565\-\_\-set\-Brightness@{S\-T7565\-\_\-set\-Brightness}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-set\-Brightness}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-set\-Brightness (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{val}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_ac93105261e5fb485635870cdd90b88eb}
+
+
+Definition at line 823 of file S\-T7565.\-c.
+
+
+
+References C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-V\-O\-L\-U\-M\-E\-\_\-\-F\-I\-R\-S\-T, C\-M\-D\-\_\-\-S\-E\-T\-\_\-\-V\-O\-L\-U\-M\-E\-\_\-\-S\-E\-C\-O\-N\-D, and S\-T7565\-\_\-command().
+
+
+
+Referenced by S\-T7565\-\_\-init().
+
+
+\begin{DoxyCode}
+824 \{
+825     \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_aa2a06cd3ce55d7163eb08ea0354ba258}{CMD\_SET\_VOLUME\_FIRST});
+826     \hyperlink{_s_t7565_8c_ae9d9606ec3cd6572675ce1f888f10217}{ST7565\_command}(\hyperlink{_s_t7565_8h_a9ca27ca94434f3be029f4a68af2028a9}{CMD\_SET\_VOLUME\_SECOND} | (val & 0x3f));
+827 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_a6ffbe4fe3b69583ac45f13ec2f7b1e75}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-set\-Pixel@{S\-T7565\-\_\-set\-Pixel}}
+\index{S\-T7565\-\_\-set\-Pixel@{S\-T7565\-\_\-set\-Pixel}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-set\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-set\-Pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_a6ffbe4fe3b69583ac45f13ec2f7b1e75}
+
+
+Definition at line 709 of file S\-T7565.\-c.
+
+
+
+References \-\_\-\-B\-V, L\-C\-D\-H\-E\-I\-G\-H\-T, L\-C\-D\-W\-I\-D\-T\-H, and S\-T7565\-\_\-buffer.
+
+
+\begin{DoxyCode}
+710 \{
+711   \textcolor{keywordflow}{if} ((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} >= \hyperlink{_s_t7565_8h_ab878ba9c08d0b28da2e47e738293d1f1}{LCDWIDTH}) || (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} >= \hyperlink{_s_t7565_8h_ab8003ea933023d0013b73e43360a351d}{LCDHEIGHT}))
+712     \textcolor{keywordflow}{return};
+713 
+714   \textcolor{comment}{// x is which column}
+715   \textcolor{keywordflow}{if} (color) 
+716     \hyperlink{_s_t7565_8c_abc0fff4990a9ebc783a670f18c2443bd}{ST7565\_buffer}[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+ (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}/8)*128] |= \hyperlink{_s_t7565_8c_a11643f271076024c395a93800b3d9546}{\_BV}(7-(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}%8));  
+717   \textcolor{keywordflow}{else}
+718     \hyperlink{_s_t7565_8c_abc0fff4990a9ebc783a670f18c2443bd}{ST7565\_buffer}[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+ (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}/8)*128] &= ~\hyperlink{_s_t7565_8c_a11643f271076024c395a93800b3d9546}{\_BV}(7-(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}%8)); 
+719 
+720   updateBoundingBox(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x},\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y},\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x},\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+721 \}
+\end{DoxyCode}
+\hypertarget{_s_t7565_8c_ac051766b0cbd26fee6c10a03b2cdca87}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-shift\-Out@{S\-T7565\-\_\-shift\-Out}}
+\index{S\-T7565\-\_\-shift\-Out@{S\-T7565\-\_\-shift\-Out}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-shift\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void S\-T7565\-\_\-shift\-Out (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{data\-Pin, }
+\item[{{\bf u8}}]{clock\-Pin, }
+\item[{{\bf u8}}]{bit\-Order, }
+\item[{{\bf u8}}]{val}
+\end{DoxyParamCaption}
+)}}\label{_s_t7565_8c_ac051766b0cbd26fee6c10a03b2cdca87}
+
+
+Definition at line 797 of file S\-T7565.\-c.
+
+
+
+References digitalwrite(), H\-I\-G\-H, L\-O\-W, and L\-S\-B\-F\-I\-R\-S\-T.
+
+
+
+Referenced by S\-T7565\-\_\-command(), and S\-T7565\-\_\-data().
+
+
+\begin{DoxyCode}
+798 \{
+799         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+800         \textcolor{keywordflow}{for} (i = 0; i < 8; i++)  \{
+801                 \textcolor{keywordflow}{if} (bitOrder == \hyperlink{_s_t7565_8c_a5811613d98580676f67f0dde8125433e}{LSBFIRST})
+802                         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(dataPin, !!(val & (1 << i)));
+803                 \textcolor{keywordflow}{else}  
+804                         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(dataPin, !!(val & (1 << (7 - i))));
+805                         
+806                 \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(clockPin, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+807                 \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(clockPin, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+808         \}
+809 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_s_t7565_8c_aa327f6cf46d6317dfc2e70b8b628d54d}{\index{S\-T7565.\-c@{S\-T7565.\-c}!cs@{cs}}
+\index{cs@{cs}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{cs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} cs}}\label{_s_t7565_8c_aa327f6cf46d6317dfc2e70b8b628d54d}
+
+
+Definition at line 54 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-init().
+
+\hypertarget{_s_t7565_8c_a2895a68380d0928d0df66c2654fa1281}{\index{S\-T7565.\-c@{S\-T7565.\-c}!dc@{dc}}
+\index{dc@{dc}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{dc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} dc}}\label{_s_t7565_8c_a2895a68380d0928d0df66c2654fa1281}
+
+
+Definition at line 54 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-command(), S\-T7565\-\_\-data(), and S\-T7565\-\_\-init().
+
+\hypertarget{_s_t7565_8c_afc019ed26f2d57e2b415e12fb53ae54a}{\index{S\-T7565.\-c@{S\-T7565.\-c}!font@{font}}
+\index{font@{font}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{font}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} font\mbox{[}1275\mbox{]}}}\label{_s_t7565_8c_afc019ed26f2d57e2b415e12fb53ae54a}
+
+
+Definition at line 60 of file S\-T7565.\-c.
+
+
+
+Referenced by I\-L\-I9325\-\_\-print\-Char(), P\-C\-D8544\-\_\-set\-Font(), Select\-Font(), S\-S\-D1306\-\_\-set\-Font(), and S\-T7565\-\_\-draw\-Char().
+
+\hypertarget{_s_t7565_8c_ab3a1360f626953af80398c1523291aef}{\index{S\-T7565.\-c@{S\-T7565.\-c}!is\-\_\-reversed@{is\-\_\-reversed}}
+\index{is\-\_\-reversed@{is\-\_\-reversed}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{is\-\_\-reversed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} is\-\_\-reversed = 0}}\label{_s_t7565_8c_ab3a1360f626953af80398c1523291aef}
+
+
+Definition at line 53 of file S\-T7565.\-c.
+
+\hypertarget{_s_t7565_8c_a6d23b1ebc8d5846a9292202e2d908414}{\index{S\-T7565.\-c@{S\-T7565.\-c}!pagemap@{pagemap}}
+\index{pagemap@{pagemap}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{pagemap}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} pagemap\mbox{[}$\,$\mbox{]} = \{ 3, 2, 1, 0, 7, 6, 5, 4 \}}}\label{_s_t7565_8c_a6d23b1ebc8d5846a9292202e2d908414}
+
+
+Definition at line 57 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-refresh().
+
+\hypertarget{_s_t7565_8c_a709cb1f161a6612e2bd5285f6f197eec}{\index{S\-T7565.\-c@{S\-T7565.\-c}!rst@{rst}}
+\index{rst@{rst}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{rst}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} rst}}\label{_s_t7565_8c_a709cb1f161a6612e2bd5285f6f197eec}
+
+
+Definition at line 54 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-init().
+
+\hypertarget{_s_t7565_8c_ae797386e065be60420c8a64785f2a607}{\index{S\-T7565.\-c@{S\-T7565.\-c}!sclk@{sclk}}
+\index{sclk@{sclk}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{sclk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} sclk}}\label{_s_t7565_8c_ae797386e065be60420c8a64785f2a607}
+
+
+Definition at line 54 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-command(), S\-T7565\-\_\-data(), and S\-T7565\-\_\-init().
+
+\hypertarget{_s_t7565_8c_a092884ee9857dfa44baaf040ccb9ed6c}{\index{S\-T7565.\-c@{S\-T7565.\-c}!sid@{sid}}
+\index{sid@{sid}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{sid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} sid}}\label{_s_t7565_8c_a092884ee9857dfa44baaf040ccb9ed6c}
+
+
+Definition at line 54 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-command(), S\-T7565\-\_\-data(), and S\-T7565\-\_\-init().
+
+\hypertarget{_s_t7565_8c_abc0fff4990a9ebc783a670f18c2443bd}{\index{S\-T7565.\-c@{S\-T7565.\-c}!S\-T7565\-\_\-buffer@{S\-T7565\-\_\-buffer}}
+\index{S\-T7565\-\_\-buffer@{S\-T7565\-\_\-buffer}!ST7565.c@{S\-T7565.\-c}}
+\subsubsection[{S\-T7565\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} S\-T7565\-\_\-buffer\mbox{[}1024\mbox{]}}}\label{_s_t7565_8c_abc0fff4990a9ebc783a670f18c2443bd}
+
+
+Definition at line 347 of file S\-T7565.\-c.
+
+
+
+Referenced by S\-T7565\-\_\-clear(), S\-T7565\-\_\-draw\-Char(), S\-T7565\-\_\-get\-Pixel(), S\-T7565\-\_\-my\-\_\-set\-Pixel(), S\-T7565\-\_\-refresh(), and S\-T7565\-\_\-set\-Pixel().
+

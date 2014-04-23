@@ -1,0 +1,173 @@
+\hypertarget{p8_2pinguino_2libraries_2lcdi2c_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/lcdi2c.c File Reference}
+\label{p8_2pinguino_2libraries_2lcdi2c_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/lcdi2c.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/lcdi2c.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$lcdi2c.\-h$>$}\\*
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$delayms.\-c$>$}\\*
+{\ttfamily \#include $<$i2c.\-c$>$}\\*
+{\ttfamily \#include $<$stdio.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a2a190fc462215c4ad7ccdbb73dd860b2}{\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_adc4f648a9f9e8793d81adfae858e4e4e}{lcdi2c\-\_\-write} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a2bf1315bcd66c2ef441cd5604e33c41c}{lcdi2c\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} numcol, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} numline, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i2c\-\_\-address)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_af84b95b49cf4ace11e090ad2e3c2f5e9}{numcolmax}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a7e2e762a9601d95dad5dfe836311921a}{numlinemax}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a03f9b161754f1994b8b879c08bf00dd3}{g\-Backlight} = 0
+\begin{DoxyCompactList}\small\item\em V\-A\-R\-I\-A\-B\-L\-E\-S G\-L\-O\-B\-A\-L\-E\-S. \end{DoxyCompactList}\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a0fb2927fb224b8d3c421819848991f2d}{P\-C\-F8574\-\_\-address}
+\item 
+\hyperlink{union___byte__}{\-\_\-\-Byte\-\_\-} \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_adf84f63aca7be2c7e0cc19d1fb9c0388}{P\-C\-F8574\-\_\-data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2libraries_2lcdi2c_8c_a2a190fc462215c4ad7ccdbb73dd860b2}{\index{p8/pinguino/libraries/lcdi2c.\-c@{p8/pinguino/libraries/lcdi2c.\-c}!\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C@{\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C@{\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C}!p8/pinguino/libraries/lcdi2c.c@{p8/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-L\-C\-D\-I2\-C\-\_\-\-C}}\label{p8_2pinguino_2libraries_2lcdi2c_8c_a2a190fc462215c4ad7ccdbb73dd860b2}
+
+
+Definition at line 73 of file lcdi2c.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2lcdi2c_8c_a2bf1315bcd66c2ef441cd5604e33c41c}{\index{p8/pinguino/libraries/lcdi2c.\-c@{p8/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-init@{lcdi2c\-\_\-init}}
+\index{lcdi2c\-\_\-init@{lcdi2c\-\_\-init}!p8/pinguino/libraries/lcdi2c.c@{p8/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{numcol, }
+\item[{{\bf u8}}]{numline, }
+\item[{{\bf u8}}]{i2c\-\_\-address}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2lcdi2c_8c_a2bf1315bcd66c2ef441cd5604e33c41c}
+
+
+Definition at line 444 of file lcdi2c.\-c.
+
+
+\begin{DoxyCode}
+445 \{
+446     \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_af84b95b49cf4ace11e090ad2e3c2f5e9}{numcolmax}  = numcol - 1;
+447     \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a7e2e762a9601d95dad5dfe836311921a}{numlinemax} = numline - 1;
+448     \textcolor{comment}{//PCF8574\_address = 0b01001110 | i2c\_address;}
+449     \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_a0fb2927fb224b8d3c421819848991f2d}{PCF8574\_address} = i2c\_address;
+450     \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8c_adf84f63aca7be2c7e0cc19d1fb9c0388}{PCF8574\_data}.\hyperlink{union___byte___a5d0cde7a426451812b691b5ae4a01560}{val} = 0;
+451 
+452     \hyperlink{p8_2pinguino_2core_2i2c_8c_a294f9659c7a45647d2274c1b2d7ad849}{I2C\_init}(\hyperlink{p8_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{I2C\_MASTER\_MODE}, \hyperlink{p8_2pinguino_2core_2i2c_8c_a30c06a423a78e6ded9ae0d26aa3fb541}{I2C\_100KHZ});
+453 
+454     \textcolor{comment}{//Delayms(15);                              // Wait more than 15 ms after VDD rises to 4.5V}
+455     lcdi2c\_send4(0x30, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});         \textcolor{comment}{// 0x30 - Mode 8 bits}
+456     \textcolor{comment}{//Delayms(5);                                   // Wait for more than 4.1 ms}
+457     lcdi2c\_send4(0x30, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});         \textcolor{comment}{// 0x30 - Mode 8 bits}
+458     \textcolor{comment}{//Delayus(100);                             // Wait more than 100 μs}
+459     lcdi2c\_send4(0x30, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});         \textcolor{comment}{// 0x30 - Mode 8 bits}
+460     \textcolor{comment}{//Delayus(100);                             // Wait more than 100 μs}
+461     lcdi2c\_send4(0x20, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});         \textcolor{comment}{// 0x20 - Mode 4 bits}
+462     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a16f560e708a18ce404f8425c5e5bed63}{LCD\_SYSTEM\_SET\_4BITS}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});     \textcolor{comment}{// 0x28 - Mode 4 bits - 2
+       Lignes - 5x8}
+463     \textcolor{comment}{//Delayus(4);               // Wait more than 40 ns}
+464     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a846dac5d1bb72bef7a76ee110c0445b6}{LCD\_DISPLAY\_ON}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});     \textcolor{comment}{// 0x0C - Display ON + Cursor OFF +
+       Blinking OFF}
+465     \textcolor{comment}{//Delayus(4);               // Wait more than 40 ns}
+466     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a48de81d41dd1a70f8ab5a593c40c0ef4}{LCD\_DISPLAY\_CLEAR}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});       \textcolor{comment}{// 0x01 - Efface l'affichage +
+       init. DDRAM}
+467     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(2);                  \textcolor{comment}{// le temps d'execution de Display Clear > 1.64ms}
+468     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_ae5e77a91b0fef0c36af29424a1ee2da1}{LCD\_ENTRY\_MODE\_SET}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a28893b8aae31c65dfc6f5d478e225a2d}{LCD\_CMD});     \textcolor{comment}{// 0x06 - Increment + Display
+       not shifted (Déplacement automatique du curseur)}
+469     \textcolor{comment}{//Delayus(4);               // Wait more than 40 ns}
+470     \textcolor{comment}{//lcdi2c\_newpattern();              // Implante les nouveaux caracteres}
+471 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2lcdi2c_8c_adc4f648a9f9e8793d81adfae858e4e4e}{\index{p8/pinguino/libraries/lcdi2c.\-c@{p8/pinguino/libraries/lcdi2c.\-c}!lcdi2c\-\_\-write@{lcdi2c\-\_\-write}}
+\index{lcdi2c\-\_\-write@{lcdi2c\-\_\-write}!p8/pinguino/libraries/lcdi2c.c@{p8/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{lcdi2c\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}void lcdi2c\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{c}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2lcdi2c_8c_adc4f648a9f9e8793d81adfae858e4e4e}
+
+
+Definition at line 362 of file lcdi2c.\-c.
+
+
+
+References L\-C\-D\-\_\-\-D\-A\-T\-A.
+
+
+
+Referenced by lcdi2c\-\_\-clear\-Line(), and lcdi2c\-\_\-printf().
+
+
+\begin{DoxyCode}
+363 \{
+364     lcdi2c\_send8(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}, \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a25e9d818788f36ed74d7c4579f87f2a6}{LCD\_DATA});
+365 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2libraries_2lcdi2c_8c_a03f9b161754f1994b8b879c08bf00dd3}{\index{p8/pinguino/libraries/lcdi2c.\-c@{p8/pinguino/libraries/lcdi2c.\-c}!g\-Backlight@{g\-Backlight}}
+\index{g\-Backlight@{g\-Backlight}!p8/pinguino/libraries/lcdi2c.c@{p8/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{g\-Backlight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} g\-Backlight = 0}}\label{p8_2pinguino_2libraries_2lcdi2c_8c_a03f9b161754f1994b8b879c08bf00dd3}
+
+
+V\-A\-R\-I\-A\-B\-L\-E\-S G\-L\-O\-B\-A\-L\-E\-S. 
+
+
+
+Definition at line 229 of file lcdi2c.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2lcdi2c_8c_af84b95b49cf4ace11e090ad2e3c2f5e9}{\index{p8/pinguino/libraries/lcdi2c.\-c@{p8/pinguino/libraries/lcdi2c.\-c}!numcolmax@{numcolmax}}
+\index{numcolmax@{numcolmax}!p8/pinguino/libraries/lcdi2c.c@{p8/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{numcolmax}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} numcolmax}}\label{p8_2pinguino_2libraries_2lcdi2c_8c_af84b95b49cf4ace11e090ad2e3c2f5e9}
+
+
+Definition at line 227 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-clear\-Line(), lcdi2c\-\_\-init(), and lcdi2c\-\_\-set\-Cursor().
+
+\hypertarget{p8_2pinguino_2libraries_2lcdi2c_8c_a7e2e762a9601d95dad5dfe836311921a}{\index{p8/pinguino/libraries/lcdi2c.\-c@{p8/pinguino/libraries/lcdi2c.\-c}!numlinemax@{numlinemax}}
+\index{numlinemax@{numlinemax}!p8/pinguino/libraries/lcdi2c.c@{p8/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{numlinemax}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} numlinemax}}\label{p8_2pinguino_2libraries_2lcdi2c_8c_a7e2e762a9601d95dad5dfe836311921a}
+
+
+Definition at line 228 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-init(), and lcdi2c\-\_\-set\-Cursor().
+
+\hypertarget{p8_2pinguino_2libraries_2lcdi2c_8c_a0fb2927fb224b8d3c421819848991f2d}{\index{p8/pinguino/libraries/lcdi2c.\-c@{p8/pinguino/libraries/lcdi2c.\-c}!P\-C\-F8574\-\_\-address@{P\-C\-F8574\-\_\-address}}
+\index{P\-C\-F8574\-\_\-address@{P\-C\-F8574\-\_\-address}!p8/pinguino/libraries/lcdi2c.c@{p8/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{P\-C\-F8574\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} P\-C\-F8574\-\_\-address}}\label{p8_2pinguino_2libraries_2lcdi2c_8c_a0fb2927fb224b8d3c421819848991f2d}
+
+
+Definition at line 230 of file lcdi2c.\-c.
+
+
+
+Referenced by lcdi2c\-\_\-backlight(), lcdi2c\-\_\-init(), and lcdi2c\-\_\-no\-Backlight().
+
+\hypertarget{p8_2pinguino_2libraries_2lcdi2c_8c_adf84f63aca7be2c7e0cc19d1fb9c0388}{\index{p8/pinguino/libraries/lcdi2c.\-c@{p8/pinguino/libraries/lcdi2c.\-c}!P\-C\-F8574\-\_\-data@{P\-C\-F8574\-\_\-data}}
+\index{P\-C\-F8574\-\_\-data@{P\-C\-F8574\-\_\-data}!p8/pinguino/libraries/lcdi2c.c@{p8/pinguino/libraries/lcdi2c.\-c}}
+\subsubsection[{P\-C\-F8574\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-Byte\-\_\-} P\-C\-F8574\-\_\-data}}\label{p8_2pinguino_2libraries_2lcdi2c_8c_adf84f63aca7be2c7e0cc19d1fb9c0388}
+
+
+Definition at line 231 of file lcdi2c.\-c.
+

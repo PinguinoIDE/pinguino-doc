@@ -1,0 +1,93 @@
+\hypertarget{delay_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/delay.c File Reference}
+\label{delay_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/delay.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/delay.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$system.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{delay_8c_a0f36bd8e2b1cf8a752f6567c17ad823c}{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{delay_8c_ab09145dc7b9482aae3522adce06f2dac}{Delayus} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} us)
+\item 
+void \hyperlink{delay_8c_ad7df3dda18e7f283e8def62c36652537}{Delayms} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} ms)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{delay_8c_a0f36bd8e2b1cf8a752f6567c17ad823c}{\index{delay.\-c@{delay.\-c}!\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-\_\-\-C@{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-\_\-\-C@{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-\_\-\-C}!delay.c@{delay.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-E\-L\-A\-Y\-\_\-\-C}}\label{delay_8c_a0f36bd8e2b1cf8a752f6567c17ad823c}
+
+
+Definition at line 16 of file delay.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{delay_8c_ad7df3dda18e7f283e8def62c36652537}{\index{delay.\-c@{delay.\-c}!Delayms@{Delayms}}
+\index{Delayms@{Delayms}!delay.c@{delay.\-c}}
+\subsubsection[{Delayms}]{\setlength{\rightskip}{0pt plus 5cm}void Delayms (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{ms}
+\end{DoxyParamCaption}
+)}}\label{delay_8c_ad7df3dda18e7f283e8def62c36652537}
+
+
+Definition at line 48 of file delay.\-c.
+
+
+
+References Delayus().
+
+
+\begin{DoxyCode}
+49 \{
+50     \textcolor{keywordflow}{do}
+51     \{
+52         \hyperlink{delay_8c_ab09145dc7b9482aae3522adce06f2dac}{Delayus}(1000); \textcolor{comment}{// 1 ms}
+53     \}
+54     \textcolor{keywordflow}{while}(--ms);
+55 \}
+\end{DoxyCode}
+\hypertarget{delay_8c_ab09145dc7b9482aae3522adce06f2dac}{\index{delay.\-c@{delay.\-c}!Delayus@{Delayus}}
+\index{Delayus@{Delayus}!delay.c@{delay.\-c}}
+\subsubsection[{Delayus}]{\setlength{\rightskip}{0pt plus 5cm}void Delayus (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{us}
+\end{DoxyParamCaption}
+)}}\label{delay_8c_ab09145dc7b9482aae3522adce06f2dac}
+
+
+Definition at line 26 of file delay.\-c.
+
+
+
+References Get\-C\-P0\-Count(), and Get\-System\-Clock().
+
+
+
+Referenced by Delayms().
+
+
+\begin{DoxyCode}
+27 \{
+28     \textcolor{comment}{// CP0Count counts at half the CPU rate}
+29     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Fcp0 = \hyperlink{p32_2include_2pinguino_2core_2system_8c_aa86ba430ddf6a4a9860c673900d1bc01}{GetSystemClock}() / 1000000 / 2;       \textcolor{comment}{// max = 40 for 80MHz}
+30 
+31     \textcolor{comment}{// get start ticks}
+32     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} start = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a31546d671bf97f53c850c9242c2d560e}{GetCP0Count}();
+33 
+34     \textcolor{comment}{// calculate last tick number for the given number of microseconds}
+35     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} stop = start + us * Fcp0;
+36 
+37     \textcolor{comment}{// wait till count reaches the stop value}
+38     \textcolor{keywordflow}{if} (stop > start)
+39         \textcolor{keywordflow}{while} (\hyperlink{p32_2include_2pinguino_2core_2system_8c_a31546d671bf97f53c850c9242c2d560e}{GetCP0Count}() < stop);
+40     \textcolor{keywordflow}{else}
+41         \textcolor{keywordflow}{while} (\hyperlink{p32_2include_2pinguino_2core_2system_8c_a31546d671bf97f53c850c9242c2d560e}{GetCP0Count}() > start || \hyperlink{p32_2include_2pinguino_2core_2system_8c_a31546d671bf97f53c850c9242c2d560e}{GetCP0Count}() < stop); 
+42 \} 
+\end{DoxyCode}

@@ -1,0 +1,152 @@
+\hypertarget{adb_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/adb.h File Reference}
+\label{adb_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/adb.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/adb.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{adb_8h_af16fdd7a2aaf39429941c364e98199eb}{A\-D\-B\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}~(-\/1)
+\item 
+\#define \hyperlink{adb_8h_a04f30396b32e3dda0b74f5031101ac2b}{A\-D\-B\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}~8
+\item 
+\#define \hyperlink{adb_8h_ad384a2570afb125e25cb5151303ef1fa}{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-N\-A\-M\-E\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}~16
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{adb_8h_a187e214cda79b479f5371031f18e26cd}{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}
+\item 
+typedef void($\ast$ \hyperlink{adb_8h_aea05f14112c0b529568e8bbe419f9168}{A\-D\-B\-Channel\-Recv\-Func} )(\hyperlink{adb_8h_a187e214cda79b479f5371031f18e26cd}{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E} \hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}, const void $\ast$data, unsigned int data\-\_\-len)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{adb_8h_a22a6ad64672ac07fe7e1589d813a4ef3}{A\-D\-B\-Init} ()
+\item 
+unsigned char \hyperlink{adb_8h_ad46e3eca3d9b427dc442eb794e15452c}{A\-D\-B\-Connected} ()
+\item 
+\hyperlink{adb_8h_a187e214cda79b479f5371031f18e26cd}{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E} \hyperlink{adb_8h_ab871420a329b9039dedc4720e7e11963}{A\-D\-B\-Open} (const char $\ast$name, \hyperlink{adb_8h_aea05f14112c0b529568e8bbe419f9168}{A\-D\-B\-Channel\-Recv\-Func} recv\-\_\-func)
+\item 
+void \hyperlink{adb_8h_a9130e912f97d5b7fb1c5e618120368dd}{A\-D\-B\-Close} (\hyperlink{adb_8h_a187e214cda79b479f5371031f18e26cd}{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E} handle)
+\item 
+unsigned char \hyperlink{adb_8h_ab40ad08b4ba7388a3a3c5eda22e57325}{A\-D\-B\-Channel\-Ready} (\hyperlink{adb_8h_a187e214cda79b479f5371031f18e26cd}{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E} handle)
+\item 
+void \hyperlink{adb_8h_a05d6b0a6bf687160fcea8d34907d1615}{A\-D\-B\-Write} (\hyperlink{adb_8h_a187e214cda79b479f5371031f18e26cd}{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E} handle, const void $\ast$data, unsigned int data\-\_\-len)
+\item 
+unsigned char \hyperlink{adb_8h_a9141c0e89797dadf875ae0d52a724e30}{A\-D\-B\-Tasks} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{adb_8h_ad384a2570afb125e25cb5151303ef1fa}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-N\-A\-M\-E\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H@{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-N\-A\-M\-E\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-N\-A\-M\-E\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H@{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-N\-A\-M\-E\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-N\-A\-M\-E\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-N\-A\-M\-E\-\_\-\-M\-A\-X\-\_\-\-L\-E\-N\-G\-T\-H~16}}\label{adb_8h_ad384a2570afb125e25cb5151303ef1fa}
+
+
+Definition at line 77 of file adb.\-h.
+
+\hypertarget{adb_8h_af16fdd7a2aaf39429941c364e98199eb}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E@{A\-D\-B\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}}
+\index{A\-D\-B\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E@{A\-D\-B\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-B\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E~(-\/1)}}\label{adb_8h_af16fdd7a2aaf39429941c364e98199eb}
+
+
+Definition at line 71 of file adb.\-h.
+
+\hypertarget{adb_8h_a04f30396b32e3dda0b74f5031101ac2b}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S@{A\-D\-B\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}}
+\index{A\-D\-B\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S@{A\-D\-B\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-B\-\_\-\-M\-A\-X\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S~8}}\label{adb_8h_a04f30396b32e3dda0b74f5031101ac2b}
+
+
+Definition at line 74 of file adb.\-h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{adb_8h_a187e214cda79b479f5371031f18e26cd}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E@{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}}
+\index{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E@{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}}}\label{adb_8h_a187e214cda79b479f5371031f18e26cd}
+
+
+Definition at line 67 of file adb.\-h.
+
+\hypertarget{adb_8h_aea05f14112c0b529568e8bbe419f9168}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-Channel\-Recv\-Func@{A\-D\-B\-Channel\-Recv\-Func}}
+\index{A\-D\-B\-Channel\-Recv\-Func@{A\-D\-B\-Channel\-Recv\-Func}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-Channel\-Recv\-Func}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ A\-D\-B\-Channel\-Recv\-Func)({\bf A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E} {\bf h}, const void $\ast$data, unsigned int data\-\_\-len)}}\label{adb_8h_aea05f14112c0b529568e8bbe419f9168}
+
+
+Definition at line 86 of file adb.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{adb_8h_ab40ad08b4ba7388a3a3c5eda22e57325}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-Channel\-Ready@{A\-D\-B\-Channel\-Ready}}
+\index{A\-D\-B\-Channel\-Ready@{A\-D\-B\-Channel\-Ready}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-Channel\-Ready}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char A\-D\-B\-Channel\-Ready (
+\begin{DoxyParamCaption}
+\item[{{\bf A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{adb_8h_ab40ad08b4ba7388a3a3c5eda22e57325}
+
+
+Referenced by \-\_\-\-A\-D\-B\-Open().
+
+\hypertarget{adb_8h_a9130e912f97d5b7fb1c5e618120368dd}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-Close@{A\-D\-B\-Close}}
+\index{A\-D\-B\-Close@{A\-D\-B\-Close}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-Close}]{\setlength{\rightskip}{0pt plus 5cm}void A\-D\-B\-Close (
+\begin{DoxyParamCaption}
+\item[{{\bf A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}}]{handle}
+\end{DoxyParamCaption}
+)}}\label{adb_8h_a9130e912f97d5b7fb1c5e618120368dd}
+\hypertarget{adb_8h_ad46e3eca3d9b427dc442eb794e15452c}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-Connected@{A\-D\-B\-Connected}}
+\index{A\-D\-B\-Connected@{A\-D\-B\-Connected}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char A\-D\-B\-Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{adb_8h_ad46e3eca3d9b427dc442eb794e15452c}
+\hypertarget{adb_8h_a22a6ad64672ac07fe7e1589d813a4ef3}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-Init@{A\-D\-B\-Init}}
+\index{A\-D\-B\-Init@{A\-D\-B\-Init}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void A\-D\-B\-Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{adb_8h_a22a6ad64672ac07fe7e1589d813a4ef3}
+
+
+Referenced by \-\_\-\-A\-D\-B\-Init().
+
+\hypertarget{adb_8h_ab871420a329b9039dedc4720e7e11963}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-Open@{A\-D\-B\-Open}}
+\index{A\-D\-B\-Open@{A\-D\-B\-Open}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-Open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E} A\-D\-B\-Open (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{{\bf A\-D\-B\-Channel\-Recv\-Func}}]{recv\-\_\-func}
+\end{DoxyParamCaption}
+)}}\label{adb_8h_ab871420a329b9039dedc4720e7e11963}
+
+
+Referenced by \-\_\-\-A\-D\-B\-Open().
+
+\hypertarget{adb_8h_a9141c0e89797dadf875ae0d52a724e30}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-Tasks@{A\-D\-B\-Tasks}}
+\index{A\-D\-B\-Tasks@{A\-D\-B\-Tasks}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-Tasks}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char A\-D\-B\-Tasks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{adb_8h_a9141c0e89797dadf875ae0d52a724e30}
+
+
+Referenced by \-\_\-\-A\-D\-B\-Open().
+
+\hypertarget{adb_8h_a05d6b0a6bf687160fcea8d34907d1615}{\index{adb.\-h@{adb.\-h}!A\-D\-B\-Write@{A\-D\-B\-Write}}
+\index{A\-D\-B\-Write@{A\-D\-B\-Write}!adb.h@{adb.\-h}}
+\subsubsection[{A\-D\-B\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void A\-D\-B\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf A\-D\-B\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-\-H\-A\-N\-D\-L\-E}}]{handle, }
+\item[{const void $\ast$}]{data, }
+\item[{unsigned int}]{data\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{adb_8h_a05d6b0a6bf687160fcea8d34907d1615}
+
+
+Referenced by A\-D\-B\-Send().
+

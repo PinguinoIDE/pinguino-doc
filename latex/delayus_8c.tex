@@ -1,0 +1,52 @@
+\hypertarget{delayus_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/delayus.c File Reference}
+\label{delayus_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/delayus.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/delayus.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$delay.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{delayus_8c_ae805c4226f4e90ba96cb985bbca83a87}{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-U\-S\-\_\-\-C\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus} (unsigned int microseconds)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{delayus_8c_ae805c4226f4e90ba96cb985bbca83a87}{\index{delayus.\-c@{delayus.\-c}!\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-U\-S\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-U\-S\-\_\-\-C\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-U\-S\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-U\-S\-\_\-\-C\-\_\-\-\_\-}!delayus.c@{delayus.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-E\-L\-A\-Y\-U\-S\-\_\-\-C\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-E\-L\-A\-Y\-U\-S\-\_\-\-C\-\_\-\-\_\-}}\label{delayus_8c_ae805c4226f4e90ba96cb985bbca83a87}
+
+
+Definition at line 30 of file delayus.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{\index{delayus.\-c@{delayus.\-c}!Delayus@{Delayus}}
+\index{Delayus@{Delayus}!delayus.c@{delayus.\-c}}
+\subsubsection[{Delayus}]{\setlength{\rightskip}{0pt plus 5cm}void Delayus (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{microseconds}
+\end{DoxyParamCaption}
+)}}\label{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}
+
+
+Definition at line 63 of file delayus.\-c.
+
+
+
+Referenced by \-\_\-lcd\-\_\-begin(), \-\_\-lcd\-\_\-clear(), \-\_\-lcd\-\_\-home(), \-\_\-lcd\-\_\-pulse\-Enable(), enc28j60\-Phy\-Read\-H(), enc28j60\-Phy\-Write(), lcd\-\_\-begin(), lcdi2c\-\_\-init(), modbuss\-\_\-send\-Packet(), modbuss\-\_\-update(), mrf24j40\-\_\-init(), mrf24j40\-\_\-init\-\_\-coordinator(), mrf24j40\-\_\-set\-\_\-channel(), One\-Wire\-Read\-Bit(), One\-Wire\-Reset(), One\-Wire\-Write\-Bit(), S\-P\-I\-Loc\-\_\-\-Read(), and S\-P\-I\-Loc\-\_\-\-Write().
+
+
+\begin{DoxyCode}
+64 \{
+65     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i;
+66     
+67     \textcolor{keywordflow}{for} (i=0; i<microseconds; i++)
+68         ;
+69 \}
+\end{DoxyCode}

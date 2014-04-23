@@ -1,0 +1,295 @@
+\hypertarget{newlib_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/newlib.c File Reference}
+\label{newlib_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/newlib.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/newlib.\-c}}
+}
+{\ttfamily \#include $<$serial.\-c$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{newlib_8c_afb3122ba161ca2d1cdde50cd80592765}{\-\_\-\-\_\-\-N\-E\-W\-L\-I\-B\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{newlib_8c_a738d5d6770deaeaf7cf5e5381d296b21}{sbrk} (int nbbytes)
+\item 
+int \hyperlink{newlib_8c_adc50a6219f99993c79b0fa6fbd467eb4}{open} (const char $\ast$name, int flags, int mode)
+\item 
+int \hyperlink{newlib_8c_aef549d17ba94cf1e252df77360f127de}{close} (int file)
+\item 
+int \hyperlink{newlib_8c_a5adffd2b7a4629e7f2a9c2090f2b7ad1}{fstat} (int file, void $\ast$st)
+\item 
+int \hyperlink{newlib_8c_a2cf4c4b087df7b15fb2aa7401ddfc010}{isatty} (int file)
+\item 
+int \hyperlink{newlib_8c_a100b00771a8b06bfc443efb32da0f9d9}{lseek} (int file, int ptr, int \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir})
+\item 
+int \hyperlink{newlib_8c_aa0c5d610f8b61891a7cf5fca2671b6f9}{read} (int file, char $\ast$ptr, int len)
+\item 
+int \hyperlink{newlib_8c_ad0f87c9a81020afdf227817ffab35de3}{write} (char file, char $\ast$ptr, int len)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{newlib_8c_a6f71a3b83109b479cf6ac885e4682112}{heap\-\_\-ptr}
+\item 
+int \hyperlink{newlib_8c_a346450f5203cd0c87efefd1e893782d0}{\-\_\-heap}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{newlib_8c_afb3122ba161ca2d1cdde50cd80592765}{\index{newlib.\-c@{newlib.\-c}!\-\_\-\-\_\-\-N\-E\-W\-L\-I\-B\-\_\-\-\_\-@{\-\_\-\-\_\-\-N\-E\-W\-L\-I\-B\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-N\-E\-W\-L\-I\-B\-\_\-\-\_\-@{\-\_\-\-\_\-\-N\-E\-W\-L\-I\-B\-\_\-\-\_\-}!newlib.c@{newlib.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-N\-E\-W\-L\-I\-B\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-N\-E\-W\-L\-I\-B\-\_\-\-\_\-}}\label{newlib_8c_afb3122ba161ca2d1cdde50cd80592765}
+
+
+Definition at line 25 of file newlib.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{newlib_8c_aef549d17ba94cf1e252df77360f127de}{\index{newlib.\-c@{newlib.\-c}!close@{close}}
+\index{close@{close}!newlib.c@{newlib.\-c}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}int close (
+\begin{DoxyParamCaption}
+\item[{int}]{file}
+\end{DoxyParamCaption}
+)}}\label{newlib_8c_aef549d17ba94cf1e252df77360f127de}
+
+
+Definition at line 80 of file newlib.\-c.
+
+
+\begin{DoxyCode}
+81 \{
+82     \textcolor{keywordflow}{return} -1;
+83     \textcolor{comment}{// TODO clear interrupt for some stream}
+84 \}
+\end{DoxyCode}
+\hypertarget{newlib_8c_a5adffd2b7a4629e7f2a9c2090f2b7ad1}{\index{newlib.\-c@{newlib.\-c}!fstat@{fstat}}
+\index{fstat@{fstat}!newlib.c@{newlib.\-c}}
+\subsubsection[{fstat}]{\setlength{\rightskip}{0pt plus 5cm}int fstat (
+\begin{DoxyParamCaption}
+\item[{int}]{file, }
+\item[{void $\ast$}]{st}
+\end{DoxyParamCaption}
+)}}\label{newlib_8c_a5adffd2b7a4629e7f2a9c2090f2b7ad1}
+
+
+Definition at line 95 of file newlib.\-c.
+
+
+\begin{DoxyCode}
+96 \{
+97     \textcolor{keywordflow}{return} 0;
+98 \}
+\end{DoxyCode}
+\hypertarget{newlib_8c_a2cf4c4b087df7b15fb2aa7401ddfc010}{\index{newlib.\-c@{newlib.\-c}!isatty@{isatty}}
+\index{isatty@{isatty}!newlib.c@{newlib.\-c}}
+\subsubsection[{isatty}]{\setlength{\rightskip}{0pt plus 5cm}int isatty (
+\begin{DoxyParamCaption}
+\item[{int}]{file}
+\end{DoxyParamCaption}
+)}}\label{newlib_8c_a2cf4c4b087df7b15fb2aa7401ddfc010}
+
+
+Definition at line 105 of file newlib.\-c.
+
+
+\begin{DoxyCode}
+106 \{
+107     \textcolor{keywordflow}{return} 1;
+108 \}
+\end{DoxyCode}
+\hypertarget{newlib_8c_a100b00771a8b06bfc443efb32da0f9d9}{\index{newlib.\-c@{newlib.\-c}!lseek@{lseek}}
+\index{lseek@{lseek}!newlib.c@{newlib.\-c}}
+\subsubsection[{lseek}]{\setlength{\rightskip}{0pt plus 5cm}int lseek (
+\begin{DoxyParamCaption}
+\item[{int}]{file, }
+\item[{int}]{ptr, }
+\item[{int}]{dir}
+\end{DoxyParamCaption}
+)}}\label{newlib_8c_a100b00771a8b06bfc443efb32da0f9d9}
+
+
+Definition at line 115 of file newlib.\-c.
+
+
+\begin{DoxyCode}
+116 \{
+117     \textcolor{keywordflow}{return} 0;
+118 \}
+\end{DoxyCode}
+\hypertarget{newlib_8c_adc50a6219f99993c79b0fa6fbd467eb4}{\index{newlib.\-c@{newlib.\-c}!open@{open}}
+\index{open@{open}!newlib.c@{newlib.\-c}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}int open (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{int}]{flags, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}}\label{newlib_8c_adc50a6219f99993c79b0fa6fbd467eb4}
+
+
+Definition at line 56 of file newlib.\-c.
+
+
+
+References Serial\-Configure(), U\-A\-R\-T1, U\-A\-R\-T2, U\-A\-R\-T\-\_\-\-E\-N\-A\-B\-L\-E, and U\-A\-R\-T\-\_\-\-R\-X\-\_\-\-T\-X\-\_\-\-E\-N\-A\-B\-L\-E\-D.
+
+
+\begin{DoxyCode}
+57 \{   
+58     \textcolor{keywordflow}{if} (!strcmp(name,\textcolor{stringliteral}{"SERIAL1"})) 
+59     \{
+60         \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0f213d0381fb0d45af9bc0c6d0aa2127}{SerialConfigure}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1}, \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aaaf6c77e3b8fec12ad625225a08c4f28}{UART\_ENABLE},  
+      \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a79e41610f669265a690114ac881f8a89}{UART\_RX\_TX\_ENABLED},   9600);
+61         \textcolor{keywordflow}{return}(1);
+62     \}
+63 
+64     \textcolor{keywordflow}{if} (!strcmp(name,\textcolor{stringliteral}{"SERIAL2"})) 
+65     \{
+66         \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a0f213d0381fb0d45af9bc0c6d0aa2127}{SerialConfigure}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a7f6bd6eb89ae2eeae97af4207ebe3cde}{UART2}, \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aaaf6c77e3b8fec12ad625225a08c4f28}{UART\_ENABLE},  
+      \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a79e41610f669265a690114ac881f8a89}{UART\_RX\_TX\_ENABLED},   9600);
+67         \textcolor{keywordflow}{return}(2);
+68     \}
+69     
+70 \textcolor{comment}{// TODO LCD, SPI etc.....}
+71 \textcolor{comment}{// TODO define a flag to know if the stream is opened}
+72     
+73     \textcolor{keywordflow}{return} -1;
+74 \}
+\end{DoxyCode}
+\hypertarget{newlib_8c_aa0c5d610f8b61891a7cf5fca2671b6f9}{\index{newlib.\-c@{newlib.\-c}!read@{read}}
+\index{read@{read}!newlib.c@{newlib.\-c}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}int read (
+\begin{DoxyParamCaption}
+\item[{int}]{file, }
+\item[{char $\ast$}]{ptr, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{newlib_8c_aa0c5d610f8b61891a7cf5fca2671b6f9}
+
+
+Definition at line 125 of file newlib.\-c.
+
+
+
+References Serial\-Read(), and U\-A\-R\-T1.
+
+
+\begin{DoxyCode}
+126 \{
+127     \textcolor{keywordtype}{int} caractere=0;
+128     \textcolor{keywordtype}{int} nbchar=0;
+129     
+130     \textcolor{keywordflow}{switch} (file)
+131     \{
+132         \textcolor{keywordflow}{case} 0:
+133             \textcolor{keywordflow}{while} (caractere!=-1)       \textcolor{comment}{// stdin}
+134             \{
+135                 caractere=\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a46b4e3730df878a192c4e1aeb3a4325d}{SerialRead}(\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a8d69bf04d07af4fbbab5a8bd291f65ff}{UART1});
+136                 \textcolor{keywordflow}{if} (caractere!=-1)
+137                 \{
+138                     *ptr++=caractere;
+139                     nbchar++;
+140                 \}
+141             \}
+142             \textcolor{keywordflow}{if} (nbchar!=0)
+143                 \textcolor{keywordflow}{return}(nbchar);
+144             \textcolor{keywordflow}{else}
+145                 \textcolor{keywordflow}{return}(-1);
+146             \textcolor{keywordflow}{break};
+147     \}
+148 
+149     \textcolor{keywordflow}{return} -1;
+150 \}
+\end{DoxyCode}
+\hypertarget{newlib_8c_a738d5d6770deaeaf7cf5e5381d296b21}{\index{newlib.\-c@{newlib.\-c}!sbrk@{sbrk}}
+\index{sbrk@{sbrk}!newlib.c@{newlib.\-c}}
+\subsubsection[{sbrk}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ sbrk (
+\begin{DoxyParamCaption}
+\item[{int}]{nbbytes}
+\end{DoxyParamCaption}
+)}}\label{newlib_8c_a738d5d6770deaeaf7cf5e5381d296b21}
+
+
+Definition at line 40 of file newlib.\-c.
+
+
+
+References \-\_\-heap, and heap\-\_\-ptr.
+
+
+\begin{DoxyCode}
+41 \{
+42     \textcolor{keywordtype}{int} *base;
+43     
+44     \textcolor{keywordflow}{if} (!\hyperlink{newlib_8c_a6f71a3b83109b479cf6ac885e4682112}{heap\_ptr})
+45         \hyperlink{newlib_8c_a6f71a3b83109b479cf6ac885e4682112}{heap\_ptr}=(\textcolor{keywordtype}{int} *)&\hyperlink{newlib_8c_a346450f5203cd0c87efefd1e893782d0}{\_heap};    \textcolor{comment}{// \_heap is defined in the linker script}
+46     base=\hyperlink{newlib_8c_a6f71a3b83109b479cf6ac885e4682112}{heap\_ptr};                  \textcolor{comment}{// on Pinguino32 heap is 8192 bytes }
+47     \hyperlink{newlib_8c_a6f71a3b83109b479cf6ac885e4682112}{heap\_ptr} += nbbytes;
+48     \textcolor{keywordflow}{return} base;
+49 \}
+\end{DoxyCode}
+\hypertarget{newlib_8c_ad0f87c9a81020afdf227817ffab35de3}{\index{newlib.\-c@{newlib.\-c}!write@{write}}
+\index{write@{write}!newlib.c@{newlib.\-c}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}int write (
+\begin{DoxyParamCaption}
+\item[{char}]{file, }
+\item[{char $\ast$}]{ptr, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{newlib_8c_ad0f87c9a81020afdf227817ffab35de3}
+
+
+Definition at line 157 of file newlib.\-c.
+
+
+
+References Serial\-U\-A\-R\-T1\-Write\-Char(), and Serial\-U\-A\-R\-T2\-Write\-Char().
+
+
+\begin{DoxyCode}
+158 \{
+159     \textcolor{keywordtype}{int} todo;
+160     \textcolor{keywordflow}{switch} (file)
+161     \{
+162         \textcolor{keywordflow}{case} 1:
+163             \textcolor{keywordflow}{for} (todo = 0; todo < len; todo++)
+164                 \hyperlink{p32_2include_2pinguino_2core_2serial_8c_afd0e9a058cc758040a39e4df542b7726}{SerialUART1WriteChar}(*ptr++);   \textcolor{comment}{// stdout}
+165             \textcolor{keywordflow}{return} len;
+166             \textcolor{keywordflow}{break};
+167         \textcolor{keywordflow}{case} 2:
+168             \textcolor{keywordflow}{for} (todo = 0; todo < len; todo++)
+169                 \hyperlink{p32_2include_2pinguino_2core_2serial_8c_aa7354910d04ba38409e1a80b22d6f5a2}{SerialUART2WriteChar}(*ptr++);   \textcolor{comment}{// stdout}
+170             \textcolor{keywordflow}{return} len;
+171             \textcolor{keywordflow}{break};
+172         \textcolor{keywordflow}{default}:
+173             \textcolor{keywordflow}{return}(-1);
+174             \textcolor{keywordflow}{break};  
+175     \}
+176     
+177     \textcolor{keywordflow}{return} -1;
+178 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{newlib_8c_a346450f5203cd0c87efefd1e893782d0}{\index{newlib.\-c@{newlib.\-c}!\-\_\-heap@{\-\_\-heap}}
+\index{\-\_\-heap@{\-\_\-heap}!newlib.c@{newlib.\-c}}
+\subsubsection[{\-\_\-heap}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-heap}}\label{newlib_8c_a346450f5203cd0c87efefd1e893782d0}
+
+
+Referenced by sbrk().
+
+\hypertarget{newlib_8c_a6f71a3b83109b479cf6ac885e4682112}{\index{newlib.\-c@{newlib.\-c}!heap\-\_\-ptr@{heap\-\_\-ptr}}
+\index{heap\-\_\-ptr@{heap\-\_\-ptr}!newlib.c@{newlib.\-c}}
+\subsubsection[{heap\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ heap\-\_\-ptr}}\label{newlib_8c_a6f71a3b83109b479cf6ac885e4682112}
+
+
+Definition at line 37 of file newlib.\-c.
+
+
+
+Referenced by sbrk().
+

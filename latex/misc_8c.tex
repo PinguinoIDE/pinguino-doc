@@ -1,0 +1,61 @@
+\hypertarget{misc_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/misc.c File Reference}
+\label{misc_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/misc.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/misc.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$delay.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{misc_8c_ad94c82f6aef7a6b9f21f42bcfa9ad308}{\-\_\-\-\_\-\-M\-I\-S\-C\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{misc_8c_a4b86c8cb6ac492cab4b9b255b44cbdfa}{Keyboard\-\_\-get} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{misc_8c_ad94c82f6aef7a6b9f21f42bcfa9ad308}{\index{misc.\-c@{misc.\-c}!\-\_\-\-\_\-\-M\-I\-S\-C\-\_\-\-C@{\-\_\-\-\_\-\-M\-I\-S\-C\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-M\-I\-S\-C\-\_\-\-C@{\-\_\-\-\_\-\-M\-I\-S\-C\-\_\-\-C}!misc.c@{misc.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-M\-I\-S\-C\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-M\-I\-S\-C\-\_\-\-C}}\label{misc_8c_ad94c82f6aef7a6b9f21f42bcfa9ad308}
+
+
+Definition at line 27 of file misc.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{misc_8c_a4b86c8cb6ac492cab4b9b255b44cbdfa}{\index{misc.\-c@{misc.\-c}!Keyboard\-\_\-get@{Keyboard\-\_\-get}}
+\index{Keyboard\-\_\-get@{Keyboard\-\_\-get}!misc.c@{misc.\-c}}
+\subsubsection[{Keyboard\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Keyboard\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin}
+\end{DoxyParamCaption}
+)}}\label{misc_8c_a4b86c8cb6ac492cab4b9b255b44cbdfa}
+
+
+Definition at line 33 of file misc.\-c.
+
+
+
+References Delayms(), and digitalread().
+
+
+\begin{DoxyCode}
+34 \{
+35 
+36     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} etat1 = 0;
+37     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} etat2 = 0;
+38 
+39     \textcolor{keywordflow}{while} (1)
+40     \{
+41         etat1 = (\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(pin) == 1 ? 1 : 0);
+42         \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);                 \textcolor{comment}{// 50 milliseconds}
+43         etat2 = (\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(pin) == 1 ? 1 : 0);
+44         \textcolor{keywordflow}{if}(etat2 == etat1)
+45             \textcolor{keywordflow}{return} etat1;               \textcolor{comment}{// if state is stable at least 50 ms}
+46     \}
+47 \}
+\end{DoxyCode}

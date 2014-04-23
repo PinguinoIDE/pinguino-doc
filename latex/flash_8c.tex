@@ -1,0 +1,138 @@
+\hypertarget{flash_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/flash.c File Reference}
+\label{flash_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/flash.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/flash.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{flash_8c_a4b883381b04e7237667ad02ab1370160}{\-\_\-\-\_\-\-F\-L\-A\-S\-H\-\_\-\-C\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{flash_8c_a04a6ce2b0e53fd4ab0e80fa85406c870}{Erase\-Flash} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} address)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{flash_8c_adc2f9c09d0821d1bd2f864dfb86270e0}{Read\-Flash} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} address)
+\item 
+void \hyperlink{flash_8c_abe1146d2bee03bf40dab84d2201fbafc}{Write\-Flash} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} destination\-\_\-add, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$destination)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{flash_8c_a4b883381b04e7237667ad02ab1370160}{\index{flash.\-c@{flash.\-c}!\-\_\-\-\_\-\-F\-L\-A\-S\-H\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-F\-L\-A\-S\-H\-\_\-\-C\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-F\-L\-A\-S\-H\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-F\-L\-A\-S\-H\-\_\-\-C\-\_\-\-\_\-}!flash.c@{flash.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-F\-L\-A\-S\-H\-\_\-\-C\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-F\-L\-A\-S\-H\-\_\-\-C\-\_\-\-\_\-}}\label{flash_8c_a4b883381b04e7237667ad02ab1370160}
+
+
+Definition at line 29 of file flash.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{flash_8c_a04a6ce2b0e53fd4ab0e80fa85406c870}{\index{flash.\-c@{flash.\-c}!Erase\-Flash@{Erase\-Flash}}
+\index{Erase\-Flash@{Erase\-Flash}!flash.c@{flash.\-c}}
+\subsubsection[{Erase\-Flash}]{\setlength{\rightskip}{0pt plus 5cm}void Erase\-Flash (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{address}
+\end{DoxyParamCaption}
+)}}\label{flash_8c_a04a6ce2b0e53fd4ab0e80fa85406c870}
+
+
+Definition at line 34 of file flash.\-c.
+
+
+\begin{DoxyCode}
+35 \{
+36     TBLPTRU=0;
+37     TBLPTRH=address>>8;
+38     TBLPTRL=address;
+39      \_\_asm
+40         bsf     \_EECON1, 7
+41         bcf     \_EECON1, 6
+42         bsf     \_EECON1, 2
+43         bsf     \_EECON1, 4
+44         bcf     \_INTCON, 7
+45         movlw   0x55
+46         movwf   \_EECON2
+47         movlw   0xaa
+48         movwf   \_EECON2
+49         bsf     \_EECON1, 1
+50     \_\_endasm;
+51 \}
+\end{DoxyCode}
+\hypertarget{flash_8c_adc2f9c09d0821d1bd2f864dfb86270e0}{\index{flash.\-c@{flash.\-c}!Read\-Flash@{Read\-Flash}}
+\index{Read\-Flash@{Read\-Flash}!flash.c@{flash.\-c}}
+\subsubsection[{Read\-Flash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} Read\-Flash (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{address}
+\end{DoxyParamCaption}
+)}}\label{flash_8c_adc2f9c09d0821d1bd2f864dfb86270e0}
+
+
+Definition at line 53 of file flash.\-c.
+
+
+\begin{DoxyCode}
+54 \{
+55     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} h8,l8;
+56 
+57     TBLPTRU=0;
+58     TBLPTRH=address>>8;
+59     TBLPTRL=address;
+60     \_\_asm tblrd*+ \_\_endasm;
+61     l8=TABLAT;
+62     \_\_asm tblrd*+ \_\_endasm;
+63     h8=TABLAT;
+64     \textcolor{keywordflow}{return}((h8<<8)+l8);
+65 \}
+\end{DoxyCode}
+\hypertarget{flash_8c_abe1146d2bee03bf40dab84d2201fbafc}{\index{flash.\-c@{flash.\-c}!Write\-Flash@{Write\-Flash}}
+\index{Write\-Flash@{Write\-Flash}!flash.c@{flash.\-c}}
+\subsubsection[{Write\-Flash}]{\setlength{\rightskip}{0pt plus 5cm}void Write\-Flash (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{destination\-\_\-add, }
+\item[{{\bf u8} $\ast$}]{destination}
+\end{DoxyParamCaption}
+)}}\label{flash_8c_abe1146d2bee03bf40dab84d2201fbafc}
+
+
+Definition at line 67 of file flash.\-c.
+
+
+\begin{DoxyCode}
+68 \{
+69     \textcolor{keyword}{static} \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+70 
+71     TBLPTRU=0;
+72     TBLPTRH=destination\_add>>8;
+73     TBLPTRL=destination\_add;
+74 
+75      \_\_asm 
+76         tblrd*-
+77     \_\_endasm;
+78         
+79     \textcolor{keywordflow}{for}(i = 0; i < 32; i++)
+80     \{
+81         TABLAT = *destination;
+82         destination++;
+83         \_\_asm
+84             tblwt+*
+85         \_\_endasm;
+86     \} 
+87 
+88     \_\_asm
+89         bsf     \_EECON1, 7
+90         bcf     \_EECON1, 6
+91         bsf     \_EECON1, 2
+92         bcf     \_INTCON, 7
+93         
+94         movlw   0x55
+95         movwf   \_EECON2
+96         movlw   0xaa
+97         movwf   \_EECON2
+98         bsf     \_EECON1, 1
+99     \_\_endasm;
+100 
+101 \}
+\end{DoxyCode}

@@ -1,0 +1,405 @@
+\hypertarget{p8_2pinguino_2libraries_2lcdlib_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/lcdlib.c File Reference}
+\label{p8_2pinguino_2libraries_2lcdlib_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/lcdlib.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/lcdlib.\-c}}
+}
+{\ttfamily \#include $<$delayms.\-c$>$}\\*
+{\ttfamily \#include $<$delayus.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$digitalp.\-c$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$lcdlib.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_afa7e1d189024ed7dc0b667a7327ee105}{\-\_\-\-\_\-\-L\-C\-D\-L\-I\-B\-\_\-\-C\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a75ee90bb65c392044eca414e1b161c10}{lcd\-\_\-pulse\-Enable} (void)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a0b46274ee9191be0411a5e80841554ad}{lcd\-\_\-write4bits} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} value)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a023222cc29e9e246d1e9dc80ff5771d1}{lcd\-\_\-write8bits} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} value)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a2e9208c6267532d4f574bafa1338a852}{lcd\-\_\-send} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} value, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} mode)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a632c651635ae2e0301da1a5f7ebc0122}{lcd\-\_\-write} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} value)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_ac33e39d93c578df7788c777f7507cf09}{lcd\-\_\-command} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} value)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_aba538526c222a874b2cd62f7a9d17971}{lcd\-\_\-begin} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} lines, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} dotsize)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a694838cd36b5d960123551b2c117f0c1}{lcd\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} fourbitmode, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} rs, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} rw, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} enable, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d0, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d1, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d2, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d3, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d4, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d5, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d6, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d7)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a1515040d156f747f19e2605347054a9c}{lcd\-\_\-pins} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} rs, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} enable, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d0, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d1, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d2, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d3, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d4, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d5, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d6, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} d7)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2libraries_2lcdlib_8c_afa7e1d189024ed7dc0b667a7327ee105}{\index{p8/pinguino/libraries/lcdlib.\-c@{p8/pinguino/libraries/lcdlib.\-c}!\-\_\-\-\_\-\-L\-C\-D\-L\-I\-B\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-L\-C\-D\-L\-I\-B\-\_\-\-C\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-L\-C\-D\-L\-I\-B\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-L\-C\-D\-L\-I\-B\-\_\-\-C\-\_\-\-\_\-}!p8/pinguino/libraries/lcdlib.c@{p8/pinguino/libraries/lcdlib.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-L\-C\-D\-L\-I\-B\-\_\-\-C\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-L\-C\-D\-L\-I\-B\-\_\-\-C\-\_\-\-\_\-}}\label{p8_2pinguino_2libraries_2lcdlib_8c_afa7e1d189024ed7dc0b667a7327ee105}
+
+
+Definition at line 24 of file lcdlib.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2lcdlib_8c_aba538526c222a874b2cd62f7a9d17971}{\index{p8/pinguino/libraries/lcdlib.\-c@{p8/pinguino/libraries/lcdlib.\-c}!lcd\-\_\-begin@{lcd\-\_\-begin}}
+\index{lcd\-\_\-begin@{lcd\-\_\-begin}!p8/pinguino/libraries/lcdlib.c@{p8/pinguino/libraries/lcdlib.\-c}}
+\subsubsection[{lcd\-\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\-\_\-begin (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{lines, }
+\item[{{\bf u8}}]{dotsize}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2lcdlib_8c_aba538526c222a874b2cd62f7a9d17971}
+Setup line x column on L\-C\-D Print a string on L\-C\-D Write formated string on L\-C\-D Print a number on L\-C\-D Print a float number to L\-C\-D Move cursor to Home position Clear L\-C\-D Turn the display on/off (quickly) Turns the underline cursor on/off Turn on and off the blinking cursor These commands scroll the display without changing the R\-A\-M This is for text that flows Left to Right This is for text that flows Right to Left This will 'right justify' text from the cursor This will 'left justify' text from the cursor Initial Display settings! 
+
+Definition at line 330 of file lcdlib.\-c.
+
+
+
+References \-\_\-currline, \-\_\-displaycontrol, \-\_\-displayfunction, \-\_\-displaymode, \-\_\-enable\-\_\-pin, \-\_\-numlines, \-\_\-rs\-\_\-pin, Delayms(), Delayus(), digitalwrite(), L\-C\-D\-\_\-2\-L\-I\-N\-E, L\-C\-D\-\_\-5x10\-D\-O\-T\-S, L\-C\-D\-\_\-8\-B\-I\-T\-M\-O\-D\-E, L\-C\-D\-\_\-\-B\-L\-I\-N\-K\-O\-F\-F, L\-C\-D\-\_\-\-C\-L\-E\-A\-R\-D\-I\-S\-P\-L\-A\-Y, lcd\-\_\-command(), L\-C\-D\-\_\-\-C\-U\-R\-S\-O\-R\-O\-F\-F, L\-C\-D\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-C\-O\-N\-T\-R\-O\-L, L\-C\-D\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-O\-N, L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-L\-E\-F\-T, L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-M\-O\-D\-E\-S\-E\-T, L\-C\-D\-\_\-\-E\-N\-T\-R\-Y\-S\-H\-I\-F\-T\-D\-E\-C\-R\-E\-M\-E\-N\-T, L\-C\-D\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S\-E\-T, lcd\-\_\-write4bits(), and L\-O\-W.
+
+
+\begin{DoxyCode}
+331 \{
+332     \textcolor{keywordflow}{if} (lines > 1)
+333         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a754c20821453d20b8b1dad01922f666c}{\_displayfunction} |= \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a7987e93538df2819583ba43b81ddbb25}{LCD\_2LINE};
+334 
+335     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac51fc578d5540a7f1bde972829910451}{\_numlines} = lines;
+336     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_afdeeee75d860eecc900b29ba1c639edb}{\_currline} = 0;
+337 
+338     \textcolor{comment}{// Some one line displays can select 10 pixel high font}
+339     \textcolor{keywordflow}{if} ((dotsize != 0) && (lines == 1))
+340         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a754c20821453d20b8b1dad01922f666c}{\_displayfunction} |= \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_abb3210156d88d3fe18c9352eb161fe42}{LCD\_5x10DOTS};
+341 
+342     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(15);                             \textcolor{comment}{// Wait more than 15 ms after VDD rises to 4.5V}
+343 
+344     \textcolor{comment}{// Now we pull both RS and R/W low to begin commands}
+345     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a2ace752c550c0993ba9d1cb6bbdae907}{\_rs\_pin}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+346     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a30cb12bdec2cbb4e1943a926dc4f5110}{\_enable\_pin}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+347 
+348     \textcolor{comment}{//put the LCD into 4 bit mode}
+349     \textcolor{keywordflow}{if} (! (\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a754c20821453d20b8b1dad01922f666c}{\_displayfunction} & \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a59a57ca857dae5d89eb5f2a38c4ac6f0}{LCD\_8BITMODE}) )
+350     \{
+351         \textcolor{comment}{// this is according to the hitachi HD44780 datasheet p46, figure 24}
+352 
+353         \textcolor{comment}{// we start in 8bit mode, try to set 4 bit mode}
+354         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a0b46274ee9191be0411a5e80841554ad}{lcd\_write4bits}(0x03);
+355         \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(5);                                  \textcolor{comment}{// Wait for more than 4.1 ms}
+356         \textcolor{comment}{// second try}
+357         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a0b46274ee9191be0411a5e80841554ad}{lcd\_write4bits}(0x03);
+358         \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(150);                                \textcolor{comment}{// Wait more than 100 μs}
+359         \textcolor{comment}{// third go!}
+360         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a0b46274ee9191be0411a5e80841554ad}{lcd\_write4bits}(0x03); 
+361         \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(150);                                \textcolor{comment}{// Wait more than 100 μs}
+362         \textcolor{comment}{// finally, set to 8-bit interface}
+363         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a0b46274ee9191be0411a5e80841554ad}{lcd\_write4bits}(0x02); 
+364     \}
+365     \textcolor{comment}{//put the LCD into 8 bit mode}
+366     \textcolor{keywordflow}{else}
+367     \{
+368         \textcolor{comment}{// this is according to the hitachi HD44780 datasheet p45, figure 23}
+369 
+370         \textcolor{comment}{// Send function set command sequence}
+371         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_ac33e39d93c578df7788c777f7507cf09}{lcd\_command}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_aaef882ae70d1f485cd132815d9716111}{LCD\_FUNCTIONSET} | \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a754c20821453d20b8b1dad01922f666c}{\_displayfunction});
+372         \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(5);                                  \textcolor{comment}{// Wait for more than 4.1 ms}
+373 
+374         \textcolor{comment}{// second try}
+375         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_ac33e39d93c578df7788c777f7507cf09}{lcd\_command}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_aaef882ae70d1f485cd132815d9716111}{LCD\_FUNCTIONSET} | \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a754c20821453d20b8b1dad01922f666c}{\_displayfunction});
+376         \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(5);                                  \textcolor{comment}{// Wait for more than 4.1 ms}
+377         \textcolor{comment}{//      Delayus(150);}
+378 
+379         \textcolor{comment}{// third go}
+380         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_ac33e39d93c578df7788c777f7507cf09}{lcd\_command}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_aaef882ae70d1f485cd132815d9716111}{LCD\_FUNCTIONSET} | \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a754c20821453d20b8b1dad01922f666c}{\_displayfunction});
+381     \}
+382 
+383     \textcolor{comment}{// finally, set # lines, font size, etc.}
+384     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_ac33e39d93c578df7788c777f7507cf09}{lcd\_command}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_aaef882ae70d1f485cd132815d9716111}{LCD\_FUNCTIONSET} | \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a754c20821453d20b8b1dad01922f666c}{\_displayfunction});  
+385 
+386     \textcolor{comment}{// turn the display on with no cursor or blinking default}
+387     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a0fc0b023e9bef9439fe24f69bb5c295e}{\_displaycontrol} = \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a76236ae8317b34bbc98ea56bc0a2639c}{LCD\_DISPLAYON} | \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a32b194a3adaa0a0bb69acee2e6a754fa}{LCD\_CURSOROFF} | 
+      \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a4b28243034cec656b0ed490ba6979752}{LCD\_BLINKOFF};  
+388     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_ac33e39d93c578df7788c777f7507cf09}{lcd\_command}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_adfb8b2b8b8a08d7313504d7a4f89d99f}{LCD\_DISPLAYCONTROL} | 
+      \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a0fc0b023e9bef9439fe24f69bb5c295e}{\_displaycontrol});
+389 
+390     \textcolor{comment}{// clear it off}
+391     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_ac33e39d93c578df7788c777f7507cf09}{lcd\_command}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_acc3509bc0442b41e2b816555de473ed2}{LCD\_CLEARDISPLAY});  \textcolor{comment}{// clear display, set cursor position to
+       zero}
+392     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(2);
+393 
+394     \textcolor{comment}{// Initialize to default text direction (for romance languages)}
+395     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a5c2eb1efcaf52bbddb29c257f6c94c03}{\_displaymode} = \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_ae7c6309fce6200bd7526d090a4a84dd0}{LCD\_ENTRYLEFT} | 
+      \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a049ee97e98d04788c1da9a55590fbe42}{LCD\_ENTRYSHIFTDECREMENT};
+396     \textcolor{comment}{// set the entry mode}
+397     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_ac33e39d93c578df7788c777f7507cf09}{lcd\_command}(\hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a5597e1d5819ea2f0734ad4313abf6703}{LCD\_ENTRYMODESET} | \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a5c2eb1efcaf52bbddb29c257f6c94c03}{\_displaymode});
+398 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2lcdlib_8c_ac33e39d93c578df7788c777f7507cf09}{\index{p8/pinguino/libraries/lcdlib.\-c@{p8/pinguino/libraries/lcdlib.\-c}!lcd\-\_\-command@{lcd\-\_\-command}}
+\index{lcd\-\_\-command@{lcd\-\_\-command}!p8/pinguino/libraries/lcdlib.c@{p8/pinguino/libraries/lcdlib.\-c}}
+\subsubsection[{lcd\-\_\-command}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\-\_\-command (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2lcdlib_8c_ac33e39d93c578df7788c777f7507cf09}
+Write a control command on L\-C\-D 
+
+Definition at line 90 of file lcdlib.\-c.
+
+
+
+References lcd\-\_\-send(), and L\-O\-W.
+
+
+
+Referenced by lcd\-\_\-begin().
+
+
+\begin{DoxyCode}
+91 \{
+92     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a2e9208c6267532d4f574bafa1338a852}{lcd\_send}(value, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+93 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2lcdlib_8c_a694838cd36b5d960123551b2c117f0c1}{\index{p8/pinguino/libraries/lcdlib.\-c@{p8/pinguino/libraries/lcdlib.\-c}!lcd\-\_\-init@{lcd\-\_\-init}}
+\index{lcd\-\_\-init@{lcd\-\_\-init}!p8/pinguino/libraries/lcdlib.c@{p8/pinguino/libraries/lcdlib.\-c}}
+\subsubsection[{lcd\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{fourbitmode, }
+\item[{{\bf u8}}]{rs, }
+\item[{{\bf u8}}]{rw, }
+\item[{{\bf u8}}]{enable, }
+\item[{{\bf u8}}]{d0, }
+\item[{{\bf u8}}]{d1, }
+\item[{{\bf u8}}]{d2, }
+\item[{{\bf u8}}]{d3, }
+\item[{{\bf u8}}]{d4, }
+\item[{{\bf u8}}]{d5, }
+\item[{{\bf u8}}]{d6, }
+\item[{{\bf u8}}]{d7}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2lcdlib_8c_a694838cd36b5d960123551b2c117f0c1}
+Init L\-C\-D mode =$>$ 1 =$>$ 4 bits // 0 =$>$ 8 bits rs , rw, enable pins =$>$ D0 $\sim$ D7. 
+
+Definition at line 405 of file lcdlib.\-c.
+
+
+
+References \-\_\-data\-\_\-pins, \-\_\-displayfunction, \-\_\-enable\-\_\-pin, \-\_\-rs\-\_\-pin, \-\_\-rw\-\_\-pin, L\-C\-D\-\_\-1\-L\-I\-N\-E, L\-C\-D\-\_\-4\-B\-I\-T\-M\-O\-D\-E, L\-C\-D\-\_\-5x8\-D\-O\-T\-S, L\-C\-D\-\_\-8\-B\-I\-T\-M\-O\-D\-E, O\-U\-T\-P\-U\-T, and pinmode().
+
+
+
+Referenced by lcd\-\_\-pins().
+
+
+\begin{DoxyCode}
+408 \{
+409     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+410 
+411     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a2ace752c550c0993ba9d1cb6bbdae907}{\_rs\_pin} = rs;
+412     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a410e256fd91700f36388c6ddc25ef4c9}{\_rw\_pin} = rw;
+413     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a30cb12bdec2cbb4e1943a926dc4f5110}{\_enable\_pin} = enable;
+414 
+415     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[0] = d0;
+416     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[1] = d1;
+417     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[2] = d2;
+418     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[3] = d3; 
+419     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[4] = d4;
+420     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[5] = d5;
+421     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[6] = d6;
+422     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[7] = d7; 
+423 
+424     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a2ace752c550c0993ba9d1cb6bbdae907}{\_rs\_pin}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+425 
+426     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a30cb12bdec2cbb4e1943a926dc4f5110}{\_enable\_pin}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+427 
+428     \textcolor{keywordflow}{if} (fourbitmode)
+429     \{
+430         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a754c20821453d20b8b1dad01922f666c}{\_displayfunction} = \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_ab8c35d355d2372090c7a347e961c9224}{LCD\_4BITMODE} | \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a8c85cf88d8af66a47c42249d81c94641}{LCD\_1LINE} | 
+      \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a9ef57e724c1b846dae0f531aff6fb464}{LCD\_5x8DOTS};
+431         \textcolor{keywordflow}{for} (i = 0; i < 4; i++)
+432             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[i], \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+433     \}
+434     \textcolor{keywordflow}{else}
+435     \{
+436         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a754c20821453d20b8b1dad01922f666c}{\_displayfunction} = \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a59a57ca857dae5d89eb5f2a38c4ac6f0}{LCD\_8BITMODE} | \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a8c85cf88d8af66a47c42249d81c94641}{LCD\_1LINE} | 
+      \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a9ef57e724c1b846dae0f531aff6fb464}{LCD\_5x8DOTS};
+437         \textcolor{keywordflow}{for} (i = 0; i < 8; i++)
+438             \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[i], \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+439     \}
+440 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2lcdlib_8c_a1515040d156f747f19e2605347054a9c}{\index{p8/pinguino/libraries/lcdlib.\-c@{p8/pinguino/libraries/lcdlib.\-c}!lcd\-\_\-pins@{lcd\-\_\-pins}}
+\index{lcd\-\_\-pins@{lcd\-\_\-pins}!p8/pinguino/libraries/lcdlib.c@{p8/pinguino/libraries/lcdlib.\-c}}
+\subsubsection[{lcd\-\_\-pins}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\-\_\-pins (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{rs, }
+\item[{{\bf u8}}]{enable, }
+\item[{{\bf u8}}]{d0, }
+\item[{{\bf u8}}]{d1, }
+\item[{{\bf u8}}]{d2, }
+\item[{{\bf u8}}]{d3, }
+\item[{{\bf u8}}]{d4, }
+\item[{{\bf u8}}]{d5, }
+\item[{{\bf u8}}]{d6, }
+\item[{{\bf u8}}]{d7}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2lcdlib_8c_a1515040d156f747f19e2605347054a9c}
+L\-C\-D 8 bits mode 
+
+Definition at line 443 of file lcdlib.\-c.
+
+
+
+References lcd\-\_\-init().
+
+
+\begin{DoxyCode}
+444 \{
+445     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a694838cd36b5d960123551b2c117f0c1}{lcd\_init}(((d4 + d5 + d6 + d7)==0), rs, -1, enable, d0, d1, d2, d3, d4, d5, d6, d7);
+446 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2lcdlib_8c_a75ee90bb65c392044eca414e1b161c10}{\index{p8/pinguino/libraries/lcdlib.\-c@{p8/pinguino/libraries/lcdlib.\-c}!lcd\-\_\-pulse\-Enable@{lcd\-\_\-pulse\-Enable}}
+\index{lcd\-\_\-pulse\-Enable@{lcd\-\_\-pulse\-Enable}!p8/pinguino/libraries/lcdlib.c@{p8/pinguino/libraries/lcdlib.\-c}}
+\subsubsection[{lcd\-\_\-pulse\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\-\_\-pulse\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2lcdlib_8c_a75ee90bb65c392044eca414e1b161c10}
+Positive pulse on E 
+
+Definition at line 39 of file lcdlib.\-c.
+
+
+
+References \-\_\-enable\-\_\-pin, digitalwrite(), H\-I\-G\-H, and L\-O\-W.
+
+
+
+Referenced by lcd\-\_\-write4bits(), and lcd\-\_\-write8bits().
+
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{comment}{//digitalwrite(\_enable\_pin, LOW);}
+42 \textcolor{comment}{//  Delayus(1);    }
+43     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a30cb12bdec2cbb4e1943a926dc4f5110}{\_enable\_pin}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+44 \textcolor{comment}{//  Delayus(1);    // enable pulse must be >450ns}
+45     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a30cb12bdec2cbb4e1943a926dc4f5110}{\_enable\_pin}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+46 \textcolor{comment}{//  Delayus(100);   // commands need > 37us to settle}
+47 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2lcdlib_8c_a2e9208c6267532d4f574bafa1338a852}{\index{p8/pinguino/libraries/lcdlib.\-c@{p8/pinguino/libraries/lcdlib.\-c}!lcd\-\_\-send@{lcd\-\_\-send}}
+\index{lcd\-\_\-send@{lcd\-\_\-send}!p8/pinguino/libraries/lcdlib.c@{p8/pinguino/libraries/lcdlib.\-c}}
+\subsubsection[{lcd\-\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\-\_\-send (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{value, }
+\item[{{\bf u8}}]{mode}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2lcdlib_8c_a2e9208c6267532d4f574bafa1338a852}
+Send data to L\-C\-D 8 or 4 bits 
+
+Definition at line 68 of file lcdlib.\-c.
+
+
+
+References \-\_\-displayfunction, \-\_\-rs\-\_\-pin, digitalwrite(), L\-C\-D\-\_\-8\-B\-I\-T\-M\-O\-D\-E, lcd\-\_\-write4bits(), and lcd\-\_\-write8bits().
+
+
+
+Referenced by lcd\-\_\-command(), and lcd\-\_\-write().
+
+
+\begin{DoxyCode}
+69 \{
+70     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a2ace752c550c0993ba9d1cb6bbdae907}{\_rs\_pin}, mode);
+71   
+72     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_a754c20821453d20b8b1dad01922f666c}{\_displayfunction} & \hyperlink{p8_2pinguino_2libraries_2lcdi2c_8h_a59a57ca857dae5d89eb5f2a38c4ac6f0}{LCD\_8BITMODE})
+73     \{
+74         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a023222cc29e9e246d1e9dc80ff5771d1}{lcd\_write8bits}(value); 
+75     \}
+76     \textcolor{keywordflow}{else}
+77     \{
+78         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a0b46274ee9191be0411a5e80841554ad}{lcd\_write4bits}(value >> 4);   \textcolor{comment}{// Upper 4 bits first}
+79         \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a0b46274ee9191be0411a5e80841554ad}{lcd\_write4bits}(value);        \textcolor{comment}{// Lower 4 bits second}
+80     \}
+81 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2lcdlib_8c_a632c651635ae2e0301da1a5f7ebc0122}{\index{p8/pinguino/libraries/lcdlib.\-c@{p8/pinguino/libraries/lcdlib.\-c}!lcd\-\_\-write@{lcd\-\_\-write}}
+\index{lcd\-\_\-write@{lcd\-\_\-write}!p8/pinguino/libraries/lcdlib.c@{p8/pinguino/libraries/lcdlib.\-c}}
+\subsubsection[{lcd\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2lcdlib_8c_a632c651635ae2e0301da1a5f7ebc0122}
+Write a data character on L\-C\-D 
+
+Definition at line 84 of file lcdlib.\-c.
+
+
+
+References H\-I\-G\-H, and lcd\-\_\-send().
+
+
+\begin{DoxyCode}
+85 \{
+86     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a2e9208c6267532d4f574bafa1338a852}{lcd\_send}(value, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+87 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2lcdlib_8c_a0b46274ee9191be0411a5e80841554ad}{\index{p8/pinguino/libraries/lcdlib.\-c@{p8/pinguino/libraries/lcdlib.\-c}!lcd\-\_\-write4bits@{lcd\-\_\-write4bits}}
+\index{lcd\-\_\-write4bits@{lcd\-\_\-write4bits}!p8/pinguino/libraries/lcdlib.c@{p8/pinguino/libraries/lcdlib.\-c}}
+\subsubsection[{lcd\-\_\-write4bits}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\-\_\-write4bits (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2lcdlib_8c_a0b46274ee9191be0411a5e80841554ad}
+Write using 4bits mode 
+
+Definition at line 50 of file lcdlib.\-c.
+
+
+
+References \-\_\-data\-\_\-pins, digitalwrite(), and lcd\-\_\-pulse\-Enable().
+
+
+
+Referenced by lcd\-\_\-begin(), and lcd\-\_\-send().
+
+
+\begin{DoxyCode}
+51 \{
+52     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+53     \textcolor{keywordflow}{for} (i = 0; i < 4; i++)
+54         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[i], (value >> i) & 0x01);
+55     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a75ee90bb65c392044eca414e1b161c10}{lcd\_pulseEnable}();
+56 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2lcdlib_8c_a023222cc29e9e246d1e9dc80ff5771d1}{\index{p8/pinguino/libraries/lcdlib.\-c@{p8/pinguino/libraries/lcdlib.\-c}!lcd\-\_\-write8bits@{lcd\-\_\-write8bits}}
+\index{lcd\-\_\-write8bits@{lcd\-\_\-write8bits}!p8/pinguino/libraries/lcdlib.c@{p8/pinguino/libraries/lcdlib.\-c}}
+\subsubsection[{lcd\-\_\-write8bits}]{\setlength{\rightskip}{0pt plus 5cm}void lcd\-\_\-write8bits (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2lcdlib_8c_a023222cc29e9e246d1e9dc80ff5771d1}
+Write using 8bits mode 
+
+Definition at line 59 of file lcdlib.\-c.
+
+
+
+References \-\_\-data\-\_\-pins, digitalwrite(), and lcd\-\_\-pulse\-Enable().
+
+
+
+Referenced by lcd\-\_\-send().
+
+
+\begin{DoxyCode}
+60 \{
+61     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+62     \textcolor{keywordflow}{for} (i = 0; i < 8; i++)
+63         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2lcdlib_8h_ac079e85881db5368b28c4a561546f7a7}{\_data\_pins}[i], (value >> i) & 0x01);
+64     \hyperlink{p8_2pinguino_2libraries_2lcdlib_8c_a75ee90bb65c392044eca414e1b161c10}{lcd\_pulseEnable}();
+65 \}
+\end{DoxyCode}

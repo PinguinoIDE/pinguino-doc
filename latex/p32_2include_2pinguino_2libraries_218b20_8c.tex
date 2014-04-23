@@ -1,0 +1,844 @@
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/18b20.c File Reference}
+\label{p32_2include_2pinguino_2libraries_218b20_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/18b20.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/18b20.\-c}}
+}
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$1wire.\-c$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_d_s18_b20___temperature}{D\-S18\-B20\-\_\-\-Temperature}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a54ece53d4db5158740de85bf86994057}{\-\_\-\-\_\-\-D\-S18\-B20\-\_\-\-C}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a900c4fd8b141d77c14860118b5c2def7}{S\-E\-A\-R\-C\-H\-R\-O\-M}~0x\-F0
+\begin{DoxyCompactList}\small\item\em D\-S18\-B20 R\-O\-M C\-O\-M\-M\-A\-N\-D\-S. \end{DoxyCompactList}\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a8db3c6b56b8458875f44f3af01f1b80a}{R\-E\-A\-D\-R\-O\-M}~0x33
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a3807341ad7ad493cca489a1bd2dfb73d}{M\-A\-T\-C\-H\-R\-O\-M}~0x55
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{S\-K\-I\-P\-R\-O\-M}~0x\-C\-C
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_aae67cf0ff9c81729cc8a906430009232}{A\-L\-A\-R\-M\-\_\-\-S\-E\-A\-R\-C\-H}~0x\-E\-C
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a51f4dc51f0f0598da90cd44bcfc626ec}{C\-O\-N\-V\-E\-R\-T\-\_\-\-T}~0x44
+\begin{DoxyCompactList}\small\item\em D\-S18\-B20 F\-U\-N\-C\-T\-I\-O\-N C\-O\-M\-M\-A\-N\-D\-S. \end{DoxyCompactList}\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a27466737f1e485403d87846b0b4fab91}{W\-R\-I\-T\-E\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}~0x4\-E
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_af8162a9da284eb45c7f53f4a37c749f5}{R\-E\-A\-D\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}~0x\-B\-E
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a6f02502f76c88160d363cad5ea5f86c8}{C\-O\-P\-Y\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}~0x48
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_ab97109d97df3e7cac241383e5d7151dd}{R\-E\-C\-A\-L\-L\-\_\-\-E2}~0x\-B8
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a28860a567af3d5c5e36d0d069bc2a7c8}{R\-E\-A\-D\-\_\-\-P\-O\-W\-E\-R\-\_\-\-S\-U\-P\-P\-L\-Y}~0x\-B4
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_aa8c87084e0342bb0eb517835b990c129}{R\-E\-S12\-B\-I\-T}~1
+\begin{DoxyCompactList}\small\item\em M\-O\-D\-E\-S. \end{DoxyCompactList}\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a45669268a76ee64da38ee1aa06d687e7}{R\-E\-S11\-B\-I\-T}~2
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a9446b746eada22e692fb29de39667da3}{R\-E\-S10\-B\-I\-T}~3
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_ab11ee985a5e05449455a0f4fca5d52d3}{R\-E\-S9\-B\-I\-T}~4
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_aa77d92209a49bdd167ec6bcef734347e}{D\-S18\-B20\-Read} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{struct_d_s18_b20___temperature}{D\-S18\-B20\-\_\-\-Temperature} $\ast$)
+\begin{DoxyCompactList}\small\item\em P\-R\-O\-T\-O\-T\-Y\-P\-E\-S. \end{DoxyCompactList}\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a0378f5ad24b9a9a454db0a90dbd8628a}{D\-S18\-B20\-Match\-Rom} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_aac92907096c73d780c75ce49ef63f02a}{D\-S18\-B20\-Read\-Rom} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_ade930170f439afba07cd1aaf29cb38b3}{D\-S18\-B20\-Configure} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a55f1aec69bc9dc8b04553f12be4e2423}{D\-S18\-B20\-Find} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_ae022def2c6513543c7eef3d3f4c32d82}{D\-S18\-B20\-Get\-First} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_abd1a0ae557b8002ee7898a892d8fb815}{D\-S18\-B20\-Get\-Next} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a347bd0307cd6d462d56f105c21a362f1}{D\-S18\-B20\-\_\-crc} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a96523f40c57fab227c69c15c83844c1e}{D\-S18\-B20\-Start\-Measure} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} rom, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} resolution)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a094a8ca78cdcdabe336ef3b56ba8a782}{D\-S18\-B20\-Read\-Measure} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} rom, \hyperlink{struct_d_s18_b20___temperature}{D\-S18\-B20\-\_\-\-Temperature} $\ast$t)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a904e89b3cb2febff7c0042a551305e7f}{D\-S18\-B20\-Rom} \mbox{[}6\mbox{]}\mbox{[}8\mbox{]}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a4b776ebf547da62d9de6cb3c9ed6fcfb}{R\-O\-M} \mbox{[}8\mbox{]}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_ab83cb7ee62105c7ac3f9d91ab0e62ae9}{last\-Discrep} = 0
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a709d527d213d9f7472d68dc0e606f714}{done\-Flag} = 0
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a95dd4de7e8c2c92a6e66654d4175b5ac}{num\-R\-O\-Ms}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a54ece53d4db5158740de85bf86994057}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!\-\_\-\-\_\-\-D\-S18\-B20\-\_\-\-C@{\-\_\-\-\_\-\-D\-S18\-B20\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-D\-S18\-B20\-\_\-\-C@{\-\_\-\-\_\-\-D\-S18\-B20\-\_\-\-C}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-S18\-B20\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-S18\-B20\-\_\-\-C}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a54ece53d4db5158740de85bf86994057}
+
+
+Definition at line 36 of file 18b20.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_aae67cf0ff9c81729cc8a906430009232}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!A\-L\-A\-R\-M\-\_\-\-S\-E\-A\-R\-C\-H@{A\-L\-A\-R\-M\-\_\-\-S\-E\-A\-R\-C\-H}}
+\index{A\-L\-A\-R\-M\-\_\-\-S\-E\-A\-R\-C\-H@{A\-L\-A\-R\-M\-\_\-\-S\-E\-A\-R\-C\-H}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{A\-L\-A\-R\-M\-\_\-\-S\-E\-A\-R\-C\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-L\-A\-R\-M\-\_\-\-S\-E\-A\-R\-C\-H~0x\-E\-C}}\label{p32_2include_2pinguino_2libraries_218b20_8c_aae67cf0ff9c81729cc8a906430009232}
+
+
+Definition at line 87 of file 18b20.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a51f4dc51f0f0598da90cd44bcfc626ec}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!C\-O\-N\-V\-E\-R\-T\-\_\-\-T@{C\-O\-N\-V\-E\-R\-T\-\_\-\-T}}
+\index{C\-O\-N\-V\-E\-R\-T\-\_\-\-T@{C\-O\-N\-V\-E\-R\-T\-\_\-\-T}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{C\-O\-N\-V\-E\-R\-T\-\_\-\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-N\-V\-E\-R\-T\-\_\-\-T~0x44}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a51f4dc51f0f0598da90cd44bcfc626ec}
+
+
+D\-S18\-B20 F\-U\-N\-C\-T\-I\-O\-N C\-O\-M\-M\-A\-N\-D\-S. 
+
+
+
+Definition at line 91 of file 18b20.\-c.
+
+
+
+Referenced by D\-S18\-B20\-Read(), and D\-S18\-B20\-Start\-Measure().
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a6f02502f76c88160d363cad5ea5f86c8}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!C\-O\-P\-Y\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D@{C\-O\-P\-Y\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}}
+\index{C\-O\-P\-Y\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D@{C\-O\-P\-Y\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{C\-O\-P\-Y\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-P\-Y\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D~0x48}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a6f02502f76c88160d363cad5ea5f86c8}
+
+
+Definition at line 94 of file 18b20.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a3807341ad7ad493cca489a1bd2dfb73d}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!M\-A\-T\-C\-H\-R\-O\-M@{M\-A\-T\-C\-H\-R\-O\-M}}
+\index{M\-A\-T\-C\-H\-R\-O\-M@{M\-A\-T\-C\-H\-R\-O\-M}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{M\-A\-T\-C\-H\-R\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-T\-C\-H\-R\-O\-M~0x55}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a3807341ad7ad493cca489a1bd2dfb73d}
+
+
+Definition at line 85 of file 18b20.\-c.
+
+
+
+Referenced by D\-S18\-B20\-Match\-Rom().
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a28860a567af3d5c5e36d0d069bc2a7c8}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!R\-E\-A\-D\-\_\-\-P\-O\-W\-E\-R\-\_\-\-S\-U\-P\-P\-L\-Y@{R\-E\-A\-D\-\_\-\-P\-O\-W\-E\-R\-\_\-\-S\-U\-P\-P\-L\-Y}}
+\index{R\-E\-A\-D\-\_\-\-P\-O\-W\-E\-R\-\_\-\-S\-U\-P\-P\-L\-Y@{R\-E\-A\-D\-\_\-\-P\-O\-W\-E\-R\-\_\-\-S\-U\-P\-P\-L\-Y}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{R\-E\-A\-D\-\_\-\-P\-O\-W\-E\-R\-\_\-\-S\-U\-P\-P\-L\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-A\-D\-\_\-\-P\-O\-W\-E\-R\-\_\-\-S\-U\-P\-P\-L\-Y~0x\-B4}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a28860a567af3d5c5e36d0d069bc2a7c8}
+
+
+Definition at line 96 of file 18b20.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_af8162a9da284eb45c7f53f4a37c749f5}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!R\-E\-A\-D\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D@{R\-E\-A\-D\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}}
+\index{R\-E\-A\-D\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D@{R\-E\-A\-D\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{R\-E\-A\-D\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-A\-D\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D~0x\-B\-E}}\label{p32_2include_2pinguino_2libraries_218b20_8c_af8162a9da284eb45c7f53f4a37c749f5}
+
+
+Definition at line 93 of file 18b20.\-c.
+
+
+
+Referenced by D\-S18\-B20\-Read(), and D\-S18\-B20\-Read\-Measure().
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a8db3c6b56b8458875f44f3af01f1b80a}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!R\-E\-A\-D\-R\-O\-M@{R\-E\-A\-D\-R\-O\-M}}
+\index{R\-E\-A\-D\-R\-O\-M@{R\-E\-A\-D\-R\-O\-M}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{R\-E\-A\-D\-R\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-A\-D\-R\-O\-M~0x33}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a8db3c6b56b8458875f44f3af01f1b80a}
+
+
+Definition at line 84 of file 18b20.\-c.
+
+
+
+Referenced by D\-S18\-B20\-Read\-Rom().
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_ab97109d97df3e7cac241383e5d7151dd}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!R\-E\-C\-A\-L\-L\-\_\-\-E2@{R\-E\-C\-A\-L\-L\-\_\-\-E2}}
+\index{R\-E\-C\-A\-L\-L\-\_\-\-E2@{R\-E\-C\-A\-L\-L\-\_\-\-E2}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{R\-E\-C\-A\-L\-L\-\_\-\-E2}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-C\-A\-L\-L\-\_\-\-E2~0x\-B8}}\label{p32_2include_2pinguino_2libraries_218b20_8c_ab97109d97df3e7cac241383e5d7151dd}
+
+
+Definition at line 95 of file 18b20.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a9446b746eada22e692fb29de39667da3}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!R\-E\-S10\-B\-I\-T@{R\-E\-S10\-B\-I\-T}}
+\index{R\-E\-S10\-B\-I\-T@{R\-E\-S10\-B\-I\-T}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{R\-E\-S10\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-S10\-B\-I\-T~3}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a9446b746eada22e692fb29de39667da3}
+
+
+Definition at line 102 of file 18b20.\-c.
+
+
+
+Referenced by D\-S18\-B20\-Read(), and D\-S18\-B20\-Start\-Measure().
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a45669268a76ee64da38ee1aa06d687e7}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!R\-E\-S11\-B\-I\-T@{R\-E\-S11\-B\-I\-T}}
+\index{R\-E\-S11\-B\-I\-T@{R\-E\-S11\-B\-I\-T}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{R\-E\-S11\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-S11\-B\-I\-T~2}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a45669268a76ee64da38ee1aa06d687e7}
+
+
+Definition at line 101 of file 18b20.\-c.
+
+
+
+Referenced by D\-S18\-B20\-Read(), and D\-S18\-B20\-Start\-Measure().
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_aa8c87084e0342bb0eb517835b990c129}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!R\-E\-S12\-B\-I\-T@{R\-E\-S12\-B\-I\-T}}
+\index{R\-E\-S12\-B\-I\-T@{R\-E\-S12\-B\-I\-T}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{R\-E\-S12\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-S12\-B\-I\-T~1}}\label{p32_2include_2pinguino_2libraries_218b20_8c_aa8c87084e0342bb0eb517835b990c129}
+
+
+M\-O\-D\-E\-S. 
+
+
+
+Definition at line 100 of file 18b20.\-c.
+
+
+
+Referenced by D\-S18\-B20\-Read(), and D\-S18\-B20\-Start\-Measure().
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_ab11ee985a5e05449455a0f4fca5d52d3}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!R\-E\-S9\-B\-I\-T@{R\-E\-S9\-B\-I\-T}}
+\index{R\-E\-S9\-B\-I\-T@{R\-E\-S9\-B\-I\-T}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{R\-E\-S9\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-S9\-B\-I\-T~4}}\label{p32_2include_2pinguino_2libraries_218b20_8c_ab11ee985a5e05449455a0f4fca5d52d3}
+
+
+Definition at line 103 of file 18b20.\-c.
+
+
+
+Referenced by D\-S18\-B20\-Read(), and D\-S18\-B20\-Start\-Measure().
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a900c4fd8b141d77c14860118b5c2def7}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!S\-E\-A\-R\-C\-H\-R\-O\-M@{S\-E\-A\-R\-C\-H\-R\-O\-M}}
+\index{S\-E\-A\-R\-C\-H\-R\-O\-M@{S\-E\-A\-R\-C\-H\-R\-O\-M}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{S\-E\-A\-R\-C\-H\-R\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-A\-R\-C\-H\-R\-O\-M~0x\-F0}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a900c4fd8b141d77c14860118b5c2def7}
+
+
+D\-S18\-B20 R\-O\-M C\-O\-M\-M\-A\-N\-D\-S. 
+
+
+
+Definition at line 83 of file 18b20.\-c.
+
+
+
+Referenced by D\-S18\-B20\-Get\-Next().
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!S\-K\-I\-P\-R\-O\-M@{S\-K\-I\-P\-R\-O\-M}}
+\index{S\-K\-I\-P\-R\-O\-M@{S\-K\-I\-P\-R\-O\-M}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{S\-K\-I\-P\-R\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-K\-I\-P\-R\-O\-M~0x\-C\-C}}\label{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}
+
+
+Definition at line 86 of file 18b20.\-c.
+
+
+
+Referenced by D\-S18\-B20\-Configure(), D\-S18\-B20\-Read(), D\-S18\-B20\-Read\-Measure(), and D\-S18\-B20\-Start\-Measure().
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a27466737f1e485403d87846b0b4fab91}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!W\-R\-I\-T\-E\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D@{W\-R\-I\-T\-E\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}}
+\index{W\-R\-I\-T\-E\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D@{W\-R\-I\-T\-E\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{W\-R\-I\-T\-E\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-R\-I\-T\-E\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D~0x4\-E}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a27466737f1e485403d87846b0b4fab91}
+
+
+Definition at line 92 of file 18b20.\-c.
+
+
+
+Referenced by D\-S18\-B20\-Configure().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a347bd0307cd6d462d56f105c21a362f1}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!D\-S18\-B20\-\_\-crc@{D\-S18\-B20\-\_\-crc}}
+\index{D\-S18\-B20\-\_\-crc@{D\-S18\-B20\-\_\-crc}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{D\-S18\-B20\-\_\-crc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} D\-S18\-B20\-\_\-crc (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a347bd0307cd6d462d56f105c21a362f1}
+
+
+Definition at line 468 of file 18b20.\-c.
+
+
+
+References dowcrc.
+
+
+\begin{DoxyCode}
+469     \{
+470         \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} i = (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} ^ \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc}) & 0xff;
+471 
+472         \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc} = 0;
+473 
+474         \textcolor{keywordflow}{if}(i & 1)
+475         \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc} ^= 0x5e;
+476         \textcolor{keywordflow}{if}(i & 2)
+477         \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc} ^= 0xbc;
+478         \textcolor{keywordflow}{if}(i & 4)
+479         \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc} ^= 0x61;
+480         \textcolor{keywordflow}{if}(i & 8)
+481         \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc} ^= 0xc2;
+482         \textcolor{keywordflow}{if}(i & 0x10)
+483         \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc} ^= 0x9d;
+484         \textcolor{keywordflow}{if}(i & 0x20)
+485         \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc} ^= 0x23;
+486         \textcolor{keywordflow}{if}(i & 0x40)
+487         \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc} ^= 0x46;
+488         \textcolor{keywordflow}{if}(i & 0x80)
+489         \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc} ^= 0x8c;
+490 
+491         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc};
+492     \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_ade930170f439afba07cd1aaf29cb38b3}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!D\-S18\-B20\-Configure@{D\-S18\-B20\-Configure}}
+\index{D\-S18\-B20\-Configure@{D\-S18\-B20\-Configure}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{D\-S18\-B20\-Configure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} D\-S18\-B20\-Configure (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u8}}]{rom, }
+\item[{{\bf u8}}]{T\-H, }
+\item[{{\bf u8}}]{T\-L, }
+\item[{{\bf u8}}]{config}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_218b20_8c_ade930170f439afba07cd1aaf29cb38b3}
+
+
+Definition at line 234 of file 18b20.\-c.
+
+
+
+References D\-S18\-B20\-Match\-Rom(), F\-A\-L\-S\-E, One\-Wire\-Reset(), One\-Wire\-Write(), S\-K\-I\-P\-R\-O\-M, T\-R\-U\-E, and W\-R\-I\-T\-E\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D.
+
+
+\begin{DoxyCode}
+235     \{
+236         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{OneWireReset}(pin)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+237         \textcolor{keywordflow}{if} (rom == \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{SKIPROM})
+238         \{
+239             \textcolor{comment}{// Skip ROM, address all devices}
+240             \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{SKIPROM});
+241         \}
+242         \textcolor{keywordflow}{else}
+243         \{
+244             \textcolor{comment}{// Talk to a particular device}
+245             \hyperlink{p8_2pinguino_2libraries_218b20_8c_a0378f5ad24b9a9a454db0a90dbd8628a}{DS18B20MatchRom}(pin, rom);
+246         \}
+247         \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a27466737f1e485403d87846b0b4fab91}{WRITE\_SCRATCHPAD});    \textcolor{comment}{// Allows the master to write 3
+       bytes of data to the scratchpad}
+248         \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, TH);              \textcolor{comment}{// The first data byte is written into the TH
+       register (byte 2 of the scratchpad)}
+249         \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, TL);              \textcolor{comment}{// The second byte is written into the TL register
+       (byte 3)}
+250         \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, config);          \textcolor{comment}{// The third byte is written into the configuration
+       register (byte 4)}
+251         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+252     \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a55f1aec69bc9dc8b04553f12be4e2423}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!D\-S18\-B20\-Find@{D\-S18\-B20\-Find}}
+\index{D\-S18\-B20\-Find@{D\-S18\-B20\-Find}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{D\-S18\-B20\-Find}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S18\-B20\-Find (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a55f1aec69bc9dc8b04553f12be4e2423}
+
+
+Definition at line 309 of file 18b20.\-c.
+
+
+
+References D\-S18\-B20\-Get\-First(), D\-S18\-B20\-Get\-Next(), D\-S18\-B20\-Rom, num\-R\-O\-Ms, One\-Wire\-Reset(), and R\-O\-M.
+
+
+\begin{DoxyCode}
+310     \{
+311         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} m;
+312 
+313         \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{OneWireReset}(pin)) \textcolor{comment}{// Detects presence of devices}
+314         \{
+315             \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_218b20_8c_ae022def2c6513543c7eef3d3f4c32d82}{DS18B20GetFirst}(pin))    \textcolor{comment}{// Begins when at least one part is found}
+316             \{
+317                 \hyperlink{p8_2pinguino_2libraries_218b20_8c_a95dd4de7e8c2c92a6e66654d4175b5ac}{numROMs}=0;
+318                 \textcolor{keywordflow}{do} \{
+319                     \hyperlink{p8_2pinguino_2libraries_218b20_8c_a95dd4de7e8c2c92a6e66654d4175b5ac}{numROMs}++;
+320                     \textcolor{comment}{// serialprint("Device #");}
+321                     \textcolor{keywordflow}{for}(m = 0; m < 8; m++)
+322                     \{
+323                         \textcolor{comment}{// Identifies ROM number on found device}
+324                         \hyperlink{p8_2pinguino_2libraries_218b20_8c_a904e89b3cb2febff7c0042a551305e7f}{DS18B20Rom}[\hyperlink{p8_2pinguino_2libraries_218b20_8c_a95dd4de7e8c2c92a6e66654d4175b5ac}{numROMs}][m] = \hyperlink{p8_2pinguino_2libraries_218b20_8c_a4b776ebf547da62d9de6cb3c9ed6fcfb}{ROM}[m];
+325                     \}
+326                 \textcolor{comment}{//Continues until no additional devices are found}
+327                 \} \textcolor{keywordflow}{while} (\hyperlink{p8_2pinguino_2libraries_218b20_8c_abd1a0ae557b8002ee7898a892d8fb815}{DS18B20GetNext}(pin)&&(\hyperlink{p8_2pinguino_2libraries_218b20_8c_a95dd4de7e8c2c92a6e66654d4175b5ac}{numROMs}<10));
+328             \}
+329         \}
+330     \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_ae022def2c6513543c7eef3d3f4c32d82}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!D\-S18\-B20\-Get\-First@{D\-S18\-B20\-Get\-First}}
+\index{D\-S18\-B20\-Get\-First@{D\-S18\-B20\-Get\-First}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{D\-S18\-B20\-Get\-First}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} D\-S18\-B20\-Get\-First (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_218b20_8c_ae022def2c6513543c7eef3d3f4c32d82}
+
+
+Definition at line 340 of file 18b20.\-c.
+
+
+
+References done\-Flag, D\-S18\-B20\-Get\-Next(), F\-A\-L\-S\-E, and last\-Discrep.
+
+
+\begin{DoxyCode}
+341     \{
+342         \hyperlink{p8_2pinguino_2libraries_218b20_8c_ab83cb7ee62105c7ac3f9d91ab0e62ae9}{lastDiscrep} = 0;         \textcolor{comment}{// reset the rom search last discrepancy global}
+343         \hyperlink{p8_2pinguino_2libraries_218b20_8c_a709d527d213d9f7472d68dc0e606f714}{doneFlag} = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+344         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_218b20_8c_abd1a0ae557b8002ee7898a892d8fb815}{DS18B20GetNext}(pin);   \textcolor{comment}{// call Next and return its return value}
+345     \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_abd1a0ae557b8002ee7898a892d8fb815}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!D\-S18\-B20\-Get\-Next@{D\-S18\-B20\-Get\-Next}}
+\index{D\-S18\-B20\-Get\-Next@{D\-S18\-B20\-Get\-Next}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{D\-S18\-B20\-Get\-Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} D\-S18\-B20\-Get\-Next (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_218b20_8c_abd1a0ae557b8002ee7898a892d8fb815}
+
+
+Definition at line 355 of file 18b20.\-c.
+
+
+
+References done\-Flag, dowcrc, D\-S18\-B20\-\_\-crc(), F\-A\-L\-S\-E, last\-Discrep, One\-Wire\-Read\-Bit(), One\-Wire\-Reset(), One\-Wire\-Write(), One\-Wire\-Write\-Bit(), R\-O\-M, S\-E\-A\-R\-C\-H\-R\-O\-M, T\-R\-U\-E, and x.
+
+
+\begin{DoxyCode}
+356     \{
+357         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} m = 1;                 \textcolor{comment}{// ROM Bit index}
+358         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} n = 0;                 \textcolor{comment}{// ROM Byte index}
+359         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} k = 1;                 \textcolor{comment}{// bit mask}
+360         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} = 0;
+361         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} discrepMarker = 0;             \textcolor{comment}{// discrepancy marker}
+362         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} g;                     \textcolor{comment}{// Output bit}
+363         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} nxt;                       \textcolor{comment}{// return value}
+364         \textcolor{keywordtype}{int} flag;
+365 
+366         nxt = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};                   \textcolor{comment}{// set the next flag to false}
+367         \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc} = 0;                   \textcolor{comment}{// reset the dowcrc}
+368 
+369         flag = \hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{OneWireReset}(pin);           \textcolor{comment}{// reset the 1-wire}
+370         \textcolor{keywordflow}{if}(flag||\hyperlink{p8_2pinguino_2libraries_218b20_8c_a709d527d213d9f7472d68dc0e606f714}{doneFlag})              \textcolor{comment}{// no parts -> return false}
+371         \{
+372             \hyperlink{p8_2pinguino_2libraries_218b20_8c_ab83cb7ee62105c7ac3f9d91ab0e62ae9}{lastDiscrep} = 0;         \textcolor{comment}{// reset the search}
+373             \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+374         \}
+375         \textcolor{comment}{// send SearchROM command for all eight bytes}
+376         \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a900c4fd8b141d77c14860118b5c2def7}{SEARCHROM});
+377         \textcolor{keywordflow}{do} \{
+378             x = 0;
+379             \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_21wire_8c_adb3ba32b27d5ceb94f2bdc16ecfaa863}{OneWireReadBit}(pin) == 1) x = 2;
+380             \textcolor{comment}{//myDelay\_10us(12);}
+381             \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_21wire_8c_adb3ba32b27d5ceb94f2bdc16ecfaa863}{OneWireReadBit}(pin) == 1 ) x |= 1;
+382             \textcolor{keywordflow}{if}(x == 3)
+383                 \textcolor{keywordflow}{break};
+384             \textcolor{keywordflow}{else}
+385             \{
+386                 \textcolor{keywordflow}{if}(x > 0)               \textcolor{comment}{// all devices coupled have 0 or 1}
+387                     g = x >> 1;         \textcolor{comment}{// bit write value for search}
+388                 \textcolor{keywordflow}{else}
+389                 \{
+390                     \textcolor{comment}{// if this discrepancy is before the last}
+391                     \textcolor{comment}{// discrepancy on a previous Next then pick}
+392                     \textcolor{comment}{// the same as last time}
+393                     \textcolor{keywordflow}{if}(m < \hyperlink{p8_2pinguino_2libraries_218b20_8c_ab83cb7ee62105c7ac3f9d91ab0e62ae9}{lastDiscrep})
+394                         g = ( (\hyperlink{p8_2pinguino_2libraries_218b20_8c_a4b776ebf547da62d9de6cb3c9ed6fcfb}{ROM}[n] & k) > 0);
+395                     \textcolor{keywordflow}{else}            \textcolor{comment}{// if equal to last pick 1}
+396                         g = (m == \hyperlink{p8_2pinguino_2libraries_218b20_8c_ab83cb7ee62105c7ac3f9d91ab0e62ae9}{lastDiscrep});  \textcolor{comment}{// if not then pick 0}
+397                         \textcolor{comment}{// if 0 was picked then record position with mask k}
+398                         \textcolor{keywordflow}{if} (g == 0) discrepMarker = m;
+399                 \}
+400                 \textcolor{keywordflow}{if} (g == 1) \textcolor{comment}{// isolate bit in ROM[n] with mask k}
+401                     \hyperlink{p8_2pinguino_2libraries_218b20_8c_a4b776ebf547da62d9de6cb3c9ed6fcfb}{ROM}[n] |= k;
+402                 \textcolor{keywordflow}{else}
+403                     \hyperlink{p8_2pinguino_2libraries_218b20_8c_a4b776ebf547da62d9de6cb3c9ed6fcfb}{ROM}[n] &= ~k;
+404                 \hyperlink{p8_2pinguino_2libraries_21wire_8c_ad98c6798b245b809656daceaaccc4679}{OneWireWriteBit}(pin, g);     \textcolor{comment}{// ROM search write}
+405                 m++;                                \textcolor{comment}{// increment bit counter m}
+406                 k = k << 1;                         \textcolor{comment}{// and shift the bit mask k}
+407                 \textcolor{keywordflow}{if}(k == 0)                          \textcolor{comment}{// if the mask is 0 then go to new ROM}
+408                 \{                                   \textcolor{comment}{// byte n and reset mask}
+409                     \hyperlink{p8_2pinguino_2libraries_218b20_8c_a347bd0307cd6d462d56f105c21a362f1}{DS18B20\_crc}(\hyperlink{p8_2pinguino_2libraries_218b20_8c_a4b776ebf547da62d9de6cb3c9ed6fcfb}{ROM}[n]);          \textcolor{comment}{// accumulate the CRC}
+410                     n++;
+411                     k++;
+412                 \}
+413             \}
+414         \} \textcolor{keywordflow}{while} (n < 8);                            \textcolor{comment}{// loop until through all ROM bytes 0-7}
+415         \textcolor{keywordflow}{if}(m < 65 || \hyperlink{p8_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{dowcrc})                      \textcolor{comment}{// if search was unsuccessful then}
+416             \hyperlink{p8_2pinguino_2libraries_218b20_8c_ab83cb7ee62105c7ac3f9d91ab0e62ae9}{lastDiscrep}=0;                           \textcolor{comment}{// reset the last discrepancy to 0}
+417         \textcolor{keywordflow}{else}                                        \textcolor{comment}{// search was successful, so set lastDiscrep, lastOne,
+       nxt}
+418         \{
+419             \hyperlink{p8_2pinguino_2libraries_218b20_8c_ab83cb7ee62105c7ac3f9d91ab0e62ae9}{lastDiscrep} = discrepMarker;
+420             \hyperlink{p8_2pinguino_2libraries_218b20_8c_a709d527d213d9f7472d68dc0e606f714}{doneFlag} = (\hyperlink{p8_2pinguino_2libraries_218b20_8c_ab83cb7ee62105c7ac3f9d91ab0e62ae9}{lastDiscrep} == 0);
+421             nxt = \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};                             \textcolor{comment}{// indicates search is not complete yet, more parts
+       remain}
+422         \}
+423         \textcolor{keywordflow}{return} nxt;
+424     \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a0378f5ad24b9a9a454db0a90dbd8628a}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!D\-S18\-B20\-Match\-Rom@{D\-S18\-B20\-Match\-Rom}}
+\index{D\-S18\-B20\-Match\-Rom@{D\-S18\-B20\-Match\-Rom}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{D\-S18\-B20\-Match\-Rom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} D\-S18\-B20\-Match\-Rom (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u8}}]{rom}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a0378f5ad24b9a9a454db0a90dbd8628a}
+
+
+Definition at line 268 of file 18b20.\-c.
+
+
+
+References D\-S18\-B20\-Rom, F\-A\-L\-S\-E, M\-A\-T\-C\-H\-R\-O\-M, One\-Wire\-Reset(), One\-Wire\-Write(), and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+269     \{
+270         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+271         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{OneWireReset}(pin)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+272         \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a3807341ad7ad493cca489a1bd2dfb73d}{MATCHROM});    \textcolor{comment}{// Match Rom}
+273         \textcolor{keywordflow}{for} (i = 0; i < 8; i++)         \textcolor{comment}{// Send the Address ROM Code.}
+274             \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p8_2pinguino_2libraries_218b20_8c_a904e89b3cb2febff7c0042a551305e7f}{DS18B20Rom}[rom][i]);
+275         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+276     \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_aa77d92209a49bdd167ec6bcef734347e}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!D\-S18\-B20\-Read@{D\-S18\-B20\-Read}}
+\index{D\-S18\-B20\-Read@{D\-S18\-B20\-Read}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{D\-S18\-B20\-Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} D\-S18\-B20\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u8}}]{rom, }
+\item[{{\bf u8}}]{resolution, }
+\item[{{\bf D\-S18\-B20\-\_\-\-Temperature} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_218b20_8c_aa77d92209a49bdd167ec6bcef734347e}
+
+
+P\-R\-O\-T\-O\-T\-Y\-P\-E\-S. 
+
+N\-B\-: The power-\/up default of these bits is R0 = 1 and R1 = 1 (12-\/bit resolution) 
+
+Definition at line 128 of file 18b20.\-c.
+
+
+
+References C\-O\-N\-V\-E\-R\-T\-\_\-\-T, D\-S18\-B20\-Configure(), D\-S18\-B20\-Match\-Rom(), F\-A\-L\-S\-E, D\-S18\-B20\-\_\-\-Temperature\-::fraction, D\-S18\-B20\-\_\-\-Temperature\-::integer, L\-O\-W, One\-Wire\-Read(), One\-Wire\-Reset(), One\-Wire\-Write(), R\-E\-A\-D\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D, res, R\-E\-S10\-B\-I\-T, R\-E\-S11\-B\-I\-T, R\-E\-S12\-B\-I\-T, R\-E\-S9\-B\-I\-T, D\-S18\-B20\-\_\-\-Temperature\-::sign, S\-K\-I\-P\-R\-O\-M, and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+129     \{
+130         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}    \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res}, busy = \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW};
+131         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}    temp\_lsb, temp\_msb;
+132         \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}  temp;
+133 
+134         \textcolor{keywordflow}{switch} (resolution)
+135         \{
+136             \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_aa8c87084e0342bb0eb517835b990c129}{RES12BIT}:  res = 0b01100000;   \textcolor{keywordflow}{break};  \textcolor{comment}{// 12-bit resolution}
+137             \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a45669268a76ee64da38ee1aa06d687e7}{RES11BIT}:  res = 0b01000000;   \textcolor{keywordflow}{break};  \textcolor{comment}{// 11-bit resolution}
+138             \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a9446b746eada22e692fb29de39667da3}{RES10BIT}:  res = 0b00100000;   \textcolor{keywordflow}{break};  \textcolor{comment}{// 10-bit resolution}
+139             \textcolor{keywordflow}{case}  \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_ab11ee985a5e05449455a0f4fca5d52d3}{RES9BIT}:   res = 0b00000000;   \textcolor{keywordflow}{break};  \textcolor{comment}{//  9-bit resolution}
+140             \textcolor{keywordflow}{default}:        res = 0b00000000;   \textcolor{keywordflow}{break};  \textcolor{comment}{//  9-bit resolution}
+142 \textcolor{comment}{}        \}
+143         
+144         \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_218b20_8c_ade930170f439afba07cd1aaf29cb38b3}{DS18B20Configure}(pin, rom, 0, 0, res)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}; \textcolor{comment}{// no alarm}
+145 
+146         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{OneWireReset}(pin)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+147 
+148         \textcolor{keywordflow}{if} (rom == \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{SKIPROM})
+149         \{
+150             \textcolor{comment}{// Skip ROM, address all devices}
+151             \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{SKIPROM});
+152         \}
+153         \textcolor{keywordflow}{else}
+154         \{
+155             \textcolor{comment}{// Talk to a particular device}
+156             \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_218b20_8c_a0378f5ad24b9a9a454db0a90dbd8628a}{DS18B20MatchRom}(pin, rom)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+157         \}
+158 
+159         \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a51f4dc51f0f0598da90cd44bcfc626ec}{CONVERT\_T});      \textcolor{comment}{// Start temperature conversion}
+160 
+161         \textcolor{keywordflow}{while} (busy == \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW})                  \textcolor{comment}{// Wait while busy ( = bus is low)}
+162             busy = \hyperlink{p8_2pinguino_2libraries_21wire_8c_a337192c23554911cb001972a9cb9c241}{OneWireRead}(pin);
+163 
+164         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{OneWireReset}(pin)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+165 
+166         \textcolor{keywordflow}{if} (rom == \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{SKIPROM})
+167         \{
+168             \textcolor{comment}{// Skip ROM, address all devices}
+169             \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{SKIPROM});
+170         \}
+171         \textcolor{keywordflow}{else}
+172         \{
+173             \textcolor{comment}{// Talk to a particular device}
+174             \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_218b20_8c_a0378f5ad24b9a9a454db0a90dbd8628a}{DS18B20MatchRom}(pin, rom)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+175         \}
+176 
+177         \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_af8162a9da284eb45c7f53f4a37c749f5}{READ\_SCRATCHPAD});\textcolor{comment}{// Read scratchpad}
+178 
+179         temp\_lsb = \hyperlink{p8_2pinguino_2libraries_21wire_8c_a337192c23554911cb001972a9cb9c241}{OneWireRead}(pin);     \textcolor{comment}{// byte 0 of scratchpad : temperature lsb}
+180         temp\_msb = \hyperlink{p8_2pinguino_2libraries_21wire_8c_a337192c23554911cb001972a9cb9c241}{OneWireRead}(pin);     \textcolor{comment}{// byte 1 of scratchpad : temperature msb}
+181 
+182         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{OneWireReset}(pin)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+183 
+184         \textcolor{comment}{// Calculation}
+185         \textcolor{comment}{// ---------------------------------------------------------------------}
+186         \textcolor{comment}{//  Temperature Register Format}
+187         \textcolor{comment}{//          BIT7    BIT6    BIT5    BIT4    BIT3    BIT2    BIT1    BIT0}
+188         \textcolor{comment}{//  LS BYTE 2^3     2^2     2^1     2^0     2^-1    2^-2    2^-3    2^-4}
+189         \textcolor{comment}{//          BIT15   BIT14   BIT13   BIT12   BIT11   BIT10   BIT9    BIT8}
+190         \textcolor{comment}{//  MS BYTE S       S       S       S       S       2^6     2^5     2^4}
+191         \textcolor{comment}{//  S = SIGN}
+192 
+193         temp = temp\_msb;                
+194         temp = (temp << 8) + temp\_lsb;  \textcolor{comment}{// combine msb & lsb into 16 bit variable}
+195         
+196         \textcolor{keywordflow}{if} (temp\_msb & 0b11111000)      \textcolor{comment}{// test if sign is set, i.e. negative}
+197         \{       
+198             t->\hyperlink{struct_d_s18_b20___temperature_a3e169a2ae52e52b7b8a61c0edac0abf3}{sign} = 1;
+199             temp = (temp ^ 0xFFFF) + 1; \textcolor{comment}{// 2's complement conversion}
+200         \}
+201         \textcolor{keywordflow}{else}
+202         \{
+203             t->\hyperlink{struct_d_s18_b20___temperature_a3e169a2ae52e52b7b8a61c0edac0abf3}{sign} = 0;
+204         \}
+205 
+206         t->\hyperlink{struct_d_s18_b20___temperature_a4782d1ad82c5fb6d8cc55c968e2811d7}{integer} = (temp >> 4) & 0x7F; \textcolor{comment}{// fractional part is removed, leaving only integer part}
+207 
+208 \textcolor{comment}{/*  }
+209 \textcolor{comment}{        t->fraction = 0;                    // fractional part}
+210 \textcolor{comment}{        if (BitRead(temp, 0)) t->fraction +=  625;}
+211 \textcolor{comment}{        if (BitRead(temp, 1)) t->fraction += 1250;}
+212 \textcolor{comment}{        if (BitRead(temp, 2)) t->fraction += 2500;}
+213 \textcolor{comment}{        if (BitRead(temp, 3)) t->fraction += 5000;}
+214 \textcolor{comment}{*/}
+215         t->\hyperlink{struct_d_s18_b20___temperature_a68eb408e37c7ea871beec15088138efa}{fraction} = (temp & 0x0F) * 625;
+216         t->\hyperlink{struct_d_s18_b20___temperature_a68eb408e37c7ea871beec15088138efa}{fraction} /= 100;                 \textcolor{comment}{// two digits after decimal }
+217 
+218         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+219     \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a094a8ca78cdcdabe336ef3b56ba8a782}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!D\-S18\-B20\-Read\-Measure@{D\-S18\-B20\-Read\-Measure}}
+\index{D\-S18\-B20\-Read\-Measure@{D\-S18\-B20\-Read\-Measure}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{D\-S18\-B20\-Read\-Measure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} D\-S18\-B20\-Read\-Measure (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u8}}]{rom, }
+\item[{{\bf D\-S18\-B20\-\_\-\-Temperature} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a094a8ca78cdcdabe336ef3b56ba8a782}
+
+
+Definition at line 548 of file 18b20.\-c.
+
+
+
+References D\-S18\-B20\-Match\-Rom(), F\-A\-L\-S\-E, D\-S18\-B20\-\_\-\-Temperature\-::fraction, D\-S18\-B20\-\_\-\-Temperature\-::integer, L\-O\-W, One\-Wire\-Read(), One\-Wire\-Reset(), One\-Wire\-Write(), R\-E\-A\-D\-\_\-\-S\-C\-R\-A\-T\-C\-H\-P\-A\-D, res, D\-S18\-B20\-\_\-\-Temperature\-::sign, S\-K\-I\-P\-R\-O\-M, and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+549     \{
+550         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}    \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res}, busy = \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW};
+551         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}    temp\_lsb, temp\_msb;
+552         \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}  temp;
+553 
+554         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{OneWireReset}(pin)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+555 
+556         \textcolor{keywordflow}{if} (rom == \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{SKIPROM})
+557         \{
+558             \textcolor{comment}{// Skip ROM, address all devices}
+559             \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{SKIPROM});
+560         \}
+561         \textcolor{keywordflow}{else}
+562         \{
+563             \textcolor{comment}{// Talk to a particular device}
+564             \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_218b20_8c_a0378f5ad24b9a9a454db0a90dbd8628a}{DS18B20MatchRom}(pin, rom)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+565         \}
+566 
+567         \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_af8162a9da284eb45c7f53f4a37c749f5}{READ\_SCRATCHPAD});\textcolor{comment}{// Read scratchpad}
+568 
+569         temp\_lsb = \hyperlink{p8_2pinguino_2libraries_21wire_8c_a337192c23554911cb001972a9cb9c241}{OneWireRead}(pin);     \textcolor{comment}{// byte 0 of scratchpad : temperature lsb}
+570         temp\_msb = \hyperlink{p8_2pinguino_2libraries_21wire_8c_a337192c23554911cb001972a9cb9c241}{OneWireRead}(pin);     \textcolor{comment}{// byte 1 of scratchpad : temperature msb}
+571 
+572         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{OneWireReset}(pin)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+573 
+574         \textcolor{comment}{// Calculation}
+575         \textcolor{comment}{// ---------------------------------------------------------------------}
+576         \textcolor{comment}{//  Temperature Register Format}
+577         \textcolor{comment}{//          BIT7    BIT6    BIT5    BIT4    BIT3    BIT2    BIT1    BIT0}
+578         \textcolor{comment}{//  LS BYTE 2^3     2^2     2^1     2^0     2^-1    2^-2    2^-3    2^-4}
+579         \textcolor{comment}{//          BIT15   BIT14   BIT13   BIT12   BIT11   BIT10   BIT9    BIT8}
+580         \textcolor{comment}{//  MS BYTE S       S       S       S       S       2^6     2^5     2^4}
+581         \textcolor{comment}{//  S = SIGN}
+582 
+583         temp = temp\_msb;                
+584         temp = (temp << 8) + temp\_lsb;  \textcolor{comment}{// combine msb & lsb into 16 bit variable}
+585         
+586         \textcolor{keywordflow}{if} (temp\_msb & 0b11111000)      \textcolor{comment}{// test if sign is set, i.e. negative}
+587         \{       
+588             t->\hyperlink{struct_d_s18_b20___temperature_a3e169a2ae52e52b7b8a61c0edac0abf3}{sign} = 1;
+589             temp = (temp ^ 0xFFFF) + 1; \textcolor{comment}{// 2's complement conversion}
+590         \}
+591         \textcolor{keywordflow}{else}
+592         \{
+593             t->\hyperlink{struct_d_s18_b20___temperature_a3e169a2ae52e52b7b8a61c0edac0abf3}{sign} = 0;
+594         \}
+595 
+596         t->\hyperlink{struct_d_s18_b20___temperature_a4782d1ad82c5fb6d8cc55c968e2811d7}{integer} = (temp >> 4) & 0x7F; \textcolor{comment}{// fractional part is removed, leaving only integer part}
+597 
+598 \textcolor{comment}{/*  }
+599 \textcolor{comment}{        t->fraction = 0;                    // fractional part}
+600 \textcolor{comment}{        if (BitRead(temp, 0)) t->fraction +=  625;}
+601 \textcolor{comment}{        if (BitRead(temp, 1)) t->fraction += 1250;}
+602 \textcolor{comment}{        if (BitRead(temp, 2)) t->fraction += 2500;}
+603 \textcolor{comment}{        if (BitRead(temp, 3)) t->fraction += 5000;}
+604 \textcolor{comment}{*/}
+605         t->\hyperlink{struct_d_s18_b20___temperature_a68eb408e37c7ea871beec15088138efa}{fraction} = (temp & 0x0F) * 625;
+606         t->\hyperlink{struct_d_s18_b20___temperature_a68eb408e37c7ea871beec15088138efa}{fraction} /= 100;                 \textcolor{comment}{// two digits after decimal }
+607 
+608         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+609     \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_aac92907096c73d780c75ce49ef63f02a}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!D\-S18\-B20\-Read\-Rom@{D\-S18\-B20\-Read\-Rom}}
+\index{D\-S18\-B20\-Read\-Rom@{D\-S18\-B20\-Read\-Rom}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{D\-S18\-B20\-Read\-Rom}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S18\-B20\-Read\-Rom (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u8} $\ast$}]{romcode}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_218b20_8c_aac92907096c73d780c75ce49ef63f02a}
+
+
+Definition at line 291 of file 18b20.\-c.
+
+
+
+References One\-Wire\-Read(), One\-Wire\-Reset(), One\-Wire\-Write(), and R\-E\-A\-D\-R\-O\-M.
+
+
+\begin{DoxyCode}
+292     \{
+293         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+294         \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{OneWireReset}(pin))
+295         \{
+296             \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a8db3c6b56b8458875f44f3af01f1b80a}{READROM});
+297             \textcolor{keywordflow}{for} (i = 0; i < 8; i++)     \textcolor{comment}{// Reads the ROM Code from a device}
+298                 romcode[i] = \hyperlink{p8_2pinguino_2libraries_21wire_8c_a337192c23554911cb001972a9cb9c241}{OneWireRead}(pin);
+299         \}
+300     \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a96523f40c57fab227c69c15c83844c1e}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!D\-S18\-B20\-Start\-Measure@{D\-S18\-B20\-Start\-Measure}}
+\index{D\-S18\-B20\-Start\-Measure@{D\-S18\-B20\-Start\-Measure}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{D\-S18\-B20\-Start\-Measure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} D\-S18\-B20\-Start\-Measure (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u8}}]{rom, }
+\item[{{\bf u8}}]{resolution}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a96523f40c57fab227c69c15c83844c1e}
+N\-B\-: The power-\/up default of these bits is R0 = 1 and R1 = 1 (12-\/bit resolution) 
+
+Definition at line 504 of file 18b20.\-c.
+
+
+
+References C\-O\-N\-V\-E\-R\-T\-\_\-\-T, D\-S18\-B20\-Configure(), D\-S18\-B20\-Match\-Rom(), F\-A\-L\-S\-E, L\-O\-W, One\-Wire\-Reset(), One\-Wire\-Write(), res, R\-E\-S10\-B\-I\-T, R\-E\-S11\-B\-I\-T, R\-E\-S12\-B\-I\-T, R\-E\-S9\-B\-I\-T, S\-K\-I\-P\-R\-O\-M, and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+505     \{
+506         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}    \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res}, busy = \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW};
+507         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}    temp\_lsb, temp\_msb;
+508         \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}  temp;
+509 
+510         \textcolor{keywordflow}{switch} (resolution)
+511         \{
+512             \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_aa8c87084e0342bb0eb517835b990c129}{RES12BIT}:  res = 0b01100000;   \textcolor{keywordflow}{break};  \textcolor{comment}{// 12-bit resolution}
+513             \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a45669268a76ee64da38ee1aa06d687e7}{RES11BIT}:  res = 0b01000000;   \textcolor{keywordflow}{break};  \textcolor{comment}{// 11-bit resolution}
+514             \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a9446b746eada22e692fb29de39667da3}{RES10BIT}:  res = 0b00100000;   \textcolor{keywordflow}{break};  \textcolor{comment}{// 10-bit resolution}
+515             \textcolor{keywordflow}{case}  \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_ab11ee985a5e05449455a0f4fca5d52d3}{RES9BIT}:   res = 0b00000000;   \textcolor{keywordflow}{break};  \textcolor{comment}{//  9-bit resolution}
+516             \textcolor{keywordflow}{default}:        res = 0b00000000;   \textcolor{keywordflow}{break};  \textcolor{comment}{//  9-bit resolution}
+518 \textcolor{comment}{}        \}
+519         
+520         \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_218b20_8c_ade930170f439afba07cd1aaf29cb38b3}{DS18B20Configure}(pin, rom, 0, 0, res)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}; \textcolor{comment}{// no alarm}
+521 
+522         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{OneWireReset}(pin)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+523 
+524         \textcolor{keywordflow}{if} (rom == \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{SKIPROM})
+525         \{
+526             \textcolor{comment}{// Skip ROM, address all devices}
+527             \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_afe770fc7dc89cfbbf6c1a740001ba740}{SKIPROM});
+528         \}
+529         \textcolor{keywordflow}{else}
+530         \{
+531             \textcolor{comment}{// Talk to a particular device}
+532             \textcolor{keywordflow}{if} (!\hyperlink{p8_2pinguino_2libraries_218b20_8c_a0378f5ad24b9a9a454db0a90dbd8628a}{DS18B20MatchRom}(pin, rom)) \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+533         \}
+534 
+535         \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{OneWireWrite}(pin, \hyperlink{p32_2include_2pinguino_2libraries_218b20_8c_a51f4dc51f0f0598da90cd44bcfc626ec}{CONVERT\_T});      \textcolor{comment}{// Start temperature conversion}
+536         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+537     \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a709d527d213d9f7472d68dc0e606f714}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!done\-Flag@{done\-Flag}}
+\index{done\-Flag@{done\-Flag}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{done\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} done\-Flag = 0}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a709d527d213d9f7472d68dc0e606f714}
+
+
+Definition at line 57 of file 18b20.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!dowcrc@{dowcrc}}
+\index{dowcrc@{dowcrc}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{dowcrc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} dowcrc}}\label{p32_2include_2pinguino_2libraries_218b20_8c_aea6d124652d20384a38ca345ff539cb5}
+
+
+Definition at line 59 of file 18b20.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a904e89b3cb2febff7c0042a551305e7f}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!D\-S18\-B20\-Rom@{D\-S18\-B20\-Rom}}
+\index{D\-S18\-B20\-Rom@{D\-S18\-B20\-Rom}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{D\-S18\-B20\-Rom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} D\-S18\-B20\-Rom\mbox{[}6\mbox{]}\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a904e89b3cb2febff7c0042a551305e7f}
+
+
+Definition at line 54 of file 18b20.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_ab83cb7ee62105c7ac3f9d91ab0e62ae9}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!last\-Discrep@{last\-Discrep}}
+\index{last\-Discrep@{last\-Discrep}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{last\-Discrep}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} last\-Discrep = 0}}\label{p32_2include_2pinguino_2libraries_218b20_8c_ab83cb7ee62105c7ac3f9d91ab0e62ae9}
+
+
+Definition at line 56 of file 18b20.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a95dd4de7e8c2c92a6e66654d4175b5ac}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!num\-R\-O\-Ms@{num\-R\-O\-Ms}}
+\index{num\-R\-O\-Ms@{num\-R\-O\-Ms}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{num\-R\-O\-Ms}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} num\-R\-O\-Ms}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a95dd4de7e8c2c92a6e66654d4175b5ac}
+
+
+Definition at line 58 of file 18b20.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_218b20_8c_a4b776ebf547da62d9de6cb3c9ed6fcfb}{\index{p32/include/pinguino/libraries/18b20.\-c@{p32/include/pinguino/libraries/18b20.\-c}!R\-O\-M@{R\-O\-M}}
+\index{R\-O\-M@{R\-O\-M}!p32/include/pinguino/libraries/18b20.c@{p32/include/pinguino/libraries/18b20.\-c}}
+\subsubsection[{R\-O\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} R\-O\-M\mbox{[}8\mbox{]}}}\label{p32_2include_2pinguino_2libraries_218b20_8c_a4b776ebf547da62d9de6cb3c9ed6fcfb}
+
+
+Definition at line 55 of file 18b20.\-c.
+

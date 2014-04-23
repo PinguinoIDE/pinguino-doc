@@ -1,0 +1,119 @@
+\hypertarget{p8_2pinguino_2libraries_2pcf8574_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/pcf8574.c File Reference}
+\label{p8_2pinguino_2libraries_2pcf8574_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/pcf8574.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/pcf8574.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$pinguinoi2c.\-c$>$}\\*
+{\ttfamily \#include $<$pcf8574.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2pcf8574_8c_a05e2d237adea8ec36725bf39dd96d749}{\-\_\-\-\_\-\-P\-C\-F8574\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2pcf8574_8c_a3b8039198802e32d60e5514f851ed131}{P\-C\-F8574\-\_\-init} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2pcf8574_8c_a0de7b74cf9a7774c18a8e1d094970ffe}{P\-C\-F8574\-\_\-write} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} address, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} value)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2pcf8574_8c_a3c91809d7301b21c653a79c867b554bb}{P\-C\-F8574\-\_\-read} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} address)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2libraries_2pcf8574_8c_a05e2d237adea8ec36725bf39dd96d749}{\index{p8/pinguino/libraries/pcf8574.\-c@{p8/pinguino/libraries/pcf8574.\-c}!\-\_\-\-\_\-\-P\-C\-F8574\-\_\-\-C@{\-\_\-\-\_\-\-P\-C\-F8574\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-P\-C\-F8574\-\_\-\-C@{\-\_\-\-\_\-\-P\-C\-F8574\-\_\-\-C}!p8/pinguino/libraries/pcf8574.c@{p8/pinguino/libraries/pcf8574.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-P\-C\-F8574\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-P\-C\-F8574\-\_\-\-C}}\label{p8_2pinguino_2libraries_2pcf8574_8c_a05e2d237adea8ec36725bf39dd96d749}
+
+
+Definition at line 57 of file pcf8574.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2pcf8574_8c_a3b8039198802e32d60e5514f851ed131}{\index{p8/pinguino/libraries/pcf8574.\-c@{p8/pinguino/libraries/pcf8574.\-c}!P\-C\-F8574\-\_\-init@{P\-C\-F8574\-\_\-init}}
+\index{P\-C\-F8574\-\_\-init@{P\-C\-F8574\-\_\-init}!p8/pinguino/libraries/pcf8574.c@{p8/pinguino/libraries/pcf8574.\-c}}
+\subsubsection[{P\-C\-F8574\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-F8574\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2pcf8574_8c_a3b8039198802e32d60e5514f851ed131}
+
+
+ \subsubsection*{Init. I2\-C bus }
+
+
+
+ 
+
+Definition at line 69 of file pcf8574.\-c.
+
+
+\begin{DoxyCode}
+70 \{
+71     \textcolor{comment}{// PCF8574 SCL clock frequency = 100 kHz max.}
+72     \hyperlink{p8_2pinguino_2core_2i2c_8c_a294f9659c7a45647d2274c1b2d7ad849}{I2C\_init}(\hyperlink{p8_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{I2C\_MASTER\_MODE}, \hyperlink{p8_2pinguino_2core_2i2c_8c_a30c06a423a78e6ded9ae0d26aa3fb541}{I2C\_100KHZ});
+73 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2pcf8574_8c_a3c91809d7301b21c653a79c867b554bb}{\index{p8/pinguino/libraries/pcf8574.\-c@{p8/pinguino/libraries/pcf8574.\-c}!P\-C\-F8574\-\_\-read@{P\-C\-F8574\-\_\-read}}
+\index{P\-C\-F8574\-\_\-read@{P\-C\-F8574\-\_\-read}!p8/pinguino/libraries/pcf8574.c@{p8/pinguino/libraries/pcf8574.\-c}}
+\subsubsection[{P\-C\-F8574\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} P\-C\-F8574\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2pcf8574_8c_a3c91809d7301b21c653a79c867b554bb}
+
+
+ \subsubsection*{Read a byte from the P\-C\-F8574 }
+
+
+
+ 
+
+Definition at line 100 of file pcf8574.\-c.
+
+
+
+References I2\-C\-\_\-get().
+
+
+\begin{DoxyCode}
+101 \{
+102     \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a3a0ddd93777e80c1850b38a0f09bbd4c}{I2C\_get}(address);
+103 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2pcf8574_8c_a0de7b74cf9a7774c18a8e1d094970ffe}{\index{p8/pinguino/libraries/pcf8574.\-c@{p8/pinguino/libraries/pcf8574.\-c}!P\-C\-F8574\-\_\-write@{P\-C\-F8574\-\_\-write}}
+\index{P\-C\-F8574\-\_\-write@{P\-C\-F8574\-\_\-write}!p8/pinguino/libraries/pcf8574.c@{p8/pinguino/libraries/pcf8574.\-c}}
+\subsubsection[{P\-C\-F8574\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} P\-C\-F8574\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2pcf8574_8c_a0de7b74cf9a7774c18a8e1d094970ffe}
+
+
+ \subsubsection*{Write a byte on the P\-C\-F8574 }
+
+
+
+ 
+
+Definition at line 80 of file pcf8574.\-c.
+
+
+\begin{DoxyCode}
+81 \{
+82     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} r=0;
+83 
+84     \hyperlink{p8_2pinguino_2core_2i2c_8c_a263c74ce484e3680c05a9118707fadb7}{I2C\_start}();
+85     \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a9f6726cbf225d8f82eb5fa7c1de64531}{I2C\_writechar}(address | \hyperlink{p8_2pinguino_2core_2i2c_8c_a9536bf85bced4f4e549a82fb18eb6140}{I2C\_WRITE}))
+86     \{
+87         r = \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a9f6726cbf225d8f82eb5fa7c1de64531}{I2C\_writechar}(value);
+88     \}
+89     \hyperlink{p8_2pinguino_2core_2i2c_8c_af8dcc1bcb3e1c6c0fcdca4cf599a239b}{I2C\_stop}();
+90 
+91     \textcolor{keywordflow}{return} r;
+92     \textcolor{comment}{//return I2C\_send(address, value);}
+93 \}
+\end{DoxyCode}

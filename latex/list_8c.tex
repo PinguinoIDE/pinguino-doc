@@ -1,0 +1,868 @@
+\hypertarget{list_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/list.c File Reference}
+\label{list_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/list.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/list.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$list.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$pinguinoserial1.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{list_8c_a252164b56e924d8905f1c0e1259fdb84}{\-\_\-\-\_\-\-L\-I\-S\-T\-\_\-\-C\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_ab446cb9cdf45b1c9711fdb1fbc622619}{list\-\_\-prepend} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, void $\ast$data)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_a01ccbc4f8443d73601da9dd590a96aaa}{list\-\_\-append} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, void $\ast$data)
+\item 
+void \hyperlink{list_8c_aa52d7f11718aea9a4cd539a3c7b3ce3d}{list\-\_\-free} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List)
+\item 
+void \hyperlink{list_8c_a43a22303241379306363cebd9e8cb67a}{list\-\_\-free\-\_\-full} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, void($\ast$free\-\_\-func)(void $\ast$data))
+\item 
+void \hyperlink{list_8c_a6bc409b4ef46358f99a90c904a61fbc7}{list\-\_\-free\-\_\-full\-\_\-simple} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{list_8c_a68ccc16e7c8bb17c6fe7e356967d06f4}{list\-\_\-nb\-\_\-item} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_a9697e13696d3595143b32eae9a677b20}{list\-\_\-free\-\_\-item} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, void $\ast$data)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_a16c7bde38b2982b5e6fcb4bbcd32a001}{list\-\_\-free\-\_\-item\-\_\-with\-\_\-check} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, void $\ast$data, \hyperlink{p8_2pinguino_2core_2typedef_8h_a7670a4e8a07d9ebb00411948b0bbf86d}{boolean} $\ast$done)
+\item 
+void $\ast$ \hyperlink{list_8c_adb615a42435b85b0b6bfab93df13425b}{list\-\_\-item} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} item\-\_\-nb)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_afa98a242c2248f7d212f9e93994f3a0a}{list\-\_\-insert\-\_\-after\-\_\-item} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, void $\ast$before, void $\ast$data)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_acd967e1a929669739e7770e28df95740}{list\-\_\-concat} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p1, \hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p2)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_a585c69b24d49d93003c638c854b2e2e6}{list\-\_\-pop} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, void $\ast$$\ast$data)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_aed46101e1fc8832750b151d328aed952}{list\-\_\-copy} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_a11a2555bee4cc04b62f6f3bfec0a3cee}{list\-\_\-copy\-\_\-full} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, void $\ast$($\ast$copy\-\_\-func)(void $\ast$data))
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_a1936df1b95c6ff4071c237e1524a0c83}{list\-\_\-free\-\_\-chunk} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, \hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-To\-Free)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_adf850c4303e1cc89b37fee470c7caeb6}{list\-\_\-sort} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, int($\ast$cmp\-\_\-func)(void $\ast$p1, void $\ast$p2))
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_a91267921e4dc362c12efdb52c3b3275e}{list\-\_\-insert\-\_\-sorted} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, int($\ast$cmp\-\_\-func)(void $\ast$p1, void $\ast$p2), void $\ast$data)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_aa0028f73b86d3e058ffab28b68a0be40}{list\-\_\-invert} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_a688cda38e0f7d7f04836040cc5559465}{list\-\_\-find} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, void $\ast$data)
+\item 
+\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$ \hyperlink{list_8c_ad910fbd0803c72f7f743b97498a973a7}{list\-\_\-find\-\_\-full} (\hyperlink{list_8h_af415aadeab887feeda9d2e42371a40b0}{List} $\ast$p\-List, void $\ast$your\-\_\-data, \hyperlink{p8_2pinguino_2core_2typedef_8h_a7670a4e8a07d9ebb00411948b0bbf86d}{boolean}($\ast$find\-\_\-func)(void $\ast$data, void $\ast$your\-\_\-data))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{list_8c_a252164b56e924d8905f1c0e1259fdb84}{\index{list.\-c@{list.\-c}!\-\_\-\-\_\-\-L\-I\-S\-T\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-L\-I\-S\-T\-\_\-\-C\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-L\-I\-S\-T\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-L\-I\-S\-T\-\_\-\-C\-\_\-\-\_\-}!list.c@{list.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-L\-I\-S\-T\-\_\-\-C\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-L\-I\-S\-T\-\_\-\-C\-\_\-\-\_\-}}\label{list_8c_a252164b56e924d8905f1c0e1259fdb84}
+
+
+Definition at line 11 of file list.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{list_8c_a01ccbc4f8443d73601da9dd590a96aaa}{\index{list.\-c@{list.\-c}!list\-\_\-append@{list\-\_\-append}}
+\index{list\-\_\-append@{list\-\_\-append}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-append}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-append (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{list_8c_a01ccbc4f8443d73601da9dd590a96aaa}
+
+
+Definition at line 55 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, \-\_\-\-List\-::next, N\-U\-L\-L, and \-\_\-\-List\-::prev.
+
+
+
+Referenced by list\-\_\-copy(), list\-\_\-copy\-\_\-full(), and list\-\_\-sort().
+
+
+\begin{DoxyCode}
+56 \{ \hyperlink{struct___list}{List} *vList;
+57 
+58   \textcolor{comment}{/* on alloue la memoire pour le nouvelle element */}
+59   \textcolor{keywordflow}{if}((vList = (\hyperlink{struct___list}{List} *)malloc(\textcolor{keyword}{sizeof}(\hyperlink{struct___list}{List}))) == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+60   \{
+61 \textcolor{preprocessor}{    #ifdef DEBUG}
+62 \textcolor{preprocessor}{}    serial1printf(\textcolor{stringliteral}{"malloc failed\(\backslash\)n "});
+63 \textcolor{preprocessor}{    #endif}
+64 \textcolor{preprocessor}{}    exit(1);
+65   \}
+66 
+67   \textcolor{keywordflow}{if}(pList == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+68   \{ \textcolor{comment}{/* la liste est vide */}
+69     vList->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} = data;
+70     vList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vList;
+71     vList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vList;
+72     \textcolor{keywordflow}{return}(vList);
+73   \} \textcolor{keywordflow}{else} \{
+74     \textcolor{comment}{/* il y a deja au moins un element dans la liste */}
+75     vList->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} = data;
+76     vList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev};
+77     vList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = pList;
+78     pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev}->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vList;
+79     pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vList;
+80     \textcolor{keywordflow}{return}(pList);
+81   \}
+82 \}
+\end{DoxyCode}
+\hypertarget{list_8c_acd967e1a929669739e7770e28df95740}{\index{list.\-c@{list.\-c}!list\-\_\-concat@{list\-\_\-concat}}
+\index{list\-\_\-concat@{list\-\_\-concat}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-concat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-concat (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p1, }
+\item[{{\bf List} $\ast$}]{p2}
+\end{DoxyParamCaption}
+)}}\label{list_8c_acd967e1a929669739e7770e28df95740}
+
+
+Definition at line 321 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::next, N\-U\-L\-L, and \-\_\-\-List\-::prev.
+
+
+\begin{DoxyCode}
+322 \{ \hyperlink{struct___list}{List} *vListPrev;
+323 
+324   \textcolor{keywordflow}{if}(p1 == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) \textcolor{keywordflow}{return}(p2);
+325   \textcolor{keywordflow}{if}(p2 == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) \textcolor{keywordflow}{return}(p1);
+326 
+327   p1->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev}->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = p2;
+328   vListPrev = p1->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev};
+329   p1->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = p2->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev};
+330   p2->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev}->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = p1;
+331   p2->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vListPrev;
+332     
+333   \textcolor{keywordflow}{return}(p1);
+334 \}
+\end{DoxyCode}
+\hypertarget{list_8c_aed46101e1fc8832750b151d328aed952}{\index{list.\-c@{list.\-c}!list\-\_\-copy@{list\-\_\-copy}}
+\index{list\-\_\-copy@{list\-\_\-copy}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List}
+\end{DoxyParamCaption}
+)}}\label{list_8c_aed46101e1fc8832750b151d328aed952}
+
+
+Definition at line 369 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, list\-\_\-append(), list\-\_\-is\-\_\-end, list\-\_\-move\-\_\-next, and list\-\_\-new.
+
+
+\begin{DoxyCode}
+370 \{ \hyperlink{struct___list}{List} *vListMove, *vCopy;
+371 
+372   vCopy = \hyperlink{list_8h_a4330e5b36cd5bd4a5e748fcab438fcdf}{list\_new}();
+373   \textcolor{keywordflow}{for}(vListMove = pList;!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove);\hyperlink{list_8h_ae83af81dbc4de69a15ba7cc0933c6b27}{list\_move\_next}(pList,
+      vListMove))
+374   \{
+375     vCopy = \hyperlink{list_8c_a01ccbc4f8443d73601da9dd590a96aaa}{list\_append}(vCopy, vListMove->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data});
+376   \}
+377   \textcolor{keywordflow}{return}(vCopy);
+378 \}
+\end{DoxyCode}
+\hypertarget{list_8c_a11a2555bee4cc04b62f6f3bfec0a3cee}{\index{list.\-c@{list.\-c}!list\-\_\-copy\-\_\-full@{list\-\_\-copy\-\_\-full}}
+\index{list\-\_\-copy\-\_\-full@{list\-\_\-copy\-\_\-full}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-copy\-\_\-full}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-copy\-\_\-full (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{void $\ast$($\ast$)(void $\ast$data)}]{copy\-\_\-func}
+\end{DoxyParamCaption}
+)}}\label{list_8c_a11a2555bee4cc04b62f6f3bfec0a3cee}
+
+
+Definition at line 385 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, list\-\_\-append(), list\-\_\-is\-\_\-end, list\-\_\-move\-\_\-next, and list\-\_\-new.
+
+
+\begin{DoxyCode}
+386 \{ \hyperlink{struct___list}{List} *vListMove, *vCopy;
+387 
+388   vCopy = \hyperlink{list_8h_a4330e5b36cd5bd4a5e748fcab438fcdf}{list\_new}();
+389   \textcolor{keywordflow}{for}(vListMove = pList;!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove);\hyperlink{list_8h_ae83af81dbc4de69a15ba7cc0933c6b27}{list\_move\_next}(pList,
+      vListMove))
+390   \{
+391     vCopy = \hyperlink{list_8c_a01ccbc4f8443d73601da9dd590a96aaa}{list\_append}(vCopy, copy\_func(vListMove->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data}));
+392   \}
+393   \textcolor{keywordflow}{return}(vCopy);
+394 \}
+\end{DoxyCode}
+\hypertarget{list_8c_a688cda38e0f7d7f04836040cc5559465}{\index{list.\-c@{list.\-c}!list\-\_\-find@{list\-\_\-find}}
+\index{list\-\_\-find@{list\-\_\-find}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-find}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-find (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{list_8c_a688cda38e0f7d7f04836040cc5559465}
+
+
+Definition at line 536 of file list.\-c.
+
+
+
+References list\-\_\-data, list\-\_\-is\-\_\-end, and list\-\_\-move\-\_\-next.
+
+
+\begin{DoxyCode}
+537 \{ \hyperlink{struct___list}{List} *vListMove;
+538 
+539   \textcolor{keywordflow}{for}(vListMove = pList; !\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove) && (\hyperlink{list_8h_a208c94b80def8534551911bbdd46395c}{list\_data}(vListMove) != data
+      );
+540     \hyperlink{list_8h_ae83af81dbc4de69a15ba7cc0933c6b27}{list\_move\_next}(pList,vListMove));
+541 
+542   \textcolor{keywordflow}{return}(vListMove);
+543 \}
+\end{DoxyCode}
+\hypertarget{list_8c_ad910fbd0803c72f7f743b97498a973a7}{\index{list.\-c@{list.\-c}!list\-\_\-find\-\_\-full@{list\-\_\-find\-\_\-full}}
+\index{list\-\_\-find\-\_\-full@{list\-\_\-find\-\_\-full}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-find\-\_\-full}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-find\-\_\-full (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{void $\ast$}]{your\-\_\-data, }
+\item[{{\bf boolean}($\ast$)(void $\ast$data, void $\ast$your\-\_\-data)}]{find\-\_\-func}
+\end{DoxyParamCaption}
+)}}\label{list_8c_ad910fbd0803c72f7f743b97498a973a7}
+
+
+Definition at line 552 of file list.\-c.
+
+
+
+References list\-\_\-data, list\-\_\-is\-\_\-end, and list\-\_\-move\-\_\-next.
+
+
+\begin{DoxyCode}
+554 \{ \hyperlink{struct___list}{List} *vListMove;
+555 
+556   \textcolor{keywordflow}{for}(vListMove = pList;
+557     !\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove) && !find\_func(\hyperlink{list_8h_a208c94b80def8534551911bbdd46395c}{list\_data}(vListMove),your\_data);
+558     \hyperlink{list_8h_ae83af81dbc4de69a15ba7cc0933c6b27}{list\_move\_next}(pList,vListMove));
+559 
+560   \textcolor{keywordflow}{return}(vListMove);
+561 \}
+\end{DoxyCode}
+\hypertarget{list_8c_aa52d7f11718aea9a4cd539a3c7b3ce3d}{\index{list.\-c@{list.\-c}!list\-\_\-free@{list\-\_\-free}}
+\index{list\-\_\-free@{list\-\_\-free}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List}
+\end{DoxyParamCaption}
+)}}\label{list_8c_aa52d7f11718aea9a4cd539a3c7b3ce3d}
+
+
+Definition at line 87 of file list.\-c.
+
+
+
+References list\-\_\-is\-\_\-end, and list\-\_\-next.
+
+
+\begin{DoxyCode}
+88 \{ \hyperlink{struct___list}{List} *vListMove,*vListMoveNext;
+89 
+90   vListMove = pList;
+91   \textcolor{keywordflow}{while}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove))
+92   \{
+93     vListMoveNext = \hyperlink{list_8h_a30f8e0728bc70dde946b6122ce32908b}{list\_next}(pList,vListMove);
+94     free(vListMove);
+95     vListMove = vListMoveNext;
+96   \}
+97 \}
+\end{DoxyCode}
+\hypertarget{list_8c_a1936df1b95c6ff4071c237e1524a0c83}{\index{list.\-c@{list.\-c}!list\-\_\-free\-\_\-chunk@{list\-\_\-free\-\_\-chunk}}
+\index{list\-\_\-free\-\_\-chunk@{list\-\_\-free\-\_\-chunk}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-free\-\_\-chunk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-free\-\_\-chunk (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{{\bf List} $\ast$}]{p\-To\-Free}
+\end{DoxyParamCaption}
+)}}\label{list_8c_a1936df1b95c6ff4071c237e1524a0c83}
+
+
+Definition at line 400 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::next, N\-U\-L\-L, and \-\_\-\-List\-::prev.
+
+
+
+Referenced by list\-\_\-sort().
+
+
+\begin{DoxyCode}
+401 \{ \hyperlink{struct___list}{List} *vListNext;
+402 
+403   \textcolor{keywordflow}{if}(pList == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL});
+404   \textcolor{keywordflow}{if}(pToFree == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) \textcolor{keywordflow}{return}(pList);
+405 
+406   \textcolor{comment}{/* si il n'y a que notre element dans la liste */}
+407   \textcolor{keywordflow}{if}(pToFree->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} == pToFree)
+408   \{ \textcolor{comment}{/* on libere l'element */}
+409     free(pToFree);
+410     \textcolor{comment}{/* on renvoie une liste vide */}
+411     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL});
+412   \} \textcolor{keywordflow}{else} \{
+413     \textcolor{comment}{/* on recupere l'element qui suit celui que l'on veut supprimer */}
+414     vListNext = pToFree->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next};
+415     \textcolor{comment}{/* on chaine l'element precedent avec celui qui suit */}
+416     pToFree->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev}->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vListNext;
+417     vListNext->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = pToFree->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev};
+418     \textcolor{comment}{/* on libere l'element a liberer */}
+419     free(pToFree);
+420     \textcolor{keywordflow}{if}(pList == pToFree)
+421     \{
+422       \textcolor{comment}{/* l'element a supprimer etait le premier, c'est */}
+423       \textcolor{comment}{/* donc le suivant qui devient le premier        */}
+424       \textcolor{keywordflow}{return}(vListNext);
+425     \} \textcolor{keywordflow}{else} \{
+426       \textcolor{comment}{/* l'element a supprimer n'etait pas le premier.       */}
+427       \textcolor{comment}{/* le premiere element de la liste ne change donc pas. */}
+428       \textcolor{keywordflow}{return}(pList);
+429     \}
+430   \}
+431 \}
+\end{DoxyCode}
+\hypertarget{list_8c_a43a22303241379306363cebd9e8cb67a}{\index{list.\-c@{list.\-c}!list\-\_\-free\-\_\-full@{list\-\_\-free\-\_\-full}}
+\index{list\-\_\-free\-\_\-full@{list\-\_\-free\-\_\-full}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-free\-\_\-full}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-free\-\_\-full (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{void($\ast$)(void $\ast$data)}]{free\-\_\-func}
+\end{DoxyParamCaption}
+)}}\label{list_8c_a43a22303241379306363cebd9e8cb67a}
+
+
+Definition at line 102 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, list\-\_\-is\-\_\-end, and list\-\_\-next.
+
+
+\begin{DoxyCode}
+103 \{ \hyperlink{struct___list}{List} *vListMove,*vListMoveNext;
+104 
+105   vListMove = pList;
+106   \textcolor{keywordflow}{while}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove))
+107   \{
+108     vListMoveNext = \hyperlink{list_8h_a30f8e0728bc70dde946b6122ce32908b}{list\_next}(pList,vListMove);
+109     free\_func(vListMove->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data});
+110     free(vListMove);
+111     vListMove = vListMoveNext;
+112   \}
+113 \}
+\end{DoxyCode}
+\hypertarget{list_8c_a6bc409b4ef46358f99a90c904a61fbc7}{\index{list.\-c@{list.\-c}!list\-\_\-free\-\_\-full\-\_\-simple@{list\-\_\-free\-\_\-full\-\_\-simple}}
+\index{list\-\_\-free\-\_\-full\-\_\-simple@{list\-\_\-free\-\_\-full\-\_\-simple}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-free\-\_\-full\-\_\-simple}]{\setlength{\rightskip}{0pt plus 5cm}void list\-\_\-free\-\_\-full\-\_\-simple (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List}
+\end{DoxyParamCaption}
+)}}\label{list_8c_a6bc409b4ef46358f99a90c904a61fbc7}
+
+
+Definition at line 118 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, list\-\_\-is\-\_\-end, list\-\_\-next, and N\-U\-L\-L.
+
+
+\begin{DoxyCode}
+119 \{ \hyperlink{struct___list}{List} *vListMove,*vListMoveNext;
+120 
+121   vListMove = pList;
+122   \textcolor{keywordflow}{while}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove))
+123   \{
+124     vListMoveNext = \hyperlink{list_8h_a30f8e0728bc70dde946b6122ce32908b}{list\_next}(pList,vListMove);
+125     \textcolor{keywordflow}{if}(vListMove->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} != \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) free(vListMove->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data});
+126     free(vListMove);
+127     vListMove = vListMoveNext;
+128   \}
+129 \}
+\end{DoxyCode}
+\hypertarget{list_8c_a9697e13696d3595143b32eae9a677b20}{\index{list.\-c@{list.\-c}!list\-\_\-free\-\_\-item@{list\-\_\-free\-\_\-item}}
+\index{list\-\_\-free\-\_\-item@{list\-\_\-free\-\_\-item}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-free\-\_\-item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-free\-\_\-item (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{list_8c_a9697e13696d3595143b32eae9a677b20}
+
+
+Definition at line 152 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, list\-\_\-is\-\_\-end, list\-\_\-move\-\_\-next, \-\_\-\-List\-::next, N\-U\-L\-L, and \-\_\-\-List\-::prev.
+
+
+\begin{DoxyCode}
+153 \{ \hyperlink{struct___list}{List} *vListMove,*vListMoveNext;
+154 
+155   \textcolor{comment}{/* on parcourt la liste pList a la recherche de l'element a supprimer */}
+156   vListMove = pList;
+157   \textcolor{keywordflow}{while}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove) && (vListMove->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} != data))
+158   \{ \hyperlink{list_8h_ae83af81dbc4de69a15ba7cc0933c6b27}{list\_move\_next}(pList,vListMove); \}
+159   \textcolor{comment}{/* si on a trouve l'element, on le libere */}
+160   \textcolor{keywordflow}{if}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove))
+161   \{
+162     \textcolor{comment}{/* si il n'y a que notre element dans la liste */}
+163     \textcolor{keywordflow}{if}(vListMove->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} == vListMove)
+164     \{ \textcolor{comment}{/* on libere l'element */}
+165       free(vListMove);
+166       \textcolor{comment}{/* on renvoie une liste vide */}
+167       \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL});
+168     \} \textcolor{keywordflow}{else} \{
+169       \textcolor{comment}{/* on recupere l'element qui suit celui que l'on veut supprimer */}
+170       vListMoveNext = vListMove->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next};
+171       \textcolor{comment}{/* on chaine l'element precedent avec celui qui suit */}
+172       vListMove->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev}->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vListMoveNext;
+173       vListMoveNext->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vListMove->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev};
+174       \textcolor{comment}{/* on libere l'element a liberer */}
+175       free(vListMove);
+176       \textcolor{keywordflow}{if}(pList == vListMove)
+177       \{
+178         \textcolor{comment}{/* l'element a supprimer etait le premier, c'est */}
+179         \textcolor{comment}{/* donc le suivant qui devient le premier        */}
+180         \textcolor{keywordflow}{return}(vListMoveNext);
+181       \} \textcolor{keywordflow}{else} \{
+182         \textcolor{comment}{/* l'element a supprimer n'etait pas le premier.       */}
+183         \textcolor{comment}{/* le premiere element de la liste ne change donc pas. */}
+184         \textcolor{keywordflow}{return}(pList);
+185       \}
+186     \}
+187   \}
+188   \textcolor{comment}{/* si on est ici c'est l'element a supprimer n'existe */}
+189   \textcolor{comment}{/* pas dans la liste. on rend donc la liste intacte.  */}
+190   \textcolor{keywordflow}{return}(pList);
+191 \}
+\end{DoxyCode}
+\hypertarget{list_8c_a16c7bde38b2982b5e6fcb4bbcd32a001}{\index{list.\-c@{list.\-c}!list\-\_\-free\-\_\-item\-\_\-with\-\_\-check@{list\-\_\-free\-\_\-item\-\_\-with\-\_\-check}}
+\index{list\-\_\-free\-\_\-item\-\_\-with\-\_\-check@{list\-\_\-free\-\_\-item\-\_\-with\-\_\-check}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-free\-\_\-item\-\_\-with\-\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-free\-\_\-item\-\_\-with\-\_\-check (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf boolean} $\ast$}]{done}
+\end{DoxyParamCaption}
+)}}\label{list_8c_a16c7bde38b2982b5e6fcb4bbcd32a001}
+
+
+Definition at line 198 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, F\-A\-L\-S\-E, list\-\_\-is\-\_\-end, list\-\_\-move\-\_\-next, \-\_\-\-List\-::next, N\-U\-L\-L, \-\_\-\-List\-::prev, and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+199 \{ \hyperlink{struct___list}{List} *vListMove,*vListMoveNext;
+200 
+201   \textcolor{comment}{/* on parcourt la liste pList a la recherche de l'element a supprimer */}
+202   vListMove = pList;
+203   \textcolor{keywordflow}{while}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove) && (vListMove->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} != data))
+204   \{ \hyperlink{list_8h_ae83af81dbc4de69a15ba7cc0933c6b27}{list\_move\_next}(pList,vListMove); \}
+205   \textcolor{comment}{/* si on a trouve l'element, on le libere */}
+206   \textcolor{keywordflow}{if}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove))
+207   \{
+208     \textcolor{comment}{/* on signal que l'element a bien ete trouve */}
+209     *done = \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};  
+210     \textcolor{comment}{/* si il n'y a que notre element dans la liste */}
+211     \textcolor{keywordflow}{if}(vListMove->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} == vListMove)
+212     \{ \textcolor{comment}{/* on libere l'element */}
+213       free(vListMove);
+214       \textcolor{comment}{/* on renvoie une liste vide */}
+215       \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL});
+216     \} \textcolor{keywordflow}{else} \{
+217       \textcolor{comment}{/* on recupere l'element qui suit celui que l'on veut supprimer */}
+218       vListMoveNext = vListMove->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next};
+219       \textcolor{comment}{/* on chaine l'element precedent avec celui qui suit */}
+220       vListMove->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev}->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vListMoveNext;
+221       vListMoveNext->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vListMove->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev};
+222       \textcolor{comment}{/* on libere l'element a liberer */}
+223       free(vListMove);
+224       \textcolor{keywordflow}{if}(pList == vListMove)
+225       \{
+226         \textcolor{comment}{/* l'element a supprimer etait le premier, c'est */}
+227         \textcolor{comment}{/* donc le suivant qui devient le premier        */}
+228         \textcolor{keywordflow}{return}(vListMoveNext);
+229       \} \textcolor{keywordflow}{else} \{
+230         \textcolor{comment}{/* l'element a supprimer n'etait pas le premier.       */}
+231         \textcolor{comment}{/* le premiere element de la liste ne change donc pas. */}
+232         \textcolor{keywordflow}{return}(pList);
+233       \}
+234     \}
+235   \}
+236   \textcolor{comment}{/* si on est ici c'est l'element a supprimer n'existe pas dans la liste.*/}
+237   \textcolor{comment}{/* on signal de fait que l'on n'a pas trouve l'element cherche.         */}
+238   *done = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+239   \textcolor{comment}{/* on rend donc la liste intacte. */}
+240   \textcolor{keywordflow}{return}(pList);
+241 \}
+\end{DoxyCode}
+\hypertarget{list_8c_afa98a242c2248f7d212f9e93994f3a0a}{\index{list.\-c@{list.\-c}!list\-\_\-insert\-\_\-after\-\_\-item@{list\-\_\-insert\-\_\-after\-\_\-item}}
+\index{list\-\_\-insert\-\_\-after\-\_\-item@{list\-\_\-insert\-\_\-after\-\_\-item}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-insert\-\_\-after\-\_\-item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-insert\-\_\-after\-\_\-item (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{void $\ast$}]{before, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{list_8c_afa98a242c2248f7d212f9e93994f3a0a}
+
+
+Definition at line 271 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, list\-\_\-is\-\_\-end, list\-\_\-move\-\_\-next, \-\_\-\-List\-::next, N\-U\-L\-L, and \-\_\-\-List\-::prev.
+
+
+\begin{DoxyCode}
+272 \{ \hyperlink{struct___list}{List} *vList;
+273   \hyperlink{struct___list}{List} *vListMove;
+274 
+275   \textcolor{comment}{/* on alloue la memoire pour le nouvelle element */}
+276   \textcolor{keywordflow}{if}((vList = (\hyperlink{struct___list}{List} *)malloc(\textcolor{keyword}{sizeof}(\hyperlink{struct___list}{List}))) == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+277   \{
+278 \textcolor{preprocessor}{    #ifdef DEBUG}
+279 \textcolor{preprocessor}{}    serial1printf(\textcolor{stringliteral}{"malloc failed\(\backslash\)n"});
+280 \textcolor{preprocessor}{    #endif}
+281 \textcolor{preprocessor}{}    exit(1);
+282   \}
+283 
+284   vListMove = pList;
+285   \textcolor{keywordflow}{while}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove) && (vListMove->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} != before))
+286   \{ \hyperlink{list_8h_ae83af81dbc4de69a15ba7cc0933c6b27}{list\_move\_next}(pList,vListMove); \}
+287 
+288   \textcolor{comment}{/* si on a trouve l'element precedent */}
+289   \textcolor{keywordflow}{if}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove))
+290   \{
+291     vList->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} = data;
+292     vList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vListMove;
+293     vList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vListMove->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next};
+294     vListMove->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vList;
+295     vList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next}->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vList;
+296     \textcolor{keywordflow}{return}(pList);
+297   \textcolor{comment}{/* si on n'a pas trouve l'element precedent */}
+298   \} \textcolor{keywordflow}{else} \{
+299     \textcolor{keywordflow}{if}(pList == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+300     \{ \textcolor{comment}{/* si la liste est vide */}
+301       vList->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} = data;
+302       vList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vList;
+303       vList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vList;
+304       \textcolor{keywordflow}{return}(vList);
+305     \} \textcolor{keywordflow}{else} \{
+306       \textcolor{comment}{/* c'est une insertion en queue d'une liste non vide */}
+307       vList->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} = data;
+308       vList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev};
+309       vList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = pList;
+310       vList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev}->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vList;
+311       pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vList;
+312       \textcolor{keywordflow}{return}(pList);
+313     \}
+314   \}
+315 \}
+\end{DoxyCode}
+\hypertarget{list_8c_a91267921e4dc362c12efdb52c3b3275e}{\index{list.\-c@{list.\-c}!list\-\_\-insert\-\_\-sorted@{list\-\_\-insert\-\_\-sorted}}
+\index{list\-\_\-insert\-\_\-sorted@{list\-\_\-insert\-\_\-sorted}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-insert\-\_\-sorted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-insert\-\_\-sorted (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{int($\ast$)(void $\ast$p1, void $\ast$p2)}]{cmp\-\_\-func, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{list_8c_a91267921e4dc362c12efdb52c3b3275e}
+
+
+Definition at line 473 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, list\-\_\-data, list\-\_\-is\-\_\-empty, list\-\_\-is\-\_\-end, list\-\_\-move\-\_\-next, \-\_\-\-List\-::next, N\-U\-L\-L, and \-\_\-\-List\-::prev.
+
+
+\begin{DoxyCode}
+474 \{ \hyperlink{struct___list}{List} *vListMove, *vList;
+475 
+476   \textcolor{comment}{/* on recherche le premier element superieur ou egale au nouveau */}
+477   \textcolor{keywordflow}{for}(vListMove = pList; !\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove) &&
+478     (cmp\_func(\hyperlink{list_8h_a208c94b80def8534551911bbdd46395c}{list\_data}(vListMove),data) < 0);
+479     vListMove = \hyperlink{list_8h_ae83af81dbc4de69a15ba7cc0933c6b27}{list\_move\_next}(pList,vListMove));
+480 
+481   \textcolor{comment}{/* on alloue la memoire pour le nouvelle element */}
+482   \textcolor{keywordflow}{if}((vList = (\hyperlink{struct___list}{List} *)malloc(\textcolor{keyword}{sizeof}(\hyperlink{struct___list}{List}))) == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+483   \{
+484 \textcolor{preprocessor}{    #ifdef DEBUG}
+485 \textcolor{preprocessor}{}    serial1printf(\textcolor{stringliteral}{"malloc failed\(\backslash\)n"});
+486 \textcolor{preprocessor}{    #endif}
+487 \textcolor{preprocessor}{}    exit(1);
+488   \}
+489 
+490   \textcolor{keywordflow}{if}(\hyperlink{list_8h_ac35c4ab22b9da07c500d8204edd5f2d8}{list\_is\_empty}(pList))
+491   \{ \textcolor{comment}{/* si la liste est vide */}
+492     vList->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} = data;
+493     vList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vList;
+494     vList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vList;
+495     \textcolor{keywordflow}{return}(vList);
+496   \} \textcolor{keywordflow}{else} \{
+497     vList->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} = data;
+498     vList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vListMove->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev};
+499     vList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vListMove;
+500     vListMove->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vList;
+501     vList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev}->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vList;
+502     \textcolor{keywordflow}{if}(pList == vListMove)
+503       \textcolor{keywordflow}{return}(vList);
+504     \textcolor{keywordflow}{else}
+505       \textcolor{keywordflow}{return}(pList);
+506   \}
+507 \}
+\end{DoxyCode}
+\hypertarget{list_8c_aa0028f73b86d3e058ffab28b68a0be40}{\index{list.\-c@{list.\-c}!list\-\_\-invert@{list\-\_\-invert}}
+\index{list\-\_\-invert@{list\-\_\-invert}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-invert}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-invert (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List}
+\end{DoxyParamCaption}
+)}}\label{list_8c_aa0028f73b86d3e058ffab28b68a0be40}
+
+
+Definition at line 516 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::next, N\-U\-L\-L, and \-\_\-\-List\-::prev.
+
+
+\begin{DoxyCode}
+517 \{ \hyperlink{struct___list}{List} *vListMove, *vListMoveNext;
+518   
+519   \textcolor{keywordflow}{if}(pList == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL});
+520   
+521   vListMove = pList;
+522   \textcolor{keywordflow}{do} \{
+523     vListMoveNext = vListMove->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next};
+524     vListMove->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vListMove->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev};
+525     vListMove->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vListMoveNext;
+526     vListMove = vListMoveNext;
+527   \} \textcolor{keywordflow}{while}(vListMove != pList);
+528   \textcolor{comment}{/* pList est devenu le dernier element, donc le premier est celui qui suit */}
+529   \textcolor{keywordflow}{return}(pList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next});
+530 \}
+\end{DoxyCode}
+\hypertarget{list_8c_adb615a42435b85b0b6bfab93df13425b}{\index{list.\-c@{list.\-c}!list\-\_\-item@{list\-\_\-item}}
+\index{list\-\_\-item@{list\-\_\-item}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-item}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ list\-\_\-item (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{{\bf u32}}]{item\-\_\-nb}
+\end{DoxyParamCaption}
+)}}\label{list_8c_adb615a42435b85b0b6bfab93df13425b}
+
+
+Definition at line 248 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, list\-\_\-is\-\_\-end, list\-\_\-move\-\_\-next, and N\-U\-L\-L.
+
+
+\begin{DoxyCode}
+249 \{ \hyperlink{struct___list}{List} *vListMove;
+250   \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} offset=0;
+251 
+252   vListMove = pList;
+253   \textcolor{keywordflow}{while}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove) && (offset<item\_nb-1))
+254   \{ \hyperlink{list_8h_ae83af81dbc4de69a15ba7cc0933c6b27}{list\_move\_next}(pList,vListMove); offset++; \}
+255 
+256   \textcolor{keywordflow}{if}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove))
+257   \{ \textcolor{comment}{/* si il y a bien un element a la position demande, on le renvoie */}
+258     \textcolor{keywordflow}{return}(vListMove->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data});
+259   \} \textcolor{keywordflow}{else} \{
+260     \textcolor{comment}{/* si on c'est retrouve a la fin de la liste, il n'y a pas d'element */}
+261     \textcolor{comment}{/* a la postion demande. On renvoie donc NULL pour le signaler       */}
+262     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL});
+263   \}
+264 \}
+\end{DoxyCode}
+\hypertarget{list_8c_a68ccc16e7c8bb17c6fe7e356967d06f4}{\index{list.\-c@{list.\-c}!list\-\_\-nb\-\_\-item@{list\-\_\-nb\-\_\-item}}
+\index{list\-\_\-nb\-\_\-item@{list\-\_\-nb\-\_\-item}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-nb\-\_\-item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} list\-\_\-nb\-\_\-item (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List}
+\end{DoxyParamCaption}
+)}}\label{list_8c_a68ccc16e7c8bb17c6fe7e356967d06f4}
+
+
+Definition at line 135 of file list.\-c.
+
+
+
+References list\-\_\-is\-\_\-end, and list\-\_\-move\-\_\-next.
+
+
+\begin{DoxyCode}
+136 \{ \hyperlink{struct___list}{List} *vListMove;
+137   \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} compteur = 0;
+138 
+139   vListMove = pList;
+140   \textcolor{keywordflow}{while}(!\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove))
+141   \{
+142     compteur++;
+143     \hyperlink{list_8h_ae83af81dbc4de69a15ba7cc0933c6b27}{list\_move\_next}(pList,vListMove);
+144   \}
+145   \textcolor{keywordflow}{return}(compteur);
+146 \}
+\end{DoxyCode}
+\hypertarget{list_8c_a585c69b24d49d93003c638c854b2e2e6}{\index{list.\-c@{list.\-c}!list\-\_\-pop@{list\-\_\-pop}}
+\index{list\-\_\-pop@{list\-\_\-pop}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-pop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-pop (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{void $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{list_8c_a585c69b24d49d93003c638c854b2e2e6}
+
+
+Definition at line 341 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, \-\_\-\-List\-::next, N\-U\-L\-L, and \-\_\-\-List\-::prev.
+
+
+\begin{DoxyCode}
+342 \{ \hyperlink{struct___list}{List} *vListPrev;
+343 
+344   \textcolor{keywordflow}{if}(pList == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) \{ *data = \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}; \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}); \}
+345   
+346   \textcolor{comment}{/* si il n'y a que notre element dans la liste */}
+347   \textcolor{keywordflow}{if}(pList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} == pList)
+348   \{
+349     *data = pList->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data};
+350     \textcolor{comment}{/* on libere l'element */}
+351     free(pList);
+352     \textcolor{comment}{/* on renvoie une liste vide */}
+353     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL});
+354   \} \textcolor{keywordflow}{else} \{
+355     *data = pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev}->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data};
+356     vListPrev = pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev}->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev};
+357     vListPrev->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = pList;
+358     free(pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev});
+359     pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vListPrev;
+360     \textcolor{keywordflow}{return}(pList);
+361   \}
+362 \}
+\end{DoxyCode}
+\hypertarget{list_8c_ab446cb9cdf45b1c9711fdb1fbc622619}{\index{list.\-c@{list.\-c}!list\-\_\-prepend@{list\-\_\-prepend}}
+\index{list\-\_\-prepend@{list\-\_\-prepend}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-prepend}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-prepend (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{list_8c_ab446cb9cdf45b1c9711fdb1fbc622619}
+
+
+Definition at line 23 of file list.\-c.
+
+
+
+References \-\_\-\-List\-::data, \-\_\-\-List\-::next, N\-U\-L\-L, and \-\_\-\-List\-::prev.
+
+
+\begin{DoxyCode}
+24 \{ \hyperlink{struct___list}{List} *vList;
+25 
+26   \textcolor{comment}{/* on alloue la memoire pour le nouvel element */}
+27   \textcolor{keywordflow}{if}((vList = (\hyperlink{struct___list}{List} *)malloc(\textcolor{keyword}{sizeof}(\hyperlink{struct___list}{List}))) == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+28   \{
+29 \textcolor{preprocessor}{    #ifdef DEBUG}
+30 \textcolor{preprocessor}{}    serial1printf(\textcolor{stringliteral}{"malloc failed\(\backslash\)n"});
+31 \textcolor{preprocessor}{    #endif}
+32 \textcolor{preprocessor}{}    exit(1);
+33   \}
+34 
+35   \textcolor{keywordflow}{if}(pList == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+36   \{ \textcolor{comment}{/* la liste est vide */}
+37     vList->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} = data;
+38     vList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vList;
+39     vList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vList;
+40   \} \textcolor{keywordflow}{else} \{
+41     \textcolor{comment}{/* il y a deja au moins un element dans la liste */}
+42     vList->\hyperlink{struct___list_a735984d41155bc1032e09bece8f8d66d}{data} = data;
+43     vList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev};
+44     vList->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = pList;
+45     pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev}->\hyperlink{struct___list_a4ce5a16aaa87ace3fe65509ecb2674f8}{next} = vList;
+46     pList->\hyperlink{struct___list_ae84fd4e35313c1038991696042d588a4}{prev} = vList;
+47   \}
+48   \textcolor{keywordflow}{return}(vList);
+49 \}
+\end{DoxyCode}
+\hypertarget{list_8c_adf850c4303e1cc89b37fee470c7caeb6}{\index{list.\-c@{list.\-c}!list\-\_\-sort@{list\-\_\-sort}}
+\index{list\-\_\-sort@{list\-\_\-sort}!list.c@{list.\-c}}
+\subsubsection[{list\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}{\bf List}$\ast$ list\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{p\-List, }
+\item[{int($\ast$)(void $\ast$p1, void $\ast$p2)}]{cmp\-\_\-func}
+\end{DoxyParamCaption}
+)}}\label{list_8c_adf850c4303e1cc89b37fee470c7caeb6}
+
+
+Definition at line 440 of file list.\-c.
+
+
+
+References list\-\_\-append(), list\-\_\-data, list\-\_\-free\-\_\-chunk(), list\-\_\-is\-\_\-empty, list\-\_\-is\-\_\-end, list\-\_\-move\-\_\-next, list\-\_\-new, and list\-\_\-next.
+
+
+\begin{DoxyCode}
+441 \{ \hyperlink{struct___list}{List} *vListMove;
+442   \hyperlink{struct___list}{List} *vListSmallest;
+443   \hyperlink{struct___list}{List} *vListRes;
+444 
+445   vListRes = \hyperlink{list_8h_a4330e5b36cd5bd4a5e748fcab438fcdf}{list\_new}();
+446 
+447   \textcolor{comment}{/* l'algorithme de trie utilise est le trie par selection          */}
+448   \textcolor{comment}{/* cela consiste a chercher le plus petit element le sortir de     */}
+449   \textcolor{comment}{/* la liste pList et le rajouter a la fin de la liste vListRes     */}
+450   \textcolor{comment}{/* et de repeter cela jusqu'a ce qu'il n'y ai plus rien dans pList */}
+451   \textcolor{keywordflow}{while}(!\hyperlink{list_8h_ac35c4ab22b9da07c500d8204edd5f2d8}{list\_is\_empty}(pList))
+452   \{
+453     \textcolor{keywordflow}{for}(vListMove = \hyperlink{list_8h_a30f8e0728bc70dde946b6122ce32908b}{list\_next}(pList,pList), vListSmallest = pList;
+454       !\hyperlink{list_8h_a4eef69d4c2954b86ee2cee5dc8c545f7}{list\_is\_end}(pList,vListMove); \hyperlink{list_8h_ae83af81dbc4de69a15ba7cc0933c6b27}{list\_move\_next}(pList,vListMove))
+455     \{
+456       \textcolor{keywordflow}{if}(cmp\_func(\hyperlink{list_8h_a208c94b80def8534551911bbdd46395c}{list\_data}(vListMove),\hyperlink{list_8h_a208c94b80def8534551911bbdd46395c}{list\_data}(vListSmallest)) < 0)
+457       \{ vListSmallest = vListMove; \}
+458     \}
+459     vListRes = \hyperlink{list_8c_a01ccbc4f8443d73601da9dd590a96aaa}{list\_append}(vListRes,\hyperlink{list_8h_a208c94b80def8534551911bbdd46395c}{list\_data}(vListSmallest));
+460     pList = \hyperlink{list_8c_a1936df1b95c6ff4071c237e1524a0c83}{list\_free\_chunk}(pList, vListSmallest);
+461   \}
+462 
+463   \textcolor{keywordflow}{return}(vListRes);
+464 \}
+\end{DoxyCode}

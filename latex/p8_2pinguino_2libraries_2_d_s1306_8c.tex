@@ -1,0 +1,1182 @@
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-D\-S1306.c File Reference}
+\label{p8_2pinguino_2libraries_2_d_s1306_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-D\-S1306.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-D\-S1306.\-c}}
+}
+{\ttfamily \#include $<$D\-S1306.\-h$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$spi.\-c$>$}\\*
+{\ttfamily \#include $<$spiloc.\-c$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a71900193f78aa17b6b5f35f717efdc4a}{D\-S1306\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Local\-S\-P\-I, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Lo\-C\-E, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Lo\-S\-C\-K, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Lo\-S\-D\-O, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Lo\-S\-D\-I)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7b3ea600b49d92a591b286eced790b8d}{D\-S1306\-\_\-\-Hours24} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} Hours24)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_afc8d158bbec6030b80d57940d03a6fb6}{D\-S1306\-\_\-set\-Time} (const \hyperlink{structds1306time}{ds1306time} $\ast$time)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a6bf6d454e97cad24ec8ef24419e4b71c}{D\-S1306\-\_\-readn} (unsigned char address, unsigned char $\ast$data, int len)
+\item 
+unsigned char \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{D\-S1306\-\_\-read} (unsigned char address)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_aa7fa43cb5f456e894f8ccab4621136a3}{D\-S1306\-\_\-writen} (unsigned char address, const unsigned char $\ast$data, int len)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}{D\-S1306\-\_\-write} (unsigned char address, const unsigned char value)
+\item 
+unsigned char \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a26ad9c0f49ce66d4a511d11df8d681e1}{D\-S1306\-\_\-encode\-B\-C\-D7} (unsigned char value)
+\item 
+unsigned char \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{D\-S1306\-\_\-encode\-B\-C\-D7\-M} (unsigned char value, unsigned char mask)
+\item 
+unsigned char \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a9774693600305d9039adc1814edf857f}{D\-S1306\-\_\-encode\-B\-C\-D8} (unsigned char value)
+\item 
+unsigned char \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a60f9f79d4b6587dbe47213ebc43681d3}{D\-S1306\-\_\-decode\-B\-C\-D7} (unsigned char value)
+\item 
+unsigned char \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{D\-S1306\-\_\-decode\-B\-C\-D7\-M} (unsigned char value, unsigned char mask)
+\item 
+unsigned char \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a5453546974f573cbdfbca8ccbdf259a6}{D\-S1306\-\_\-decode\-B\-C\-D8} (unsigned char value)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a3dacab7d9a51fee36f849f5880f5c108}{D\-S1306\-\_\-encode\-Time\-Packet} (unsigned char $\ast$buf, const \hyperlink{structds1306time}{ds1306time} $\ast$time)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a52e948bc17392110069ddc56a99f0b5a}{D\-S1306\-\_\-encode\-Alarm\-Packet} (unsigned char $\ast$buf, const \hyperlink{structds1306alarm}{ds1306alarm} $\ast$alarm)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad0a7583dd481ee6913649e1e53a9de53}{D\-S1306\-\_\-decode\-Time\-Packet} (const unsigned char $\ast$buf, \hyperlink{structds1306time}{ds1306time} $\ast$time)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7e9452fbddf718d42af6a5983e36d1dd}{D\-S1306\-\_\-decode\-Alarm\-Packet} (const unsigned char $\ast$buf, \hyperlink{structds1306alarm}{ds1306alarm} $\ast$alarm)
+\item 
+unsigned char \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a4551cbeffd600ca7754b31b7f072eb71}{D\-S1306\-\_\-encode\-Hour\-Byte} (unsigned char hour24, unsigned char hour12, char ampm)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a01693fa101f261647f069df014e6e816}{D\-S1306\-\_\-decode\-Hour\-Byte} (unsigned char hour\-Byte, unsigned char $\ast$hour24, unsigned char $\ast$hour12, char $\ast$ampm)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a0ee5ddc9cf628c1ea418fb4fd385c328}{D\-S1306\-\_\-get\-Time} (\hyperlink{structds1306time}{ds1306time} $\ast$time)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_aa2177d9bc41abe9843ba6fc6da49a6d5}{D\-S1306\-\_\-set\-Alarm} (int alarm, const \hyperlink{structds1306alarm}{ds1306alarm} $\ast$time)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad75581da27970167078722f76a757e02}{D\-S1306\-\_\-get\-Alarm} (int alarm, \hyperlink{structds1306alarm}{ds1306alarm} $\ast$time)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_abbbca23e340bfbdc2034f1849765a4e8}{D\-S1306\-\_\-get\-Alarm\-State} (unsigned int alarm)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a0f189b41ea1d321e25fcb7805d90d568}{D\-S1306\-\_\-get\-Alarm\-Both\-State} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} $\ast$state1, \hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} $\ast$state2)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a4c4415a9ab28966ce02d64808987a0bf}{D\-S1306\-\_\-clear\-Alarm\-State} (unsigned int alarm)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a0136769ed2c3ece9e784bcd317d55070}{D\-S1306\-\_\-clear\-Alarm\-Both\-State} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a39927c06f54183c01c4cf1e84d3cff77}{D\-S1306\-\_\-get\-Alarm\-Enabled} (unsigned int alarm)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a0daa1c427fcab8f1cbfde3bd60a3ccd8}{D\-S1306\-\_\-get\-Alarm\-Both\-Enabled} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} $\ast$enabled1, \hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} $\ast$enabled2)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad1ad16cf9abeb9773eade2fa07b139b1}{D\-S1306\-\_\-enable\-Alarm} (unsigned int alarm)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_afbb78627a87fa0f672ad3c360232741f}{D\-S1306\-\_\-disable\-Alarm} (unsigned int alarm)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_afe32abd6589d4be44b2210757b2c4e7f}{D\-S1306\-\_\-enable\-Both\-Alarms} ()
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a2ac84e332e0308bb7ae23e6bd3106641}{D\-S1306\-\_\-disable\-Both\-Alarms} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ab6f050dd98b9bd86cc68284fc8f87b1f}{D\-S1306\-\_\-enable\-Trickle\-Charge} (unsigned char num\-Diodes, unsigned char k\-Res)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a6490f265978b1cb193f0ac9a1dc488c2}{D\-S1306\-\_\-disable\-Trickle\-Charge} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a2f49d2d7e8200eb9c730fb20530ccc64}{D\-S1306\-\_\-get\-Trickle\-Charge\-State} (unsigned char $\ast$num\-Diodes, unsigned char $\ast$k\-Res)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7a72e8b8075ad986d11b6607e0dfacfe}{D\-S1306\-\_\-write\-User} (unsigned char addr, const char $\ast$buf, int num)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a234696d5efda0cf7cdeb5dfb0f88cf45}{D\-S1306\-\_\-read\-User} (unsigned char addr, char $\ast$buf, int num)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a56e43c4e6b0366b303953959ba4878a6}{D\-S1306\-\_\-is\-Write\-Protected} ()
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_af834baa6ba4c2ac9f1b87e5437dac9d9}{D\-S1306\-\_\-set\-Write\-Protection} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} on)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_acb885e50605ee2f383473abc237ca558}{D\-S1306\-\_\-get1\-Hz\-State} ()
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ac20e84187b78d0c6cb077a721e33abd2}{D\-S1306\-\_\-set1\-Hz\-State} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} enabled)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_s_p_i___loc___conf}{S\-P\-I\-\_\-\-Loc\-\_\-\-Conf} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{D\-S1306\-\_\-\-S\-P\-I\-Loc}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7b425f2a6cdfa30ba631e11c6cd3418a}{D\-S1306\-\_\-\-C\-E}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a822a373949e731546e580e84c2ee8bf3}{D\-S1306\-\_\-write\-Hours24} = \hyperlink{p32_2include_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{T\-R\-U\-E}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a2d84c66e014672f34a21eb9eb75253ed}{D\-S1306\-\_\-\-Local\-S\-P\-I}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a0136769ed2c3ece9e784bcd317d55070}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-clear\-Alarm\-Both\-State@{D\-S1306\-\_\-clear\-Alarm\-Both\-State}}
+\index{D\-S1306\-\_\-clear\-Alarm\-Both\-State@{D\-S1306\-\_\-clear\-Alarm\-Both\-State}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-clear\-Alarm\-Both\-State}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-clear\-Alarm\-Both\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a0136769ed2c3ece9e784bcd317d55070}
+
+
+Definition at line 377 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+378 \{
+379     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}{DS1306\_write}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a267eb4035179b3b49864333d6189be15}{DS1306\_SR}, 0);
+380 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a4c4415a9ab28966ce02d64808987a0bf}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-clear\-Alarm\-State@{D\-S1306\-\_\-clear\-Alarm\-State}}
+\index{D\-S1306\-\_\-clear\-Alarm\-State@{D\-S1306\-\_\-clear\-Alarm\-State}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-clear\-Alarm\-State}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-clear\-Alarm\-State (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{alarm}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a4c4415a9ab28966ce02d64808987a0bf}
+
+
+Definition at line 369 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+370 \{
+371     \textcolor{keywordflow}{if} (alarm > 1) \textcolor{keywordflow}{return};
+372 
+373     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}{DS1306\_write}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a267eb4035179b3b49864333d6189be15}{DS1306\_SR}, \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(
+      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a267eb4035179b3b49864333d6189be15}{DS1306\_SR}) & ~ (1 << alarm));
+374 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a7e9452fbddf718d42af6a5983e36d1dd}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-decode\-Alarm\-Packet@{D\-S1306\-\_\-decode\-Alarm\-Packet}}
+\index{D\-S1306\-\_\-decode\-Alarm\-Packet@{D\-S1306\-\_\-decode\-Alarm\-Packet}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-decode\-Alarm\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-decode\-Alarm\-Packet (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{buf, }
+\item[{{\bf ds1306alarm} $\ast$}]{alarm}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a7e9452fbddf718d42af6a5983e36d1dd}
+
+
+Definition at line 243 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-get\-Alarm().
+
+
+\begin{DoxyCode}
+244 \{
+245     alarm->\hyperlink{structds1306alarm_a173027d8c297c3e800a19ec32217953e}{seconds} = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{DS1306\_decodeBCD7M}(buf[0], 0x7F);
+246     alarm->\hyperlink{structds1306alarm_acf4ceb0d1cb80a37559ed7fd414cd389}{minutes} = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{DS1306\_decodeBCD7M}(buf[1], 0x7F);
+247     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a01693fa101f261647f069df014e6e816}{DS1306\_decodeHourByte}(buf[2], &(alarm->\hyperlink{structds1306alarm_ad6bf06b59feb7f83117fd66cd2f365ad}{hours}), &(alarm->
+      \hyperlink{structds1306alarm_ab51bff648a0be672b522ac48e8da69fc}{hours12}), &(alarm->\hyperlink{structds1306alarm_ab107d7a2945b7954fcf45a0e3c129f03}{ampm}));
+248     alarm->\hyperlink{structds1306alarm_a75aeb148620066973ea11791d72dc7cc}{dow} = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{DS1306\_decodeBCD7M}(buf[3], 0x07);
+249 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a60f9f79d4b6587dbe47213ebc43681d3}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-decode\-B\-C\-D7@{D\-S1306\-\_\-decode\-B\-C\-D7}}
+\index{D\-S1306\-\_\-decode\-B\-C\-D7@{D\-S1306\-\_\-decode\-B\-C\-D7}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-decode\-B\-C\-D7}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char D\-S1306\-\_\-decode\-B\-C\-D7 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a60f9f79d4b6587dbe47213ebc43681d3}
+
+
+Definition at line 188 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-decode\-B\-C\-D7\-M().
+
+
+\begin{DoxyCode}
+189 \{
+190     \textcolor{keywordflow}{return} ((value & \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a5c3181e7bf030fd7e89df48a946ade57}{DS1306\_ANY}) ? DS1306\_ANY : ((((value & 0xF0) >> 4) * 10) + (value & 0x0F)));
+191 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-decode\-B\-C\-D7\-M@{D\-S1306\-\_\-decode\-B\-C\-D7\-M}}
+\index{D\-S1306\-\_\-decode\-B\-C\-D7\-M@{D\-S1306\-\_\-decode\-B\-C\-D7\-M}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-decode\-B\-C\-D7\-M}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char D\-S1306\-\_\-decode\-B\-C\-D7\-M (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{value, }
+\item[{unsigned char}]{mask}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}
+
+
+Definition at line 193 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-decode\-Alarm\-Packet(), D\-S1306\-\_\-decode\-Hour\-Byte(), and D\-S1306\-\_\-decode\-Time\-Packet().
+
+
+\begin{DoxyCode}
+194 \{
+195 
+196     \textcolor{keywordflow}{return} ((value & \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a5c3181e7bf030fd7e89df48a946ade57}{DS1306\_ANY}) ? DS1306\_ANY : \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a60f9f79d4b6587dbe47213ebc43681d3}{DS1306\_decodeBCD7}(value & mask))
+      ;
+197 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a5453546974f573cbdfbca8ccbdf259a6}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-decode\-B\-C\-D8@{D\-S1306\-\_\-decode\-B\-C\-D8}}
+\index{D\-S1306\-\_\-decode\-B\-C\-D8@{D\-S1306\-\_\-decode\-B\-C\-D8}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-decode\-B\-C\-D8}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char D\-S1306\-\_\-decode\-B\-C\-D8 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a5453546974f573cbdfbca8ccbdf259a6}
+
+
+Definition at line 200 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-decode\-Time\-Packet().
+
+
+\begin{DoxyCode}
+201 \{
+202     \textcolor{keywordflow}{return} ((((value & 0xF0) >> 4) * 10) + (value & 0x0F));
+203 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a01693fa101f261647f069df014e6e816}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-decode\-Hour\-Byte@{D\-S1306\-\_\-decode\-Hour\-Byte}}
+\index{D\-S1306\-\_\-decode\-Hour\-Byte@{D\-S1306\-\_\-decode\-Hour\-Byte}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-decode\-Hour\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-decode\-Hour\-Byte (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{hour\-Byte, }
+\item[{unsigned char $\ast$}]{hour24, }
+\item[{unsigned char $\ast$}]{hour12, }
+\item[{char $\ast$}]{ampm}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a01693fa101f261647f069df014e6e816}
+
+
+Definition at line 267 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-decode\-Alarm\-Packet(), and D\-S1306\-\_\-decode\-Time\-Packet().
+
+
+\begin{DoxyCode}
+268 \{
+269     \textcolor{keywordflow}{if} (hourByte & \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a5c3181e7bf030fd7e89df48a946ade57}{DS1306\_ANY}) \{
+270         *hour12 = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a5c3181e7bf030fd7e89df48a946ade57}{DS1306\_ANY};
+271         *hour24 = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a5c3181e7bf030fd7e89df48a946ade57}{DS1306\_ANY};
+272         *ampm = 0;
+273     \} \textcolor{keywordflow}{else} \{
+274         \textcolor{keywordflow}{if} (hourByte & 0x40) \{
+275             \textcolor{comment}{// 12 hour mode}
+276             *hour12 = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{DS1306\_decodeBCD7M}(hourByte, 0x1F);
+277             \textcolor{keywordflow}{if} (hourByte & 0x20) \{
+278                 \textcolor{comment}{// PM}
+279                 \textcolor{keywordflow}{if} (*hour12 == 12) \{
+280                     *hour24 = 12;
+281                 \} \textcolor{keywordflow}{else} \{
+282                     *hour24 = 12 + *hour12;
+283                 \}
+284                 *ampm = \textcolor{charliteral}{'P'};
+285             \} \textcolor{keywordflow}{else} \{
+286                 \textcolor{comment}{// AM}
+287                 *hour24 = (*hour12 == 12) ? 0 : *hour12;
+288                 *ampm = \textcolor{charliteral}{'A'};
+289             \}
+290         \} \textcolor{keywordflow}{else} \{
+291             \textcolor{comment}{// 24 hour mode}
+292             *hour24 = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{DS1306\_decodeBCD7M}(hourByte, 0x3F);
+293             \textcolor{keywordflow}{if} (*hour24 == 0) \{
+294                 *hour12 = 12;
+295                 *ampm = \textcolor{charliteral}{'A'};
+296             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (*hour24 == 12) \{
+297                 *hour12 = 12;
+298                 *ampm = \textcolor{charliteral}{'P'};
+299             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (*hour24 < 12) \{
+300                 *ampm = \textcolor{charliteral}{'A'};
+301                 *hour12 = *hour24;
+302             \} \textcolor{keywordflow}{else} \{
+303                 *ampm = \textcolor{charliteral}{'P'};
+304                 *hour12 = *hour24 - 12;
+305             \}
+306         \}
+307     \}
+308 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_ad0a7583dd481ee6913649e1e53a9de53}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-decode\-Time\-Packet@{D\-S1306\-\_\-decode\-Time\-Packet}}
+\index{D\-S1306\-\_\-decode\-Time\-Packet@{D\-S1306\-\_\-decode\-Time\-Packet}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-decode\-Time\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-decode\-Time\-Packet (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{buf, }
+\item[{{\bf ds1306time} $\ast$}]{time}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_ad0a7583dd481ee6913649e1e53a9de53}
+
+
+Definition at line 231 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-get\-Time().
+
+
+\begin{DoxyCode}
+232 \{
+233     time->\hyperlink{structds1306time_a173027d8c297c3e800a19ec32217953e}{seconds} = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{DS1306\_decodeBCD7M}(buf[0], 0x7F);
+234     time->\hyperlink{structds1306time_acf4ceb0d1cb80a37559ed7fd414cd389}{minutes} = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{DS1306\_decodeBCD7M}(buf[1], 0x7F);
+235     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a01693fa101f261647f069df014e6e816}{DS1306\_decodeHourByte}(buf[2], &(time->\hyperlink{structds1306time_ad6bf06b59feb7f83117fd66cd2f365ad}{hours}), &(time->
+      \hyperlink{structds1306time_ab51bff648a0be672b522ac48e8da69fc}{hours12}), &(time->\hyperlink{structds1306time_ab107d7a2945b7954fcf45a0e3c129f03}{ampm}));
+236     time->\hyperlink{structds1306time_a75aeb148620066973ea11791d72dc7cc}{dow} = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{DS1306\_decodeBCD7M}(buf[3], 0x07);
+237     time->\hyperlink{structds1306time_ab9ba6d415537c392fea1a330751865f9}{day} = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{DS1306\_decodeBCD7M}(buf[4], 0x3F);
+238     time->\hyperlink{structds1306time_a4900720b55a67c901372712af062d615}{month} = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad433fc0ce179c7ec7c98ee71f2b4b3f9}{DS1306\_decodeBCD7M}(buf[5], 0x3F);
+239     time->\hyperlink{structds1306time_a189605ebe7fb094d2d8d511d855c4bb0}{year} = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a5453546974f573cbdfbca8ccbdf259a6}{DS1306\_decodeBCD8}(buf[6]);
+240 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_afbb78627a87fa0f672ad3c360232741f}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-disable\-Alarm@{D\-S1306\-\_\-disable\-Alarm}}
+\index{D\-S1306\-\_\-disable\-Alarm@{D\-S1306\-\_\-disable\-Alarm}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-disable\-Alarm}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-disable\-Alarm (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{alarm}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_afbb78627a87fa0f672ad3c360232741f}
+
+
+Definition at line 406 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+407 \{
+408     \textcolor{keywordflow}{if} (alarm > 1) \textcolor{keywordflow}{return};
+409     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}{DS1306\_write}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}, \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(
+      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}) & ~ (1 << alarm));
+410 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a2ac84e332e0308bb7ae23e6bd3106641}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-disable\-Both\-Alarms@{D\-S1306\-\_\-disable\-Both\-Alarms}}
+\index{D\-S1306\-\_\-disable\-Both\-Alarms@{D\-S1306\-\_\-disable\-Both\-Alarms}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-disable\-Both\-Alarms}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-disable\-Both\-Alarms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a2ac84e332e0308bb7ae23e6bd3106641}
+
+
+Definition at line 419 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+420 \{
+421     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}{DS1306\_write}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}, \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(
+      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}) & ~ 0x03);
+422 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a6490f265978b1cb193f0ac9a1dc488c2}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-disable\-Trickle\-Charge@{D\-S1306\-\_\-disable\-Trickle\-Charge}}
+\index{D\-S1306\-\_\-disable\-Trickle\-Charge@{D\-S1306\-\_\-disable\-Trickle\-Charge}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-disable\-Trickle\-Charge}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-disable\-Trickle\-Charge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a6490f265978b1cb193f0ac9a1dc488c2}
+
+
+Definition at line 446 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+447 \{
+448     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} b = 0;
+449     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_aa7fa43cb5f456e894f8ccab4621136a3}{DS1306\_writen}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_af069324c637f225b68cb9cb136dc8de6}{DS1306\_TCR}, &b, 1);
+450 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_ad1ad16cf9abeb9773eade2fa07b139b1}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-enable\-Alarm@{D\-S1306\-\_\-enable\-Alarm}}
+\index{D\-S1306\-\_\-enable\-Alarm@{D\-S1306\-\_\-enable\-Alarm}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-enable\-Alarm}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-enable\-Alarm (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{alarm}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_ad1ad16cf9abeb9773eade2fa07b139b1}
+
+
+Definition at line 399 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+400 \{
+401     \textcolor{keywordflow}{if} (alarm > 1) \textcolor{keywordflow}{return};
+402     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}{DS1306\_write}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}, \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(
+      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}) | (1 << alarm));
+403 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_afe32abd6589d4be44b2210757b2c4e7f}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-enable\-Both\-Alarms@{D\-S1306\-\_\-enable\-Both\-Alarms}}
+\index{D\-S1306\-\_\-enable\-Both\-Alarms@{D\-S1306\-\_\-enable\-Both\-Alarms}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-enable\-Both\-Alarms}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-enable\-Both\-Alarms (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_afe32abd6589d4be44b2210757b2c4e7f}
+
+
+Definition at line 413 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+414 \{
+415     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}{DS1306\_write}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}, \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(
+      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}) | 0x03);
+416 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_ab6f050dd98b9bd86cc68284fc8f87b1f}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-enable\-Trickle\-Charge@{D\-S1306\-\_\-enable\-Trickle\-Charge}}
+\index{D\-S1306\-\_\-enable\-Trickle\-Charge@{D\-S1306\-\_\-enable\-Trickle\-Charge}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-enable\-Trickle\-Charge}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} D\-S1306\-\_\-enable\-Trickle\-Charge (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{num\-Diodes, }
+\item[{unsigned char}]{k\-Res}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_ab6f050dd98b9bd86cc68284fc8f87b1f}
+
+
+Definition at line 428 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+429 \{
+430     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} b;
+431 
+432     \textcolor{keywordflow}{if} (numDiodes < 1 || numDiodes > 2) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+433     
+434     b = 0xA0 | (numDiodes << 2);
+435     \textcolor{keywordflow}{switch}(kRes) \{
+436         \textcolor{keywordflow}{case} 2  :   b |= 0x01; \textcolor{keywordflow}{break};
+437         \textcolor{keywordflow}{case} 4  :   b |= 0x02; \textcolor{keywordflow}{break};
+438         \textcolor{keywordflow}{case} 8  :   b |= 0x03; \textcolor{keywordflow}{break};
+439         \textcolor{keywordflow}{default} :   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+440     \}
+441 
+442     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_aa7fa43cb5f456e894f8ccab4621136a3}{DS1306\_writen}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_af069324c637f225b68cb9cb136dc8de6}{DS1306\_TCR}, &b, 1);
+443 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a52e948bc17392110069ddc56a99f0b5a}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-encode\-Alarm\-Packet@{D\-S1306\-\_\-encode\-Alarm\-Packet}}
+\index{D\-S1306\-\_\-encode\-Alarm\-Packet@{D\-S1306\-\_\-encode\-Alarm\-Packet}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-encode\-Alarm\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-encode\-Alarm\-Packet (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{buf, }
+\item[{const {\bf ds1306alarm} $\ast$}]{alarm}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a52e948bc17392110069ddc56a99f0b5a}
+
+
+Definition at line 222 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-set\-Alarm().
+
+
+\begin{DoxyCode}
+223 \{
+224     buf[0] = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{DS1306\_encodeBCD7M}(alarm->\hyperlink{structds1306alarm_a173027d8c297c3e800a19ec32217953e}{seconds}, 0x7F);
+225     buf[1] = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{DS1306\_encodeBCD7M}(alarm->\hyperlink{structds1306alarm_acf4ceb0d1cb80a37559ed7fd414cd389}{minutes}, 0x7F);
+226     buf[2] = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a4551cbeffd600ca7754b31b7f072eb71}{DS1306\_encodeHourByte}(alarm->\hyperlink{structds1306alarm_ad6bf06b59feb7f83117fd66cd2f365ad}{hours}, alarm->
+      \hyperlink{structds1306alarm_ab51bff648a0be672b522ac48e8da69fc}{hours12}, alarm->\hyperlink{structds1306alarm_ab107d7a2945b7954fcf45a0e3c129f03}{ampm});
+227     buf[3] = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{DS1306\_encodeBCD7M}(alarm->\hyperlink{structds1306alarm_a75aeb148620066973ea11791d72dc7cc}{dow}, 0x07);
+228 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a26ad9c0f49ce66d4a511d11df8d681e1}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-encode\-B\-C\-D7@{D\-S1306\-\_\-encode\-B\-C\-D7}}
+\index{D\-S1306\-\_\-encode\-B\-C\-D7@{D\-S1306\-\_\-encode\-B\-C\-D7}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-encode\-B\-C\-D7}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char D\-S1306\-\_\-encode\-B\-C\-D7 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a26ad9c0f49ce66d4a511d11df8d681e1}
+
+
+Definition at line 170 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+171 \{
+172     \textcolor{keywordflow}{return} ((value & \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a5c3181e7bf030fd7e89df48a946ade57}{DS1306\_ANY}) ? DS1306\_ANY : (((value / 10) << 4) | (value % 10)));
+173 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-encode\-B\-C\-D7\-M@{D\-S1306\-\_\-encode\-B\-C\-D7\-M}}
+\index{D\-S1306\-\_\-encode\-B\-C\-D7\-M@{D\-S1306\-\_\-encode\-B\-C\-D7\-M}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-encode\-B\-C\-D7\-M}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char D\-S1306\-\_\-encode\-B\-C\-D7\-M (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{value, }
+\item[{unsigned char}]{mask}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}
+
+
+Definition at line 176 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-encode\-Alarm\-Packet(), D\-S1306\-\_\-encode\-Hour\-Byte(), and D\-S1306\-\_\-encode\-Time\-Packet().
+
+
+\begin{DoxyCode}
+177 \{
+178     \textcolor{keywordflow}{return} ((value & \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a5c3181e7bf030fd7e89df48a946ade57}{DS1306\_ANY}) ? DS1306\_ANY : (((value / 10) << 4) | (value % 10)) & mask);
+179 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a9774693600305d9039adc1814edf857f}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-encode\-B\-C\-D8@{D\-S1306\-\_\-encode\-B\-C\-D8}}
+\index{D\-S1306\-\_\-encode\-B\-C\-D8@{D\-S1306\-\_\-encode\-B\-C\-D8}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-encode\-B\-C\-D8}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char D\-S1306\-\_\-encode\-B\-C\-D8 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a9774693600305d9039adc1814edf857f}
+
+
+Definition at line 182 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-encode\-Time\-Packet().
+
+
+\begin{DoxyCode}
+183 \{
+184     \textcolor{keywordflow}{return} (((value / 10) << 4) | (value % 10));
+185 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a4551cbeffd600ca7754b31b7f072eb71}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-encode\-Hour\-Byte@{D\-S1306\-\_\-encode\-Hour\-Byte}}
+\index{D\-S1306\-\_\-encode\-Hour\-Byte@{D\-S1306\-\_\-encode\-Hour\-Byte}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-encode\-Hour\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char D\-S1306\-\_\-encode\-Hour\-Byte (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{hour24, }
+\item[{unsigned char}]{hour12, }
+\item[{char}]{ampm}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a4551cbeffd600ca7754b31b7f072eb71}
+
+
+Definition at line 252 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-encode\-Alarm\-Packet(), and D\-S1306\-\_\-encode\-Time\-Packet().
+
+
+\begin{DoxyCode}
+253 \{
+254     \textcolor{keywordflow}{if} ((\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a822a373949e731546e580e84c2ee8bf3}{DS1306\_writeHours24} && ((hour24 & \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a5c3181e7bf030fd7e89df48a946ade57}{DS1306\_ANY}))) || (!
+      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a822a373949e731546e580e84c2ee8bf3}{DS1306\_writeHours24} && (hour12 & DS1306\_ANY))) \{
+255         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a5c3181e7bf030fd7e89df48a946ade57}{DS1306\_ANY};
+256     \} \textcolor{keywordflow}{else} \{
+257         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a822a373949e731546e580e84c2ee8bf3}{DS1306\_writeHours24}) \{
+258             \textcolor{comment}{// Writing 24 hour format times}
+259             \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{DS1306\_encodeBCD7M}(hour24, 0x3F);
+260         \} \textcolor{keywordflow}{else} \{
+261             \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{DS1306\_encodeBCD7M}(hour12, 0x1F) | 0x40 | (ampm == \textcolor{charliteral}{'P'} ? 0x20 : 0x00)
+      );
+262         \}
+263     \}
+264 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a3dacab7d9a51fee36f849f5880f5c108}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-encode\-Time\-Packet@{D\-S1306\-\_\-encode\-Time\-Packet}}
+\index{D\-S1306\-\_\-encode\-Time\-Packet@{D\-S1306\-\_\-encode\-Time\-Packet}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-encode\-Time\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-encode\-Time\-Packet (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{buf, }
+\item[{const {\bf ds1306time} $\ast$}]{time}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a3dacab7d9a51fee36f849f5880f5c108}
+
+
+Definition at line 209 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-set\-Time().
+
+
+\begin{DoxyCode}
+210 \{
+211     buf[0] = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{DS1306\_encodeBCD7M}(time->\hyperlink{structds1306time_a173027d8c297c3e800a19ec32217953e}{seconds}, 0x7F);
+212     buf[1] = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{DS1306\_encodeBCD7M}(time->\hyperlink{structds1306time_acf4ceb0d1cb80a37559ed7fd414cd389}{minutes}, 0x7F);
+213     buf[2] = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a4551cbeffd600ca7754b31b7f072eb71}{DS1306\_encodeHourByte}(time->\hyperlink{structds1306time_ad6bf06b59feb7f83117fd66cd2f365ad}{hours}, time->
+      \hyperlink{structds1306time_ab51bff648a0be672b522ac48e8da69fc}{hours12}, time->\hyperlink{structds1306time_ab107d7a2945b7954fcf45a0e3c129f03}{ampm});
+214     buf[3] = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{DS1306\_encodeBCD7M}(time->\hyperlink{structds1306time_a75aeb148620066973ea11791d72dc7cc}{dow}, 0x07);
+215     buf[4] = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{DS1306\_encodeBCD7M}(time->\hyperlink{structds1306time_ab9ba6d415537c392fea1a330751865f9}{day}, 0x3F);
+216     buf[5] = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a1a90bbe04b3a030cf878940c9786057c}{DS1306\_encodeBCD7M}(time->\hyperlink{structds1306time_a4900720b55a67c901372712af062d615}{month}, 0x3F);
+217     buf[6] = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a9774693600305d9039adc1814edf857f}{DS1306\_encodeBCD8}(time->\hyperlink{structds1306time_a189605ebe7fb094d2d8d511d855c4bb0}{year});
+218 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_acb885e50605ee2f383473abc237ca558}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-get1\-Hz\-State@{D\-S1306\-\_\-get1\-Hz\-State}}
+\index{D\-S1306\-\_\-get1\-Hz\-State@{D\-S1306\-\_\-get1\-Hz\-State}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-get1\-Hz\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} D\-S1306\-\_\-get1\-Hz\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_acb885e50605ee2f383473abc237ca558}
+
+
+Definition at line 525 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+526 \{
+527     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} cr = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR});
+528     \textcolor{keywordflow}{return} ((cr & (1 << \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_aa9e2318177e79d05abde570b5aa47e3a}{DS1306\_CR\_1HZ})) ? \textcolor{keyword}{true} : \textcolor{keyword}{false});
+529 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_ad75581da27970167078722f76a757e02}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-get\-Alarm@{D\-S1306\-\_\-get\-Alarm}}
+\index{D\-S1306\-\_\-get\-Alarm@{D\-S1306\-\_\-get\-Alarm}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-get\-Alarm}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-get\-Alarm (
+\begin{DoxyParamCaption}
+\item[{int}]{alarm, }
+\item[{{\bf ds1306alarm} $\ast$}]{time}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_ad75581da27970167078722f76a757e02}
+
+
+Definition at line 340 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+341 \{
+342     memset((\_\_data *)time, 0, \textcolor{keyword}{sizeof}(\hyperlink{structds1306time}{ds1306time}));
+343 
+344     \textcolor{keywordflow}{if} (alarm < 2) \{
+345         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a2cb762248a1d5d4f93dace4ad64e2181}{DS1306\_SIZE\_ALARM}];
+346         \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a6bf6d454e97cad24ec8ef24419e4b71c}{DS1306\_readn}(alarm == 0 ? \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_aec74d165ae7692cd8e6cf323d43bacd1}{DS1306\_ALARM0} : 
+      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a291825f487c51b9cbd61695e8dc42013}{DS1306\_ALARM1}, buf, \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a2cb762248a1d5d4f93dace4ad64e2181}{DS1306\_SIZE\_ALARM});
+347         \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7e9452fbddf718d42af6a5983e36d1dd}{DS1306\_decodeAlarmPacket}(buf, time);
+348     \}
+349 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a0daa1c427fcab8f1cbfde3bd60a3ccd8}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-get\-Alarm\-Both\-Enabled@{D\-S1306\-\_\-get\-Alarm\-Both\-Enabled}}
+\index{D\-S1306\-\_\-get\-Alarm\-Both\-Enabled@{D\-S1306\-\_\-get\-Alarm\-Both\-Enabled}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-get\-Alarm\-Both\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-get\-Alarm\-Both\-Enabled (
+\begin{DoxyParamCaption}
+\item[{{\bf B\-O\-O\-L} $\ast$}]{enabled1, }
+\item[{{\bf B\-O\-O\-L} $\ast$}]{enabled2}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a0daa1c427fcab8f1cbfde3bd60a3ccd8}
+
+
+Definition at line 391 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+392 \{
+393     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} cr = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR});
+394     *enabled1 = (cr & 0x01) ? \textcolor{keyword}{true} : \textcolor{keyword}{false};
+395     *enabled2 = (cr & 0x01) ? \textcolor{keyword}{true} : \textcolor{keyword}{false};
+396 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a0f189b41ea1d321e25fcb7805d90d568}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-get\-Alarm\-Both\-State@{D\-S1306\-\_\-get\-Alarm\-Both\-State}}
+\index{D\-S1306\-\_\-get\-Alarm\-Both\-State@{D\-S1306\-\_\-get\-Alarm\-Both\-State}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-get\-Alarm\-Both\-State}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-get\-Alarm\-Both\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf B\-O\-O\-L} $\ast$}]{state1, }
+\item[{{\bf B\-O\-O\-L} $\ast$}]{state2}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a0f189b41ea1d321e25fcb7805d90d568}
+
+
+Definition at line 361 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+362 \{
+363     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} sr = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a267eb4035179b3b49864333d6189be15}{DS1306\_SR});
+364     *state1 = (sr & 0x01) ? \textcolor{keyword}{true} : \textcolor{keyword}{false};
+365     *state2 = (sr & 0x02) ? \textcolor{keyword}{true} : \textcolor{keyword}{false};
+366 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a39927c06f54183c01c4cf1e84d3cff77}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-get\-Alarm\-Enabled@{D\-S1306\-\_\-get\-Alarm\-Enabled}}
+\index{D\-S1306\-\_\-get\-Alarm\-Enabled@{D\-S1306\-\_\-get\-Alarm\-Enabled}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-get\-Alarm\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} D\-S1306\-\_\-get\-Alarm\-Enabled (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{alarm}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a39927c06f54183c01c4cf1e84d3cff77}
+
+
+Definition at line 384 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+385 \{
+386     \textcolor{keywordflow}{if} (alarm > 1) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+387     \textcolor{keywordflow}{return}((\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}) & (1 << alarm)) ? \textcolor{keyword}{true} : \textcolor{keyword}{false});
+388 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_abbbca23e340bfbdc2034f1849765a4e8}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-get\-Alarm\-State@{D\-S1306\-\_\-get\-Alarm\-State}}
+\index{D\-S1306\-\_\-get\-Alarm\-State@{D\-S1306\-\_\-get\-Alarm\-State}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-get\-Alarm\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} D\-S1306\-\_\-get\-Alarm\-State (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{alarm}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_abbbca23e340bfbdc2034f1849765a4e8}
+
+
+Definition at line 353 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+354 \{
+355     \textcolor{keywordflow}{if} (alarm > 1) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+356     \textcolor{keywordflow}{return} ((\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a267eb4035179b3b49864333d6189be15}{DS1306\_SR}) & (1 << alarm)) ? \textcolor{keyword}{true} : \textcolor{keyword}{false});
+357 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a0ee5ddc9cf628c1ea418fb4fd385c328}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-get\-Time@{D\-S1306\-\_\-get\-Time}}
+\index{D\-S1306\-\_\-get\-Time@{D\-S1306\-\_\-get\-Time}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-get\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-get\-Time (
+\begin{DoxyParamCaption}
+\item[{{\bf ds1306time} $\ast$}]{time}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a0ee5ddc9cf628c1ea418fb4fd385c328}
+
+
+Definition at line 313 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+314 \{
+315     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_aff0e53e17bff61ac34bd522cd1d030c3}{DS1306\_SIZE\_DATETIME}];
+316 
+317     memset((\_\_data *)time, 0, \textcolor{keyword}{sizeof}(\hyperlink{structds1306time}{ds1306time}));
+318 
+319     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a6bf6d454e97cad24ec8ef24419e4b71c}{DS1306\_readn}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a833deed002e91eea7ec4797517be17f6}{DS1306\_DATETIME}, buf, 
+      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_aff0e53e17bff61ac34bd522cd1d030c3}{DS1306\_SIZE\_DATETIME});
+320     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad0a7583dd481ee6913649e1e53a9de53}{DS1306\_decodeTimePacket}(buf, time);
+321 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a2f49d2d7e8200eb9c730fb20530ccc64}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-get\-Trickle\-Charge\-State@{D\-S1306\-\_\-get\-Trickle\-Charge\-State}}
+\index{D\-S1306\-\_\-get\-Trickle\-Charge\-State@{D\-S1306\-\_\-get\-Trickle\-Charge\-State}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-get\-Trickle\-Charge\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} D\-S1306\-\_\-get\-Trickle\-Charge\-State (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{num\-Diodes, }
+\item[{unsigned char $\ast$}]{k\-Res}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a2f49d2d7e8200eb9c730fb20530ccc64}
+
+
+Definition at line 456 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+457 \{
+458     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} b;
+459     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a6bf6d454e97cad24ec8ef24419e4b71c}{DS1306\_readn}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_af069324c637f225b68cb9cb136dc8de6}{DS1306\_TCR}, &b, 1);
+460 
+461     *numDiodes = 0;
+462     *kRes = 0;
+463 
+464     \textcolor{keywordflow}{if} ((b & 0xF0) != 0xA0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};   \textcolor{comment}{// TCR disabled}
+465 
+466     \textcolor{keywordflow}{switch}(b & 0x03) \{
+467         \textcolor{keywordflow}{case} 0x01   :   *kRes = 2; \textcolor{keywordflow}{break};
+468         \textcolor{keywordflow}{case} 0x02   :   *kRes = 4; \textcolor{keywordflow}{break};
+469         \textcolor{keywordflow}{case} 0x03   :   *kRes = 8; \textcolor{keywordflow}{break};
+470         \textcolor{keywordflow}{default}     :   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+471     \}
+472 
+473     \textcolor{comment}{// TCR is enabled if we got this far}
+474     *numDiodes = (b & 0x0C) >> 2;
+475 
+476     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+477 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a7b3ea600b49d92a591b286eced790b8d}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-\-Hours24@{D\-S1306\-\_\-\-Hours24}}
+\index{D\-S1306\-\_\-\-Hours24@{D\-S1306\-\_\-\-Hours24}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-\-Hours24}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-\-Hours24 (
+\begin{DoxyParamCaption}
+\item[{{\bf B\-O\-O\-L}}]{Hours24}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a7b3ea600b49d92a591b286eced790b8d}
+
+
+Definition at line 80 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+81 \{
+82  \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a822a373949e731546e580e84c2ee8bf3}{DS1306\_writeHours24} = Hours24;
+83 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a71900193f78aa17b6b5f35f717efdc4a}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-init@{D\-S1306\-\_\-init}}
+\index{D\-S1306\-\_\-init@{D\-S1306\-\_\-init}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Local\-S\-P\-I, }
+\item[{{\bf u8}}]{Lo\-C\-E, }
+\item[{{\bf u8}}]{Lo\-S\-C\-K, }
+\item[{{\bf u8}}]{Lo\-S\-D\-O, }
+\item[{{\bf u8}}]{Lo\-S\-D\-I}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a71900193f78aa17b6b5f35f717efdc4a}
+
+
+Definition at line 36 of file D\-S1306.\-c.
+
+
+
+References S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-C\-P\-H\-A, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-C\-P\-O\-L, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Delayu\-S, digitalwrite(), D\-S1306\-\_\-\-C\-E, D\-S1306\-\_\-\-C\-R, D\-S1306\-\_\-\-C\-R\-\_\-\-W\-P, D\-S1306\-\_\-\-Local\-S\-P\-I, D\-S1306\-\_\-read(), D\-S1306\-\_\-write(), F\-A\-L\-S\-E, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-C\-K, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-D\-I, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-D\-O, L\-O\-W, O\-U\-T\-P\-U\-T, pinmode(), S\-P\-I\-\_\-begin(), S\-P\-I\-Loc\-\_\-\-Init(), and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+37 \{
+38     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} cr;
+39     \textcolor{comment}{// Initialize SPI Bus}
+40 
+41   \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7b425f2a6cdfa30ba631e11c6cd3418a}{DS1306\_CE} = LoCE;
+42   \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a2d84c66e014672f34a21eb9eb75253ed}{DS1306\_LocalSPI} = LocalSPI;
+43 
+44     \textcolor{comment}{// Initialize the chip enable, LOW}
+45     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7b425f2a6cdfa30ba631e11c6cd3418a}{DS1306\_CE}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+46     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7b425f2a6cdfa30ba631e11c6cd3418a}{DS1306\_CE}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+47   
+48   
+49   \textcolor{keywordflow}{switch} (\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a2d84c66e014672f34a21eb9eb75253ed}{DS1306\_LocalSPI})
+50    \{
+51     \textcolor{keywordflow}{case} 0:
+52      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{DS1306\_SPILoc}.\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL} = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};    \textcolor{comment}{// Clock Polarity}
+53      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{DS1306\_SPILoc}.\hyperlink{struct_s_p_i___loc___conf_a0da4526584e290b715aea1513ff8f871}{CPHA} = \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};    \textcolor{comment}{// Sample position}
+54      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{DS1306\_SPILoc}.\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS} = 0;    \textcolor{comment}{// Delay Clock uS}
+55      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{DS1306\_SPILoc}.\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK} = LoSCK;
+56      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{DS1306\_SPILoc}.\hyperlink{struct_s_p_i___loc___conf_ae80c6ce5d0950d1d6b0aa4d7b61c7145}{LoSDO} = LoSDO;
+57      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{DS1306\_SPILoc}.\hyperlink{struct_s_p_i___loc___conf_a77b28d687f22c34e34410af4b2f6fe94}{LoSDI} = LoSDI;
+58      \hyperlink{spiloc_8c_acdfb0b4fdad3d201ebf24ccea4fafe54}{SPILoc\_Init} (&\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{DS1306\_SPILoc});
+59     \textcolor{keywordflow}{break};
+60     \textcolor{keywordflow}{case} 1:
+61     \textcolor{keywordflow}{case} 2:
+62      \hyperlink{p8_2pinguino_2core_2spi_8c_af78b8e02699943b5766d9e0cbbce33f9}{SPI\_begin}();
+63      \textcolor{keywordflow}{break};
+64    \}
+65 
+66 
+67     \textcolor{comment}{// digitalread control register}
+68     cr = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR});
+69 
+70     \textcolor{comment}{// Rewrite control register, disabling write protect}
+71     \textcolor{comment}{// disabling write protect}
+72     cr = cr & ~ (1 << \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a93b520aeb5aaa3ccb8fc290987f92502}{DS1306\_CR\_WP});
+73     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}{DS1306\_write}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}, cr);
+74 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a56e43c4e6b0366b303953959ba4878a6}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-is\-Write\-Protected@{D\-S1306\-\_\-is\-Write\-Protected}}
+\index{D\-S1306\-\_\-is\-Write\-Protected@{D\-S1306\-\_\-is\-Write\-Protected}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-is\-Write\-Protected}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} D\-S1306\-\_\-is\-Write\-Protected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a56e43c4e6b0366b303953959ba4878a6}
+
+
+Definition at line 507 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+508 \{
+509     \textcolor{keywordflow}{return} ((\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}) & (1 << \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a93b520aeb5aaa3ccb8fc290987f92502}{DS1306\_CR\_WP})) ? \textcolor{keyword}{true} : \textcolor{keyword}{false});
+510 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-read@{D\-S1306\-\_\-read}}
+\index{D\-S1306\-\_\-read@{D\-S1306\-\_\-read}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char D\-S1306\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{address}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}
+
+
+Definition at line 127 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-clear\-Alarm\-State(), D\-S1306\-\_\-disable\-Alarm(), D\-S1306\-\_\-disable\-Both\-Alarms(), D\-S1306\-\_\-enable\-Alarm(), D\-S1306\-\_\-enable\-Both\-Alarms(), D\-S1306\-\_\-get1\-Hz\-State(), D\-S1306\-\_\-get\-Alarm\-Both\-Enabled(), D\-S1306\-\_\-get\-Alarm\-Both\-State(), D\-S1306\-\_\-get\-Alarm\-Enabled(), D\-S1306\-\_\-get\-Alarm\-State(), D\-S1306\-\_\-init(), D\-S1306\-\_\-\-Init(), D\-S1306\-\_\-is\-Write\-Protected(), D\-S1306\-\_\-set1\-Hz\-State(), and D\-S1306\-\_\-set\-Write\-Protection().
+
+
+\begin{DoxyCode}
+128 \{
+129     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf;
+130     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a6bf6d454e97cad24ec8ef24419e4b71c}{DS1306\_readn}(address, &buf, 1);
+131     \textcolor{keywordflow}{return} buf;
+132 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a6bf6d454e97cad24ec8ef24419e4b71c}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-readn@{D\-S1306\-\_\-readn}}
+\index{D\-S1306\-\_\-readn@{D\-S1306\-\_\-readn}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-readn}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-readn (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{address, }
+\item[{unsigned char $\ast$}]{data, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a6bf6d454e97cad24ec8ef24419e4b71c}
+
+
+Definition at line 100 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-get\-Alarm(), D\-S1306\-\_\-get\-Time(), D\-S1306\-\_\-get\-Trickle\-Charge\-State(), D\-S1306\-\_\-read(), and D\-S1306\-\_\-read\-User().
+
+
+\begin{DoxyCode}
+101 \{
+102  \textcolor{keywordtype}{int} i;
+103 
+104     \textcolor{comment}{// Select the DS1306 by raising it's chip enable line}
+105     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7b425f2a6cdfa30ba631e11c6cd3418a}{DS1306\_CE}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+106 
+107  \textcolor{keywordflow}{switch} (\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a2d84c66e014672f34a21eb9eb75253ed}{DS1306\_LocalSPI})
+108   \{
+109    \textcolor{keywordflow}{case} 0:
+110     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{DS1306\_SPILoc}, address);
+111      \textcolor{keywordflow}{for} (i = 0; i < len; i++)
+112      data[i] = \hyperlink{spiloc_8c_aca6cc1c0a152033fa91fb706b8b294ed}{SPILoc\_Read}(&\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{DS1306\_SPILoc});
+113     \textcolor{keywordflow}{break};
+114    \textcolor{keywordflow}{case} 1:
+115    \textcolor{keywordflow}{case} 2:
+116     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(address);
+117      \textcolor{keywordflow}{for} (i = 0; i < len; i++)
+118      data[i] = \hyperlink{p8_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{SPI\_read}();
+119     \textcolor{keywordflow}{break};
+120   \}
+121 
+122  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7b425f2a6cdfa30ba631e11c6cd3418a}{DS1306\_CE}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+123 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a234696d5efda0cf7cdeb5dfb0f88cf45}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-read\-User@{D\-S1306\-\_\-read\-User}}
+\index{D\-S1306\-\_\-read\-User@{D\-S1306\-\_\-read\-User}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-read\-User}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} D\-S1306\-\_\-read\-User (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{addr, }
+\item[{char $\ast$}]{buf, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a234696d5efda0cf7cdeb5dfb0f88cf45}
+
+
+Definition at line 495 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+496 \{
+497     memset((\_\_data *)buf, 0, num);
+498     \textcolor{keywordflow}{if} (addr >= \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_addc0758916afd1bd82562305e85507ec}{DS1306\_USER\_START} && addr < \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6dfca58e5d932297340da0a3c38756c4}{DS1306\_USER\_END} && (addr + num 
+      - 1) <= \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6dfca58e5d932297340da0a3c38756c4}{DS1306\_USER\_END}) \{
+499         \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a6bf6d454e97cad24ec8ef24419e4b71c}{DS1306\_readn}(addr, (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *) buf, num);
+500         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+501     \} \textcolor{keywordflow}{else} \{
+502         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+503     \}
+504 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_ac20e84187b78d0c6cb077a721e33abd2}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-set1\-Hz\-State@{D\-S1306\-\_\-set1\-Hz\-State}}
+\index{D\-S1306\-\_\-set1\-Hz\-State@{D\-S1306\-\_\-set1\-Hz\-State}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-set1\-Hz\-State}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-set1\-Hz\-State (
+\begin{DoxyParamCaption}
+\item[{{\bf B\-O\-O\-L}}]{enabled}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_ac20e84187b78d0c6cb077a721e33abd2}
+
+
+Definition at line 532 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+533 \{
+534     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} cr = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR});
+535     \textcolor{keywordflow}{if} (enabled) \{
+536         cr |= (1 << \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_aa9e2318177e79d05abde570b5aa47e3a}{DS1306\_CR\_1HZ});
+537     \} \textcolor{keywordflow}{else} \{
+538         cr &= ~ (1 << \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_aa9e2318177e79d05abde570b5aa47e3a}{DS1306\_CR\_1HZ});
+539     \}
+540     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}{DS1306\_write}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}, cr);
+541 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_aa2177d9bc41abe9843ba6fc6da49a6d5}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-set\-Alarm@{D\-S1306\-\_\-set\-Alarm}}
+\index{D\-S1306\-\_\-set\-Alarm@{D\-S1306\-\_\-set\-Alarm}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-set\-Alarm}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-set\-Alarm (
+\begin{DoxyParamCaption}
+\item[{int}]{alarm, }
+\item[{const {\bf ds1306alarm} $\ast$}]{time}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_aa2177d9bc41abe9843ba6fc6da49a6d5}
+
+
+Definition at line 327 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+328 \{
+329     \textcolor{keywordflow}{if} (alarm < 2) \{
+330         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a2cb762248a1d5d4f93dace4ad64e2181}{DS1306\_SIZE\_ALARM}];
+331         \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a52e948bc17392110069ddc56a99f0b5a}{DS1306\_encodeAlarmPacket}(buf, time);
+332         \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_aa7fa43cb5f456e894f8ccab4621136a3}{DS1306\_writen}(alarm == 0 ? \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_aec74d165ae7692cd8e6cf323d43bacd1}{DS1306\_ALARM0} : 
+      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a291825f487c51b9cbd61695e8dc42013}{DS1306\_ALARM1}, buf, \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a2cb762248a1d5d4f93dace4ad64e2181}{DS1306\_SIZE\_ALARM});
+333     \}
+334 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_afc8d158bbec6030b80d57940d03a6fb6}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-set\-Time@{D\-S1306\-\_\-set\-Time}}
+\index{D\-S1306\-\_\-set\-Time@{D\-S1306\-\_\-set\-Time}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-set\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-set\-Time (
+\begin{DoxyParamCaption}
+\item[{const {\bf ds1306time} $\ast$}]{time}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_afc8d158bbec6030b80d57940d03a6fb6}
+
+
+Definition at line 89 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+90 \{
+91     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_aff0e53e17bff61ac34bd522cd1d030c3}{DS1306\_SIZE\_DATETIME}];
+92     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a3dacab7d9a51fee36f849f5880f5c108}{DS1306\_encodeTimePacket}(buf, time);
+93     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_aa7fa43cb5f456e894f8ccab4621136a3}{DS1306\_writen}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a833deed002e91eea7ec4797517be17f6}{DS1306\_DATETIME}, buf, 
+      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_aff0e53e17bff61ac34bd522cd1d030c3}{DS1306\_SIZE\_DATETIME});
+94 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_af834baa6ba4c2ac9f1b87e5437dac9d9}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-set\-Write\-Protection@{D\-S1306\-\_\-set\-Write\-Protection}}
+\index{D\-S1306\-\_\-set\-Write\-Protection@{D\-S1306\-\_\-set\-Write\-Protection}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-set\-Write\-Protection}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-set\-Write\-Protection (
+\begin{DoxyParamCaption}
+\item[{{\bf B\-O\-O\-L}}]{on}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_af834baa6ba4c2ac9f1b87e5437dac9d9}
+
+
+Definition at line 513 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+514 \{
+515     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} cr = \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a580cc22fef6990168c52f28b9b040533}{DS1306\_read}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR});
+516     \textcolor{keywordflow}{if} (on) \{
+517         cr |= (1 << \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a93b520aeb5aaa3ccb8fc290987f92502}{DS1306\_CR\_WP});
+518     \} \textcolor{keywordflow}{else} \{
+519         cr &= ~ (1 << \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a93b520aeb5aaa3ccb8fc290987f92502}{DS1306\_CR\_WP});
+520     \}
+521     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}{DS1306\_write}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6a3aadec40a876a70f31f3c5868b6503}{DS1306\_CR}, cr);
+522 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-write@{D\-S1306\-\_\-write}}
+\index{D\-S1306\-\_\-write@{D\-S1306\-\_\-write}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{address, }
+\item[{const unsigned char}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_ad1b2d41967e84285528b8408e9bc2143}
+
+
+Definition at line 160 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-clear\-Alarm\-Both\-State(), D\-S1306\-\_\-clear\-Alarm\-State(), D\-S1306\-\_\-disable\-Alarm(), D\-S1306\-\_\-disable\-Both\-Alarms(), D\-S1306\-\_\-enable\-Alarm(), D\-S1306\-\_\-enable\-Both\-Alarms(), D\-S1306\-\_\-init(), D\-S1306\-\_\-\-Init(), D\-S1306\-\_\-set1\-Hz\-State(), and D\-S1306\-\_\-set\-Write\-Protection().
+
+
+\begin{DoxyCode}
+161 \{
+162     \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_aa7fa43cb5f456e894f8ccab4621136a3}{DS1306\_writen}(address, &value, 1);
+163 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_aa7fa43cb5f456e894f8ccab4621136a3}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-writen@{D\-S1306\-\_\-writen}}
+\index{D\-S1306\-\_\-writen@{D\-S1306\-\_\-writen}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-writen}]{\setlength{\rightskip}{0pt plus 5cm}void D\-S1306\-\_\-writen (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{address, }
+\item[{const unsigned char $\ast$}]{data, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_aa7fa43cb5f456e894f8ccab4621136a3}
+
+
+Definition at line 136 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-disable\-Trickle\-Charge(), D\-S1306\-\_\-enable\-Trickle\-Charge(), D\-S1306\-\_\-set\-Alarm(), D\-S1306\-\_\-set\-Time(), D\-S1306\-\_\-write(), and D\-S1306\-\_\-write\-User().
+
+
+\begin{DoxyCode}
+137 \{
+138  \textcolor{keywordtype}{int} i;
+139 
+140     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7b425f2a6cdfa30ba631e11c6cd3418a}{DS1306\_CE}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+141  \textcolor{keywordflow}{switch} (\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a2d84c66e014672f34a21eb9eb75253ed}{DS1306\_LocalSPI})
+142   \{
+143    \textcolor{keywordflow}{case} 0:
+144     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{DS1306\_SPILoc}, address | 
+      \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a0fd651442f5eb593145f86de15a92d67}{DS1306\_WRITE\_OFFSET});
+145     \textcolor{keywordflow}{for} (i = 0; i < len; i++)
+146      \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{DS1306\_SPILoc}, data[i]);
+147     \textcolor{keywordflow}{break};
+148    \textcolor{keywordflow}{case} 1:
+149    \textcolor{keywordflow}{case} 2:
+150     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(address | \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a0fd651442f5eb593145f86de15a92d67}{DS1306\_WRITE\_OFFSET});
+151     \textcolor{keywordflow}{for} (i = 0; i < len; i++)
+152      \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(data[i]);
+153     \textcolor{keywordflow}{break};
+154   \}
+155     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_a7b425f2a6cdfa30ba631e11c6cd3418a}{DS1306\_CE}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+156 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a7a72e8b8075ad986d11b6607e0dfacfe}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-write\-User@{D\-S1306\-\_\-write\-User}}
+\index{D\-S1306\-\_\-write\-User@{D\-S1306\-\_\-write\-User}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-write\-User}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} D\-S1306\-\_\-write\-User (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{addr, }
+\item[{const char $\ast$}]{buf, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a7a72e8b8075ad986d11b6607e0dfacfe}
+
+
+Definition at line 482 of file D\-S1306.\-c.
+
+
+\begin{DoxyCode}
+483 \{
+484     \textcolor{keywordflow}{if} (addr >= \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_addc0758916afd1bd82562305e85507ec}{DS1306\_USER\_START} && addr < \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6dfca58e5d932297340da0a3c38756c4}{DS1306\_USER\_END} && (addr + num 
+      - 1) <= \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8h_a6dfca58e5d932297340da0a3c38756c4}{DS1306\_USER\_END}) \{
+485         \hyperlink{p8_2pinguino_2libraries_2_d_s1306_8c_aa7fa43cb5f456e894f8ccab4621136a3}{DS1306\_writen}(addr, (\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *) buf, num);
+486         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+487     \} \textcolor{keywordflow}{else} \{
+488         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+489     \}
+490 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a7b425f2a6cdfa30ba631e11c6cd3418a}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-\-C\-E@{D\-S1306\-\_\-\-C\-E}}
+\index{D\-S1306\-\_\-\-C\-E@{D\-S1306\-\_\-\-C\-E}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} D\-S1306\-\_\-\-C\-E}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a7b425f2a6cdfa30ba631e11c6cd3418a}
+
+
+Definition at line 30 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-init(), D\-S1306\-\_\-\-Init(), D\-S1306\-\_\-readn(), and D\-S1306\-\_\-writen().
+
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a2d84c66e014672f34a21eb9eb75253ed}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-\-Local\-S\-P\-I@{D\-S1306\-\_\-\-Local\-S\-P\-I}}
+\index{D\-S1306\-\_\-\-Local\-S\-P\-I@{D\-S1306\-\_\-\-Local\-S\-P\-I}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-\-Local\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} D\-S1306\-\_\-\-Local\-S\-P\-I}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a2d84c66e014672f34a21eb9eb75253ed}
+
+
+Definition at line 32 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-init(), D\-S1306\-\_\-\-Init(), D\-S1306\-\_\-readn(), and D\-S1306\-\_\-writen().
+
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-\-S\-P\-I\-Loc@{D\-S1306\-\_\-\-S\-P\-I\-Loc}}
+\index{D\-S1306\-\_\-\-S\-P\-I\-Loc@{D\-S1306\-\_\-\-S\-P\-I\-Loc}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-\-S\-P\-I\-Loc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-P\-I\-\_\-\-Loc\-\_\-\-Conf} D\-S1306\-\_\-\-S\-P\-I\-Loc}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a92a6c20a7c6e1e3e82fc1e6b85693563}
+
+
+Definition at line 28 of file D\-S1306.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2_d_s1306_8c_a822a373949e731546e580e84c2ee8bf3}{\index{p8/pinguino/libraries/\-D\-S1306.\-c@{p8/pinguino/libraries/\-D\-S1306.\-c}!D\-S1306\-\_\-write\-Hours24@{D\-S1306\-\_\-write\-Hours24}}
+\index{D\-S1306\-\_\-write\-Hours24@{D\-S1306\-\_\-write\-Hours24}!p8/pinguino/libraries/DS1306.c@{p8/pinguino/libraries/\-D\-S1306.\-c}}
+\subsubsection[{D\-S1306\-\_\-write\-Hours24}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} D\-S1306\-\_\-write\-Hours24 = {\bf T\-R\-U\-E}}}\label{p8_2pinguino_2libraries_2_d_s1306_8c_a822a373949e731546e580e84c2ee8bf3}
+
+
+Definition at line 31 of file D\-S1306.\-c.
+
+
+
+Referenced by D\-S1306\-\_\-encode\-Hour\-Byte(), and D\-S1306\-\_\-\-Hours24().
+

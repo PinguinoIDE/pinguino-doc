@@ -1,0 +1,1365 @@
+\hypertarget{_m_c_p23_s17_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-M\-C\-P23\-S17.c File Reference}
+\label{_m_c_p23_s17_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-M\-C\-P23\-S17.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-M\-C\-P23\-S17.\-c}}
+}
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$spi.\-c$>$}\\*
+{\ttfamily \#include $<$Spi\-Loc.\-c$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{uniontag_m_c_p23_s17_u}{tag\-M\-C\-P23\-S17\-U}
+\item 
+struct \hyperlink{structtag_m_c_p23_s17}{tag\-M\-C\-P23\-S17}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a62f845d4c307e93085428eb5a365e4ff}{\-\_\-\-M\-C\-P23\-S17\-\_\-\-H\-\_\-}
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S}~0x20
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_aca5fa8cb6da6adab283ad8bea0efa3ed}{M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-A}~0x00
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_ad73066e680d6a186d5039e64ebe00ca8}{M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-A}~0x02
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a032aed699d5ebc768ce2a0d2b5935d89}{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-A}~0x04
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_affe14dee2e2648091b4f8cb43ead579c}{M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-A}~0x06
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a192ed98a9f57dc2466ed40e02e21af02}{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-A}~0x08
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a1057392331b552e2760a1817257b452b}{M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-A}~0x0\-A
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_ae509034e3226c936ff60bd454f904d11}{M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-A}~0x0\-C
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a504f5632a22fafa4fce8744cf88fd8fa}{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-A}~0x0\-E
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_af4203c48093683595001d63625482b28}{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-A}~0x10
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_aa028b08eab678f06e6617c9ca8d16df6}{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A}~0x12
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a2af9ac39265433702936685b55495355}{M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-A}~0x14
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a49ce0b4b7ec644ff02c04993ffa79e9c}{M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-B}~0x01
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_abf40c7be6a1bf892d4b6bea955b64e57}{M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-B}~0x03
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a8017f94bc97f0aa9b166dc7bd1536fa2}{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-B}~0x05
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a3acb51de02518385b38729cf3fc91500}{M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-B}~0x07
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_abd7744fe8d9e11ad08fc21b03e0a465e}{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-B}~0x09
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a86a6a83c50141729daf97193367c1efe}{M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-B}~0x0\-B
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a22bcc92e20b989559171d2f651dc67ab}{M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-B}~0x0\-D
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_ae167024a162948e5f9f00e6467720b67}{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-B}~0x0\-F
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_aa40b3cac3b63a695d3c495acffcf02e5}{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-B}~0x11
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a34adaf6cd1cd045914ba283bd7f7da8e}{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-B}~0x13
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a9bccb41d9e5b4765de2355f6adc5efef}{M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-B}~0x15
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_acfb1609414ef474816a74c3cdc7725b2}{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-Not\-Use}~1
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a719500bc9d438adbf81bfff5eb301c81}{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-I\-N\-T\-P\-O\-L}~2
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a5136790fdd6dcccd34b0e136527ed868}{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-O\-D\-R}~4
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a313b46673acdf6162701075521bb9ea3}{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-H\-A\-E\-N}~8
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_abc66b3b05f673ae785e47752d27f9ddb}{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-D\-I\-S\-S\-L\-W}~16
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a202f8eea41a4bb174fd28d4643d6dc9f}{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-S\-E\-Q\-O\-P}~32
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a0ec5c5d357dbe9cbe661bab507cf544a}{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-M\-I\-R\-R\-O\-R}~64
+\item 
+\#define \hyperlink{_m_c_p23_s17_8c_a6042e240b5fbbb38ddeed43715dec21f}{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-B\-A\-N\-K}~128
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef union \hyperlink{uniontag_m_c_p23_s17_u}{tag\-M\-C\-P23\-S17\-U} \hyperlink{_m_c_p23_s17_8c_a9474470a2cd5a5b80338162b06e6ef38}{M\-C\-P23\-S17\-U}
+\item 
+typedef struct \hyperlink{structtag_m_c_p23_s17}{tag\-M\-C\-P23\-S17} \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{M\-C\-P23\-S17\-\_\-write\-\_\-\-B} (\hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Addr, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Val)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a59039ae587ece82458ac3b9a646c8292}{M\-C\-P23\-S17\-\_\-write\-\_\-\-W} (\hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Addr, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} Val)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a991e96aad5aaee8f5798559eca8e0547}{M\-C\-P23\-S17\-\_\-write\-\_\-\-A} (\hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Addr, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} Len, char $\ast$Val)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a998ed2d9feb5ae95303504a6a165a1d1}{M\-C\-P23\-S17\-\_\-read\-\_\-\-B} (\hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Addr, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$Val)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_af33f68dbc3b0dea325710ff7f9570b6f}{M\-C\-P23\-S17\-\_\-read\-\_\-\-W} (\hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Addr, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} $\ast$Val)
+\item 
+void \hyperlink{_m_c_p23_s17_8c_aee0bd863a05251e3e80c751064f4ff92}{M\-C\-P23\-S17\-\_\-read\-\_\-\-A} (\hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Addr, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Len, char $\ast$Val)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a937db22556cb6cfc560c9e17693c34dc}{M\-C\-P23\-S17\-\_\-init} (\hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} S\-P\-I\-Addr, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} C\-S\-Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} Use\-Int\-Add, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} S\-P\-I\-Channel, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Lo\-S\-C\-K, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Lo\-S\-D\-O, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Lo\-S\-D\-I)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a293ca7f9ffb7063cc6405d778468446e}{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a1f3388b0497f19a80d2935ad5cdabd21}{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-B} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_ab6b41751134ad568b4cbfd2d58fe997e}{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A\-B} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} $\ast$Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a75ce3f647a51ab45bf4d038be19fda6b}{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a3477e8ed1bb7e8011becb151df5ee27b}{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-B} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a828c8918ea26807836ad9f18c16519e4}{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A\-B} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_aa792f30dda9e39b8157150eb0c295967}{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_ad004d5f1d6ca41905721877f0b4368c5}{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-B} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a6eedbde985691e8b807cd517a6c78beb}{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A\-B} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_ae05c75abca09e5386d60aae3af5a228b}{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a064beb5411f517e29ce3e87c5b6fb08b}{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-B} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_add057dc596d749f826468015e7622ea7}{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A\-B} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_ab34fd60d1d2e7556ed34d8418e78b0a7}{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a9fece2e7399a1a41b246e2bdcb5e587c}{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-B} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a3119a8a10ede80178c866f1656b34a7c}{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A\-B} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} Val, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_m_c_p23_s17_8c_ac6147ea88d309641c627d2dfde279097}{M\-C\-P23\-S17\-\_\-digital\-Read} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Pin, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a807673458f5ff5f3a602bec80db42e8e}{M\-C\-P23\-S17\-\_\-pin\-Mode} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Out\-In, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_ad13cd639c2e2099a812d6a483ab22f85}{M\-C\-P23\-S17\-\_\-pull\-Up} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} S\-Pull, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_adcb7b4a79b0eb22af6a29efad969b5f9}{M\-C\-P23\-S17\-\_\-input\-Pol} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} S\-In\-Pol, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p23_s17_8c_a47217524765da43218d67c3f75247666}{M\-C\-P23\-S17\-\_\-digital\-Write} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} S\-Out, \hyperlink{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{M\-C\-P23\-S17} $\ast$Mcp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_m_c_p23_s17_8c_a62f845d4c307e93085428eb5a365e4ff}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!\-\_\-\-M\-C\-P23\-S17\-\_\-\-H\-\_\-@{\-\_\-\-M\-C\-P23\-S17\-\_\-\-H\-\_\-}}
+\index{\-\_\-\-M\-C\-P23\-S17\-\_\-\-H\-\_\-@{\-\_\-\-M\-C\-P23\-S17\-\_\-\-H\-\_\-}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{\-\_\-\-M\-C\-P23\-S17\-\_\-\-H\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-M\-C\-P23\-S17\-\_\-\-H\-\_\-}}\label{_m_c_p23_s17_8c_a62f845d4c307e93085428eb5a365e4ff}
+
+
+Definition at line 18 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S@{M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S}}
+\index{M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S@{M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S~0x20}}\label{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}
+
+
+Definition at line 25 of file M\-C\-P23\-S17.\-c.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-read\-\_\-\-A(), M\-C\-P23\-S17\-\_\-read\-\_\-\-B(), M\-C\-P23\-S17\-\_\-read\-\_\-\-W(), M\-C\-P23\-S17\-\_\-write\-\_\-\-A(), M\-C\-P23\-S17\-\_\-write\-\_\-\-B(), and M\-C\-P23\-S17\-\_\-write\-\_\-\-W().
+
+\hypertarget{_m_c_p23_s17_8c_a6042e240b5fbbb38ddeed43715dec21f}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-B\-\_\-\-B\-A\-N\-K@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-B\-A\-N\-K}}
+\index{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-B\-A\-N\-K@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-B\-A\-N\-K}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-B\-A\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-B\-\_\-\-B\-A\-N\-K~128}}\label{_m_c_p23_s17_8c_a6042e240b5fbbb38ddeed43715dec21f}
+
+
+Definition at line 84 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_abc66b3b05f673ae785e47752d27f9ddb}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-B\-\_\-\-D\-I\-S\-S\-L\-W@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-D\-I\-S\-S\-L\-W}}
+\index{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-D\-I\-S\-S\-L\-W@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-D\-I\-S\-S\-L\-W}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-D\-I\-S\-S\-L\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-B\-\_\-\-D\-I\-S\-S\-L\-W~16}}\label{_m_c_p23_s17_8c_abc66b3b05f673ae785e47752d27f9ddb}
+
+
+Definition at line 72 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a313b46673acdf6162701075521bb9ea3}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-B\-\_\-\-H\-A\-E\-N@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-H\-A\-E\-N}}
+\index{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-H\-A\-E\-N@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-H\-A\-E\-N}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-H\-A\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-B\-\_\-\-H\-A\-E\-N~8}}\label{_m_c_p23_s17_8c_a313b46673acdf6162701075521bb9ea3}
+
+
+Definition at line 68 of file M\-C\-P23\-S17.\-c.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-init().
+
+\hypertarget{_m_c_p23_s17_8c_a719500bc9d438adbf81bfff5eb301c81}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-B\-\_\-\-I\-N\-T\-P\-O\-L@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-I\-N\-T\-P\-O\-L}}
+\index{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-I\-N\-T\-P\-O\-L@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-I\-N\-T\-P\-O\-L}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-I\-N\-T\-P\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-B\-\_\-\-I\-N\-T\-P\-O\-L~2}}\label{_m_c_p23_s17_8c_a719500bc9d438adbf81bfff5eb301c81}
+
+
+Definition at line 60 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a0ec5c5d357dbe9cbe661bab507cf544a}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-B\-\_\-\-M\-I\-R\-R\-O\-R@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-M\-I\-R\-R\-O\-R}}
+\index{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-M\-I\-R\-R\-O\-R@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-M\-I\-R\-R\-O\-R}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-M\-I\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-B\-\_\-\-M\-I\-R\-R\-O\-R~64}}\label{_m_c_p23_s17_8c_a0ec5c5d357dbe9cbe661bab507cf544a}
+
+
+Definition at line 80 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_acfb1609414ef474816a74c3cdc7725b2}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-B\-\_\-\-Not\-Use@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-Not\-Use}}
+\index{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-Not\-Use@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-Not\-Use}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-Not\-Use}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-B\-\_\-\-Not\-Use~1}}\label{_m_c_p23_s17_8c_acfb1609414ef474816a74c3cdc7725b2}
+
+
+Definition at line 56 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a5136790fdd6dcccd34b0e136527ed868}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-B\-\_\-\-O\-D\-R@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-O\-D\-R}}
+\index{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-O\-D\-R@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-O\-D\-R}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-O\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-B\-\_\-\-O\-D\-R~4}}\label{_m_c_p23_s17_8c_a5136790fdd6dcccd34b0e136527ed868}
+
+
+Definition at line 64 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a202f8eea41a4bb174fd28d4643d6dc9f}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-B\-\_\-\-S\-E\-Q\-O\-P@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-S\-E\-Q\-O\-P}}
+\index{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-S\-E\-Q\-O\-P@{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-S\-E\-Q\-O\-P}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-B\-\_\-\-S\-E\-Q\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-B\-\_\-\-S\-E\-Q\-O\-P~32}}\label{_m_c_p23_s17_8c_a202f8eea41a4bb174fd28d4643d6dc9f}
+
+
+Definition at line 76 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_affe14dee2e2648091b4f8cb43ead579c}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-A@{M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-A}}
+\index{M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-A@{M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-A~0x06}}\label{_m_c_p23_s17_8c_affe14dee2e2648091b4f8cb43ead579c}
+
+
+Definition at line 30 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a3acb51de02518385b38729cf3fc91500}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-B@{M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-B}}
+\index{M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-B@{M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-D\-E\-F\-V\-A\-L\-B~0x07}}\label{_m_c_p23_s17_8c_a3acb51de02518385b38729cf3fc91500}
+
+
+Definition at line 43 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a032aed699d5ebc768ce2a0d2b5935d89}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-A@{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-A}}
+\index{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-A@{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-A~0x04}}\label{_m_c_p23_s17_8c_a032aed699d5ebc768ce2a0d2b5935d89}
+
+
+Definition at line 29 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a8017f94bc97f0aa9b166dc7bd1536fa2}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-B@{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-B}}
+\index{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-B@{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-G\-P\-I\-N\-T\-E\-N\-B~0x05}}\label{_m_c_p23_s17_8c_a8017f94bc97f0aa9b166dc7bd1536fa2}
+
+
+Definition at line 42 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_aa028b08eab678f06e6617c9ca8d16df6}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A@{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A}}
+\index{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A@{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A~0x12}}\label{_m_c_p23_s17_8c_aa028b08eab678f06e6617c9ca8d16df6}
+
+
+Definition at line 36 of file M\-C\-P23\-S17.\-c.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-digital\-Read(), M\-C\-P23\-S17\-\_\-digital\-Write(), M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A(), M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A\-B(), M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A(), and M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A\-B().
+
+\hypertarget{_m_c_p23_s17_8c_a34adaf6cd1cd045914ba283bd7f7da8e}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-B@{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-B}}
+\index{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-B@{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-B~0x13}}\label{_m_c_p23_s17_8c_a34adaf6cd1cd045914ba283bd7f7da8e}
+
+
+Definition at line 49 of file M\-C\-P23\-S17.\-c.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-digital\-Read(), M\-C\-P23\-S17\-\_\-digital\-Write(), M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-B(), and M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-B().
+
+\hypertarget{_m_c_p23_s17_8c_ae509034e3226c936ff60bd454f904d11}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-A@{M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-A}}
+\index{M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-A@{M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-A~0x0\-C}}\label{_m_c_p23_s17_8c_ae509034e3226c936ff60bd454f904d11}
+
+
+Definition at line 33 of file M\-C\-P23\-S17.\-c.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-pull\-Up(), M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A(), and M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A\-B().
+
+\hypertarget{_m_c_p23_s17_8c_a22bcc92e20b989559171d2f651dc67ab}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-B@{M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-B}}
+\index{M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-B@{M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-B~0x0\-D}}\label{_m_c_p23_s17_8c_a22bcc92e20b989559171d2f651dc67ab}
+
+
+Definition at line 46 of file M\-C\-P23\-S17.\-c.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-pull\-Up(), and M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-B().
+
+\hypertarget{_m_c_p23_s17_8c_af4203c48093683595001d63625482b28}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-A@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-A}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-A@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-A~0x10}}\label{_m_c_p23_s17_8c_af4203c48093683595001d63625482b28}
+
+
+Definition at line 35 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_aa40b3cac3b63a695d3c495acffcf02e5}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-B@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-B}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-B@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-A\-P\-B~0x11}}\label{_m_c_p23_s17_8c_aa40b3cac3b63a695d3c495acffcf02e5}
+
+
+Definition at line 48 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a192ed98a9f57dc2466ed40e02e21af02}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-A@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-A}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-A@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-A~0x08}}\label{_m_c_p23_s17_8c_a192ed98a9f57dc2466ed40e02e21af02}
+
+
+Definition at line 31 of file M\-C\-P23\-S17.\-c.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-init().
+
+\hypertarget{_m_c_p23_s17_8c_abd7744fe8d9e11ad08fc21b03e0a465e}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-B@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-B}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-B@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-B~0x09}}\label{_m_c_p23_s17_8c_abd7744fe8d9e11ad08fc21b03e0a465e}
+
+
+Definition at line 44 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a504f5632a22fafa4fce8744cf88fd8fa}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-A@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-A}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-A@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-A~0x0\-E}}\label{_m_c_p23_s17_8c_a504f5632a22fafa4fce8744cf88fd8fa}
+
+
+Definition at line 34 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_ae167024a162948e5f9f00e6467720b67}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-B@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-B}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-B@{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-N\-T\-F\-B~0x0\-F}}\label{_m_c_p23_s17_8c_ae167024a162948e5f9f00e6467720b67}
+
+
+Definition at line 47 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a1057392331b552e2760a1817257b452b}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-A@{M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-A}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-A@{M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-A~0x0\-A}}\label{_m_c_p23_s17_8c_a1057392331b552e2760a1817257b452b}
+
+
+Definition at line 32 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a86a6a83c50141729daf97193367c1efe}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-B@{M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-B}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-B@{M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-O\-C\-O\-N\-B~0x0\-B}}\label{_m_c_p23_s17_8c_a86a6a83c50141729daf97193367c1efe}
+
+
+Definition at line 45 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_aca5fa8cb6da6adab283ad8bea0efa3ed}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-A@{M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-A}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-A@{M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-A~0x00}}\label{_m_c_p23_s17_8c_aca5fa8cb6da6adab283ad8bea0efa3ed}
+
+
+Definition at line 27 of file M\-C\-P23\-S17.\-c.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-init(), M\-C\-P23\-S17\-\_\-pin\-Mode(), M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A(), and M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A\-B().
+
+\hypertarget{_m_c_p23_s17_8c_a49ce0b4b7ec644ff02c04993ffa79e9c}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-B@{M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-B}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-B@{M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-B~0x01}}\label{_m_c_p23_s17_8c_a49ce0b4b7ec644ff02c04993ffa79e9c}
+
+
+Definition at line 40 of file M\-C\-P23\-S17.\-c.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-pin\-Mode(), and M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-B().
+
+\hypertarget{_m_c_p23_s17_8c_ad73066e680d6a186d5039e64ebe00ca8}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-A@{M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-A}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-A@{M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-A~0x02}}\label{_m_c_p23_s17_8c_ad73066e680d6a186d5039e64ebe00ca8}
+
+
+Definition at line 28 of file M\-C\-P23\-S17.\-c.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-input\-Pol(), M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A(), and M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A\-B().
+
+\hypertarget{_m_c_p23_s17_8c_abf40c7be6a1bf892d4b6bea955b64e57}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-B@{M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-B}}
+\index{M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-B@{M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-B~0x03}}\label{_m_c_p23_s17_8c_abf40c7be6a1bf892d4b6bea955b64e57}
+
+
+Definition at line 41 of file M\-C\-P23\-S17.\-c.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-input\-Pol(), and M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-B().
+
+\hypertarget{_m_c_p23_s17_8c_a2af9ac39265433702936685b55495355}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-A@{M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-A}}
+\index{M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-A@{M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-A~0x14}}\label{_m_c_p23_s17_8c_a2af9ac39265433702936685b55495355}
+
+
+Definition at line 37 of file M\-C\-P23\-S17.\-c.
+
+\hypertarget{_m_c_p23_s17_8c_a9bccb41d9e5b4765de2355f6adc5efef}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-B@{M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-B}}
+\index{M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-B@{M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P23\-S17\-\_\-\-O\-L\-A\-T\-B~0x15}}\label{_m_c_p23_s17_8c_a9bccb41d9e5b4765de2355f6adc5efef}
+
+
+Definition at line 50 of file M\-C\-P23\-S17.\-c.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17@{M\-C\-P23\-S17}}
+\index{M\-C\-P23\-S17@{M\-C\-P23\-S17}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\-M\-C\-P23\-S17}  {\bf M\-C\-P23\-S17}}}\label{_m_c_p23_s17_8c_aada8286ef4e85733ea400a92e6afa55d}
+\hypertarget{_m_c_p23_s17_8c_a9474470a2cd5a5b80338162b06e6ef38}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-U@{M\-C\-P23\-S17\-U}}
+\index{M\-C\-P23\-S17\-U@{M\-C\-P23\-S17\-U}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-U}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf tag\-M\-C\-P23\-S17\-U}  {\bf M\-C\-P23\-S17\-U}}}\label{_m_c_p23_s17_8c_a9474470a2cd5a5b80338162b06e6ef38}
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_c_p23_s17_8c_ac6147ea88d309641c627d2dfde279097}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-digital\-Read@{M\-C\-P23\-S17\-\_\-digital\-Read}}
+\index{M\-C\-P23\-S17\-\_\-digital\-Read@{M\-C\-P23\-S17\-\_\-digital\-Read}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-digital\-Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} M\-C\-P23\-S17\-\_\-digital\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Pin, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_ac6147ea88d309641c627d2dfde279097}
+
+
+Definition at line 682 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, F\-A\-L\-S\-E, tag\-M\-C\-P23\-S17\-::\-G\-I\-N\-P, M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A, M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-B, and M\-C\-P23\-S17\-\_\-read\-\_\-\-B().
+
+
+\begin{DoxyCode}
+683 \{
+684 
+685  Pin--;
+686  \textcolor{keywordflow}{if} (Pin > 15)
+687   \textcolor{keywordflow}{return}(0xFF);
+688  \textcolor{keywordflow}{if} (Pin < 8)
+689   \{
+690    \textcolor{keywordflow}{if} (\hyperlink{_m_c_p23_s17_8c_a998ed2d9feb5ae95303504a6a165a1d1}{MCP23S17\_read\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_aa028b08eab678f06e6617c9ca8d16df6}{MCP23S17\_GPIOA},&(Mcp->
+      \hyperlink{structtag_m_c_p23_s17_a611b6d537907e7d9a6389f430095f879}{GINP}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0])) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+691     \textcolor{keywordflow}{return}(0xFF);
+692    \textcolor{keywordflow}{return} ((Mcp->\hyperlink{structtag_m_c_p23_s17_a611b6d537907e7d9a6389f430095f879}{GINP}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] >> Pin) & 0x1);
+693   \}
+694  \textcolor{keywordflow}{else}
+695   \{
+696    Pin -= 8;
+697    \textcolor{keywordflow}{if} (\hyperlink{_m_c_p23_s17_8c_a998ed2d9feb5ae95303504a6a165a1d1}{MCP23S17\_read\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_a34adaf6cd1cd045914ba283bd7f7da8e}{MCP23S17\_GPIOB},&(Mcp->
+      \hyperlink{structtag_m_c_p23_s17_a611b6d537907e7d9a6389f430095f879}{GINP}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1])) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+698     \textcolor{keywordflow}{return}(0xFF);
+699    \textcolor{keywordflow}{return} ((Mcp->\hyperlink{structtag_m_c_p23_s17_a611b6d537907e7d9a6389f430095f879}{GINP}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] >> Pin) & 0x1);
+700   \}
+701 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a47217524765da43218d67c3f75247666}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-digital\-Write@{M\-C\-P23\-S17\-\_\-digital\-Write}}
+\index{M\-C\-P23\-S17\-\_\-digital\-Write@{M\-C\-P23\-S17\-\_\-digital\-Write}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-digital\-Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-digital\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Pin, }
+\item[{{\bf u8}}]{S\-Out, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a47217524765da43218d67c3f75247666}
+
+
+Definition at line 840 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, F\-A\-L\-S\-E, tag\-M\-C\-P23\-S17\-::\-G\-P\-I\-O, H\-I\-G\-H, M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A, M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-B, M\-C\-P23\-S17\-\_\-write\-\_\-\-B(), and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+841 \{
+842  Pin--;
+843  \textcolor{keywordflow}{if} (Pin > 15)
+844   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+845  \textcolor{keywordflow}{if} (Pin < 8)
+846   \{
+847    \textcolor{keywordflow}{if} (SOut == \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH})
+848     Mcp->\hyperlink{structtag_m_c_p23_s17_a6b49736d3a0718bbeac5e48a8d2d3ed3}{GPIO}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] |= 1 << Pin; 
+849    \textcolor{keywordflow}{else}
+850     Mcp->\hyperlink{structtag_m_c_p23_s17_a6b49736d3a0718bbeac5e48a8d2d3ed3}{GPIO}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] &= ~(1 << Pin);
+851    \textcolor{keywordflow}{if} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_aa028b08eab678f06e6617c9ca8d16df6}{MCP23S17\_GPIOA},Mcp->
+      \hyperlink{structtag_m_c_p23_s17_a6b49736d3a0718bbeac5e48a8d2d3ed3}{GPIO}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0]) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+852     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+853   \}
+854  \textcolor{keywordflow}{else}
+855   \{
+856    Pin -= 8;
+857    \textcolor{keywordflow}{if} (SOut == \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH})
+858     Mcp->\hyperlink{structtag_m_c_p23_s17_a6b49736d3a0718bbeac5e48a8d2d3ed3}{GPIO}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] |= 1 << Pin; 
+859    \textcolor{keywordflow}{else}
+860     Mcp->\hyperlink{structtag_m_c_p23_s17_a6b49736d3a0718bbeac5e48a8d2d3ed3}{GPIO}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] &= ~(1 << Pin);
+861    \textcolor{keywordflow}{if} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_a34adaf6cd1cd045914ba283bd7f7da8e}{MCP23S17\_GPIOB},Mcp->
+      \hyperlink{structtag_m_c_p23_s17_a6b49736d3a0718bbeac5e48a8d2d3ed3}{GPIO}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1]) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+862     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+863   \}
+864  \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+865 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a937db22556cb6cfc560c9e17693c34dc}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-init@{M\-C\-P23\-S17\-\_\-init}}
+\index{M\-C\-P23\-S17\-\_\-init@{M\-C\-P23\-S17\-\_\-init}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{S\-P\-I\-Addr, }
+\item[{{\bf u8}}]{C\-S\-Pin, }
+\item[{{\bf B\-O\-O\-L}}]{Use\-Int\-Add, }
+\item[{{\bf u8}}]{S\-P\-I\-Channel, }
+\item[{{\bf u8}}]{Lo\-S\-C\-K, }
+\item[{{\bf u8}}]{Lo\-S\-D\-O, }
+\item[{{\bf u8}}]{Lo\-S\-D\-I}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a937db22556cb6cfc560c9e17693c34dc}
+
+
+Definition at line 360 of file M\-C\-P23\-S17.\-c.
+
+
+
+References S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-C\-P\-H\-A, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-C\-P\-O\-L, tag\-M\-C\-P23\-S17\-::\-C\-S\-Pin, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Delayu\-S, digitalwrite(), F\-A\-L\-S\-E, tag\-M\-C\-P23\-S17\-::\-G\-P\-I\-O, tag\-M\-C\-P23\-S17\-::\-G\-P\-P\-U, H\-I\-G\-H, tag\-M\-C\-P23\-S17\-::\-I\-O\-D\-I\-R, tag\-M\-C\-P23\-S17\-::\-I\-P\-O\-L, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-C\-K, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-D\-I, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-D\-O, M\-C\-P23\-S17\-\_\-\-B\-\_\-\-H\-A\-E\-N, M\-C\-P23\-S17\-\_\-\-I\-N\-T\-C\-O\-N\-A, M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-A, M\-C\-P23\-S17\-\_\-write\-\_\-\-B(), M\-C\-P23\-S17\-\_\-write\-\_\-\-W(), O\-U\-T\-P\-U\-T, pinmode(), S\-P\-I\-\_\-init(), tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Addr, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Channel, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Loc, S\-P\-I\-Loc\-\_\-\-Init(), T\-R\-U\-E, tag\-M\-C\-P23\-S17\-::\-Use\-Int\-Add, and tag\-M\-C\-P23\-S17\-U\-::\-W.
+
+
+\begin{DoxyCode}
+361 \{
+362  \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Val;
+363 
+364  Mcp->\hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr} = SPIAddr;
+365  Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin} = CSPin;
+366  Mcp->\hyperlink{structtag_m_c_p23_s17_a7e6aa33b41bfbe7730c319ab6e92d2d6}{UseIntAdd} = UseIntAdd;
+367  Mcp->\hyperlink{structtag_m_c_p23_s17_a4378f10441758912284a247d7863f13b}{SPIChannel} = SPIChannel;
+368 
+369  \textcolor{comment}{// Initialize the chip enable, HIGH}
+370  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+371  \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+372  \textcolor{keywordflow}{switch} (Mcp->\hyperlink{structtag_m_c_p23_s17_a4378f10441758912284a247d7863f13b}{SPIChannel})
+373   \{
+374    \textcolor{keywordflow}{case} 0:
+375     Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc}.\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL} = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};    \textcolor{comment}{// Clock Polarity}
+376     Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc}.\hyperlink{struct_s_p_i___loc___conf_a0da4526584e290b715aea1513ff8f871}{CPHA} = \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};    \textcolor{comment}{// Sample position}
+377     Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc}.\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS} = 0;    \textcolor{comment}{// Delay Clock uS}
+378     Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc}.\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK} = LoSCK;
+379     Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc}.\hyperlink{struct_s_p_i___loc___conf_ae80c6ce5d0950d1d6b0aa4d7b61c7145}{LoSDO} = LoSDO;
+380     Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc}.\hyperlink{struct_s_p_i___loc___conf_a77b28d687f22c34e34410af4b2f6fe94}{LoSDI} = LoSDI;
+381     \hyperlink{spiloc_8c_acdfb0b4fdad3d201ebf24ccea4fafe54}{SPILoc\_Init} (&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc});
+382     \textcolor{keywordflow}{break};
+383    \textcolor{keywordflow}{case} 1:
+384    \textcolor{keywordflow}{case} 2:
+385     \hyperlink{spi_8h_ac0055f801ff78bc7fafccc46e3e15ba7}{SPI\_init}();
+386     \textcolor{keywordflow}{break};
+387   \}
+388  Mcp->\hyperlink{structtag_m_c_p23_s17_aa01df34e48dbb3159f671d1acdc44dbf}{IODIR}.\hyperlink{uniontag_m_c_p23_s17_u_a46abd0e479371c5e886b9236e98ce322}{W} = 0xFFFF;
+389  Mcp->\hyperlink{structtag_m_c_p23_s17_a6b49736d3a0718bbeac5e48a8d2d3ed3}{GPIO}.\hyperlink{uniontag_m_c_p23_s17_u_a46abd0e479371c5e886b9236e98ce322}{W} = 0;
+390  Mcp->\hyperlink{structtag_m_c_p23_s17_a1c2b8cf8c22febf5f3aebfea6310fc15}{GPPU}.\hyperlink{uniontag_m_c_p23_s17_u_a46abd0e479371c5e886b9236e98ce322}{W} = 0;
+391  Mcp->\hyperlink{structtag_m_c_p23_s17_a97413bedb26c0c521ead0632dcb949a4}{IPOL}.\hyperlink{uniontag_m_c_p23_s17_u_a46abd0e479371c5e886b9236e98ce322}{W} = 0;
+392  Val = 0;
+393  \textcolor{keywordflow}{if} (UseIntAdd == \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})
+394   Val |= \hyperlink{_m_c_p23_s17_8c_a313b46673acdf6162701075521bb9ea3}{MCP23S17\_B\_HAEN};
+395  \textcolor{keywordflow}{if}(\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_a192ed98a9f57dc2466ed40e02e21af02}{MCP23S17\_INTCONA},Val) == 
+      \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+396   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+397  \textcolor{keywordflow}{if}(\hyperlink{_m_c_p23_s17_8c_a59039ae587ece82458ac3b9a646c8292}{MCP23S17\_write\_W}(Mcp,\hyperlink{_m_c_p23_s17_8c_aca5fa8cb6da6adab283ad8bea0efa3ed}{MCP23S17\_IODIRA},0xFFFF) == 
+      \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+398   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+399  \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+400 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_adcb7b4a79b0eb22af6a29efad969b5f9}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-input\-Pol@{M\-C\-P23\-S17\-\_\-input\-Pol}}
+\index{M\-C\-P23\-S17\-\_\-input\-Pol@{M\-C\-P23\-S17\-\_\-input\-Pol}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-input\-Pol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-input\-Pol (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Pin, }
+\item[{{\bf u8}}]{S\-In\-Pol, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_adcb7b4a79b0eb22af6a29efad969b5f9}
+
+
+Definition at line 800 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, F\-A\-L\-S\-E, H\-I\-G\-H, tag\-M\-C\-P23\-S17\-::\-I\-P\-O\-L, M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-A, M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-B, M\-C\-P23\-S17\-\_\-write\-\_\-\-B(), and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+801 \{
+802  Pin--;
+803  \textcolor{keywordflow}{if} (Pin > 15)
+804   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+805  \textcolor{keywordflow}{if} (Pin < 8)
+806   \{
+807    \textcolor{keywordflow}{if} (SInPol == \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH})
+808     Mcp->\hyperlink{structtag_m_c_p23_s17_a97413bedb26c0c521ead0632dcb949a4}{IPOL}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] |= 1 << Pin; 
+809    \textcolor{keywordflow}{else}
+810     Mcp->\hyperlink{structtag_m_c_p23_s17_a97413bedb26c0c521ead0632dcb949a4}{IPOL}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] &= ~(1 << Pin);
+811    \textcolor{keywordflow}{if} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_ad73066e680d6a186d5039e64ebe00ca8}{MCP23S17\_IPOLA},Mcp->
+      \hyperlink{structtag_m_c_p23_s17_a97413bedb26c0c521ead0632dcb949a4}{IPOL}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0]) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+812     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+813   \}
+814  \textcolor{keywordflow}{else}
+815   \{
+816    Pin -= 8;
+817    \textcolor{keywordflow}{if} (SInPol == \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH})
+818     Mcp->\hyperlink{structtag_m_c_p23_s17_a97413bedb26c0c521ead0632dcb949a4}{IPOL}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] |= 1 << Pin; 
+819    \textcolor{keywordflow}{else}
+820     Mcp->\hyperlink{structtag_m_c_p23_s17_a97413bedb26c0c521ead0632dcb949a4}{IPOL}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] &= ~(1 << Pin);
+821    \textcolor{keywordflow}{if} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_abf40c7be6a1bf892d4b6bea955b64e57}{MCP23S17\_IPOLB},Mcp->
+      \hyperlink{structtag_m_c_p23_s17_a97413bedb26c0c521ead0632dcb949a4}{IPOL}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1]) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+822     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+823   \}
+824  \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+825 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a807673458f5ff5f3a602bec80db42e8e}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-pin\-Mode@{M\-C\-P23\-S17\-\_\-pin\-Mode}}
+\index{M\-C\-P23\-S17\-\_\-pin\-Mode@{M\-C\-P23\-S17\-\_\-pin\-Mode}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-pin\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-pin\-Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Pin, }
+\item[{{\bf u8}}]{Out\-In, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a807673458f5ff5f3a602bec80db42e8e}
+
+
+Definition at line 720 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, F\-A\-L\-S\-E, I\-N\-P\-U\-T, tag\-M\-C\-P23\-S17\-::\-I\-O\-D\-I\-R, M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-A, M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-B, M\-C\-P23\-S17\-\_\-write\-\_\-\-B(), and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+721 \{
+722  Pin--;
+723  \textcolor{keywordflow}{if} (Pin > 15)
+724   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+725  \textcolor{keywordflow}{if} (Pin < 8)
+726   \{
+727    \textcolor{keywordflow}{if} (OutIn == \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT})
+728     Mcp->\hyperlink{structtag_m_c_p23_s17_aa01df34e48dbb3159f671d1acdc44dbf}{IODIR}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] |= 1 << Pin; 
+729    \textcolor{keywordflow}{else}
+730     Mcp->\hyperlink{structtag_m_c_p23_s17_aa01df34e48dbb3159f671d1acdc44dbf}{IODIR}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] &= ~(1 << Pin);
+731    \textcolor{keywordflow}{if} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_aca5fa8cb6da6adab283ad8bea0efa3ed}{MCP23S17\_IODIRA},Mcp->
+      \hyperlink{structtag_m_c_p23_s17_aa01df34e48dbb3159f671d1acdc44dbf}{IODIR}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0]) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+732     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+733   \}
+734  \textcolor{keywordflow}{else}
+735   \{
+736    Pin -= 8;
+737    \textcolor{keywordflow}{if} (OutIn == \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT})
+738     Mcp->\hyperlink{structtag_m_c_p23_s17_aa01df34e48dbb3159f671d1acdc44dbf}{IODIR}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] |= 1 << Pin; 
+739    \textcolor{keywordflow}{else}
+740     Mcp->\hyperlink{structtag_m_c_p23_s17_aa01df34e48dbb3159f671d1acdc44dbf}{IODIR}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] &= ~(1 << Pin);
+741    \textcolor{keywordflow}{if} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_a49ce0b4b7ec644ff02c04993ffa79e9c}{MCP23S17\_IODIRB},Mcp->
+      \hyperlink{structtag_m_c_p23_s17_aa01df34e48dbb3159f671d1acdc44dbf}{IODIR}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1]) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+742     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+743   \}
+744  \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+745 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_ad13cd639c2e2099a812d6a483ab22f85}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-pull\-Up@{M\-C\-P23\-S17\-\_\-pull\-Up}}
+\index{M\-C\-P23\-S17\-\_\-pull\-Up@{M\-C\-P23\-S17\-\_\-pull\-Up}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-pull\-Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-pull\-Up (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Pin, }
+\item[{{\bf u8}}]{S\-Pull, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_ad13cd639c2e2099a812d6a483ab22f85}
+
+
+Definition at line 760 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, F\-A\-L\-S\-E, tag\-M\-C\-P23\-S17\-::\-G\-P\-P\-U, H\-I\-G\-H, M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-A, M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-B, M\-C\-P23\-S17\-\_\-write\-\_\-\-B(), and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+761 \{
+762  Pin--;
+763  \textcolor{keywordflow}{if} (Pin > 15)
+764   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+765  \textcolor{keywordflow}{if} (Pin < 8)
+766   \{
+767    \textcolor{keywordflow}{if} (SPull == \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH})
+768     Mcp->\hyperlink{structtag_m_c_p23_s17_a1c2b8cf8c22febf5f3aebfea6310fc15}{GPPU}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] |= 1 << Pin; 
+769    \textcolor{keywordflow}{else}
+770     Mcp->\hyperlink{structtag_m_c_p23_s17_a1c2b8cf8c22febf5f3aebfea6310fc15}{GPPU}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] &= ~(1 << Pin);
+771    \textcolor{keywordflow}{if} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_ae509034e3226c936ff60bd454f904d11}{MCP23S17\_GPPUA},Mcp->
+      \hyperlink{structtag_m_c_p23_s17_a1c2b8cf8c22febf5f3aebfea6310fc15}{GPPU}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0]) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+772     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+773   \}
+774  \textcolor{keywordflow}{else}
+775   \{
+776    Pin -= 8;
+777    \textcolor{keywordflow}{if} (SPull == \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH})
+778     Mcp->\hyperlink{structtag_m_c_p23_s17_a1c2b8cf8c22febf5f3aebfea6310fc15}{GPPU}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] |= 1 << Pin; 
+779    \textcolor{keywordflow}{else}
+780     Mcp->\hyperlink{structtag_m_c_p23_s17_a1c2b8cf8c22febf5f3aebfea6310fc15}{GPPU}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] &= ~(1 << Pin);
+781    \textcolor{keywordflow}{if} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_a22bcc92e20b989559171d2f651dc67ab}{MCP23S17\_GPPUB},Mcp->
+      \hyperlink{structtag_m_c_p23_s17_a1c2b8cf8c22febf5f3aebfea6310fc15}{GPPU}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1]) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+782     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+783   \}
+784  \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+785 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_aee0bd863a05251e3e80c751064f4ff92}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-read\-\_\-\-A@{M\-C\-P23\-S17\-\_\-read\-\_\-\-A}}
+\index{M\-C\-P23\-S17\-\_\-read\-\_\-\-A@{M\-C\-P23\-S17\-\_\-read\-\_\-\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-read\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}void M\-C\-P23\-S17\-\_\-read\-\_\-\-A (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{Addr, }
+\item[{{\bf u8}}]{Len, }
+\item[{char $\ast$}]{Val}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_aee0bd863a05251e3e80c751064f4ff92}
+
+
+Definition at line 311 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-::\-C\-S\-Pin, digitalwrite(), F\-A\-L\-S\-E, H\-I\-G\-H, L\-O\-W, M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S, N\-U\-L\-L, S\-P\-I\-\_\-read(), S\-P\-I\-\_\-write(), tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Addr, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Channel, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Loc, S\-P\-I\-Loc\-\_\-\-Read(), S\-P\-I\-Loc\-\_\-\-Write(), and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+312 \{
+313  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} Ctn;
+314  \textcolor{keywordflow}{if} ((Len == 0) || (Val == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}))
+315   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+316 
+317  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+318  \textcolor{keywordflow}{switch} (Mcp->\hyperlink{structtag_m_c_p23_s17_a4378f10441758912284a247d7863f13b}{SPIChannel})
+319   \{
+320    \textcolor{keywordflow}{case} 0:
+321     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->
+      \hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)|1);      \textcolor{comment}{//Write Into Device}
+322     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},Addr);
+323     \textcolor{keywordflow}{for} (Ctn = 0 ; Ctn < Len ; Ctn++)
+324      Val[Ctn] = \hyperlink{spiloc_8c_aca6cc1c0a152033fa91fb706b8b294ed}{SPILoc\_Read}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc});
+325     \textcolor{keywordflow}{break};
+326    \textcolor{keywordflow}{case} 1:
+327    \textcolor{keywordflow}{case} 2:
+328     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->\hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)|1);        \textcolor{comment}{//Write
+       Into Device}
+329     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(Addr);
+330     \textcolor{keywordflow}{for} (Ctn = 0 ; Ctn < Len ; Ctn++)
+331      Val[Ctn] = \hyperlink{p8_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{SPI\_read}();
+332     \textcolor{keywordflow}{break};
+333   \}
+334  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+335  \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+336 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a998ed2d9feb5ae95303504a6a165a1d1}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-read\-\_\-\-B@{M\-C\-P23\-S17\-\_\-read\-\_\-\-B}}
+\index{M\-C\-P23\-S17\-\_\-read\-\_\-\-B@{M\-C\-P23\-S17\-\_\-read\-\_\-\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-read\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-read\-\_\-\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{Addr, }
+\item[{{\bf u8} $\ast$}]{Val}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a998ed2d9feb5ae95303504a6a165a1d1}
+
+
+Definition at line 230 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-::\-C\-S\-Pin, digitalwrite(), F\-A\-L\-S\-E, H\-I\-G\-H, L\-O\-W, M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S, N\-U\-L\-L, S\-P\-I\-\_\-read(), S\-P\-I\-\_\-write(), tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Addr, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Channel, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Loc, S\-P\-I\-Loc\-\_\-\-Read(), S\-P\-I\-Loc\-\_\-\-Write(), and T\-R\-U\-E.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-digital\-Read(), M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A(), and M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-B().
+
+
+\begin{DoxyCode}
+231 \{
+232  \textcolor{keywordflow}{if} (Val == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+233   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+234 
+235  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+236  \textcolor{keywordflow}{switch} (Mcp->\hyperlink{structtag_m_c_p23_s17_a4378f10441758912284a247d7863f13b}{SPIChannel})
+237   \{
+238    \textcolor{keywordflow}{case} 0:
+239     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->
+      \hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)|1);      \textcolor{comment}{//Write Into Device}
+240     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},Addr);
+241     *Val = \hyperlink{spiloc_8c_aca6cc1c0a152033fa91fb706b8b294ed}{SPILoc\_Read}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc});
+242     \textcolor{keywordflow}{break};
+243    \textcolor{keywordflow}{case} 1:
+244    \textcolor{keywordflow}{case} 2:
+245     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->\hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)|1);        \textcolor{comment}{//Write
+       Into Device}
+246     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(Addr);
+247     *Val = \hyperlink{p8_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{SPI\_read}();
+248     \textcolor{keywordflow}{break};
+249   \}
+250  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+251  \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+252 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_af33f68dbc3b0dea325710ff7f9570b6f}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-read\-\_\-\-W@{M\-C\-P23\-S17\-\_\-read\-\_\-\-W}}
+\index{M\-C\-P23\-S17\-\_\-read\-\_\-\-W@{M\-C\-P23\-S17\-\_\-read\-\_\-\-W}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-read\-\_\-\-W}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-read\-\_\-\-W (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{Addr, }
+\item[{{\bf u16} $\ast$}]{Val}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_af33f68dbc3b0dea325710ff7f9570b6f}
+
+
+Definition at line 265 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-::\-C\-S\-Pin, digitalwrite(), F\-A\-L\-S\-E, H\-I\-G\-H, L\-O\-W, M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S, N\-U\-L\-L, S\-P\-I\-\_\-read(), S\-P\-I\-\_\-write(), tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Addr, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Channel, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Loc, S\-P\-I\-Loc\-\_\-\-Read(), S\-P\-I\-Loc\-\_\-\-Write(), and T\-R\-U\-E.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A\-B().
+
+
+\begin{DoxyCode}
+266 \{
+267  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} TVal;
+268  \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} BVal;
+269 \textcolor{keywordtype}{char} Str[20];
+270 
+271  \textcolor{keywordflow}{if} (Val == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+272   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+273 
+274  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+275  \textcolor{keywordflow}{switch} (Mcp->\hyperlink{structtag_m_c_p23_s17_a4378f10441758912284a247d7863f13b}{SPIChannel})
+276   \{
+277    \textcolor{keywordflow}{case} 0:
+278     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->
+      \hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)|1);      \textcolor{comment}{//Write Into Device}
+279     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},Addr);
+280     BVal = \hyperlink{spiloc_8c_aca6cc1c0a152033fa91fb706b8b294ed}{SPILoc\_Read}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc});
+281     TVal = \hyperlink{spiloc_8c_aca6cc1c0a152033fa91fb706b8b294ed}{SPILoc\_Read}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc});
+282     \textcolor{keywordflow}{break};
+283    \textcolor{keywordflow}{case} 1:
+284    \textcolor{keywordflow}{case} 2:
+285     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->\hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)|1);        \textcolor{comment}{//Write
+       Into Device}
+286     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(Addr);
+287     BVal = \hyperlink{p8_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{SPI\_read}();
+288     TVal = \hyperlink{p8_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{SPI\_read}();
+289     \textcolor{keywordflow}{break};
+290   \}
+291  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+292  TVal <<= 8;
+293  TVal |= BVal;
+294  *Val = TVal;
+295  \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+296 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a293ca7f9ffb7063cc6405d778468446e}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A@{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A}}
+\index{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A@{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a293ca7f9ffb7063cc6405d778468446e}
+
+
+Definition at line 416 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, tag\-M\-C\-P23\-S17\-::\-G\-I\-N\-P, M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A, and M\-C\-P23\-S17\-\_\-read\-\_\-\-B().
+
+
+\begin{DoxyCode}
+417 \{
+418  \hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{BOOL} Risu;
+419  Risu = \hyperlink{_m_c_p23_s17_8c_a998ed2d9feb5ae95303504a6a165a1d1}{MCP23S17\_read\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_aa028b08eab678f06e6617c9ca8d16df6}{MCP23S17\_GPIOA},Val);
+420  Mcp->\hyperlink{structtag_m_c_p23_s17_a611b6d537907e7d9a6389f430095f879}{GINP}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] = Val;
+421  \textcolor{keywordflow}{return} (Risu);
+422 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_ab6b41751134ad568b4cbfd2d58fe997e}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A\-B@{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A\-B}}
+\index{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A\-B@{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-A\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf u16} $\ast$}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_ab6b41751134ad568b4cbfd2d58fe997e}
+
+
+Definition at line 452 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-::\-G\-I\-N\-P, M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A, M\-C\-P23\-S17\-\_\-read\-\_\-\-W(), and tag\-M\-C\-P23\-S17\-U\-::\-W.
+
+
+\begin{DoxyCode}
+453 \{
+454  \hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{BOOL} Risu;
+455  Risu = \hyperlink{_m_c_p23_s17_8c_af33f68dbc3b0dea325710ff7f9570b6f}{MCP23S17\_read\_W}(Mcp,\hyperlink{_m_c_p23_s17_8c_aa028b08eab678f06e6617c9ca8d16df6}{MCP23S17\_GPIOA},Val);
+456  Mcp->\hyperlink{structtag_m_c_p23_s17_a611b6d537907e7d9a6389f430095f879}{GINP}.\hyperlink{uniontag_m_c_p23_s17_u_a46abd0e479371c5e886b9236e98ce322}{W} = Val;
+457  \textcolor{keywordflow}{return} (Risu);
+458 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a1f3388b0497f19a80d2935ad5cdabd21}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-B@{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-B}}
+\index{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-B@{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-read\-G\-P\-I\-O\-\_\-\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a1f3388b0497f19a80d2935ad5cdabd21}
+
+
+Definition at line 434 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, tag\-M\-C\-P23\-S17\-::\-G\-I\-N\-P, M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-B, and M\-C\-P23\-S17\-\_\-read\-\_\-\-B().
+
+
+\begin{DoxyCode}
+435 \{
+436  \hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{BOOL} Risu;
+437  Risu = \hyperlink{_m_c_p23_s17_8c_a998ed2d9feb5ae95303504a6a165a1d1}{MCP23S17\_read\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_a34adaf6cd1cd045914ba283bd7f7da8e}{MCP23S17\_GPIOB},Val);
+438  Mcp->\hyperlink{structtag_m_c_p23_s17_a611b6d537907e7d9a6389f430095f879}{GINP}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] = Val;
+439  \textcolor{keywordflow}{return} (Risu);
+440 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a991e96aad5aaee8f5798559eca8e0547}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-\_\-\-A@{M\-C\-P23\-S17\-\_\-write\-\_\-\-A}}
+\index{M\-C\-P23\-S17\-\_\-write\-\_\-\-A@{M\-C\-P23\-S17\-\_\-write\-\_\-\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-\_\-\-A (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{Addr, }
+\item[{{\bf u16}}]{Len, }
+\item[{char $\ast$}]{Val}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a991e96aad5aaee8f5798559eca8e0547}
+
+
+Definition at line 191 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-::\-C\-S\-Pin, digitalwrite(), F\-A\-L\-S\-E, H\-I\-G\-H, L\-O\-W, M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S, N\-U\-L\-L, S\-P\-I\-\_\-write(), tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Addr, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Channel, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Loc, S\-P\-I\-Loc\-\_\-\-Write(), and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+192 \{
+193  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} Ctn;
+194  \textcolor{keywordflow}{if} ((Len == 0) || (Val == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}))
+195   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+196  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+197  \textcolor{keywordflow}{switch} (Mcp->\hyperlink{structtag_m_c_p23_s17_a4378f10441758912284a247d7863f13b}{SPIChannel})
+198   \{
+199    \textcolor{keywordflow}{case} 0:
+200     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->
+      \hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)&~1);     \textcolor{comment}{//Write Into Device}
+201     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},Addr);
+202     \textcolor{keywordflow}{for} (Ctn = 0 ; Ctn < Len ; Ctn++)
+203     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},Val[Ctn]);
+204     \textcolor{keywordflow}{break};
+205    \textcolor{keywordflow}{case} 1:
+206    \textcolor{keywordflow}{case} 2:
+207     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->\hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)&~1);       \textcolor{comment}{//Write
+       Into Device}
+208     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(Addr);
+209     \textcolor{keywordflow}{for} (Ctn = 0 ; Ctn < Len ; Ctn++)
+210     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(Val[Ctn]);
+211     \textcolor{keywordflow}{break};
+212   \}
+213  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+214  \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+215 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-\_\-\-B@{M\-C\-P23\-S17\-\_\-write\-\_\-\-B}}
+\index{M\-C\-P23\-S17\-\_\-write\-\_\-\-B@{M\-C\-P23\-S17\-\_\-write\-\_\-\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-\_\-\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{Addr, }
+\item[{{\bf u8}}]{Val}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}
+
+
+Definition at line 122 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-::\-C\-S\-Pin, digitalwrite(), H\-I\-G\-H, L\-O\-W, M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S, S\-P\-I\-\_\-write(), tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Addr, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Channel, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Loc, S\-P\-I\-Loc\-\_\-\-Write(), and T\-R\-U\-E.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-digital\-Write(), M\-C\-P23\-S17\-\_\-init(), M\-C\-P23\-S17\-\_\-input\-Pol(), M\-C\-P23\-S17\-\_\-pin\-Mode(), M\-C\-P23\-S17\-\_\-pull\-Up(), M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A(), M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-B(), M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A(), M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-B(), M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A(), M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-B(), M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A(), and M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-B().
+
+
+\begin{DoxyCode}
+123 \{
+124  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+125  \textcolor{keywordflow}{switch} (Mcp->\hyperlink{structtag_m_c_p23_s17_a4378f10441758912284a247d7863f13b}{SPIChannel})
+126   \{
+127    \textcolor{keywordflow}{case} 0:
+128     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->
+      \hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)&~1);     \textcolor{comment}{//Write Into Device}
+129     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},Addr);
+130     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},Val);
+131     \textcolor{keywordflow}{break};
+132    \textcolor{keywordflow}{case} 1:
+133    \textcolor{keywordflow}{case} 2:
+134     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->\hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)&~1);       \textcolor{comment}{//Write
+       Into Device}
+135     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(Addr);
+136     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(Val);
+137     \textcolor{keywordflow}{break};
+138   \}
+139  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+140  \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+141 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a59039ae587ece82458ac3b9a646c8292}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-\_\-\-W@{M\-C\-P23\-S17\-\_\-write\-\_\-\-W}}
+\index{M\-C\-P23\-S17\-\_\-write\-\_\-\-W@{M\-C\-P23\-S17\-\_\-write\-\_\-\-W}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-\_\-\-W}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-\_\-\-W (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{Addr, }
+\item[{{\bf u16}}]{Val}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a59039ae587ece82458ac3b9a646c8292}
+
+
+Definition at line 155 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-::\-C\-S\-Pin, digitalwrite(), H\-I\-G\-H, L\-O\-W, M\-C\-P23\-S17\-\_\-\-A\-D\-D\-R\-E\-S\-S, S\-P\-I\-\_\-write(), tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Addr, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Channel, tag\-M\-C\-P23\-S17\-::\-S\-P\-I\-Loc, S\-P\-I\-Loc\-\_\-\-Write(), and T\-R\-U\-E.
+
+
+
+Referenced by M\-C\-P23\-S17\-\_\-init(), M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A\-B(), M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A\-B(), M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A\-B(), and M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A\-B().
+
+
+\begin{DoxyCode}
+156 \{
+157  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+158  \textcolor{keywordflow}{switch} (Mcp->\hyperlink{structtag_m_c_p23_s17_a4378f10441758912284a247d7863f13b}{SPIChannel})
+159   \{
+160    \textcolor{keywordflow}{case} 0:
+161     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->
+      \hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)&~1);     \textcolor{comment}{//Write Into Device}
+162     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},Addr);
+163     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},Val & 0xFF);
+164     \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{SPILoc\_Write}(&Mcp->\hyperlink{structtag_m_c_p23_s17_a9ccb6d79347bd833db5585b354af952f}{SPILoc},Val >> 8);
+165     \textcolor{keywordflow}{break};
+166    \textcolor{keywordflow}{case} 1:
+167    \textcolor{keywordflow}{case} 2:
+168     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(((\hyperlink{_m_c_p23_s17_8c_a3a4cab4c0978824f246bd9eaa5b24d99}{MCP23S17\_ADDRESS} | (Mcp->\hyperlink{structtag_m_c_p23_s17_ae26e1445076496ae432b32c2eda2404b}{SPIAddr}&7))<<1)&~1);       \textcolor{comment}{//Write
+       Into Device}
+169     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(Addr);
+170     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(Val & 0xFF);
+171     \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(Val >> 8);
+172     \textcolor{keywordflow}{break};
+173   \}
+174  \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Mcp->\hyperlink{structtag_m_c_p23_s17_a09f926ede0f907462cd9c4aa33d14c39}{CSPin}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+175  \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+176 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a75ce3f647a51ab45bf4d038be19fda6b}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A@{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A}}
+\index{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A@{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a75ce3f647a51ab45bf4d038be19fda6b}
+
+
+Definition at line 474 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, tag\-M\-C\-P23\-S17\-::\-G\-P\-I\-O, M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A, and M\-C\-P23\-S17\-\_\-write\-\_\-\-B().
+
+
+\begin{DoxyCode}
+475 \{
+476  Mcp->\hyperlink{structtag_m_c_p23_s17_a6b49736d3a0718bbeac5e48a8d2d3ed3}{GPIO}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] = Val;
+477  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_aa028b08eab678f06e6617c9ca8d16df6}{MCP23S17\_GPIOA},Val));
+478 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a828c8918ea26807836ad9f18c16519e4}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A\-B@{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A\-B}}
+\index{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A\-B@{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-A\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a828c8918ea26807836ad9f18c16519e4}
+
+
+Definition at line 506 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-::\-G\-P\-I\-O, M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-A, M\-C\-P23\-S17\-\_\-write\-\_\-\-W(), and tag\-M\-C\-P23\-S17\-U\-::\-W.
+
+
+\begin{DoxyCode}
+507 \{
+508  Mcp->\hyperlink{structtag_m_c_p23_s17_a6b49736d3a0718bbeac5e48a8d2d3ed3}{GPIO}.\hyperlink{uniontag_m_c_p23_s17_u_a46abd0e479371c5e886b9236e98ce322}{W} = Val;
+509  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a59039ae587ece82458ac3b9a646c8292}{MCP23S17\_write\_W}(Mcp,\hyperlink{_m_c_p23_s17_8c_aa028b08eab678f06e6617c9ca8d16df6}{MCP23S17\_GPIOA},Val));
+510 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a3477e8ed1bb7e8011becb151df5ee27b}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-B@{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-B}}
+\index{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-B@{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-G\-P\-I\-O\-\_\-\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a3477e8ed1bb7e8011becb151df5ee27b}
+
+
+Definition at line 490 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, tag\-M\-C\-P23\-S17\-::\-G\-P\-I\-O, M\-C\-P23\-S17\-\_\-\-G\-P\-I\-O\-B, and M\-C\-P23\-S17\-\_\-write\-\_\-\-B().
+
+
+\begin{DoxyCode}
+491 \{
+492  Mcp->\hyperlink{structtag_m_c_p23_s17_a6b49736d3a0718bbeac5e48a8d2d3ed3}{GPIO}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] = Val;
+493  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_a34adaf6cd1cd045914ba283bd7f7da8e}{MCP23S17\_GPIOB},Val));
+494 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_ae05c75abca09e5386d60aae3af5a228b}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A@{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A}}
+\index{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A@{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_ae05c75abca09e5386d60aae3af5a228b}
+
+
+Definition at line 578 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, tag\-M\-C\-P23\-S17\-::\-G\-P\-P\-U, M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-A, and M\-C\-P23\-S17\-\_\-write\-\_\-\-B().
+
+
+\begin{DoxyCode}
+579 \{
+580  Mcp->\hyperlink{structtag_m_c_p23_s17_a1c2b8cf8c22febf5f3aebfea6310fc15}{GPPU}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] = Val;
+581  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_ae509034e3226c936ff60bd454f904d11}{MCP23S17\_GPPUA},Val));
+582 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_add057dc596d749f826468015e7622ea7}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A\-B@{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A\-B}}
+\index{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A\-B@{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-A\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_add057dc596d749f826468015e7622ea7}
+
+
+Definition at line 610 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-::\-G\-P\-P\-U, M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-A, M\-C\-P23\-S17\-\_\-write\-\_\-\-W(), and tag\-M\-C\-P23\-S17\-U\-::\-W.
+
+
+\begin{DoxyCode}
+611 \{
+612  Mcp->\hyperlink{structtag_m_c_p23_s17_a1c2b8cf8c22febf5f3aebfea6310fc15}{GPPU}.\hyperlink{uniontag_m_c_p23_s17_u_a46abd0e479371c5e886b9236e98ce322}{W} = Val;
+613  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a59039ae587ece82458ac3b9a646c8292}{MCP23S17\_write\_W}(Mcp,\hyperlink{_m_c_p23_s17_8c_ae509034e3226c936ff60bd454f904d11}{MCP23S17\_GPPUA},Val));
+614 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a064beb5411f517e29ce3e87c5b6fb08b}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-B@{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-B}}
+\index{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-B@{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-G\-P\-P\-U\-\_\-\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a064beb5411f517e29ce3e87c5b6fb08b}
+
+
+Definition at line 594 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, tag\-M\-C\-P23\-S17\-::\-G\-P\-P\-U, M\-C\-P23\-S17\-\_\-\-G\-P\-P\-U\-B, and M\-C\-P23\-S17\-\_\-write\-\_\-\-B().
+
+
+\begin{DoxyCode}
+595 \{
+596  Mcp->\hyperlink{structtag_m_c_p23_s17_a1c2b8cf8c22febf5f3aebfea6310fc15}{GPPU}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] = Val;
+597  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_a22bcc92e20b989559171d2f651dc67ab}{MCP23S17\_GPPUB},Val));
+598 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_aa792f30dda9e39b8157150eb0c295967}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A@{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A}}
+\index{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A@{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_aa792f30dda9e39b8157150eb0c295967}
+
+
+Definition at line 526 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, tag\-M\-C\-P23\-S17\-::\-I\-O\-D\-I\-R, M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-A, and M\-C\-P23\-S17\-\_\-write\-\_\-\-B().
+
+
+\begin{DoxyCode}
+527 \{
+528  Mcp->\hyperlink{structtag_m_c_p23_s17_aa01df34e48dbb3159f671d1acdc44dbf}{IODIR}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] = Val;
+529  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_aca5fa8cb6da6adab283ad8bea0efa3ed}{MCP23S17\_IODIRA},Val));
+530 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a6eedbde985691e8b807cd517a6c78beb}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A\-B@{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A\-B}}
+\index{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A\-B@{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-A\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a6eedbde985691e8b807cd517a6c78beb}
+
+
+Definition at line 558 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-::\-I\-O\-D\-I\-R, M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-A, M\-C\-P23\-S17\-\_\-write\-\_\-\-W(), and tag\-M\-C\-P23\-S17\-U\-::\-W.
+
+
+\begin{DoxyCode}
+559 \{
+560  Mcp->\hyperlink{structtag_m_c_p23_s17_aa01df34e48dbb3159f671d1acdc44dbf}{IODIR}.\hyperlink{uniontag_m_c_p23_s17_u_a46abd0e479371c5e886b9236e98ce322}{W} = Val;
+561  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a59039ae587ece82458ac3b9a646c8292}{MCP23S17\_write\_W}(Mcp,\hyperlink{_m_c_p23_s17_8c_aca5fa8cb6da6adab283ad8bea0efa3ed}{MCP23S17\_IODIRA},Val));
+562 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_ad004d5f1d6ca41905721877f0b4368c5}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-B@{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-B}}
+\index{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-B@{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-I\-O\-D\-I\-R\-\_\-\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_ad004d5f1d6ca41905721877f0b4368c5}
+
+
+Definition at line 542 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, tag\-M\-C\-P23\-S17\-::\-I\-O\-D\-I\-R, M\-C\-P23\-S17\-\_\-\-I\-O\-D\-I\-R\-B, and M\-C\-P23\-S17\-\_\-write\-\_\-\-B().
+
+
+\begin{DoxyCode}
+543 \{
+544  Mcp->\hyperlink{structtag_m_c_p23_s17_aa01df34e48dbb3159f671d1acdc44dbf}{IODIR}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] = Val;
+545  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_a49ce0b4b7ec644ff02c04993ffa79e9c}{MCP23S17\_IODIRB},Val));
+546 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_ab34fd60d1d2e7556ed34d8418e78b0a7}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A@{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A}}
+\index{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A@{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_ab34fd60d1d2e7556ed34d8418e78b0a7}
+
+
+Definition at line 629 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, tag\-M\-C\-P23\-S17\-::\-I\-P\-O\-L, M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-A, and M\-C\-P23\-S17\-\_\-write\-\_\-\-B().
+
+
+\begin{DoxyCode}
+630 \{
+631  Mcp->\hyperlink{structtag_m_c_p23_s17_a97413bedb26c0c521ead0632dcb949a4}{IPOL}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[0] = Val;
+632  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_ad73066e680d6a186d5039e64ebe00ca8}{MCP23S17\_IPOLA},Val));
+633 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a3119a8a10ede80178c866f1656b34a7c}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A\-B@{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A\-B}}
+\index{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A\-B@{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-A\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a3119a8a10ede80178c866f1656b34a7c}
+
+
+Definition at line 661 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-::\-I\-P\-O\-L, M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-A, M\-C\-P23\-S17\-\_\-write\-\_\-\-W(), and tag\-M\-C\-P23\-S17\-U\-::\-W.
+
+
+\begin{DoxyCode}
+662 \{
+663  Mcp->\hyperlink{structtag_m_c_p23_s17_a97413bedb26c0c521ead0632dcb949a4}{IPOL}.\hyperlink{uniontag_m_c_p23_s17_u_a46abd0e479371c5e886b9236e98ce322}{W} = Val;
+664  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a59039ae587ece82458ac3b9a646c8292}{MCP23S17\_write\_W}(Mcp,\hyperlink{_m_c_p23_s17_8c_ad73066e680d6a186d5039e64ebe00ca8}{MCP23S17\_IPOLA},Val));
+665 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p23_s17_8c_a9fece2e7399a1a41b246e2bdcb5e587c}{\index{M\-C\-P23\-S17.\-c@{M\-C\-P23\-S17.\-c}!M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-B@{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-B}}
+\index{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-B@{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-B}!MCP23S17.c@{M\-C\-P23\-S17.\-c}}
+\subsubsection[{M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P23\-S17\-\_\-write\-I\-P\-O\-L\-\_\-\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{Val, }
+\item[{{\bf M\-C\-P23\-S17} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p23_s17_8c_a9fece2e7399a1a41b246e2bdcb5e587c}
+
+
+Definition at line 645 of file M\-C\-P23\-S17.\-c.
+
+
+
+References tag\-M\-C\-P23\-S17\-U\-::\-B, tag\-M\-C\-P23\-S17\-::\-I\-P\-O\-L, M\-C\-P23\-S17\-\_\-\-I\-P\-O\-L\-B, and M\-C\-P23\-S17\-\_\-write\-\_\-\-B().
+
+
+\begin{DoxyCode}
+646 \{
+647  Mcp->\hyperlink{structtag_m_c_p23_s17_a97413bedb26c0c521ead0632dcb949a4}{IPOL}.\hyperlink{uniontag_m_c_p23_s17_u_afbf45cd436efe78db33ea8692e838fef}{B}[1] = Val;
+648  \textcolor{keywordflow}{return} (\hyperlink{_m_c_p23_s17_8c_a48a35799ff30294b3e5970f7d45774ce}{MCP23S17\_write\_B}(Mcp,\hyperlink{_m_c_p23_s17_8c_abf40c7be6a1bf892d4b6bea955b64e57}{MCP23S17\_IPOLB},Val));
+649 \}
+\end{DoxyCode}

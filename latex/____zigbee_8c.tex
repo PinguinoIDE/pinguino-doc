@@ -1,0 +1,366 @@
+\hypertarget{____zigbee_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-\_\-\-\_\-zigbee.c File Reference}
+\label{____zigbee_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-\_\-\-\_\-zigbee.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-\_\-\-\_\-zigbee.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$zigbee/mrf24j40.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{____zigbee_8c_a05c0e450aaf98192d7a3e84bec6877b6}{\-\_\-\-\_\-\-Z\-I\-G\-B\-E\-E}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{____zigbee_8c_a1ff21711c0ea44e45ef3a1cae47dfb5d}{init\-\_\-zigbee} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \-\_\-channel, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{pan\-\_\-id}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}{short\-\_\-address})
+\item 
+void \hyperlink{____zigbee_8c_a9aca1f0421f38d18b7c0e802f891480b}{Z\-I\-Ginterrupt} (void)
+\item 
+void \hyperlink{____zigbee_8c_a2ea8d1d035c0b178eb3b7f1dfbfe2822}{mrf24j40\-\_\-transmit\-\_\-callback} (uns8 \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}, uns8 retries, uns8 channel\-\_\-busy)
+\begin{DoxyCompactList}\small\item\em Callback is actioned when mrf24j40 has finished transmitting a packet, or failed to do so. \end{DoxyCompactList}\item 
+void \hyperlink{____zigbee_8c_ae5780b8f43c80edf90d1a6292d3b9f81}{mrf24j40\-\_\-receive\-\_\-callback} ()
+\begin{DoxyCompactList}\small\item\em Callback is actioned when mrf24j40 has a packet received off air. \end{DoxyCompactList}\item 
+void \hyperlink{____zigbee_8c_adbec7751745aa0d32c274a18e2c55a81}{Z\-I\-Gputs} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}{short\-\_\-address}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$zigstr, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} length)
+\item 
+int \hyperlink{____zigbee_8c_a192704a8713d39ee1e28b430612e8352}{Z\-I\-Gavailable} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{____zigbee_8c_ac8383b679d4f2d99116713e1662edaad}{Z\-I\-Ggets} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$zigstr)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{____zigbee_8c_a7e09ed165eb1e6f35f0cdac9147c221a}{Z\-I\-Grx} \mbox{[}128\mbox{]}
+\item 
+unsigned char \hyperlink{____zigbee_8c_af89db163d6a2804a3cb1930203e79464}{zwpointer}
+\item 
+unsigned char \hyperlink{____zigbee_8c_acf6d217cd776f29002f156c425db27d5}{zrpointer}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{____zigbee_8c_acfc6ab4e0204936d703f1b6dc3842935}{Z\-I\-Gdestpan}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{____zigbee_8c_a6b21f66c8b0b0097626044c0d10e319b}{Z\-I\-Gsrcpan}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{____zigbee_8c_a8b0ddb062fcc8fd28f602cee391feaab}{Z\-I\-Gdestadd}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{____zigbee_8c_ab528e5786d0d058d3c8d107aed5e0a96}{Z\-I\-Gsrcadd}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{____zigbee_8c_a05c0e450aaf98192d7a3e84bec6877b6}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!\-\_\-\-\_\-\-Z\-I\-G\-B\-E\-E@{\-\_\-\-\_\-\-Z\-I\-G\-B\-E\-E}}
+\index{\-\_\-\-\_\-\-Z\-I\-G\-B\-E\-E@{\-\_\-\-\_\-\-Z\-I\-G\-B\-E\-E}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-Z\-I\-G\-B\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-Z\-I\-G\-B\-E\-E}}\label{____zigbee_8c_a05c0e450aaf98192d7a3e84bec6877b6}
+
+
+Definition at line 25 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{____zigbee_8c_a1ff21711c0ea44e45ef3a1cae47dfb5d}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!init\-\_\-zigbee@{init\-\_\-zigbee}}
+\index{init\-\_\-zigbee@{init\-\_\-zigbee}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{init\-\_\-zigbee}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-zigbee (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{\-\_\-channel, }
+\item[{{\bf u16}}]{pan\-\_\-id, }
+\item[{{\bf u16}}]{short\-\_\-address}
+\end{DoxyParamCaption}
+)}}\label{____zigbee_8c_a1ff21711c0ea44e45ef3a1cae47dfb5d}
+
+
+Definition at line 41 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+References mrf24j40\-\_\-init(), mrf24j40\-\_\-set\-\_\-channel(), mrf24j40\-\_\-set\-\_\-pan\-\_\-id(), mrf24j40\-\_\-set\-\_\-short\-\_\-address(), and mrf24j40\-\_\-setup\-\_\-io().
+
+
+\begin{DoxyCode}
+42 \{
+43     \hyperlink{mrf24j40_8c_ac6dddd7f68e8cb580cd56b08b2eaba2a}{mrf24j40\_setup\_io}();
+44     \hyperlink{mrf24j40_8c_a261a227eeebba1fd8a02602eb93e4ade}{mrf24j40\_init}();
+45     \textcolor{comment}{// RB : 30-08-2013 - Uncommented following lines}
+46     \hyperlink{mrf24j40_8c_a6b2e12ab3335c73d91854720ab423635}{mrf24j40\_set\_pan\_id}(\hyperlink{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{pan\_id});
+47     \hyperlink{mrf24j40_8c_aa649c52d5e4f761cf3bfef6526507621}{mrf24j40\_set\_short\_address}(\hyperlink{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}{short\_address});
+48     \hyperlink{mrf24j40_8c_a72626ec7ec5ecc20053f2a016a201a1e}{mrf24j40\_set\_channel}(\_channel);
+49 \}
+\end{DoxyCode}
+\hypertarget{____zigbee_8c_ae5780b8f43c80edf90d1a6292d3b9f81}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!mrf24j40\-\_\-receive\-\_\-callback@{mrf24j40\-\_\-receive\-\_\-callback}}
+\index{mrf24j40\-\_\-receive\-\_\-callback@{mrf24j40\-\_\-receive\-\_\-callback}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{mrf24j40\-\_\-receive\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-receive\-\_\-callback (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{____zigbee_8c_ae5780b8f43c80edf90d1a6292d3b9f81}
+
+
+Callback is actioned when mrf24j40 has a packet received off air. 
+
+Callback indicating the mrf24j40 has a packet ready. 
+
+Definition at line 67 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+References mrf24j40\-\_\-flush\-\_\-receive\-\_\-buffer(), mrf24j40\-\_\-long\-\_\-addr\-\_\-read(), and Z\-I\-Grx.
+
+
+
+Referenced by mrf24j40\-\_\-handle\-\_\-isr().
+
+
+\begin{DoxyCode}
+68 \{
+69     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} length,i,character;
+70     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} znewwp;
+71     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} data[128];
+72 
+73         length=\hyperlink{mrf24j40_8c_a90608c5fc9744ae883557236eb9b128e}{mrf24j40\_long\_addr\_read}(0x300);
+74         \textcolor{keywordflow}{for} (i=0;i<length;i++)
+75             \hyperlink{____zigbee_8c_a7e09ed165eb1e6f35f0cdac9147c221a}{ZIGrx}[i]=\hyperlink{mrf24j40_8c_a90608c5fc9744ae883557236eb9b128e}{mrf24j40\_long\_addr\_read}(0x301+i);
+76         \hyperlink{mrf24j40_8c_a43c2197b37525bad11b0a279543e14de}{mrf24j40\_flush\_receive\_buffer}();   
+77 \textcolor{comment}{/*  }
+78 \textcolor{comment}{    length=mrf24j40\_receive(data, 128);}
+79 \textcolor{comment}{    if (length>0)}
+80 \textcolor{comment}{        for (i=0;i<length;i++)}
+81 \textcolor{comment}{            \{}
+82 \textcolor{comment}{                    if (zwpointer!=127)             // if not last place in buffer}
+83 \textcolor{comment}{                        znewwp=zwpointer+1;         // place=place+1}
+84 \textcolor{comment}{                    else}
+85 \textcolor{comment}{                        znewwp=1;                   // else place=1}
+86 \textcolor{comment}{}
+87 \textcolor{comment}{                    if (zrpointer!=znewwp)          // if read pointer!=write pointer}
+88 \textcolor{comment}{                        ZIGrx[zwpointer++]=data[i]; // store received char}
+89 \textcolor{comment}{}
+90 \textcolor{comment}{                    if (zwpointer==128)             // if write pointer=length buffer}
+91 \textcolor{comment}{                        zwpointer=1;                // write pointer = 1}
+92 \textcolor{comment}{            \}}
+93 \textcolor{comment}{*/}
+94 \}
+\end{DoxyCode}
+\hypertarget{____zigbee_8c_a2ea8d1d035c0b178eb3b7f1dfbfe2822}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!mrf24j40\-\_\-transmit\-\_\-callback@{mrf24j40\-\_\-transmit\-\_\-callback}}
+\index{mrf24j40\-\_\-transmit\-\_\-callback@{mrf24j40\-\_\-transmit\-\_\-callback}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{mrf24j40\-\_\-transmit\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-transmit\-\_\-callback (
+\begin{DoxyParamCaption}
+\item[{uns8}]{status, }
+\item[{uns8}]{retries, }
+\item[{uns8}]{channel\-\_\-busy}
+\end{DoxyParamCaption}
+)}}\label{____zigbee_8c_a2ea8d1d035c0b178eb3b7f1dfbfe2822}
+
+
+Callback is actioned when mrf24j40 has finished transmitting a packet, or failed to do so. 
+
+Callback indicating the mrf24j40 has finished the transmission sequence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Set to 0 for success or 1 for failure \\
+\hline
+{\em retries} & Set to the number of retries \\
+\hline
+{\em channel\-\_\-busy} & Set to 1 if failure was due to the channel being busy. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+Referenced by mrf24j40\-\_\-handle\-\_\-isr().
+
+
+\begin{DoxyCode}
+61 \{
+62     Nop();
+63 \}
+\end{DoxyCode}
+\hypertarget{____zigbee_8c_a192704a8713d39ee1e28b430612e8352}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!Z\-I\-Gavailable@{Z\-I\-Gavailable}}
+\index{Z\-I\-Gavailable@{Z\-I\-Gavailable}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{Z\-I\-Gavailable}]{\setlength{\rightskip}{0pt plus 5cm}int Z\-I\-Gavailable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{____zigbee_8c_a192704a8713d39ee1e28b430612e8352}
+
+
+Definition at line 106 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+References zrpointer, and zwpointer.
+
+
+\begin{DoxyCode}
+107 \{
+108 \textcolor{preprocessor}{    #ifdef INTZIG}
+109 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return}(\hyperlink{____zigbee_8c_af89db163d6a2804a3cb1930203e79464}{zwpointer}!=\hyperlink{____zigbee_8c_acf6d217cd776f29002f156c425db27d5}{zrpointer});
+110 \textcolor{preprocessor}{    #else}
+111 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return}(-1);
+112 \textcolor{preprocessor}{    #endif}
+113 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{____zigbee_8c_ac8383b679d4f2d99116713e1662edaad}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!Z\-I\-Ggets@{Z\-I\-Ggets}}
+\index{Z\-I\-Ggets@{Z\-I\-Ggets}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{Z\-I\-Ggets}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Z\-I\-Ggets (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{zigstr}
+\end{DoxyParamCaption}
+)}}\label{____zigbee_8c_ac8383b679d4f2d99116713e1662edaad}
+
+
+Definition at line 115 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+References I\-N\-T\-S\-T\-A\-T, I\-N\-T\-S\-T\-A\-T\-\_\-\-R\-X\-I\-F, mrf24j40\-\_\-receive(), mrf24j40\-\_\-short\-\_\-addr\-\_\-read(), Z\-I\-Gdestadd, Z\-I\-Gdestpan, Z\-I\-Gsrcadd, and Z\-I\-Gsrcpan.
+
+
+\begin{DoxyCode}
+116 \{
+117     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} length,i;
+118     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} intstat;
+119     
+120 \textcolor{preprocessor}{    #ifndef INTZIG              // Zigbee not interrupt managed}
+121 \textcolor{preprocessor}{}    \textcolor{comment}{// read INSTAT Register}
+122     intstat = \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\_short\_addr\_read}(\hyperlink{mrf24j40__defines_8h_a555136974e2faa49b15189b7c27597c6}{INTSTAT});
+123     \textcolor{comment}{// test if we received something }
+124     \textcolor{keywordflow}{if} (test\_bit(intstat, \hyperlink{mrf24j40__defines_8h_a5b056f0a98d7434d1040e309e09b557d}{INTSTAT\_RXIF}))
+125     \{
+126         length=\hyperlink{mrf24j40_8c_a212ea4da8d06ced12fe211e681ec33b8}{mrf24j40\_receive}(zigstr,128);
+127         \hyperlink{____zigbee_8c_acfc6ab4e0204936d703f1b6dc3842935}{ZIGdestpan}=(zigstr[4]<<8)+zigstr[3];
+128         \hyperlink{____zigbee_8c_a6b21f66c8b0b0097626044c0d10e319b}{ZIGsrcpan}=(zigstr[8]<<8)+zigstr[7];
+129         \hyperlink{____zigbee_8c_ab528e5786d0d058d3c8d107aed5e0a96}{ZIGsrcadd}=(zigstr[10]<<8)+zigstr[9];
+130         \hyperlink{____zigbee_8c_a8b0ddb062fcc8fd28f602cee391feaab}{ZIGdestadd}=(zigstr[6]<<8)+zigstr[5];
+131         \textcolor{keywordflow}{for} (i=0;i<(length-15);i++)
+132             zigstr[i]=zigstr[i+11];
+133         zigstr[i]=0;
+134         \textcolor{keywordflow}{return}(length-15);
+135     \}
+136     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return}(0);
+137 \textcolor{preprocessor}{    #else}
+138 \textcolor{preprocessor}{}    Nop();                      \textcolor{comment}{// todo interrupt managed}
+139 \textcolor{preprocessor}{    #endif  }
+140 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{____zigbee_8c_a9aca1f0421f38d18b7c0e802f891480b}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!Z\-I\-Ginterrupt@{Z\-I\-Ginterrupt}}
+\index{Z\-I\-Ginterrupt@{Z\-I\-Ginterrupt}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{Z\-I\-Ginterrupt}]{\setlength{\rightskip}{0pt plus 5cm}void Z\-I\-Ginterrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{____zigbee_8c_a9aca1f0421f38d18b7c0e802f891480b}
+
+
+Definition at line 53 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+\begin{DoxyCode}
+54 \{
+55     Nop();
+56 \}
+\end{DoxyCode}
+\hypertarget{____zigbee_8c_adbec7751745aa0d32c274a18e2c55a81}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!Z\-I\-Gputs@{Z\-I\-Gputs}}
+\index{Z\-I\-Gputs@{Z\-I\-Gputs}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{Z\-I\-Gputs}]{\setlength{\rightskip}{0pt plus 5cm}void Z\-I\-Gputs (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{short\-\_\-address, }
+\item[{{\bf u8} $\ast$}]{zigstr, }
+\item[{{\bf u8}}]{length}
+\end{DoxyParamCaption}
+)}}\label{____zigbee_8c_adbec7751745aa0d32c274a18e2c55a81}
+
+
+Definition at line 98 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+References F\-T\-D\-A\-T\-A, mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address(), and pan\-\_\-id.
+
+
+\begin{DoxyCode}
+99 \{
+100     \hyperlink{mrf24j40_8c_abd67d5fb6662acd68fea3ad71ea3a5a6}{mrf24j40\_transmit\_to\_short\_address}(\hyperlink{ieee154_8h_a8ca7ec42dac2fcbb6f2c3a6b53a97424}{FTDATA}, 
+      \hyperlink{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{pan\_id}, \hyperlink{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}{short\_address}, zigstr, length, 1);
+101 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{____zigbee_8c_a8b0ddb062fcc8fd28f602cee391feaab}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!Z\-I\-Gdestadd@{Z\-I\-Gdestadd}}
+\index{Z\-I\-Gdestadd@{Z\-I\-Gdestadd}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{Z\-I\-Gdestadd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} Z\-I\-Gdestadd}}\label{____zigbee_8c_a8b0ddb062fcc8fd28f602cee391feaab}
+
+
+Definition at line 36 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+Referenced by Z\-I\-Ggets().
+
+\hypertarget{____zigbee_8c_acfc6ab4e0204936d703f1b6dc3842935}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!Z\-I\-Gdestpan@{Z\-I\-Gdestpan}}
+\index{Z\-I\-Gdestpan@{Z\-I\-Gdestpan}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{Z\-I\-Gdestpan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} Z\-I\-Gdestpan}}\label{____zigbee_8c_acfc6ab4e0204936d703f1b6dc3842935}
+
+
+Definition at line 34 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+Referenced by Z\-I\-Ggets().
+
+\hypertarget{____zigbee_8c_a7e09ed165eb1e6f35f0cdac9147c221a}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!Z\-I\-Grx@{Z\-I\-Grx}}
+\index{Z\-I\-Grx@{Z\-I\-Grx}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{Z\-I\-Grx}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Z\-I\-Grx\mbox{[}128\mbox{]}}}\label{____zigbee_8c_a7e09ed165eb1e6f35f0cdac9147c221a}
+
+
+Definition at line 31 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+Referenced by mrf24j40\-\_\-receive\-\_\-callback().
+
+\hypertarget{____zigbee_8c_ab528e5786d0d058d3c8d107aed5e0a96}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!Z\-I\-Gsrcadd@{Z\-I\-Gsrcadd}}
+\index{Z\-I\-Gsrcadd@{Z\-I\-Gsrcadd}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{Z\-I\-Gsrcadd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} Z\-I\-Gsrcadd}}\label{____zigbee_8c_ab528e5786d0d058d3c8d107aed5e0a96}
+
+
+Definition at line 37 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+Referenced by Z\-I\-Ggets().
+
+\hypertarget{____zigbee_8c_a6b21f66c8b0b0097626044c0d10e319b}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!Z\-I\-Gsrcpan@{Z\-I\-Gsrcpan}}
+\index{Z\-I\-Gsrcpan@{Z\-I\-Gsrcpan}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{Z\-I\-Gsrcpan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} Z\-I\-Gsrcpan}}\label{____zigbee_8c_a6b21f66c8b0b0097626044c0d10e319b}
+
+
+Definition at line 35 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+Referenced by Z\-I\-Ggets().
+
+\hypertarget{____zigbee_8c_acf6d217cd776f29002f156c425db27d5}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!zrpointer@{zrpointer}}
+\index{zrpointer@{zrpointer}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{zrpointer}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char zrpointer}}\label{____zigbee_8c_acf6d217cd776f29002f156c425db27d5}
+
+
+Definition at line 32 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+Referenced by Z\-I\-Gavailable().
+
+\hypertarget{____zigbee_8c_af89db163d6a2804a3cb1930203e79464}{\index{\-\_\-\-\_\-zigbee.\-c@{\-\_\-\-\_\-zigbee.\-c}!zwpointer@{zwpointer}}
+\index{zwpointer@{zwpointer}!__zigbee.c@{\-\_\-\-\_\-zigbee.\-c}}
+\subsubsection[{zwpointer}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char zwpointer}}\label{____zigbee_8c_af89db163d6a2804a3cb1930203e79464}
+
+
+Definition at line 32 of file \-\_\-\-\_\-zigbee.\-c.
+
+
+
+Referenced by Z\-I\-Gavailable().
+

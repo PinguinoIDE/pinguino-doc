@@ -1,0 +1,204 @@
+\hypertarget{flashmem_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/flashmem.c File Reference}
+\label{flashmem_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/flashmem.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/flashmem.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{flashmem_8c_ae5771afa07beb31c27d64e48efe963cf}{\-\_\-\-\_\-\-F\-L\-A\-S\-H\-M\-E\-M\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{flashmem_8c_a4f7fa111d630a8f3d8239ad8ca9c4b13}{Total\-Mem} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{flashmem_8c_a58bcc370b89e24af6f628c3a70513ec1}{Flash\-Operation} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} operation)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{flashmem_8c_a7d244cf43459fabbbc2a18254e993dcb}{Flash\-Clear\-Error} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{flashmem_8c_aff354ca5f8aa716260a345379a76b49d}{Page\-Erase} (void $\ast$address)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{flashmem_8c_a09fe248679fc0e177eb2b8f94462cd23}{Word\-Write} (void $\ast$address, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} data)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{flashmem_8c_ad5cf494cd573719bcc2c6d999c50af1a}{Row\-Write} (void $\ast$address, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{flashmem_8c_ae5771afa07beb31c27d64e48efe963cf}{\index{flashmem.\-c@{flashmem.\-c}!\-\_\-\-\_\-\-F\-L\-A\-S\-H\-M\-E\-M\-\_\-\-\_\-@{\-\_\-\-\_\-\-F\-L\-A\-S\-H\-M\-E\-M\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-F\-L\-A\-S\-H\-M\-E\-M\-\_\-\-\_\-@{\-\_\-\-\_\-\-F\-L\-A\-S\-H\-M\-E\-M\-\_\-\-\_\-}!flashmem.c@{flashmem.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-F\-L\-A\-S\-H\-M\-E\-M\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-F\-L\-A\-S\-H\-M\-E\-M\-\_\-\-\_\-}}\label{flashmem_8c_ae5771afa07beb31c27d64e48efe963cf}
+
+
+Definition at line 25 of file flashmem.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{flashmem_8c_a7d244cf43459fabbbc2a18254e993dcb}{\index{flashmem.\-c@{flashmem.\-c}!Flash\-Clear\-Error@{Flash\-Clear\-Error}}
+\index{Flash\-Clear\-Error@{Flash\-Clear\-Error}!flashmem.c@{flashmem.\-c}}
+\subsubsection[{Flash\-Clear\-Error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Flash\-Clear\-Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{flashmem_8c_a7d244cf43459fabbbc2a18254e993dcb}
+
+
+Definition at line 72 of file flashmem.\-c.
+
+
+
+References Flash\-Operation().
+
+
+
+Referenced by Page\-Erase(), Row\-Write(), and Word\-Write().
+
+
+\begin{DoxyCode}
+73 \{
+74     \textcolor{keywordflow}{return}(\hyperlink{flashmem_8c_a58bcc370b89e24af6f628c3a70513ec1}{FlashOperation}(0x4000));
+75 \}
+\end{DoxyCode}
+\hypertarget{flashmem_8c_a58bcc370b89e24af6f628c3a70513ec1}{\index{flashmem.\-c@{flashmem.\-c}!Flash\-Operation@{Flash\-Operation}}
+\index{Flash\-Operation@{Flash\-Operation}!flashmem.c@{flashmem.\-c}}
+\subsubsection[{Flash\-Operation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Flash\-Operation (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{operation}
+\end{DoxyParamCaption}
+)}}\label{flashmem_8c_a58bcc370b89e24af6f628c3a70513ec1}
+
+
+Definition at line 39 of file flashmem.\-c.
+
+
+
+Referenced by Flash\-Clear\-Error(), Page\-Erase(), Row\-Write(), and Word\-Write().
+
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} t0;
+42     
+43     \textcolor{comment}{// disable interrupt}
+44     \textcolor{keyword}{asm}(\textcolor{stringliteral}{"di"});
+45     NVMCON=operation;
+46     
+47     \textcolor{comment}{// wait for LVD to start up ( at least 6 µS )}
+48     t0 = \_CP0\_GET\_COUNT();
+49     \textcolor{keywordflow}{while} (\_CP0\_GET\_COUNT() - t0 < (80/2)*6);
+50     
+51     \textcolor{comment}{// unlock system}
+52     NVMKEY=0xAA996655;
+53     NVMKEY=0x556699AA;
+54     
+55     NVMCONSET=NVMCON\_WR;
+56     
+57     \textcolor{comment}{// Wait for WR bit to clear}
+58     \textcolor{keywordflow}{while}(NVMCON & NVMCON\_WR);
+59 
+60     \textcolor{comment}{// Disable Flash Write/Erase operations}
+61     NVMCONCLR = NVMCON\_WREN;
+62         
+63     \textcolor{comment}{// enable interrupt}
+64     \textcolor{keyword}{asm}(\textcolor{stringliteral}{"ei"});
+65         
+66     \textcolor{keywordflow}{return}(NVMCON & (\_NVMCON\_WRERR\_MASK | \_NVMCON\_LVDERR\_MASK));    \textcolor{comment}{// error if != 0}
+67 \}
+\end{DoxyCode}
+\hypertarget{flashmem_8c_aff354ca5f8aa716260a345379a76b49d}{\index{flashmem.\-c@{flashmem.\-c}!Page\-Erase@{Page\-Erase}}
+\index{Page\-Erase@{Page\-Erase}!flashmem.c@{flashmem.\-c}}
+\subsubsection[{Page\-Erase}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Page\-Erase (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{address}
+\end{DoxyParamCaption}
+)}}\label{flashmem_8c_aff354ca5f8aa716260a345379a76b49d}
+
+
+Definition at line 77 of file flashmem.\-c.
+
+
+
+References Flash\-Clear\-Error(), and Flash\-Operation().
+
+
+\begin{DoxyCode}
+78 \{
+79     \textcolor{comment}{// check for error in the NVMCON register}
+80     \textcolor{keywordflow}{if} (NVMCON & (\_NVMCON\_WRERR\_MASK | \_NVMCON\_LVDERR\_MASK)) \hyperlink{flashmem_8c_a7d244cf43459fabbbc2a18254e993dcb}{FlashClearError}();
+81     \textcolor{comment}{// set Address to erase and Non Volatile Memory instruction ERASE PAGE}
+82     NVMADDR = (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})address & 0x1fffffff ;
+83     \textcolor{keywordflow}{return}(\hyperlink{flashmem_8c_a58bcc370b89e24af6f628c3a70513ec1}{FlashOperation}(0x4004));
+84 \}
+\end{DoxyCode}
+\hypertarget{flashmem_8c_ad5cf494cd573719bcc2c6d999c50af1a}{\index{flashmem.\-c@{flashmem.\-c}!Row\-Write@{Row\-Write}}
+\index{Row\-Write@{Row\-Write}!flashmem.c@{flashmem.\-c}}
+\subsubsection[{Row\-Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Row\-Write (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{address, }
+\item[{{\bf u32} $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{flashmem_8c_ad5cf494cd573719bcc2c6d999c50af1a}
+
+
+Definition at line 99 of file flashmem.\-c.
+
+
+
+References Flash\-Clear\-Error(), and Flash\-Operation().
+
+
+\begin{DoxyCode}
+100 \{
+101     \textcolor{comment}{// check for error in the NVMCON register}
+102     \textcolor{keywordflow}{if} (NVMCON & (\_NVMCON\_WRERR\_MASK | \_NVMCON\_LVDERR\_MASK)) \hyperlink{flashmem_8c_a7d244cf43459fabbbc2a18254e993dcb}{FlashClearError}();
+103     \textcolor{comment}{// set Address to erase and Non Volatile Memory instruction ERASE PAGE}
+104     NVMADDR = (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32}) address & 0x1fffffff;
+105     NVMDATA = (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32}) data & 0x1fffffff;
+106     \textcolor{keywordflow}{return}(\hyperlink{flashmem_8c_a58bcc370b89e24af6f628c3a70513ec1}{FlashOperation}(0x4003));
+107 \}
+\end{DoxyCode}
+\hypertarget{flashmem_8c_a4f7fa111d630a8f3d8239ad8ca9c4b13}{\index{flashmem.\-c@{flashmem.\-c}!Total\-Mem@{Total\-Mem}}
+\index{Total\-Mem@{Total\-Mem}!flashmem.c@{flashmem.\-c}}
+\subsubsection[{Total\-Mem}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Total\-Mem (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{flashmem_8c_a4f7fa111d630a8f3d8239ad8ca9c4b13}
+
+
+Definition at line 31 of file flashmem.\-c.
+
+
+\begin{DoxyCode}
+32 \{
+33     \textcolor{keywordflow}{return}(BMXPFMSZ+0x9D000000);
+34 \}
+\end{DoxyCode}
+\hypertarget{flashmem_8c_a09fe248679fc0e177eb2b8f94462cd23}{\index{flashmem.\-c@{flashmem.\-c}!Word\-Write@{Word\-Write}}
+\index{Word\-Write@{Word\-Write}!flashmem.c@{flashmem.\-c}}
+\subsubsection[{Word\-Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Word\-Write (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{address, }
+\item[{{\bf u32}}]{data}
+\end{DoxyParamCaption}
+)}}\label{flashmem_8c_a09fe248679fc0e177eb2b8f94462cd23}
+
+
+Definition at line 89 of file flashmem.\-c.
+
+
+
+References Flash\-Clear\-Error(), and Flash\-Operation().
+
+
+\begin{DoxyCode}
+90 \{
+91     \textcolor{comment}{// check for error in the NVMCON register}
+92     \textcolor{keywordflow}{if} (NVMCON & (\_NVMCON\_WRERR\_MASK | \_NVMCON\_LVDERR\_MASK)) \hyperlink{flashmem_8c_a7d244cf43459fabbbc2a18254e993dcb}{FlashClearError}();
+93     \textcolor{comment}{// set Address to erase and Non Volatile Memory instruction ERASE PAGE}
+94     NVMADDR = (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32}) address & 0x1fffffff ;
+95     NVMDATA = (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32}) data ;
+96     \textcolor{keywordflow}{return}(\hyperlink{flashmem_8c_a58bcc370b89e24af6f628c3a70513ec1}{FlashOperation}(0x4001));
+97 \}
+\end{DoxyCode}

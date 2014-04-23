@@ -1,0 +1,977 @@
+\hypertarget{p8_2pinguino_2core_2pmp_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/pmp.h File Reference}
+\label{p8_2pinguino_2core_2pmp_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/pmp.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/pmp.\-h}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_aa30b1acf2ed53809041dd258af692463}{P\-M\-P\-\_\-wait}()~while(P\-M\-M\-O\-D\-E\-Hbits.\-B\-U\-S\-Y)
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a67f2266d91d76713fbc37858dbcafa40}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-R\-Q\-\_\-\-O\-F\-F}~0b00
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_ad09ff64e8c921361125913d162525a91}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-B\-U\-F\-\_\-\-I\-R\-Q}~0b10
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_ac384d8d950520c8744eabaa2e8903b3f}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-C\-Y\-\_\-\-I\-R\-Q}~0b01
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a367bd66762f975a5bbf99c41d8443701}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-B\-U\-F\-F\-E\-R}~0b11
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a89e4514a2c1c147367b1d47a0141874c}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-D\-E\-C\-\_\-\-A\-D\-D\-R}~0b10
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a1875a5070735513e6a5e3fae319ee28d}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-A\-D\-D\-R}~0b01
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a0a3610fa36a1df31618d3552bbe8fb0a}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-O\-F\-F}~0b00
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a188d811c789266ff20a46234aeb95ef8}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-8\-B\-I\-T}~0
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_ae2a1ed287a538a39f3323858aed4eb70}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-16\-B\-I\-T}~1
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a9b74a0291a4a131372a69f8ae528661b}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R1}~0b11
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a86d806f80efa28ee2e48f56471e0a5a6}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R2}~0b10
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a6cd38d02842722d49e3a77a04c4ad1f3}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-E\-S\-L\-A\-V\-E}~0b01
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_ae5c2ac8366eff9fc691a4583cf4e73d8}{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-S\-L\-A\-V\-E}~0b00
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_acf66d3a0ad340950fc924c30ab4064af}{P\-M\-P\-\_\-\-M\-U\-X\-\_\-16\-X8}~0b10
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_ae2167ebd8de68c8f030be14dbc52d0de}{P\-M\-P\-\_\-\-M\-U\-X\-\_\-8\-X8}~0b01
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a85dcb5b8038ed750138d64050892af7e}{P\-M\-P\-\_\-\-M\-U\-X\-\_\-\-O\-F\-F}~0b00
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a043b6e882941e37312101ca0b083785c}{P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-N}~0b10
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a1b4a639b9ac3ab5af501fcf67462cd23}{P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-F\-F}~0b00
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_ad26bf66a3fb6cd0cfe0b5cecdc76ab37}{P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-L\-O\-W}~0
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_acadd637c87d8214d11bf86d1008e5d6f}{P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-H\-I\-G\-H}~1
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_acc03ff8e0542a16ebf8c307ca45b72bf}{P\-M\-A0}~1$<$$<$0
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_ab6cf1b89ffc707c3b9334f99a4bfd4df}{P\-M\-A1}~1$<$$<$1
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a5a96bb7b42d52131ecb593e327841574}{P\-M\-A2}~1$<$$<$2
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a64eabdce3ef333b479e2eaea64e7294d}{P\-M\-A3}~1$<$$<$3
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a378957938266ef57f47776a58c479526}{P\-M\-A4}~1$<$$<$4
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_ab9122dc6a1574ed2e9465a899dc9c524}{P\-M\-A5}~1$<$$<$5
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_ab9ecb3b3da8cfa14f6a51d5b5d76ace6}{P\-M\-A6}~1$<$$<$6
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a2f3522efa9843c158bd7f248200c5fbd}{P\-M\-A7}~1$<$$<$7
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a0e5c7e1233639bdfe74a2fad85c90598}{P\-M\-A8}~1$<$$<$8
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a17ade67268d9eaddcfdbab4f900a35ad}{P\-M\-A9}~1$<$$<$9
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a66d83bd1ef3f36291ada02f0f855a895}{P\-M\-A10}~1$<$$<$10
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_acb6b5c5f058ab8e068494d7c39c51cf3}{P\-M\-A11}~1$<$$<$11
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_abd9cc3f28ae32eb7b202c57babe91fa1}{P\-M\-A12}~1$<$$<$12
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a9a2805fda0452b3a7425980e9ce09d82}{P\-M\-A13}~1$<$$<$13
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a9dafb84818b5f9a67dbf22a7549b7cdc}{P\-M\-A14}~1$<$$<$14
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_aa60f33743582d6f4f52ca31fd870223d}{P\-M\-A15}~1$<$$<$15
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a298dc41348434ae213a26c1c7b1e48a5}{P\-M\-C\-S}~1$<$$<$14
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a541773c3896aa2095037987a634e6478}{P\-M\-C\-S1}~1$<$$<$14
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_afa1d5c77f65692bebebb69809a8e944f}{P\-M\-C\-S2}~1$<$$<$15
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a8d53d72c93cd93b7257b773cb4ea5ed1}{P\-M\-R\-D}~1$<$$<$13
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_a0e5f43df36e68570dbfdfc139e4164b7}{P\-M\-R\-D\-\_\-\-P\-M\-W\-R}~1$<$$<$13
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_add1a2290ca0bda0d87bf3b908201e983}{P\-M\-W\-R}~1$<$$<$12
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_ab4066aba659ae901cfd9743eac8a65b6}{P\-M\-E\-N\-B}~1$<$$<$12
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2pmp_8h_ab1a3912ca770dac7812a4eb15e87e023}{P\-M\-B\-E}~1$<$$<$11
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2core_2pmp_8h_a9253e4b5bd1ab14c9436dcb2c1a5376c}{P\-M\-P\-\_\-set\-Mode} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p8_2pinguino_2core_2pmp_8h_af5b638a0d7bd3f980e644ee792a66792}{P\-M\-P\-\_\-set\-Address} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{p8_2pinguino_2core_2pmp_8h_abf2cbd91801b06e38e4300a6de8147cc}{P\-M\-P\-\_\-set\-Control} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{p8_2pinguino_2core_2pmp_8h_a4fce58c9d0e5fdd9c2ccfd3bec5bfdad}{P\-M\-P\-\_\-set\-Polarity} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p8_2pinguino_2core_2pmp_8h_a936374562c61169e1985dae91cad06b6}{P\-M\-P\-\_\-set\-Mux} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p8_2pinguino_2core_2pmp_8h_a325f86fb8ca941da985afdcfe38221f9}{P\-M\-P\-\_\-set\-Width} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p8_2pinguino_2core_2pmp_8h_afa90ca4d60c537bf67e82da5d6e9f93d}{P\-M\-P\-\_\-set\-Wait\-States} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} beg, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} mid, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} end)
+\item 
+void \hyperlink{p8_2pinguino_2core_2pmp_8h_aaa6aeb7280a98a2613062d4106124598}{P\-M\-P\-\_\-auto\-Increment} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a151f780fb455885061d3b77ec1c90c03}{s8} inc)
+\item 
+void \hyperlink{p8_2pinguino_2core_2pmp_8h_a69be3dc7649595c21f405f1d4c0476b0}{P\-M\-P\-\_\-init} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2pmp_8h_aa72da3e4a59b46ae169d7b19c5d412e4}{P\-M\-P\-\_\-send\-Address} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{p8_2pinguino_2core_2pmp_8h_a9ee2efb6763c08a55c1793e9afb4a881}{P\-M\-P\-\_\-write} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{p8_2pinguino_2core_2pmp_8h_a9ac4f9e3f7644d2c5cb033103e899766}{P\-M\-P\-\_\-read} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_acc03ff8e0542a16ebf8c307ca45b72bf}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A0@{P\-M\-A0}}
+\index{P\-M\-A0@{P\-M\-A0}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A0}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A0~1$<$$<$0}}\label{p8_2pinguino_2core_2pmp_8h_acc03ff8e0542a16ebf8c307ca45b72bf}
+
+
+Definition at line 68 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_ab6cf1b89ffc707c3b9334f99a4bfd4df}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A1@{P\-M\-A1}}
+\index{P\-M\-A1@{P\-M\-A1}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A1}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A1~1$<$$<$1}}\label{p8_2pinguino_2core_2pmp_8h_ab6cf1b89ffc707c3b9334f99a4bfd4df}
+
+
+Definition at line 69 of file pmp.\-h.
+
+
+
+Referenced by S\-S\-D1306\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a66d83bd1ef3f36291ada02f0f855a895}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A10@{P\-M\-A10}}
+\index{P\-M\-A10@{P\-M\-A10}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A10}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A10~1$<$$<$10}}\label{p8_2pinguino_2core_2pmp_8h_a66d83bd1ef3f36291ada02f0f855a895}
+
+
+Definition at line 78 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_acb6b5c5f058ab8e068494d7c39c51cf3}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A11@{P\-M\-A11}}
+\index{P\-M\-A11@{P\-M\-A11}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A11}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A11~1$<$$<$11}}\label{p8_2pinguino_2core_2pmp_8h_acb6b5c5f058ab8e068494d7c39c51cf3}
+
+
+Definition at line 79 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_abd9cc3f28ae32eb7b202c57babe91fa1}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A12@{P\-M\-A12}}
+\index{P\-M\-A12@{P\-M\-A12}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A12}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A12~1$<$$<$12}}\label{p8_2pinguino_2core_2pmp_8h_abd9cc3f28ae32eb7b202c57babe91fa1}
+
+
+Definition at line 80 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a9a2805fda0452b3a7425980e9ce09d82}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A13@{P\-M\-A13}}
+\index{P\-M\-A13@{P\-M\-A13}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A13}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A13~1$<$$<$13}}\label{p8_2pinguino_2core_2pmp_8h_a9a2805fda0452b3a7425980e9ce09d82}
+
+
+Definition at line 81 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a9dafb84818b5f9a67dbf22a7549b7cdc}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A14@{P\-M\-A14}}
+\index{P\-M\-A14@{P\-M\-A14}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A14}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A14~1$<$$<$14}}\label{p8_2pinguino_2core_2pmp_8h_a9dafb84818b5f9a67dbf22a7549b7cdc}
+
+
+Definition at line 82 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_aa60f33743582d6f4f52ca31fd870223d}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A15@{P\-M\-A15}}
+\index{P\-M\-A15@{P\-M\-A15}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A15}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A15~1$<$$<$15}}\label{p8_2pinguino_2core_2pmp_8h_aa60f33743582d6f4f52ca31fd870223d}
+
+
+Definition at line 83 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a5a96bb7b42d52131ecb593e327841574}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A2@{P\-M\-A2}}
+\index{P\-M\-A2@{P\-M\-A2}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A2}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A2~1$<$$<$2}}\label{p8_2pinguino_2core_2pmp_8h_a5a96bb7b42d52131ecb593e327841574}
+
+
+Definition at line 70 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a64eabdce3ef333b479e2eaea64e7294d}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A3@{P\-M\-A3}}
+\index{P\-M\-A3@{P\-M\-A3}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A3}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A3~1$<$$<$3}}\label{p8_2pinguino_2core_2pmp_8h_a64eabdce3ef333b479e2eaea64e7294d}
+
+
+Definition at line 71 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a378957938266ef57f47776a58c479526}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A4@{P\-M\-A4}}
+\index{P\-M\-A4@{P\-M\-A4}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A4}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A4~1$<$$<$4}}\label{p8_2pinguino_2core_2pmp_8h_a378957938266ef57f47776a58c479526}
+
+
+Definition at line 72 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_ab9122dc6a1574ed2e9465a899dc9c524}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A5@{P\-M\-A5}}
+\index{P\-M\-A5@{P\-M\-A5}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A5}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A5~1$<$$<$5}}\label{p8_2pinguino_2core_2pmp_8h_ab9122dc6a1574ed2e9465a899dc9c524}
+
+
+Definition at line 73 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_ab9ecb3b3da8cfa14f6a51d5b5d76ace6}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A6@{P\-M\-A6}}
+\index{P\-M\-A6@{P\-M\-A6}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A6}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A6~1$<$$<$6}}\label{p8_2pinguino_2core_2pmp_8h_ab9ecb3b3da8cfa14f6a51d5b5d76ace6}
+
+
+Definition at line 74 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a2f3522efa9843c158bd7f248200c5fbd}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A7@{P\-M\-A7}}
+\index{P\-M\-A7@{P\-M\-A7}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A7}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A7~1$<$$<$7}}\label{p8_2pinguino_2core_2pmp_8h_a2f3522efa9843c158bd7f248200c5fbd}
+
+
+Definition at line 75 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a0e5c7e1233639bdfe74a2fad85c90598}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A8@{P\-M\-A8}}
+\index{P\-M\-A8@{P\-M\-A8}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A8}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A8~1$<$$<$8}}\label{p8_2pinguino_2core_2pmp_8h_a0e5c7e1233639bdfe74a2fad85c90598}
+
+
+Definition at line 76 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a17ade67268d9eaddcfdbab4f900a35ad}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-A9@{P\-M\-A9}}
+\index{P\-M\-A9@{P\-M\-A9}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-A9}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-A9~1$<$$<$9}}\label{p8_2pinguino_2core_2pmp_8h_a17ade67268d9eaddcfdbab4f900a35ad}
+
+
+Definition at line 77 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_ab1a3912ca770dac7812a4eb15e87e023}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-B\-E@{P\-M\-B\-E}}
+\index{P\-M\-B\-E@{P\-M\-B\-E}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-B\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-B\-E~1$<$$<$11}}\label{p8_2pinguino_2core_2pmp_8h_ab1a3912ca770dac7812a4eb15e87e023}
+
+
+Definition at line 92 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a298dc41348434ae213a26c1c7b1e48a5}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-C\-S@{P\-M\-C\-S}}
+\index{P\-M\-C\-S@{P\-M\-C\-S}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-C\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-C\-S~1$<$$<$14}}\label{p8_2pinguino_2core_2pmp_8h_a298dc41348434ae213a26c1c7b1e48a5}
+
+
+Definition at line 85 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a541773c3896aa2095037987a634e6478}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-C\-S1@{P\-M\-C\-S1}}
+\index{P\-M\-C\-S1@{P\-M\-C\-S1}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-C\-S1}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-C\-S1~1$<$$<$14}}\label{p8_2pinguino_2core_2pmp_8h_a541773c3896aa2095037987a634e6478}
+
+
+Definition at line 86 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_afa1d5c77f65692bebebb69809a8e944f}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-C\-S2@{P\-M\-C\-S2}}
+\index{P\-M\-C\-S2@{P\-M\-C\-S2}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-C\-S2}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-C\-S2~1$<$$<$15}}\label{p8_2pinguino_2core_2pmp_8h_afa1d5c77f65692bebebb69809a8e944f}
+
+
+Definition at line 87 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_ab4066aba659ae901cfd9743eac8a65b6}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-E\-N\-B@{P\-M\-E\-N\-B}}
+\index{P\-M\-E\-N\-B@{P\-M\-E\-N\-B}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-E\-N\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-E\-N\-B~1$<$$<$12}}\label{p8_2pinguino_2core_2pmp_8h_ab4066aba659ae901cfd9743eac8a65b6}
+
+
+Definition at line 91 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_acadd637c87d8214d11bf86d1008e5d6f}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-H\-I\-G\-H@{P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-H\-I\-G\-H}}
+\index{P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-H\-I\-G\-H@{P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-H\-I\-G\-H}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-H\-I\-G\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-H\-I\-G\-H~1}}\label{p8_2pinguino_2core_2pmp_8h_acadd637c87d8214d11bf86d1008e5d6f}
+
+
+Definition at line 66 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_ad26bf66a3fb6cd0cfe0b5cecdc76ab37}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-L\-O\-W@{P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-L\-O\-W}}
+\index{P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-L\-O\-W@{P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-L\-O\-W}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-L\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-A\-C\-T\-I\-V\-E\-\_\-\-L\-O\-W~0}}\label{p8_2pinguino_2core_2pmp_8h_ad26bf66a3fb6cd0cfe0b5cecdc76ab37}
+
+
+Definition at line 65 of file pmp.\-h.
+
+
+
+Referenced by S\-S\-D1306\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a1b4a639b9ac3ab5af501fcf67462cd23}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-F\-F@{P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-F\-F}}
+\index{P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-F\-F@{P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-F\-F}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-F\-F~0b00}}\label{p8_2pinguino_2core_2pmp_8h_a1b4a639b9ac3ab5af501fcf67462cd23}
+
+
+Definition at line 63 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a043b6e882941e37312101ca0b083785c}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-N@{P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-N}}
+\index{P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-N@{P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-N}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-C\-S\-\_\-\-O\-N~0b10}}\label{p8_2pinguino_2core_2pmp_8h_a043b6e882941e37312101ca0b083785c}
+
+
+Definition at line 62 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_ae2a1ed287a538a39f3323858aed4eb70}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-16\-B\-I\-T@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-16\-B\-I\-T}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-16\-B\-I\-T@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-16\-B\-I\-T}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-16\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-16\-B\-I\-T~1}}\label{p8_2pinguino_2core_2pmp_8h_ae2a1ed287a538a39f3323858aed4eb70}
+
+
+Definition at line 51 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-read(), P\-M\-P\-\_\-set\-Width(), and P\-M\-P\-\_\-write().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a188d811c789266ff20a46234aeb95ef8}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-8\-B\-I\-T@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-8\-B\-I\-T}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-8\-B\-I\-T@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-8\-B\-I\-T}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-8\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-8\-B\-I\-T~0}}\label{p8_2pinguino_2core_2pmp_8h_a188d811c789266ff20a46234aeb95ef8}
+
+
+Definition at line 50 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-set\-Width(), and S\-S\-D1306\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_ad09ff64e8c921361125913d162525a91}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-B\-U\-F\-\_\-\-I\-R\-Q@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-B\-U\-F\-\_\-\-I\-R\-Q}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-B\-U\-F\-\_\-\-I\-R\-Q@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-B\-U\-F\-\_\-\-I\-R\-Q}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-B\-U\-F\-\_\-\-I\-R\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-B\-U\-F\-\_\-\-I\-R\-Q~0b10}}\label{p8_2pinguino_2core_2pmp_8h_ad09ff64e8c921361125913d162525a91}
+
+
+Definition at line 42 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_ac384d8d950520c8744eabaa2e8903b3f}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-C\-Y\-\_\-\-I\-R\-Q@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-C\-Y\-\_\-\-I\-R\-Q}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-C\-Y\-\_\-\-I\-R\-Q@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-C\-Y\-\_\-\-I\-R\-Q}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-C\-Y\-\_\-\-I\-R\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-C\-Y\-\_\-\-I\-R\-Q~0b01}}\label{p8_2pinguino_2core_2pmp_8h_ac384d8d950520c8744eabaa2e8903b3f}
+
+
+Definition at line 43 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a89e4514a2c1c147367b1d47a0141874c}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-D\-E\-C\-\_\-\-A\-D\-D\-R@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-D\-E\-C\-\_\-\-A\-D\-D\-R}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-D\-E\-C\-\_\-\-A\-D\-D\-R@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-D\-E\-C\-\_\-\-A\-D\-D\-R}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-D\-E\-C\-\_\-\-A\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-D\-E\-C\-\_\-\-A\-D\-D\-R~0b10}}\label{p8_2pinguino_2core_2pmp_8h_a89e4514a2c1c147367b1d47a0141874c}
+
+
+Definition at line 46 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-auto\-Increment(), and P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a6cd38d02842722d49e3a77a04c4ad1f3}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-E\-S\-L\-A\-V\-E@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-E\-S\-L\-A\-V\-E}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-E\-S\-L\-A\-V\-E@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-E\-S\-L\-A\-V\-E}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-E\-S\-L\-A\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-E\-S\-L\-A\-V\-E~0b01}}\label{p8_2pinguino_2core_2pmp_8h_a6cd38d02842722d49e3a77a04c4ad1f3}
+
+
+Definition at line 55 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a1875a5070735513e6a5e3fae319ee28d}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-A\-D\-D\-R@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-A\-D\-D\-R}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-A\-D\-D\-R@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-A\-D\-D\-R}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-A\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-A\-D\-D\-R~0b01}}\label{p8_2pinguino_2core_2pmp_8h_a1875a5070735513e6a5e3fae319ee28d}
+
+
+Definition at line 47 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-auto\-Increment(), and P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a367bd66762f975a5bbf99c41d8443701}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-B\-U\-F\-F\-E\-R@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-B\-U\-F\-F\-E\-R}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-B\-U\-F\-F\-E\-R@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-B\-U\-F\-F\-E\-R}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-B\-U\-F\-F\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-B\-U\-F\-F\-E\-R~0b11}}\label{p8_2pinguino_2core_2pmp_8h_a367bd66762f975a5bbf99c41d8443701}
+
+
+Definition at line 45 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-auto\-Increment(), and P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a0a3610fa36a1df31618d3552bbe8fb0a}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-O\-F\-F@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-O\-F\-F}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-O\-F\-F@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-O\-F\-F}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-N\-C\-\_\-\-O\-F\-F~0b00}}\label{p8_2pinguino_2core_2pmp_8h_a0a3610fa36a1df31618d3552bbe8fb0a}
+
+
+Definition at line 48 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a67f2266d91d76713fbc37858dbcafa40}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-R\-Q\-\_\-\-O\-F\-F@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-R\-Q\-\_\-\-O\-F\-F}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-R\-Q\-\_\-\-O\-F\-F@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-R\-Q\-\_\-\-O\-F\-F}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-R\-Q\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-I\-R\-Q\-\_\-\-O\-F\-F~0b00}}\label{p8_2pinguino_2core_2pmp_8h_a67f2266d91d76713fbc37858dbcafa40}
+
+
+Definition at line 41 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a9b74a0291a4a131372a69f8ae528661b}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R1@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R1}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R1@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R1}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R1}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R1~0b11}}\label{p8_2pinguino_2core_2pmp_8h_a9b74a0291a4a131372a69f8ae528661b}
+
+
+Definition at line 53 of file pmp.\-h.
+
+
+
+Referenced by S\-S\-D1306\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a86d806f80efa28ee2e48f56471e0a5a6}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R2@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R2}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R2@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R2}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-M\-A\-S\-T\-E\-R2~0b10}}\label{p8_2pinguino_2core_2pmp_8h_a86d806f80efa28ee2e48f56471e0a5a6}
+
+
+Definition at line 54 of file pmp.\-h.
+
+
+
+Referenced by S\-S\-D1306\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_ae5c2ac8366eff9fc691a4583cf4e73d8}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-S\-L\-A\-V\-E@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-S\-L\-A\-V\-E}}
+\index{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-S\-L\-A\-V\-E@{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-S\-L\-A\-V\-E}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-S\-L\-A\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-O\-D\-E\-\_\-\-S\-L\-A\-V\-E~0b00}}\label{p8_2pinguino_2core_2pmp_8h_ae5c2ac8366eff9fc691a4583cf4e73d8}
+
+
+Definition at line 56 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_acf66d3a0ad340950fc924c30ab4064af}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-U\-X\-\_\-16\-X8@{P\-M\-P\-\_\-\-M\-U\-X\-\_\-16\-X8}}
+\index{P\-M\-P\-\_\-\-M\-U\-X\-\_\-16\-X8@{P\-M\-P\-\_\-\-M\-U\-X\-\_\-16\-X8}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-U\-X\-\_\-16\-X8}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-U\-X\-\_\-16\-X8~0b10}}\label{p8_2pinguino_2core_2pmp_8h_acf66d3a0ad340950fc924c30ab4064af}
+
+
+Definition at line 58 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_ae2167ebd8de68c8f030be14dbc52d0de}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-U\-X\-\_\-8\-X8@{P\-M\-P\-\_\-\-M\-U\-X\-\_\-8\-X8}}
+\index{P\-M\-P\-\_\-\-M\-U\-X\-\_\-8\-X8@{P\-M\-P\-\_\-\-M\-U\-X\-\_\-8\-X8}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-U\-X\-\_\-8\-X8}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-U\-X\-\_\-8\-X8~0b01}}\label{p8_2pinguino_2core_2pmp_8h_ae2167ebd8de68c8f030be14dbc52d0de}
+
+
+Definition at line 59 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a85dcb5b8038ed750138d64050892af7e}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-\-M\-U\-X\-\_\-\-O\-F\-F@{P\-M\-P\-\_\-\-M\-U\-X\-\_\-\-O\-F\-F}}
+\index{P\-M\-P\-\_\-\-M\-U\-X\-\_\-\-O\-F\-F@{P\-M\-P\-\_\-\-M\-U\-X\-\_\-\-O\-F\-F}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-\-M\-U\-X\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-\-M\-U\-X\-\_\-\-O\-F\-F~0b00}}\label{p8_2pinguino_2core_2pmp_8h_a85dcb5b8038ed750138d64050892af7e}
+
+
+Definition at line 60 of file pmp.\-h.
+
+
+
+Referenced by S\-S\-D1306\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_aa30b1acf2ed53809041dd258af692463}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-wait@{P\-M\-P\-\_\-wait}}
+\index{P\-M\-P\-\_\-wait@{P\-M\-P\-\_\-wait}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-wait}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-P\-\_\-wait(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~while(P\-M\-M\-O\-D\-E\-Hbits.\-B\-U\-S\-Y)}}\label{p8_2pinguino_2core_2pmp_8h_aa30b1acf2ed53809041dd258af692463}
+
+
+Definition at line 39 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-read(), P\-M\-P\-\_\-send\-Address(), P\-M\-P\-\_\-write(), S\-S\-D1306\-\_\-send\-Command(), and S\-S\-D1306\-\_\-send\-Data().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a8d53d72c93cd93b7257b773cb4ea5ed1}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-R\-D@{P\-M\-R\-D}}
+\index{P\-M\-R\-D@{P\-M\-R\-D}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-R\-D~1$<$$<$13}}\label{p8_2pinguino_2core_2pmp_8h_a8d53d72c93cd93b7257b773cb4ea5ed1}
+
+
+Definition at line 88 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-init(), and S\-S\-D1306\-\_\-init().
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a0e5f43df36e68570dbfdfc139e4164b7}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-R\-D\-\_\-\-P\-M\-W\-R@{P\-M\-R\-D\-\_\-\-P\-M\-W\-R}}
+\index{P\-M\-R\-D\-\_\-\-P\-M\-W\-R@{P\-M\-R\-D\-\_\-\-P\-M\-W\-R}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-R\-D\-\_\-\-P\-M\-W\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-R\-D\-\_\-\-P\-M\-W\-R~1$<$$<$13}}\label{p8_2pinguino_2core_2pmp_8h_a0e5f43df36e68570dbfdfc139e4164b7}
+
+
+Definition at line 89 of file pmp.\-h.
+
+\hypertarget{p8_2pinguino_2core_2pmp_8h_add1a2290ca0bda0d87bf3b908201e983}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-W\-R@{P\-M\-W\-R}}
+\index{P\-M\-W\-R@{P\-M\-W\-R}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-W\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-M\-W\-R~1$<$$<$12}}\label{p8_2pinguino_2core_2pmp_8h_add1a2290ca0bda0d87bf3b908201e983}
+
+
+Definition at line 90 of file pmp.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-init().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_aaa6aeb7280a98a2613062d4106124598}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-auto\-Increment@{P\-M\-P\-\_\-auto\-Increment}}
+\index{P\-M\-P\-\_\-auto\-Increment@{P\-M\-P\-\_\-auto\-Increment}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-auto\-Increment}]{\setlength{\rightskip}{0pt plus 5cm}void P\-M\-P\-\_\-auto\-Increment (
+\begin{DoxyParamCaption}
+\item[{{\bf s8}}]{inc}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_aaa6aeb7280a98a2613062d4106124598}
+
+
+Definition at line 144 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+145 \{
+146     \textcolor{keywordflow}{if} (inc==1 || inc==\hyperlink{p8_2pinguino_2core_2pmp_8h_a367bd66762f975a5bbf99c41d8443701}{PMP\_MODE\_INC\_BUFFER} || inc==
+      \hyperlink{p8_2pinguino_2core_2pmp_8h_a1875a5070735513e6a5e3fae319ee28d}{PMP\_MODE\_INC\_ADDR})
+147         \hyperlink{p8_2pinguino_2core_2pmp_8c_a00cc32da05b5e8895bb4a91d39c797df}{\_pmp\_inc} = 1;
+148 
+149     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (inc==-1 || inc==\hyperlink{p8_2pinguino_2core_2pmp_8h_a89e4514a2c1c147367b1d47a0141874c}{PMP\_MODE\_DEC\_ADDR})
+150         \hyperlink{p8_2pinguino_2core_2pmp_8c_a00cc32da05b5e8895bb4a91d39c797df}{\_pmp\_inc} = -1;
+151     
+152     \textcolor{keywordflow}{else} \textcolor{comment}{//if (inc==0 || inc==PMP\_MODE\_INC\_OFF)}
+153         \hyperlink{p8_2pinguino_2core_2pmp_8c_a00cc32da05b5e8895bb4a91d39c797df}{\_pmp\_inc} = 0;
+154 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a69be3dc7649595c21f405f1d4c0476b0}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-init@{P\-M\-P\-\_\-init}}
+\index{P\-M\-P\-\_\-init@{P\-M\-P\-\_\-init}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-M\-P\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_a69be3dc7649595c21f405f1d4c0476b0}
+
+\begin{DoxyEnumerate}
+\item Disable the P\-M\-P interrupt
+\item Stop and reset the P\-M\-P module
+\item Configure Mode
+\item Configure Control
+\item Enable/\-Disable P\-M\-A$<$15\-:0$>$ Address pins
+\item If interrupts are used\-:
+\item Enable the P\-M\-P master port
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Disable the P\-M\-P interrupt
+\item Stop and reset the P\-M\-P module
+\item Configure Mode
+\item Configure Control
+\item Enable/\-Disable P\-M\-A$<$15\-:0$>$ Address pins
+\item If interrupts are used
+\item Enable the P\-M\-P master port 
+\end{DoxyEnumerate}
+
+Definition at line 195 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+196 \{
+198 
+199     \textcolor{comment}{//IntDisable(PMPINT);}
+200 
+202 
+203     PMCONHbits.PMPEN = 0;\textcolor{comment}{//Bit(15);}
+204 
+205     PMCONH  = 0; 
+206     PMCONL  = 0; 
+207     PMMODEH = 0;
+208     PMMODEL = 0;
+209     PMEH    = 0;
+210     PMEL    = 0;
+211 
+213 
+214     \textcolor{comment}{// Enable Interrupt Request mode: IRQM<1:0> bits (PMMODE<14:13>).}
+215     PMMODEHbits.IRQM = \hyperlink{p8_2pinguino_2core_2pmp_8h_a67f2266d91d76713fbc37858dbcafa40}{PMP\_MODE\_IRQ\_OFF};
+216     
+217     \textcolor{comment}{// Select auto address increment: INCM<1:0> bits (PMMODE<12:11>).}
+218     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2pmp_8c_ae2443c6df0f2e70fc6d1495a1098bbfa}{\_pmp\_mode}==\hyperlink{p8_2pinguino_2core_2pmp_8h_a6cd38d02842722d49e3a77a04c4ad1f3}{PMP\_MODE\_ESLAVE} || \hyperlink{p8_2pinguino_2core_2pmp_8c_ae2443c6df0f2e70fc6d1495a1098bbfa}{\_pmp\_mode}==
+      \hyperlink{p8_2pinguino_2core_2pmp_8h_ae5c2ac8366eff9fc691a4583cf4e73d8}{PMP\_MODE\_SLAVE})
+219     \{
+220         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2pmp_8c_a00cc32da05b5e8895bb4a91d39c797df}{\_pmp\_inc}==1)
+221             PMMODEHbits.INCM = \hyperlink{p8_2pinguino_2core_2pmp_8h_a367bd66762f975a5bbf99c41d8443701}{PMP\_MODE\_INC\_BUFFER};
+222         \textcolor{keywordflow}{else}
+223             PMMODEHbits.INCM = \hyperlink{p8_2pinguino_2core_2pmp_8h_a0a3610fa36a1df31618d3552bbe8fb0a}{PMP\_MODE\_INC\_OFF};
+224     \}
+225     \textcolor{keywordflow}{else} \textcolor{comment}{// master mode 1 or 2}
+226     \{
+227         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2pmp_8c_a00cc32da05b5e8895bb4a91d39c797df}{\_pmp\_inc}==1)
+228             PMMODEHbits.INCM = \hyperlink{p8_2pinguino_2core_2pmp_8h_a1875a5070735513e6a5e3fae319ee28d}{PMP\_MODE\_INC\_ADDR};
+229 
+230         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2pmp_8c_a00cc32da05b5e8895bb4a91d39c797df}{\_pmp\_inc}==-1)
+231             PMMODEHbits.INCM = \hyperlink{p8_2pinguino_2core_2pmp_8h_a89e4514a2c1c147367b1d47a0141874c}{PMP\_MODE\_DEC\_ADDR};
+232         
+233         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2pmp_8c_a00cc32da05b5e8895bb4a91d39c797df}{\_pmp\_inc}==0)
+234             PMMODEHbits.INCM = \hyperlink{p8_2pinguino_2core_2pmp_8h_a0a3610fa36a1df31618d3552bbe8fb0a}{PMP\_MODE\_INC\_OFF};
+235     \}
+236     
+237     \textcolor{comment}{// Select 8- or 16-bit Data mode: MODE16 bit (PMMODE<10>).}
+238     PMMODEHbits.MODE16 = \hyperlink{p8_2pinguino_2core_2pmp_8c_a4ba303230c78e41a2a90de45fa587d91}{\_pmp\_width};
+239     
+240     \textcolor{comment}{// Select Master mode : MODE<1:0> bits (PMMODE<9:8>).}
+241     \textcolor{comment}{// In Master mode 1, read and write strobe are combined into a }
+242     \textcolor{comment}{// single control line, PMRD/PMWR;}
+243     \textcolor{comment}{// a second control line, PMENB, determines when a read or write}
+244     \textcolor{comment}{// action is to be taken.}
+245     \textcolor{comment}{// In Master mode 2, read and write strobes (PMRD and PMWR)}
+246     \textcolor{comment}{// are supplied on separate pins.}
+247     PMMODEH |= \hyperlink{p8_2pinguino_2core_2pmp_8c_ae2443c6df0f2e70fc6d1495a1098bbfa}{\_pmp\_mode};
+248 
+249     \textcolor{comment}{// Select 4 wait cycles before the PMRD/PMWR strobe}
+250     PMMODELbits.WAITB = \hyperlink{p8_2pinguino_2core_2pmp_8c_a91dfe71d3abc4098a0e3b6dccdeae1c9}{\_pmp\_waitB};
+251 
+252     \textcolor{comment}{// Wait cycles for a Read/Write strobe}
+253     PMMODELbits.WAITM = \hyperlink{p8_2pinguino_2core_2pmp_8c_aeb14ac53e50559e6d1740b5e57d69c5c}{\_pmp\_waitM};
+254 
+255     \textcolor{comment}{// Wait cycles for data hold}
+256     PMMODELbits.WAITE = \hyperlink{p8_2pinguino_2core_2pmp_8c_a64d093cf67ba47bf065eadebad7c6bbb}{\_pmp\_waitE};
+257 
+259 
+260     \textcolor{comment}{//SIDL: Stop in Idle Mode bi}
+261     \textcolor{comment}{//1 = Discontinue module operation when device enters Idle mode}
+262     \textcolor{comment}{//0 = Continue module operation in Idle mode}
+263     PMCONHbits.PSIDL = 0;    \textcolor{comment}{// PMP idle when MCU idle}
+264 
+265     \textcolor{comment}{// Select multiplexed addressing: ADRMUX<1:0> bits (PMCON<12:11>).}
+266     PMCONHbits.ADRMUX = \hyperlink{p8_2pinguino_2core_2pmp_8c_ae7f2c4903bcce342ef36ad82a32b3a47}{\_pmp\_mux}; \textcolor{comment}{// Address and data appear on separate pins}
+267     
+268     \textcolor{comment}{//PMPTTL: PMP Module TTL Input Buffer Select bit}
+269     \textcolor{comment}{//1 = PMP module uses TTL input buffers}
+270     \textcolor{comment}{//0 = PMP module uses Schmitt Trigger input buffer}
+271 
+272     PADCFG1bits.PMPTTL = 0;
+273 \textcolor{comment}{/*    }
+275 \textcolor{comment}{    if ( \_pmp\_mode == PMP\_MODE\_MASTER1 )}
+276 \textcolor{comment}{    \{}
+277 \textcolor{comment}{        // Enable PMBE strobe: PTWREN bit (PMCON<9>)}
+278 \textcolor{comment}{        if ( \_pmp\_control & PMENB )}
+279 \textcolor{comment}{            PMCONHbits.PTWREN = 1;      // PMP write strobe enable}
+280 \textcolor{comment}{        else}
+281 \textcolor{comment}{            PMCONHbits.PTWREN = 0;      // PMP write strobe disable}
+282 \textcolor{comment}{}
+283 \textcolor{comment}{        // Enable PMRD/PMWR strobe: PTRDEN bit (PMCON<8>)}
+284 \textcolor{comment}{        if (\_pmp\_control & PMRD\_PMWR)}
+285 \textcolor{comment}{            PMCONHbits.PTRDEN = 1;      // PMP read strobe enable}
+286 \textcolor{comment}{        else}
+287 \textcolor{comment}{            PMCONHbits.PTRDEN = 0;      // PMP read strobe disable}
+288 \textcolor{comment}{}
+289 \textcolor{comment}{        // To differentiate data bytes, the byte enable control strobe,}
+290 \textcolor{comment}{        // PMBE, is used to signal when the Most Significant Byte(MSB)}
+291 \textcolor{comment}{        // of data is being presented on the data lines}
+292 \textcolor{comment}{        // Enable bit : PTBEEN bit (PMCONH<2>)}
+293 \textcolor{comment}{        if ( \_pmp\_control & PMBE )}
+294 \textcolor{comment}{            PMCONHbits.PTBEEN = 1;      // PMP Enable strobe enable}
+295 \textcolor{comment}{        else}
+296 \textcolor{comment}{            PMCONHbits.PTBEEN = 0;      // PMP Enable strobe disable}
+297 \textcolor{comment}{    \}}
+298 \textcolor{comment}{}
+300 \textcolor{comment}{    else if ( \_pmp\_mode == PMP\_MODE\_MASTER2 )}
+301 \textcolor{comment}{    \{}
+302 \textcolor{comment}{*/}
+303         \textcolor{comment}{// Enable PMWR strobe: PTWREN bit (PMCON<9>)}
+304         \textcolor{keywordflow}{if} ( \hyperlink{p8_2pinguino_2core_2pmp_8c_a50ba24180c7d9eb3be9d5fb3379d1a5c}{\_pmp\_control} & \hyperlink{p8_2pinguino_2core_2pmp_8h_add1a2290ca0bda0d87bf3b908201e983}{PMWR} )
+305             PMCONHbits.PTWREN = 1;      \textcolor{comment}{// PMP write strobe enable}
+306         \textcolor{keywordflow}{else}
+307             PMCONHbits.PTWREN = 0;      \textcolor{comment}{// PMP write strobe disable}
+308         
+309         \textcolor{comment}{// Enable PMRD strobe: PTRDEN bit (PMCON<8>)}
+310         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2pmp_8c_a50ba24180c7d9eb3be9d5fb3379d1a5c}{\_pmp\_control} & \hyperlink{p8_2pinguino_2core_2pmp_8h_a8d53d72c93cd93b7257b773cb4ea5ed1}{PMRD})
+311             PMCONHbits.PTRDEN = 1;      \textcolor{comment}{// PMP read strobe enable}
+312         \textcolor{keywordflow}{else}
+313             PMCONHbits.PTRDEN = 0;      \textcolor{comment}{// PMP read strobe disable}
+314 
+315         \textcolor{keywordflow}{if} ( \hyperlink{p8_2pinguino_2core_2pmp_8c_a50ba24180c7d9eb3be9d5fb3379d1a5c}{\_pmp\_control} & \hyperlink{p8_2pinguino_2core_2pmp_8h_ab1a3912ca770dac7812a4eb15e87e023}{PMBE} )
+316             PMCONHbits.PTBEEN = 1;      \textcolor{comment}{// PMP Enable strobe enable}
+317         \textcolor{keywordflow}{else}
+318             PMCONHbits.PTBEEN = 0;      \textcolor{comment}{// PMP Enable strobe disable}
+319 \textcolor{comment}{//    \}}
+320     
+321     \textcolor{comment}{// Enable PMCS1 Chip Selects: CSF<1:0> bits (PMCON<7:6>)}
+322     \textcolor{keywordflow}{if} ((\hyperlink{p8_2pinguino_2core_2pmp_8c_a50ba24180c7d9eb3be9d5fb3379d1a5c}{\_pmp\_control} & \hyperlink{p8_2pinguino_2core_2pmp_8h_a541773c3896aa2095037987a634e6478}{PMCS1}) || (\hyperlink{p8_2pinguino_2core_2pmp_8c_a50ba24180c7d9eb3be9d5fb3379d1a5c}{\_pmp\_control} & 
+      \hyperlink{p8_2pinguino_2core_2pmp_8h_afa1d5c77f65692bebebb69809a8e944f}{PMCS2}))
+323         PMCONLbits.CSF = \hyperlink{p8_2pinguino_2core_2pmp_8h_a043b6e882941e37312101ca0b083785c}{PMP\_CS\_ON};
+324     \textcolor{keywordflow}{else}
+325         PMCONLbits.CSF = \hyperlink{p8_2pinguino_2core_2pmp_8h_a1b4a639b9ac3ab5af501fcf67462cd23}{PMP\_CS\_OFF};
+326 
+327     \textcolor{comment}{// Address Latch Polarity bit}
+328     PMCONLbits.ALP  = \hyperlink{p8_2pinguino_2core_2pmp_8c_a219c3673c316445d12aec25e525c0fd5}{\_pmp\_polarity};
+329     
+330     \textcolor{comment}{// Select PMCS2, PMCS1 active-low pin polarity: CS2P bit (PMCON<4>) = 0 and CS1P bit (PMCON<3>) = 0.}
+331     PMCONLbits.CS1P = \hyperlink{p8_2pinguino_2core_2pmp_8c_a219c3673c316445d12aec25e525c0fd5}{\_pmp\_polarity};
+332 
+333     \textcolor{comment}{// Byte Enable priority bit}
+334     PMCONLbits.BEP  = \hyperlink{p8_2pinguino_2core_2pmp_8c_a219c3673c316445d12aec25e525c0fd5}{\_pmp\_polarity};
+335 
+336     \textcolor{comment}{// Select PMWR active-low pin polarity: WRSP bit (PMCON<1>) = 0.}
+337     PMCONLbits.WRSP = \hyperlink{p8_2pinguino_2core_2pmp_8c_a219c3673c316445d12aec25e525c0fd5}{\_pmp\_polarity};
+338 
+339     \textcolor{comment}{// Select PMRD active-low pin polarity: RDSP bit (PMCON<0>) = 0.}
+340     PMCONLbits.RDSP = \hyperlink{p8_2pinguino_2core_2pmp_8c_a219c3673c316445d12aec25e525c0fd5}{\_pmp\_polarity};
+341 
+343     
+344     PMEH = \hyperlink{p8_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}{high8}(\hyperlink{p8_2pinguino_2core_2pmp_8c_a7b439cfa229a9a7d57ab2c66d9c45928}{\_pmp\_address});
+345     PMEL =  \hyperlink{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{low8}(\hyperlink{p8_2pinguino_2core_2pmp_8c_a7b439cfa229a9a7d57ab2c66d9c45928}{\_pmp\_address});
+346 
+347     \textcolor{keywordflow}{if} ( \hyperlink{p8_2pinguino_2core_2pmp_8c_a50ba24180c7d9eb3be9d5fb3379d1a5c}{\_pmp\_control} & PMCS1 )
+348     \{
+349         PMEHbits.PTEN14 = 1;    \textcolor{comment}{//address 14 or PMCS1}
+350         \textcolor{comment}{//PMEH |= PMCS1;}
+351     \}
+352     
+353     \textcolor{keywordflow}{if} ( \hyperlink{p8_2pinguino_2core_2pmp_8c_a50ba24180c7d9eb3be9d5fb3379d1a5c}{\_pmp\_control} & PMCS2 )
+354     \{
+355         PMEHbits.PTEN15 = 1;    \textcolor{comment}{//address 15 or PMCS2}
+356         \textcolor{comment}{//PMEH |= PMCS2;}
+357     \}
+358     
+360 \textcolor{comment}{/*}
+361 \textcolor{comment}{    // 6.1. Clear the interrupt flag bit, PMPIF (IFS1<2>) = 0.}
+362 \textcolor{comment}{    IntClearFlag(INT\_PARALLEL\_MASTER\_PORT);}
+363 \textcolor{comment}{    // 6.2. Configure the PMP interrupt priority bits}
+364 \textcolor{comment}{    IntSetVectorPriority(INT\_PARALLEL\_MASTER\_PORT\_VECTOR, 7, 3);}
+365 \textcolor{comment}{    // 6.3. Enable the PMP interrupt by setting the interrupt enable bit, PMPIE = 1.}
+366 \textcolor{comment}{    IntEnable(INT\_PARALLEL\_MASTER\_PORT);}
+367 \textcolor{comment}{*/}
+369     PMCONHbits.PMPEN = 1;\textcolor{comment}{//Bit(15);}
+370 
+371     \textcolor{comment}{// wait for >30 ms}
+372     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);
+373 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a9ac4f9e3f7644d2c5cb033103e899766}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-read@{P\-M\-P\-\_\-read}}
+\index{P\-M\-P\-\_\-read@{P\-M\-P\-\_\-read}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} P\-M\-P\-\_\-read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_a9ac4f9e3f7644d2c5cb033103e899766}
+
+
+Definition at line 417 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+418 \{
+419     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} dummy;
+420     
+421     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2pmp_8c_a4ba303230c78e41a2a90de45fa587d91}{\_pmp\_width} == \hyperlink{p8_2pinguino_2core_2pmp_8h_ae2a1ed287a538a39f3323858aed4eb70}{PMP\_MODE\_16BIT})
+422     \{
+423         \hyperlink{p8_2pinguino_2core_2pmp_8h_aa30b1acf2ed53809041dd258af692463}{PMP\_wait}();         \textcolor{comment}{// wait for PMP to be available}
+424         dummy = PMDIN1L;    \textcolor{comment}{// init read cycle, dummy read}
+425         \hyperlink{p8_2pinguino_2core_2pmp_8h_aa30b1acf2ed53809041dd258af692463}{PMP\_wait}();         \textcolor{comment}{// wait for PMP to be available}
+426         \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2macro_8h_a11ba66c0460bf50b842396567680f809}{make16}(PMDIN1L, PMDIN1H));
+427     \}
+428     
+429     \textcolor{keywordflow}{else}
+430     \{
+431         \hyperlink{p8_2pinguino_2core_2pmp_8h_aa30b1acf2ed53809041dd258af692463}{PMP\_wait}();         \textcolor{comment}{// wait for PMP to be available}
+432         dummy = PMDIN1L;    \textcolor{comment}{// dummy read}
+433         \hyperlink{p8_2pinguino_2core_2pmp_8h_aa30b1acf2ed53809041dd258af692463}{PMP\_wait}();         \textcolor{comment}{// wait for PMP to be available}
+434         \textcolor{keywordflow}{return} (PMDIN1L);   \textcolor{comment}{// real read}
+435     \}
+436 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_aa72da3e4a59b46ae169d7b19c5d412e4}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-send\-Address@{P\-M\-P\-\_\-send\-Address}}
+\index{P\-M\-P\-\_\-send\-Address@{P\-M\-P\-\_\-send\-Address}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-send\-Address}]{\setlength{\rightskip}{0pt plus 5cm}void P\-M\-P\-\_\-send\-Address (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_aa72da3e4a59b46ae169d7b19c5d412e4}
+
+
+Definition at line 445 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+446 \{
+447     \hyperlink{p8_2pinguino_2core_2pmp_8h_aa30b1acf2ed53809041dd258af692463}{PMP\_wait}();     \textcolor{comment}{// wait for PMP to be available}
+448     PMADDRH = \hyperlink{p8_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}{high8}(addr);
+449     PMADDRL =  \hyperlink{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{low8}(addr);
+450 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_af5b638a0d7bd3f980e644ee792a66792}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-set\-Address@{P\-M\-P\-\_\-set\-Address}}
+\index{P\-M\-P\-\_\-set\-Address@{P\-M\-P\-\_\-set\-Address}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-set\-Address}]{\setlength{\rightskip}{0pt plus 5cm}void P\-M\-P\-\_\-set\-Address (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_af5b638a0d7bd3f980e644ee792a66792}
+
+
+Definition at line 104 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+105 \{
+106     \hyperlink{p8_2pinguino_2core_2pmp_8c_a7b439cfa229a9a7d57ab2c66d9c45928}{\_pmp\_address} = addr;
+107 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_abf2cbd91801b06e38e4300a6de8147cc}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-set\-Control@{P\-M\-P\-\_\-set\-Control}}
+\index{P\-M\-P\-\_\-set\-Control@{P\-M\-P\-\_\-set\-Control}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-set\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void P\-M\-P\-\_\-set\-Control (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_abf2cbd91801b06e38e4300a6de8147cc}
+
+
+Definition at line 117 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+118 \{
+119     \hyperlink{p8_2pinguino_2core_2pmp_8c_a50ba24180c7d9eb3be9d5fb3379d1a5c}{\_pmp\_control} = control;
+120 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a9253e4b5bd1ab14c9436dcb2c1a5376c}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-set\-Mode@{P\-M\-P\-\_\-set\-Mode}}
+\index{P\-M\-P\-\_\-set\-Mode@{P\-M\-P\-\_\-set\-Mode}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-set\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void P\-M\-P\-\_\-set\-Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_a9253e4b5bd1ab14c9436dcb2c1a5376c}
+
+
+ \subsubsection*{Prototypes }
+
+Definition at line 75 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+76 \{
+77     \hyperlink{p8_2pinguino_2core_2pmp_8c_ae2443c6df0f2e70fc6d1495a1098bbfa}{\_pmp\_mode} = mode;
+78 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a936374562c61169e1985dae91cad06b6}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-set\-Mux@{P\-M\-P\-\_\-set\-Mux}}
+\index{P\-M\-P\-\_\-set\-Mux@{P\-M\-P\-\_\-set\-Mux}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-set\-Mux}]{\setlength{\rightskip}{0pt plus 5cm}void P\-M\-P\-\_\-set\-Mux (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_a936374562c61169e1985dae91cad06b6}
+
+
+Definition at line 164 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+165 \{
+166     \hyperlink{p8_2pinguino_2core_2pmp_8c_ae7f2c4903bcce342ef36ad82a32b3a47}{\_pmp\_mux} = mux;
+167 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a4fce58c9d0e5fdd9c2ccfd3bec5bfdad}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-set\-Polarity@{P\-M\-P\-\_\-set\-Polarity}}
+\index{P\-M\-P\-\_\-set\-Polarity@{P\-M\-P\-\_\-set\-Polarity}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-set\-Polarity}]{\setlength{\rightskip}{0pt plus 5cm}void P\-M\-P\-\_\-set\-Polarity (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_a4fce58c9d0e5fdd9c2ccfd3bec5bfdad}
+
+
+Definition at line 130 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+131 \{
+132     \hyperlink{p8_2pinguino_2core_2pmp_8c_a219c3673c316445d12aec25e525c0fd5}{\_pmp\_polarity} = polarity;
+133 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_afa90ca4d60c537bf67e82da5d6e9f93d}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-set\-Wait\-States@{P\-M\-P\-\_\-set\-Wait\-States}}
+\index{P\-M\-P\-\_\-set\-Wait\-States@{P\-M\-P\-\_\-set\-Wait\-States}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-set\-Wait\-States}]{\setlength{\rightskip}{0pt plus 5cm}void P\-M\-P\-\_\-set\-Wait\-States (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{beg, }
+\item[{{\bf u8}}]{mid, }
+\item[{{\bf u8}}]{end}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_afa90ca4d60c537bf67e82da5d6e9f93d}
+
+
+Definition at line 177 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+178 \{
+179     \textcolor{keywordflow}{if} (beg>=4) beg=4;
+180     \hyperlink{p8_2pinguino_2core_2pmp_8c_a91dfe71d3abc4098a0e3b6dccdeae1c9}{\_pmp\_waitB} = beg-1;
+181     \textcolor{keywordflow}{if} (mid>=16) mid=16;
+182     \hyperlink{p8_2pinguino_2core_2pmp_8c_aeb14ac53e50559e6d1740b5e57d69c5c}{\_pmp\_waitM} = mid-1;
+183     \textcolor{keywordflow}{if} (end>=4) end=4;
+184     \hyperlink{p8_2pinguino_2core_2pmp_8c_a64d093cf67ba47bf065eadebad7c6bbb}{\_pmp\_waitE} = end-1;
+185 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a325f86fb8ca941da985afdcfe38221f9}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-set\-Width@{P\-M\-P\-\_\-set\-Width}}
+\index{P\-M\-P\-\_\-set\-Width@{P\-M\-P\-\_\-set\-Width}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-set\-Width}]{\setlength{\rightskip}{0pt plus 5cm}void P\-M\-P\-\_\-set\-Width (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_a325f86fb8ca941da985afdcfe38221f9}
+
+
+Definition at line 88 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+89 \{
+90     \textcolor{keywordflow}{if} ( (\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}==16) || (\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}==\hyperlink{p8_2pinguino_2core_2pmp_8h_ae2a1ed287a538a39f3323858aed4eb70}{PMP\_MODE\_16BIT}) )
+91         \hyperlink{p8_2pinguino_2core_2pmp_8c_a4ba303230c78e41a2a90de45fa587d91}{\_pmp\_width} = \hyperlink{p8_2pinguino_2core_2pmp_8h_ae2a1ed287a538a39f3323858aed4eb70}{PMP\_MODE\_16BIT};
+92     \textcolor{keywordflow}{else}
+93         \hyperlink{p8_2pinguino_2core_2pmp_8c_a4ba303230c78e41a2a90de45fa587d91}{\_pmp\_width} = \hyperlink{p8_2pinguino_2core_2pmp_8h_a188d811c789266ff20a46234aeb95ef8}{PMP\_MODE\_8BIT};
+94 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2pmp_8h_a9ee2efb6763c08a55c1793e9afb4a881}{\index{p8/pinguino/core/pmp.\-h@{p8/pinguino/core/pmp.\-h}!P\-M\-P\-\_\-write@{P\-M\-P\-\_\-write}}
+\index{P\-M\-P\-\_\-write@{P\-M\-P\-\_\-write}!p8/pinguino/core/pmp.h@{p8/pinguino/core/pmp.\-h}}
+\subsubsection[{P\-M\-P\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}void P\-M\-P\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2pmp_8h_a9ee2efb6763c08a55c1793e9afb4a881}
+
+
+Definition at line 391 of file pmp.\-c.
+
+
+\begin{DoxyCode}
+392 \{
+393     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2pmp_8c_a4ba303230c78e41a2a90de45fa587d91}{\_pmp\_width} == \hyperlink{p8_2pinguino_2core_2pmp_8h_ae2a1ed287a538a39f3323858aed4eb70}{PMP\_MODE\_16BIT})
+394     \{
+395         \hyperlink{p8_2pinguino_2core_2pmp_8h_aa30b1acf2ed53809041dd258af692463}{PMP\_wait}();         \textcolor{comment}{// wait for PMP to be available}
+396         PMDIN1L =  \hyperlink{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{low8}(value);
+397         \hyperlink{p8_2pinguino_2core_2pmp_8h_aa30b1acf2ed53809041dd258af692463}{PMP\_wait}();         \textcolor{comment}{// wait for PMP to be available}
+398         PMDIN1H = \hyperlink{p8_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}{high8}(value);
+399     \}
+400     
+401     \textcolor{keywordflow}{else}
+402     \{
+403         \hyperlink{p8_2pinguino_2core_2pmp_8h_aa30b1acf2ed53809041dd258af692463}{PMP\_wait}();         \textcolor{comment}{// wait for PMP to be available}
+404         PMDIN1L = \hyperlink{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{low8}(value);
+405     \}   
+406 \}
+\end{DoxyCode}

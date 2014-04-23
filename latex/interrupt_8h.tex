@@ -1,0 +1,1281 @@
+\hypertarget{interrupt_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/interrupt.h File Reference}
+\label{interrupt_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/interrupt.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/interrupt.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{interrupt_8h_abf7a56466fd6203663685a04448c9185}{I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E}~1
+\item 
+\#define \hyperlink{interrupt_8h_a76ad68abd3b3b1d6404a4a8661454832}{I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E}~0
+\item 
+\#define \hyperlink{interrupt_8h_a7a8799c7432bf8c8f2fd125e99bf5c26}{I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}~1
+\item 
+\#define \hyperlink{interrupt_8h_a81de5681dfcbd8e1bf891f6540dcb249}{I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}~0
+\item 
+\#define \hyperlink{interrupt_8h_a764fb7c5acbe8969ff8bcdffa153fbae}{I\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}~1
+\item 
+\#define \hyperlink{interrupt_8h_abb38dffe47f0b7b7c6f5b1f83a8594a3}{I\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}~0
+\item 
+\#define \hyperlink{interrupt_8h_a5eb648d4a65b882e1cefc3d4ce5e0149}{I\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}~1
+\item 
+\#define \hyperlink{interrupt_8h_a09ff59f04f58c3c7f032ee4fba6f0ca6}{I\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}~0
+\item 
+\#define \hyperlink{interrupt_8h_a96eb0bf1b4df248f71eb0f023067daef}{I\-N\-T\-\_\-\-N\-O\-T\-\_\-\-U\-S\-E\-D}~0
+\item 
+\#define \hyperlink{interrupt_8h_af4d8f2914ad459337cd089d7cd95e0e7}{I\-N\-T\-\_\-\-U\-S\-E\-D}~0x\-F\-F
+\item 
+\#define \hyperlink{interrupt_8h_a373ce2e9bc285d46a5b7041f85fe5b44}{I\-N\-T\-\_\-\-M\-I\-C\-R\-O\-S\-E\-C}~1
+\item 
+\#define \hyperlink{interrupt_8h_a2c6871938d56697fcb8a469adbe31968}{I\-N\-T\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C}~2
+\item 
+\#define \hyperlink{interrupt_8h_ad2aa0e5572055228664226ee05fff60f}{I\-N\-T\-\_\-\-S\-E\-C}~3
+\item 
+\#define \hyperlink{interrupt_8h_a1d1cbabd3d27a7ce01bee0cf9e193652}{I\-N\-T\-\_\-\-T\-M\-R0}~0
+\begin{DoxyCompactList}\small\item\em Interrupts list (these \#define can be used in Pinguino's Code Source) \end{DoxyCompactList}\item 
+\#define \hyperlink{interrupt_8h_a8e0f5865c5bff98dcce74abedf67960f}{I\-N\-T\-\_\-\-T\-M\-R1}~1
+\item 
+\#define \hyperlink{interrupt_8h_a525445a1ab7e1d2855d18fd416f66a8d}{I\-N\-T\-\_\-\-T\-M\-R2}~2
+\item 
+\#define \hyperlink{interrupt_8h_a2032337fbb51bb7e9086ca28da0446c5}{I\-N\-T\-\_\-\-T\-M\-R3}~3
+\item 
+\#define \hyperlink{interrupt_8h_ae1a21fe5e3606226d79e047d5ae739b0}{I\-N\-T\-\_\-\-T\-M\-R4}~4
+\item 
+\#define \hyperlink{interrupt_8h_a352d63f59443ab14f7ebcb06882420ef}{I\-N\-T\-\_\-\-T\-M\-R5}~5
+\item 
+\#define \hyperlink{interrupt_8h_a9a7493422d361eeb666324eee4e72c46}{I\-N\-T\-\_\-\-T\-M\-R6}~6
+\item 
+\#define \hyperlink{interrupt_8h_afd7397866748897d9c4ab2e9357c0a5a}{I\-N\-T\-\_\-\-T\-M\-R8}~8
+\item 
+\#define \hyperlink{interrupt_8h_a466cf776f844f979462e8f59fcc24efd}{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G0}~8
+\item 
+\#define \hyperlink{interrupt_8h_ad052a15b54eb74b1387b9b426263a1c0}{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G1}~9
+\item 
+\#define \hyperlink{interrupt_8h_ad355aee8cb785665b21b140a940df8a4}{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G2}~10
+\item 
+\#define \hyperlink{interrupt_8h_a3bab1c7446e81839d72f7ce589e79f40}{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G3}~11
+\item 
+\#define \hyperlink{interrupt_8h_a07f4a014d2b630308eae40f0663db562}{I\-N\-T\-\_\-\-I\-N\-T0}~12
+\item 
+\#define \hyperlink{interrupt_8h_af4b10633d550054fc34f22022ab25bf3}{I\-N\-T\-\_\-\-I\-N\-T1}~13
+\item 
+\#define \hyperlink{interrupt_8h_a63fd1e5768624201b60a588bd88acf5c}{I\-N\-T\-\_\-\-I\-N\-T2}~14
+\item 
+\#define \hyperlink{interrupt_8h_a1516170fd9ec469116f7de8af9fc6a2c}{I\-N\-T\-\_\-\-I\-N\-T3}~15
+\item 
+\#define \hyperlink{interrupt_8h_a54847d8a13305608055fdb59ca809f3a}{I\-N\-T\-\_\-\-R\-B}~16
+\item 
+\#define \hyperlink{interrupt_8h_a9e751270bdd089f2f9e0dfa1fb3548fa}{I\-N\-T\-\_\-\-C\-C\-P1}~17
+\item 
+\#define \hyperlink{interrupt_8h_ae7952254a56c6ad94873ac960b0e0577}{I\-N\-T\-\_\-\-C\-C\-P2}~18
+\item 
+\#define \hyperlink{interrupt_8h_a5acdaeedb9d52c8ca55ce9f7728fb220}{I\-N\-T\-\_\-\-C\-C\-P4}~19
+\item 
+\#define \hyperlink{interrupt_8h_ab9816884dc71afa4a332aa7e851bbb3f}{I\-N\-T\-\_\-\-C\-C\-P5}~20
+\item 
+\#define \hyperlink{interrupt_8h_ad63b20e05d7fac5fd94d3954f86b7cc0}{I\-N\-T\-\_\-\-C\-C\-P6}~21
+\item 
+\#define \hyperlink{interrupt_8h_a68ee3a17ff9e6fb922450e6291cabc6c}{I\-N\-T\-\_\-\-C\-C\-P7}~22
+\item 
+\#define \hyperlink{interrupt_8h_a61e5962a83a2b3f3e8cab6a40bdcccd9}{I\-N\-T\-\_\-\-C\-C\-P8}~23
+\item 
+\#define \hyperlink{interrupt_8h_ae8a56f63d5f224a5262dca7996b4a2a8}{I\-N\-T\-\_\-\-C\-C\-P9}~24
+\item 
+\#define \hyperlink{interrupt_8h_a2d3d69953f9ff7aa6998f0bf6524423d}{I\-N\-T\-\_\-\-C\-C\-P10}~25
+\item 
+\#define \hyperlink{interrupt_8h_a3881911c4ed895695d2e741cc02a1154}{I\-N\-T\-\_\-\-C\-M}~26
+\item 
+\#define \hyperlink{interrupt_8h_a60b246982d34b16fcfa49187072d5b19}{I\-N\-T\-\_\-\-C\-M1}~26
+\item 
+\#define \hyperlink{interrupt_8h_a4c30ae879570e7a35f97587596570427}{I\-N\-T\-\_\-\-C\-M2}~27
+\item 
+\#define \hyperlink{interrupt_8h_afaa9f7c5fe94cf74964c1206f2b2c959}{I\-N\-T\-\_\-\-R\-C}~28
+\item 
+\#define \hyperlink{interrupt_8h_ae4b980b956c3a627cbc50deaa33efb0d}{I\-N\-T\-\_\-\-T\-X}~29
+\item 
+\#define \hyperlink{interrupt_8h_a9665c8b95390da5e765a0f0ec6f1139c}{I\-N\-T\-\_\-\-R\-C1}~28
+\item 
+\#define \hyperlink{interrupt_8h_a8edcd24c561b9cf3fd71aeb8bdf8af2d}{I\-N\-T\-\_\-\-T\-X1}~29
+\item 
+\#define \hyperlink{interrupt_8h_a199c7119e3c113762701d74fa9bbbe78}{I\-N\-T\-\_\-\-R\-C2}~30
+\item 
+\#define \hyperlink{interrupt_8h_abffca0943e55cff33321a5fc2e5fa1b6}{I\-N\-T\-\_\-\-T\-X2}~31
+\item 
+\#define \hyperlink{interrupt_8h_a85d66591e1cab863a514af47bdf671d9}{I\-N\-T\-\_\-\-A\-D}~32
+\item 
+\#define \hyperlink{interrupt_8h_a77d1f90becda08972f61baba06388c18}{I\-N\-T\-\_\-\-O\-S\-C\-F}~33
+\item 
+\#define \hyperlink{interrupt_8h_ace3d00e09690b38faa21e754a6ea035b}{I\-N\-T\-\_\-\-E\-E}~34
+\item 
+\#define \hyperlink{interrupt_8h_a749178e166f40b96d363ba9ae1ad57c7}{I\-N\-T\-\_\-\-H\-L\-V\-D}~35
+\item 
+\#define \hyperlink{interrupt_8h_a8c32a75724d4778bdaefc630f0c0954e}{I\-N\-T\-\_\-\-B\-C\-L}~36
+\item 
+\#define \hyperlink{interrupt_8h_ac8460733027631f3dd037eb1911ba549}{I\-N\-T\-\_\-\-B\-C\-L1}~36
+\item 
+\#define \hyperlink{interrupt_8h_aa2f087ee11dfd694692fad176087a6c1}{I\-N\-T\-\_\-\-B\-C\-L2}~37
+\item 
+\#define \hyperlink{interrupt_8h_a5dae4195f004e6899a36066e00dcd13d}{I\-N\-T\-\_\-\-U\-S\-B}~38
+\item 
+\#define \hyperlink{interrupt_8h_a855d7c70fa51d173537f137eb76263c9}{I\-N\-T\-\_\-\-S\-S\-P}~39
+\item 
+\#define \hyperlink{interrupt_8h_a728aa38395db26b9613ff425bffb188c}{I\-N\-T\-\_\-\-S\-S\-P1}~39
+\item 
+\#define \hyperlink{interrupt_8h_a2068452e86ec9bbf421d2abf6e0c8db0}{I\-N\-T\-\_\-\-S\-S\-P2}~40
+\item 
+\#define \hyperlink{interrupt_8h_aa90db2d1ad04376c0ca71188160d9389}{I\-N\-T\-\_\-\-C\-T\-M\-U}~41
+\item 
+\#define \hyperlink{interrupt_8h_a08deb9e2ea6a2b0c298ab6725e0a98b9}{I\-N\-T\-\_\-\-R\-T\-C\-C}~42
+\item 
+\#define \hyperlink{interrupt_8h_a3e060da74fb4117541d878ecfa9513cd}{I\-N\-T\-\_\-\-P\-M\-P}~43
+\item 
+\#define \hyperlink{interrupt_8h_aa96d5096c16af4ea4327b0f2c551fc02}{I\-N\-T\-\_\-\-N\-U\-M}~44
+\item 
+\#define \hyperlink{interrupt_8h_a3cd9a9c6d8c8c5a67a173c52a6648a96}{C\-C\-P\-\_\-\-R\-E\-S\-E\-T}~0b0000
+\item 
+\#define \hyperlink{interrupt_8h_a1162d9f185303a33ceee5fc3d1207a7a}{C\-C\-P\-\_\-\-M\-O\-D\-E\-\_\-\-T\-O\-G\-G\-L\-E}~0b0010
+\item 
+\#define \hyperlink{interrupt_8h_aad37a1f30cb722165423f50c74ca4646}{C\-C\-P\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}~0b0100
+\item 
+\#define \hyperlink{interrupt_8h_aae95913e8bc8a1e4e4483efb25bccfcb}{C\-C\-P\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}~0b0101
+\item 
+\#define \hyperlink{interrupt_8h_a757023b68f473748931baaab35c5fc34}{C\-C\-P\-\_\-4\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}~0b0110
+\item 
+\#define \hyperlink{interrupt_8h_aebff52e96c53ead17bdb6f90bbb16346}{C\-C\-P\-\_\-16\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}~0b0111
+\item 
+\#define \hyperlink{interrupt_8h_ae918491fdc28cffd74b92ed70cc540e6}{C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-L\-O\-W}~0b1000
+\item 
+\#define \hyperlink{interrupt_8h_ac90ee60c8061dfec142c4a19076071b3}{C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-H\-I\-G\-H}~0b1001
+\item 
+\#define \hyperlink{interrupt_8h_a7cbcfcf2af3a02db27738ca2d8025690}{C\-C\-P\-\_\-\-I\-N\-T\-\_\-\-O\-N\-\_\-\-C\-M\-P\-\_\-\-M\-A\-T\-C\-H}~0b1010
+\item 
+\#define \hyperlink{interrupt_8h_a012bc29c84101529dd0abfd8c921752b}{C\-C\-P\-\_\-\-S\-P\-E\-C\-I\-A\-L\-\_\-\-E\-V\-E\-N\-T}~0b1011
+\item 
+\#define \hyperlink{interrupt_8h_aea8c37679e1ddebd933c90d73928dcc7}{T0\-\_\-\-O\-N}~(1$<$$<$7)
+\item 
+\#define \hyperlink{interrupt_8h_af464e2834d25eb26ba56ad73f9dce65c}{T0\-\_\-\-O\-F\-F}~(0)
+\item 
+\#define \hyperlink{interrupt_8h_afe1b17d9a6113a544648ace66b5477ed}{T0\-\_\-8\-B\-I\-T}~(1$<$$<$6)
+\item 
+\#define \hyperlink{interrupt_8h_a8aa1e0a03b8d51959e59f459e848a3da}{T0\-\_\-16\-B\-I\-T}~(0)
+\item 
+\#define \hyperlink{interrupt_8h_a588c8362b56ddcb2a56d3e7b9f331684}{T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-E\-X\-T}~(1$<$$<$5)
+\item 
+\#define \hyperlink{interrupt_8h_a53f6d7a8b602e536d6347fb420c370e1}{T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-I\-N\-T}~(0)
+\item 
+\#define \hyperlink{interrupt_8h_ad670badcabf022a4f00ca0892ab79953}{T0\-\_\-\-H2\-L}~(1$<$$<$4)
+\item 
+\#define \hyperlink{interrupt_8h_a3a6267bc361d43343e2e8c6d89ca6886}{T0\-\_\-\-L2\-H}~(0)
+\item 
+\#define \hyperlink{interrupt_8h_aae78bfd7196604385777a59484519a12}{T0\-\_\-\-P\-S\-\_\-\-O\-F\-F}~(1$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_a310d555af16b9b60926eda6bfade771f}{T0\-\_\-\-P\-S\-\_\-\-O\-N}~(0)
+\item 
+\#define \hyperlink{interrupt_8h_a648c76cd87fc490b7a73840cd46e5ffe}{T0\-\_\-\-P\-S\-\_\-1\-\_\-256}~0b111
+\item 
+\#define \hyperlink{interrupt_8h_ae1b9383b572997934b86ec3fca502a28}{T0\-\_\-\-P\-S\-\_\-1\-\_\-128}~0b110
+\item 
+\#define \hyperlink{interrupt_8h_ad90a96b230e48c290c10797b0cdcaab2}{T0\-\_\-\-P\-S\-\_\-1\-\_\-64}~0b101
+\item 
+\#define \hyperlink{interrupt_8h_a056e1c107df98c3fafb8f3fa91ebed46}{T0\-\_\-\-P\-S\-\_\-1\-\_\-32}~0b100
+\item 
+\#define \hyperlink{interrupt_8h_a947f64b6fa8c71fa7635a8831a74934b}{T0\-\_\-\-P\-S\-\_\-1\-\_\-16}~0b011
+\item 
+\#define \hyperlink{interrupt_8h_aa99081e7bc9f6fd21307c6840e9606b0}{T0\-\_\-\-P\-S\-\_\-1\-\_\-8}~0b010
+\item 
+\#define \hyperlink{interrupt_8h_aed664ebecc1fb271b1d5f730d50fbe2b}{T0\-\_\-\-P\-S\-\_\-1\-\_\-4}~0b001
+\item 
+\#define \hyperlink{interrupt_8h_a02c3b4ace6d0da1db7326f26dd497d58}{T0\-\_\-\-P\-S\-\_\-1\-\_\-2}~0b000
+\item 
+\#define \hyperlink{interrupt_8h_a6c1aabaa056bd5605ce592bcf70a2c4f}{T1\-\_\-\-P\-S\-\_\-1\-\_\-1}~(0b00$<$$<$4)
+\item 
+\#define \hyperlink{interrupt_8h_a184fe4c16a3c004e1aa1b06378126bbb}{T1\-\_\-\-P\-S\-\_\-1\-\_\-2}~(0b01$<$$<$4)
+\item 
+\#define \hyperlink{interrupt_8h_a9fcd71ec4232abdf5f5b8b4477db559b}{T1\-\_\-\-P\-S\-\_\-1\-\_\-4}~(0b10$<$$<$4)
+\item 
+\#define \hyperlink{interrupt_8h_a938ad5bd139af60fdfcadd8f54e94f89}{T1\-\_\-\-P\-S\-\_\-1\-\_\-8}~(0b11$<$$<$4)
+\item 
+\#define \hyperlink{interrupt_8h_a316e62f911d1519cb183749048528e39}{T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N}~(1$<$$<$2)
+\item 
+\#define \hyperlink{interrupt_8h_a7f250757916e58044ec2ec639b6bc4d6}{T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F}~(0)
+\item 
+\#define \hyperlink{interrupt_8h_acb74df7dd6dad50441b5ca784d68a9ac}{T1\-\_\-\-O\-N}~(1$<$$<$0)
+\item 
+\#define \hyperlink{interrupt_8h_af10fdb4c714ab34c281932e2f706ab4b}{T1\-\_\-\-O\-F\-F}~(0)
+\item 
+\#define \hyperlink{interrupt_8h_abec2139c854d64c9c141f3be75179694}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-1}~(0$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_af037d5bcdc1e901e2e72704020d49489}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-2}~(1$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_a7f2478844001036e439047e336b0ea24}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-3}~(2$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_a7ea53e1f1a93aa5e3b3939c76ed449eb}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-4}~(3$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_ab775da631ac7f6809266d77e75211843}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-5}~(4$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_a9fe52755249a3eb11331a3c6cb32d9ea}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-6}~(5$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_a76ec68a232494165709b218a5f484115}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-7}~(6$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_a75d14be48c12bc2a79ed79ea304584b1}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-8}~(7$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_a80fc38b4e0b0ab2db5aeab3a9f3226a0}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-9}~(8$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_ac23a01780f8e9b023acdfbba001fc40d}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-10}~(9$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_a27a5d134387aef2f97156c1ff2192e9e}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-11}~(10$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_af78dbc726406bbceb26c052edd86c7f1}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-12}~(11$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_aa2a1a7a3a4dee8fdfddede0fb721637f}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-13}~(12$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_a2fd70a3b08b344ea75d8a107dc4f74f4}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-14}~(13$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_afec529222e5a4a42e0e493c815262f76}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-15}~(14$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_ab0f130aa4589a2977a617fb848fa525a}{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-16}~(15$<$$<$3)
+\item 
+\#define \hyperlink{interrupt_8h_aba74968db1ae6aa4edd567c64b8fe07c}{T2\-\_\-\-O\-N}~(1$<$$<$2)
+\item 
+\#define \hyperlink{interrupt_8h_a766a0c1ce1429b5653cf92f50c8a09b5}{T2\-\_\-\-O\-F\-F}~(0)
+\item 
+\#define \hyperlink{interrupt_8h_ad3ac7cdd008a91eb59460faafd73f6cd}{T2\-\_\-\-P\-S\-\_\-1\-\_\-1}~0b00
+\item 
+\#define \hyperlink{interrupt_8h_ad134433c5f4caac4834908fb83c1231b}{T2\-\_\-\-P\-S\-\_\-1\-\_\-4}~0b01
+\item 
+\#define \hyperlink{interrupt_8h_a4939db508cd75ba801a814112d142810}{T2\-\_\-\-P\-S\-\_\-1\-\_\-16}~0b11
+\item 
+\#define \hyperlink{interrupt_8h_a849fbdf41ab8f72d9a12b3090a57a2dc}{T3\-\_\-\-P\-S\-\_\-1\-\_\-1}~(0b00$<$$<$4)
+\item 
+\#define \hyperlink{interrupt_8h_a2a9bb5580fc374e47e7a41684302f6e6}{T3\-\_\-\-P\-S\-\_\-1\-\_\-2}~(0b01$<$$<$4)
+\item 
+\#define \hyperlink{interrupt_8h_a779f51a7dd9c44e93d0d4cc56416a940}{T3\-\_\-\-P\-S\-\_\-1\-\_\-4}~(0b10$<$$<$4)
+\item 
+\#define \hyperlink{interrupt_8h_a4b6200ff53c4efe3cf482ed1bf5a350f}{T3\-\_\-\-P\-S\-\_\-1\-\_\-8}~(0b11$<$$<$4)
+\item 
+\#define \hyperlink{interrupt_8h_a885ec6766509726e57927065d809a9fc}{T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N}~(1$<$$<$2)
+\item 
+\#define \hyperlink{interrupt_8h_af1733965d98b6dcc8510c9477cd35d1b}{T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F}~(0)
+\item 
+\#define \hyperlink{interrupt_8h_a1b7c5dd5c00c431f5c596d7dcabd17cf}{T3\-\_\-\-O\-N}~(1$<$$<$0)
+\item 
+\#define \hyperlink{interrupt_8h_a85e35a7db2a32098cd45509fb4030ab7}{T3\-\_\-\-O\-F\-F}~(0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{interrupt_8h_aebff52e96c53ead17bdb6f90bbb16346}{\index{interrupt.\-h@{interrupt.\-h}!C\-C\-P\-\_\-16\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E@{C\-C\-P\-\_\-16\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}}
+\index{C\-C\-P\-\_\-16\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E@{C\-C\-P\-\_\-16\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{C\-C\-P\-\_\-16\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-C\-P\-\_\-16\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E~0b0111}}\label{interrupt_8h_aebff52e96c53ead17bdb6f90bbb16346}
+
+
+Definition at line 122 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a757023b68f473748931baaab35c5fc34}{\index{interrupt.\-h@{interrupt.\-h}!C\-C\-P\-\_\-4\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E@{C\-C\-P\-\_\-4\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}}
+\index{C\-C\-P\-\_\-4\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E@{C\-C\-P\-\_\-4\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{C\-C\-P\-\_\-4\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-C\-P\-\_\-4\-T\-H\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E~0b0110}}\label{interrupt_8h_a757023b68f473748931baaab35c5fc34}
+
+
+Definition at line 121 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_aad37a1f30cb722165423f50c74ca4646}{\index{interrupt.\-h@{interrupt.\-h}!C\-C\-P\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E@{C\-C\-P\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}}
+\index{C\-C\-P\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E@{C\-C\-P\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{C\-C\-P\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-C\-P\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E~0b0100}}\label{interrupt_8h_aad37a1f30cb722165423f50c74ca4646}
+
+
+Definition at line 119 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ac90ee60c8061dfec142c4a19076071b3}{\index{interrupt.\-h@{interrupt.\-h}!C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-H\-I\-G\-H@{C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-H\-I\-G\-H}}
+\index{C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-H\-I\-G\-H@{C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-H\-I\-G\-H}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-H\-I\-G\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-H\-I\-G\-H~0b1001}}\label{interrupt_8h_ac90ee60c8061dfec142c4a19076071b3}
+
+
+Definition at line 124 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ae918491fdc28cffd74b92ed70cc540e6}{\index{interrupt.\-h@{interrupt.\-h}!C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-L\-O\-W@{C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-L\-O\-W}}
+\index{C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-L\-O\-W@{C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-L\-O\-W}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-L\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-C\-P\-\_\-\-I\-N\-I\-T\-\_\-\-P\-I\-N\-\_\-\-L\-O\-W~0b1000}}\label{interrupt_8h_ae918491fdc28cffd74b92ed70cc540e6}
+
+
+Definition at line 123 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a7cbcfcf2af3a02db27738ca2d8025690}{\index{interrupt.\-h@{interrupt.\-h}!C\-C\-P\-\_\-\-I\-N\-T\-\_\-\-O\-N\-\_\-\-C\-M\-P\-\_\-\-M\-A\-T\-C\-H@{C\-C\-P\-\_\-\-I\-N\-T\-\_\-\-O\-N\-\_\-\-C\-M\-P\-\_\-\-M\-A\-T\-C\-H}}
+\index{C\-C\-P\-\_\-\-I\-N\-T\-\_\-\-O\-N\-\_\-\-C\-M\-P\-\_\-\-M\-A\-T\-C\-H@{C\-C\-P\-\_\-\-I\-N\-T\-\_\-\-O\-N\-\_\-\-C\-M\-P\-\_\-\-M\-A\-T\-C\-H}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{C\-C\-P\-\_\-\-I\-N\-T\-\_\-\-O\-N\-\_\-\-C\-M\-P\-\_\-\-M\-A\-T\-C\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-C\-P\-\_\-\-I\-N\-T\-\_\-\-O\-N\-\_\-\-C\-M\-P\-\_\-\-M\-A\-T\-C\-H~0b1010}}\label{interrupt_8h_a7cbcfcf2af3a02db27738ca2d8025690}
+
+
+Definition at line 125 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a1162d9f185303a33ceee5fc3d1207a7a}{\index{interrupt.\-h@{interrupt.\-h}!C\-C\-P\-\_\-\-M\-O\-D\-E\-\_\-\-T\-O\-G\-G\-L\-E@{C\-C\-P\-\_\-\-M\-O\-D\-E\-\_\-\-T\-O\-G\-G\-L\-E}}
+\index{C\-C\-P\-\_\-\-M\-O\-D\-E\-\_\-\-T\-O\-G\-G\-L\-E@{C\-C\-P\-\_\-\-M\-O\-D\-E\-\_\-\-T\-O\-G\-G\-L\-E}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{C\-C\-P\-\_\-\-M\-O\-D\-E\-\_\-\-T\-O\-G\-G\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-C\-P\-\_\-\-M\-O\-D\-E\-\_\-\-T\-O\-G\-G\-L\-E~0b0010}}\label{interrupt_8h_a1162d9f185303a33ceee5fc3d1207a7a}
+
+
+Definition at line 118 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a3cd9a9c6d8c8c5a67a173c52a6648a96}{\index{interrupt.\-h@{interrupt.\-h}!C\-C\-P\-\_\-\-R\-E\-S\-E\-T@{C\-C\-P\-\_\-\-R\-E\-S\-E\-T}}
+\index{C\-C\-P\-\_\-\-R\-E\-S\-E\-T@{C\-C\-P\-\_\-\-R\-E\-S\-E\-T}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{C\-C\-P\-\_\-\-R\-E\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-C\-P\-\_\-\-R\-E\-S\-E\-T~0b0000}}\label{interrupt_8h_a3cd9a9c6d8c8c5a67a173c52a6648a96}
+C\-C\-Px\-C\-O\-N\-: S\-T\-A\-N\-D\-A\-R\-D C\-C\-Px C\-O\-N\-T\-R\-O\-L R\-E\-G\-I\-S\-T\-E\-R 
+
+Definition at line 117 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_aae95913e8bc8a1e4e4483efb25bccfcb}{\index{interrupt.\-h@{interrupt.\-h}!C\-C\-P\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E@{C\-C\-P\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}}
+\index{C\-C\-P\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E@{C\-C\-P\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{C\-C\-P\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-C\-P\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E~0b0101}}\label{interrupt_8h_aae95913e8bc8a1e4e4483efb25bccfcb}
+
+
+Definition at line 120 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a012bc29c84101529dd0abfd8c921752b}{\index{interrupt.\-h@{interrupt.\-h}!C\-C\-P\-\_\-\-S\-P\-E\-C\-I\-A\-L\-\_\-\-E\-V\-E\-N\-T@{C\-C\-P\-\_\-\-S\-P\-E\-C\-I\-A\-L\-\_\-\-E\-V\-E\-N\-T}}
+\index{C\-C\-P\-\_\-\-S\-P\-E\-C\-I\-A\-L\-\_\-\-E\-V\-E\-N\-T@{C\-C\-P\-\_\-\-S\-P\-E\-C\-I\-A\-L\-\_\-\-E\-V\-E\-N\-T}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{C\-C\-P\-\_\-\-S\-P\-E\-C\-I\-A\-L\-\_\-\-E\-V\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-C\-P\-\_\-\-S\-P\-E\-C\-I\-A\-L\-\_\-\-E\-V\-E\-N\-T~0b1011}}\label{interrupt_8h_a012bc29c84101529dd0abfd8c921752b}
+
+
+Definition at line 126 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a85d66591e1cab863a514af47bdf671d9}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-A\-D@{I\-N\-T\-\_\-\-A\-D}}
+\index{I\-N\-T\-\_\-\-A\-D@{I\-N\-T\-\_\-\-A\-D}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-A\-D~32}}\label{interrupt_8h_a85d66591e1cab863a514af47bdf671d9}
+
+
+Definition at line 92 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a8c32a75724d4778bdaefc630f0c0954e}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-B\-C\-L@{I\-N\-T\-\_\-\-B\-C\-L}}
+\index{I\-N\-T\-\_\-\-B\-C\-L@{I\-N\-T\-\_\-\-B\-C\-L}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-B\-C\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-B\-C\-L~36}}\label{interrupt_8h_a8c32a75724d4778bdaefc630f0c0954e}
+
+
+Definition at line 97 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_ac8460733027631f3dd037eb1911ba549}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-B\-C\-L1@{I\-N\-T\-\_\-\-B\-C\-L1}}
+\index{I\-N\-T\-\_\-\-B\-C\-L1@{I\-N\-T\-\_\-\-B\-C\-L1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-B\-C\-L1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-B\-C\-L1~36}}\label{interrupt_8h_ac8460733027631f3dd037eb1911ba549}
+
+
+Definition at line 98 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_aa2f087ee11dfd694692fad176087a6c1}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-B\-C\-L2@{I\-N\-T\-\_\-\-B\-C\-L2}}
+\index{I\-N\-T\-\_\-\-B\-C\-L2@{I\-N\-T\-\_\-\-B\-C\-L2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-B\-C\-L2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-B\-C\-L2~37}}\label{interrupt_8h_aa2f087ee11dfd694692fad176087a6c1}
+
+
+Definition at line 99 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a9e751270bdd089f2f9e0dfa1fb3548fa}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-C\-P1@{I\-N\-T\-\_\-\-C\-C\-P1}}
+\index{I\-N\-T\-\_\-\-C\-C\-P1@{I\-N\-T\-\_\-\-C\-C\-P1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-C\-P1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-C\-P1~17}}\label{interrupt_8h_a9e751270bdd089f2f9e0dfa1fb3548fa}
+
+
+Definition at line 70 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a2d3d69953f9ff7aa6998f0bf6524423d}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-C\-P10@{I\-N\-T\-\_\-\-C\-C\-P10}}
+\index{I\-N\-T\-\_\-\-C\-C\-P10@{I\-N\-T\-\_\-\-C\-C\-P10}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-C\-P10}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-C\-P10~25}}\label{interrupt_8h_a2d3d69953f9ff7aa6998f0bf6524423d}
+
+
+Definition at line 79 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ae7952254a56c6ad94873ac960b0e0577}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-C\-P2@{I\-N\-T\-\_\-\-C\-C\-P2}}
+\index{I\-N\-T\-\_\-\-C\-C\-P2@{I\-N\-T\-\_\-\-C\-C\-P2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-C\-P2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-C\-P2~18}}\label{interrupt_8h_ae7952254a56c6ad94873ac960b0e0577}
+
+
+Definition at line 71 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a5acdaeedb9d52c8ca55ce9f7728fb220}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-C\-P4@{I\-N\-T\-\_\-\-C\-C\-P4}}
+\index{I\-N\-T\-\_\-\-C\-C\-P4@{I\-N\-T\-\_\-\-C\-C\-P4}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-C\-P4}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-C\-P4~19}}\label{interrupt_8h_a5acdaeedb9d52c8ca55ce9f7728fb220}
+
+
+Definition at line 73 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ab9816884dc71afa4a332aa7e851bbb3f}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-C\-P5@{I\-N\-T\-\_\-\-C\-C\-P5}}
+\index{I\-N\-T\-\_\-\-C\-C\-P5@{I\-N\-T\-\_\-\-C\-C\-P5}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-C\-P5}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-C\-P5~20}}\label{interrupt_8h_ab9816884dc71afa4a332aa7e851bbb3f}
+
+
+Definition at line 74 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ad63b20e05d7fac5fd94d3954f86b7cc0}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-C\-P6@{I\-N\-T\-\_\-\-C\-C\-P6}}
+\index{I\-N\-T\-\_\-\-C\-C\-P6@{I\-N\-T\-\_\-\-C\-C\-P6}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-C\-P6}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-C\-P6~21}}\label{interrupt_8h_ad63b20e05d7fac5fd94d3954f86b7cc0}
+
+
+Definition at line 75 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a68ee3a17ff9e6fb922450e6291cabc6c}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-C\-P7@{I\-N\-T\-\_\-\-C\-C\-P7}}
+\index{I\-N\-T\-\_\-\-C\-C\-P7@{I\-N\-T\-\_\-\-C\-C\-P7}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-C\-P7}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-C\-P7~22}}\label{interrupt_8h_a68ee3a17ff9e6fb922450e6291cabc6c}
+
+
+Definition at line 76 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a61e5962a83a2b3f3e8cab6a40bdcccd9}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-C\-P8@{I\-N\-T\-\_\-\-C\-C\-P8}}
+\index{I\-N\-T\-\_\-\-C\-C\-P8@{I\-N\-T\-\_\-\-C\-C\-P8}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-C\-P8}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-C\-P8~23}}\label{interrupt_8h_a61e5962a83a2b3f3e8cab6a40bdcccd9}
+
+
+Definition at line 77 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ae8a56f63d5f224a5262dca7996b4a2a8}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-C\-P9@{I\-N\-T\-\_\-\-C\-C\-P9}}
+\index{I\-N\-T\-\_\-\-C\-C\-P9@{I\-N\-T\-\_\-\-C\-C\-P9}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-C\-P9}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-C\-P9~24}}\label{interrupt_8h_ae8a56f63d5f224a5262dca7996b4a2a8}
+
+
+Definition at line 78 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a3881911c4ed895695d2e741cc02a1154}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-M@{I\-N\-T\-\_\-\-C\-M}}
+\index{I\-N\-T\-\_\-\-C\-M@{I\-N\-T\-\_\-\-C\-M}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-M~26}}\label{interrupt_8h_a3881911c4ed895695d2e741cc02a1154}
+
+
+Definition at line 81 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a60b246982d34b16fcfa49187072d5b19}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-M1@{I\-N\-T\-\_\-\-C\-M1}}
+\index{I\-N\-T\-\_\-\-C\-M1@{I\-N\-T\-\_\-\-C\-M1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-M1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-M1~26}}\label{interrupt_8h_a60b246982d34b16fcfa49187072d5b19}
+
+
+Definition at line 82 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a4c30ae879570e7a35f97587596570427}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-M2@{I\-N\-T\-\_\-\-C\-M2}}
+\index{I\-N\-T\-\_\-\-C\-M2@{I\-N\-T\-\_\-\-C\-M2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-M2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-M2~27}}\label{interrupt_8h_a4c30ae879570e7a35f97587596570427}
+
+
+Definition at line 83 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_aa90db2d1ad04376c0ca71188160d9389}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-C\-T\-M\-U@{I\-N\-T\-\_\-\-C\-T\-M\-U}}
+\index{I\-N\-T\-\_\-\-C\-T\-M\-U@{I\-N\-T\-\_\-\-C\-T\-M\-U}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-C\-T\-M\-U}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-C\-T\-M\-U~41}}\label{interrupt_8h_aa90db2d1ad04376c0ca71188160d9389}
+
+
+Definition at line 107 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a76ad68abd3b3b1d6404a4a8661454832}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E@{I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E}}
+\index{I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E@{I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E~0}}\label{interrupt_8h_a76ad68abd3b3b1d6404a4a8661454832}
+
+
+Definition at line 33 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a81de5681dfcbd8e1bf891f6540dcb249}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}}
+\index{I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-D\-I\-S\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y~0}}\label{interrupt_8h_a81de5681dfcbd8e1bf891f6540dcb249}
+
+
+Definition at line 35 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ace3d00e09690b38faa21e754a6ea035b}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-E\-E@{I\-N\-T\-\_\-\-E\-E}}
+\index{I\-N\-T\-\_\-\-E\-E@{I\-N\-T\-\_\-\-E\-E}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-E\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-E\-E~34}}\label{interrupt_8h_ace3d00e09690b38faa21e754a6ea035b}
+
+
+Definition at line 94 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_abf7a56466fd6203663685a04448c9185}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E@{I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E}}
+\index{I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E@{I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E~1}}\label{interrupt_8h_abf7a56466fd6203663685a04448c9185}
+
+
+Definition at line 32 of file interrupt.\-h.
+
+
+
+Referenced by D\-C\-F77\-\_\-start().
+
+\hypertarget{interrupt_8h_a7a8799c7432bf8c8f2fd125e99bf5c26}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}}
+\index{I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-E\-N\-A\-B\-L\-E\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y~1}}\label{interrupt_8h_a7a8799c7432bf8c8f2fd125e99bf5c26}
+
+
+Definition at line 34 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a09ff59f04f58c3c7f032ee4fba6f0ca6}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E@{I\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}}
+\index{I\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E@{I\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E~0}}\label{interrupt_8h_a09ff59f04f58c3c7f032ee4fba6f0ca6}
+
+
+Definition at line 39 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a764fb7c5acbe8969ff8bcdffa153fbae}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{I\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}}
+\index{I\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{I\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-H\-I\-G\-H\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y~1}}\label{interrupt_8h_a764fb7c5acbe8969ff8bcdffa153fbae}
+
+
+Definition at line 36 of file interrupt.\-h.
+
+
+
+Referenced by D\-C\-F77\-\_\-start().
+
+\hypertarget{interrupt_8h_a749178e166f40b96d363ba9ae1ad57c7}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-H\-L\-V\-D@{I\-N\-T\-\_\-\-H\-L\-V\-D}}
+\index{I\-N\-T\-\_\-\-H\-L\-V\-D@{I\-N\-T\-\_\-\-H\-L\-V\-D}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-H\-L\-V\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-H\-L\-V\-D~35}}\label{interrupt_8h_a749178e166f40b96d363ba9ae1ad57c7}
+
+
+Definition at line 95 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a07f4a014d2b630308eae40f0663db562}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-I\-N\-T0@{I\-N\-T\-\_\-\-I\-N\-T0}}
+\index{I\-N\-T\-\_\-\-I\-N\-T0@{I\-N\-T\-\_\-\-I\-N\-T0}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-I\-N\-T0}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-I\-N\-T0~12}}\label{interrupt_8h_a07f4a014d2b630308eae40f0663db562}
+
+
+Definition at line 63 of file interrupt.\-h.
+
+
+
+Referenced by userhighinterrupt().
+
+\hypertarget{interrupt_8h_af4b10633d550054fc34f22022ab25bf3}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-I\-N\-T1@{I\-N\-T\-\_\-\-I\-N\-T1}}
+\index{I\-N\-T\-\_\-\-I\-N\-T1@{I\-N\-T\-\_\-\-I\-N\-T1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-I\-N\-T1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-I\-N\-T1~13}}\label{interrupt_8h_af4b10633d550054fc34f22022ab25bf3}
+
+
+Definition at line 64 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a63fd1e5768624201b60a588bd88acf5c}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-I\-N\-T2@{I\-N\-T\-\_\-\-I\-N\-T2}}
+\index{I\-N\-T\-\_\-\-I\-N\-T2@{I\-N\-T\-\_\-\-I\-N\-T2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-I\-N\-T2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-I\-N\-T2~14}}\label{interrupt_8h_a63fd1e5768624201b60a588bd88acf5c}
+
+
+Definition at line 65 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a1516170fd9ec469116f7de8af9fc6a2c}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-I\-N\-T3@{I\-N\-T\-\_\-\-I\-N\-T3}}
+\index{I\-N\-T\-\_\-\-I\-N\-T3@{I\-N\-T\-\_\-\-I\-N\-T3}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-I\-N\-T3}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-I\-N\-T3~15}}\label{interrupt_8h_a1516170fd9ec469116f7de8af9fc6a2c}
+
+
+Definition at line 66 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a466cf776f844f979462e8f59fcc24efd}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G0@{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G0}}
+\index{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G0@{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G0}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G0}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G0~8}}\label{interrupt_8h_a466cf776f844f979462e8f59fcc24efd}
+
+
+Definition at line 58 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ad052a15b54eb74b1387b9b426263a1c0}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G1@{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G1}}
+\index{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G1@{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G1~9}}\label{interrupt_8h_ad052a15b54eb74b1387b9b426263a1c0}
+
+
+Definition at line 59 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ad355aee8cb785665b21b140a940df8a4}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G2@{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G2}}
+\index{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G2@{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G2~10}}\label{interrupt_8h_ad355aee8cb785665b21b140a940df8a4}
+
+
+Definition at line 60 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a3bab1c7446e81839d72f7ce589e79f40}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G3@{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G3}}
+\index{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G3@{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G3}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G3}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-I\-N\-T\-E\-D\-G3~11}}\label{interrupt_8h_a3bab1c7446e81839d72f7ce589e79f40}
+
+
+Definition at line 61 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_abb38dffe47f0b7b7c6f5b1f83a8594a3}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{I\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}}
+\index{I\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y@{I\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-L\-O\-W\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y~0}}\label{interrupt_8h_abb38dffe47f0b7b7c6f5b1f83a8594a3}
+
+
+Definition at line 37 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a373ce2e9bc285d46a5b7041f85fe5b44}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-M\-I\-C\-R\-O\-S\-E\-C@{I\-N\-T\-\_\-\-M\-I\-C\-R\-O\-S\-E\-C}}
+\index{I\-N\-T\-\_\-\-M\-I\-C\-R\-O\-S\-E\-C@{I\-N\-T\-\_\-\-M\-I\-C\-R\-O\-S\-E\-C}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-M\-I\-C\-R\-O\-S\-E\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-M\-I\-C\-R\-O\-S\-E\-C~1}}\label{interrupt_8h_a373ce2e9bc285d46a5b7041f85fe5b44}
+
+
+Definition at line 42 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a2c6871938d56697fcb8a469adbe31968}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C@{I\-N\-T\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C}}
+\index{I\-N\-T\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C@{I\-N\-T\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-M\-I\-L\-L\-I\-S\-E\-C~2}}\label{interrupt_8h_a2c6871938d56697fcb8a469adbe31968}
+
+
+Definition at line 43 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a96eb0bf1b4df248f71eb0f023067daef}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-N\-O\-T\-\_\-\-U\-S\-E\-D@{I\-N\-T\-\_\-\-N\-O\-T\-\_\-\-U\-S\-E\-D}}
+\index{I\-N\-T\-\_\-\-N\-O\-T\-\_\-\-U\-S\-E\-D@{I\-N\-T\-\_\-\-N\-O\-T\-\_\-\-U\-S\-E\-D}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-N\-O\-T\-\_\-\-U\-S\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-N\-O\-T\-\_\-\-U\-S\-E\-D~0}}\label{interrupt_8h_a96eb0bf1b4df248f71eb0f023067daef}
+
+
+Definition at line 40 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_aa96d5096c16af4ea4327b0f2c551fc02}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-N\-U\-M@{I\-N\-T\-\_\-\-N\-U\-M}}
+\index{I\-N\-T\-\_\-\-N\-U\-M@{I\-N\-T\-\_\-\-N\-U\-M}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-N\-U\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-N\-U\-M~44}}\label{interrupt_8h_aa96d5096c16af4ea4327b0f2c551fc02}
+
+
+Definition at line 110 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a77d1f90becda08972f61baba06388c18}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-O\-S\-C\-F@{I\-N\-T\-\_\-\-O\-S\-C\-F}}
+\index{I\-N\-T\-\_\-\-O\-S\-C\-F@{I\-N\-T\-\_\-\-O\-S\-C\-F}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-O\-S\-C\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-O\-S\-C\-F~33}}\label{interrupt_8h_a77d1f90becda08972f61baba06388c18}
+
+
+Definition at line 93 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a3e060da74fb4117541d878ecfa9513cd}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-P\-M\-P@{I\-N\-T\-\_\-\-P\-M\-P}}
+\index{I\-N\-T\-\_\-\-P\-M\-P@{I\-N\-T\-\_\-\-P\-M\-P}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-P\-M\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-P\-M\-P~43}}\label{interrupt_8h_a3e060da74fb4117541d878ecfa9513cd}
+
+
+Definition at line 109 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a54847d8a13305608055fdb59ca809f3a}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-R\-B@{I\-N\-T\-\_\-\-R\-B}}
+\index{I\-N\-T\-\_\-\-R\-B@{I\-N\-T\-\_\-\-R\-B}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-R\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-R\-B~16}}\label{interrupt_8h_a54847d8a13305608055fdb59ca809f3a}
+
+
+Definition at line 68 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_afaa9f7c5fe94cf74964c1206f2b2c959}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-R\-C@{I\-N\-T\-\_\-\-R\-C}}
+\index{I\-N\-T\-\_\-\-R\-C@{I\-N\-T\-\_\-\-R\-C}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-R\-C~28}}\label{interrupt_8h_afaa9f7c5fe94cf74964c1206f2b2c959}
+
+
+Definition at line 85 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a9665c8b95390da5e765a0f0ec6f1139c}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-R\-C1@{I\-N\-T\-\_\-\-R\-C1}}
+\index{I\-N\-T\-\_\-\-R\-C1@{I\-N\-T\-\_\-\-R\-C1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-R\-C1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-R\-C1~28}}\label{interrupt_8h_a9665c8b95390da5e765a0f0ec6f1139c}
+
+
+Definition at line 87 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a199c7119e3c113762701d74fa9bbbe78}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-R\-C2@{I\-N\-T\-\_\-\-R\-C2}}
+\index{I\-N\-T\-\_\-\-R\-C2@{I\-N\-T\-\_\-\-R\-C2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-R\-C2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-R\-C2~30}}\label{interrupt_8h_a199c7119e3c113762701d74fa9bbbe78}
+
+
+Definition at line 89 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a5eb648d4a65b882e1cefc3d4ce5e0149}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E@{I\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}}
+\index{I\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E@{I\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E~1}}\label{interrupt_8h_a5eb648d4a65b882e1cefc3d4ce5e0149}
+
+
+Definition at line 38 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a08deb9e2ea6a2b0c298ab6725e0a98b9}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-R\-T\-C\-C@{I\-N\-T\-\_\-\-R\-T\-C\-C}}
+\index{I\-N\-T\-\_\-\-R\-T\-C\-C@{I\-N\-T\-\_\-\-R\-T\-C\-C}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-R\-T\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-R\-T\-C\-C~42}}\label{interrupt_8h_a08deb9e2ea6a2b0c298ab6725e0a98b9}
+
+
+Definition at line 108 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ad2aa0e5572055228664226ee05fff60f}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-S\-E\-C@{I\-N\-T\-\_\-\-S\-E\-C}}
+\index{I\-N\-T\-\_\-\-S\-E\-C@{I\-N\-T\-\_\-\-S\-E\-C}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-S\-E\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-S\-E\-C~3}}\label{interrupt_8h_ad2aa0e5572055228664226ee05fff60f}
+
+
+Definition at line 44 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a855d7c70fa51d173537f137eb76263c9}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-S\-S\-P@{I\-N\-T\-\_\-\-S\-S\-P}}
+\index{I\-N\-T\-\_\-\-S\-S\-P@{I\-N\-T\-\_\-\-S\-S\-P}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-S\-S\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-S\-S\-P~39}}\label{interrupt_8h_a855d7c70fa51d173537f137eb76263c9}
+
+
+Definition at line 103 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a728aa38395db26b9613ff425bffb188c}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-S\-S\-P1@{I\-N\-T\-\_\-\-S\-S\-P1}}
+\index{I\-N\-T\-\_\-\-S\-S\-P1@{I\-N\-T\-\_\-\-S\-S\-P1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-S\-S\-P1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-S\-S\-P1~39}}\label{interrupt_8h_a728aa38395db26b9613ff425bffb188c}
+
+
+Definition at line 104 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a2068452e86ec9bbf421d2abf6e0c8db0}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-S\-S\-P2@{I\-N\-T\-\_\-\-S\-S\-P2}}
+\index{I\-N\-T\-\_\-\-S\-S\-P2@{I\-N\-T\-\_\-\-S\-S\-P2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-S\-S\-P2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-S\-S\-P2~40}}\label{interrupt_8h_a2068452e86ec9bbf421d2abf6e0c8db0}
+
+
+Definition at line 105 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a1d1cbabd3d27a7ce01bee0cf9e193652}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-T\-M\-R0@{I\-N\-T\-\_\-\-T\-M\-R0}}
+\index{I\-N\-T\-\_\-\-T\-M\-R0@{I\-N\-T\-\_\-\-T\-M\-R0}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-T\-M\-R0}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-T\-M\-R0~0}}\label{interrupt_8h_a1d1cbabd3d27a7ce01bee0cf9e193652}
+
+
+Interrupts list (these \#define can be used in Pinguino's Code Source) 
+
+
+
+Definition at line 48 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a8e0f5865c5bff98dcce74abedf67960f}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-T\-M\-R1@{I\-N\-T\-\_\-\-T\-M\-R1}}
+\index{I\-N\-T\-\_\-\-T\-M\-R1@{I\-N\-T\-\_\-\-T\-M\-R1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-T\-M\-R1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-T\-M\-R1~1}}\label{interrupt_8h_a8e0f5865c5bff98dcce74abedf67960f}
+
+
+Definition at line 49 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a525445a1ab7e1d2855d18fd416f66a8d}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-T\-M\-R2@{I\-N\-T\-\_\-\-T\-M\-R2}}
+\index{I\-N\-T\-\_\-\-T\-M\-R2@{I\-N\-T\-\_\-\-T\-M\-R2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-T\-M\-R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-T\-M\-R2~2}}\label{interrupt_8h_a525445a1ab7e1d2855d18fd416f66a8d}
+
+
+Definition at line 50 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a2032337fbb51bb7e9086ca28da0446c5}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-T\-M\-R3@{I\-N\-T\-\_\-\-T\-M\-R3}}
+\index{I\-N\-T\-\_\-\-T\-M\-R3@{I\-N\-T\-\_\-\-T\-M\-R3}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-T\-M\-R3}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-T\-M\-R3~3}}\label{interrupt_8h_a2032337fbb51bb7e9086ca28da0446c5}
+
+
+Definition at line 51 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_ae1a21fe5e3606226d79e047d5ae739b0}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-T\-M\-R4@{I\-N\-T\-\_\-\-T\-M\-R4}}
+\index{I\-N\-T\-\_\-\-T\-M\-R4@{I\-N\-T\-\_\-\-T\-M\-R4}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-T\-M\-R4}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-T\-M\-R4~4}}\label{interrupt_8h_ae1a21fe5e3606226d79e047d5ae739b0}
+
+
+Definition at line 52 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a352d63f59443ab14f7ebcb06882420ef}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-T\-M\-R5@{I\-N\-T\-\_\-\-T\-M\-R5}}
+\index{I\-N\-T\-\_\-\-T\-M\-R5@{I\-N\-T\-\_\-\-T\-M\-R5}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-T\-M\-R5}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-T\-M\-R5~5}}\label{interrupt_8h_a352d63f59443ab14f7ebcb06882420ef}
+
+
+Definition at line 53 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a9a7493422d361eeb666324eee4e72c46}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-T\-M\-R6@{I\-N\-T\-\_\-\-T\-M\-R6}}
+\index{I\-N\-T\-\_\-\-T\-M\-R6@{I\-N\-T\-\_\-\-T\-M\-R6}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-T\-M\-R6}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-T\-M\-R6~6}}\label{interrupt_8h_a9a7493422d361eeb666324eee4e72c46}
+
+
+Definition at line 54 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_afd7397866748897d9c4ab2e9357c0a5a}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-T\-M\-R8@{I\-N\-T\-\_\-\-T\-M\-R8}}
+\index{I\-N\-T\-\_\-\-T\-M\-R8@{I\-N\-T\-\_\-\-T\-M\-R8}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-T\-M\-R8}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-T\-M\-R8~8}}\label{interrupt_8h_afd7397866748897d9c4ab2e9357c0a5a}
+
+
+Definition at line 56 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_ae4b980b956c3a627cbc50deaa33efb0d}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-T\-X@{I\-N\-T\-\_\-\-T\-X}}
+\index{I\-N\-T\-\_\-\-T\-X@{I\-N\-T\-\_\-\-T\-X}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-T\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-T\-X~29}}\label{interrupt_8h_ae4b980b956c3a627cbc50deaa33efb0d}
+
+
+Definition at line 86 of file interrupt.\-h.
+
+
+
+Referenced by userlowinterrupt().
+
+\hypertarget{interrupt_8h_a8edcd24c561b9cf3fd71aeb8bdf8af2d}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-T\-X1@{I\-N\-T\-\_\-\-T\-X1}}
+\index{I\-N\-T\-\_\-\-T\-X1@{I\-N\-T\-\_\-\-T\-X1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-T\-X1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-T\-X1~29}}\label{interrupt_8h_a8edcd24c561b9cf3fd71aeb8bdf8af2d}
+
+
+Definition at line 88 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_abffca0943e55cff33321a5fc2e5fa1b6}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-T\-X2@{I\-N\-T\-\_\-\-T\-X2}}
+\index{I\-N\-T\-\_\-\-T\-X2@{I\-N\-T\-\_\-\-T\-X2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-T\-X2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-T\-X2~31}}\label{interrupt_8h_abffca0943e55cff33321a5fc2e5fa1b6}
+
+
+Definition at line 90 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a5dae4195f004e6899a36066e00dcd13d}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-U\-S\-B@{I\-N\-T\-\_\-\-U\-S\-B}}
+\index{I\-N\-T\-\_\-\-U\-S\-B@{I\-N\-T\-\_\-\-U\-S\-B}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-U\-S\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-U\-S\-B~38}}\label{interrupt_8h_a5dae4195f004e6899a36066e00dcd13d}
+
+
+Definition at line 101 of file interrupt.\-h.
+
+
+
+Referenced by I\-N\-T\-Enable\-Interrupts().
+
+\hypertarget{interrupt_8h_af4d8f2914ad459337cd089d7cd95e0e7}{\index{interrupt.\-h@{interrupt.\-h}!I\-N\-T\-\_\-\-U\-S\-E\-D@{I\-N\-T\-\_\-\-U\-S\-E\-D}}
+\index{I\-N\-T\-\_\-\-U\-S\-E\-D@{I\-N\-T\-\_\-\-U\-S\-E\-D}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{I\-N\-T\-\_\-\-U\-S\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-\_\-\-U\-S\-E\-D~0x\-F\-F}}\label{interrupt_8h_af4d8f2914ad459337cd089d7cd95e0e7}
+
+
+Definition at line 41 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a8aa1e0a03b8d51959e59f459e848a3da}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-16\-B\-I\-T@{T0\-\_\-16\-B\-I\-T}}
+\index{T0\-\_\-16\-B\-I\-T@{T0\-\_\-16\-B\-I\-T}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-16\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-16\-B\-I\-T~(0)}}\label{interrupt_8h_a8aa1e0a03b8d51959e59f459e848a3da}
+
+
+Definition at line 137 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_afe1b17d9a6113a544648ace66b5477ed}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-8\-B\-I\-T@{T0\-\_\-8\-B\-I\-T}}
+\index{T0\-\_\-8\-B\-I\-T@{T0\-\_\-8\-B\-I\-T}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-8\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-8\-B\-I\-T~(1$<$$<$6)}}\label{interrupt_8h_afe1b17d9a6113a544648ace66b5477ed}
+
+
+Definition at line 136 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ad670badcabf022a4f00ca0892ab79953}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-H2\-L@{T0\-\_\-\-H2\-L}}
+\index{T0\-\_\-\-H2\-L@{T0\-\_\-\-H2\-L}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-H2\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-H2\-L~(1$<$$<$4)}}\label{interrupt_8h_ad670badcabf022a4f00ca0892ab79953}
+
+
+Definition at line 142 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a3a6267bc361d43343e2e8c6d89ca6886}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-L2\-H@{T0\-\_\-\-L2\-H}}
+\index{T0\-\_\-\-L2\-H@{T0\-\_\-\-L2\-H}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-L2\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-L2\-H~(0)}}\label{interrupt_8h_a3a6267bc361d43343e2e8c6d89ca6886}
+
+
+Definition at line 143 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_af464e2834d25eb26ba56ad73f9dce65c}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-O\-F\-F@{T0\-\_\-\-O\-F\-F}}
+\index{T0\-\_\-\-O\-F\-F@{T0\-\_\-\-O\-F\-F}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-O\-F\-F~(0)}}\label{interrupt_8h_af464e2834d25eb26ba56ad73f9dce65c}
+
+
+Definition at line 134 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_aea8c37679e1ddebd933c90d73928dcc7}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-O\-N@{T0\-\_\-\-O\-N}}
+\index{T0\-\_\-\-O\-N@{T0\-\_\-\-O\-N}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-O\-N~(1$<$$<$7)}}\label{interrupt_8h_aea8c37679e1ddebd933c90d73928dcc7}
+T0\-C\-O\-N\-: T\-I\-M\-E\-R0 C\-O\-N\-T\-R\-O\-L R\-E\-G\-I\-S\-T\-E\-R 
+
+Definition at line 133 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ae1b9383b572997934b86ec3fca502a28}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-P\-S\-\_\-1\-\_\-128@{T0\-\_\-\-P\-S\-\_\-1\-\_\-128}}
+\index{T0\-\_\-\-P\-S\-\_\-1\-\_\-128@{T0\-\_\-\-P\-S\-\_\-1\-\_\-128}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-P\-S\-\_\-1\-\_\-128}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-P\-S\-\_\-1\-\_\-128~0b110}}\label{interrupt_8h_ae1b9383b572997934b86ec3fca502a28}
+
+
+Definition at line 149 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a947f64b6fa8c71fa7635a8831a74934b}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-P\-S\-\_\-1\-\_\-16@{T0\-\_\-\-P\-S\-\_\-1\-\_\-16}}
+\index{T0\-\_\-\-P\-S\-\_\-1\-\_\-16@{T0\-\_\-\-P\-S\-\_\-1\-\_\-16}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-P\-S\-\_\-1\-\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-P\-S\-\_\-1\-\_\-16~0b011}}\label{interrupt_8h_a947f64b6fa8c71fa7635a8831a74934b}
+
+
+Definition at line 152 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a02c3b4ace6d0da1db7326f26dd497d58}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-P\-S\-\_\-1\-\_\-2@{T0\-\_\-\-P\-S\-\_\-1\-\_\-2}}
+\index{T0\-\_\-\-P\-S\-\_\-1\-\_\-2@{T0\-\_\-\-P\-S\-\_\-1\-\_\-2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-P\-S\-\_\-1\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-P\-S\-\_\-1\-\_\-2~0b000}}\label{interrupt_8h_a02c3b4ace6d0da1db7326f26dd497d58}
+
+
+Definition at line 155 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a648c76cd87fc490b7a73840cd46e5ffe}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-P\-S\-\_\-1\-\_\-256@{T0\-\_\-\-P\-S\-\_\-1\-\_\-256}}
+\index{T0\-\_\-\-P\-S\-\_\-1\-\_\-256@{T0\-\_\-\-P\-S\-\_\-1\-\_\-256}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-P\-S\-\_\-1\-\_\-256}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-P\-S\-\_\-1\-\_\-256~0b111}}\label{interrupt_8h_a648c76cd87fc490b7a73840cd46e5ffe}
+
+
+Definition at line 148 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a056e1c107df98c3fafb8f3fa91ebed46}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-P\-S\-\_\-1\-\_\-32@{T0\-\_\-\-P\-S\-\_\-1\-\_\-32}}
+\index{T0\-\_\-\-P\-S\-\_\-1\-\_\-32@{T0\-\_\-\-P\-S\-\_\-1\-\_\-32}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-P\-S\-\_\-1\-\_\-32}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-P\-S\-\_\-1\-\_\-32~0b100}}\label{interrupt_8h_a056e1c107df98c3fafb8f3fa91ebed46}
+
+
+Definition at line 151 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_aed664ebecc1fb271b1d5f730d50fbe2b}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-P\-S\-\_\-1\-\_\-4@{T0\-\_\-\-P\-S\-\_\-1\-\_\-4}}
+\index{T0\-\_\-\-P\-S\-\_\-1\-\_\-4@{T0\-\_\-\-P\-S\-\_\-1\-\_\-4}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-P\-S\-\_\-1\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-P\-S\-\_\-1\-\_\-4~0b001}}\label{interrupt_8h_aed664ebecc1fb271b1d5f730d50fbe2b}
+
+
+Definition at line 154 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ad90a96b230e48c290c10797b0cdcaab2}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-P\-S\-\_\-1\-\_\-64@{T0\-\_\-\-P\-S\-\_\-1\-\_\-64}}
+\index{T0\-\_\-\-P\-S\-\_\-1\-\_\-64@{T0\-\_\-\-P\-S\-\_\-1\-\_\-64}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-P\-S\-\_\-1\-\_\-64}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-P\-S\-\_\-1\-\_\-64~0b101}}\label{interrupt_8h_ad90a96b230e48c290c10797b0cdcaab2}
+
+
+Definition at line 150 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_aa99081e7bc9f6fd21307c6840e9606b0}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-P\-S\-\_\-1\-\_\-8@{T0\-\_\-\-P\-S\-\_\-1\-\_\-8}}
+\index{T0\-\_\-\-P\-S\-\_\-1\-\_\-8@{T0\-\_\-\-P\-S\-\_\-1\-\_\-8}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-P\-S\-\_\-1\-\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-P\-S\-\_\-1\-\_\-8~0b010}}\label{interrupt_8h_aa99081e7bc9f6fd21307c6840e9606b0}
+
+
+Definition at line 153 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_aae78bfd7196604385777a59484519a12}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-P\-S\-\_\-\-O\-F\-F@{T0\-\_\-\-P\-S\-\_\-\-O\-F\-F}}
+\index{T0\-\_\-\-P\-S\-\_\-\-O\-F\-F@{T0\-\_\-\-P\-S\-\_\-\-O\-F\-F}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-P\-S\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-P\-S\-\_\-\-O\-F\-F~(1$<$$<$3)}}\label{interrupt_8h_aae78bfd7196604385777a59484519a12}
+
+
+Definition at line 145 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a310d555af16b9b60926eda6bfade771f}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-P\-S\-\_\-\-O\-N@{T0\-\_\-\-P\-S\-\_\-\-O\-N}}
+\index{T0\-\_\-\-P\-S\-\_\-\-O\-N@{T0\-\_\-\-P\-S\-\_\-\-O\-N}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-P\-S\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-P\-S\-\_\-\-O\-N~(0)}}\label{interrupt_8h_a310d555af16b9b60926eda6bfade771f}
+
+
+Definition at line 146 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a588c8362b56ddcb2a56d3e7b9f331684}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-E\-X\-T@{T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-E\-X\-T}}
+\index{T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-E\-X\-T@{T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-E\-X\-T}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-E\-X\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-E\-X\-T~(1$<$$<$5)}}\label{interrupt_8h_a588c8362b56ddcb2a56d3e7b9f331684}
+
+
+Definition at line 139 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a53f6d7a8b602e536d6347fb420c370e1}{\index{interrupt.\-h@{interrupt.\-h}!T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-I\-N\-T@{T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-I\-N\-T}}
+\index{T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-I\-N\-T@{T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-I\-N\-T}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T0\-\_\-\-S\-O\-U\-R\-C\-E\-\_\-\-I\-N\-T~(0)}}\label{interrupt_8h_a53f6d7a8b602e536d6347fb420c370e1}
+
+
+Definition at line 140 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_af10fdb4c714ab34c281932e2f706ab4b}{\index{interrupt.\-h@{interrupt.\-h}!T1\-\_\-\-O\-F\-F@{T1\-\_\-\-O\-F\-F}}
+\index{T1\-\_\-\-O\-F\-F@{T1\-\_\-\-O\-F\-F}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T1\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-\_\-\-O\-F\-F~(0)}}\label{interrupt_8h_af10fdb4c714ab34c281932e2f706ab4b}
+
+
+Definition at line 217 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_acb74df7dd6dad50441b5ca784d68a9ac}{\index{interrupt.\-h@{interrupt.\-h}!T1\-\_\-\-O\-N@{T1\-\_\-\-O\-N}}
+\index{T1\-\_\-\-O\-N@{T1\-\_\-\-O\-N}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T1\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-\_\-\-O\-N~(1$<$$<$0)}}\label{interrupt_8h_acb74df7dd6dad50441b5ca784d68a9ac}
+
+
+Definition at line 216 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a6c1aabaa056bd5605ce592bcf70a2c4f}{\index{interrupt.\-h@{interrupt.\-h}!T1\-\_\-\-P\-S\-\_\-1\-\_\-1@{T1\-\_\-\-P\-S\-\_\-1\-\_\-1}}
+\index{T1\-\_\-\-P\-S\-\_\-1\-\_\-1@{T1\-\_\-\-P\-S\-\_\-1\-\_\-1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T1\-\_\-\-P\-S\-\_\-1\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-\_\-\-P\-S\-\_\-1\-\_\-1~(0b00$<$$<$4)}}\label{interrupt_8h_a6c1aabaa056bd5605ce592bcf70a2c4f}
+T1\-C\-O\-N\-: T\-I\-M\-E\-R1 C\-O\-N\-T\-R\-O\-L R\-E\-G\-I\-S\-T\-E\-R 
+
+Definition at line 208 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a184fe4c16a3c004e1aa1b06378126bbb}{\index{interrupt.\-h@{interrupt.\-h}!T1\-\_\-\-P\-S\-\_\-1\-\_\-2@{T1\-\_\-\-P\-S\-\_\-1\-\_\-2}}
+\index{T1\-\_\-\-P\-S\-\_\-1\-\_\-2@{T1\-\_\-\-P\-S\-\_\-1\-\_\-2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T1\-\_\-\-P\-S\-\_\-1\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-\_\-\-P\-S\-\_\-1\-\_\-2~(0b01$<$$<$4)}}\label{interrupt_8h_a184fe4c16a3c004e1aa1b06378126bbb}
+
+
+Definition at line 209 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a9fcd71ec4232abdf5f5b8b4477db559b}{\index{interrupt.\-h@{interrupt.\-h}!T1\-\_\-\-P\-S\-\_\-1\-\_\-4@{T1\-\_\-\-P\-S\-\_\-1\-\_\-4}}
+\index{T1\-\_\-\-P\-S\-\_\-1\-\_\-4@{T1\-\_\-\-P\-S\-\_\-1\-\_\-4}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T1\-\_\-\-P\-S\-\_\-1\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-\_\-\-P\-S\-\_\-1\-\_\-4~(0b10$<$$<$4)}}\label{interrupt_8h_a9fcd71ec4232abdf5f5b8b4477db559b}
+
+
+Definition at line 210 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a938ad5bd139af60fdfcadd8f54e94f89}{\index{interrupt.\-h@{interrupt.\-h}!T1\-\_\-\-P\-S\-\_\-1\-\_\-8@{T1\-\_\-\-P\-S\-\_\-1\-\_\-8}}
+\index{T1\-\_\-\-P\-S\-\_\-1\-\_\-8@{T1\-\_\-\-P\-S\-\_\-1\-\_\-8}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T1\-\_\-\-P\-S\-\_\-1\-\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-\_\-\-P\-S\-\_\-1\-\_\-8~(0b11$<$$<$4)}}\label{interrupt_8h_a938ad5bd139af60fdfcadd8f54e94f89}
+
+
+Definition at line 211 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a7f250757916e58044ec2ec639b6bc4d6}{\index{interrupt.\-h@{interrupt.\-h}!T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F@{T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F}}
+\index{T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F@{T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F~(0)}}\label{interrupt_8h_a7f250757916e58044ec2ec639b6bc4d6}
+
+
+Definition at line 214 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a316e62f911d1519cb183749048528e39}{\index{interrupt.\-h@{interrupt.\-h}!T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N@{T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N}}
+\index{T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N@{T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T1\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N~(1$<$$<$2)}}\label{interrupt_8h_a316e62f911d1519cb183749048528e39}
+
+
+Definition at line 213 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a766a0c1ce1429b5653cf92f50c8a09b5}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-O\-F\-F@{T2\-\_\-\-O\-F\-F}}
+\index{T2\-\_\-\-O\-F\-F@{T2\-\_\-\-O\-F\-F}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-O\-F\-F~(0)}}\label{interrupt_8h_a766a0c1ce1429b5653cf92f50c8a09b5}
+
+
+Definition at line 242 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_aba74968db1ae6aa4edd567c64b8fe07c}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-O\-N@{T2\-\_\-\-O\-N}}
+\index{T2\-\_\-\-O\-N@{T2\-\_\-\-O\-N}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-O\-N~(1$<$$<$2)}}\label{interrupt_8h_aba74968db1ae6aa4edd567c64b8fe07c}
+
+
+Definition at line 241 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_abec2139c854d64c9c141f3be75179694}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-1@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-1}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-1@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-1~(0$<$$<$3)}}\label{interrupt_8h_abec2139c854d64c9c141f3be75179694}
+T2\-C\-O\-N\-: T\-I\-M\-E\-R2 C\-O\-N\-T\-R\-O\-L R\-E\-G\-I\-S\-T\-E\-R 
+
+Definition at line 224 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ac23a01780f8e9b023acdfbba001fc40d}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-10@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-10}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-10@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-10}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-10}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-10~(9$<$$<$3)}}\label{interrupt_8h_ac23a01780f8e9b023acdfbba001fc40d}
+
+
+Definition at line 233 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a27a5d134387aef2f97156c1ff2192e9e}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-11@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-11}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-11@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-11}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-11}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-11~(10$<$$<$3)}}\label{interrupt_8h_a27a5d134387aef2f97156c1ff2192e9e}
+
+
+Definition at line 234 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_af78dbc726406bbceb26c052edd86c7f1}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-12@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-12}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-12@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-12}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-12}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-12~(11$<$$<$3)}}\label{interrupt_8h_af78dbc726406bbceb26c052edd86c7f1}
+
+
+Definition at line 235 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_aa2a1a7a3a4dee8fdfddede0fb721637f}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-13@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-13}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-13@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-13}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-13}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-13~(12$<$$<$3)}}\label{interrupt_8h_aa2a1a7a3a4dee8fdfddede0fb721637f}
+
+
+Definition at line 236 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a2fd70a3b08b344ea75d8a107dc4f74f4}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-14@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-14}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-14@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-14}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-14}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-14~(13$<$$<$3)}}\label{interrupt_8h_a2fd70a3b08b344ea75d8a107dc4f74f4}
+
+
+Definition at line 237 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_afec529222e5a4a42e0e493c815262f76}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-15@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-15}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-15@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-15}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-15}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-15~(14$<$$<$3)}}\label{interrupt_8h_afec529222e5a4a42e0e493c815262f76}
+
+
+Definition at line 238 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ab0f130aa4589a2977a617fb848fa525a}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-16@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-16}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-16@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-16}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-16~(15$<$$<$3)}}\label{interrupt_8h_ab0f130aa4589a2977a617fb848fa525a}
+
+
+Definition at line 239 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_af037d5bcdc1e901e2e72704020d49489}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-2@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-2}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-2@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-2~(1$<$$<$3)}}\label{interrupt_8h_af037d5bcdc1e901e2e72704020d49489}
+
+
+Definition at line 225 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a7f2478844001036e439047e336b0ea24}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-3@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-3}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-3@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-3}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-3~(2$<$$<$3)}}\label{interrupt_8h_a7f2478844001036e439047e336b0ea24}
+
+
+Definition at line 226 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a7ea53e1f1a93aa5e3b3939c76ed449eb}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-4@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-4}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-4@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-4}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-4~(3$<$$<$3)}}\label{interrupt_8h_a7ea53e1f1a93aa5e3b3939c76ed449eb}
+
+
+Definition at line 227 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ab775da631ac7f6809266d77e75211843}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-5@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-5}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-5@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-5}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-5~(4$<$$<$3)}}\label{interrupt_8h_ab775da631ac7f6809266d77e75211843}
+
+
+Definition at line 228 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a9fe52755249a3eb11331a3c6cb32d9ea}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-6@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-6}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-6@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-6}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-6}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-6~(5$<$$<$3)}}\label{interrupt_8h_a9fe52755249a3eb11331a3c6cb32d9ea}
+
+
+Definition at line 229 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a76ec68a232494165709b218a5f484115}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-7@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-7}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-7@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-7}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-7}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-7~(6$<$$<$3)}}\label{interrupt_8h_a76ec68a232494165709b218a5f484115}
+
+
+Definition at line 230 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a75d14be48c12bc2a79ed79ea304584b1}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-8@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-8}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-8@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-8}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-8~(7$<$$<$3)}}\label{interrupt_8h_a75d14be48c12bc2a79ed79ea304584b1}
+
+
+Definition at line 231 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a80fc38b4e0b0ab2db5aeab3a9f3226a0}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-9@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-9}}
+\index{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-9@{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-9}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-9}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-O\-S\-T\-\_\-1\-\_\-9~(8$<$$<$3)}}\label{interrupt_8h_a80fc38b4e0b0ab2db5aeab3a9f3226a0}
+
+
+Definition at line 232 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ad3ac7cdd008a91eb59460faafd73f6cd}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-S\-\_\-1\-\_\-1@{T2\-\_\-\-P\-S\-\_\-1\-\_\-1}}
+\index{T2\-\_\-\-P\-S\-\_\-1\-\_\-1@{T2\-\_\-\-P\-S\-\_\-1\-\_\-1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-S\-\_\-1\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-S\-\_\-1\-\_\-1~0b00}}\label{interrupt_8h_ad3ac7cdd008a91eb59460faafd73f6cd}
+
+
+Definition at line 244 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a4939db508cd75ba801a814112d142810}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-S\-\_\-1\-\_\-16@{T2\-\_\-\-P\-S\-\_\-1\-\_\-16}}
+\index{T2\-\_\-\-P\-S\-\_\-1\-\_\-16@{T2\-\_\-\-P\-S\-\_\-1\-\_\-16}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-S\-\_\-1\-\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-S\-\_\-1\-\_\-16~0b11}}\label{interrupt_8h_a4939db508cd75ba801a814112d142810}
+
+
+Definition at line 246 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_ad134433c5f4caac4834908fb83c1231b}{\index{interrupt.\-h@{interrupt.\-h}!T2\-\_\-\-P\-S\-\_\-1\-\_\-4@{T2\-\_\-\-P\-S\-\_\-1\-\_\-4}}
+\index{T2\-\_\-\-P\-S\-\_\-1\-\_\-4@{T2\-\_\-\-P\-S\-\_\-1\-\_\-4}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T2\-\_\-\-P\-S\-\_\-1\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define T2\-\_\-\-P\-S\-\_\-1\-\_\-4~0b01}}\label{interrupt_8h_ad134433c5f4caac4834908fb83c1231b}
+
+
+Definition at line 245 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a85e35a7db2a32098cd45509fb4030ab7}{\index{interrupt.\-h@{interrupt.\-h}!T3\-\_\-\-O\-F\-F@{T3\-\_\-\-O\-F\-F}}
+\index{T3\-\_\-\-O\-F\-F@{T3\-\_\-\-O\-F\-F}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T3\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T3\-\_\-\-O\-F\-F~(0)}}\label{interrupt_8h_a85e35a7db2a32098cd45509fb4030ab7}
+
+
+Definition at line 308 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a1b7c5dd5c00c431f5c596d7dcabd17cf}{\index{interrupt.\-h@{interrupt.\-h}!T3\-\_\-\-O\-N@{T3\-\_\-\-O\-N}}
+\index{T3\-\_\-\-O\-N@{T3\-\_\-\-O\-N}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T3\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T3\-\_\-\-O\-N~(1$<$$<$0)}}\label{interrupt_8h_a1b7c5dd5c00c431f5c596d7dcabd17cf}
+
+
+Definition at line 307 of file interrupt.\-h.
+
+
+
+Referenced by D\-C\-F77\-\_\-start().
+
+\hypertarget{interrupt_8h_a849fbdf41ab8f72d9a12b3090a57a2dc}{\index{interrupt.\-h@{interrupt.\-h}!T3\-\_\-\-P\-S\-\_\-1\-\_\-1@{T3\-\_\-\-P\-S\-\_\-1\-\_\-1}}
+\index{T3\-\_\-\-P\-S\-\_\-1\-\_\-1@{T3\-\_\-\-P\-S\-\_\-1\-\_\-1}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T3\-\_\-\-P\-S\-\_\-1\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define T3\-\_\-\-P\-S\-\_\-1\-\_\-1~(0b00$<$$<$4)}}\label{interrupt_8h_a849fbdf41ab8f72d9a12b3090a57a2dc}
+T3\-C\-O\-N\-: T\-I\-M\-E\-R3 C\-O\-N\-T\-R\-O\-L R\-E\-G\-I\-S\-T\-E\-R 
+
+Definition at line 299 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a2a9bb5580fc374e47e7a41684302f6e6}{\index{interrupt.\-h@{interrupt.\-h}!T3\-\_\-\-P\-S\-\_\-1\-\_\-2@{T3\-\_\-\-P\-S\-\_\-1\-\_\-2}}
+\index{T3\-\_\-\-P\-S\-\_\-1\-\_\-2@{T3\-\_\-\-P\-S\-\_\-1\-\_\-2}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T3\-\_\-\-P\-S\-\_\-1\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define T3\-\_\-\-P\-S\-\_\-1\-\_\-2~(0b01$<$$<$4)}}\label{interrupt_8h_a2a9bb5580fc374e47e7a41684302f6e6}
+
+
+Definition at line 300 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a779f51a7dd9c44e93d0d4cc56416a940}{\index{interrupt.\-h@{interrupt.\-h}!T3\-\_\-\-P\-S\-\_\-1\-\_\-4@{T3\-\_\-\-P\-S\-\_\-1\-\_\-4}}
+\index{T3\-\_\-\-P\-S\-\_\-1\-\_\-4@{T3\-\_\-\-P\-S\-\_\-1\-\_\-4}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T3\-\_\-\-P\-S\-\_\-1\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define T3\-\_\-\-P\-S\-\_\-1\-\_\-4~(0b10$<$$<$4)}}\label{interrupt_8h_a779f51a7dd9c44e93d0d4cc56416a940}
+
+
+Definition at line 301 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a4b6200ff53c4efe3cf482ed1bf5a350f}{\index{interrupt.\-h@{interrupt.\-h}!T3\-\_\-\-P\-S\-\_\-1\-\_\-8@{T3\-\_\-\-P\-S\-\_\-1\-\_\-8}}
+\index{T3\-\_\-\-P\-S\-\_\-1\-\_\-8@{T3\-\_\-\-P\-S\-\_\-1\-\_\-8}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T3\-\_\-\-P\-S\-\_\-1\-\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define T3\-\_\-\-P\-S\-\_\-1\-\_\-8~(0b11$<$$<$4)}}\label{interrupt_8h_a4b6200ff53c4efe3cf482ed1bf5a350f}
+
+
+Definition at line 302 of file interrupt.\-h.
+
+
+
+Referenced by D\-C\-F77\-\_\-start().
+
+\hypertarget{interrupt_8h_af1733965d98b6dcc8510c9477cd35d1b}{\index{interrupt.\-h@{interrupt.\-h}!T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F@{T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F}}
+\index{T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F@{T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-F\-F~(0)}}\label{interrupt_8h_af1733965d98b6dcc8510c9477cd35d1b}
+
+
+Definition at line 305 of file interrupt.\-h.
+
+\hypertarget{interrupt_8h_a885ec6766509726e57927065d809a9fc}{\index{interrupt.\-h@{interrupt.\-h}!T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N@{T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N}}
+\index{T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N@{T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N}!interrupt.h@{interrupt.\-h}}
+\subsubsection[{T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T3\-\_\-\-S\-Y\-N\-C\-\_\-\-E\-X\-T\-\_\-\-O\-N~(1$<$$<$2)}}\label{interrupt_8h_a885ec6766509726e57927065d809a9fc}
+
+
+Definition at line 304 of file interrupt.\-h.
+

@@ -1,0 +1,1013 @@
+\hypertarget{p32_2include_2pinguino_2core_2system_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/system.c File Reference}
+\label{p32_2include_2pinguino_2core_2system_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/system.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/system.\-c}}
+}
+{\ttfamily \#include $<$p32xxxx.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_system_clocks_settings_struct}{System\-Clocks\-Settings\-Struct}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a9d62781e2ebd9bf34bc02be0fa406f7a}{\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a09ecc45f5b3c0fdc0c111c3fd3cccb3f}{C\-P\-U\-C\-O\-R\-E\-M\-A\-X\-F\-R\-E\-Q\-U\-E\-N\-C\-Y}~80000000\-L
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a9c0e8cf52d2cfd471409d8cc1e7132d2}{C\-R\-Y\-S\-T\-A\-L\-F\-R\-E\-Q\-U\-E\-N\-C\-Y}~8000000\-L
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_aa953e84c5dde00aa498313e60f0a5ed5}{F\-L\-A\-S\-H\-A\-C\-C\-E\-S\-S\-T\-I\-M\-E}~50
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a3d21ea0b7c492c28fba318e63ff1d4db}{F\-I\-R\-C\-O\-S\-C\-D\-I\-V}~0b111
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_ac8790ac27bc6075beff40a2f9b60d204}{F\-I\-R\-C\-O\-S\-C\-D\-I\-V16}~0b110
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a514e873c64c291e5121dd78f2348a36e}{L\-P\-I\-R\-C\-O\-S\-C}~0b101
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_aa885e7d5af895dac160e98db197920b5}{S\-O\-S\-C}~0b100
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_af19333ed41cb9cdc190e4f97f635e98b}{P\-O\-S\-C\-P\-L\-L}~0b011
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_ac32090d8dcd221462bbb540ba9bcc544}{P\-O\-S\-C}~0b010
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a721e64a5b17952777917e1a695a37711}{F\-R\-C\-O\-S\-C\-P\-L\-L}~0b001
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7024ed423386ab61b879d1c2846d125b}{F\-R\-C\-O\-S\-C}~0b000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a69d2ea28571b9591fdaee330a9435ada}{P\-L\-L\-O\-D\-I\-V256}~0b111
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_af056b2735510c3cecc2c7d737e1861a8}{P\-L\-L\-O\-D\-I\-V64}~0b110
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a697f11cde6be73e5c4a233414dced10d}{P\-L\-L\-O\-D\-I\-V32}~0b101
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a91465020059d58cfab79f5dbdf840dc0}{P\-L\-L\-O\-D\-I\-V16}~0b100
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a26bf156d9cc7305d18c24052d3989104}{P\-L\-L\-O\-D\-I\-V8}~0b011
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a500fd670008a00c3b65880d434868b1e}{P\-L\-L\-O\-D\-I\-V4}~0b010
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a44c057b45804f4ce1c481f7e9cf6d37d}{P\-L\-L\-O\-D\-I\-V2}~0b001
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_abb534f4d1a8441c370c166a333165311}{P\-L\-L\-O\-D\-I\-V1}~0b000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a4bd6ebf48ebf90f5fa2a92e26c460f50}{F\-R\-C\-D\-I\-V256}~0b111
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7178c6650ae215619cb25c519e1165c5}{F\-R\-C\-D\-I\-V64}~0b110
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_ace20120b581c97a80884ccf1b7a0453d}{F\-R\-C\-D\-I\-V32}~0b101
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_affb65843a7b2f23bb86d78a7b4c068d8}{F\-R\-C\-D\-I\-V16}~0b100
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a4003a924fa39c3635599139b26e8b788}{F\-R\-C\-D\-I\-V8}~0b011
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_abc422ef6d0059116eae8d3312a6f8d72}{F\-R\-C\-D\-I\-V4}~0b010
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a5cfb98abe850632254633035ab9119d4}{F\-R\-C\-D\-I\-V2}~0b001
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a3ec93baf8d0c7853367f7656bb3812a8}{F\-R\-C\-D\-I\-V1}~0b000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a38727403783594026b0ee65ea8046233}{P\-B\-D\-I\-V8}~0b11
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_aee25d7bd01f56986f09a8bb47dc9e9f7}{P\-B\-D\-I\-V4}~0b10
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a8419fe0f56aa7fd73934fceabc9797a0}{P\-B\-D\-I\-V2}~0b01
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_ae205c8ea655342b8ec7db08f6332ebd9}{P\-B\-D\-I\-V1}~0b00
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a1d58fd540f133091e9faaab814d1326f}{P\-L\-L\-M\-U\-L\-T24}~0b111
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a89e7dbc5c8b7ef9ae810c8a44a9df2ae}{P\-L\-L\-M\-U\-L\-T21}~0b110
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_ac771d91cdc5d6201e171f1f561d8341a}{P\-L\-L\-M\-U\-L\-T20}~0b101
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_acec088f66c32a38f63892e0555ae9a99}{P\-L\-L\-M\-U\-L\-T19}~0b100
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a93e3953dbb171a3e50366b83f036d786}{P\-L\-L\-M\-U\-L\-T18}~0b011
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_af83202fd70047a6f3d52f132ef6c6a7f}{P\-L\-L\-M\-U\-L\-T17}~0b010
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_aeb4fdec39d8da7466f1fdc05c9b38416}{P\-L\-L\-M\-U\-L\-T16}~0b001
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2system_8c_a4b2d6c02010bddf2e013ba51f734893d}{P\-L\-L\-M\-U\-L\-T15}~0b000
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96}{System\-Clocks\-Error\-Enum} \hyperlink{p32_2include_2pinguino_2core_2system_8c_aac5953c463b481136a7701be54de021e}{System\-Clocks\-Error}
+\item 
+typedef struct \\*
+\hyperlink{struct_system_clocks_settings_struct}{System\-Clocks\-Settings\-Struct} \hyperlink{p32_2include_2pinguino_2core_2system_8c_a308e75178225c9fd290a72c790bb4f08}{System\-Clocks\-Settings}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96}{System\-Clocks\-Error\-Enum} \{ \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a761e2d1c3317fd03e0cd02e11fd6de22}{Error\-\_\-\-None} = 0, 
+\hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96aa49b4e7fdc667d2b16e33acbbe3fe272}{Error\-\_\-\-Requested\-Frequency\-Too\-High} = 1, 
+\hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a9deba355e1a7adbbd915525a17dfbc48}{Error\-\_\-\-No\-Combination\-Found} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2system_8c_a44dad2edd2d7ec6080c320b533294af8}{System\-Unlock} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2system_8c_ab91cf81fb590451a97b90b2ccbced9c3}{System\-Lock} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2system_8c_a4c3ac4ab68c599cee128c88d5724330a}{System\-Clocks\-Read\-Settings} (\hyperlink{p32_2include_2pinguino_2core_2system_8c_a308e75178225c9fd290a72c790bb4f08}{System\-Clocks\-Settings} $\ast$s)
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a33594304e786b158f3fb30289278f5af}{uint32\-\_\-t} \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7169944eed34972b6f55d3367de7d6cb}{System\-Clocks\-Get\-Cpu\-Frequency} (const \hyperlink{p32_2include_2pinguino_2core_2system_8c_a308e75178225c9fd290a72c790bb4f08}{System\-Clocks\-Settings} $\ast$s)
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a33594304e786b158f3fb30289278f5af}{uint32\-\_\-t} \hyperlink{p32_2include_2pinguino_2core_2system_8c_a3ca7eee84fb9343d7d00efe54f14dc5c}{System\-Clocks\-Get\-Peripheral\-Frequency} (const \hyperlink{p32_2include_2pinguino_2core_2system_8c_a308e75178225c9fd290a72c790bb4f08}{System\-Clocks\-Settings} $\ast$s)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2system_8c_afd2a7efda519abd86c744c9f408f7a48}{System\-Clocks\-Calc\-Cpu\-Clock\-Settings} (\hyperlink{p32_2include_2pinguino_2core_2system_8c_a308e75178225c9fd290a72c790bb4f08}{System\-Clocks\-Settings} $\ast$s, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a33594304e786b158f3fb30289278f5af}{uint32\-\_\-t} cpu\-Frequency)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2system_8c_a76fffc8659a55a8d4a843bc32f79100f}{System\-Clocks\-Calc\-Peripheral\-Clock\-Settings} (\hyperlink{p32_2include_2pinguino_2core_2system_8c_a308e75178225c9fd290a72c790bb4f08}{System\-Clocks\-Settings} $\ast$s, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a33594304e786b158f3fb30289278f5af}{uint32\-\_\-t} peripheral\-Frequency)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2system_8c_aa86ba430ddf6a4a9860c673900d1bc01}{Get\-System\-Clock} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2system_8c_a78e9ff88927e18f2346bc9c33069c5ef}{Get\-Peripheral\-Clock} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2system_8c_ae5c674d1ce2c2c8cb82e9df33e0686c2}{Set\-Flash\-Wait\-States\-\_\-old} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2system_8c_aead020d7f88cc653063df2e3f4f1993c}{System\-Set\-System\-Clock} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} cpu\-Core\-Frequency)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2system_8c_aac24c9f4919056517bf19b39b7a92092}{System\-Set\-Peripheral\-Clock} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} peripheral\-Frequency)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2system_8c_a120e72c2a25aa6288c1c1c06e304d627}{System\-Config} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} cpu\-Core\-Frequency)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2const_8h_ade450a3b4e3be7563db107af8fe97846}{M\-I\-P\-S32} \hyperlink{p32_2include_2pinguino_2core_2system_8c_a31546d671bf97f53c850c9242c2d560e}{Get\-C\-P0\-Count} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2const_8h_ade450a3b4e3be7563db107af8fe97846}{M\-I\-P\-S32} \hyperlink{p32_2include_2pinguino_2core_2system_8c_ae21d13f6dffe52789d443967e540839e}{Set\-C\-P0\-Count} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} count)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a9d62781e2ebd9bf34bc02be0fa406f7a}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C@{\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C@{\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C}}\label{p32_2include_2pinguino_2core_2system_8c_a9d62781e2ebd9bf34bc02be0fa406f7a}
+
+
+Definition at line 31 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a09ecc45f5b3c0fdc0c111c3fd3cccb3f}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!C\-P\-U\-C\-O\-R\-E\-M\-A\-X\-F\-R\-E\-Q\-U\-E\-N\-C\-Y@{C\-P\-U\-C\-O\-R\-E\-M\-A\-X\-F\-R\-E\-Q\-U\-E\-N\-C\-Y}}
+\index{C\-P\-U\-C\-O\-R\-E\-M\-A\-X\-F\-R\-E\-Q\-U\-E\-N\-C\-Y@{C\-P\-U\-C\-O\-R\-E\-M\-A\-X\-F\-R\-E\-Q\-U\-E\-N\-C\-Y}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{C\-P\-U\-C\-O\-R\-E\-M\-A\-X\-F\-R\-E\-Q\-U\-E\-N\-C\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-P\-U\-C\-O\-R\-E\-M\-A\-X\-F\-R\-E\-Q\-U\-E\-N\-C\-Y~80000000\-L}}\label{p32_2include_2pinguino_2core_2system_8c_a09ecc45f5b3c0fdc0c111c3fd3cccb3f}
+
+
+Definition at line 40 of file system.\-c.
+
+
+
+Referenced by System\-Clocks\-Calc\-Cpu\-Clock\-Settings(), and System\-Clocks\-Calc\-Peripheral\-Clock\-Settings().
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a9c0e8cf52d2cfd471409d8cc1e7132d2}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!C\-R\-Y\-S\-T\-A\-L\-F\-R\-E\-Q\-U\-E\-N\-C\-Y@{C\-R\-Y\-S\-T\-A\-L\-F\-R\-E\-Q\-U\-E\-N\-C\-Y}}
+\index{C\-R\-Y\-S\-T\-A\-L\-F\-R\-E\-Q\-U\-E\-N\-C\-Y@{C\-R\-Y\-S\-T\-A\-L\-F\-R\-E\-Q\-U\-E\-N\-C\-Y}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{C\-R\-Y\-S\-T\-A\-L\-F\-R\-E\-Q\-U\-E\-N\-C\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-R\-Y\-S\-T\-A\-L\-F\-R\-E\-Q\-U\-E\-N\-C\-Y~8000000\-L}}\label{p32_2include_2pinguino_2core_2system_8c_a9c0e8cf52d2cfd471409d8cc1e7132d2}
+
+
+Definition at line 43 of file system.\-c.
+
+
+
+Referenced by System\-Clocks\-Calc\-Cpu\-Clock\-Settings(), and System\-Clocks\-Get\-Cpu\-Frequency().
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a3d21ea0b7c492c28fba318e63ff1d4db}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-I\-R\-C\-O\-S\-C\-D\-I\-V@{F\-I\-R\-C\-O\-S\-C\-D\-I\-V}}
+\index{F\-I\-R\-C\-O\-S\-C\-D\-I\-V@{F\-I\-R\-C\-O\-S\-C\-D\-I\-V}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-I\-R\-C\-O\-S\-C\-D\-I\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-I\-R\-C\-O\-S\-C\-D\-I\-V~0b111}}\label{p32_2include_2pinguino_2core_2system_8c_a3d21ea0b7c492c28fba318e63ff1d4db}
+
+
+Definition at line 48 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_ac8790ac27bc6075beff40a2f9b60d204}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-I\-R\-C\-O\-S\-C\-D\-I\-V16@{F\-I\-R\-C\-O\-S\-C\-D\-I\-V16}}
+\index{F\-I\-R\-C\-O\-S\-C\-D\-I\-V16@{F\-I\-R\-C\-O\-S\-C\-D\-I\-V16}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-I\-R\-C\-O\-S\-C\-D\-I\-V16}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-I\-R\-C\-O\-S\-C\-D\-I\-V16~0b110}}\label{p32_2include_2pinguino_2core_2system_8c_ac8790ac27bc6075beff40a2f9b60d204}
+
+
+Definition at line 49 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_aa953e84c5dde00aa498313e60f0a5ed5}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-L\-A\-S\-H\-A\-C\-C\-E\-S\-S\-T\-I\-M\-E@{F\-L\-A\-S\-H\-A\-C\-C\-E\-S\-S\-T\-I\-M\-E}}
+\index{F\-L\-A\-S\-H\-A\-C\-C\-E\-S\-S\-T\-I\-M\-E@{F\-L\-A\-S\-H\-A\-C\-C\-E\-S\-S\-T\-I\-M\-E}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-L\-A\-S\-H\-A\-C\-C\-E\-S\-S\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-L\-A\-S\-H\-A\-C\-C\-E\-S\-S\-T\-I\-M\-E~50}}\label{p32_2include_2pinguino_2core_2system_8c_aa953e84c5dde00aa498313e60f0a5ed5}
+
+
+Definition at line 44 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a3ec93baf8d0c7853367f7656bb3812a8}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-R\-C\-D\-I\-V1@{F\-R\-C\-D\-I\-V1}}
+\index{F\-R\-C\-D\-I\-V1@{F\-R\-C\-D\-I\-V1}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-R\-C\-D\-I\-V1}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-C\-D\-I\-V1~0b000}}\label{p32_2include_2pinguino_2core_2system_8c_a3ec93baf8d0c7853367f7656bb3812a8}
+
+
+Definition at line 75 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_affb65843a7b2f23bb86d78a7b4c068d8}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-R\-C\-D\-I\-V16@{F\-R\-C\-D\-I\-V16}}
+\index{F\-R\-C\-D\-I\-V16@{F\-R\-C\-D\-I\-V16}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-R\-C\-D\-I\-V16}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-C\-D\-I\-V16~0b100}}\label{p32_2include_2pinguino_2core_2system_8c_affb65843a7b2f23bb86d78a7b4c068d8}
+
+
+Definition at line 71 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a5cfb98abe850632254633035ab9119d4}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-R\-C\-D\-I\-V2@{F\-R\-C\-D\-I\-V2}}
+\index{F\-R\-C\-D\-I\-V2@{F\-R\-C\-D\-I\-V2}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-R\-C\-D\-I\-V2}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-C\-D\-I\-V2~0b001}}\label{p32_2include_2pinguino_2core_2system_8c_a5cfb98abe850632254633035ab9119d4}
+
+
+Definition at line 74 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a4bd6ebf48ebf90f5fa2a92e26c460f50}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-R\-C\-D\-I\-V256@{F\-R\-C\-D\-I\-V256}}
+\index{F\-R\-C\-D\-I\-V256@{F\-R\-C\-D\-I\-V256}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-R\-C\-D\-I\-V256}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-C\-D\-I\-V256~0b111}}\label{p32_2include_2pinguino_2core_2system_8c_a4bd6ebf48ebf90f5fa2a92e26c460f50}
+
+
+Definition at line 68 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_ace20120b581c97a80884ccf1b7a0453d}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-R\-C\-D\-I\-V32@{F\-R\-C\-D\-I\-V32}}
+\index{F\-R\-C\-D\-I\-V32@{F\-R\-C\-D\-I\-V32}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-R\-C\-D\-I\-V32}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-C\-D\-I\-V32~0b101}}\label{p32_2include_2pinguino_2core_2system_8c_ace20120b581c97a80884ccf1b7a0453d}
+
+
+Definition at line 70 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_abc422ef6d0059116eae8d3312a6f8d72}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-R\-C\-D\-I\-V4@{F\-R\-C\-D\-I\-V4}}
+\index{F\-R\-C\-D\-I\-V4@{F\-R\-C\-D\-I\-V4}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-R\-C\-D\-I\-V4}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-C\-D\-I\-V4~0b010}}\label{p32_2include_2pinguino_2core_2system_8c_abc422ef6d0059116eae8d3312a6f8d72}
+
+
+Definition at line 73 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a7178c6650ae215619cb25c519e1165c5}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-R\-C\-D\-I\-V64@{F\-R\-C\-D\-I\-V64}}
+\index{F\-R\-C\-D\-I\-V64@{F\-R\-C\-D\-I\-V64}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-R\-C\-D\-I\-V64}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-C\-D\-I\-V64~0b110}}\label{p32_2include_2pinguino_2core_2system_8c_a7178c6650ae215619cb25c519e1165c5}
+
+
+Definition at line 69 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a4003a924fa39c3635599139b26e8b788}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-R\-C\-D\-I\-V8@{F\-R\-C\-D\-I\-V8}}
+\index{F\-R\-C\-D\-I\-V8@{F\-R\-C\-D\-I\-V8}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-R\-C\-D\-I\-V8}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-C\-D\-I\-V8~0b011}}\label{p32_2include_2pinguino_2core_2system_8c_a4003a924fa39c3635599139b26e8b788}
+
+
+Definition at line 72 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a7024ed423386ab61b879d1c2846d125b}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-R\-C\-O\-S\-C@{F\-R\-C\-O\-S\-C}}
+\index{F\-R\-C\-O\-S\-C@{F\-R\-C\-O\-S\-C}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-R\-C\-O\-S\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-C\-O\-S\-C~0b000}}\label{p32_2include_2pinguino_2core_2system_8c_a7024ed423386ab61b879d1c2846d125b}
+
+
+Definition at line 55 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a721e64a5b17952777917e1a695a37711}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!F\-R\-C\-O\-S\-C\-P\-L\-L@{F\-R\-C\-O\-S\-C\-P\-L\-L}}
+\index{F\-R\-C\-O\-S\-C\-P\-L\-L@{F\-R\-C\-O\-S\-C\-P\-L\-L}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{F\-R\-C\-O\-S\-C\-P\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-C\-O\-S\-C\-P\-L\-L~0b001}}\label{p32_2include_2pinguino_2core_2system_8c_a721e64a5b17952777917e1a695a37711}
+
+
+Definition at line 54 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a514e873c64c291e5121dd78f2348a36e}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!L\-P\-I\-R\-C\-O\-S\-C@{L\-P\-I\-R\-C\-O\-S\-C}}
+\index{L\-P\-I\-R\-C\-O\-S\-C@{L\-P\-I\-R\-C\-O\-S\-C}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{L\-P\-I\-R\-C\-O\-S\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-P\-I\-R\-C\-O\-S\-C~0b101}}\label{p32_2include_2pinguino_2core_2system_8c_a514e873c64c291e5121dd78f2348a36e}
+
+
+Definition at line 50 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_ae205c8ea655342b8ec7db08f6332ebd9}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-B\-D\-I\-V1@{P\-B\-D\-I\-V1}}
+\index{P\-B\-D\-I\-V1@{P\-B\-D\-I\-V1}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-B\-D\-I\-V1}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-B\-D\-I\-V1~0b00}}\label{p32_2include_2pinguino_2core_2system_8c_ae205c8ea655342b8ec7db08f6332ebd9}
+
+
+Definition at line 81 of file system.\-c.
+
+
+
+Referenced by System\-Clocks\-Calc\-Peripheral\-Clock\-Settings().
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a8419fe0f56aa7fd73934fceabc9797a0}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-B\-D\-I\-V2@{P\-B\-D\-I\-V2}}
+\index{P\-B\-D\-I\-V2@{P\-B\-D\-I\-V2}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-B\-D\-I\-V2}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-B\-D\-I\-V2~0b01}}\label{p32_2include_2pinguino_2core_2system_8c_a8419fe0f56aa7fd73934fceabc9797a0}
+
+
+Definition at line 80 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_aee25d7bd01f56986f09a8bb47dc9e9f7}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-B\-D\-I\-V4@{P\-B\-D\-I\-V4}}
+\index{P\-B\-D\-I\-V4@{P\-B\-D\-I\-V4}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-B\-D\-I\-V4}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-B\-D\-I\-V4~0b10}}\label{p32_2include_2pinguino_2core_2system_8c_aee25d7bd01f56986f09a8bb47dc9e9f7}
+
+
+Definition at line 79 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a38727403783594026b0ee65ea8046233}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-B\-D\-I\-V8@{P\-B\-D\-I\-V8}}
+\index{P\-B\-D\-I\-V8@{P\-B\-D\-I\-V8}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-B\-D\-I\-V8}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-B\-D\-I\-V8~0b11}}\label{p32_2include_2pinguino_2core_2system_8c_a38727403783594026b0ee65ea8046233}
+
+
+Definition at line 78 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a4b2d6c02010bddf2e013ba51f734893d}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-M\-U\-L\-T15@{P\-L\-L\-M\-U\-L\-T15}}
+\index{P\-L\-L\-M\-U\-L\-T15@{P\-L\-L\-M\-U\-L\-T15}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-M\-U\-L\-T15}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-M\-U\-L\-T15~0b000}}\label{p32_2include_2pinguino_2core_2system_8c_a4b2d6c02010bddf2e013ba51f734893d}
+
+
+Definition at line 91 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_aeb4fdec39d8da7466f1fdc05c9b38416}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-M\-U\-L\-T16@{P\-L\-L\-M\-U\-L\-T16}}
+\index{P\-L\-L\-M\-U\-L\-T16@{P\-L\-L\-M\-U\-L\-T16}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-M\-U\-L\-T16}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-M\-U\-L\-T16~0b001}}\label{p32_2include_2pinguino_2core_2system_8c_aeb4fdec39d8da7466f1fdc05c9b38416}
+
+
+Definition at line 90 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_af83202fd70047a6f3d52f132ef6c6a7f}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-M\-U\-L\-T17@{P\-L\-L\-M\-U\-L\-T17}}
+\index{P\-L\-L\-M\-U\-L\-T17@{P\-L\-L\-M\-U\-L\-T17}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-M\-U\-L\-T17}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-M\-U\-L\-T17~0b010}}\label{p32_2include_2pinguino_2core_2system_8c_af83202fd70047a6f3d52f132ef6c6a7f}
+
+
+Definition at line 89 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a93e3953dbb171a3e50366b83f036d786}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-M\-U\-L\-T18@{P\-L\-L\-M\-U\-L\-T18}}
+\index{P\-L\-L\-M\-U\-L\-T18@{P\-L\-L\-M\-U\-L\-T18}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-M\-U\-L\-T18}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-M\-U\-L\-T18~0b011}}\label{p32_2include_2pinguino_2core_2system_8c_a93e3953dbb171a3e50366b83f036d786}
+
+
+Definition at line 88 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_acec088f66c32a38f63892e0555ae9a99}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-M\-U\-L\-T19@{P\-L\-L\-M\-U\-L\-T19}}
+\index{P\-L\-L\-M\-U\-L\-T19@{P\-L\-L\-M\-U\-L\-T19}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-M\-U\-L\-T19}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-M\-U\-L\-T19~0b100}}\label{p32_2include_2pinguino_2core_2system_8c_acec088f66c32a38f63892e0555ae9a99}
+
+
+Definition at line 87 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_ac771d91cdc5d6201e171f1f561d8341a}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-M\-U\-L\-T20@{P\-L\-L\-M\-U\-L\-T20}}
+\index{P\-L\-L\-M\-U\-L\-T20@{P\-L\-L\-M\-U\-L\-T20}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-M\-U\-L\-T20}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-M\-U\-L\-T20~0b101}}\label{p32_2include_2pinguino_2core_2system_8c_ac771d91cdc5d6201e171f1f561d8341a}
+
+
+Definition at line 86 of file system.\-c.
+
+
+
+Referenced by System\-Clocks\-Calc\-Cpu\-Clock\-Settings().
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a89e7dbc5c8b7ef9ae810c8a44a9df2ae}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-M\-U\-L\-T21@{P\-L\-L\-M\-U\-L\-T21}}
+\index{P\-L\-L\-M\-U\-L\-T21@{P\-L\-L\-M\-U\-L\-T21}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-M\-U\-L\-T21}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-M\-U\-L\-T21~0b110}}\label{p32_2include_2pinguino_2core_2system_8c_a89e7dbc5c8b7ef9ae810c8a44a9df2ae}
+
+
+Definition at line 85 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a1d58fd540f133091e9faaab814d1326f}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-M\-U\-L\-T24@{P\-L\-L\-M\-U\-L\-T24}}
+\index{P\-L\-L\-M\-U\-L\-T24@{P\-L\-L\-M\-U\-L\-T24}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-M\-U\-L\-T24}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-M\-U\-L\-T24~0b111}}\label{p32_2include_2pinguino_2core_2system_8c_a1d58fd540f133091e9faaab814d1326f}
+
+
+Definition at line 84 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_abb534f4d1a8441c370c166a333165311}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-O\-D\-I\-V1@{P\-L\-L\-O\-D\-I\-V1}}
+\index{P\-L\-L\-O\-D\-I\-V1@{P\-L\-L\-O\-D\-I\-V1}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-O\-D\-I\-V1}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-O\-D\-I\-V1~0b000}}\label{p32_2include_2pinguino_2core_2system_8c_abb534f4d1a8441c370c166a333165311}
+
+
+Definition at line 65 of file system.\-c.
+
+
+
+Referenced by System\-Clocks\-Calc\-Cpu\-Clock\-Settings().
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a91465020059d58cfab79f5dbdf840dc0}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-O\-D\-I\-V16@{P\-L\-L\-O\-D\-I\-V16}}
+\index{P\-L\-L\-O\-D\-I\-V16@{P\-L\-L\-O\-D\-I\-V16}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-O\-D\-I\-V16}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-O\-D\-I\-V16~0b100}}\label{p32_2include_2pinguino_2core_2system_8c_a91465020059d58cfab79f5dbdf840dc0}
+
+
+Definition at line 61 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a44c057b45804f4ce1c481f7e9cf6d37d}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-O\-D\-I\-V2@{P\-L\-L\-O\-D\-I\-V2}}
+\index{P\-L\-L\-O\-D\-I\-V2@{P\-L\-L\-O\-D\-I\-V2}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-O\-D\-I\-V2}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-O\-D\-I\-V2~0b001}}\label{p32_2include_2pinguino_2core_2system_8c_a44c057b45804f4ce1c481f7e9cf6d37d}
+
+
+Definition at line 64 of file system.\-c.
+
+
+
+Referenced by System\-Clocks\-Calc\-Cpu\-Clock\-Settings().
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a69d2ea28571b9591fdaee330a9435ada}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-O\-D\-I\-V256@{P\-L\-L\-O\-D\-I\-V256}}
+\index{P\-L\-L\-O\-D\-I\-V256@{P\-L\-L\-O\-D\-I\-V256}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-O\-D\-I\-V256}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-O\-D\-I\-V256~0b111}}\label{p32_2include_2pinguino_2core_2system_8c_a69d2ea28571b9591fdaee330a9435ada}
+
+
+Definition at line 58 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a697f11cde6be73e5c4a233414dced10d}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-O\-D\-I\-V32@{P\-L\-L\-O\-D\-I\-V32}}
+\index{P\-L\-L\-O\-D\-I\-V32@{P\-L\-L\-O\-D\-I\-V32}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-O\-D\-I\-V32}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-O\-D\-I\-V32~0b101}}\label{p32_2include_2pinguino_2core_2system_8c_a697f11cde6be73e5c4a233414dced10d}
+
+
+Definition at line 60 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a500fd670008a00c3b65880d434868b1e}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-O\-D\-I\-V4@{P\-L\-L\-O\-D\-I\-V4}}
+\index{P\-L\-L\-O\-D\-I\-V4@{P\-L\-L\-O\-D\-I\-V4}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-O\-D\-I\-V4}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-O\-D\-I\-V4~0b010}}\label{p32_2include_2pinguino_2core_2system_8c_a500fd670008a00c3b65880d434868b1e}
+
+
+Definition at line 63 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_af056b2735510c3cecc2c7d737e1861a8}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-O\-D\-I\-V64@{P\-L\-L\-O\-D\-I\-V64}}
+\index{P\-L\-L\-O\-D\-I\-V64@{P\-L\-L\-O\-D\-I\-V64}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-O\-D\-I\-V64}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-O\-D\-I\-V64~0b110}}\label{p32_2include_2pinguino_2core_2system_8c_af056b2735510c3cecc2c7d737e1861a8}
+
+
+Definition at line 59 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a26bf156d9cc7305d18c24052d3989104}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-L\-L\-O\-D\-I\-V8@{P\-L\-L\-O\-D\-I\-V8}}
+\index{P\-L\-L\-O\-D\-I\-V8@{P\-L\-L\-O\-D\-I\-V8}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-L\-L\-O\-D\-I\-V8}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-L\-L\-O\-D\-I\-V8~0b011}}\label{p32_2include_2pinguino_2core_2system_8c_a26bf156d9cc7305d18c24052d3989104}
+
+
+Definition at line 62 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_ac32090d8dcd221462bbb540ba9bcc544}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-O\-S\-C@{P\-O\-S\-C}}
+\index{P\-O\-S\-C@{P\-O\-S\-C}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-O\-S\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-O\-S\-C~0b010}}\label{p32_2include_2pinguino_2core_2system_8c_ac32090d8dcd221462bbb540ba9bcc544}
+
+
+Definition at line 53 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_af19333ed41cb9cdc190e4f97f635e98b}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!P\-O\-S\-C\-P\-L\-L@{P\-O\-S\-C\-P\-L\-L}}
+\index{P\-O\-S\-C\-P\-L\-L@{P\-O\-S\-C\-P\-L\-L}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{P\-O\-S\-C\-P\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-O\-S\-C\-P\-L\-L~0b011}}\label{p32_2include_2pinguino_2core_2system_8c_af19333ed41cb9cdc190e4f97f635e98b}
+
+
+Definition at line 52 of file system.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_aa885e7d5af895dac160e98db197920b5}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!S\-O\-S\-C@{S\-O\-S\-C}}
+\index{S\-O\-S\-C@{S\-O\-S\-C}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{S\-O\-S\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-O\-S\-C~0b100}}\label{p32_2include_2pinguino_2core_2system_8c_aa885e7d5af895dac160e98db197920b5}
+
+
+Definition at line 51 of file system.\-c.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_aac5953c463b481136a7701be54de021e}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Clocks\-Error@{System\-Clocks\-Error}}
+\index{System\-Clocks\-Error@{System\-Clocks\-Error}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Clocks\-Error}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf System\-Clocks\-Error\-Enum}  {\bf System\-Clocks\-Error}}}\label{p32_2include_2pinguino_2core_2system_8c_aac5953c463b481136a7701be54de021e}
+Error state, only used by the test cases \hypertarget{p32_2include_2pinguino_2core_2system_8c_a308e75178225c9fd290a72c790bb4f08}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Clocks\-Settings@{System\-Clocks\-Settings}}
+\index{System\-Clocks\-Settings@{System\-Clocks\-Settings}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Clocks\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf System\-Clocks\-Settings\-Struct}  {\bf System\-Clocks\-Settings}}}\label{p32_2include_2pinguino_2core_2system_8c_a308e75178225c9fd290a72c790bb4f08}
+This struct is used to store the results after reading in the current settings, and to calculate new clock settings in memory.
+
+Each function gets a pointer to this struct as the first parameter.
+
+If we used C++, this struct would be the class; and all functions in this file would be member functions. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Clocks\-Error\-Enum@{System\-Clocks\-Error\-Enum}}
+\index{System\-Clocks\-Error\-Enum@{System\-Clocks\-Error\-Enum}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Clocks\-Error\-Enum}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf System\-Clocks\-Error\-Enum}}}\label{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96}
+Error state, only used by the test cases \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Error\-\_\-\-None@{Error\-\_\-\-None}!p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}}\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!Error\-\_\-\-None@{Error\-\_\-\-None}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a761e2d1c3317fd03e0cd02e11fd6de22}{Error\-\_\-\-None}\label{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a761e2d1c3317fd03e0cd02e11fd6de22}
+}]\index{Error\-\_\-\-Requested\-Frequency\-Too\-High@{Error\-\_\-\-Requested\-Frequency\-Too\-High}!p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}}\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!Error\-\_\-\-Requested\-Frequency\-Too\-High@{Error\-\_\-\-Requested\-Frequency\-Too\-High}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96aa49b4e7fdc667d2b16e33acbbe3fe272}{Error\-\_\-\-Requested\-Frequency\-Too\-High}\label{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96aa49b4e7fdc667d2b16e33acbbe3fe272}
+}]\index{Error\-\_\-\-No\-Combination\-Found@{Error\-\_\-\-No\-Combination\-Found}!p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}}\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!Error\-\_\-\-No\-Combination\-Found@{Error\-\_\-\-No\-Combination\-Found}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a9deba355e1a7adbbd915525a17dfbc48}{Error\-\_\-\-No\-Combination\-Found}\label{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a9deba355e1a7adbbd915525a17dfbc48}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 133 of file system.\-c.
+
+
+\begin{DoxyCode}
+133                                    \{
+134   \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a761e2d1c3317fd03e0cd02e11fd6de22}{Error\_None}                      = 0,
+135   \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96aa49b4e7fdc667d2b16e33acbbe3fe272}{Error\_RequestedFrequencyTooHigh} = 1,
+136   \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a9deba355e1a7adbbd915525a17dfbc48}{Error\_NoCombinationFound}        = 2,
+137 \} \hyperlink{p32_2include_2pinguino_2core_2system_8c_aac5953c463b481136a7701be54de021e}{SystemClocksError};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a31546d671bf97f53c850c9242c2d560e}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!Get\-C\-P0\-Count@{Get\-C\-P0\-Count}}
+\index{Get\-C\-P0\-Count@{Get\-C\-P0\-Count}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{Get\-C\-P0\-Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} {\bf M\-I\-P\-S32} Get\-C\-P0\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_a31546d671bf97f53c850c9242c2d560e}
+
+
+Definition at line 529 of file system.\-c.
+
+
+
+Referenced by Delayus().
+
+
+\begin{DoxyCode}
+530 \{
+531     \textcolor{comment}{//u32 count;}
+532     \textcolor{comment}{//asm("di"); // Disable all interrupts}
+533     \textcolor{comment}{//count = \_CP0\_GET\_COUNT();}
+534     \textcolor{comment}{//asm("ei"); // Enable all interrupts}
+535     \textcolor{comment}{//return count;}
+536     \textcolor{keywordflow}{return} \_CP0\_GET\_COUNT();
+537 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a78e9ff88927e18f2346bc9c33069c5ef}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!Get\-Peripheral\-Clock@{Get\-Peripheral\-Clock}}
+\index{Get\-Peripheral\-Clock@{Get\-Peripheral\-Clock}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{Get\-Peripheral\-Clock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Get\-Peripheral\-Clock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_a78e9ff88927e18f2346bc9c33069c5ef}
+
+
+Definition at line 462 of file system.\-c.
+
+
+
+References System\-Clocks\-Get\-Peripheral\-Frequency(), and System\-Clocks\-Read\-Settings().
+
+
+
+Referenced by I2\-C\-\_\-init(), init\-S\-D(), millis\-\_\-init(), P\-W\-M\-\_\-set\-\_\-frequency(), Serial\-Get\-Data\-Rate(), Serial\-Set\-Data\-Rate(), S\-P\-I\-\_\-set\-Clock(), and Stepper\-\_\-step().
+
+
+\begin{DoxyCode}
+463 \{
+464     \hyperlink{struct_system_clocks_settings_struct}{SystemClocksSettings} s;
+465     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a4c3ac4ab68c599cee128c88d5724330a}{SystemClocksReadSettings}(&s);
+466     \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2system_8c_a3ca7eee84fb9343d7d00efe54f14dc5c}{SystemClocksGetPeripheralFrequency}(&s);
+467 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_aa86ba430ddf6a4a9860c673900d1bc01}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!Get\-System\-Clock@{Get\-System\-Clock}}
+\index{Get\-System\-Clock@{Get\-System\-Clock}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{Get\-System\-Clock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Get\-System\-Clock (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_aa86ba430ddf6a4a9860c673900d1bc01}
+
+
+Definition at line 451 of file system.\-c.
+
+
+
+References System\-Clocks\-Get\-Cpu\-Frequency(), and System\-Clocks\-Read\-Settings().
+
+
+
+Referenced by Delayus(), and Set\-Flash\-Wait\-States\-\_\-old().
+
+
+\begin{DoxyCode}
+452 \{
+453     \hyperlink{struct_system_clocks_settings_struct}{SystemClocksSettings} s;
+454     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a4c3ac4ab68c599cee128c88d5724330a}{SystemClocksReadSettings}(&s);
+455     \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7169944eed34972b6f55d3367de7d6cb}{SystemClocksGetCpuFrequency}(&s);
+456 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_ae21d13f6dffe52789d443967e540839e}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!Set\-C\-P0\-Count@{Set\-C\-P0\-Count}}
+\index{Set\-C\-P0\-Count@{Set\-C\-P0\-Count}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{Set\-C\-P0\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf M\-I\-P\-S32} Set\-C\-P0\-Count (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{count}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_ae21d13f6dffe52789d443967e540839e}
+
+
+Definition at line 543 of file system.\-c.
+
+
+\begin{DoxyCode}
+544 \{
+545     \textcolor{comment}{//asm("di"); // Disable all interrupts}
+546     \_CP0\_SET\_COUNT(count);
+547     \textcolor{comment}{//asm("ei"); // Enable all interrupts}
+548 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_ae5c674d1ce2c2c8cb82e9df33e0686c2}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!Set\-Flash\-Wait\-States\-\_\-old@{Set\-Flash\-Wait\-States\-\_\-old}}
+\index{Set\-Flash\-Wait\-States\-\_\-old@{Set\-Flash\-Wait\-States\-\_\-old}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{Set\-Flash\-Wait\-States\-\_\-old}]{\setlength{\rightskip}{0pt plus 5cm}void Set\-Flash\-Wait\-States\-\_\-old (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_ae5c674d1ce2c2c8cb82e9df33e0686c2}
+
+
+Definition at line 473 of file system.\-c.
+
+
+
+References Get\-System\-Clock(), System\-Lock(), and System\-Unlock().
+
+
+\begin{DoxyCode}
+474 \{
+475     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a44dad2edd2d7ec6080c320b533294af8}{SystemUnlock}();
+476 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO\_220)||defined(PINGUINO32MX250)||defined(PINGUINO32MX220)}
+477 \textcolor{preprocessor}{}    \textcolor{comment}{//PMMODEbits.WAITB = 0b00;                  // Data wait of 1 TPB}
+478 \textcolor{preprocessor}{    #else}
+479 \textcolor{preprocessor}{}    CHECON = (\hyperlink{p32_2include_2pinguino_2core_2system_8c_aa86ba430ddf6a4a9860c673900d1bc01}{GetSystemClock}() / 20) - 1;     \textcolor{comment}{// FlashWaitStates}
+480 \textcolor{preprocessor}{    #endif}
+481 \textcolor{preprocessor}{}    \hyperlink{p32_2include_2pinguino_2core_2system_8c_ab91cf81fb590451a97b90b2ccbced9c3}{SystemLock}();
+482 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_afd2a7efda519abd86c744c9f408f7a48}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Clocks\-Calc\-Cpu\-Clock\-Settings@{System\-Clocks\-Calc\-Cpu\-Clock\-Settings}}
+\index{System\-Clocks\-Calc\-Cpu\-Clock\-Settings@{System\-Clocks\-Calc\-Cpu\-Clock\-Settings}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Clocks\-Calc\-Cpu\-Clock\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void System\-Clocks\-Calc\-Cpu\-Clock\-Settings (
+\begin{DoxyParamCaption}
+\item[{{\bf System\-Clocks\-Settings} $\ast$}]{s, }
+\item[{{\bf uint32\-\_\-t}}]{cpu\-Frequency}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_afd2a7efda519abd86c744c9f408f7a48}
+Calculate the necessary values in order to have the C\-P\-U running at the desired frequency.
+
+\begin{DoxySeeAlso}{See Also}
+system.\-c\-::\-System\-Config()
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Nothing (the result is put into the struct) 
+\end{DoxyReturn}
+
+
+Definition at line 260 of file system.\-c.
+
+
+
+References C\-P\-U\-C\-O\-R\-E\-M\-A\-X\-F\-R\-E\-Q\-U\-E\-N\-C\-Y, C\-R\-Y\-S\-T\-A\-L\-F\-R\-E\-Q\-U\-E\-N\-C\-Y, Error\-\_\-\-No\-Combination\-Found, Error\-\_\-\-None, Error\-\_\-\-Requested\-Frequency\-Too\-High, System\-Clocks\-Settings\-Struct\-::\-P\-L\-L\-I\-D\-I\-V, System\-Clocks\-Settings\-Struct\-::\-P\-L\-L\-M\-U\-L\-T, P\-L\-L\-M\-U\-L\-T20, System\-Clocks\-Settings\-Struct\-::\-P\-L\-L\-O\-D\-I\-V, P\-L\-L\-O\-D\-I\-V1, and P\-L\-L\-O\-D\-I\-V2.
+
+
+
+Referenced by System\-Config(), and System\-Set\-System\-Clock().
+
+
+\begin{DoxyCode}
+262 \{
+263     \textcolor{keywordflow}{if} (cpuFrequency <= \hyperlink{p32_2include_2pinguino_2core_2system_8c_a09ecc45f5b3c0fdc0c111c3fd3cccb3f}{CPUCOREMAXFREQUENCY}) 
+264     \{
+265 \textcolor{preprocessor}{      #ifdef EXTENDED\_TEST\_CASE}
+266 \textcolor{preprocessor}{}        s->error = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a761e2d1c3317fd03e0cd02e11fd6de22}{Error\_None};
+267 \textcolor{preprocessor}{      #endif}
+268 \textcolor{preprocessor}{}    \} 
+269     \textcolor{keywordflow}{else} 
+270     \{
+271       cpuFrequency = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a09ecc45f5b3c0fdc0c111c3fd3cccb3f}{CPUCOREMAXFREQUENCY};
+272 
+273 \textcolor{preprocessor}{      #ifdef EXTENDED\_TEST\_CASE}
+274 \textcolor{preprocessor}{}        s->error = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96aa49b4e7fdc667d2b16e33acbbe3fe272}{Error\_RequestedFrequencyTooHigh};
+275 \textcolor{preprocessor}{      #endif}
+276 \textcolor{preprocessor}{}    \}
+277 
+278     \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} pllOutputDivIndex;
+279     \textcolor{keywordflow}{for} (pllOutputDivIndex = 0; 
+280        pllOutputDivIndex < pllOutputDivsCount; 
+281        pllOutputDivIndex++)
+282     \{
+283       \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} pllMulIndex;
+284       \textcolor{keywordflow}{for} (pllMulIndex = 0; pllMulIndex < pllMulsCount; pllMulIndex++)
+285     \{
+286       \textcolor{keywordflow}{if} ( (cpuFrequency 
+287         * pllInputDivs[s->\hyperlink{struct_system_clocks_settings_struct_ae88334ac2f0e997b8360489ee41d830d}{PLLIDIV}]
+288         * pllOutputDivs[pllOutputDivIndex])
+289            == (\hyperlink{p32_2include_2pinguino_2core_2system_8c_a9c0e8cf52d2cfd471409d8cc1e7132d2}{CRYSTALFREQUENCY} * pllMuls[pllMulIndex]) )
+290         \{
+291           s->\hyperlink{struct_system_clocks_settings_struct_a281ef8423a7e781fdb715ba7dca8df4f}{PLLODIV} = pllOutputDivIndex;
+292           s->\hyperlink{struct_system_clocks_settings_struct_ab765b0bda56d0b80ed00487dbe6fd3ad}{PLLMULT} = pllMulIndex;
+293           \textcolor{comment}{// Match found}
+294           \textcolor{keywordflow}{return};
+295         \}
+296     \}
+297     \}
+298 
+299     \textcolor{comment}{/* }
+300 \textcolor{comment}{    * No combination found -> try to get max CPU frequency. This}
+301 \textcolor{comment}{    * depends from pllInputDiv.}
+302 \textcolor{comment}{    *}
+303 \textcolor{comment}{    * The selected values will result in the max CPU frequency, if}
+304 \textcolor{comment}{    * the pllInputDiv is 1 or 2.}
+305 \textcolor{comment}{    *}
+306 \textcolor{comment}{    * With pllInputDiv > 2 we cannot reach the max frequency.}
+307 \textcolor{comment}{    */}
+308     \textcolor{keywordflow}{if} (pllInputDivs[s->\hyperlink{struct_system_clocks_settings_struct_ae88334ac2f0e997b8360489ee41d830d}{PLLIDIV}] >= 2) 
+309     \{
+310       s->\hyperlink{struct_system_clocks_settings_struct_a281ef8423a7e781fdb715ba7dca8df4f}{PLLODIV} = \hyperlink{p32_2include_2pinguino_2core_2system_8c_abb534f4d1a8441c370c166a333165311}{PLLODIV1}; \textcolor{comment}{// /1}
+311 
+312 \textcolor{preprocessor}{      #ifdef EXTENDED\_TEST\_CASE}
+313 \textcolor{preprocessor}{}        s->error = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a9deba355e1a7adbbd915525a17dfbc48}{Error\_NoCombinationFound};
+314 \textcolor{preprocessor}{      #endif}
+315 \textcolor{preprocessor}{}    \}
+316     \textcolor{keywordflow}{else} 
+317     \{
+318       s->\hyperlink{struct_system_clocks_settings_struct_a281ef8423a7e781fdb715ba7dca8df4f}{PLLODIV} = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a44c057b45804f4ce1c481f7e9cf6d37d}{PLLODIV2}; \textcolor{comment}{// /2}
+319 
+320 \textcolor{preprocessor}{      #ifdef EXTENDED\_TEST\_CASE}
+321 \textcolor{preprocessor}{}        s->error = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a9deba355e1a7adbbd915525a17dfbc48}{Error\_NoCombinationFound};
+322 \textcolor{preprocessor}{      #endif}
+323 \textcolor{preprocessor}{}    \}
+324 
+325     s->\hyperlink{struct_system_clocks_settings_struct_ab765b0bda56d0b80ed00487dbe6fd3ad}{PLLMULT} = \hyperlink{p32_2include_2pinguino_2core_2system_8c_ac771d91cdc5d6201e171f1f561d8341a}{PLLMULT20}; \textcolor{comment}{// x20}
+326 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a76fffc8659a55a8d4a843bc32f79100f}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Clocks\-Calc\-Peripheral\-Clock\-Settings@{System\-Clocks\-Calc\-Peripheral\-Clock\-Settings}}
+\index{System\-Clocks\-Calc\-Peripheral\-Clock\-Settings@{System\-Clocks\-Calc\-Peripheral\-Clock\-Settings}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Clocks\-Calc\-Peripheral\-Clock\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void System\-Clocks\-Calc\-Peripheral\-Clock\-Settings (
+\begin{DoxyParamCaption}
+\item[{{\bf System\-Clocks\-Settings} $\ast$}]{s, }
+\item[{{\bf uint32\-\_\-t}}]{peripheral\-Frequency}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_a76fffc8659a55a8d4a843bc32f79100f}
+Calculate the necessary values in order to have the peripheral clock running at the desired frequency. As this value is only a divider, this normally requires a call to \hyperlink{p32_2include_2pinguino_2core_2system_8c_afd2a7efda519abd86c744c9f408f7a48}{System\-Clocks\-Calc\-Cpu\-Clock\-Settings()} before, because the C\-P\-U frequency is needed to find the divider value.
+
+\begin{DoxySeeAlso}{See Also}
+system.\-c\-::\-System\-Config()
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Nothing (the result is put into the struct) 
+\end{DoxyReturn}
+
+
+Definition at line 339 of file system.\-c.
+
+
+
+References C\-P\-U\-C\-O\-R\-E\-M\-A\-X\-F\-R\-E\-Q\-U\-E\-N\-C\-Y, Error\-\_\-\-No\-Combination\-Found, Error\-\_\-\-None, Error\-\_\-\-Requested\-Frequency\-Too\-High, System\-Clocks\-Settings\-Struct\-::\-P\-B\-D\-I\-V, P\-B\-D\-I\-V1, and System\-Clocks\-Get\-Cpu\-Frequency().
+
+
+
+Referenced by System\-Config(), and System\-Set\-Peripheral\-Clock().
+
+
+\begin{DoxyCode}
+341 \{
+342 \textcolor{preprocessor}{    #ifdef EXTENDED\_TEST\_CASE}
+343 \textcolor{preprocessor}{}    s->error = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a761e2d1c3317fd03e0cd02e11fd6de22}{Error\_None};
+344 \textcolor{preprocessor}{    #endif}
+345 \textcolor{preprocessor}{}
+346     \textcolor{keywordflow}{if} (peripheralFrequency > \hyperlink{p32_2include_2pinguino_2core_2system_8c_a09ecc45f5b3c0fdc0c111c3fd3cccb3f}{CPUCOREMAXFREQUENCY}) 
+347     \{
+348       peripheralFrequency = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a09ecc45f5b3c0fdc0c111c3fd3cccb3f}{CPUCOREMAXFREQUENCY};
+349 
+350 \textcolor{preprocessor}{      #ifdef EXTENDED\_TEST\_CASE}
+351 \textcolor{preprocessor}{}        s->error = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96aa49b4e7fdc667d2b16e33acbbe3fe272}{Error\_RequestedFrequencyTooHigh};
+352 \textcolor{preprocessor}{      #endif}
+353 \textcolor{preprocessor}{}    \}
+354 
+355     \textcolor{keyword}{const} \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a33594304e786b158f3fb30289278f5af}{uint32\_t} cpuFrequency = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7169944eed34972b6f55d3367de7d6cb}{SystemClocksGetCpuFrequency}(s);
+356 
+357     \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} i;
+358     \textcolor{keywordflow}{for} (i = 0; i < pbDivsCount; i++) 
+359     \{
+360       \textcolor{keywordflow}{if} (cpuFrequency == peripheralFrequency * pbDivs[i]) 
+361     \{
+362       s->\hyperlink{struct_system_clocks_settings_struct_ae29dea6ccff6f071be02bdfdc1048617}{PBDIV} = i;
+363       \textcolor{comment}{// Match found}
+364       \textcolor{keywordflow}{return};
+365     \}
+366     \}
+367 
+368     \textcolor{comment}{// No match: Use default value}
+369     s->\hyperlink{struct_system_clocks_settings_struct_ae29dea6ccff6f071be02bdfdc1048617}{PBDIV} = \hyperlink{p32_2include_2pinguino_2core_2system_8c_ae205c8ea655342b8ec7db08f6332ebd9}{PBDIV1}; \textcolor{comment}{// /1}
+370 \textcolor{preprocessor}{    #ifdef EXTENDED\_TEST\_CASE}
+371 \textcolor{preprocessor}{}    s->error = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7a4f7c1d7f2c8177d25b5a0325c2eb96a9deba355e1a7adbbd915525a17dfbc48}{Error\_NoCombinationFound};
+372 \textcolor{preprocessor}{    #endif}
+373 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a7169944eed34972b6f55d3367de7d6cb}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Clocks\-Get\-Cpu\-Frequency@{System\-Clocks\-Get\-Cpu\-Frequency}}
+\index{System\-Clocks\-Get\-Cpu\-Frequency@{System\-Clocks\-Get\-Cpu\-Frequency}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Clocks\-Get\-Cpu\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} System\-Clocks\-Get\-Cpu\-Frequency (
+\begin{DoxyParamCaption}
+\item[{const {\bf System\-Clocks\-Settings} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_a7169944eed34972b6f55d3367de7d6cb}
+Calculates the C\-P\-U frequency based on the values which are passed in. This normally requires a call to \hyperlink{p32_2include_2pinguino_2core_2system_8c_a4c3ac4ab68c599cee128c88d5724330a}{System\-Clocks\-Read\-Settings()} before.
+
+\begin{DoxySeeAlso}{See Also}
+system.\-c\-::\-Get\-System\-Clock()
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The C\-P\-U frequency 
+\end{DoxyReturn}
+
+
+Definition at line 229 of file system.\-c.
+
+
+
+References C\-R\-Y\-S\-T\-A\-L\-F\-R\-E\-Q\-U\-E\-N\-C\-Y, System\-Clocks\-Settings\-Struct\-::\-P\-L\-L\-I\-D\-I\-V, System\-Clocks\-Settings\-Struct\-::\-P\-L\-L\-M\-U\-L\-T, and System\-Clocks\-Settings\-Struct\-::\-P\-L\-L\-O\-D\-I\-V.
+
+
+
+Referenced by Get\-System\-Clock(), System\-Clocks\-Calc\-Peripheral\-Clock\-Settings(), and System\-Clocks\-Get\-Peripheral\-Frequency().
+
+
+\begin{DoxyCode}
+230 \{
+231   \textcolor{keywordflow}{return} 
+232     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a9c0e8cf52d2cfd471409d8cc1e7132d2}{CRYSTALFREQUENCY} 
+233     / pllInputDivs [s->\hyperlink{struct_system_clocks_settings_struct_ae88334ac2f0e997b8360489ee41d830d}{PLLIDIV}]
+234     / pllOutputDivs[s->\hyperlink{struct_system_clocks_settings_struct_a281ef8423a7e781fdb715ba7dca8df4f}{PLLODIV}] 
+235     * pllMuls      [s->\hyperlink{struct_system_clocks_settings_struct_ab765b0bda56d0b80ed00487dbe6fd3ad}{PLLMULT}];
+236 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a3ca7eee84fb9343d7d00efe54f14dc5c}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Clocks\-Get\-Peripheral\-Frequency@{System\-Clocks\-Get\-Peripheral\-Frequency}}
+\index{System\-Clocks\-Get\-Peripheral\-Frequency@{System\-Clocks\-Get\-Peripheral\-Frequency}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Clocks\-Get\-Peripheral\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32\-\_\-t} System\-Clocks\-Get\-Peripheral\-Frequency (
+\begin{DoxyParamCaption}
+\item[{const {\bf System\-Clocks\-Settings} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_a3ca7eee84fb9343d7d00efe54f14dc5c}
+Calculates the peripheral clock frequency based on the values which are passed in. This normally requires a call to \hyperlink{p32_2include_2pinguino_2core_2system_8c_a4c3ac4ab68c599cee128c88d5724330a}{System\-Clocks\-Read\-Settings()} before.
+
+\begin{DoxySeeAlso}{See Also}
+system.\-c\-::\-Get\-Peripheral\-Clock()
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+The peripheral clock frequency 
+\end{DoxyReturn}
+
+
+Definition at line 247 of file system.\-c.
+
+
+
+References System\-Clocks\-Settings\-Struct\-::\-P\-B\-D\-I\-V, and System\-Clocks\-Get\-Cpu\-Frequency().
+
+
+
+Referenced by Get\-Peripheral\-Clock().
+
+
+\begin{DoxyCode}
+248 \{
+249   \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2system_8c_a7169944eed34972b6f55d3367de7d6cb}{SystemClocksGetCpuFrequency}(s) / pbDivs[s->
+      \hyperlink{struct_system_clocks_settings_struct_ae29dea6ccff6f071be02bdfdc1048617}{PBDIV}];
+250 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a4c3ac4ab68c599cee128c88d5724330a}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Clocks\-Read\-Settings@{System\-Clocks\-Read\-Settings}}
+\index{System\-Clocks\-Read\-Settings@{System\-Clocks\-Read\-Settings}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Clocks\-Read\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void System\-Clocks\-Read\-Settings (
+\begin{DoxyParamCaption}
+\item[{{\bf System\-Clocks\-Settings} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_a4c3ac4ab68c599cee128c88d5724330a}
+Read in all relevant clock settings
+
+\begin{DoxySeeAlso}{See Also}
+system.\-c\-::\-Get\-System\-Clock()
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Nothing (the result is put into the struct) 
+\end{DoxyReturn}
+
+
+Definition at line 211 of file system.\-c.
+
+
+
+References System\-Clocks\-Settings\-Struct\-::\-P\-B\-D\-I\-V, System\-Clocks\-Settings\-Struct\-::\-P\-L\-L\-I\-D\-I\-V, System\-Clocks\-Settings\-Struct\-::\-P\-L\-L\-M\-U\-L\-T, and System\-Clocks\-Settings\-Struct\-::\-P\-L\-L\-O\-D\-I\-V.
+
+
+
+Referenced by Get\-Peripheral\-Clock(), Get\-System\-Clock(), System\-Config(), System\-Set\-Peripheral\-Clock(), and System\-Set\-System\-Clock().
+
+
+\begin{DoxyCode}
+212 \{
+213   s->\hyperlink{struct_system_clocks_settings_struct_ae88334ac2f0e997b8360489ee41d830d}{PLLIDIV} = DEVCFG2bits.FPLLIDIV;
+214   
+215   s->\hyperlink{struct_system_clocks_settings_struct_a281ef8423a7e781fdb715ba7dca8df4f}{PLLODIV} = OSCCONbits.PLLODIV;
+216   s->\hyperlink{struct_system_clocks_settings_struct_ab765b0bda56d0b80ed00487dbe6fd3ad}{PLLMULT} = OSCCONbits.PLLMULT;
+217 
+218   s->\hyperlink{struct_system_clocks_settings_struct_ae29dea6ccff6f071be02bdfdc1048617}{PBDIV}   = OSCCONbits.PBDIV;
+219 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a120e72c2a25aa6288c1c1c06e304d627}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Config@{System\-Config}}
+\index{System\-Config@{System\-Config}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Config}]{\setlength{\rightskip}{0pt plus 5cm}void System\-Config (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{cpu\-Core\-Frequency}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_a120e72c2a25aa6288c1c1c06e304d627}
+
+
+Definition at line 512 of file system.\-c.
+
+
+
+References System\-Clocks\-Calc\-Cpu\-Clock\-Settings(), System\-Clocks\-Calc\-Peripheral\-Clock\-Settings(), and System\-Clocks\-Read\-Settings().
+
+
+\begin{DoxyCode}
+513 \{
+514     \hyperlink{struct_system_clocks_settings_struct}{SystemClocksSettings} s;
+515     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a4c3ac4ab68c599cee128c88d5724330a}{SystemClocksReadSettings}(&s);
+516     \hyperlink{p32_2include_2pinguino_2core_2system_8c_afd2a7efda519abd86c744c9f408f7a48}{SystemClocksCalcCpuClockSettings}(&s, cpuCoreFrequency);
+517     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a76fffc8659a55a8d4a843bc32f79100f}{SystemClocksCalcPeripheralClockSettings}(&s, cpuCoreFrequency / 2
+      );
+518     SystemClocksWriteSettings(&s);
+519 
+520     \textcolor{comment}{//RB2014 : already defined in io.c / IOsetDigital()}
+521     \textcolor{comment}{//DDPCONbits.JTAGEN=0;  // PORTA is used as digital instead of JTAG}
+522     \textcolor{comment}{//CFGCONbits.JTAGEN=0;  // Disable the JTAG port}
+523 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_ab91cf81fb590451a97b90b2ccbced9c3}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Lock@{System\-Lock}}
+\index{System\-Lock@{System\-Lock}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}void System\-Lock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_ab91cf81fb590451a97b90b2ccbced9c3}
+
+
+Definition at line 175 of file system.\-c.
+
+
+
+Referenced by I\-Oset\-Remap(), R\-T\-C\-C\-\_\-\-Set\-Write\-Disable(), R\-T\-C\-C\-\_\-\-Set\-Write\-Enable(), R\-T\-C\-C\-\_\-\-S\-O\-S\-Cdisable(), R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable(), and Set\-Flash\-Wait\-States\-\_\-old().
+
+
+\begin{DoxyCode}
+176 \{
+177     SYSKEY = 0x12345678;    \textcolor{comment}{// Write any value other than Key1 or Key2}
+178 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_aac24c9f4919056517bf19b39b7a92092}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Set\-Peripheral\-Clock@{System\-Set\-Peripheral\-Clock}}
+\index{System\-Set\-Peripheral\-Clock@{System\-Set\-Peripheral\-Clock}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Set\-Peripheral\-Clock}]{\setlength{\rightskip}{0pt plus 5cm}void System\-Set\-Peripheral\-Clock (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{peripheral\-Frequency}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_aac24c9f4919056517bf19b39b7a92092}
+
+
+Definition at line 500 of file system.\-c.
+
+
+
+References System\-Clocks\-Calc\-Peripheral\-Clock\-Settings(), and System\-Clocks\-Read\-Settings().
+
+
+\begin{DoxyCode}
+501 \{
+502     \hyperlink{struct_system_clocks_settings_struct}{SystemClocksSettings} s;
+503     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a4c3ac4ab68c599cee128c88d5724330a}{SystemClocksReadSettings}(&s);
+504     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a76fffc8659a55a8d4a843bc32f79100f}{SystemClocksCalcPeripheralClockSettings}(&s, peripheralFrequency)
+      ;
+505     SystemClocksWriteSettings(&s);
+506 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_aead020d7f88cc653063df2e3f4f1993c}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Set\-System\-Clock@{System\-Set\-System\-Clock}}
+\index{System\-Set\-System\-Clock@{System\-Set\-System\-Clock}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Set\-System\-Clock}]{\setlength{\rightskip}{0pt plus 5cm}void System\-Set\-System\-Clock (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{cpu\-Core\-Frequency}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_aead020d7f88cc653063df2e3f4f1993c}
+
+
+Definition at line 488 of file system.\-c.
+
+
+
+References System\-Clocks\-Calc\-Cpu\-Clock\-Settings(), and System\-Clocks\-Read\-Settings().
+
+
+\begin{DoxyCode}
+489 \{
+490     \hyperlink{struct_system_clocks_settings_struct}{SystemClocksSettings} s;
+491     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a4c3ac4ab68c599cee128c88d5724330a}{SystemClocksReadSettings}(&s);
+492     \hyperlink{p32_2include_2pinguino_2core_2system_8c_afd2a7efda519abd86c744c9f408f7a48}{SystemClocksCalcCpuClockSettings}(&s, cpuCoreFrequency);
+493     SystemClocksWriteSettings(&s);
+494 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2system_8c_a44dad2edd2d7ec6080c320b533294af8}{\index{p32/include/pinguino/core/system.\-c@{p32/include/pinguino/core/system.\-c}!System\-Unlock@{System\-Unlock}}
+\index{System\-Unlock@{System\-Unlock}!p32/include/pinguino/core/system.c@{p32/include/pinguino/core/system.\-c}}
+\subsubsection[{System\-Unlock}]{\setlength{\rightskip}{0pt plus 5cm}void System\-Unlock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2system_8c_a44dad2edd2d7ec6080c320b533294af8}
+
+
+Definition at line 164 of file system.\-c.
+
+
+
+Referenced by I\-Oset\-Remap(), R\-T\-C\-C\-\_\-\-Set\-Write\-Disable(), R\-T\-C\-C\-\_\-\-Set\-Write\-Enable(), R\-T\-C\-C\-\_\-\-S\-O\-S\-Cdisable(), R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable(), and Set\-Flash\-Wait\-States\-\_\-old().
+
+
+\begin{DoxyCode}
+165 \{
+166     SYSKEY = 0;             \textcolor{comment}{// ensure OSCCON is locked}
+167     SYSKEY = 0xAA996655;    \textcolor{comment}{// Write Key1 to SYSKEY}
+168     SYSKEY = 0x556699AA;    \textcolor{comment}{// Write Key2 to SYSKEY}
+169 \}
+\end{DoxyCode}

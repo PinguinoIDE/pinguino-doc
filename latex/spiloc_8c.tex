@@ -1,0 +1,205 @@
+\hypertarget{spiloc_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/spiloc.c File Reference}
+\label{spiloc_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/spiloc.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/spiloc.\-c}}
+}
+{\ttfamily \#include $<$delayus.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_p_i___loc___conf}{S\-P\-I\-\_\-\-Loc\-\_\-\-Conf}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{spiloc_8c_acdfb0b4fdad3d201ebf24ccea4fafe54}{S\-P\-I\-Loc\-\_\-\-Init} (\hyperlink{struct_s_p_i___loc___conf}{S\-P\-I\-\_\-\-Loc\-\_\-\-Conf} $\ast$Conf)
+\item 
+void \hyperlink{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{S\-P\-I\-Loc\-\_\-\-Write} (\hyperlink{struct_s_p_i___loc___conf}{S\-P\-I\-\_\-\-Loc\-\_\-\-Conf} $\ast$Conf, volatile \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} data)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{spiloc_8c_aca6cc1c0a152033fa91fb706b8b294ed}{S\-P\-I\-Loc\-\_\-\-Read} (\hyperlink{struct_s_p_i___loc___conf}{S\-P\-I\-\_\-\-Loc\-\_\-\-Conf} $\ast$Conf)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{spiloc_8c_acdfb0b4fdad3d201ebf24ccea4fafe54}{\index{spiloc.\-c@{spiloc.\-c}!S\-P\-I\-Loc\-\_\-\-Init@{S\-P\-I\-Loc\-\_\-\-Init}}
+\index{S\-P\-I\-Loc\-\_\-\-Init@{S\-P\-I\-Loc\-\_\-\-Init}!spiloc.c@{spiloc.\-c}}
+\subsubsection[{S\-P\-I\-Loc\-\_\-\-Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} S\-P\-I\-Loc\-\_\-\-Init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-P\-I\-\_\-\-Loc\-\_\-\-Conf} $\ast$}]{Conf}
+\end{DoxyParamCaption}
+)}}\label{spiloc_8c_acdfb0b4fdad3d201ebf24ccea4fafe54}
+
+
+Definition at line 34 of file spiloc.\-c.
+
+
+
+References S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-C\-P\-O\-L, digitalwrite(), F\-A\-L\-S\-E, H\-I\-G\-H, I\-N\-P\-U\-T, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-C\-K, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-D\-I, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-D\-O, L\-O\-W, N\-U\-L\-L, O\-U\-T\-P\-U\-T, and pinmode().
+
+
+
+Referenced by D\-S1306\-\_\-init(), D\-S1306\-\_\-\-Init(), and M\-C\-P23\-S17\-\_\-init().
+
+
+\begin{DoxyCode}
+35  \{
+36   \textcolor{keywordflow}{if} (Conf == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) \textcolor{keywordflow}{return};
+37   \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT}); 
+38   \textcolor{keywordflow}{if} (Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL} == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+39    \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},\hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW}); 
+40   \textcolor{keywordflow}{else} 
+41    \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH}); 
+42   \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(Conf->\hyperlink{struct_s_p_i___loc___conf_ae80c6ce5d0950d1d6b0aa4d7b61c7145}{LoSDO}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT}); 
+43   \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_ae80c6ce5d0950d1d6b0aa4d7b61c7145}{LoSDO},\hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW}); 
+44   \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(Conf->\hyperlink{struct_s_p_i___loc___conf_a77b28d687f22c34e34410af4b2f6fe94}{LoSDI}, \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT}); 
+45  \}     
+\end{DoxyCode}
+\hypertarget{spiloc_8c_aca6cc1c0a152033fa91fb706b8b294ed}{\index{spiloc.\-c@{spiloc.\-c}!S\-P\-I\-Loc\-\_\-\-Read@{S\-P\-I\-Loc\-\_\-\-Read}}
+\index{S\-P\-I\-Loc\-\_\-\-Read@{S\-P\-I\-Loc\-\_\-\-Read}!spiloc.c@{spiloc.\-c}}
+\subsubsection[{S\-P\-I\-Loc\-\_\-\-Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} S\-P\-I\-Loc\-\_\-\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-P\-I\-\_\-\-Loc\-\_\-\-Conf} $\ast$}]{Conf}
+\end{DoxyParamCaption}
+)}}\label{spiloc_8c_aca6cc1c0a152033fa91fb706b8b294ed}
+
+
+Definition at line 98 of file spiloc.\-c.
+
+
+
+References S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-C\-P\-H\-A, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-C\-P\-O\-L, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Delayu\-S, Delayus(), digitalread(), digitalwrite(), S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-C\-K, and S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-D\-I.
+
+
+
+Referenced by D\-S1306\-\_\-readn(), M\-C\-P23\-S17\-\_\-read\-\_\-\-A(), M\-C\-P23\-S17\-\_\-read\-\_\-\-B(), and M\-C\-P23\-S17\-\_\-read\-\_\-\-W().
+
+
+\begin{DoxyCode}
+99 \{
+100  \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} i;
+101  \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} data = 0;
+102  
+103  \textcolor{keywordflow}{if} (Conf->\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS} == 0)
+104   \{
+105    \textcolor{keywordflow}{for} ( i = 0; i < 8; i++)
+106     \{
+107      \textcolor{keywordflow}{if} (Conf->\hyperlink{struct_s_p_i___loc___conf_a0da4526584e290b715aea1513ff8f871}{CPHA})
+108       \{
+109        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(!Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+110        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+111        data = data << 1;
+112        \textcolor{keywordflow}{if} (\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(Conf->\hyperlink{struct_s_p_i___loc___conf_a77b28d687f22c34e34410af4b2f6fe94}{LoSDI}))
+113         data = data | 0x01;
+114       \}
+115      \textcolor{keywordflow}{else} 
+116       \{
+117        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(!Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+118        data = data << 1;
+119        \textcolor{keywordflow}{if} (\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(Conf->\hyperlink{struct_s_p_i___loc___conf_a77b28d687f22c34e34410af4b2f6fe94}{LoSDI}))
+120         data = data | 0x01;
+121        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+122       \}
+123     \}
+124   \} 
+125  \textcolor{keywordflow}{else} 
+126   \{
+127    \textcolor{keywordflow}{for} ( i = 0; i < 8; i++)
+128     \{
+129      \textcolor{keywordflow}{if} (Conf->\hyperlink{struct_s_p_i___loc___conf_a0da4526584e290b715aea1513ff8f871}{CPHA})
+130       \{
+131        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(!Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL}));
+132        \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(Conf->\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS}); 
+133        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+134        data = data << 1;
+135        \textcolor{keywordflow}{if} (\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(Conf->\hyperlink{struct_s_p_i___loc___conf_a77b28d687f22c34e34410af4b2f6fe94}{LoSDI}))
+136         data = data | 0x01;
+137        \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(Conf->\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS}); 
+138       \}
+139      \textcolor{keywordflow}{else} 
+140       \{
+141        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(!Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+142        \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(Conf->\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS}); 
+143        data = data << 1;
+144        \textcolor{keywordflow}{if} (\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(Conf->\hyperlink{struct_s_p_i___loc___conf_a77b28d687f22c34e34410af4b2f6fe94}{LoSDI}))
+145         data = data | 0x01;
+146        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+147        \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(Conf->\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS}); 
+148       \}
+149     \}
+150   \} 
+151  \textcolor{keywordflow}{return}(data);    
+152 \}            
+\end{DoxyCode}
+\hypertarget{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}{\index{spiloc.\-c@{spiloc.\-c}!S\-P\-I\-Loc\-\_\-\-Write@{S\-P\-I\-Loc\-\_\-\-Write}}
+\index{S\-P\-I\-Loc\-\_\-\-Write@{S\-P\-I\-Loc\-\_\-\-Write}!spiloc.c@{spiloc.\-c}}
+\subsubsection[{S\-P\-I\-Loc\-\_\-\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-Loc\-\_\-\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-P\-I\-\_\-\-Loc\-\_\-\-Conf} $\ast$}]{Conf, }
+\item[{volatile {\bf byte}}]{data}
+\end{DoxyParamCaption}
+)}}\label{spiloc_8c_a3c6c2d6e7e1386bb1ad2148622470450}
+
+
+Definition at line 47 of file spiloc.\-c.
+
+
+
+References S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-C\-P\-H\-A, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-C\-P\-O\-L, S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Delayu\-S, Delayus(), digitalwrite(), S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-C\-K, and S\-P\-I\-\_\-\-Loc\-\_\-\-Conf\-::\-Lo\-S\-D\-O.
+
+
+
+Referenced by D\-S1306\-\_\-readn(), D\-S1306\-\_\-writen(), M\-C\-P23\-S17\-\_\-read\-\_\-\-A(), M\-C\-P23\-S17\-\_\-read\-\_\-\-B(), M\-C\-P23\-S17\-\_\-read\-\_\-\-W(), M\-C\-P23\-S17\-\_\-write\-\_\-\-A(), M\-C\-P23\-S17\-\_\-write\-\_\-\-B(), and M\-C\-P23\-S17\-\_\-write\-\_\-\-W().
+
+
+\begin{DoxyCode}
+48 \{
+49  \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} i;
+50  
+51  \textcolor{keywordflow}{if} (Conf->\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS} == 0)
+52   \{
+53    \textcolor{keywordflow}{for} ( i = 0; i < 8; i++)
+54     \{
+55      \textcolor{keywordflow}{if} (Conf->\hyperlink{struct_s_p_i___loc___conf_a0da4526584e290b715aea1513ff8f871}{CPHA})
+56       \{
+57        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(!Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+58        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_ae80c6ce5d0950d1d6b0aa4d7b61c7145}{LoSDO},(data & 0x80)); 
+59        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+60        data = data << 1;
+61       \}
+62      \textcolor{keywordflow}{else} 
+63       \{
+64        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_ae80c6ce5d0950d1d6b0aa4d7b61c7145}{LoSDO},(data & 0x80)); 
+65        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(!Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+66        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+67        data = data << 1;
+68       \}
+69     \}
+70   \} 
+71  \textcolor{keywordflow}{else} 
+72   \{
+73    \textcolor{keywordflow}{for} ( i = 0; i < 8; i++)
+74     \{
+75      \textcolor{keywordflow}{if} (Conf->\hyperlink{struct_s_p_i___loc___conf_a0da4526584e290b715aea1513ff8f871}{CPHA})
+76       \{
+77        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(!Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL}));
+78        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_ae80c6ce5d0950d1d6b0aa4d7b61c7145}{LoSDO},(data & 0x80)); 
+79        \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(Conf->\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS}); 
+80        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+81        \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(Conf->\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS}); 
+82        data = data << 1;
+83       \}
+84      \textcolor{keywordflow}{else} 
+85       \{
+86        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_ae80c6ce5d0950d1d6b0aa4d7b61c7145}{LoSDO},(data & 0x80)); 
+87        \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(Conf->\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS}); 
+88        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(!Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+89        \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(Conf->\hyperlink{struct_s_p_i___loc___conf_aec95f2f8e32ea5c1f1e6f84b542f0d75}{DelayuS}); 
+90        \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(Conf->\hyperlink{struct_s_p_i___loc___conf_aa0bdfb8b19e3ad25df14c908e5e95dc4}{LoSCK},(Conf->\hyperlink{struct_s_p_i___loc___conf_ac02950660e371880e83d2ed7110e7d2f}{CPOL})); 
+91        data = data << 1;
+92       \}
+93     \}
+94   \} 
+95  \textcolor{keywordflow}{return};    
+96 \}            
+\end{DoxyCode}

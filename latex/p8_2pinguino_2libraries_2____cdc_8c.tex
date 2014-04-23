@@ -1,0 +1,185 @@
+\hypertarget{p8_2pinguino_2libraries_2____cdc_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-\_\-\-\_\-cdc.c File Reference}
+\label{p8_2pinguino_2libraries_2____cdc_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$usb/usb\-\_\-cdc.\-h$>$}\\*
+{\ttfamily \#include $<$usb/usb\-\_\-config.\-c$>$}\\*
+{\ttfamily \#include $<$usb/pic\-U\-S\-B.\-c$>$}\\*
+{\ttfamily \#include $<$usb/usb\-\_\-cdc.\-c$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2____cdc_8c_a4607ffda9dac39b25d25cd69c5a755f8}{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2____cdc_8c_aad3b551dbffd0335af717e740fa8abad}{U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2____cdc_8c_a08446de7aa51cb91713e0fba3a63e0dc}{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}~64
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2____cdc_8c_accdf6bec8070f9f431b1014b48365e0e}{C\-D\-Cwrite}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})~\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a64d8575f07904f5d3b77e98a7b7bef5e}{C\-D\-Cputs}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}, 1)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2____cdc_8c_ac04ee17353a5cb5788e98ff1a84308c9}{C\-D\-C\-\_\-init} (void)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2____cdc_8c_a19f989b108f981384e00864681737078}{C\-D\-C\-\_\-interrupt} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2____cdc_8c_a77973ed171c57abc68c45a2270374e95}{\-\_\-cdc\-\_\-buffer} \mbox{[}\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a08446de7aa51cb91713e0fba3a63e0dc}{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2libraries_2____cdc_8c_a4607ffda9dac39b25d25cd69c5a755f8}{\index{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}!\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C@{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}}
+\index{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C@{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}!p8/pinguino/libraries/__cdc.c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}}\label{p8_2pinguino_2libraries_2____cdc_8c_a4607ffda9dac39b25d25cd69c5a755f8}
+
+
+Definition at line 21 of file \-\_\-\-\_\-cdc.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2____cdc_8c_a08446de7aa51cb91713e0fba3a63e0dc}{\index{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}!\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-@{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}}
+\index{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-@{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}!p8/pinguino/libraries/__cdc.c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-~64}}\label{p8_2pinguino_2libraries_2____cdc_8c_a08446de7aa51cb91713e0fba3a63e0dc}
+
+
+Definition at line 43 of file \-\_\-\-\_\-cdc.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2____cdc_8c_accdf6bec8070f9f431b1014b48365e0e}{\index{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}!C\-D\-Cwrite@{C\-D\-Cwrite}}
+\index{C\-D\-Cwrite@{C\-D\-Cwrite}!p8/pinguino/libraries/__cdc.c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-Cwrite}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-D\-Cwrite(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf c}}
+\end{DoxyParamCaption}
+)~{\bf C\-D\-Cputs}({\bf c}, 1)}}\label{p8_2pinguino_2libraries_2____cdc_8c_accdf6bec8070f9f431b1014b48365e0e}
+
+
+Definition at line 109 of file \-\_\-\-\_\-cdc.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2____cdc_8c_aad3b551dbffd0335af717e740fa8abad}{\index{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}!U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C@{U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C}}
+\index{U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C@{U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C}!p8/pinguino/libraries/__cdc.c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-\_\-\-U\-S\-E\-\_\-\-C\-D\-C}}\label{p8_2pinguino_2libraries_2____cdc_8c_aad3b551dbffd0335af717e740fa8abad}
+
+
+Definition at line 23 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2____cdc_8c_ac04ee17353a5cb5788e98ff1a84308c9}{\index{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}!C\-D\-C\-\_\-init@{C\-D\-C\-\_\-init}}
+\index{C\-D\-C\-\_\-init@{C\-D\-C\-\_\-init}!p8/pinguino/libraries/__cdc.c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-C\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void C\-D\-C\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2____cdc_8c_ac04ee17353a5cb5788e98ff1a84308c9}
+
+
+Definition at line 53 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+References C\-O\-N\-F\-I\-G\-U\-R\-E\-D, current\-Configuration, Delayms(), D\-E\-T\-A\-C\-H\-E\-D, device\-State, Enable\-U\-S\-B\-Module(), Process\-U\-S\-B\-Transactions(), and remote\-Wakeup.
+
+
+
+Referenced by C\-D\-C\-U\-S\-B\-Is\-Connected().
+
+
+\begin{DoxyCode}
+54 \{
+55     \textcolor{comment}{// Init}
+56     \textcolor{comment}{//INTCON=0;                   // Disable global HP interrupts}
+57     INTCONbits.GIEH = 0;
+58     INTCONbits.GIEL = 0;
+59     \textcolor{comment}{//INTCON2=0xC0;               // set RBPU and INTEDG0 ???}
+60 
+61 \textcolor{preprocessor}{    #ifdef boot2}
+62 \textcolor{preprocessor}{}
+63     UCON=0;
+64     UCFG=0;
+65 
+66     UEP0=0;UEP1=0;UEP2=0;UEP3=0;UEP4=0;UEP5=0;
+67     UEP6=0;UEP7=0;UEP8=0;UEP9=0;UEP10=0;UEP11=0;
+68     UEP12=0;UEP13=0;UEP14=0;UEP15=0;
+69     
+70     \textcolor{comment}{// and wait 2 seconds}
+71     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(2000);
+72 
+73 \textcolor{preprocessor}{    #endif}
+74 \textcolor{preprocessor}{}
+75     \textcolor{comment}{// Initialize USB for CDC}
+76     UCFG = 0x14;                \textcolor{comment}{// Enable pullup resistors; full speed mode}
+77     \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} = \hyperlink{pic_u_s_b_8h_a7dead3b2c769570340a638dbc6c07339}{DETACHED};
+78     \hyperlink{pic_u_s_b_8c_a8f6657264342ba68ae2efa649f018cf9}{remoteWakeup} = 0x00;
+79     \hyperlink{pic_u_s_b_8c_a1c07dc041da5fe22f47633438dc0c0ac}{currentConfiguration} = 0x00;
+80 
+81     \textcolor{comment}{// Enable USB module}
+82     \textcolor{keywordflow}{while}(\hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} != \hyperlink{pic_u_s_b_8h_a514476189fbaf15c716d5e846955d2b8}{CONFIGURED})
+83     \{
+84       \hyperlink{pic_u_s_b_8c_a7ce360ecb075203865186f441fe72574}{EnableUSBModule}();
+85       \hyperlink{pic_u_s_b_8c_a72d2fa72a0db42721bb8d9b9de26b431}{ProcessUSBTransactions}();
+86     \}
+87 
+88     \textcolor{comment}{// Enable Interrupt}
+89 \textcolor{preprocessor}{    #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+90 \textcolor{preprocessor}{}        PIR3bits.USBIF = 0;     \textcolor{comment}{// clear usb interrupt flag}
+91         PIE3bits.USBIE = 1;     \textcolor{comment}{// enable usb interrupt}
+92         IPR3bits.USBIP = 1;     \textcolor{comment}{// high priority interrupt}
+93 \textcolor{preprocessor}{    #else}
+94 \textcolor{preprocessor}{}        PIR2bits.USBIF = 0;     \textcolor{comment}{// clear usb interrupt flag}
+95         PIE2bits.USBIE = 1;     \textcolor{comment}{// enable usb interrupt}
+96         IPR2bits.USBIP = 1;     \textcolor{comment}{// high priority interrupt}
+97 \textcolor{preprocessor}{    #endif}
+98 \textcolor{preprocessor}{}    
+99     INTCONbits.GIEH = 1;   \textcolor{comment}{// Enable global HP interrupts}
+100     INTCONbits.GIEL = 1;   \textcolor{comment}{// Enable global LP interrupts}
+101 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2____cdc_8c_a19f989b108f981384e00864681737078}{\index{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}!C\-D\-C\-\_\-interrupt@{C\-D\-C\-\_\-interrupt}}
+\index{C\-D\-C\-\_\-interrupt@{C\-D\-C\-\_\-interrupt}!p8/pinguino/libraries/__cdc.c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-C\-\_\-interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void C\-D\-C\-\_\-interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2____cdc_8c_a19f989b108f981384e00864681737078}
+
+
+Definition at line 314 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+References Process\-U\-S\-B\-Transactions().
+
+
+\begin{DoxyCode}
+315 \{
+316 \textcolor{preprocessor}{    #if defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+317 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if}(PIR3bits.USBIF)
+318     \{
+319         PIR3bits.USBIF = 0;
+320 \textcolor{preprocessor}{    #else}
+321 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if}(PIR2bits.USBIF)
+322     \{
+323         PIR2bits.USBIF = 0;
+324 \textcolor{preprocessor}{    #endif}
+325 \textcolor{preprocessor}{}        \hyperlink{pic_u_s_b_8c_a72d2fa72a0db42721bb8d9b9de26b431}{ProcessUSBTransactions}();
+326         UIRbits.SOFIF = 0;
+327         UIRbits.URSTIF = 0;
+328 
+329         UEIR = 0;
+330     \}
+331 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2libraries_2____cdc_8c_a77973ed171c57abc68c45a2270374e95}{\index{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}!\-\_\-cdc\-\_\-buffer@{\-\_\-cdc\-\_\-buffer}}
+\index{\-\_\-cdc\-\_\-buffer@{\-\_\-cdc\-\_\-buffer}!p8/pinguino/libraries/__cdc.c@{p8/pinguino/libraries/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{\-\_\-cdc\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} \-\_\-cdc\-\_\-buffer\mbox{[}{\bf \-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}\mbox{]}}}\label{p8_2pinguino_2libraries_2____cdc_8c_a77973ed171c57abc68c45a2270374e95}
+
+
+Definition at line 46 of file \-\_\-\-\_\-cdc.\-c.
+

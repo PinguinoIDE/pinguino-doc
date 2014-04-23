@@ -1,0 +1,179 @@
+\hypertarget{p32_2include_2pinguino_2core_2watchdog_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/watchdog.c File Reference}
+\label{p32_2include_2pinguino_2core_2watchdog_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/watchdog.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/watchdog.\-c}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_af37f25573919a206622936f39e372778}{\-\_\-\-\_\-\-W\-A\-T\-C\-H\-D\-O\-G\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_a1bf0d68ebd798aa76aebbf6a527026bb}{Enable\-W\-D\-T}()~(W\-D\-T\-C\-O\-N\-S\-E\-T = \-\_\-\-W\-D\-T\-C\-O\-N\-\_\-\-O\-N\-\_\-\-M\-A\-S\-K)
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_a80c0eb967728f1d80f3473016ee6c640}{Disable\-W\-D\-T}()~(W\-D\-T\-C\-O\-N\-C\-L\-R = \-\_\-\-W\-D\-T\-C\-O\-N\-\_\-\-O\-N\-\_\-\-M\-A\-S\-K)
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_afccfbef190b49f00f234279f487c8a74}{Clear\-W\-D\-T}()~(W\-D\-T\-C\-O\-N\-S\-E\-T = \-\_\-\-W\-D\-T\-C\-O\-N\-\_\-\-W\-D\-T\-C\-L\-R\-\_\-\-M\-A\-S\-K)
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_a87ae2416133abf3b5527a16a065c1611}{Clear\-Event\-W\-D\-T}()~(R\-C\-O\-N\-C\-L\-R = \-\_\-\-R\-C\-O\-N\-\_\-\-W\-D\-T\-O\-\_\-\-M\-A\-S\-K)
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_ad8ad1d10c6f0ee1b68515773a54d9155}{Read\-Event\-W\-D\-T}()~(R\-C\-O\-Nbits.\-W\-D\-T\-O)
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_ae38d66e1889c0f7b46db6a3abd2309ba}{Read\-Postscaler\-W\-D\-T}()~(W\-D\-T\-C\-O\-Nbits.\-W\-D\-T\-P\-S\-T\-A)
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_a8f76d1ef2412869a9694a06307552631}{Event\-W\-D\-T}()~(\hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_acdcf2b08c932d82c6f2c51646f4718f0}{boot\-\_\-from\-\_\-watchdog})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_a8f3553ae0bbecb6a2cdbcbf8853cb8dd}{init\-\_\-watchdog} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_acdcf2b08c932d82c6f2c51646f4718f0}{boot\-\_\-from\-\_\-watchdog} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2watchdog_8c_af37f25573919a206622936f39e372778}{\index{p32/include/pinguino/core/watchdog.\-c@{p32/include/pinguino/core/watchdog.\-c}!\-\_\-\-\_\-\-W\-A\-T\-C\-H\-D\-O\-G\-\_\-\-\_\-@{\-\_\-\-\_\-\-W\-A\-T\-C\-H\-D\-O\-G\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-W\-A\-T\-C\-H\-D\-O\-G\-\_\-\-\_\-@{\-\_\-\-\_\-\-W\-A\-T\-C\-H\-D\-O\-G\-\_\-\-\_\-}!p32/include/pinguino/core/watchdog.c@{p32/include/pinguino/core/watchdog.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-W\-A\-T\-C\-H\-D\-O\-G\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-W\-A\-T\-C\-H\-D\-O\-G\-\_\-\-\_\-}}\label{p32_2include_2pinguino_2core_2watchdog_8c_af37f25573919a206622936f39e372778}
+
+
+Definition at line 6 of file watchdog.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2watchdog_8c_a87ae2416133abf3b5527a16a065c1611}{\index{p32/include/pinguino/core/watchdog.\-c@{p32/include/pinguino/core/watchdog.\-c}!Clear\-Event\-W\-D\-T@{Clear\-Event\-W\-D\-T}}
+\index{Clear\-Event\-W\-D\-T@{Clear\-Event\-W\-D\-T}!p32/include/pinguino/core/watchdog.c@{p32/include/pinguino/core/watchdog.\-c}}
+\subsubsection[{Clear\-Event\-W\-D\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Clear\-Event\-W\-D\-T(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(R\-C\-O\-N\-C\-L\-R = \-\_\-\-R\-C\-O\-N\-\_\-\-W\-D\-T\-O\-\_\-\-M\-A\-S\-K)}}\label{p32_2include_2pinguino_2core_2watchdog_8c_a87ae2416133abf3b5527a16a065c1611}
+
+
+Definition at line 12 of file watchdog.\-c.
+
+
+
+Referenced by init\-\_\-watchdog().
+
+\hypertarget{p32_2include_2pinguino_2core_2watchdog_8c_afccfbef190b49f00f234279f487c8a74}{\index{p32/include/pinguino/core/watchdog.\-c@{p32/include/pinguino/core/watchdog.\-c}!Clear\-W\-D\-T@{Clear\-W\-D\-T}}
+\index{Clear\-W\-D\-T@{Clear\-W\-D\-T}!p32/include/pinguino/core/watchdog.c@{p32/include/pinguino/core/watchdog.\-c}}
+\subsubsection[{Clear\-W\-D\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Clear\-W\-D\-T(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(W\-D\-T\-C\-O\-N\-S\-E\-T = \-\_\-\-W\-D\-T\-C\-O\-N\-\_\-\-W\-D\-T\-C\-L\-R\-\_\-\-M\-A\-S\-K)}}\label{p32_2include_2pinguino_2core_2watchdog_8c_afccfbef190b49f00f234279f487c8a74}
+
+
+Definition at line 11 of file watchdog.\-c.
+
+
+
+Referenced by init\-\_\-watchdog().
+
+\hypertarget{p32_2include_2pinguino_2core_2watchdog_8c_a80c0eb967728f1d80f3473016ee6c640}{\index{p32/include/pinguino/core/watchdog.\-c@{p32/include/pinguino/core/watchdog.\-c}!Disable\-W\-D\-T@{Disable\-W\-D\-T}}
+\index{Disable\-W\-D\-T@{Disable\-W\-D\-T}!p32/include/pinguino/core/watchdog.c@{p32/include/pinguino/core/watchdog.\-c}}
+\subsubsection[{Disable\-W\-D\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Disable\-W\-D\-T(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(W\-D\-T\-C\-O\-N\-C\-L\-R = \-\_\-\-W\-D\-T\-C\-O\-N\-\_\-\-O\-N\-\_\-\-M\-A\-S\-K)}}\label{p32_2include_2pinguino_2core_2watchdog_8c_a80c0eb967728f1d80f3473016ee6c640}
+
+
+Definition at line 10 of file watchdog.\-c.
+
+
+
+Referenced by init\-\_\-watchdog().
+
+\hypertarget{p32_2include_2pinguino_2core_2watchdog_8c_a1bf0d68ebd798aa76aebbf6a527026bb}{\index{p32/include/pinguino/core/watchdog.\-c@{p32/include/pinguino/core/watchdog.\-c}!Enable\-W\-D\-T@{Enable\-W\-D\-T}}
+\index{Enable\-W\-D\-T@{Enable\-W\-D\-T}!p32/include/pinguino/core/watchdog.c@{p32/include/pinguino/core/watchdog.\-c}}
+\subsubsection[{Enable\-W\-D\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Enable\-W\-D\-T(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(W\-D\-T\-C\-O\-N\-S\-E\-T = \-\_\-\-W\-D\-T\-C\-O\-N\-\_\-\-O\-N\-\_\-\-M\-A\-S\-K)}}\label{p32_2include_2pinguino_2core_2watchdog_8c_a1bf0d68ebd798aa76aebbf6a527026bb}
+
+
+Definition at line 9 of file watchdog.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2watchdog_8c_a8f76d1ef2412869a9694a06307552631}{\index{p32/include/pinguino/core/watchdog.\-c@{p32/include/pinguino/core/watchdog.\-c}!Event\-W\-D\-T@{Event\-W\-D\-T}}
+\index{Event\-W\-D\-T@{Event\-W\-D\-T}!p32/include/pinguino/core/watchdog.c@{p32/include/pinguino/core/watchdog.\-c}}
+\subsubsection[{Event\-W\-D\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Event\-W\-D\-T(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf boot\-\_\-from\-\_\-watchdog})}}\label{p32_2include_2pinguino_2core_2watchdog_8c_a8f76d1ef2412869a9694a06307552631}
+
+
+Definition at line 29 of file watchdog.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2watchdog_8c_ad8ad1d10c6f0ee1b68515773a54d9155}{\index{p32/include/pinguino/core/watchdog.\-c@{p32/include/pinguino/core/watchdog.\-c}!Read\-Event\-W\-D\-T@{Read\-Event\-W\-D\-T}}
+\index{Read\-Event\-W\-D\-T@{Read\-Event\-W\-D\-T}!p32/include/pinguino/core/watchdog.c@{p32/include/pinguino/core/watchdog.\-c}}
+\subsubsection[{Read\-Event\-W\-D\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Read\-Event\-W\-D\-T(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(R\-C\-O\-Nbits.\-W\-D\-T\-O)}}\label{p32_2include_2pinguino_2core_2watchdog_8c_ad8ad1d10c6f0ee1b68515773a54d9155}
+
+
+Definition at line 13 of file watchdog.\-c.
+
+
+
+Referenced by init\-\_\-watchdog().
+
+\hypertarget{p32_2include_2pinguino_2core_2watchdog_8c_ae38d66e1889c0f7b46db6a3abd2309ba}{\index{p32/include/pinguino/core/watchdog.\-c@{p32/include/pinguino/core/watchdog.\-c}!Read\-Postscaler\-W\-D\-T@{Read\-Postscaler\-W\-D\-T}}
+\index{Read\-Postscaler\-W\-D\-T@{Read\-Postscaler\-W\-D\-T}!p32/include/pinguino/core/watchdog.c@{p32/include/pinguino/core/watchdog.\-c}}
+\subsubsection[{Read\-Postscaler\-W\-D\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Read\-Postscaler\-W\-D\-T(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(W\-D\-T\-C\-O\-Nbits.\-W\-D\-T\-P\-S\-T\-A)}}\label{p32_2include_2pinguino_2core_2watchdog_8c_ae38d66e1889c0f7b46db6a3abd2309ba}
+
+
+Definition at line 14 of file watchdog.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2watchdog_8c_a8f3553ae0bbecb6a2cdbcbf8853cb8dd}{\index{p32/include/pinguino/core/watchdog.\-c@{p32/include/pinguino/core/watchdog.\-c}!init\-\_\-watchdog@{init\-\_\-watchdog}}
+\index{init\-\_\-watchdog@{init\-\_\-watchdog}!p32/include/pinguino/core/watchdog.c@{p32/include/pinguino/core/watchdog.\-c}}
+\subsubsection[{init\-\_\-watchdog}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-watchdog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2watchdog_8c_a8f3553ae0bbecb6a2cdbcbf8853cb8dd}
+
+
+Definition at line 18 of file watchdog.\-c.
+
+
+
+References boot\-\_\-from\-\_\-watchdog, Clear\-Event\-W\-D\-T, Clear\-W\-D\-T, Disable\-W\-D\-T, and Read\-Event\-W\-D\-T.
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{// enable watchdog (8.2 seconds)}
+21     \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_ad8ad1d10c6f0ee1b68515773a54d9155}{ReadEventWDT}())
+22         \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_acdcf2b08c932d82c6f2c51646f4718f0}{boot\_from\_watchdog} = 1;
+23     \textcolor{comment}{//EnableWDT();}
+24     \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_a80c0eb967728f1d80f3473016ee6c640}{DisableWDT}();
+25     \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_a87ae2416133abf3b5527a16a065c1611}{ClearEventWDT}();
+26     \hyperlink{p32_2include_2pinguino_2core_2watchdog_8c_afccfbef190b49f00f234279f487c8a74}{ClearWDT}();
+27 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2watchdog_8c_acdcf2b08c932d82c6f2c51646f4718f0}{\index{p32/include/pinguino/core/watchdog.\-c@{p32/include/pinguino/core/watchdog.\-c}!boot\-\_\-from\-\_\-watchdog@{boot\-\_\-from\-\_\-watchdog}}
+\index{boot\-\_\-from\-\_\-watchdog@{boot\-\_\-from\-\_\-watchdog}!p32/include/pinguino/core/watchdog.c@{p32/include/pinguino/core/watchdog.\-c}}
+\subsubsection[{boot\-\_\-from\-\_\-watchdog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} boot\-\_\-from\-\_\-watchdog = 0}}\label{p32_2include_2pinguino_2core_2watchdog_8c_acdcf2b08c932d82c6f2c51646f4718f0}
+
+
+Definition at line 16 of file watchdog.\-c.
+
+
+
+Referenced by init\-\_\-watchdog().
+

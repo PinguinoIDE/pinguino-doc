@@ -1,0 +1,80 @@
+\hypertarget{digitalp_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalp.c File Reference}
+\label{digitalp_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalp.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalp.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$digital.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{digitalp_8c_a968c440182bcaa05d2c3c2bfbe2adfa6}{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-P\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode} (unsigned char pin, unsigned char \hyperlink{keypad32_8c_a2dc73433524e44e05908b0250ce9d9de}{state})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{digitalp_8c_a968c440182bcaa05d2c3c2bfbe2adfa6}{\index{digitalp.\-c@{digitalp.\-c}!\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-P\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-P\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-P\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-P\-\_\-\-\_\-}!digitalp.c@{digitalp.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-P\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-P\-\_\-\-\_\-}}\label{digitalp_8c_a968c440182bcaa05d2c3c2bfbe2adfa6}
+
+
+Definition at line 38 of file digitalp.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{\index{digitalp.\-c@{digitalp.\-c}!pinmode@{pinmode}}
+\index{pinmode@{pinmode}!digitalp.c@{digitalp.\-c}}
+\subsubsection[{pinmode}]{\setlength{\rightskip}{0pt plus 5cm}void pinmode (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{pin, }
+\item[{unsigned char}]{state}
+\end{DoxyParamCaption}
+)}}\label{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}
+
+
+Definition at line 45 of file digitalp.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, and p\-E.
+
+
+
+Referenced by \-\_\-lcd\-\_\-init(), analogwrite(), D\-C\-F77\-\_\-start(), D\-S1306\-\_\-init(), D\-S1306\-\_\-\-Init(), enc28j60\-Init(), init\-S\-D(), Keypad\-\_\-initialize\-Pins(), lcd\-\_\-init(), Led\-::\-Led(), Led\-Control\-\_\-init(), M\-C\-P23\-S17\-\_\-init(), modbuss\-\_\-configure(), P\-W\-M\-\_\-set\-Duty\-Cycle(), S\-P\-I\-Loc\-\_\-\-Init(), S\-T7565\-\_\-init(), Stepper\-\_\-init(), and touch\-\_\-init\-Touch().
+
+
+\begin{DoxyCode}
+46 \{
+47     \textcolor{keywordflow}{switch} (port[pin])
+48     \{
+49         \textcolor{keywordflow}{case} \hyperlink{digital_8h_a166cc8406becb925e56e7e43ab4faaef}{pA}:
+50             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISA=TRISA | mask[pin];
+51             \textcolor{keywordflow}{else} TRISA=TRISA & (255-mask[pin]);
+52             \textcolor{keywordflow}{break};
+53         \textcolor{keywordflow}{case} \hyperlink{digital_8h_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}:
+54             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISB=TRISB | mask[pin];
+55             \textcolor{keywordflow}{else} TRISB=TRISB & (255-mask[pin]);
+56             \textcolor{keywordflow}{break};
+57         \textcolor{keywordflow}{case} \hyperlink{digital_8h_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}:
+58             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISC=TRISC | mask[pin];
+59             \textcolor{keywordflow}{else} TRISC=TRISC & (255-mask[pin]);
+60             \textcolor{keywordflow}{break};
+61 \textcolor{preprocessor}{        #if defined(PINGUINO4455)   || defined(PINGUINO4550)  || \(\backslash\)}
+62 \textcolor{preprocessor}{            defined(PINGUINO45K50)  || defined(PINGUINO46J50) || \(\backslash\)}
+63 \textcolor{preprocessor}{            defined(PINGUINO47J53A) || defined(PICUNO\_EQUO)}
+64 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{digital_8h_aeb46d85e02eebbe66bcbcbb44f403841}{pD}:
+65             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISD=TRISD | mask[pin];
+66             \textcolor{keywordflow}{else} TRISD=TRISD & (255-mask[pin]);
+67             \textcolor{keywordflow}{break};
+68         \textcolor{keywordflow}{case} \hyperlink{digital_8h_a9aba3e923a2537bfbd31131da85a2d0a}{pE}:
+69             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) TRISE=TRISE | mask[pin];
+70             \textcolor{keywordflow}{else} TRISE=TRISE & (255-mask[pin]);
+71             \textcolor{keywordflow}{break};
+72 \textcolor{preprocessor}{        #endif}
+73 \textcolor{preprocessor}{}    \}
+74 \}
+\end{DoxyCode}

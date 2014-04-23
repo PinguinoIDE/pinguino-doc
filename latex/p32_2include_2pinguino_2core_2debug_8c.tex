@@ -1,0 +1,78 @@
+\hypertarget{p32_2include_2pinguino_2core_2debug_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/debug.c File Reference}
+\label{p32_2include_2pinguino_2core_2debug_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/debug.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/debug.\-c}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2debug_8c_ac2e2bf401cce1a158f95da10d89658d0}{\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2debug_8c_adacf73b93ca6fa3985f2999f7d6b3b29}{debug} (const char $\ast$format,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2debug_8c_ac2e2bf401cce1a158f95da10d89658d0}{\index{p32/include/pinguino/core/debug.\-c@{p32/include/pinguino/core/debug.\-c}!\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C@{\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C@{\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C}!p32/include/pinguino/core/debug.c@{p32/include/pinguino/core/debug.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C}}\label{p32_2include_2pinguino_2core_2debug_8c_ac2e2bf401cce1a158f95da10d89658d0}
+
+
+Definition at line 10 of file debug.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2debug_8c_adacf73b93ca6fa3985f2999f7d6b3b29}{\index{p32/include/pinguino/core/debug.\-c@{p32/include/pinguino/core/debug.\-c}!debug@{debug}}
+\index{debug@{debug}!p32/include/pinguino/core/debug.c@{p32/include/pinguino/core/debug.\-c}}
+\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}void debug (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2debug_8c_adacf73b93ca6fa3985f2999f7d6b3b29}
+
+
+Definition at line 14 of file debug.\-c.
+
+
+
+References serial1init(), serial2init(), and serial2printf().
+
+
+\begin{DoxyCode}
+15 \{
+16     va\_list args;
+17     va\_start(args, format);
+18 
+19 \textcolor{preprocessor}{    #ifdef NODEBUG}
+20 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #endif}
+21 \textcolor{preprocessor}{}
+22 \textcolor{preprocessor}{    #ifdef USBCDCDEBUG}
+23 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #include <\_\_cdc.c>}
+24         CDCprintf(\textcolor{stringliteral}{"debug: "});
+25         CDCprintf(format, args);
+26         CDCprintf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});
+27 \textcolor{preprocessor}{    #endif}
+28 \textcolor{preprocessor}{}
+29 \textcolor{preprocessor}{    #ifdef UART1DEBUG}
+30 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #include <serial.c>}
+31         \hyperlink{pinguinoserial1_8c_ae3749e4cb27c2d4db0f4eb843a66149f}{serial1init}(9600);
+32         serial1printf(\textcolor{stringliteral}{"debug: "});
+33         serial1printf(format, args);
+34         serial1printf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});
+35 \textcolor{preprocessor}{    #endif}
+36 \textcolor{preprocessor}{}
+37 \textcolor{preprocessor}{    #ifdef UART2DEBUG}
+38 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #include <serial.c>}
+39         \hyperlink{pinguinoserial2_8c_a7c1ae73f9b470de097965f144a8d05dd}{serial2init}(9600);
+40         \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf}(\textcolor{stringliteral}{"debug: "});
+41         \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf}(format, args);
+42         \hyperlink{pinguinoserial2_8c_a6934d708fb2dcd3a411e47595b22cec5}{serial2printf}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});
+43 \textcolor{preprocessor}{    #endif}
+44 \textcolor{preprocessor}{}
+45     va\_end(args);
+46 \}
+\end{DoxyCode}

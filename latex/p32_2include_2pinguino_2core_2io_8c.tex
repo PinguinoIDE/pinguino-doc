@@ -1,0 +1,184 @@
+\hypertarget{p32_2include_2pinguino_2core_2io_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/io.c File Reference}
+\label{p32_2include_2pinguino_2core_2io_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/io.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/io.\-c}}
+}
+{\ttfamily \#include $<$p32xxxx.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$system.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2io_8c_a5ddbadec86437115c3de986cc8cf290b}{\-\_\-\-\_\-\-I\-O\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2io_8c_a1c8a9f96d29d4a65b5d3ca1c82370873}{I\-Oset\-Digital} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2io_8c_a38998f8c27dbde7319f4e054caecad31}{I\-Oset\-Special} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2io_8c_a1c0a1c51bce6c1a2cfcd2b8ec0e91301}{I\-Oset\-Remap} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2io_8c_a5ddbadec86437115c3de986cc8cf290b}{\index{p32/include/pinguino/core/io.\-c@{p32/include/pinguino/core/io.\-c}!\-\_\-\-\_\-\-I\-O\-\_\-\-C@{\-\_\-\-\_\-\-I\-O\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-I\-O\-\_\-\-C@{\-\_\-\-\_\-\-I\-O\-\_\-\-C}!p32/include/pinguino/core/io.c@{p32/include/pinguino/core/io.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-I\-O\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-I\-O\-\_\-\-C}}\label{p32_2include_2pinguino_2core_2io_8c_a5ddbadec86437115c3de986cc8cf290b}
+
+
+Definition at line 30 of file io.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2io_8c_a1c8a9f96d29d4a65b5d3ca1c82370873}{\index{p32/include/pinguino/core/io.\-c@{p32/include/pinguino/core/io.\-c}!I\-Oset\-Digital@{I\-Oset\-Digital}}
+\index{I\-Oset\-Digital@{I\-Oset\-Digital}!p32/include/pinguino/core/io.c@{p32/include/pinguino/core/io.\-c}}
+\subsubsection[{I\-Oset\-Digital}]{\setlength{\rightskip}{0pt plus 5cm}void I\-Oset\-Digital (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2io_8c_a1c8a9f96d29d4a65b5d3ca1c82370873}
+Set all Analog Pins as Digital I\-Os The A\-N\-S\-E\-Lx register has a default value of 0x\-F\-F\-F\-F; therefore, all pins that share analog functions are analog (not digital) by default. 
+
+Definition at line 44 of file io.\-c.
+
+
+\begin{DoxyCode}
+45 \{
+46 \textcolor{preprocessor}{    #if defined(\_\_32MX220F032D\_\_)||defined(\_\_32MX250F128B\_\_)||defined(\_\_32MX220F032B\_\_)}
+47 \textcolor{preprocessor}{}        CFGCONbits.JTAGEN=0;    \textcolor{comment}{// Disable the JTAG port, Port A as Digital Port}
+48         ANSELA = 0;
+49         ANSELB = 0;
+50 \textcolor{preprocessor}{        #if defined(\_\_32MX220F032D\_\_)}
+51 \textcolor{preprocessor}{}            ANSELC = 0;
+52 \textcolor{preprocessor}{        #endif}
+53 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #else}
+54 \textcolor{preprocessor}{}        DDPCONbits.JTAGEN=0;  \textcolor{comment}{// Disable the JTAG port, Port A as Digital Port}
+55         AD1PCFG = 0xFFFF;
+56 \textcolor{preprocessor}{    #endif}
+57 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2io_8c_a1c0a1c51bce6c1a2cfcd2b8ec0e91301}{\index{p32/include/pinguino/core/io.\-c@{p32/include/pinguino/core/io.\-c}!I\-Oset\-Remap@{I\-Oset\-Remap}}
+\index{I\-Oset\-Remap@{I\-Oset\-Remap}!p32/include/pinguino/core/io.c@{p32/include/pinguino/core/io.\-c}}
+\subsubsection[{I\-Oset\-Remap}]{\setlength{\rightskip}{0pt plus 5cm}void I\-Oset\-Remap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2io_8c_a1c0a1c51bce6c1a2cfcd2b8ec0e91301}
+P\-I\-C32 Peripheral Remappage 
+
+Definition at line 95 of file io.\-c.
+
+
+
+References System\-Lock(), and System\-Unlock().
+
+
+\begin{DoxyCode}
+96 \{
+97 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO\_220)}
+98 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2system_8c_a44dad2edd2d7ec6080c320b533294af8}{SystemUnlock}();
+99         CFGCONbits.IOLOCK=0;            \textcolor{comment}{// unlock configuration}
+100         CFGCONbits.PMDLOCK=0;
+101 \textcolor{preprocessor}{        #ifdef \_\_SERIAL\_\_}
+102 \textcolor{preprocessor}{}            U2RXRbits.U2RXR=6;          \textcolor{comment}{// Define U2RX as RC8 ( D0 )}
+103             RPC9Rbits.RPC9R=2;          \textcolor{comment}{// Define U2TX as RC9 ( D1 )}
+104             U1RXRbits.U1RXR=2;          \textcolor{comment}{// Define U1RX as RA4 ( UEXT SERIAL )}
+105             RPB4Rbits.RPB4R=1;          \textcolor{comment}{// Define U1TX as RB4 ( UEXT SERIAL )}
+106 \textcolor{preprocessor}{        #endif}
+107 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_SPI\_\_}
+108 \textcolor{preprocessor}{}            SDI1Rbits.SDI1R=5;          \textcolor{comment}{// Define SDI1 as RA8 ( UEXT SPI )}
+109             RPA9Rbits.RPA9R=3;          \textcolor{comment}{// Define SDO1 as RA9 ( UEXT SPI )}
+110 \textcolor{preprocessor}{        #endif}
+111 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_PWM\_\_}
+112 \textcolor{preprocessor}{}            RPC2Rbits.RPC2R  =0b0101;   \textcolor{comment}{// PWM0 = OC3 as D2  = RC2}
+113             RPC3Rbits.RPC3R  =0b0101;   \textcolor{comment}{// PWM1 = OC4 as D3  = RC3}
+114             RPB5Rbits.RPB5R  =0b0101;   \textcolor{comment}{// PWM2 = OC2 as D11 = RB5}
+115             RPB13Rbits.RPB13R=0b0110;   \textcolor{comment}{// PWM3 = OC5 as D12 = RB13}
+116             RPB15Rbits.RPB15R=0b0101;   \textcolor{comment}{// PWM4 = OC1 as D13 = RB15}
+117 \textcolor{preprocessor}{        #endif}
+118 \textcolor{preprocessor}{}        CFGCONbits.IOLOCK=1;            \textcolor{comment}{// relock configuration}
+119         CFGCONbits.PMDLOCK=1;   
+120         \hyperlink{p32_2include_2pinguino_2core_2system_8c_ab91cf81fb590451a97b90b2ccbced9c3}{SystemLock}();
+121 \textcolor{preprocessor}{    #endif}
+122 \textcolor{preprocessor}{}
+123     \textcolor{comment}{// Thanks to danirobin}
+124 \textcolor{preprocessor}{    #if defined(PINGUINO32MX250) || defined(PINGUINO32MX220)}
+125 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2system_8c_a44dad2edd2d7ec6080c320b533294af8}{SystemUnlock}();
+126         CFGCONbits.IOLOCK=0;            \textcolor{comment}{// unlock configuration}
+127         CFGCONbits.PMDLOCK=0;
+128 \textcolor{preprocessor}{        #ifdef \_\_SERIAL\_\_}
+129 \textcolor{preprocessor}{}            \textcolor{comment}{// Serial 1}
+130             U1RXRbits.U1RXR = 0b0100;   \textcolor{comment}{// Define U1RX as RB2 ( D10 )}
+131             RPB3Rbits.RPB3R = 0b0001;   \textcolor{comment}{// Define U1TX as RB3 ( D9 )}
+132             \textcolor{comment}{// Serail 2}
+133             U2RXRbits.U2RXR = 0b0010;   \textcolor{comment}{// Define U2RX as RB1 (D11)}
+134             RPB0Rbits.RPB0R = 0b0010;   \textcolor{comment}{// Define U2TX as RB0 (D12)}
+135 \textcolor{preprocessor}{        #endif}
+136 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_SPI\_\_}
+137 \textcolor{preprocessor}{}            \textcolor{comment}{// Input}
+138             \textcolor{comment}{//SS1Rbits.SS1R   = 0b0100;   // Define SS1  as RB7 ( D5 )}
+139             SDI1Rbits.SDI1R = 0b0001;   \textcolor{comment}{// Define SDI1 as RB5 ( D6 )}
+140             \textcolor{comment}{// Output}
+141             \textcolor{comment}{//RPB7Rbits.RPB7R = 0b0011;   // Define SS1  as RB7 ( D5 )}
+142             RPA4Rbits.RPA4R = 0b0011;   \textcolor{comment}{// Define SDO1 as RA4 ( D7 )}
+143             \textcolor{comment}{// NB : SCK1 is not a remappable pin (SCK1 = RB14 = D1)}
+144 \textcolor{preprocessor}{        #endif}
+145 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_PWM\_\_}
+146 \textcolor{preprocessor}{}            RPB4Rbits.RPB4R =0b0101;    \textcolor{comment}{// PWM0 = OC1 = RB4}
+147             RPA4Rbits.RPA4R =0b0110;    \textcolor{comment}{// PWM1 = OC4 = RA4}
+148             RPB5Rbits.RPB5R =0b0101;    \textcolor{comment}{// PWM2 = OC2 = RB5}
+149             RPB13Rbits.RPB13R=0b0101;   \textcolor{comment}{// PWM3 = OC5 = RB13}
+150             RPB14Rbits.RPB14R=0b0101;   \textcolor{comment}{// PWM4 = OC3 = RB14}
+151 \textcolor{preprocessor}{        #endif}
+152 \textcolor{preprocessor}{}        CFGCONbits.IOLOCK=1;            \textcolor{comment}{// relock configuration}
+153         CFGCONbits.PMDLOCK=1;   
+154         \hyperlink{p32_2include_2pinguino_2core_2system_8c_ab91cf81fb590451a97b90b2ccbced9c3}{SystemLock}();
+155 \textcolor{preprocessor}{    #endif}
+156 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2io_8c_a38998f8c27dbde7319f4e054caecad31}{\index{p32/include/pinguino/core/io.\-c@{p32/include/pinguino/core/io.\-c}!I\-Oset\-Special@{I\-Oset\-Special}}
+\index{I\-Oset\-Special@{I\-Oset\-Special}!p32/include/pinguino/core/io.c@{p32/include/pinguino/core/io.\-c}}
+\subsubsection[{I\-Oset\-Special}]{\setlength{\rightskip}{0pt plus 5cm}void I\-Oset\-Special (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2io_8c_a38998f8c27dbde7319f4e054caecad31}
+Set all Pins as Output 
+
+Definition at line 63 of file io.\-c.
+
+
+
+References I\-N\-P\-U\-T.
+
+
+\begin{DoxyCode}
+64 \{
+65     TRISA  = 0;
+66     TRISB  = 0;
+67 
+68 \textcolor{preprocessor}{    #if !defined(\_\_32MX250F128B\_\_) && !defined(\_\_32MX220F032B\_\_)}
+69 \textcolor{preprocessor}{}        TRISC  = 0;
+70 \textcolor{preprocessor}{        #if !defined(\_\_32MX220F032D\_\_)}
+71 \textcolor{preprocessor}{}            TRISD  = 0;
+72             TRISE  = 0;
+73             TRISF  = 0;
+74             TRISG  = 0;
+75 \textcolor{preprocessor}{        #endif}
+76 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #endif}
+77 \textcolor{preprocessor}{}
+78 \textcolor{preprocessor}{    #if defined(PIC32\_PINGUINO) || defined(PIC32\_PINGUINO\_OTG)}
+79 \textcolor{preprocessor}{}        TRISDbits.TRISD9  = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};     \textcolor{comment}{// because PORTB is shared with SDA on Olimex board}
+80         TRISDbits.TRISD10 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};     \textcolor{comment}{// because PORTB is shared with SCL on Olimex board}
+81 \textcolor{preprocessor}{    #endif}
+82 \textcolor{preprocessor}{}
+83     \textcolor{comment}{/* the followings are already declared in serial.c}
+84 \textcolor{comment}{    #if defined(PIC32\_PINGUINO\_220)}
+85 \textcolor{comment}{    TRISCbits.TRISC9 = OUTPUT;          // RC9 / U2TX output}
+86 \textcolor{comment}{    TRISCbits.TRISC8 = INPUT;           // RC8 / U2RX input}
+87 \textcolor{comment}{    #endif}
+88 \textcolor{comment}{    */}
+89 \}
+\end{DoxyCode}

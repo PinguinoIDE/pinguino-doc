@@ -1,0 +1,494 @@
+\hypertarget{p8_2pinguino_2core_2sound_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/sound.c File Reference}
+\label{p8_2pinguino_2core_2sound_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/sound.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/sound.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$delayms.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$pwm.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a088b4e92008b0f059fdc95defd5bd383}{\-\_\-\-\_\-\-M\-Y\-S\-O\-U\-N\-D\-\_\-\-C}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_ac4cf4b2ab929bd23951a8676eeac086b}{C}~1
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_ac5c1a31a2ac90660ed19774580b19483}{Cs}~2
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_af316c33cc298530f245e8b55330e86b5}{D}~3
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_aa5a6fdcdb4bdfa69b6c853b5ddfebd8d}{Ds}~4
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a07484107e6d9fdf38b53edf631d6511d}{E}~5
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a42257a545daf5b7933d6e8f96adc74f2}{F}~6
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a7f8de88c74a014b05f04eb1527083206}{Fs}~7
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_aed9ea78689ecce0b7264c02c7f8a9a54}{G}~8
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_aea8e601a2f98dc8e7aa09511ee402b5b}{Gs}~9
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a955f504eccf76b4eb2489c0adab03121}{A}~10
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a63bed3d32b2e1fb7286139834e40495a}{As}~11
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a111da81ae5883147168bbb8366377b10}{B}~12
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_ad010fec48ee67af5ba75e0ec6c3f5ce4}{C\-\_\-}~13
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a89f8701562ac09bf5c1e58516124c500}{D\-O}~1
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_af2270421829b10f698fa11a3bdf407ad}{D\-Od}~2
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a0600e3f227b6e9a3ae26f4d6e2a0581e}{R\-E}~3
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a89c657791937806dd054e769a7847fe1}{R\-Ed}~4
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a8ab8c74f9a8a56744b84d93a6a8bdd35}{M\-I}~5
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_adf2a01fd380d9aa8618c131717ce7ecb}{F\-A}~6
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_ab15f9e920f00cd56a18787ce8c05f0c7}{F\-Ad}~7
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a716e9a8d845090ba7031bffa50f9536a}{S\-O\-L}~8
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_adbadaacda1a80a19ddb89a873c8a2823}{S\-O\-Ld}~9
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a06795d9b5958e6b92340ad82ee5e3f2f}{L\-A}~10
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a547a099bffb8eb357251c9a4bc025a1b}{L\-Ad}~11
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_aa1be7844620ac7bffe73137a180aa044}{S\-I}~12
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a9e9510b82cae21224a0300737fdb1738}{D\-O\-\_\-}~13
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a742ee5285038ed5c28d838b880104bf8}{R4}~8
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a7a255a2815b9453060f51c6eb22cfed8}{R2}~7
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a918f64eb53db8e8dc694f36a87646476}{R1}~6
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_af584b4a7cd57db8a25a39f75ec4df1be}{R1\-\_\-2}~5
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a65c0c105459e997407cc07bbf9bb3949}{R1\-\_\-4}~4
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_ac9659492fbe9756d3bd70620e2eadf6e}{R1\-\_\-8}~3
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a19a213ff50e63ef77eea66b4211c6aba}{R1\-\_\-16}~2
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_ad333fe067b4c00d852fa66e5c4a7d7dd}{R1\-\_\-32}~1
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2sound_8c_a16a4441b04bbbe44e6e892c465b22dae}{R1\-\_\-64}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2core_2sound_8c_af636fd4e34fc6552a5cf6cf71bb62bb3}{no\-Tone} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin)
+\item 
+void \hyperlink{p8_2pinguino_2core_2sound_8c_aa7f99e9b7a9e9f84d547147132a92549}{Tone} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} freq, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} duration)
+\item 
+void \hyperlink{p8_2pinguino_2core_2sound_8c_a52b11d940ee45fb788ceaba074c0d5c4}{Sound} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} note, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} duration, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} vol)
+\item 
+void \hyperlink{p8_2pinguino_2core_2sound_8c_a102bf4d45c587e05a94e5cd55fc5e1c8}{Play} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin, const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$partition, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} volume)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2sound_8c_a088b4e92008b0f059fdc95defd5bd383}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!\-\_\-\-\_\-\-M\-Y\-S\-O\-U\-N\-D\-\_\-\-C@{\-\_\-\-\_\-\-M\-Y\-S\-O\-U\-N\-D\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-M\-Y\-S\-O\-U\-N\-D\-\_\-\-C@{\-\_\-\-\_\-\-M\-Y\-S\-O\-U\-N\-D\-\_\-\-C}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-M\-Y\-S\-O\-U\-N\-D\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-M\-Y\-S\-O\-U\-N\-D\-\_\-\-C}}\label{p8_2pinguino_2core_2sound_8c_a088b4e92008b0f059fdc95defd5bd383}
+
+
+Definition at line 21 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a955f504eccf76b4eb2489c0adab03121}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!A@{A}}
+\index{A@{A}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{A}]{\setlength{\rightskip}{0pt plus 5cm}\#define A~10}}\label{p8_2pinguino_2core_2sound_8c_a955f504eccf76b4eb2489c0adab03121}
+
+
+Definition at line 35 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a63bed3d32b2e1fb7286139834e40495a}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!As@{As}}
+\index{As@{As}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{As}]{\setlength{\rightskip}{0pt plus 5cm}\#define As~11}}\label{p8_2pinguino_2core_2sound_8c_a63bed3d32b2e1fb7286139834e40495a}
+
+
+Definition at line 36 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a111da81ae5883147168bbb8366377b10}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!B@{B}}
+\index{B@{B}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{B}]{\setlength{\rightskip}{0pt plus 5cm}\#define B~12}}\label{p8_2pinguino_2core_2sound_8c_a111da81ae5883147168bbb8366377b10}
+
+
+Definition at line 37 of file sound.\-c.
+
+
+
+Referenced by sine().
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_ac4cf4b2ab929bd23951a8676eeac086b}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!C@{C}}
+\index{C@{C}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{C}]{\setlength{\rightskip}{0pt plus 5cm}\#define C~1}}\label{p8_2pinguino_2core_2sound_8c_ac4cf4b2ab929bd23951a8676eeac086b}
+
+
+Definition at line 26 of file sound.\-c.
+
+
+
+Referenced by sine().
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_ad010fec48ee67af5ba75e0ec6c3f5ce4}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!C\-\_\-@{C\-\_\-}}
+\index{C\-\_\-@{C\-\_\-}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{C\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-\_\-~13}}\label{p8_2pinguino_2core_2sound_8c_ad010fec48ee67af5ba75e0ec6c3f5ce4}
+
+
+Definition at line 38 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_ac5c1a31a2ac90660ed19774580b19483}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!Cs@{Cs}}
+\index{Cs@{Cs}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{Cs}]{\setlength{\rightskip}{0pt plus 5cm}\#define Cs~2}}\label{p8_2pinguino_2core_2sound_8c_ac5c1a31a2ac90660ed19774580b19483}
+
+
+Definition at line 27 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_af316c33cc298530f245e8b55330e86b5}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!D@{D}}
+\index{D@{D}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{D}]{\setlength{\rightskip}{0pt plus 5cm}\#define D~3}}\label{p8_2pinguino_2core_2sound_8c_af316c33cc298530f245e8b55330e86b5}
+
+
+Definition at line 28 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a89f8701562ac09bf5c1e58516124c500}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!D\-O@{D\-O}}
+\index{D\-O@{D\-O}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{D\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-O~1}}\label{p8_2pinguino_2core_2sound_8c_a89f8701562ac09bf5c1e58516124c500}
+
+
+Definition at line 41 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a9e9510b82cae21224a0300737fdb1738}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!D\-O\-\_\-@{D\-O\-\_\-}}
+\index{D\-O\-\_\-@{D\-O\-\_\-}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{D\-O\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-O\-\_\-~13}}\label{p8_2pinguino_2core_2sound_8c_a9e9510b82cae21224a0300737fdb1738}
+
+
+Definition at line 53 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_af2270421829b10f698fa11a3bdf407ad}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!D\-Od@{D\-Od}}
+\index{D\-Od@{D\-Od}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{D\-Od}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-Od~2}}\label{p8_2pinguino_2core_2sound_8c_af2270421829b10f698fa11a3bdf407ad}
+
+
+Definition at line 42 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_aa5a6fdcdb4bdfa69b6c853b5ddfebd8d}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!Ds@{Ds}}
+\index{Ds@{Ds}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{Ds}]{\setlength{\rightskip}{0pt plus 5cm}\#define Ds~4}}\label{p8_2pinguino_2core_2sound_8c_aa5a6fdcdb4bdfa69b6c853b5ddfebd8d}
+
+
+Definition at line 29 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a07484107e6d9fdf38b53edf631d6511d}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!E@{E}}
+\index{E@{E}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E~5}}\label{p8_2pinguino_2core_2sound_8c_a07484107e6d9fdf38b53edf631d6511d}
+
+
+Definition at line 30 of file sound.\-c.
+
+
+
+Referenced by S\-S\-D1306\-\_\-send\-Command(), and S\-S\-D1306\-\_\-send\-Data().
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a42257a545daf5b7933d6e8f96adc74f2}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!F@{F}}
+\index{F@{F}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{F}]{\setlength{\rightskip}{0pt plus 5cm}\#define F~6}}\label{p8_2pinguino_2core_2sound_8c_a42257a545daf5b7933d6e8f96adc74f2}
+
+
+Definition at line 31 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_adf2a01fd380d9aa8618c131717ce7ecb}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!F\-A@{F\-A}}
+\index{F\-A@{F\-A}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{F\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A~6}}\label{p8_2pinguino_2core_2sound_8c_adf2a01fd380d9aa8618c131717ce7ecb}
+
+
+Definition at line 46 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_ab15f9e920f00cd56a18787ce8c05f0c7}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!F\-Ad@{F\-Ad}}
+\index{F\-Ad@{F\-Ad}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{F\-Ad}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-Ad~7}}\label{p8_2pinguino_2core_2sound_8c_ab15f9e920f00cd56a18787ce8c05f0c7}
+
+
+Definition at line 47 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a7f8de88c74a014b05f04eb1527083206}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!Fs@{Fs}}
+\index{Fs@{Fs}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{Fs}]{\setlength{\rightskip}{0pt plus 5cm}\#define Fs~7}}\label{p8_2pinguino_2core_2sound_8c_a7f8de88c74a014b05f04eb1527083206}
+
+
+Definition at line 32 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_aed9ea78689ecce0b7264c02c7f8a9a54}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!G@{G}}
+\index{G@{G}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{G}]{\setlength{\rightskip}{0pt plus 5cm}\#define G~8}}\label{p8_2pinguino_2core_2sound_8c_aed9ea78689ecce0b7264c02c7f8a9a54}
+
+
+Definition at line 33 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_aea8e601a2f98dc8e7aa09511ee402b5b}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!Gs@{Gs}}
+\index{Gs@{Gs}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{Gs}]{\setlength{\rightskip}{0pt plus 5cm}\#define Gs~9}}\label{p8_2pinguino_2core_2sound_8c_aea8e601a2f98dc8e7aa09511ee402b5b}
+
+
+Definition at line 34 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a06795d9b5958e6b92340ad82ee5e3f2f}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!L\-A@{L\-A}}
+\index{L\-A@{L\-A}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{L\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-A~10}}\label{p8_2pinguino_2core_2sound_8c_a06795d9b5958e6b92340ad82ee5e3f2f}
+
+
+Definition at line 50 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a547a099bffb8eb357251c9a4bc025a1b}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!L\-Ad@{L\-Ad}}
+\index{L\-Ad@{L\-Ad}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{L\-Ad}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-Ad~11}}\label{p8_2pinguino_2core_2sound_8c_a547a099bffb8eb357251c9a4bc025a1b}
+
+
+Definition at line 51 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a8ab8c74f9a8a56744b84d93a6a8bdd35}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!M\-I@{M\-I}}
+\index{M\-I@{M\-I}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{M\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I~5}}\label{p8_2pinguino_2core_2sound_8c_a8ab8c74f9a8a56744b84d93a6a8bdd35}
+
+
+Definition at line 45 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a918f64eb53db8e8dc694f36a87646476}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!R1@{R1}}
+\index{R1@{R1}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{R1}]{\setlength{\rightskip}{0pt plus 5cm}\#define R1~6}}\label{p8_2pinguino_2core_2sound_8c_a918f64eb53db8e8dc694f36a87646476}
+
+
+Definition at line 58 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a19a213ff50e63ef77eea66b4211c6aba}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!R1\-\_\-16@{R1\-\_\-16}}
+\index{R1\-\_\-16@{R1\-\_\-16}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{R1\-\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define R1\-\_\-16~2}}\label{p8_2pinguino_2core_2sound_8c_a19a213ff50e63ef77eea66b4211c6aba}
+
+
+Definition at line 62 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_af584b4a7cd57db8a25a39f75ec4df1be}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!R1\-\_\-2@{R1\-\_\-2}}
+\index{R1\-\_\-2@{R1\-\_\-2}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{R1\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define R1\-\_\-2~5}}\label{p8_2pinguino_2core_2sound_8c_af584b4a7cd57db8a25a39f75ec4df1be}
+
+
+Definition at line 59 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_ad333fe067b4c00d852fa66e5c4a7d7dd}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!R1\-\_\-32@{R1\-\_\-32}}
+\index{R1\-\_\-32@{R1\-\_\-32}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{R1\-\_\-32}]{\setlength{\rightskip}{0pt plus 5cm}\#define R1\-\_\-32~1}}\label{p8_2pinguino_2core_2sound_8c_ad333fe067b4c00d852fa66e5c4a7d7dd}
+
+
+Definition at line 63 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a65c0c105459e997407cc07bbf9bb3949}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!R1\-\_\-4@{R1\-\_\-4}}
+\index{R1\-\_\-4@{R1\-\_\-4}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{R1\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define R1\-\_\-4~4}}\label{p8_2pinguino_2core_2sound_8c_a65c0c105459e997407cc07bbf9bb3949}
+
+
+Definition at line 60 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a16a4441b04bbbe44e6e892c465b22dae}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!R1\-\_\-64@{R1\-\_\-64}}
+\index{R1\-\_\-64@{R1\-\_\-64}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{R1\-\_\-64}]{\setlength{\rightskip}{0pt plus 5cm}\#define R1\-\_\-64~0}}\label{p8_2pinguino_2core_2sound_8c_a16a4441b04bbbe44e6e892c465b22dae}
+
+
+Definition at line 64 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_ac9659492fbe9756d3bd70620e2eadf6e}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!R1\-\_\-8@{R1\-\_\-8}}
+\index{R1\-\_\-8@{R1\-\_\-8}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{R1\-\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define R1\-\_\-8~3}}\label{p8_2pinguino_2core_2sound_8c_ac9659492fbe9756d3bd70620e2eadf6e}
+
+
+Definition at line 61 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a7a255a2815b9453060f51c6eb22cfed8}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!R2@{R2}}
+\index{R2@{R2}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define R2~7}}\label{p8_2pinguino_2core_2sound_8c_a7a255a2815b9453060f51c6eb22cfed8}
+
+
+Definition at line 57 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a742ee5285038ed5c28d838b880104bf8}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!R4@{R4}}
+\index{R4@{R4}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{R4}]{\setlength{\rightskip}{0pt plus 5cm}\#define R4~8}}\label{p8_2pinguino_2core_2sound_8c_a742ee5285038ed5c28d838b880104bf8}
+
+
+Definition at line 56 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a0600e3f227b6e9a3ae26f4d6e2a0581e}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!R\-E@{R\-E}}
+\index{R\-E@{R\-E}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E~3}}\label{p8_2pinguino_2core_2sound_8c_a0600e3f227b6e9a3ae26f4d6e2a0581e}
+
+
+Definition at line 43 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a89c657791937806dd054e769a7847fe1}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!R\-Ed@{R\-Ed}}
+\index{R\-Ed@{R\-Ed}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{R\-Ed}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-Ed~4}}\label{p8_2pinguino_2core_2sound_8c_a89c657791937806dd054e769a7847fe1}
+
+
+Definition at line 44 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_aa1be7844620ac7bffe73137a180aa044}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!S\-I@{S\-I}}
+\index{S\-I@{S\-I}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{S\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-I~12}}\label{p8_2pinguino_2core_2sound_8c_aa1be7844620ac7bffe73137a180aa044}
+
+
+Definition at line 52 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_a716e9a8d845090ba7031bffa50f9536a}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!S\-O\-L@{S\-O\-L}}
+\index{S\-O\-L@{S\-O\-L}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{S\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-O\-L~8}}\label{p8_2pinguino_2core_2sound_8c_a716e9a8d845090ba7031bffa50f9536a}
+
+
+Definition at line 48 of file sound.\-c.
+
+\hypertarget{p8_2pinguino_2core_2sound_8c_adbadaacda1a80a19ddb89a873c8a2823}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!S\-O\-Ld@{S\-O\-Ld}}
+\index{S\-O\-Ld@{S\-O\-Ld}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{S\-O\-Ld}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-O\-Ld~9}}\label{p8_2pinguino_2core_2sound_8c_adbadaacda1a80a19ddb89a873c8a2823}
+
+
+Definition at line 49 of file sound.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2sound_8c_af636fd4e34fc6552a5cf6cf71bb62bb3}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!no\-Tone@{no\-Tone}}
+\index{no\-Tone@{no\-Tone}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{no\-Tone}]{\setlength{\rightskip}{0pt plus 5cm}void no\-Tone (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2sound_8c_af636fd4e34fc6552a5cf6cf71bb62bb3}
+
+
+Definition at line 71 of file sound.\-c.
+
+
+
+References P\-W\-M\-\_\-set\-Frequency(), and P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle().
+
+
+
+Referenced by Tone().
+
+
+\begin{DoxyCode}
+72     \{
+73         \hyperlink{p8_2pinguino_2core_2pwm_8c_a66096cd9427363197f1a2544eab81f38}{PWM\_setFrequency}(0);                    \textcolor{comment}{// note (range 1..14)}
+74         \hyperlink{p8_2pinguino_2core_2pwm_8c_ad79c2597ad3679319968d279d23efbc6}{PWM\_setPercentDutyCycle}(pin, 0);     \textcolor{comment}{// silence}
+75         \textcolor{comment}{//pinmode(pin, INPUT);}
+76         \textcolor{comment}{//CCP1CON = 0;                          // stop sound = stop pwm}
+77         \textcolor{comment}{//T2CONbits.TMR2ON = OFF;               // disable Timer2 = stop pwm = stop sound}
+78     \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2sound_8c_a102bf4d45c587e05a94e5cd55fc5e1c8}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!Play@{Play}}
+\index{Play@{Play}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{Play}]{\setlength{\rightskip}{0pt plus 5cm}void Play (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{const {\bf u8} $\ast$}]{partition, }
+\item[{{\bf u8}}]{volume}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2sound_8c_a102bf4d45c587e05a94e5cd55fc5e1c8}
+
+
+Definition at line 134 of file sound.\-c.
+
+
+
+References Sound().
+
+
+\begin{DoxyCode}
+135     \{
+136         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i = 0;
+137         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} exp;
+138         \textcolor{keywordflow}{while} (partition[i] != 0)
+139         \{
+140             exp = partition[i+1];
+141             \hyperlink{p8_2pinguino_2core_2sound_8c_a52b11d940ee45fb788ceaba074c0d5c4}{Sound}(pin, partition[i], (8 << exp), volume);
+142             i = i + 2;
+143         \}       
+144     \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2sound_8c_a52b11d940ee45fb788ceaba074c0d5c4}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!Sound@{Sound}}
+\index{Sound@{Sound}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{Sound}]{\setlength{\rightskip}{0pt plus 5cm}void Sound (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u8}}]{note, }
+\item[{{\bf u16}}]{duration, }
+\item[{{\bf u8}}]{vol}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2sound_8c_a52b11d940ee45fb788ceaba074c0d5c4}
+
+
+Definition at line 106 of file sound.\-c.
+
+
+
+References Tone().
+
+
+
+Referenced by Play().
+
+
+\begin{DoxyCode}
+107     \{
+108         \textcolor{comment}{// Frequency table in French : http://fr.wikipedia.org/wiki/Note\_de\_musique}
+109         \textcolor{comment}{// and in English http://liutaiomottola.com/formulae/freqtab.htm}
+110         \textcolor{comment}{// freq. must be > 3000Hz so notes are taken from the 8th octave}
+111 
+112         \textcolor{comment}{//const u16 freq[] = \{2093,2217,2349,2489,2637,2793,2959,3135,3322,3520,3729,3951,4186\};}
+113         \textcolor{comment}{//const u16 freq[] = \{4186,4434,4698,4978,5274,5587,5919,6271,6644,7040,7458,7902,8372\};}
+114         \textcolor{keyword}{const} \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} freq[] = \{4189,4437,4687,4966,5281,5597,5905,6250,6637,7075,7425,7894,8333\};
+115 
+116         \textcolor{keywordflow}{if} (vol > 10)
+117         \{
+118             vol = 10;                   \textcolor{comment}{// max. volume is 10}
+119         \}
+120         vol = vol * 5;                          \textcolor{comment}{// max. volume is reach for 50% duty}
+121 
+122         \hyperlink{p8_2pinguino_2core_2sound_8c_aa7f99e9b7a9e9f84d547147132a92549}{Tone}(pin, freq[note-1], duration);
+123     \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2sound_8c_aa7f99e9b7a9e9f84d547147132a92549}{\index{p8/pinguino/core/sound.\-c@{p8/pinguino/core/sound.\-c}!Tone@{Tone}}
+\index{Tone@{Tone}!p8/pinguino/core/sound.c@{p8/pinguino/core/sound.\-c}}
+\subsubsection[{Tone}]{\setlength{\rightskip}{0pt plus 5cm}void Tone (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u16}}]{freq, }
+\item[{{\bf u16}}]{duration}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2sound_8c_aa7f99e9b7a9e9f84d547147132a92549}
+
+
+Definition at line 80 of file sound.\-c.
+
+
+
+References Delayms(), no\-Tone(), P\-W\-M\-\_\-set\-Frequency(), and P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle().
+
+
+
+Referenced by Sound().
+
+
+\begin{DoxyCode}
+81     \{
+82         \hyperlink{p8_2pinguino_2core_2pwm_8c_a66096cd9427363197f1a2544eab81f38}{PWM\_setFrequency}(freq);
+83         \hyperlink{p8_2pinguino_2core_2pwm_8c_ad79c2597ad3679319968d279d23efbc6}{PWM\_setPercentDutyCycle}(pin, 50);
+84         \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(duration);                       \textcolor{comment}{// length of sound in ms }
+85         \hyperlink{p8_2pinguino_2core_2sound_8c_af636fd4e34fc6552a5cf6cf71bb62bb3}{noTone}(pin);
+86     \}
+\end{DoxyCode}

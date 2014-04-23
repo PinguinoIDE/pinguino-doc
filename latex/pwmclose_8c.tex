@@ -1,0 +1,65 @@
+\hypertarget{pwmclose_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/pwmclose.c File Reference}
+\label{pwmclose_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/pwmclose.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/pwmclose.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$pin.\-h$>$}\\*
+{\ttfamily \#include $<$digital.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pwmclose_8c_a001662d5cc8a8f48e6c9f4d4189d3cf1}{\-\_\-\-\_\-\-P\-W\-M\-C\-L\-O\-S\-E\-\_\-\-C\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pwmclose_8c_a40552d82b976add7920ed8de5533bc7c}{P\-W\-M\-\_\-close} (unsigned char pin)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{pwmclose_8c_a001662d5cc8a8f48e6c9f4d4189d3cf1}{\index{pwmclose.\-c@{pwmclose.\-c}!\-\_\-\-\_\-\-P\-W\-M\-C\-L\-O\-S\-E\-\_\-\-C\-\_\-@{\-\_\-\-\_\-\-P\-W\-M\-C\-L\-O\-S\-E\-\_\-\-C\-\_\-}}
+\index{\-\_\-\-\_\-\-P\-W\-M\-C\-L\-O\-S\-E\-\_\-\-C\-\_\-@{\-\_\-\-\_\-\-P\-W\-M\-C\-L\-O\-S\-E\-\_\-\-C\-\_\-}!pwmclose.c@{pwmclose.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-P\-W\-M\-C\-L\-O\-S\-E\-\_\-\-C\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-P\-W\-M\-C\-L\-O\-S\-E\-\_\-\-C\-\_\-}}\label{pwmclose_8c_a001662d5cc8a8f48e6c9f4d4189d3cf1}
+
+
+Definition at line 38 of file pwmclose.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{pwmclose_8c_a40552d82b976add7920ed8de5533bc7c}{\index{pwmclose.\-c@{pwmclose.\-c}!P\-W\-M\-\_\-close@{P\-W\-M\-\_\-close}}
+\index{P\-W\-M\-\_\-close@{P\-W\-M\-\_\-close}!pwmclose.c@{pwmclose.\-c}}
+\subsubsection[{P\-W\-M\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}void P\-W\-M\-\_\-close (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{pin}
+\end{DoxyParamCaption}
+)}}\label{pwmclose_8c_a40552d82b976add7920ed8de5533bc7c}
+
+
+Definition at line 46 of file pwmclose.\-c.
+
+
+
+Referenced by digitalread(), and digitalwrite().
+
+
+\begin{DoxyCode}
+47 \{
+48     \textcolor{keywordflow}{switch} (pin)
+49     \{
+50 \textcolor{preprocessor}{        #if defined(\_\_18f26j53) || defined(\_\_18f46j53) || \(\backslash\)}
+51 \textcolor{preprocessor}{            defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+52 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} CCP4:  CCP4CON  = 0; \textcolor{keywordflow}{break};
+53             \textcolor{keywordflow}{case} CCP5:  CCP5CON  = 0; \textcolor{keywordflow}{break};
+54             \textcolor{keywordflow}{case} CCP6:  CCP6CON  = 0; \textcolor{keywordflow}{break};
+55             \textcolor{keywordflow}{case} CCP7:  CCP7CON  = 0; \textcolor{keywordflow}{break};
+56             \textcolor{keywordflow}{case} CCP8:  CCP8CON  = 0; \textcolor{keywordflow}{break};
+57             \textcolor{keywordflow}{case} CCP9:  CCP9CON  = 0; \textcolor{keywordflow}{break};
+58             \textcolor{keywordflow}{case} CCP10: CCP10CON = 0; \textcolor{keywordflow}{break};
+59 \textcolor{preprocessor}{        #else}
+60 \textcolor{preprocessor}{}            \textcolor{keywordflow}{case} CCP1:  CCP1CON  = 0; \textcolor{keywordflow}{break};
+61             \textcolor{keywordflow}{case} CCP2:  CCP2CON  = 0; \textcolor{keywordflow}{break};
+62 \textcolor{preprocessor}{        #endif}
+63 \textcolor{preprocessor}{}    \}
+64 \}
+\end{DoxyCode}

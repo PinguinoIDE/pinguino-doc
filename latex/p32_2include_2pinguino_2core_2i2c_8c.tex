@@ -1,0 +1,423 @@
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/i2c.c File Reference}
+\label{p32_2include_2pinguino_2core_2i2c_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/i2c.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/i2c.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$system.\-c$>$}\\*
+{\ttfamily \#include $<$interrupt.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a92c1b8c86d2b007e235eb3ebe04d3468}{\-\_\-\-\_\-\-I2\-C\-\_\-\-C}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a9536bf85bced4f4e549a82fb18eb6140}{I2\-C\-\_\-\-W\-R\-I\-T\-E}~0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_ab5c0fbe837494c5f9130a5914854250d}{I2\-C\-\_\-\-R\-E\-A\-D}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}~0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_aa6bde6f87c55b879889545bc072173fd}{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a1193dfbbd77333d2a28e24a60e24c312}{I2\-C\-\_\-\-M\-U\-L\-T\-I\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}~2
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a27cf310dac6c98eca59bf4b9884d9102}{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}~0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a562c5b9c555d183bb173819d1508e4e3}{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a30c06a423a78e6ded9ae0d26aa3fb541}{I2\-C\-\_\-100\-K\-H\-Z}~0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_af20d0f07302cb39d69cd7d517c4b44a6}{I2\-C\-\_\-400\-K\-H\-Z}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a0342b9931f95c111ccce18e98c8d776a}{I2\-C\-\_\-1\-M\-H\-Z}~2
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_afa3215f0aa766367f5d34bee80929152}{I2\-C\-\_\-\-T\-I\-M\-E\-O\-U\-T}~4000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_ab45d257574da6fe1f091cc45b7eda6cc}{I2\-C1}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_afa60ac20c1921ef1002083bb3e1f5d16}{I2\-C2}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a1073214add1e5c60f6eef13460028c57}{I2\-C\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\begin{DoxyCompactList}\small\item\em P\-R\-O\-T\-O\-T\-Y\-P\-E\-S. \end{DoxyCompactList}\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a4d20ff8ca431b4ee969cd12754681081}{I2\-C\-\_\-send} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a3a0ddd93777e80c1850b38a0f09bbd4c}{I2\-C\-\_\-get} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a9716f73f2ced8c40e8348b4419d035b8}{I2\-C\-\_\-send\-I\-D} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a9f6726cbf225d8f82eb5fa7c1de64531}{I2\-C\-\_\-writechar} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a26f173f0e094eeeec03b8a65b746cc07}{I2\-C\-\_\-readchar} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_aaa8d325c3abf2271a7870e184895ebf1}{I2\-C\-\_\-wait} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a36e4334047e29e48b1ae0c781b2f0ebf}{I2\-C\-\_\-start} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_abdcd48cc7c048d6c9a1a09d9ad775088}{I2\-C\-\_\-stop} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a54d46100f3008e086b6559a2762beaa6}{I2\-C\-\_\-restart} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a22b66467f1694536dcf534cf5bebb4f1}{I2\-C\-\_\-send\-Nack} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a3f30ab543b04eeec3e548c4a34a6579d}{I2\-C\-\_\-send\-Ack} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a92c1b8c86d2b007e235eb3ebe04d3468}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!\-\_\-\-\_\-\-I2\-C\-\_\-\-C@{\-\_\-\-\_\-\-I2\-C\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-I2\-C\-\_\-\-C@{\-\_\-\-\_\-\-I2\-C\-\_\-\-C}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-I2\-C\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-I2\-C\-\_\-\-C}}\label{p32_2include_2pinguino_2core_2i2c_8c_a92c1b8c86d2b007e235eb3ebe04d3468}
+
+
+Definition at line 37 of file i2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_ab45d257574da6fe1f091cc45b7eda6cc}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C1@{I2\-C1}}
+\index{I2\-C1@{I2\-C1}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C1~1}}\label{p32_2include_2pinguino_2core_2i2c_8c_ab45d257574da6fe1f091cc45b7eda6cc}
+
+
+Definition at line 61 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-init(), I2\-C\-\_\-readchar(), I2\-C\-\_\-restart(), I2\-C\-\_\-send\-Ack(), I2\-C\-\_\-send\-I\-D(), I2\-C\-\_\-send\-Nack(), I2\-C\-\_\-start(), I2\-C\-\_\-stop(), I2\-C\-\_\-wait(), and I2\-C\-\_\-writechar().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_afa60ac20c1921ef1002083bb3e1f5d16}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C2@{I2\-C2}}
+\index{I2\-C2@{I2\-C2}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C2~2}}\label{p32_2include_2pinguino_2core_2i2c_8c_afa60ac20c1921ef1002083bb3e1f5d16}
+
+
+Definition at line 62 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-init(), I2\-C\-\_\-readchar(), I2\-C\-\_\-restart(), I2\-C\-\_\-send\-Ack(), I2\-C\-\_\-send\-I\-D(), I2\-C\-\_\-send\-Nack(), I2\-C\-\_\-start(), I2\-C\-\_\-stop(), I2\-C\-\_\-wait(), and I2\-C\-\_\-writechar().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a30c06a423a78e6ded9ae0d26aa3fb541}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-100\-K\-H\-Z@{I2\-C\-\_\-100\-K\-H\-Z}}
+\index{I2\-C\-\_\-100\-K\-H\-Z@{I2\-C\-\_\-100\-K\-H\-Z}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-100\-K\-H\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-100\-K\-H\-Z~0}}\label{p32_2include_2pinguino_2core_2i2c_8c_a30c06a423a78e6ded9ae0d26aa3fb541}
+
+
+Definition at line 55 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-init().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a0342b9931f95c111ccce18e98c8d776a}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-1\-M\-H\-Z@{I2\-C\-\_\-1\-M\-H\-Z}}
+\index{I2\-C\-\_\-1\-M\-H\-Z@{I2\-C\-\_\-1\-M\-H\-Z}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-1\-M\-H\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-1\-M\-H\-Z~2}}\label{p32_2include_2pinguino_2core_2i2c_8c_a0342b9931f95c111ccce18e98c8d776a}
+
+
+Definition at line 57 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-init().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_af20d0f07302cb39d69cd7d517c4b44a6}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-400\-K\-H\-Z@{I2\-C\-\_\-400\-K\-H\-Z}}
+\index{I2\-C\-\_\-400\-K\-H\-Z@{I2\-C\-\_\-400\-K\-H\-Z}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-400\-K\-H\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-400\-K\-H\-Z~1}}\label{p32_2include_2pinguino_2core_2i2c_8c_af20d0f07302cb39d69cd7d517c4b44a6}
+
+
+Definition at line 56 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-init().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}}
+\index{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E~0}}\label{p32_2include_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}
+
+
+Definition at line 48 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-init().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a1193dfbbd77333d2a28e24a60e24c312}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-M\-U\-L\-T\-I\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-M\-U\-L\-T\-I\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}}
+\index{I2\-C\-\_\-\-M\-U\-L\-T\-I\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-M\-U\-L\-T\-I\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-M\-U\-L\-T\-I\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-M\-U\-L\-T\-I\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E~2}}\label{p32_2include_2pinguino_2core_2i2c_8c_a1193dfbbd77333d2a28e24a60e24c312}
+
+
+Definition at line 50 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-init().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_ab5c0fbe837494c5f9130a5914854250d}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-R\-E\-A\-D@{I2\-C\-\_\-\-R\-E\-A\-D}}
+\index{I2\-C\-\_\-\-R\-E\-A\-D@{I2\-C\-\_\-\-R\-E\-A\-D}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-R\-E\-A\-D~1}}\label{p32_2include_2pinguino_2core_2i2c_8c_ab5c0fbe837494c5f9130a5914854250d}
+
+
+Definition at line 47 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-get().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_aa6bde6f87c55b879889545bc072173fd}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}}
+\index{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E~1}}\label{p32_2include_2pinguino_2core_2i2c_8c_aa6bde6f87c55b879889545bc072173fd}
+
+
+Definition at line 49 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-init().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a27cf310dac6c98eca59bf4b9884d9102}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}}
+\index{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F~0}}\label{p32_2include_2pinguino_2core_2i2c_8c_a27cf310dac6c98eca59bf4b9884d9102}
+
+
+Definition at line 51 of file i2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a562c5b9c555d183bb173819d1508e4e3}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}}
+\index{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N~1}}\label{p32_2include_2pinguino_2core_2i2c_8c_a562c5b9c555d183bb173819d1508e4e3}
+
+
+Definition at line 52 of file i2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_afa3215f0aa766367f5d34bee80929152}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-T\-I\-M\-E\-O\-U\-T@{I2\-C\-\_\-\-T\-I\-M\-E\-O\-U\-T}}
+\index{I2\-C\-\_\-\-T\-I\-M\-E\-O\-U\-T@{I2\-C\-\_\-\-T\-I\-M\-E\-O\-U\-T}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-T\-I\-M\-E\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-T\-I\-M\-E\-O\-U\-T~4000}}\label{p32_2include_2pinguino_2core_2i2c_8c_afa3215f0aa766367f5d34bee80929152}
+
+
+Definition at line 58 of file i2c.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a9536bf85bced4f4e549a82fb18eb6140}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-\-W\-R\-I\-T\-E@{I2\-C\-\_\-\-W\-R\-I\-T\-E}}
+\index{I2\-C\-\_\-\-W\-R\-I\-T\-E@{I2\-C\-\_\-\-W\-R\-I\-T\-E}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-\-W\-R\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-W\-R\-I\-T\-E~0}}\label{p32_2include_2pinguino_2core_2i2c_8c_a9536bf85bced4f4e549a82fb18eb6140}
+
+
+Definition at line 46 of file i2c.\-c.
+
+
+
+Referenced by I2\-C\-\_\-send().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a3a0ddd93777e80c1850b38a0f09bbd4c}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-get@{I2\-C\-\_\-get}}
+\index{I2\-C\-\_\-get@{I2\-C\-\_\-get}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module, }
+\item[{{\bf u16}}]{adress}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_a3a0ddd93777e80c1850b38a0f09bbd4c}
+
+
+Definition at line 233 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-\-R\-E\-A\-D, I2\-C\-\_\-readchar(), I2\-C\-\_\-restart(), I2\-C\-\_\-send\-I\-D(), I2\-C\-\_\-send\-Nack(), I2\-C\-\_\-stop(), and I2\-C\-\_\-writechar().
+
+
+
+Referenced by I2\-C1\-\_\-get(), I2\-C2\-\_\-get(), and P\-C\-F8574\-\_\-read().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a1073214add1e5c60f6eef13460028c57}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-init@{I2\-C\-\_\-init}}
+\index{I2\-C\-\_\-init@{I2\-C\-\_\-init}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module, }
+\item[{{\bf u8}}]{mode, }
+\item[{{\bf u8}}]{speed}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_a1073214add1e5c60f6eef13460028c57}
+
+
+P\-R\-O\-T\-O\-T\-Y\-P\-E\-S. 
+
+
+
+Definition at line 90 of file i2c.\-c.
+
+
+
+References Get\-Peripheral\-Clock(), I2\-C1, I2\-C2, I2\-C\-\_\-100\-K\-H\-Z, I2\-C\-\_\-1\-M\-H\-Z, I2\-C\-\_\-400\-K\-H\-Z, I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E, I2\-C\-\_\-\-M\-U\-L\-T\-I\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E, and I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E.
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a26f173f0e094eeeec03b8a65b746cc07}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-readchar@{I2\-C\-\_\-readchar}}
+\index{I2\-C\-\_\-readchar@{I2\-C\-\_\-readchar}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-readchar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-readchar (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module, }
+\item[{{\bf u8}}]{last}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_a26f173f0e094eeeec03b8a65b746cc07}
+
+
+Definition at line 368 of file i2c.\-c.
+
+
+
+References I2\-C1, I2\-C2, and I2\-C\-\_\-wait().
+
+
+
+Referenced by I2\-C1\-\_\-readchar(), I2\-C1\-\_\-readchar\-Ack(), I2\-C2\-\_\-readchar(), I2\-C2\-\_\-readchar\-Ack(), and I2\-C\-\_\-get().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a54d46100f3008e086b6559a2762beaa6}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-restart@{I2\-C\-\_\-restart}}
+\index{I2\-C\-\_\-restart@{I2\-C\-\_\-restart}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-restart}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-restart (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_a54d46100f3008e086b6559a2762beaa6}
+
+
+Definition at line 501 of file i2c.\-c.
+
+
+
+References I2\-C1, I2\-C2, and I2\-C\-\_\-wait().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a4d20ff8ca431b4ee969cd12754681081}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-send@{I2\-C\-\_\-send}}
+\index{I2\-C\-\_\-send@{I2\-C\-\_\-send}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-send (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module, }
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_a4d20ff8ca431b4ee969cd12754681081}
+
+
+Definition at line 209 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-start(), I2\-C\-\_\-stop(), I2\-C\-\_\-\-W\-R\-I\-T\-E, and I2\-C\-\_\-writechar().
+
+
+
+Referenced by I2\-C1\-\_\-send(), I2\-C2\-\_\-send(), lcdi2c\-\_\-backlight(), and lcdi2c\-\_\-no\-Backlight().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a3f30ab543b04eeec3e548c4a34a6579d}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-send\-Ack@{I2\-C\-\_\-send\-Ack}}
+\index{I2\-C\-\_\-send\-Ack@{I2\-C\-\_\-send\-Ack}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-send\-Ack}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-send\-Ack (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_a3f30ab543b04eeec3e548c4a34a6579d}
+
+
+Definition at line 558 of file i2c.\-c.
+
+
+
+References I2\-C1, I2\-C2, and I2\-C\-\_\-wait().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a9716f73f2ced8c40e8348b4419d035b8}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-send\-I\-D@{I2\-C\-\_\-send\-I\-D}}
+\index{I2\-C\-\_\-send\-I\-D@{I2\-C\-\_\-send\-I\-D}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-send\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-send\-I\-D (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module, }
+\item[{{\bf u16}}]{Device\-I\-D, }
+\item[{{\bf u8}}]{rw}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_a9716f73f2ced8c40e8348b4419d035b8}
+
+
+Definition at line 265 of file i2c.\-c.
+
+
+
+References I2\-C1, I2\-C2, I2\-C\-\_\-restart(), I2\-C\-\_\-start(), and I2\-C\-\_\-writechar().
+
+
+
+Referenced by I2\-C1\-\_\-send\-I\-D(), I2\-C2\-\_\-send\-I\-D(), and I2\-C\-\_\-get().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a22b66467f1694536dcf534cf5bebb4f1}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-send\-Nack@{I2\-C\-\_\-send\-Nack}}
+\index{I2\-C\-\_\-send\-Nack@{I2\-C\-\_\-send\-Nack}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-send\-Nack}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-send\-Nack (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_a22b66467f1694536dcf534cf5bebb4f1}
+
+
+Definition at line 534 of file i2c.\-c.
+
+
+
+References I2\-C1, I2\-C2, and I2\-C\-\_\-wait().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a36e4334047e29e48b1ae0c781b2f0ebf}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-start@{I2\-C\-\_\-start}}
+\index{I2\-C\-\_\-start@{I2\-C\-\_\-start}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_a36e4334047e29e48b1ae0c781b2f0ebf}
+
+
+Definition at line 443 of file i2c.\-c.
+
+
+
+References I2\-C1, I2\-C2, and I2\-C\-\_\-wait().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_abdcd48cc7c048d6c9a1a09d9ad775088}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-stop@{I2\-C\-\_\-stop}}
+\index{I2\-C\-\_\-stop@{I2\-C\-\_\-stop}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-stop (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_abdcd48cc7c048d6c9a1a09d9ad775088}
+
+
+Definition at line 472 of file i2c.\-c.
+
+
+
+References I2\-C1, I2\-C2, and I2\-C\-\_\-wait().
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_aaa8d325c3abf2271a7870e184895ebf1}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-wait@{I2\-C\-\_\-wait}}
+\index{I2\-C\-\_\-wait@{I2\-C\-\_\-wait}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-wait}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-wait (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_aaa8d325c3abf2271a7870e184895ebf1}
+
+
+Definition at line 415 of file i2c.\-c.
+
+
+
+References I2\-C1, and I2\-C2.
+
+\hypertarget{p32_2include_2pinguino_2core_2i2c_8c_a9f6726cbf225d8f82eb5fa7c1de64531}{\index{p32/include/pinguino/core/i2c.\-c@{p32/include/pinguino/core/i2c.\-c}!I2\-C\-\_\-writechar@{I2\-C\-\_\-writechar}}
+\index{I2\-C\-\_\-writechar@{I2\-C\-\_\-writechar}!p32/include/pinguino/core/i2c.c@{p32/include/pinguino/core/i2c.\-c}}
+\subsubsection[{I2\-C\-\_\-writechar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-writechar (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{module, }
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2i2c_8c_a9f6726cbf225d8f82eb5fa7c1de64531}
+
+
+Definition at line 323 of file i2c.\-c.
+
+
+
+References I2\-C1, I2\-C2, and I2\-C\-\_\-wait().
+
+
+
+Referenced by I2\-C1\-\_\-writechar(), I2\-C2\-\_\-writechar(), I2\-C\-\_\-get(), I2\-C\-\_\-send(), I2\-C\-\_\-send\-I\-D(), and P\-C\-F8574\-\_\-write().
+

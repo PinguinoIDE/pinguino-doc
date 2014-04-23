@@ -1,0 +1,122 @@
+\hypertarget{p8_2pinguino_2libraries_2pcf8574_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/pcf8574.h File Reference}
+\label{p8_2pinguino_2libraries_2pcf8574_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/pcf8574.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/pcf8574.\-h}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2pcf8574_8h_a3b8039198802e32d60e5514f851ed131}{P\-C\-F8574\-\_\-init} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2pcf8574_8h_af000bd0d13443db27f4894c61158ef54}{P\-C\-F8574\-\_\-write} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2pcf8574_8h_a819d35083e516b3210d3541a1549f4da}{P\-C\-F8574\-\_\-read} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2pcf8574_8h_a3b8039198802e32d60e5514f851ed131}{\index{p8/pinguino/libraries/pcf8574.\-h@{p8/pinguino/libraries/pcf8574.\-h}!P\-C\-F8574\-\_\-init@{P\-C\-F8574\-\_\-init}}
+\index{P\-C\-F8574\-\_\-init@{P\-C\-F8574\-\_\-init}!p8/pinguino/libraries/pcf8574.h@{p8/pinguino/libraries/pcf8574.\-h}}
+\subsubsection[{P\-C\-F8574\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-F8574\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2pcf8574_8h_a3b8039198802e32d60e5514f851ed131}
+
+
+ \subsubsection*{Init. I2\-C bus }
+
+
+
+
+
+
+
+ \subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- P\-C\-F8574\-\_\-init }
+
+\subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- R\-A\-Z de la variable d'echange entre Pic et P\-C\-F8574 }
+
+Definition at line 69 of file pcf8574.\-c.
+
+
+
+References I2\-C\-\_\-100\-K\-H\-Z, I2\-C\-\_\-init(), I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E, and P\-C\-F8574\-\_\-t\-::val.
+
+
+\begin{DoxyCode}
+70 \{
+71     \textcolor{comment}{// PCF8574 SCL clock frequency = 100 kHz max.}
+72     \hyperlink{p8_2pinguino_2core_2i2c_8c_a294f9659c7a45647d2274c1b2d7ad849}{I2C\_init}(\hyperlink{p8_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{I2C\_MASTER\_MODE}, \hyperlink{p8_2pinguino_2core_2i2c_8c_a30c06a423a78e6ded9ae0d26aa3fb541}{I2C\_100KHZ});
+73 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2pcf8574_8h_a819d35083e516b3210d3541a1549f4da}{\index{p8/pinguino/libraries/pcf8574.\-h@{p8/pinguino/libraries/pcf8574.\-h}!P\-C\-F8574\-\_\-read@{P\-C\-F8574\-\_\-read}}
+\index{P\-C\-F8574\-\_\-read@{P\-C\-F8574\-\_\-read}!p8/pinguino/libraries/pcf8574.h@{p8/pinguino/libraries/pcf8574.\-h}}
+\subsubsection[{P\-C\-F8574\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} P\-C\-F8574\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2pcf8574_8h_a819d35083e516b3210d3541a1549f4da}
+
+
+ \subsubsection*{Read a byte from the P\-C\-F8574 }
+
+
+
+ 
+
+Definition at line 100 of file pcf8574.\-c.
+
+
+
+References I2\-C\-\_\-get().
+
+
+\begin{DoxyCode}
+101 \{
+102     \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a3a0ddd93777e80c1850b38a0f09bbd4c}{I2C\_get}(address);
+103 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2pcf8574_8h_af000bd0d13443db27f4894c61158ef54}{\index{p8/pinguino/libraries/pcf8574.\-h@{p8/pinguino/libraries/pcf8574.\-h}!P\-C\-F8574\-\_\-write@{P\-C\-F8574\-\_\-write}}
+\index{P\-C\-F8574\-\_\-write@{P\-C\-F8574\-\_\-write}!p8/pinguino/libraries/pcf8574.h@{p8/pinguino/libraries/pcf8574.\-h}}
+\subsubsection[{P\-C\-F8574\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} P\-C\-F8574\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2pcf8574_8h_af000bd0d13443db27f4894c61158ef54}
+
+
+ \subsubsection*{Write a byte on the P\-C\-F8574 }
+
+
+
+
+
+
+
+ \subsubsection*{-\/-\/-\/-\/------ P\-C\-F8574\-\_\-write }
+
+\subsubsection*{-\/-\/-\/-\/------ Ecriture d'un octet sur le port du P\-C\-F8574 via le bus I2\-C }In Master Transmitter mode, the first byte transmitted contains the slave address of the receiving device (seven bits) and the Read/\-Write (R/\-W) bit. In this case, the R/\-W bit will be logic ‘0’. Serial data is transmitted eight bits at a time. After each byte is transmitted, an Acknowledge bit is received. Start and Stop conditions are output to indicate the beginning and the end of a serial transfer. 
+
+Definition at line 80 of file pcf8574.\-c.
+
+
+
+References I2\-C\-\_\-start(), I2\-C\-\_\-stop(), I2\-C\-\_\-\-W\-R\-I\-T\-E, I2\-C\-\_\-write(), and I2\-C\-\_\-writechar().
+
+
+\begin{DoxyCode}
+81 \{
+82     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} r=0;
+83 
+84     \hyperlink{p8_2pinguino_2core_2i2c_8c_a263c74ce484e3680c05a9118707fadb7}{I2C\_start}();
+85     \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a9f6726cbf225d8f82eb5fa7c1de64531}{I2C\_writechar}(address | \hyperlink{p8_2pinguino_2core_2i2c_8c_a9536bf85bced4f4e549a82fb18eb6140}{I2C\_WRITE}))
+86     \{
+87         r = \hyperlink{p32_2include_2pinguino_2core_2i2c_8c_a9f6726cbf225d8f82eb5fa7c1de64531}{I2C\_writechar}(value);
+88     \}
+89     \hyperlink{p8_2pinguino_2core_2i2c_8c_af8dcc1bcb3e1c6c0fcdca4cf599a239b}{I2C\_stop}();
+90 
+91     \textcolor{keywordflow}{return} r;
+92     \textcolor{comment}{//return I2C\_send(address, value);}
+93 \}
+\end{DoxyCode}

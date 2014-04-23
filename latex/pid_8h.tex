@@ -1,0 +1,692 @@
+\hypertarget{pid_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/pid.h File Reference}
+\label{pid_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/pid.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/pid.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pid_8h_a3851a1a8ddec9eacd2e30a8a19bb8cc8}{A\-U\-T\-O\-M\-A\-T\-I\-C}~1
+\item 
+\#define \hyperlink{pid_8h_a8187a9af791c0a44ba67edd9cf266961}{M\-A\-N\-U\-A\-L}~0
+\item 
+\#define \hyperlink{pid_8h_a86720ded03b3f5b5ca53d30b33cb33bb}{D\-I\-R\-E\-C\-T}~0
+\item 
+\#define \hyperlink{pid_8h_a00548cec6d104932bf79a65bac1c47e8}{R\-E\-V\-E\-R\-S\-E}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pid_8h_ae6d785732dcf8d8d2c818e7bbd14b485}{P\-I\-D\-\_\-init} (double $\ast$, double $\ast$, double $\ast$, double, double, double, int)
+\item 
+void \hyperlink{pid_8h_a525191fa012ab1761a7e303cdf7300d7}{P\-I\-D\-\_\-\-Set\-Mode} (int Mode)
+\item 
+void \hyperlink{pid_8h_a1b78c7232bc80177ee366df2c3b1fae2}{P\-I\-D\-\_\-\-Compute} ()
+\item 
+void \hyperlink{pid_8h_a2372ee7b6f56870e9b0057136b13b973}{P\-I\-D\-\_\-\-Set\-Output\-Limits} (double, double)
+\item 
+void \hyperlink{pid_8h_a53a3d1fff00c4ef79687118ea302a30d}{P\-I\-D\-\_\-\-Set\-Tunings} (double, double, double)
+\item 
+void \hyperlink{pid_8h_ac7fa2e5eb9a6a6075afc14a6f634f1c2}{P\-I\-D\-\_\-\-Set\-Controller\-Direction} (int)
+\item 
+void \hyperlink{pid_8h_a383bbb824d15f17a8a151dec797261c3}{P\-I\-D\-\_\-\-Set\-Sample\-Time} (int)
+\item 
+double \hyperlink{pid_8h_ae488c9ee21f555a0faae879359043200}{P\-I\-D\-\_\-\-Get\-Kp} ()
+\item 
+double \hyperlink{pid_8h_a6d9eadf25f24995b6fff689fa57a5832}{P\-I\-D\-\_\-\-Get\-Ki} ()
+\item 
+double \hyperlink{pid_8h_ab6ebf1eda2f4e5b78c57818d4dfd34e5}{P\-I\-D\-\_\-\-Get\-Kd} ()
+\item 
+int \hyperlink{pid_8h_abe0ed490104f8fe96c3780fbd656e06a}{P\-I\-D\-\_\-\-Get\-Mode} ()
+\item 
+int \hyperlink{pid_8h_a0be83e63f9b1a3f8ba85c3c23bc63ea8}{P\-I\-D\-\_\-\-Get\-Direction} ()
+\item 
+void \hyperlink{pid_8h_aa1119e5ecd1e98ca065e95119574fc05}{P\-I\-D\-\_\-\-Initialize} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{pid_8h_a191f782817e23de96ae1b1b080c85c0e}{disp\-Kp}
+\item 
+double \hyperlink{pid_8h_acf3d25702e32a0937f05a9d33036025c}{disp\-Ki}
+\item 
+double \hyperlink{pid_8h_a72c43be02959efa51087ad73dbc96eeb}{disp\-Kd}
+\item 
+double \hyperlink{pid_8h_ac6390bc2d074992cc6ca37d132a5262d}{kp}
+\item 
+double \hyperlink{pid_8h_a23e09706a4abb026e1de279c4904e926}{ki}
+\item 
+double \hyperlink{pid_8h_a1cf17dd45e85748457863776dcb28335}{kd}
+\item 
+int \hyperlink{pid_8h_a8b05ff897af94cae58e9fe6079b3aebf}{controller\-Direction}
+\item 
+double $\ast$ \hyperlink{pid_8h_ac4b81b24a669cc7af1e9d135d0d2cd2d}{my\-Input}
+\item 
+double $\ast$ \hyperlink{pid_8h_a93e76780cb2c29773815648607e10406}{my\-Output}
+\item 
+double $\ast$ \hyperlink{pid_8h_aae83a2dd355e80bb681dcfa07580d1e1}{my\-Setpoint}
+\item 
+unsigned long \hyperlink{pid_8h_a22cb446e5271d5d2c4b2e23792fb1966}{last\-Time}
+\item 
+double \hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{I\-Term}
+\item 
+double \hyperlink{pid_8h_aac5fd26617bc0eca7bc17c8c7de0023d}{last\-Input}
+\item 
+int \hyperlink{pid_8h_a65594aaa18948a3876e324e202a2ad06}{Sample\-Time}
+\item 
+double \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{out\-Min}
+\item 
+double \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{out\-Max}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pid_8h_ad5a47cbfc18fb6ce45cf668cc1fb46d5}{in\-Auto}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{pid_8h_a3851a1a8ddec9eacd2e30a8a19bb8cc8}{\index{pid.\-h@{pid.\-h}!A\-U\-T\-O\-M\-A\-T\-I\-C@{A\-U\-T\-O\-M\-A\-T\-I\-C}}
+\index{A\-U\-T\-O\-M\-A\-T\-I\-C@{A\-U\-T\-O\-M\-A\-T\-I\-C}!pid.h@{pid.\-h}}
+\subsubsection[{A\-U\-T\-O\-M\-A\-T\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-U\-T\-O\-M\-A\-T\-I\-C~1}}\label{pid_8h_a3851a1a8ddec9eacd2e30a8a19bb8cc8}
+
+
+Definition at line 5 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Get\-Mode(), and P\-I\-D\-\_\-\-Set\-Mode().
+
+\hypertarget{pid_8h_a86720ded03b3f5b5ca53d30b33cb33bb}{\index{pid.\-h@{pid.\-h}!D\-I\-R\-E\-C\-T@{D\-I\-R\-E\-C\-T}}
+\index{D\-I\-R\-E\-C\-T@{D\-I\-R\-E\-C\-T}!pid.h@{pid.\-h}}
+\subsubsection[{D\-I\-R\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-E\-C\-T~0}}\label{pid_8h_a86720ded03b3f5b5ca53d30b33cb33bb}
+
+
+Definition at line 7 of file pid.\-h.
+
+\hypertarget{pid_8h_a8187a9af791c0a44ba67edd9cf266961}{\index{pid.\-h@{pid.\-h}!M\-A\-N\-U\-A\-L@{M\-A\-N\-U\-A\-L}}
+\index{M\-A\-N\-U\-A\-L@{M\-A\-N\-U\-A\-L}!pid.h@{pid.\-h}}
+\subsubsection[{M\-A\-N\-U\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-N\-U\-A\-L~0}}\label{pid_8h_a8187a9af791c0a44ba67edd9cf266961}
+
+
+Definition at line 6 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Get\-Mode().
+
+\hypertarget{pid_8h_a00548cec6d104932bf79a65bac1c47e8}{\index{pid.\-h@{pid.\-h}!R\-E\-V\-E\-R\-S\-E@{R\-E\-V\-E\-R\-S\-E}}
+\index{R\-E\-V\-E\-R\-S\-E@{R\-E\-V\-E\-R\-S\-E}!pid.h@{pid.\-h}}
+\subsubsection[{R\-E\-V\-E\-R\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-V\-E\-R\-S\-E~1}}\label{pid_8h_a00548cec6d104932bf79a65bac1c47e8}
+
+
+Definition at line 8 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Set\-Tunings().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{pid_8h_a1b78c7232bc80177ee366df2c3b1fae2}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Compute@{P\-I\-D\-\_\-\-Compute}}
+\index{P\-I\-D\-\_\-\-Compute@{P\-I\-D\-\_\-\-Compute}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Compute}]{\setlength{\rightskip}{0pt plus 5cm}void P\-I\-D\-\_\-\-Compute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_a1b78c7232bc80177ee366df2c3b1fae2}
+
+
+Definition at line 40 of file pid.\-c.
+
+
+
+References in\-Auto, input(), I\-Term, kd, ki, kp, last\-Input, last\-Time, millis(), my\-Input, my\-Output, my\-Setpoint, out\-Max, out\-Min, output(), and Sample\-Time.
+
+
+\begin{DoxyCode}
+41 \{
+42     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} now, timeChange;
+43     \textcolor{keywordtype}{double} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a837043076a9270519f50c5427e795cca}{input}, error, dInput, \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a7715db926d5919c5ed8b53d966abe165}{output};
+44 
+45     \textcolor{keywordflow}{if}(!\hyperlink{pid_8h_ad5a47cbfc18fb6ce45cf668cc1fb46d5}{inAuto}) \textcolor{keywordflow}{return};
+46 
+47     now = \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}();
+48     timeChange = (now - \hyperlink{pid_8h_a22cb446e5271d5d2c4b2e23792fb1966}{lastTime});
+49     
+50     \textcolor{keywordflow}{if}(timeChange>=\hyperlink{pid_8h_a65594aaa18948a3876e324e202a2ad06}{SampleTime})
+51     \{
+52         \textcolor{comment}{/*Compute all the working error variables*/}
+53         input = *\hyperlink{pid_8h_ac4b81b24a669cc7af1e9d135d0d2cd2d}{myInput};
+54         error = *\hyperlink{pid_8h_aae83a2dd355e80bb681dcfa07580d1e1}{mySetpoint} - \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a837043076a9270519f50c5427e795cca}{input};
+55         \hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm}+= (\hyperlink{pid_8h_a23e09706a4abb026e1de279c4904e926}{ki} * error);
+56         \textcolor{keywordflow}{if}(\hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm} > \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{outMax}) \hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm}= \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{outMax};
+57         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm} < \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{outMin}) \hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm}= \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{outMin};
+58         dInput = (input - \hyperlink{pid_8h_aac5fd26617bc0eca7bc17c8c7de0023d}{lastInput});
+59 
+60         \textcolor{comment}{/*Compute PID Output*/}
+61         output = \hyperlink{pid_8h_ac6390bc2d074992cc6ca37d132a5262d}{kp} * error + \hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm}- \hyperlink{pid_8h_a1cf17dd45e85748457863776dcb28335}{kd} * dInput;
+62 
+63         \textcolor{keywordflow}{if}(output > \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{outMax}) output = \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{outMax};
+64           \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(output < \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{outMin}) output = \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{outMin};
+65         *\hyperlink{pid_8h_a93e76780cb2c29773815648607e10406}{myOutput} = \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a7715db926d5919c5ed8b53d966abe165}{output};
+66 
+67         \textcolor{comment}{/*Remember some variables for next time*/}
+68         \hyperlink{pid_8h_aac5fd26617bc0eca7bc17c8c7de0023d}{lastInput} = \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a837043076a9270519f50c5427e795cca}{input};
+69         \hyperlink{pid_8h_a22cb446e5271d5d2c4b2e23792fb1966}{lastTime} = now;
+70     \}
+71 \}
+\end{DoxyCode}
+\hypertarget{pid_8h_a0be83e63f9b1a3f8ba85c3c23bc63ea8}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Get\-Direction@{P\-I\-D\-\_\-\-Get\-Direction}}
+\index{P\-I\-D\-\_\-\-Get\-Direction@{P\-I\-D\-\_\-\-Get\-Direction}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Get\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}int P\-I\-D\-\_\-\-Get\-Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_a0be83e63f9b1a3f8ba85c3c23bc63ea8}
+
+
+Definition at line 192 of file pid.\-c.
+
+
+
+References controller\-Direction.
+
+
+\begin{DoxyCode}
+192 \{ \textcolor{keywordflow}{return} \hyperlink{pid_8h_a8b05ff897af94cae58e9fe6079b3aebf}{controllerDirection};\}
+\end{DoxyCode}
+\hypertarget{pid_8h_ab6ebf1eda2f4e5b78c57818d4dfd34e5}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Get\-Kd@{P\-I\-D\-\_\-\-Get\-Kd}}
+\index{P\-I\-D\-\_\-\-Get\-Kd@{P\-I\-D\-\_\-\-Get\-Kd}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Get\-Kd}]{\setlength{\rightskip}{0pt plus 5cm}double P\-I\-D\-\_\-\-Get\-Kd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_ab6ebf1eda2f4e5b78c57818d4dfd34e5}
+
+
+Definition at line 190 of file pid.\-c.
+
+
+
+References disp\-Kd.
+
+
+\begin{DoxyCode}
+190 \{ \textcolor{keywordflow}{return} \hyperlink{pid_8h_a72c43be02959efa51087ad73dbc96eeb}{dispKd};\}
+\end{DoxyCode}
+\hypertarget{pid_8h_a6d9eadf25f24995b6fff689fa57a5832}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Get\-Ki@{P\-I\-D\-\_\-\-Get\-Ki}}
+\index{P\-I\-D\-\_\-\-Get\-Ki@{P\-I\-D\-\_\-\-Get\-Ki}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Get\-Ki}]{\setlength{\rightskip}{0pt plus 5cm}double P\-I\-D\-\_\-\-Get\-Ki (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_a6d9eadf25f24995b6fff689fa57a5832}
+
+
+Definition at line 189 of file pid.\-c.
+
+
+
+References disp\-Ki.
+
+
+\begin{DoxyCode}
+189 \{ \textcolor{keywordflow}{return} \hyperlink{pid_8h_acf3d25702e32a0937f05a9d33036025c}{dispKi};\}
+\end{DoxyCode}
+\hypertarget{pid_8h_ae488c9ee21f555a0faae879359043200}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Get\-Kp@{P\-I\-D\-\_\-\-Get\-Kp}}
+\index{P\-I\-D\-\_\-\-Get\-Kp@{P\-I\-D\-\_\-\-Get\-Kp}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Get\-Kp}]{\setlength{\rightskip}{0pt plus 5cm}double P\-I\-D\-\_\-\-Get\-Kp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_ae488c9ee21f555a0faae879359043200}
+
+
+Definition at line 188 of file pid.\-c.
+
+
+
+References disp\-Kp.
+
+
+\begin{DoxyCode}
+188 \{ \textcolor{keywordflow}{return} \hyperlink{pid_8h_a191f782817e23de96ae1b1b080c85c0e}{dispKp}; \}
+\end{DoxyCode}
+\hypertarget{pid_8h_abe0ed490104f8fe96c3780fbd656e06a}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Get\-Mode@{P\-I\-D\-\_\-\-Get\-Mode}}
+\index{P\-I\-D\-\_\-\-Get\-Mode@{P\-I\-D\-\_\-\-Get\-Mode}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Get\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}int P\-I\-D\-\_\-\-Get\-Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_abe0ed490104f8fe96c3780fbd656e06a}
+
+
+Definition at line 191 of file pid.\-c.
+
+
+
+References A\-U\-T\-O\-M\-A\-T\-I\-C, in\-Auto, and M\-A\-N\-U\-A\-L.
+
+
+\begin{DoxyCode}
+191 \{ \textcolor{keywordflow}{return} \hyperlink{pid_8h_ad5a47cbfc18fb6ce45cf668cc1fb46d5}{inAuto} ? \hyperlink{pid_8h_a3851a1a8ddec9eacd2e30a8a19bb8cc8}{AUTOMATIC} : \hyperlink{pid_8h_a8187a9af791c0a44ba67edd9cf266961}{MANUAL};\}
+\end{DoxyCode}
+\hypertarget{pid_8h_ae6d785732dcf8d8d2c818e7bbd14b485}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-init@{P\-I\-D\-\_\-init}}
+\index{P\-I\-D\-\_\-init@{P\-I\-D\-\_\-init}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-I\-D\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_ae6d785732dcf8d8d2c818e7bbd14b485}
+
+
+Definition at line 19 of file pid.\-c.
+
+
+
+References in\-Auto, last\-Time, millis(), my\-Input, my\-Output, my\-Setpoint, P\-I\-D\-\_\-\-Set\-Controller\-Direction(), P\-I\-D\-\_\-\-Set\-Output\-Limits(), P\-I\-D\-\_\-\-Set\-Tunings(), and Sample\-Time.
+
+
+\begin{DoxyCode}
+20 \{
+21     \hyperlink{pid_8c_a4e7596d31bd0eafeff1d52dd92262935}{PID\_SetOutputLimits}(0, 255); \textcolor{comment}{//default output limit corresponds to the arduino pwm
+       limits}
+22 
+23     \hyperlink{pid_8h_a65594aaa18948a3876e324e202a2ad06}{SampleTime} = 100; \textcolor{comment}{//default Controller Sample Time is 0.1 seconds}
+24 
+25     \hyperlink{pid_8c_a573ac9eba65830b0995b707916010647}{PID\_SetControllerDirection}(ControllerDirection);
+26     \hyperlink{pid_8c_a45f003c8832a33d08d9a7a8cecc7d3be}{PID\_SetTunings}(Kp, Ki, Kd);
+27 
+28     \hyperlink{pid_8h_a22cb446e5271d5d2c4b2e23792fb1966}{lastTime} = \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}()-\hyperlink{pid_8h_a65594aaa18948a3876e324e202a2ad06}{SampleTime};
+29     \hyperlink{pid_8h_ad5a47cbfc18fb6ce45cf668cc1fb46d5}{inAuto} = \textcolor{keyword}{false};
+30     \hyperlink{pid_8h_a93e76780cb2c29773815648607e10406}{myOutput} = Output;
+31     \hyperlink{pid_8h_ac4b81b24a669cc7af1e9d135d0d2cd2d}{myInput} = Input;
+32     \hyperlink{pid_8h_aae83a2dd355e80bb681dcfa07580d1e1}{mySetpoint} = Setpoint;
+33 \}
+\end{DoxyCode}
+\hypertarget{pid_8h_aa1119e5ecd1e98ca065e95119574fc05}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Initialize@{P\-I\-D\-\_\-\-Initialize}}
+\index{P\-I\-D\-\_\-\-Initialize@{P\-I\-D\-\_\-\-Initialize}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void P\-I\-D\-\_\-\-Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_aa1119e5ecd1e98ca065e95119574fc05}
+
+
+Definition at line 158 of file pid.\-c.
+
+
+
+References I\-Term, last\-Input, my\-Input, my\-Output, out\-Max, and out\-Min.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Set\-Mode().
+
+
+\begin{DoxyCode}
+159 \{
+160    \hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm} = *\hyperlink{pid_8h_a93e76780cb2c29773815648607e10406}{myOutput};
+161    \hyperlink{pid_8h_aac5fd26617bc0eca7bc17c8c7de0023d}{lastInput} = *\hyperlink{pid_8h_ac4b81b24a669cc7af1e9d135d0d2cd2d}{myInput};
+162    \textcolor{keywordflow}{if}(\hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm} > \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{outMax}) \hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm} = \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{outMax};
+163    \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm} < \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{outMin}) \hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm} = \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{outMin};
+164 \}
+\end{DoxyCode}
+\hypertarget{pid_8h_ac7fa2e5eb9a6a6075afc14a6f634f1c2}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Set\-Controller\-Direction@{P\-I\-D\-\_\-\-Set\-Controller\-Direction}}
+\index{P\-I\-D\-\_\-\-Set\-Controller\-Direction@{P\-I\-D\-\_\-\-Set\-Controller\-Direction}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Set\-Controller\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void P\-I\-D\-\_\-\-Set\-Controller\-Direction (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_ac7fa2e5eb9a6a6075afc14a6f634f1c2}
+
+
+Definition at line 172 of file pid.\-c.
+
+
+
+References controller\-Direction, in\-Auto, kd, ki, and kp.
+
+
+
+Referenced by P\-I\-D\-\_\-init().
+
+
+\begin{DoxyCode}
+173 \{
+174    \textcolor{keywordflow}{if}(\hyperlink{pid_8h_ad5a47cbfc18fb6ce45cf668cc1fb46d5}{inAuto} && Direction !=\hyperlink{pid_8h_a8b05ff897af94cae58e9fe6079b3aebf}{controllerDirection})
+175    \{
+176 \hyperlink{pid_8h_ac6390bc2d074992cc6ca37d132a5262d}{kp} = (0 - \hyperlink{pid_8h_ac6390bc2d074992cc6ca37d132a5262d}{kp});
+177       \hyperlink{pid_8h_a23e09706a4abb026e1de279c4904e926}{ki} = (0 - \hyperlink{pid_8h_a23e09706a4abb026e1de279c4904e926}{ki});
+178       \hyperlink{pid_8h_a1cf17dd45e85748457863776dcb28335}{kd} = (0 - \hyperlink{pid_8h_a1cf17dd45e85748457863776dcb28335}{kd});
+179    \}
+180    \hyperlink{pid_8h_a8b05ff897af94cae58e9fe6079b3aebf}{controllerDirection} = Direction;
+181 \}
+\end{DoxyCode}
+\hypertarget{pid_8h_a525191fa012ab1761a7e303cdf7300d7}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Set\-Mode@{P\-I\-D\-\_\-\-Set\-Mode}}
+\index{P\-I\-D\-\_\-\-Set\-Mode@{P\-I\-D\-\_\-\-Set\-Mode}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Set\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void P\-I\-D\-\_\-\-Set\-Mode (
+\begin{DoxyParamCaption}
+\item[{int}]{Mode}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_a525191fa012ab1761a7e303cdf7300d7}
+
+
+Definition at line 144 of file pid.\-c.
+
+
+
+References A\-U\-T\-O\-M\-A\-T\-I\-C, in\-Auto, and P\-I\-D\-\_\-\-Initialize().
+
+
+\begin{DoxyCode}
+145 \{
+146     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} newAuto = (Mode == \hyperlink{pid_8h_a3851a1a8ddec9eacd2e30a8a19bb8cc8}{AUTOMATIC});
+147     \textcolor{keywordflow}{if}(newAuto == !\hyperlink{pid_8h_ad5a47cbfc18fb6ce45cf668cc1fb46d5}{inAuto})
+148     \{ \textcolor{comment}{/*we just went from manual to auto*/}
+149         \hyperlink{pid_8c_aa1119e5ecd1e98ca065e95119574fc05}{PID\_Initialize}();
+150     \}
+151     \hyperlink{pid_8h_ad5a47cbfc18fb6ce45cf668cc1fb46d5}{inAuto} = newAuto;
+152 \}
+\end{DoxyCode}
+\hypertarget{pid_8h_a2372ee7b6f56870e9b0057136b13b973}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Set\-Output\-Limits@{P\-I\-D\-\_\-\-Set\-Output\-Limits}}
+\index{P\-I\-D\-\_\-\-Set\-Output\-Limits@{P\-I\-D\-\_\-\-Set\-Output\-Limits}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Set\-Output\-Limits}]{\setlength{\rightskip}{0pt plus 5cm}void P\-I\-D\-\_\-\-Set\-Output\-Limits (
+\begin{DoxyParamCaption}
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_a2372ee7b6f56870e9b0057136b13b973}
+
+
+Definition at line 123 of file pid.\-c.
+
+
+
+References in\-Auto, I\-Term, my\-Output, out\-Max, and out\-Min.
+
+
+
+Referenced by P\-I\-D\-\_\-init().
+
+
+\begin{DoxyCode}
+124 \{
+125    \textcolor{keywordflow}{if}(Min >= Max) \textcolor{keywordflow}{return};
+126    \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{outMin} = Min;
+127    \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{outMax} = Max;
+128  
+129    \textcolor{keywordflow}{if}(\hyperlink{pid_8h_ad5a47cbfc18fb6ce45cf668cc1fb46d5}{inAuto})
+130    \{
+131 \textcolor{keywordflow}{if}(*\hyperlink{pid_8h_a93e76780cb2c29773815648607e10406}{myOutput} > \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{outMax}) *\hyperlink{pid_8h_a93e76780cb2c29773815648607e10406}{myOutput} = \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{outMax};
+132 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(*\hyperlink{pid_8h_a93e76780cb2c29773815648607e10406}{myOutput} < \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{outMin}) *\hyperlink{pid_8h_a93e76780cb2c29773815648607e10406}{myOutput} = \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{outMin};
+133 
+134 \textcolor{keywordflow}{if}(\hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm} > \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{outMax}) \hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm}= \hyperlink{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{outMax};
+135 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm} < \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{outMin}) \hyperlink{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{ITerm}= \hyperlink{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{outMin};
+136    \}
+137 \}
+\end{DoxyCode}
+\hypertarget{pid_8h_a383bbb824d15f17a8a151dec797261c3}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Set\-Sample\-Time@{P\-I\-D\-\_\-\-Set\-Sample\-Time}}
+\index{P\-I\-D\-\_\-\-Set\-Sample\-Time@{P\-I\-D\-\_\-\-Set\-Sample\-Time}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Set\-Sample\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void P\-I\-D\-\_\-\-Set\-Sample\-Time (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_a383bbb824d15f17a8a151dec797261c3}
+
+
+Definition at line 103 of file pid.\-c.
+
+
+
+References kd, ki, and Sample\-Time.
+
+
+\begin{DoxyCode}
+104 \{
+105    \textcolor{keywordflow}{if} (NewSampleTime > 0)
+106    \{
+107       \textcolor{keywordtype}{double} ratio = (double)NewSampleTime
+108                       / (\textcolor{keywordtype}{double})\hyperlink{pid_8h_a65594aaa18948a3876e324e202a2ad06}{SampleTime};
+109       \hyperlink{pid_8h_a23e09706a4abb026e1de279c4904e926}{ki} *= ratio;
+110       \hyperlink{pid_8h_a1cf17dd45e85748457863776dcb28335}{kd} /= ratio;
+111       \hyperlink{pid_8h_a65594aaa18948a3876e324e202a2ad06}{SampleTime} = (\textcolor{keywordtype}{unsigned} long)NewSampleTime;
+112    \}
+113 \}
+\end{DoxyCode}
+\hypertarget{pid_8h_a53a3d1fff00c4ef79687118ea302a30d}{\index{pid.\-h@{pid.\-h}!P\-I\-D\-\_\-\-Set\-Tunings@{P\-I\-D\-\_\-\-Set\-Tunings}}
+\index{P\-I\-D\-\_\-\-Set\-Tunings@{P\-I\-D\-\_\-\-Set\-Tunings}!pid.h@{pid.\-h}}
+\subsubsection[{P\-I\-D\-\_\-\-Set\-Tunings}]{\setlength{\rightskip}{0pt plus 5cm}void P\-I\-D\-\_\-\-Set\-Tunings (
+\begin{DoxyParamCaption}
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}}\label{pid_8h_a53a3d1fff00c4ef79687118ea302a30d}
+
+
+Definition at line 79 of file pid.\-c.
+
+
+
+References controller\-Direction, disp\-Kd, disp\-Ki, disp\-Kp, kd, ki, kp, R\-E\-V\-E\-R\-S\-E, and Sample\-Time.
+
+
+
+Referenced by P\-I\-D\-\_\-init().
+
+
+\begin{DoxyCode}
+80 \{
+81     \textcolor{keywordtype}{double} SampleTimeInSec;
+82 
+83     \textcolor{keywordflow}{if} (Kp<0 || Ki<0 || Kd<0) \textcolor{keywordflow}{return};
+84 
+85     \hyperlink{pid_8h_a191f782817e23de96ae1b1b080c85c0e}{dispKp} = Kp; \hyperlink{pid_8h_acf3d25702e32a0937f05a9d33036025c}{dispKi} = Ki; \hyperlink{pid_8h_a72c43be02959efa51087ad73dbc96eeb}{dispKd} = Kd;
+86 
+87     SampleTimeInSec = ((double)\hyperlink{pid_8h_a65594aaa18948a3876e324e202a2ad06}{SampleTime})/1000;
+88     \hyperlink{pid_8h_ac6390bc2d074992cc6ca37d132a5262d}{kp} = Kp;
+89     \hyperlink{pid_8h_a23e09706a4abb026e1de279c4904e926}{ki} = Ki * SampleTimeInSec;
+90     \hyperlink{pid_8h_a1cf17dd45e85748457863776dcb28335}{kd} = Kd / SampleTimeInSec;
+91 
+92     \textcolor{keywordflow}{if}(\hyperlink{pid_8h_a8b05ff897af94cae58e9fe6079b3aebf}{controllerDirection} ==\hyperlink{pid_8h_a00548cec6d104932bf79a65bac1c47e8}{REVERSE})
+93     \{
+94         \hyperlink{pid_8h_ac6390bc2d074992cc6ca37d132a5262d}{kp} = (0 - \hyperlink{pid_8h_ac6390bc2d074992cc6ca37d132a5262d}{kp});
+95         \hyperlink{pid_8h_a23e09706a4abb026e1de279c4904e926}{ki} = (0 - \hyperlink{pid_8h_a23e09706a4abb026e1de279c4904e926}{ki});
+96         \hyperlink{pid_8h_a1cf17dd45e85748457863776dcb28335}{kd} = (0 - \hyperlink{pid_8h_a1cf17dd45e85748457863776dcb28335}{kd});
+97     \}
+98 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{pid_8h_a8b05ff897af94cae58e9fe6079b3aebf}{\index{pid.\-h@{pid.\-h}!controller\-Direction@{controller\-Direction}}
+\index{controller\-Direction@{controller\-Direction}!pid.h@{pid.\-h}}
+\subsubsection[{controller\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}int controller\-Direction}}\label{pid_8h_a8b05ff897af94cae58e9fe6079b3aebf}
+
+
+Definition at line 59 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Get\-Direction(), P\-I\-D\-\_\-\-Set\-Controller\-Direction(), and P\-I\-D\-\_\-\-Set\-Tunings().
+
+\hypertarget{pid_8h_a72c43be02959efa51087ad73dbc96eeb}{\index{pid.\-h@{pid.\-h}!disp\-Kd@{disp\-Kd}}
+\index{disp\-Kd@{disp\-Kd}!pid.h@{pid.\-h}}
+\subsubsection[{disp\-Kd}]{\setlength{\rightskip}{0pt plus 5cm}double disp\-Kd}}\label{pid_8h_a72c43be02959efa51087ad73dbc96eeb}
+
+
+Definition at line 53 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Get\-Kd(), and P\-I\-D\-\_\-\-Set\-Tunings().
+
+\hypertarget{pid_8h_acf3d25702e32a0937f05a9d33036025c}{\index{pid.\-h@{pid.\-h}!disp\-Ki@{disp\-Ki}}
+\index{disp\-Ki@{disp\-Ki}!pid.h@{pid.\-h}}
+\subsubsection[{disp\-Ki}]{\setlength{\rightskip}{0pt plus 5cm}double disp\-Ki}}\label{pid_8h_acf3d25702e32a0937f05a9d33036025c}
+
+
+Definition at line 52 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Get\-Ki(), and P\-I\-D\-\_\-\-Set\-Tunings().
+
+\hypertarget{pid_8h_a191f782817e23de96ae1b1b080c85c0e}{\index{pid.\-h@{pid.\-h}!disp\-Kp@{disp\-Kp}}
+\index{disp\-Kp@{disp\-Kp}!pid.h@{pid.\-h}}
+\subsubsection[{disp\-Kp}]{\setlength{\rightskip}{0pt plus 5cm}double disp\-Kp}}\label{pid_8h_a191f782817e23de96ae1b1b080c85c0e}
+
+
+Definition at line 51 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Get\-Kp(), and P\-I\-D\-\_\-\-Set\-Tunings().
+
+\hypertarget{pid_8h_ad5a47cbfc18fb6ce45cf668cc1fb46d5}{\index{pid.\-h@{pid.\-h}!in\-Auto@{in\-Auto}}
+\index{in\-Auto@{in\-Auto}!pid.h@{pid.\-h}}
+\subsubsection[{in\-Auto}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} in\-Auto}}\label{pid_8h_ad5a47cbfc18fb6ce45cf668cc1fb46d5}
+
+
+Definition at line 71 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), P\-I\-D\-\_\-\-Get\-Mode(), P\-I\-D\-\_\-init(), P\-I\-D\-\_\-\-Set\-Controller\-Direction(), P\-I\-D\-\_\-\-Set\-Mode(), and P\-I\-D\-\_\-\-Set\-Output\-Limits().
+
+\hypertarget{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}{\index{pid.\-h@{pid.\-h}!I\-Term@{I\-Term}}
+\index{I\-Term@{I\-Term}!pid.h@{pid.\-h}}
+\subsubsection[{I\-Term}]{\setlength{\rightskip}{0pt plus 5cm}double I\-Term}}\label{pid_8h_aa9aab191c32e7e9a14d8a085d29cbd10}
+
+
+Definition at line 67 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), P\-I\-D\-\_\-\-Initialize(), and P\-I\-D\-\_\-\-Set\-Output\-Limits().
+
+\hypertarget{pid_8h_a1cf17dd45e85748457863776dcb28335}{\index{pid.\-h@{pid.\-h}!kd@{kd}}
+\index{kd@{kd}!pid.h@{pid.\-h}}
+\subsubsection[{kd}]{\setlength{\rightskip}{0pt plus 5cm}double kd}}\label{pid_8h_a1cf17dd45e85748457863776dcb28335}
+
+
+Definition at line 57 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), P\-I\-D\-\_\-\-Set\-Controller\-Direction(), P\-I\-D\-\_\-\-Set\-Sample\-Time(), and P\-I\-D\-\_\-\-Set\-Tunings().
+
+\hypertarget{pid_8h_a23e09706a4abb026e1de279c4904e926}{\index{pid.\-h@{pid.\-h}!ki@{ki}}
+\index{ki@{ki}!pid.h@{pid.\-h}}
+\subsubsection[{ki}]{\setlength{\rightskip}{0pt plus 5cm}double ki}}\label{pid_8h_a23e09706a4abb026e1de279c4904e926}
+
+
+Definition at line 56 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), P\-I\-D\-\_\-\-Set\-Controller\-Direction(), P\-I\-D\-\_\-\-Set\-Sample\-Time(), and P\-I\-D\-\_\-\-Set\-Tunings().
+
+\hypertarget{pid_8h_ac6390bc2d074992cc6ca37d132a5262d}{\index{pid.\-h@{pid.\-h}!kp@{kp}}
+\index{kp@{kp}!pid.h@{pid.\-h}}
+\subsubsection[{kp}]{\setlength{\rightskip}{0pt plus 5cm}double kp}}\label{pid_8h_ac6390bc2d074992cc6ca37d132a5262d}
+
+
+Definition at line 55 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), P\-I\-D\-\_\-\-Set\-Controller\-Direction(), and P\-I\-D\-\_\-\-Set\-Tunings().
+
+\hypertarget{pid_8h_aac5fd26617bc0eca7bc17c8c7de0023d}{\index{pid.\-h@{pid.\-h}!last\-Input@{last\-Input}}
+\index{last\-Input@{last\-Input}!pid.h@{pid.\-h}}
+\subsubsection[{last\-Input}]{\setlength{\rightskip}{0pt plus 5cm}double last\-Input}}\label{pid_8h_aac5fd26617bc0eca7bc17c8c7de0023d}
+
+
+Definition at line 67 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), and P\-I\-D\-\_\-\-Initialize().
+
+\hypertarget{pid_8h_a22cb446e5271d5d2c4b2e23792fb1966}{\index{pid.\-h@{pid.\-h}!last\-Time@{last\-Time}}
+\index{last\-Time@{last\-Time}!pid.h@{pid.\-h}}
+\subsubsection[{last\-Time}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long last\-Time}}\label{pid_8h_a22cb446e5271d5d2c4b2e23792fb1966}
+
+
+Definition at line 66 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), and P\-I\-D\-\_\-init().
+
+\hypertarget{pid_8h_ac4b81b24a669cc7af1e9d135d0d2cd2d}{\index{pid.\-h@{pid.\-h}!my\-Input@{my\-Input}}
+\index{my\-Input@{my\-Input}!pid.h@{pid.\-h}}
+\subsubsection[{my\-Input}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ my\-Input}}\label{pid_8h_ac4b81b24a669cc7af1e9d135d0d2cd2d}
+
+
+Definition at line 61 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), P\-I\-D\-\_\-init(), and P\-I\-D\-\_\-\-Initialize().
+
+\hypertarget{pid_8h_a93e76780cb2c29773815648607e10406}{\index{pid.\-h@{pid.\-h}!my\-Output@{my\-Output}}
+\index{my\-Output@{my\-Output}!pid.h@{pid.\-h}}
+\subsubsection[{my\-Output}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ my\-Output}}\label{pid_8h_a93e76780cb2c29773815648607e10406}
+
+
+Definition at line 62 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), P\-I\-D\-\_\-init(), P\-I\-D\-\_\-\-Initialize(), and P\-I\-D\-\_\-\-Set\-Output\-Limits().
+
+\hypertarget{pid_8h_aae83a2dd355e80bb681dcfa07580d1e1}{\index{pid.\-h@{pid.\-h}!my\-Setpoint@{my\-Setpoint}}
+\index{my\-Setpoint@{my\-Setpoint}!pid.h@{pid.\-h}}
+\subsubsection[{my\-Setpoint}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ my\-Setpoint}}\label{pid_8h_aae83a2dd355e80bb681dcfa07580d1e1}
+
+
+Definition at line 63 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), and P\-I\-D\-\_\-init().
+
+\hypertarget{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}{\index{pid.\-h@{pid.\-h}!out\-Max@{out\-Max}}
+\index{out\-Max@{out\-Max}!pid.h@{pid.\-h}}
+\subsubsection[{out\-Max}]{\setlength{\rightskip}{0pt plus 5cm}double out\-Max}}\label{pid_8h_a3bcf8ed648b49bfe14cf141b134ba23b}
+
+
+Definition at line 70 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), P\-I\-D\-\_\-\-Initialize(), and P\-I\-D\-\_\-\-Set\-Output\-Limits().
+
+\hypertarget{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}{\index{pid.\-h@{pid.\-h}!out\-Min@{out\-Min}}
+\index{out\-Min@{out\-Min}!pid.h@{pid.\-h}}
+\subsubsection[{out\-Min}]{\setlength{\rightskip}{0pt plus 5cm}double out\-Min}}\label{pid_8h_a5df6ddfa37685d9035861b0d9f323a05}
+
+
+Definition at line 70 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), P\-I\-D\-\_\-\-Initialize(), and P\-I\-D\-\_\-\-Set\-Output\-Limits().
+
+\hypertarget{pid_8h_a65594aaa18948a3876e324e202a2ad06}{\index{pid.\-h@{pid.\-h}!Sample\-Time@{Sample\-Time}}
+\index{Sample\-Time@{Sample\-Time}!pid.h@{pid.\-h}}
+\subsubsection[{Sample\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int Sample\-Time}}\label{pid_8h_a65594aaa18948a3876e324e202a2ad06}
+
+
+Definition at line 69 of file pid.\-h.
+
+
+
+Referenced by P\-I\-D\-\_\-\-Compute(), P\-I\-D\-\_\-init(), P\-I\-D\-\_\-\-Set\-Sample\-Time(), and P\-I\-D\-\_\-\-Set\-Tunings().
+

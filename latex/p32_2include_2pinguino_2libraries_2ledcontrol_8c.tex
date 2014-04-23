@@ -1,0 +1,591 @@
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/ledcontrol.c File Reference}
+\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/ledcontrol.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/ledcontrol.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$ledcontrol.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$delay.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a1c2d4d56b1d68af2fb8776e43a8c41f9}{L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-C}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a6c542d212fef9a9b5ba82222089a306b}{O\-P\-\_\-\-N\-O\-O\-P}~0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ac2dcbbd3fef01a1defd3aa5f8a8c612a}{O\-P\-\_\-\-D\-I\-G\-I\-T0}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a6c8209744590cd0cc8495cc6de58ab02}{O\-P\-\_\-\-D\-I\-G\-I\-T1}~2
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a430d77ba70abea8e61820aaa3f27c28b}{O\-P\-\_\-\-D\-I\-G\-I\-T2}~3
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a03d3bd8cd1b468b4a9cb473036f65747}{O\-P\-\_\-\-D\-I\-G\-I\-T3}~4
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ac3d2e72ba1cca69133e4dcbc478f616b}{O\-P\-\_\-\-D\-I\-G\-I\-T4}~5
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a021f910b62cdaa529fcea36791df7028}{O\-P\-\_\-\-D\-I\-G\-I\-T5}~6
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a5a12c4b35c924fec89c3b71246b7b7e2}{O\-P\-\_\-\-D\-I\-G\-I\-T6}~7
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a3a1210173fb70a66f649b93eb62e0884}{O\-P\-\_\-\-D\-I\-G\-I\-T7}~8
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a318b32d905ce8e57d7caec133ec7d712}{O\-P\-\_\-\-D\-E\-C\-O\-D\-E\-M\-O\-D\-E}~9
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a4f47ca7a01008a4d918302ece5314ed4}{O\-P\-\_\-\-I\-N\-T\-E\-N\-S\-I\-T\-Y}~10
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a13d91ddca53029535b6cf314b28ed15e}{O\-P\-\_\-\-S\-C\-A\-N\-L\-I\-M\-I\-T}~11
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ac4772c1c1c24a4b5837a2000c62aa0a3}{O\-P\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N}~12
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a7ef59a31858360d26d5dade28441598c}{O\-P\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-T\-E\-S\-T}~15
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a4202f7bcf650ec3649b27e15d59698dd}{Led\-Control\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} data\-Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} clk\-Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} cs\-Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} num\-Devices)
+\begin{DoxyCompactList}\small\item\em public\-: \end{DoxyCompactList}\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a103e77d7ff7d0485aea542f46f768d63}{Led\-Control\-\_\-get\-Device\-Count} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a1deda6e5ed530f8315e977f4e1953203}{Led\-Control\-\_\-shutdown} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} matrix, \hyperlink{p8_2pinguino_2core_2typedef_8h_a7670a4e8a07d9ebb00411948b0bbf86d}{boolean} b)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a06786a3652a0d433b0a9d4b2bcda6e4a}{Led\-Control\-\_\-set\-Scan\-Limit} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} matrix, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} limit)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a7f968f85afc7acf265a22e4caa01e18a}{Led\-Control\-\_\-set\-Intensity} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} matrix, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} u8ensity)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a89ec2019b21341c391dc1a495a4e8c92}{Led\-Control\-\_\-clear\-Display} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} matrix)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a110b53087efc29526e88225098c42b26}{Led\-Control\-\_\-clear\-All} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ab8a397f3760a01a47a5b5089a73e9ecb}{Led\-Control\-\_\-set\-Led} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} matrix, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} row, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} column, \hyperlink{p8_2pinguino_2core_2typedef_8h_a7670a4e8a07d9ebb00411948b0bbf86d}{boolean} \hyperlink{keypad32_8c_a2dc73433524e44e05908b0250ce9d9de}{state})
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a7e96c013009119b83f6d0ff89488d580}{Led\-Control\-\_\-set\-Row} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} matrix, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} row, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} value)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a89076002faef63ab51e166d3396f12c0}{Led\-Control\-\_\-set\-Column} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} matrix, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} col, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} value)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a178d9db2b2a191a5e8433f6582d49e9a}{shift\-Out} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} data\-Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} clock\-Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} bit\-Order, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} val)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}{Led\-Control\-\_\-spi\-Transfer} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} matrix, volatile \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} opcode, volatile \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a1c2d4d56b1d68af2fb8776e43a8c41f9}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-C@{L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-C}}
+\index{L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-C@{L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-C}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-C}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a1c2d4d56b1d68af2fb8776e43a8c41f9}
+
+
+Definition at line 28 of file ledcontrol.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a318b32d905ce8e57d7caec133ec7d712}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-D\-E\-C\-O\-D\-E\-M\-O\-D\-E@{O\-P\-\_\-\-D\-E\-C\-O\-D\-E\-M\-O\-D\-E}}
+\index{O\-P\-\_\-\-D\-E\-C\-O\-D\-E\-M\-O\-D\-E@{O\-P\-\_\-\-D\-E\-C\-O\-D\-E\-M\-O\-D\-E}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-D\-E\-C\-O\-D\-E\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-D\-E\-C\-O\-D\-E\-M\-O\-D\-E~9}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a318b32d905ce8e57d7caec133ec7d712}
+
+
+Definition at line 49 of file ledcontrol.\-c.
+
+
+
+Referenced by Led\-Control\-\_\-init().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ac2dcbbd3fef01a1defd3aa5f8a8c612a}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-D\-I\-G\-I\-T0@{O\-P\-\_\-\-D\-I\-G\-I\-T0}}
+\index{O\-P\-\_\-\-D\-I\-G\-I\-T0@{O\-P\-\_\-\-D\-I\-G\-I\-T0}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-D\-I\-G\-I\-T0}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-D\-I\-G\-I\-T0~1}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ac2dcbbd3fef01a1defd3aa5f8a8c612a}
+
+
+Definition at line 41 of file ledcontrol.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a6c8209744590cd0cc8495cc6de58ab02}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-D\-I\-G\-I\-T1@{O\-P\-\_\-\-D\-I\-G\-I\-T1}}
+\index{O\-P\-\_\-\-D\-I\-G\-I\-T1@{O\-P\-\_\-\-D\-I\-G\-I\-T1}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-D\-I\-G\-I\-T1}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-D\-I\-G\-I\-T1~2}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a6c8209744590cd0cc8495cc6de58ab02}
+
+
+Definition at line 42 of file ledcontrol.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a430d77ba70abea8e61820aaa3f27c28b}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-D\-I\-G\-I\-T2@{O\-P\-\_\-\-D\-I\-G\-I\-T2}}
+\index{O\-P\-\_\-\-D\-I\-G\-I\-T2@{O\-P\-\_\-\-D\-I\-G\-I\-T2}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-D\-I\-G\-I\-T2}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-D\-I\-G\-I\-T2~3}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a430d77ba70abea8e61820aaa3f27c28b}
+
+
+Definition at line 43 of file ledcontrol.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a03d3bd8cd1b468b4a9cb473036f65747}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-D\-I\-G\-I\-T3@{O\-P\-\_\-\-D\-I\-G\-I\-T3}}
+\index{O\-P\-\_\-\-D\-I\-G\-I\-T3@{O\-P\-\_\-\-D\-I\-G\-I\-T3}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-D\-I\-G\-I\-T3}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-D\-I\-G\-I\-T3~4}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a03d3bd8cd1b468b4a9cb473036f65747}
+
+
+Definition at line 44 of file ledcontrol.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ac3d2e72ba1cca69133e4dcbc478f616b}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-D\-I\-G\-I\-T4@{O\-P\-\_\-\-D\-I\-G\-I\-T4}}
+\index{O\-P\-\_\-\-D\-I\-G\-I\-T4@{O\-P\-\_\-\-D\-I\-G\-I\-T4}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-D\-I\-G\-I\-T4}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-D\-I\-G\-I\-T4~5}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ac3d2e72ba1cca69133e4dcbc478f616b}
+
+
+Definition at line 45 of file ledcontrol.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a021f910b62cdaa529fcea36791df7028}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-D\-I\-G\-I\-T5@{O\-P\-\_\-\-D\-I\-G\-I\-T5}}
+\index{O\-P\-\_\-\-D\-I\-G\-I\-T5@{O\-P\-\_\-\-D\-I\-G\-I\-T5}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-D\-I\-G\-I\-T5}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-D\-I\-G\-I\-T5~6}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a021f910b62cdaa529fcea36791df7028}
+
+
+Definition at line 46 of file ledcontrol.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a5a12c4b35c924fec89c3b71246b7b7e2}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-D\-I\-G\-I\-T6@{O\-P\-\_\-\-D\-I\-G\-I\-T6}}
+\index{O\-P\-\_\-\-D\-I\-G\-I\-T6@{O\-P\-\_\-\-D\-I\-G\-I\-T6}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-D\-I\-G\-I\-T6}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-D\-I\-G\-I\-T6~7}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a5a12c4b35c924fec89c3b71246b7b7e2}
+
+
+Definition at line 47 of file ledcontrol.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a3a1210173fb70a66f649b93eb62e0884}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-D\-I\-G\-I\-T7@{O\-P\-\_\-\-D\-I\-G\-I\-T7}}
+\index{O\-P\-\_\-\-D\-I\-G\-I\-T7@{O\-P\-\_\-\-D\-I\-G\-I\-T7}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-D\-I\-G\-I\-T7}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-D\-I\-G\-I\-T7~8}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a3a1210173fb70a66f649b93eb62e0884}
+
+
+Definition at line 48 of file ledcontrol.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a7ef59a31858360d26d5dade28441598c}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-T\-E\-S\-T@{O\-P\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-T\-E\-S\-T}}
+\index{O\-P\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-T\-E\-S\-T@{O\-P\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-T\-E\-S\-T}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-T\-E\-S\-T~15}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a7ef59a31858360d26d5dade28441598c}
+
+
+Definition at line 53 of file ledcontrol.\-c.
+
+
+
+Referenced by Led\-Control\-\_\-init().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a4f47ca7a01008a4d918302ece5314ed4}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-I\-N\-T\-E\-N\-S\-I\-T\-Y@{O\-P\-\_\-\-I\-N\-T\-E\-N\-S\-I\-T\-Y}}
+\index{O\-P\-\_\-\-I\-N\-T\-E\-N\-S\-I\-T\-Y@{O\-P\-\_\-\-I\-N\-T\-E\-N\-S\-I\-T\-Y}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-I\-N\-T\-E\-N\-S\-I\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-I\-N\-T\-E\-N\-S\-I\-T\-Y~10}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a4f47ca7a01008a4d918302ece5314ed4}
+
+
+Definition at line 50 of file ledcontrol.\-c.
+
+
+
+Referenced by Led\-Control\-\_\-set\-Intensity().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a6c542d212fef9a9b5ba82222089a306b}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-N\-O\-O\-P@{O\-P\-\_\-\-N\-O\-O\-P}}
+\index{O\-P\-\_\-\-N\-O\-O\-P@{O\-P\-\_\-\-N\-O\-O\-P}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-N\-O\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-N\-O\-O\-P~0}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a6c542d212fef9a9b5ba82222089a306b}
+
+
+Definition at line 40 of file ledcontrol.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a13d91ddca53029535b6cf314b28ed15e}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-S\-C\-A\-N\-L\-I\-M\-I\-T@{O\-P\-\_\-\-S\-C\-A\-N\-L\-I\-M\-I\-T}}
+\index{O\-P\-\_\-\-S\-C\-A\-N\-L\-I\-M\-I\-T@{O\-P\-\_\-\-S\-C\-A\-N\-L\-I\-M\-I\-T}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-S\-C\-A\-N\-L\-I\-M\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-S\-C\-A\-N\-L\-I\-M\-I\-T~11}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a13d91ddca53029535b6cf314b28ed15e}
+
+
+Definition at line 51 of file ledcontrol.\-c.
+
+
+
+Referenced by Led\-Control\-\_\-set\-Scan\-Limit().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ac4772c1c1c24a4b5837a2000c62aa0a3}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!O\-P\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N@{O\-P\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N}}
+\index{O\-P\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N@{O\-P\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{O\-P\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-P\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N~12}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ac4772c1c1c24a4b5837a2000c62aa0a3}
+
+
+Definition at line 52 of file ledcontrol.\-c.
+
+
+
+Referenced by Led\-Control\-\_\-shutdown().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a110b53087efc29526e88225098c42b26}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!Led\-Control\-\_\-clear\-All@{Led\-Control\-\_\-clear\-All}}
+\index{Led\-Control\-\_\-clear\-All@{Led\-Control\-\_\-clear\-All}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{Led\-Control\-\_\-clear\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Led\-Control\-\_\-clear\-All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a110b53087efc29526e88225098c42b26}
+
+
+Definition at line 130 of file ledcontrol.\-c.
+
+
+
+References Led\-Control\-\_\-clear\-Display(), and max\-Devices.
+
+
+\begin{DoxyCode}
+131 \{
+132     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+133     
+134     \textcolor{keywordflow}{for} (i=0;i<\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices};i++)
+135         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_a89ec2019b21341c391dc1a495a4e8c92}{LedControl\_clearDisplay}(i);
+136 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a89ec2019b21341c391dc1a495a4e8c92}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!Led\-Control\-\_\-clear\-Display@{Led\-Control\-\_\-clear\-Display}}
+\index{Led\-Control\-\_\-clear\-Display@{Led\-Control\-\_\-clear\-Display}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{Led\-Control\-\_\-clear\-Display}]{\setlength{\rightskip}{0pt plus 5cm}void Led\-Control\-\_\-clear\-Display (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{matrix}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a89ec2019b21341c391dc1a495a4e8c92}
+
+
+Definition at line 115 of file ledcontrol.\-c.
+
+
+
+References Led\-Control\-\_\-spi\-Transfer(), max\-Devices, and status.
+
+
+\begin{DoxyCode}
+116 \{
+117     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} offset;
+118     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+119     
+120     \textcolor{keywordflow}{if}(matrix<0 || matrix>=\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices})
+121         \textcolor{keywordflow}{return};
+122     offset=matrix*8;
+123     \textcolor{keywordflow}{for}(i=0;i<8;i++)
+124     \{
+125         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}[offset+i]=0;
+126         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}{LedControl\_spiTransfer}(matrix, i+1,\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}[offset+i]);
+127     \}
+128 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a103e77d7ff7d0485aea542f46f768d63}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!Led\-Control\-\_\-get\-Device\-Count@{Led\-Control\-\_\-get\-Device\-Count}}
+\index{Led\-Control\-\_\-get\-Device\-Count@{Led\-Control\-\_\-get\-Device\-Count}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{Led\-Control\-\_\-get\-Device\-Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Led\-Control\-\_\-get\-Device\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a103e77d7ff7d0485aea542f46f768d63}
+
+
+Definition at line 85 of file ledcontrol.\-c.
+
+
+
+References max\-Devices.
+
+
+\begin{DoxyCode}
+85                                \{
+86     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices};
+87 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a4202f7bcf650ec3649b27e15d59698dd}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!Led\-Control\-\_\-init@{Led\-Control\-\_\-init}}
+\index{Led\-Control\-\_\-init@{Led\-Control\-\_\-init}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{Led\-Control\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void Led\-Control\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{data\-Pin, }
+\item[{{\bf u8}}]{clk\-Pin, }
+\item[{{\bf u8}}]{cs\-Pin, }
+\item[{{\bf u8}}]{num\-Devices}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a4202f7bcf650ec3649b27e15d59698dd}
+
+
+public\-: 
+
+
+
+Definition at line 55 of file ledcontrol.\-c.
+
+
+
+References digitalwrite(), H\-I\-G\-H, Led\-Control\-\_\-clear\-Display(), Led\-Control\-\_\-set\-Scan\-Limit(), Led\-Control\-\_\-shutdown(), L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-S\-P\-I\-\_\-\-C\-L\-K, L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-S\-P\-I\-\_\-\-C\-S, L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-S\-P\-I\-\_\-\-M\-O\-S\-I, Led\-Control\-\_\-spi\-Transfer(), max\-Devices, O\-P\-\_\-\-D\-E\-C\-O\-D\-E\-M\-O\-D\-E, O\-P\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-T\-E\-S\-T, O\-U\-T\-P\-U\-T, pinmode(), and status.
+
+
+\begin{DoxyCode}
+56 \{
+57     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+58     
+59     \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a5f8ab43dcb443f53743c67671b66eec9}{LEDCONTROL\_SPI\_MOSI} = dataPin;
+60     \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a162c24eee60afd2550cb8b000b39c530}{LEDCONTROL\_SPI\_CLK}  = clkPin;
+61     \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_ac2ec9321ab16c45a312714ad7b5bd373}{LEDCONTROL\_SPI\_CS}   = csPin;
+62     \textcolor{keywordflow}{if}(numDevices<=0 || numDevices>8 )
+63         numDevices=8;
+64     \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices}=numDevices;
+65     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a5f8ab43dcb443f53743c67671b66eec9}{LEDCONTROL\_SPI\_MOSI},\hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+66     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a162c24eee60afd2550cb8b000b39c530}{LEDCONTROL\_SPI\_CLK},\hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+67     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_ac2ec9321ab16c45a312714ad7b5bd373}{LEDCONTROL\_SPI\_CS},\hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+68     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_ac2ec9321ab16c45a312714ad7b5bd373}{LEDCONTROL\_SPI\_CS},\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+69     \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a5f8ab43dcb443f53743c67671b66eec9}{LEDCONTROL\_SPI\_MOSI}=dataPin;
+70     \textcolor{keywordflow}{for}(i=0;i<64;i++) 
+71         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}[i]=0x00;
+72     \textcolor{keywordflow}{for}(i=0;i<\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices};i++)
+73     \{
+74         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}{LedControl\_spiTransfer}(i,\hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a7ef59a31858360d26d5dade28441598c}{OP\_DISPLAYTEST},0);
+75         \textcolor{comment}{//scanlimit is set to max on startup}
+76         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_a06786a3652a0d433b0a9d4b2bcda6e4a}{LedControl\_setScanLimit}(i,7);
+77         \textcolor{comment}{//decode is done in source}
+78         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}{LedControl\_spiTransfer}(i,\hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a318b32d905ce8e57d7caec133ec7d712}{OP\_DECODEMODE},0);
+79         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_a89ec2019b21341c391dc1a495a4e8c92}{LedControl\_clearDisplay}(i);
+80         \textcolor{comment}{//we go u8o shutdown-mode on startup}
+81         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_a1deda6e5ed530f8315e977f4e1953203}{LedControl\_shutdown}(i,\textcolor{keyword}{true});
+82     \}
+83 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a89076002faef63ab51e166d3396f12c0}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!Led\-Control\-\_\-set\-Column@{Led\-Control\-\_\-set\-Column}}
+\index{Led\-Control\-\_\-set\-Column@{Led\-Control\-\_\-set\-Column}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{Led\-Control\-\_\-set\-Column}]{\setlength{\rightskip}{0pt plus 5cm}void Led\-Control\-\_\-set\-Column (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{matrix, }
+\item[{{\bf u8}}]{col, }
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a89076002faef63ab51e166d3396f12c0}
+
+
+Definition at line 172 of file ledcontrol.\-c.
+
+
+
+References Led\-Control\-\_\-set\-Led(), and max\-Devices.
+
+
+\begin{DoxyCode}
+173 \{
+174     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} val;
+175     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} row;
+176 
+177     \textcolor{keywordflow}{if}(matrix<0 || matrix>=\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices})
+178         \textcolor{keywordflow}{return};
+179     \textcolor{keywordflow}{if}(col<0 || col>7) 
+180         \textcolor{keywordflow}{return};
+181     \textcolor{keywordflow}{for}(row=0;row<8;row++)
+182     \{
+183         \textcolor{comment}{//val=value >> (7-row);}
+184         val=value >> row;
+185         val=val & 0x01;
+186         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_ab8a397f3760a01a47a5b5089a73e9ecb}{LedControl\_setLed}(matrix,row,col,val);
+187     \}
+188 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a7f968f85afc7acf265a22e4caa01e18a}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!Led\-Control\-\_\-set\-Intensity@{Led\-Control\-\_\-set\-Intensity}}
+\index{Led\-Control\-\_\-set\-Intensity@{Led\-Control\-\_\-set\-Intensity}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{Led\-Control\-\_\-set\-Intensity}]{\setlength{\rightskip}{0pt plus 5cm}void Led\-Control\-\_\-set\-Intensity (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{matrix, }
+\item[{{\bf u8}}]{u8ensity}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a7f968f85afc7acf265a22e4caa01e18a}
+
+
+Definition at line 107 of file ledcontrol.\-c.
+
+
+
+References Led\-Control\-\_\-spi\-Transfer(), max\-Devices, and O\-P\-\_\-\-I\-N\-T\-E\-N\-S\-I\-T\-Y.
+
+
+\begin{DoxyCode}
+108 \{
+109     \textcolor{keywordflow}{if}(matrix<0 || matrix>=\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices})
+110         \textcolor{keywordflow}{return};
+111     \textcolor{keywordflow}{if}(u8ensity>=0 || u8ensity<16)
+112         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}{LedControl\_spiTransfer}(matrix, \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a4f47ca7a01008a4d918302ece5314ed4}{OP\_INTENSITY},u8ensity);
+113 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ab8a397f3760a01a47a5b5089a73e9ecb}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!Led\-Control\-\_\-set\-Led@{Led\-Control\-\_\-set\-Led}}
+\index{Led\-Control\-\_\-set\-Led@{Led\-Control\-\_\-set\-Led}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{Led\-Control\-\_\-set\-Led}]{\setlength{\rightskip}{0pt plus 5cm}void Led\-Control\-\_\-set\-Led (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{matrix, }
+\item[{{\bf u8}}]{row, }
+\item[{{\bf u8}}]{column, }
+\item[{{\bf boolean}}]{state}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ab8a397f3760a01a47a5b5089a73e9ecb}
+
+
+Definition at line 138 of file ledcontrol.\-c.
+
+
+
+References Led\-Control\-\_\-spi\-Transfer(), max\-Devices, and status.
+
+
+\begin{DoxyCode}
+139 \{
+140     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} offset;
+141     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} val=0x00;
+142 
+143     \textcolor{keywordflow}{if}(matrix<0 || matrix>=\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices})
+144         \textcolor{keywordflow}{return};
+145     \textcolor{keywordflow}{if}(row<0 || row>7 || column<0 || column>7)
+146         \textcolor{keywordflow}{return};
+147     offset=matrix*8;
+148     val=0b10000000 >> column;
+149     \textcolor{keywordflow}{if}(\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state})
+150         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}[offset+row]=\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}[offset+row]|val;
+151     \textcolor{keywordflow}{else}
+152     \{
+153         val=~val;
+154         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}[offset+row]=\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}[offset+row]&val;
+155     \}
+156     \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}{LedControl\_spiTransfer}(matrix, row+1,\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}[offset+row]);
+157 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a7e96c013009119b83f6d0ff89488d580}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!Led\-Control\-\_\-set\-Row@{Led\-Control\-\_\-set\-Row}}
+\index{Led\-Control\-\_\-set\-Row@{Led\-Control\-\_\-set\-Row}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{Led\-Control\-\_\-set\-Row}]{\setlength{\rightskip}{0pt plus 5cm}void Led\-Control\-\_\-set\-Row (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{matrix, }
+\item[{{\bf u8}}]{row, }
+\item[{{\bf u8}}]{value}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a7e96c013009119b83f6d0ff89488d580}
+
+
+Definition at line 159 of file ledcontrol.\-c.
+
+
+
+References Led\-Control\-\_\-spi\-Transfer(), max\-Devices, and status.
+
+
+\begin{DoxyCode}
+160 \{
+161     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} offset;
+162     
+163     \textcolor{keywordflow}{if}(matrix<0 || matrix>=\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices})
+164         \textcolor{keywordflow}{return};
+165     \textcolor{keywordflow}{if}(row<0 || row>7)
+166         \textcolor{keywordflow}{return};
+167     offset=matrix*8;
+168     \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}[offset+row]=value;
+169     \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}{LedControl\_spiTransfer}(matrix, row+1,\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}[offset+row]);
+170 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a06786a3652a0d433b0a9d4b2bcda6e4a}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!Led\-Control\-\_\-set\-Scan\-Limit@{Led\-Control\-\_\-set\-Scan\-Limit}}
+\index{Led\-Control\-\_\-set\-Scan\-Limit@{Led\-Control\-\_\-set\-Scan\-Limit}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{Led\-Control\-\_\-set\-Scan\-Limit}]{\setlength{\rightskip}{0pt plus 5cm}void Led\-Control\-\_\-set\-Scan\-Limit (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{matrix, }
+\item[{{\bf u8}}]{limit}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a06786a3652a0d433b0a9d4b2bcda6e4a}
+
+
+Definition at line 99 of file ledcontrol.\-c.
+
+
+
+References Led\-Control\-\_\-spi\-Transfer(), max\-Devices, and O\-P\-\_\-\-S\-C\-A\-N\-L\-I\-M\-I\-T.
+
+
+\begin{DoxyCode}
+100 \{
+101     \textcolor{keywordflow}{if}(matrix<0 || matrix>=\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices})
+102         \textcolor{keywordflow}{return};
+103     \textcolor{keywordflow}{if}(limit>=0 || limit<8)
+104         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}{LedControl\_spiTransfer}(matrix, \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a13d91ddca53029535b6cf314b28ed15e}{OP\_SCANLIMIT},limit);
+105 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a1deda6e5ed530f8315e977f4e1953203}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!Led\-Control\-\_\-shutdown@{Led\-Control\-\_\-shutdown}}
+\index{Led\-Control\-\_\-shutdown@{Led\-Control\-\_\-shutdown}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{Led\-Control\-\_\-shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void Led\-Control\-\_\-shutdown (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{matrix, }
+\item[{{\bf boolean}}]{b}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a1deda6e5ed530f8315e977f4e1953203}
+
+
+Definition at line 89 of file ledcontrol.\-c.
+
+
+
+References Led\-Control\-\_\-spi\-Transfer(), max\-Devices, and O\-P\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N.
+
+
+\begin{DoxyCode}
+90 \{
+91     \textcolor{keywordflow}{if}(matrix<0 || matrix>=\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices})
+92         \textcolor{keywordflow}{return};
+93     \textcolor{keywordflow}{if}(b)
+94         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}{LedControl\_spiTransfer}(matrix, \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ac4772c1c1c24a4b5837a2000c62aa0a3}{OP\_SHUTDOWN},0);
+95     \textcolor{keywordflow}{else}
+96         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}{LedControl\_spiTransfer}(matrix, \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8c_ac4772c1c1c24a4b5837a2000c62aa0a3}{OP\_SHUTDOWN},1);
+97 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!Led\-Control\-\_\-spi\-Transfer@{Led\-Control\-\_\-spi\-Transfer}}
+\index{Led\-Control\-\_\-spi\-Transfer@{Led\-Control\-\_\-spi\-Transfer}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{Led\-Control\-\_\-spi\-Transfer}]{\setlength{\rightskip}{0pt plus 5cm}void Led\-Control\-\_\-spi\-Transfer (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{matrix, }
+\item[{volatile {\bf u8}}]{opcode, }
+\item[{volatile {\bf u8}}]{data}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_acc1aa40bd63218380e6406cf38a6d1e7}
+
+
+Definition at line 252 of file ledcontrol.\-c.
+
+
+
+References digitalwrite(), H\-I\-G\-H, L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-S\-P\-I\-\_\-\-C\-L\-K, L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-S\-P\-I\-\_\-\-C\-S, L\-E\-D\-C\-O\-N\-T\-R\-O\-L\-\_\-\-S\-P\-I\-\_\-\-M\-O\-S\-I, L\-O\-W, max\-Devices, M\-S\-B\-F\-I\-R\-S\-T, shift\-Out(), and spidata.
+
+
+\begin{DoxyCode}
+253 \{
+254     \textcolor{comment}{//Create an array with the data to shift out}
+255     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} offset=matrix*2;
+256     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} maxbytes=\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a76d7851b3e58f13df98b8380dbbd92ce}{maxDevices}*2;
+257     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+258     
+259     \textcolor{keywordflow}{for}(i=0;i<maxbytes;i++)
+260         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_aadfe8d9211d2f6de07c75c834ddbb61c}{spidata}[i]=(\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})0;
+261     \textcolor{comment}{//put our device data u8o the array}
+262     \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_aadfe8d9211d2f6de07c75c834ddbb61c}{spidata}[offset+1]=opcode;
+263     \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_aadfe8d9211d2f6de07c75c834ddbb61c}{spidata}[offset]=data;
+264     \textcolor{comment}{//enable the line }
+265     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_ac2ec9321ab16c45a312714ad7b5bd373}{LEDCONTROL\_SPI\_CS},\hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+266     \textcolor{comment}{//Now shift out the data }
+267     \textcolor{keywordflow}{for}(i=maxbytes;i>0;i--)
+268         \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8c_a178d9db2b2a191a5e8433f6582d49e9a}{shiftOut}(\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a5f8ab43dcb443f53743c67671b66eec9}{LEDCONTROL\_SPI\_MOSI},
+      \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a162c24eee60afd2550cb8b000b39c530}{LEDCONTROL\_SPI\_CLK},\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a1c7ef42eff02618bde70868af4944d81}{MSBFIRST},\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_aadfe8d9211d2f6de07c75c834ddbb61c}{spidata}[i-1]);
+269     \textcolor{comment}{//latch the data onto the display}
+270     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_ac2ec9321ab16c45a312714ad7b5bd373}{LEDCONTROL\_SPI\_CS},\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+271 \}    
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a178d9db2b2a191a5e8433f6582d49e9a}{\index{p32/include/pinguino/libraries/ledcontrol.\-c@{p32/include/pinguino/libraries/ledcontrol.\-c}!shift\-Out@{shift\-Out}}
+\index{shift\-Out@{shift\-Out}!p32/include/pinguino/libraries/ledcontrol.c@{p32/include/pinguino/libraries/ledcontrol.\-c}}
+\subsubsection[{shift\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void shift\-Out (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{data\-Pin, }
+\item[{{\bf u8}}]{clock\-Pin, }
+\item[{{\bf u8}}]{bit\-Order, }
+\item[{{\bf u8}}]{val}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2ledcontrol_8c_a178d9db2b2a191a5e8433f6582d49e9a}
+
+
+Definition at line 234 of file ledcontrol.\-c.
+
+
+
+References digitalwrite(), H\-I\-G\-H, L\-O\-W, and L\-S\-B\-F\-I\-R\-S\-T.
+
+
+\begin{DoxyCode}
+235 \{
+236     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+237     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} bitMask;
+238 
+239     \textcolor{keywordflow}{for} (i = 0; i < 8; i++)
+240     \{
+241         \textcolor{keywordflow}{if} (bitOrder == \hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a5811613d98580676f67f0dde8125433e}{LSBFIRST})
+242             bitMask = (1 << i);
+243         \textcolor{keywordflow}{else}
+244             bitMask = (1 << (7 - i));
+245 
+246         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(dataPin, (val & bitMask) ? \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH} : \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+247         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(clockPin, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+248         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(clockPin, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});            
+249     \}
+250 \}
+\end{DoxyCode}

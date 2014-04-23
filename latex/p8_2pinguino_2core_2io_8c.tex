@@ -1,0 +1,157 @@
+\hypertarget{p8_2pinguino_2core_2io_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/io.c File Reference}
+\label{p8_2pinguino_2core_2io_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/io.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/io.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2io_8c_a5ddbadec86437115c3de986cc8cf290b}{\-\_\-\-\_\-\-I\-O\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2core_2io_8c_ac1e824237e4a013ed7d7d5f499292eba}{I\-O\-\_\-init} (void)
+\item 
+void \hyperlink{p8_2pinguino_2core_2io_8c_ac1f90270ee42fb6dd2675c6f0ec157c7}{I\-O\-\_\-digital} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2io_8c_a5ddbadec86437115c3de986cc8cf290b}{\index{p8/pinguino/core/io.\-c@{p8/pinguino/core/io.\-c}!\-\_\-\-\_\-\-I\-O\-\_\-\-C@{\-\_\-\-\_\-\-I\-O\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-I\-O\-\_\-\-C@{\-\_\-\-\_\-\-I\-O\-\_\-\-C}!p8/pinguino/core/io.c@{p8/pinguino/core/io.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-I\-O\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-I\-O\-\_\-\-C}}\label{p8_2pinguino_2core_2io_8c_a5ddbadec86437115c3de986cc8cf290b}
+
+
+Definition at line 33 of file io.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2io_8c_ac1f90270ee42fb6dd2675c6f0ec157c7}{\index{p8/pinguino/core/io.\-c@{p8/pinguino/core/io.\-c}!I\-O\-\_\-digital@{I\-O\-\_\-digital}}
+\index{I\-O\-\_\-digital@{I\-O\-\_\-digital}!p8/pinguino/core/io.c@{p8/pinguino/core/io.\-c}}
+\subsubsection[{I\-O\-\_\-digital}]{\setlength{\rightskip}{0pt plus 5cm}void I\-O\-\_\-digital (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2io_8c_ac1f90270ee42fb6dd2675c6f0ec157c7}
+
+
+Definition at line 104 of file io.\-c.
+
+
+\begin{DoxyCode}
+105 \{
+106 \textcolor{preprocessor}{    #if defined(\_\_18f2455) || defined(\_\_18f4455) || \(\backslash\)}
+107 \textcolor{preprocessor}{        defined(\_\_18f2550) || defined(\_\_18f4550)}
+108 \textcolor{preprocessor}{}
+109         ADCON1 = 0x0F;              \textcolor{comment}{// AN0 to AN12 Digital I/O}
+110         CMCON = 0x07;               \textcolor{comment}{// Comparators as Digital I/O}
+111 
+112 \textcolor{preprocessor}{    #elif defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+113 \textcolor{preprocessor}{}
+114         \textcolor{comment}{// Initialize all Analog pins as Digital I/O}
+115         ANSELA = 0;
+116         ANSELB = 0;
+117         ANSELC = 0;
+118 \textcolor{preprocessor}{        #if defined(\_\_18f45k50)}
+119 \textcolor{preprocessor}{}        ANSELD = 0;
+120         ANSELE = 0;
+121 \textcolor{preprocessor}{        #endif}
+122 \textcolor{preprocessor}{}
+123 \textcolor{preprocessor}{    #elif defined(\_\_18f26j50) || defined(\_\_18f46j50)}
+124 \textcolor{preprocessor}{}
+125         \textcolor{comment}{// Initialize all Analog pins as Digital I/O}
+126         ANCON0 = 0xFF;              \textcolor{comment}{// AN0 to AN7  Digital I/O}
+127         ANCON1 = 0x1F;              \textcolor{comment}{// AN8 to AN12 Digital I/O}
+128 
+129         \textcolor{comment}{// Turn off all comparators }
+130         CM1CON = 0x00;
+131         CM2CON = 0x00; 
+132         CVRCON = 0x00;
+133 
+134 \textcolor{preprocessor}{    #elif defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+135 \textcolor{preprocessor}{}
+136         \textcolor{comment}{// Initialize all Analog pins as Digital I/O}
+137         ANCON0 = 0xFF;              \textcolor{comment}{// AN0 to AN7  Digital I/O}
+138         ANCON1 = 0x1F;              \textcolor{comment}{// AN8 to AN12 Digital I/O}
+139 
+140 \textcolor{preprocessor}{    #endif}
+141 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2io_8c_ac1e824237e4a013ed7d7d5f499292eba}{\index{p8/pinguino/core/io.\-c@{p8/pinguino/core/io.\-c}!I\-O\-\_\-init@{I\-O\-\_\-init}}
+\index{I\-O\-\_\-init@{I\-O\-\_\-init}!p8/pinguino/core/io.c@{p8/pinguino/core/io.\-c}}
+\subsubsection[{I\-O\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void I\-O\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2io_8c_ac1e824237e4a013ed7d7d5f499292eba}
+
+
+Definition at line 41 of file io.\-c.
+
+
+\begin{DoxyCode}
+42 \{
+43     \textcolor{comment}{// Initialize everything as an output}
+44     
+45     \textcolor{comment}{// Set everything low}
+46     LATA  = 0x00;
+47     LATB  = 0x00;
+48 
+49 \textcolor{preprocessor}{    #if defined(\_\_18f26j50) || defined(\_\_18f46j50) || \(\backslash\)}
+50 \textcolor{preprocessor}{        defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+51 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_SERIAL\_\_}
+52 \textcolor{preprocessor}{}        LATC  = 0x44;   \textcolor{comment}{// Except UART TX,TX2 bit (maintain high state to not emit extra low state) }
+53 \textcolor{preprocessor}{        #else}
+54 \textcolor{preprocessor}{}        LATC  = 0x00;   
+55 \textcolor{preprocessor}{        #endif}
+56 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #endif}
+57 \textcolor{preprocessor}{}    
+58 \textcolor{preprocessor}{    #if  defined(\_\_18f2455)  || defined(\_\_18f4455)  || \(\backslash\)}
+59 \textcolor{preprocessor}{         defined(\_\_18f2550)  || defined(\_\_18f4550)  || \(\backslash\)}
+60 \textcolor{preprocessor}{         defined(\_\_18f25k50) || defined(\_\_18f45k50)}
+61 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_SERIAL\_\_}
+62 \textcolor{preprocessor}{}        LATC  = 0x40;   \textcolor{comment}{// Except UART TX bit (maintain high state to not emit extra low state) }
+63 \textcolor{preprocessor}{        #else}
+64 \textcolor{preprocessor}{}        LATC  = 0x40;   
+65 \textcolor{preprocessor}{        #endif}
+66 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #endif}
+67 \textcolor{preprocessor}{}
+68 \textcolor{preprocessor}{    #if defined(\_\_18f4455)  || defined(\_\_18f4550)  || \(\backslash\)}
+69 \textcolor{preprocessor}{        defined(\_\_18f45k50) || defined(\_\_18f46j50) || \(\backslash\)}
+70 \textcolor{preprocessor}{        defined(\_\_18f47j53)}
+71 \textcolor{preprocessor}{}    LATD  = 0x00; 
+72     LATE  = 0x00; 
+73 \textcolor{preprocessor}{    #endif}
+74 \textcolor{preprocessor}{}
+75     TRISA = 0x00;
+76 \textcolor{preprocessor}{    #ifndef I2CINT}
+77 \textcolor{preprocessor}{}    TRISB = 0x00;
+78 \textcolor{preprocessor}{    #endif}
+79 \textcolor{preprocessor}{}    TRISCbits.TRISC0 = 0x00;
+80     TRISCbits.TRISC1 = 0x00;
+81     TRISCbits.TRISC2 = 0x00;
+82     TRISCbits.TRISC6 = 0x00;
+83     TRISCbits.TRISC7 = 0x00;
+84 \textcolor{preprocessor}{    #if defined(\_\_18f4455)  || defined(\_\_18f4550)  || \(\backslash\)}
+85 \textcolor{preprocessor}{        defined(\_\_18f45k50) || defined(\_\_18f46j50) || \(\backslash\)}
+86 \textcolor{preprocessor}{        defined(\_\_18f47j53)}
+87 \textcolor{preprocessor}{}    TRISD = 0x00; 
+88     TRISE = 0x00; 
+89 \textcolor{preprocessor}{    #endif}
+90 \textcolor{preprocessor}{}
+91     \textcolor{comment}{// Set everything low to avoid current leakage in low-power mode}
+92     PORTA  = 0x00;
+93     PORTB  = 0x00;
+94     PORTC  = 0x00;
+95 \textcolor{preprocessor}{    #if defined(\_\_18f4455)  || defined(\_\_18f4550)  || \(\backslash\)}
+96 \textcolor{preprocessor}{        defined(\_\_18f45k50) || defined(\_\_18f46j50) || \(\backslash\)}
+97 \textcolor{preprocessor}{        defined(\_\_18f47j53)}
+98 \textcolor{preprocessor}{}    PORTD  = 0x00; 
+99     PORTE  = 0x00; 
+100 \textcolor{preprocessor}{    #endif}
+101 \textcolor{preprocessor}{}\}
+\end{DoxyCode}

@@ -1,0 +1,2073 @@
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/rtcc.c File Reference}
+\label{p32_2include_2pinguino_2core_2rtcc_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/rtcc.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/rtcc.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$system.\-c$>$}\\*
+{\ttfamily \#include $<$interrupt.\-c$>$}\\*
+{\ttfamily \#include $<$bcd.\-c$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionrtcc_time}{rtcc\-Time}
+\item 
+union \hyperlink{unionrtcc_date}{rtcc\-Date}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a78e37c733ac4e8d934b30a86661ac14e}{\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a38b594da42ef2a8263ef944a7ef8c340}{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D}~0b0000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ab9632c7dde4b0e57243be88555851711}{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-S\-E\-C\-O\-N\-D}~0b0001
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a24602494264ba0e52ac3c3e2a1c85f21}{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-S\-E\-C\-O\-N\-D\-S}~0b0010
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aa3fabd6890ee4a6d98874cee7fbcae3d}{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-I\-N\-U\-T\-E}~0b0011
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a16f45a9e7c2b34b05d95bc371452294e}{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S}~0b0100
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a373ae57753d9fc22b4b6748b1ddb48c7}{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-O\-U\-R}~0b0101
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a41acf263636a9d937cb64de4973e1775}{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-D\-A\-Y}~0b0110
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a3216a9603e596620ec491cf544bbfcfb}{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-W\-E\-E\-K}~0b0111
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a5e5ed0900acd6c8ce1c6b2a34d0cd2e5}{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-O\-N\-T\-H}~0b1000
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aa5637b6ec9ff6f6fab220a0d361200f6}{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-Y\-E\-A\-R}~0b1001
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ac25f106378b79fe2dde575b8314cd4b1}{callback} )(void)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77}{rtcc\-Res} \{ \\*
+\hyperlink{rtcc_8h_a4639e41f09ecd1753127fd02eaf75e77a32df43c419b49c4562f647e49216d640}{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N}, 
+\hyperlink{rtcc_8h_a4639e41f09ecd1753127fd02eaf75e77ade126bb326118627b78371cef5a72d9a}{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y}, 
+\hyperlink{rtcc_8h_a4639e41f09ecd1753127fd02eaf75e77af9fb1f9a79d017ee67a42518e24d11d5}{R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y}, 
+\hyperlink{rtcc_8h_a4639e41f09ecd1753127fd02eaf75e77a50dcf8fc3c72bacfe4d38dacc40f680e}{R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L}, 
+\\*
+\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a32df43c419b49c4562f647e49216d640}{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N}, 
+\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77ade126bb326118627b78371cef5a72d9a}{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y}, 
+\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77af9fb1f9a79d017ee67a42518e24d11d5}{R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y}, 
+\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a50dcf8fc3c72bacfe4d38dacc40f680e}{R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{unionrtcc_time}{rtcc\-Time} \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aa9cb72690a78d8423b3dec2e9d8b92a9}{R\-T\-C\-C\-\_\-\-Convert\-Time} (\hyperlink{unionrtcc_time}{rtcc\-Time} $\ast$)
+\item 
+\hyperlink{unionrtcc_date}{rtcc\-Date} \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_adf9d0a0e78d68223b0e200d67ae0b126}{R\-T\-C\-C\-\_\-\-Convert\-Date} (\hyperlink{unionrtcc_date}{rtcc\-Date} $\ast$)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{R\-T\-C\-C\-\_\-\-Set\-Write\-Enable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{R\-T\-C\-C\-\_\-\-Set\-Write\-Disable} (void)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_adc88556be0517e64c7ae1e5a8158f56b}{R\-T\-C\-C\-\_\-\-Get\-Write\-Enable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4e406886a6756df9694c406b5a05cf08}{R\-T\-C\-C\-\_\-\-Enable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_af79dca3fe51ab983cf52d238e762e2d8}{R\-T\-C\-C\-\_\-\-Disable} (void)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a63ab6e8df38e5d714ca18a4e2571db3e}{R\-T\-C\-C\-\_\-\-Get\-Enable} (void)
+\item 
+\hyperlink{rtcc_8h_a4639e41f09ecd1753127fd02eaf75e77}{rtcc\-Res} \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a8d0f7830f68fdd9a1e574ac856422bad}{R\-T\-C\-C\-\_\-\-Get\-S\-O\-S\-Cstatus} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_afafaaf8df5a7a8f987b1f328982e6343}{R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aeff7bda0ac921eac4ab9c87f3f95150e}{R\-T\-C\-C\-\_\-\-S\-O\-S\-Cdisable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a890930404ad555c8d21cbd1431e22352}{R\-T\-C\-C\-\_\-\-Set\-Time} (unsigned long)
+\item 
+\hyperlink{unionrtcc_time}{rtcc\-Time} \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4f4c7bae8c4a33e185a6a18b3586472a}{R\-T\-C\-C\-\_\-\-Get\-Time} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a289f29e6a1502df4cb4ef4670ae57d1b}{R\-T\-C\-C\-\_\-\-Set\-Date} (unsigned long)
+\item 
+\hyperlink{unionrtcc_date}{rtcc\-Date} \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a0a61d829ce97aff2ca3feeb82ce441e7}{R\-T\-C\-C\-\_\-\-Get\-Date} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a61d28d42f5dc4f2955d05e0f41988da8}{R\-T\-C\-C\-\_\-\-Set\-Time\-Date} (unsigned long, unsigned long)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a1dbff3cc5a57cfce880aa5c3d97389bf}{R\-T\-C\-C\-\_\-\-Get\-Time\-Date} (\hyperlink{unionrtcc_time}{rtcc\-Time} $\ast$, \hyperlink{unionrtcc_date}{rtcc\-Date} $\ast$)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a46129a73ed5237407f689fbb01779792}{R\-T\-C\-C\-\_\-\-Set\-Calibration} (int)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ad14dc6c4898bcdde2e1411acb5010005}{R\-T\-C\-C\-\_\-\-Get\-Calibration} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ad0d10e8bd2ed5dff85339cdaaf477455}{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable} (int)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a3dcc4fd611a832129b96e574f9eac43f}{R\-T\-C\-C\-\_\-\-Alarm\-Enable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ad83a0df1f279606453fef1481f5511df}{R\-T\-C\-C\-\_\-\-Alarm\-Disable} (void)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ac05cc59ee9fa24f001f2e5b87cb213d4}{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Enable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ab84295236323b830a7d7f273e827c099}{R\-T\-C\-C\-\_\-\-Set\-Chime\-Enable} (int)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aed4832b4ad1517e87a4e08eee803fca9}{R\-T\-C\-C\-\_\-\-Chime\-Enable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a035d6db375dd272e06f744038536c636}{R\-T\-C\-C\-\_\-\-Chime\-Disable} (void)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a6668169799f808dbbf9d8c4cc7723cc0}{R\-T\-C\-C\-\_\-\-Get\-Chime\-Enable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat} (int)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a21792abf92d3642d0f6d9bbb5970d74d}{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Half\-Second} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a8417a8a5cb10e24e4b3e87c9b0ab338b}{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Second} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4b726c741f7438454846d68180d95fda}{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Seconds} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aad670a5b99205946c77eb05b18be599f}{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Minute} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a5002c72de9987a23f37a440aa2dfcbc9}{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Minutes} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a5bd8ec0bfca05b7895d854641efdf74a}{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Hour} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aa6e45ac5a6eed4236e3f42805487fabd}{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Day} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_af69bb0c56ba2ee767735b0e657d319ad}{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Week} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_af8faef286bb28313c92ffc70e9379260}{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Month} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a12b89d93507f77236fdb0ab426a71e16}{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Year} (void)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a335ab2874d94d8d72b1fcf166378221b}{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ab16618c8cfae5809dc7e01f1f3448b0c}{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat\-Count} (char)
+\item 
+char \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_afe35c26caecac8aae74b46ab9421e7e2}{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat\-Count} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a5a30435d4cfe01c0701509484c5babce}{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time} (unsigned long)
+\item 
+\hyperlink{unionrtcc_time}{rtcc\-Time} \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a86437eb1c31d30cc35d602604600e498}{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a7348ab86fa2870859baf7663e5ed5d5d}{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Date} (unsigned long)
+\item 
+\hyperlink{unionrtcc_date}{rtcc\-Date} \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a5a29d9b807fe181362f4e0e0d6003921}{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Date} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ab120d67f7c80613699a3c1fe498896d5}{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time\-Date} (unsigned long, unsigned long)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a5e331a7d6f00e9103132796e8fa9cfb2}{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time\-Date} (\hyperlink{unionrtcc_time}{rtcc\-Time} $\ast$, \hyperlink{unionrtcc_date}{rtcc\-Date} $\ast$)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aed51920f0aef214b33af5336205e86e8}{R\-T\-C\-C\-\_\-\-Set\-Sync} (int)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_adf609b60934d03abb6862754a0429f78}{R\-T\-C\-C\-\_\-\-Get\-Sync} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_afd1c438d216b010e36a4193bc301fb35}{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Sync} (int)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a038c26f3c58fcc126fc0486323cdc9a6}{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Sync} (void)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ac7771a141bc2e0be39388296f41d2acf}{R\-T\-C\-C\-\_\-\-Get\-Half\-Second} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a9d2f5a8691055fbeb15aa1d93e896896}{R\-T\-C\-C\-\_\-\-Seconds\-Pulse\-Output} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ac7a7b026bfce1b62d4c5b97c0ba38b8f}{R\-T\-C\-C\-\_\-\-Alarm\-Pulse\-Output} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a89ba773422644091d0dbaf5bd066a20d}{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse} (int)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a325c4308a65dc5e187283df6df3eb2e9}{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-High} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a64dc039da68d7c2d8df7a1d0835eb9d6}{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Low} (void)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ab94268ed8f3ebf35c94f8e0d58d564ca}{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Initial\-Pulse} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a813195f6c34f916d59453eb96aa7c06d}{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Toggle} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a992cd480fd79ea0bc9ef8d8d6bdd4b6b}{R\-T\-C\-C\-\_\-\-Set\-Output\-Enable} (int)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aa7784247ba5a08e3e5fd557125c500b7}{R\-T\-C\-C\-\_\-\-Output\-Enable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a0802bdbee600239b1d4a9d9f96d42caa}{R\-T\-C\-C\-\_\-\-Output\-Disable} (void)
+\item 
+int \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a60741614f77faae6f8a0d2bba79506f7}{R\-T\-C\-C\-\_\-\-Get\-Output\-Enable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a7ea375da707f4037dc553d2c2d71df8d}{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Int\-Enable} (int)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a621511b464259d72b63dca03c1afe29c}{R\-T\-C\-C\-\_\-\-Alarm\-Int\-Enable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a17ae0f72cb287b643a3dd5d9acb91c96}{R\-T\-C\-C\-\_\-\-Alarm\-Int\-Disable} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a00e16f59e41aea79dcaabc72d1973b78}{On\-R\-T\-C\-C} (\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ac25f106378b79fe2dde575b8314cd4b1}{callback})
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a9ffac0704ee5ebe58284a52dc42b57ae}{R\-T\-C\-C\-Interrupt} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a1f240160630db7b74362763ac201ec0b}{R\-T\-C\-C\-\_\-init} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ad59614d588c39390ac7a3fdf4925eb36}{R\-T\-C\-C\-\_\-\-Shutdown} (void)
+\item 
+\hyperlink{rtcc_8h_a4639e41f09ecd1753127fd02eaf75e77}{rtcc\-Res} \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a82337a7bdf8bad7e7ce22dd25b5a08a1}{R\-T\-C\-C\-\_\-\-Open} (unsigned long, unsigned long, int)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a78e37c733ac4e8d934b30a86661ac14e}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a78e37c733ac4e8d934b30a86661ac14e}
+
+
+Definition at line 27 of file rtcc.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a41acf263636a9d937cb64de4973e1775}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-D\-A\-Y@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-D\-A\-Y}}
+\index{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-D\-A\-Y@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-D\-A\-Y}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-D\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-D\-A\-Y~0b0110}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a41acf263636a9d937cb64de4973e1775}
+
+
+Definition at line 87 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Every\-Day().
+
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a38b594da42ef2a8263ef944a7ef8c340}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D}}
+\index{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D~0b0000}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a38b594da42ef2a8263ef944a7ef8c340}
+
+
+Definition at line 81 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Every\-Half\-Second().
+
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a373ae57753d9fc22b4b6748b1ddb48c7}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-O\-U\-R@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-O\-U\-R}}
+\index{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-O\-U\-R@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-O\-U\-R}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-O\-U\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-O\-U\-R~0b0101}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a373ae57753d9fc22b4b6748b1ddb48c7}
+
+
+Definition at line 86 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Every\-Hour().
+
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_aa3fabd6890ee4a6d98874cee7fbcae3d}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-I\-N\-U\-T\-E@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-I\-N\-U\-T\-E}}
+\index{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-I\-N\-U\-T\-E@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-I\-N\-U\-T\-E}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-I\-N\-U\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-I\-N\-U\-T\-E~0b0011}}\label{p32_2include_2pinguino_2core_2rtcc_8c_aa3fabd6890ee4a6d98874cee7fbcae3d}
+
+
+Definition at line 84 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Every\-Minute().
+
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a5e5ed0900acd6c8ce1c6b2a34d0cd2e5}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-O\-N\-T\-H@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-O\-N\-T\-H}}
+\index{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-O\-N\-T\-H@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-O\-N\-T\-H}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-O\-N\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-O\-N\-T\-H~0b1000}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a5e5ed0900acd6c8ce1c6b2a34d0cd2e5}
+
+
+Definition at line 89 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Every\-Month().
+
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ab9632c7dde4b0e57243be88555851711}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-S\-E\-C\-O\-N\-D@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-S\-E\-C\-O\-N\-D}}
+\index{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-S\-E\-C\-O\-N\-D@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-S\-E\-C\-O\-N\-D}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-S\-E\-C\-O\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-S\-E\-C\-O\-N\-D~0b0001}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ab9632c7dde4b0e57243be88555851711}
+
+
+Definition at line 82 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Every\-Second().
+
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a16f45a9e7c2b34b05d95bc371452294e}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S}}
+\index{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S~0b0100}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a16f45a9e7c2b34b05d95bc371452294e}
+
+
+Definition at line 85 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Minutes().
+
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a24602494264ba0e52ac3c3e2a1c85f21}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-S\-E\-C\-O\-N\-D\-S@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-S\-E\-C\-O\-N\-D\-S}}
+\index{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-S\-E\-C\-O\-N\-D\-S@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-S\-E\-C\-O\-N\-D\-S}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-S\-E\-C\-O\-N\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-S\-E\-C\-O\-N\-D\-S~0b0010}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a24602494264ba0e52ac3c3e2a1c85f21}
+
+
+Definition at line 83 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Seconds().
+
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a3216a9603e596620ec491cf544bbfcfb}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-W\-E\-E\-K@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-W\-E\-E\-K}}
+\index{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-W\-E\-E\-K@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-W\-E\-E\-K}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-W\-E\-E\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-W\-E\-E\-K~0b0111}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a3216a9603e596620ec491cf544bbfcfb}
+
+
+Definition at line 88 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Every\-Week().
+
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_aa5637b6ec9ff6f6fab220a0d361200f6}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-Y\-E\-A\-R@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-Y\-E\-A\-R}}
+\index{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-Y\-E\-A\-R@{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-Y\-E\-A\-R}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-Y\-E\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-Y\-E\-A\-R~0b1001}}\label{p32_2include_2pinguino_2core_2rtcc_8c_aa5637b6ec9ff6f6fab220a0d361200f6}
+
+
+Definition at line 90 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Every\-Year().
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ac25f106378b79fe2dde575b8314cd4b1}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!callback@{callback}}
+\index{callback@{callback}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{callback}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ callback)(void)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ac25f106378b79fe2dde575b8314cd4b1}
+
+
+Definition at line 38 of file rtcc.\-c.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!rtcc\-Res@{rtcc\-Res}}
+\index{rtcc\-Res@{rtcc\-Res}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{rtcc\-Res}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf rtcc\-Res}}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N@{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N}!p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}}\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N@{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a32df43c419b49c4562f647e49216d640}{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a32df43c419b49c4562f647e49216d640}
+}]\index{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y@{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y}!p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}}\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y@{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77ade126bb326118627b78371cef5a72d9a}{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77ade126bb326118627b78371cef5a72d9a}
+}]\index{R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y@{R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y}!p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}}\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y@{R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77af9fb1f9a79d017ee67a42518e24d11d5}{R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77af9fb1f9a79d017ee67a42518e24d11d5}
+}]\index{R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L@{R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L}!p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}}\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L@{R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a50dcf8fc3c72bacfe4d38dacc40f680e}{R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a50dcf8fc3c72bacfe4d38dacc40f680e}
+}]\index{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N@{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N}!p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}}\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N@{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a32df43c419b49c4562f647e49216d640}{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a32df43c419b49c4562f647e49216d640}
+}]\index{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y@{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y}!p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}}\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y@{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77ade126bb326118627b78371cef5a72d9a}{R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77ade126bb326118627b78371cef5a72d9a}
+}]\index{R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y@{R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y}!p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}}\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y@{R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77af9fb1f9a79d017ee67a42518e24d11d5}{R\-T\-C\-C\-\_\-\-C\-L\-K\-\_\-\-N\-R\-D\-Y}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77af9fb1f9a79d017ee67a42518e24d11d5}
+}]\index{R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L@{R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L}!p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}}\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L@{R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a50dcf8fc3c72bacfe4d38dacc40f680e}{R\-T\-C\-C\-\_\-\-W\-R\-\_\-\-D\-S\-B\-L}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a50dcf8fc3c72bacfe4d38dacc40f680e}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 72 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+73 \{
+74     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a32df43c419b49c4562f647e49216d640}{RTCC\_SOSC\_ON},                   \textcolor{comment}{// success, SOSC is running}
+75     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77ade126bb326118627b78371cef5a72d9a}{RTCC\_SOSC\_NRDY},               \textcolor{comment}{// SOSC not running}
+76     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77af9fb1f9a79d017ee67a42518e24d11d5}{RTCC\_CLK\_NRDY},                 \textcolor{comment}{// RTCC clock not running}
+77     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a50dcf8fc3c72bacfe4d38dacc40f680e}{RTCC\_WR\_DSBL},                   \textcolor{comment}{// WR is disabled}
+78 \}\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77}{rtccRes};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a00e16f59e41aea79dcaabc72d1973b78}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!On\-R\-T\-C\-C@{On\-R\-T\-C\-C}}
+\index{On\-R\-T\-C\-C@{On\-R\-T\-C\-C}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{On\-R\-T\-C\-C}]{\setlength{\rightskip}{0pt plus 5cm}void On\-R\-T\-C\-C (
+\begin{DoxyParamCaption}
+\item[{{\bf callback}}]{userfunc}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a00e16f59e41aea79dcaabc72d1973b78}
+
+
+Definition at line 909 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+910 \{
+911     intFunction = userfunc;
+912 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ad83a0df1f279606453fef1481f5511df}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Disable@{R\-T\-C\-C\-\_\-\-Alarm\-Disable}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Disable@{R\-T\-C\-C\-\_\-\-Alarm\-Disable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ad83a0df1f279606453fef1481f5511df}
+
+
+Definition at line 514 of file rtcc.\-c.
+
+
+
+References False, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable().
+
+
+
+Referenced by R\-T\-C\-C\-\_\-init(), R\-T\-C\-C\-\_\-\-Open(), and R\-T\-C\-C\-\_\-\-Shutdown().
+
+
+\begin{DoxyCode}
+515 \{
+516     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ad0d10e8bd2ed5dff85339cdaaf477455}{RTCC\_SetAlarmEnable}(\hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False});
+517 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a3dcc4fd611a832129b96e574f9eac43f}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Enable@{R\-T\-C\-C\-\_\-\-Alarm\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Enable@{R\-T\-C\-C\-\_\-\-Alarm\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a3dcc4fd611a832129b96e574f9eac43f}
+
+
+Definition at line 509 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable(), and True.
+
+
+\begin{DoxyCode}
+510 \{
+511     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ad0d10e8bd2ed5dff85339cdaaf477455}{RTCC\_SetAlarmEnable}(\hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True});
+512 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_aa6e45ac5a6eed4236e3f42805487fabd}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Every\-Day@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Day}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Day@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Day}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Day}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Every\-Day (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_aa6e45ac5a6eed4236e3f42805487fabd}
+
+
+Definition at line 605 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-D\-A\-Y, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat().
+
+
+\begin{DoxyCode}
+606 \{
+607     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{RTCC\_SetAlarmRepeat}(\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a41acf263636a9d937cb64de4973e1775}{RTCC\_ALARM\_EVERY\_DAY});
+608 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a21792abf92d3642d0f6d9bbb5970d74d}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Every\-Half\-Second@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Half\-Second}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Half\-Second@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Half\-Second}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Half\-Second}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Every\-Half\-Second (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a21792abf92d3642d0f6d9bbb5970d74d}
+
+
+Definition at line 581 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-A\-L\-F\-\_\-\-S\-E\-C\-O\-N\-D, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat().
+
+
+\begin{DoxyCode}
+582 \{
+583     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{RTCC\_SetAlarmRepeat}(\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a38b594da42ef2a8263ef944a7ef8c340}{RTCC\_ALARM\_EVERY\_HALF\_SECOND});
+584 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a5bd8ec0bfca05b7895d854641efdf74a}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Every\-Hour@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Hour}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Hour@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Hour}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Hour}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Every\-Hour (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a5bd8ec0bfca05b7895d854641efdf74a}
+
+
+Definition at line 601 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-H\-O\-U\-R, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat().
+
+
+\begin{DoxyCode}
+602 \{
+603     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{RTCC\_SetAlarmRepeat}(\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a373ae57753d9fc22b4b6748b1ddb48c7}{RTCC\_ALARM\_EVERY\_HOUR});
+604 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_aad670a5b99205946c77eb05b18be599f}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Every\-Minute@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Minute}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Minute@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Minute}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Minute}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Every\-Minute (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_aad670a5b99205946c77eb05b18be599f}
+
+
+Definition at line 593 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-I\-N\-U\-T\-E, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat().
+
+
+\begin{DoxyCode}
+594 \{
+595     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{RTCC\_SetAlarmRepeat}(\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aa3fabd6890ee4a6d98874cee7fbcae3d}{RTCC\_ALARM\_EVERY\_MINUTE});
+596 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_af8faef286bb28313c92ffc70e9379260}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Every\-Month@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Month}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Month@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Month}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Month}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Every\-Month (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_af8faef286bb28313c92ffc70e9379260}
+
+
+Definition at line 613 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-M\-O\-N\-T\-H, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat().
+
+
+\begin{DoxyCode}
+614 \{
+615     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{RTCC\_SetAlarmRepeat}(\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a5e5ed0900acd6c8ce1c6b2a34d0cd2e5}{RTCC\_ALARM\_EVERY\_MONTH});
+616 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a8417a8a5cb10e24e4b3e87c9b0ab338b}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Every\-Second@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Second}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Second@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Second}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Second}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Every\-Second (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a8417a8a5cb10e24e4b3e87c9b0ab338b}
+
+
+Definition at line 585 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-S\-E\-C\-O\-N\-D, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat().
+
+
+\begin{DoxyCode}
+586 \{
+587     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{RTCC\_SetAlarmRepeat}(\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ab9632c7dde4b0e57243be88555851711}{RTCC\_ALARM\_EVERY\_SECOND});
+588 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a5002c72de9987a23f37a440aa2dfcbc9}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Minutes@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Minutes}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Minutes@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Minutes}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Minutes}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Minutes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a5002c72de9987a23f37a440aa2dfcbc9}
+
+
+Definition at line 597 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-M\-I\-N\-U\-T\-E\-S, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat().
+
+
+\begin{DoxyCode}
+598 \{
+599     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{RTCC\_SetAlarmRepeat}(\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a16f45a9e7c2b34b05d95bc371452294e}{RTCC\_ALARM\_EVERY\_TEN\_MINUTES});
+600 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4b726c741f7438454846d68180d95fda}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Seconds@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Seconds}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Seconds@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Seconds}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Seconds (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4b726c741f7438454846d68180d95fda}
+
+
+Definition at line 589 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-T\-E\-N\-\_\-\-S\-E\-C\-O\-N\-D\-S, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat().
+
+
+\begin{DoxyCode}
+590 \{
+591     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{RTCC\_SetAlarmRepeat}(\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a24602494264ba0e52ac3c3e2a1c85f21}{RTCC\_ALARM\_EVERY\_TEN\_SECONDS});
+592 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_af69bb0c56ba2ee767735b0e657d319ad}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Every\-Week@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Week}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Week@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Week}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Week}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Every\-Week (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_af69bb0c56ba2ee767735b0e657d319ad}
+
+
+Definition at line 609 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-W\-E\-E\-K, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat().
+
+
+\begin{DoxyCode}
+610 \{
+611     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{RTCC\_SetAlarmRepeat}(\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a3216a9603e596620ec491cf544bbfcfb}{RTCC\_ALARM\_EVERY\_WEEK});
+612 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a12b89d93507f77236fdb0ab426a71e16}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Every\-Year@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Year}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Year@{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Year}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Every\-Year}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Every\-Year (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a12b89d93507f77236fdb0ab426a71e16}
+
+
+Definition at line 617 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-A\-L\-A\-R\-M\-\_\-\-E\-V\-E\-R\-Y\-\_\-\-Y\-E\-A\-R, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat().
+
+
+\begin{DoxyCode}
+618 \{
+619     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{RTCC\_SetAlarmRepeat}(\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aa5637b6ec9ff6f6fab220a0d361200f6}{RTCC\_ALARM\_EVERY\_YEAR});
+620 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a325c4308a65dc5e187283df6df3eb2e9}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-High@{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-High}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-High@{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-High}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-High}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-High (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a325c4308a65dc5e187283df6df3eb2e9}
+
+
+Definition at line 826 of file rtcc.\-c.
+
+
+
+References H\-I\-G\-H, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse().
+
+
+\begin{DoxyCode}
+827 \{
+828     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a89ba773422644091d0dbaf5bd066a20d}{RTCC\_SetAlarmInitialPulse}(\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH}); 
+829 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a64dc039da68d7c2d8df7a1d0835eb9d6}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Low@{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Low}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Low@{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Low}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Low}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Low (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a64dc039da68d7c2d8df7a1d0835eb9d6}
+
+
+Definition at line 831 of file rtcc.\-c.
+
+
+
+References L\-O\-W, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse().
+
+
+\begin{DoxyCode}
+832 \{
+833     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a89ba773422644091d0dbaf5bd066a20d}{RTCC\_SetAlarmInitialPulse}(\hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+834 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a813195f6c34f916d59453eb96aa7c06d}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Toggle@{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Toggle}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Toggle@{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Toggle}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Toggle}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Toggle (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a813195f6c34f916d59453eb96aa7c06d}
+
+
+Definition at line 841 of file rtcc.\-c.
+
+
+
+References H\-I\-G\-H, L\-O\-W, R\-T\-C\-C\-\_\-\-Get\-Alarm\-Initial\-Pulse(), and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse().
+
+
+\begin{DoxyCode}
+842 \{
+843     \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ab94268ed8f3ebf35c94f8e0d58d564ca}{RTCC\_GetAlarmInitialPulse}())
+844         \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a89ba773422644091d0dbaf5bd066a20d}{RTCC\_SetAlarmInitialPulse}(\hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+845     \textcolor{keywordflow}{else}
+846         \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a89ba773422644091d0dbaf5bd066a20d}{RTCC\_SetAlarmInitialPulse}(\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+847 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a17ae0f72cb287b643a3dd5d9acb91c96}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Int\-Disable@{R\-T\-C\-C\-\_\-\-Alarm\-Int\-Disable}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Int\-Disable@{R\-T\-C\-C\-\_\-\-Alarm\-Int\-Disable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Int\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Int\-Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a17ae0f72cb287b643a3dd5d9acb91c96}
+
+
+Definition at line 904 of file rtcc.\-c.
+
+
+
+References False, and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Int\-Enable().
+
+
+\begin{DoxyCode}
+905 \{
+906     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a7ea375da707f4037dc553d2c2d71df8d}{RTCC\_SetAlarmIntEnable}(\hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False});
+907 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a621511b464259d72b63dca03c1afe29c}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Int\-Enable@{R\-T\-C\-C\-\_\-\-Alarm\-Int\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Int\-Enable@{R\-T\-C\-C\-\_\-\-Alarm\-Int\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Int\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Int\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a621511b464259d72b63dca03c1afe29c}
+
+
+Definition at line 899 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Set\-Alarm\-Int\-Enable(), and True.
+
+
+\begin{DoxyCode}
+900 \{
+901     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a7ea375da707f4037dc553d2c2d71df8d}{RTCC\_SetAlarmIntEnable}(\hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True});
+902 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ac7a7b026bfce1b62d4c5b97c0ba38b8f}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Alarm\-Pulse\-Output@{R\-T\-C\-C\-\_\-\-Alarm\-Pulse\-Output}}
+\index{R\-T\-C\-C\-\_\-\-Alarm\-Pulse\-Output@{R\-T\-C\-C\-\_\-\-Alarm\-Pulse\-Output}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Alarm\-Pulse\-Output}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Alarm\-Pulse\-Output (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ac7a7b026bfce1b62d4c5b97c0ba38b8f}
+
+
+Definition at line 793 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+794 \{
+795         RTCCONbits.RTSECSEL = 0;    \textcolor{comment}{// RTCC Alarm Pulse is selected for the RTCC pin}
+796 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a035d6db375dd272e06f744038536c636}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Chime\-Disable@{R\-T\-C\-C\-\_\-\-Chime\-Disable}}
+\index{R\-T\-C\-C\-\_\-\-Chime\-Disable@{R\-T\-C\-C\-\_\-\-Chime\-Disable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Chime\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Chime\-Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a035d6db375dd272e06f744038536c636}
+
+
+Definition at line 554 of file rtcc.\-c.
+
+
+
+References False, and R\-T\-C\-C\-\_\-\-Set\-Chime\-Enable().
+
+
+\begin{DoxyCode}
+555 \{
+556     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ab84295236323b830a7d7f273e827c099}{RTCC\_SetChimeEnable}(\hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False});
+557 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_aed4832b4ad1517e87a4e08eee803fca9}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Chime\-Enable@{R\-T\-C\-C\-\_\-\-Chime\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Chime\-Enable@{R\-T\-C\-C\-\_\-\-Chime\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Chime\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Chime\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_aed4832b4ad1517e87a4e08eee803fca9}
+
+
+Definition at line 549 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Set\-Chime\-Enable(), and True.
+
+
+\begin{DoxyCode}
+550 \{
+551     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ab84295236323b830a7d7f273e827c099}{RTCC\_SetChimeEnable}(\hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True});
+552 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_adf9d0a0e78d68223b0e200d67ae0b126}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Convert\-Date@{R\-T\-C\-C\-\_\-\-Convert\-Date}}
+\index{R\-T\-C\-C\-\_\-\-Convert\-Date@{R\-T\-C\-C\-\_\-\-Convert\-Date}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Convert\-Date}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rtcc\-Date} R\-T\-C\-C\-\_\-\-Convert\-Date (
+\begin{DoxyParamCaption}
+\item[{{\bf rtcc\-Date} $\ast$}]{p\-Dt}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_adf9d0a0e78d68223b0e200d67ae0b126}
+
+
+Definition at line 190 of file rtcc.\-c.
+
+
+
+References bcd2bin(), rtcc\-Date\-::dayofmonth, rtcc\-Date\-::dayofweek, rtcc\-Date\-::month, and rtcc\-Date\-::year.
+
+
+\begin{DoxyCode}
+191 \{
+192     \hyperlink{unionrtcc_date}{rtccDate} d0;
+193     
+194     d0.\hyperlink{unionrtcc_date_a97419c23eb9097f89c83ce342df499f8}{dayofweek} = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pDt->\hyperlink{unionrtcc_date_a97419c23eb9097f89c83ce342df499f8}{dayofweek});
+195     d0.\hyperlink{unionrtcc_date_af980355fa766196214d34395ebed0a89}{dayofmonth} = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pDt->\hyperlink{unionrtcc_date_af980355fa766196214d34395ebed0a89}{dayofmonth});
+196     d0.\hyperlink{unionrtcc_date_ad5f8cd6773aef677b920ae4e4265bb10}{month}  = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pDt->\hyperlink{unionrtcc_date_ad5f8cd6773aef677b920ae4e4265bb10}{month});
+197     d0.\hyperlink{unionrtcc_date_ab02bacda75d48acac498f0c9f4e9b1cf}{year} = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pDt->\hyperlink{unionrtcc_date_ab02bacda75d48acac498f0c9f4e9b1cf}{year});
+198     \textcolor{keywordflow}{return} d0;
+199 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_aa9cb72690a78d8423b3dec2e9d8b92a9}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Convert\-Time@{R\-T\-C\-C\-\_\-\-Convert\-Time}}
+\index{R\-T\-C\-C\-\_\-\-Convert\-Time@{R\-T\-C\-C\-\_\-\-Convert\-Time}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Convert\-Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rtcc\-Time} R\-T\-C\-C\-\_\-\-Convert\-Time (
+\begin{DoxyParamCaption}
+\item[{{\bf rtcc\-Time} $\ast$}]{p\-Tm}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_aa9cb72690a78d8423b3dec2e9d8b92a9}
+
+
+Definition at line 180 of file rtcc.\-c.
+
+
+
+References bcd2bin(), rtcc\-Time\-::hours, rtcc\-Time\-::minutes, and rtcc\-Time\-::seconds.
+
+
+\begin{DoxyCode}
+181 \{
+182     \hyperlink{unionrtcc_time}{rtccTime} t0;
+183     
+184     t0.\hyperlink{unionrtcc_time_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours} = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pTm->\hyperlink{unionrtcc_time_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours});
+185     t0.\hyperlink{unionrtcc_time_a517646d9969ae9c9f8921e133b1b872b}{minutes}  = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pTm->\hyperlink{unionrtcc_time_a517646d9969ae9c9f8921e133b1b872b}{minutes});
+186     t0.\hyperlink{unionrtcc_time_ae53e173daf8fcf970bb3324ae545f21c}{seconds}  = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pTm->\hyperlink{unionrtcc_time_ae53e173daf8fcf970bb3324ae545f21c}{seconds});
+187     \textcolor{keywordflow}{return} t0;
+188 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_af79dca3fe51ab983cf52d238e762e2d8}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Disable@{R\-T\-C\-C\-\_\-\-Disable}}
+\index{R\-T\-C\-C\-\_\-\-Disable@{R\-T\-C\-C\-\_\-\-Disable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_af79dca3fe51ab983cf52d238e762e2d8}
+
+
+Definition at line 263 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Set\-Write\-Disable(), and R\-T\-C\-C\-\_\-\-Set\-Write\-Enable().
+
+
+\begin{DoxyCode}
+264 \{
+265     \hyperlink{p8_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{RTCC\_SetWriteEnable}();
+266     \textcolor{comment}{//RTCCON |= !(1 << 15);}
+267     RTCCONCLR = 0x8000;         \textcolor{comment}{// turn off the RTCC}
+268     \textcolor{comment}{// TODO: RTCCON.RTCSYNC, RTCCON.HALFSEC and RTCCON.RTCOE}
+269     \textcolor{keywordflow}{while} (RTCCON & 0x40);      \textcolor{comment}{// wait for clock to be turned off}
+270     \textcolor{comment}{// bit 6 RTCCLKON: RTCC Clock Enable Status bit}
+271     \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{RTCC\_SetWriteDisable}();
+272 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4e406886a6756df9694c406b5a05cf08}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Enable@{R\-T\-C\-C\-\_\-\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Enable@{R\-T\-C\-C\-\_\-\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4e406886a6756df9694c406b5a05cf08}
+
+
+Definition at line 247 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Set\-Write\-Disable(), and R\-T\-C\-C\-\_\-\-Set\-Write\-Enable().
+
+
+\begin{DoxyCode}
+248 \{
+249     \hyperlink{p8_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{RTCC\_SetWriteEnable}();
+250     \textcolor{comment}{//RTCCON |= (1 << 15);}
+251     RTCCONSET = 0x8000;         \textcolor{comment}{// turn on the RTCC}
+252     \textcolor{keywordflow}{while} (!(RTCCON & 0x40));   \textcolor{comment}{// wait for clock to be turned on}
+253     \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{RTCC\_SetWriteDisable}();
+254 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a5a29d9b807fe181362f4e0e0d6003921}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Alarm\-Date@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Date}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Date@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Date}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Date}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rtcc\-Date} R\-T\-C\-C\-\_\-\-Get\-Alarm\-Date (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a5a29d9b807fe181362f4e0e0d6003921}
+
+
+Definition at line 705 of file rtcc.\-c.
+
+
+
+References rtcc\-Date\-::l.
+
+
+\begin{DoxyCode}
+706 \{
+707     \hyperlink{unionrtcc_date}{rtccDate} d0;
+708     d0.\hyperlink{unionrtcc_date_a97b22435f07e68bf751cddd2226228ab}{l} = ALRMDATE;
+709     \textcolor{keywordflow}{return} d0;
+710 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ac05cc59ee9fa24f001f2e5b87cb213d4}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Alarm\-Enable@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Enable@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}int R\-T\-C\-C\-\_\-\-Get\-Alarm\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ac05cc59ee9fa24f001f2e5b87cb213d4}
+
+
+Definition at line 519 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+520 \{
+521     \textcolor{keywordtype}{int} isAlrm0, isAlrm1;
+522     \textcolor{keywordflow}{do}
+523     \{
+524         isAlrm0=RTCALRMbits.ALRMEN;
+525         isAlrm1=RTCALRMbits.ALRMEN;
+526     \} \textcolor{keywordflow}{while} (isAlrm0 != isAlrm1);
+527 
+528     \textcolor{keywordflow}{return} isAlrm0;
+529 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ab94268ed8f3ebf35c94f8e0d58d564ca}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Alarm\-Initial\-Pulse@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Initial\-Pulse}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Initial\-Pulse@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Initial\-Pulse}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Initial\-Pulse}]{\setlength{\rightskip}{0pt plus 5cm}int R\-T\-C\-C\-\_\-\-Get\-Alarm\-Initial\-Pulse (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ab94268ed8f3ebf35c94f8e0d58d564ca}
+
+
+Definition at line 836 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Toggle().
+
+
+\begin{DoxyCode}
+837 \{
+838     \textcolor{keywordflow}{return} RTCALRMbits.PIV!=0;
+839 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a335ab2874d94d8d72b1fcf166378221b}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat}]{\setlength{\rightskip}{0pt plus 5cm}int R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a335ab2874d94d8d72b1fcf166378221b}
+
+
+Definition at line 625 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+626 \{
+627     \textcolor{keywordtype}{int} r0, r1;
+628 
+629     \textcolor{keywordflow}{do}
+630     \{
+631         r0 = RTCALRMbits.AMASK;
+632         r1 = RTCALRMbits.AMASK;
+633     \}\textcolor{keywordflow}{while} (r0 != r1);
+634 
+635     \textcolor{keywordflow}{return} r0;
+636 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_afe35c26caecac8aae74b46ab9421e7e2}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat\-Count@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat\-Count}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat\-Count@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat\-Count}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat\-Count}]{\setlength{\rightskip}{0pt plus 5cm}char R\-T\-C\-C\-\_\-\-Get\-Alarm\-Repeat\-Count (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_afe35c26caecac8aae74b46ab9421e7e2}
+
+
+Definition at line 657 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+658 \{
+659     \textcolor{keywordtype}{char} rpt0, rpt1;
+660     \textcolor{keywordflow}{do}
+661     \{
+662         rpt0 = RTCALRMbits.ARPT;
+663         rpt1 = RTCALRMbits.ARPT;
+664     \} \textcolor{keywordflow}{while} (rpt0 != rpt1);
+665 
+666     \textcolor{keywordflow}{return} rpt0;
+667 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a038c26f3c58fcc126fc0486323cdc9a6}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Alarm\-Sync@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Sync}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Sync@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Sync}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Sync}]{\setlength{\rightskip}{0pt plus 5cm}int R\-T\-C\-C\-\_\-\-Get\-Alarm\-Sync (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a038c26f3c58fcc126fc0486323cdc9a6}
+
+
+Definition at line 762 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+763 \{
+764     \textcolor{keywordflow}{return} RTCALRMbits.ALRMSYNC!=0;
+765 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a86437eb1c31d30cc35d602604600e498}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rtcc\-Time} R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a86437eb1c31d30cc35d602604600e498}
+
+
+Definition at line 685 of file rtcc.\-c.
+
+
+
+References rtcc\-Time\-::l.
+
+
+\begin{DoxyCode}
+686 \{
+687     \hyperlink{unionrtcc_time}{rtccTime} t0;
+688     t0.\hyperlink{unionrtcc_time_a97b22435f07e68bf751cddd2226228ab}{l} = ALRMTIME;
+689     \textcolor{keywordflow}{return} t0;
+690 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a5e331a7d6f00e9103132796e8fa9cfb2}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time\-Date@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time\-Date}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time\-Date@{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time\-Date}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time\-Date}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Get\-Alarm\-Time\-Date (
+\begin{DoxyParamCaption}
+\item[{{\bf rtcc\-Time} $\ast$}]{p\-Tm, }
+\item[{{\bf rtcc\-Date} $\ast$}]{p\-Dt}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a5e331a7d6f00e9103132796e8fa9cfb2}
+
+
+Definition at line 726 of file rtcc.\-c.
+
+
+
+References rtcc\-Time\-::l, and rtcc\-Date\-::l.
+
+
+\begin{DoxyCode}
+727 \{
+728     pTm->\hyperlink{unionrtcc_time_a97b22435f07e68bf751cddd2226228ab}{l} = ALRMTIME;
+729     pDt->\hyperlink{unionrtcc_date_a97b22435f07e68bf751cddd2226228ab}{l} = ALRMDATE;
+730 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ad14dc6c4898bcdde2e1411acb5010005}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Calibration@{R\-T\-C\-C\-\_\-\-Get\-Calibration}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Calibration@{R\-T\-C\-C\-\_\-\-Get\-Calibration}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Calibration}]{\setlength{\rightskip}{0pt plus 5cm}int R\-T\-C\-C\-\_\-\-Get\-Calibration (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ad14dc6c4898bcdde2e1411acb5010005}
+
+
+Definition at line 484 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+485 \{
+486      \textcolor{keywordflow}{return} RTCCONbits.CAL;
+487 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a6668169799f808dbbf9d8c4cc7723cc0}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Chime\-Enable@{R\-T\-C\-C\-\_\-\-Get\-Chime\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Chime\-Enable@{R\-T\-C\-C\-\_\-\-Get\-Chime\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Chime\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}int R\-T\-C\-C\-\_\-\-Get\-Chime\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a6668169799f808dbbf9d8c4cc7723cc0}
+
+
+Definition at line 559 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+560 \{
+561     \textcolor{keywordtype}{int} ch0, ch1;
+562     \textcolor{keywordflow}{do}
+563     \{
+564         ch0 = RTCALRMbits.CHIME;
+565         ch1 = RTCALRMbits.CHIME;
+566     \}\textcolor{keywordflow}{while} (ch0 != ch1);
+567 
+568     \textcolor{keywordflow}{return} ch0;
+569 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a0a61d829ce97aff2ca3feeb82ce441e7}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Date@{R\-T\-C\-C\-\_\-\-Get\-Date}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Date@{R\-T\-C\-C\-\_\-\-Get\-Date}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Date}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rtcc\-Date} R\-T\-C\-C\-\_\-\-Get\-Date (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a0a61d829ce97aff2ca3feeb82ce441e7}
+
+
+Definition at line 404 of file rtcc.\-c.
+
+
+
+References rtcc\-Date\-::l.
+
+
+\begin{DoxyCode}
+405 \{
+406     \hyperlink{unionrtcc_date}{rtccDate} d0, d1;
+407     \textcolor{keywordflow}{do}
+408     \{
+409         d0.\hyperlink{unionrtcc_date_a97b22435f07e68bf751cddd2226228ab}{l} = RTCDATE;
+410         d1.\hyperlink{unionrtcc_date_a97b22435f07e68bf751cddd2226228ab}{l} = RTCDATE;
+411     \} \textcolor{keywordflow}{while} (d0.\hyperlink{unionrtcc_date_a97b22435f07e68bf751cddd2226228ab}{l} != d1.\hyperlink{unionrtcc_date_a97b22435f07e68bf751cddd2226228ab}{l});
+412     \textcolor{keywordflow}{return} d0;
+413 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a63ab6e8df38e5d714ca18a4e2571db3e}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Enable@{R\-T\-C\-C\-\_\-\-Get\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Enable@{R\-T\-C\-C\-\_\-\-Get\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}int R\-T\-C\-C\-\_\-\-Get\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a63ab6e8df38e5d714ca18a4e2571db3e}
+
+
+Definition at line 278 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+279 \{
+280     \textcolor{keywordflow}{if} (RTCCON & 0x8000)
+281         \textcolor{keywordflow}{return} 1;
+282     \textcolor{keywordflow}{else}
+283         \textcolor{keywordflow}{return} 0;
+284 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ac7771a141bc2e0be39388296f41d2acf}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Half\-Second@{R\-T\-C\-C\-\_\-\-Get\-Half\-Second}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Half\-Second@{R\-T\-C\-C\-\_\-\-Get\-Half\-Second}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Half\-Second}]{\setlength{\rightskip}{0pt plus 5cm}int R\-T\-C\-C\-\_\-\-Get\-Half\-Second (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ac7771a141bc2e0be39388296f41d2acf}
+
+
+Definition at line 776 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+777 \{
+778      \textcolor{keywordflow}{return} RTCCONbits.HALFSEC!=0;
+779 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a60741614f77faae6f8a0d2bba79506f7}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Output\-Enable@{R\-T\-C\-C\-\_\-\-Get\-Output\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Output\-Enable@{R\-T\-C\-C\-\_\-\-Get\-Output\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Output\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}int R\-T\-C\-C\-\_\-\-Get\-Output\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a60741614f77faae6f8a0d2bba79506f7}
+
+
+Definition at line 875 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+876 \{
+877      \textcolor{keywordflow}{return} RTCCONbits.RTCOE!=0;
+878 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a8d0f7830f68fdd9a1e574ac856422bad}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-S\-O\-S\-Cstatus@{R\-T\-C\-C\-\_\-\-Get\-S\-O\-S\-Cstatus}}
+\index{R\-T\-C\-C\-\_\-\-Get\-S\-O\-S\-Cstatus@{R\-T\-C\-C\-\_\-\-Get\-S\-O\-S\-Cstatus}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-S\-O\-S\-Cstatus}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rtcc\-Res} R\-T\-C\-C\-\_\-\-Get\-S\-O\-S\-Cstatus (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a8d0f7830f68fdd9a1e574ac856422bad}
+
+
+Definition at line 290 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-N\-R\-D\-Y, and R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable().
+
+
+\begin{DoxyCode}
+291 \{
+292     \textcolor{comment}{// 01-01-2012 bug fixed by Mark Harper}
+293     \textcolor{keywordflow}{if} ( (!(OSCCONbits.SOSCEN)) || (!(OSCCONbits.SOSCRDY)) )
+294         \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77ade126bb326118627b78371cef5a72d9a}{RTCC\_SOSC\_NRDY};
+295     \textcolor{comment}{/*}
+296 \textcolor{comment}{    else if (!(RTCCONbits.RTCCLKON))    // At start up RTCC Clock is not enabled so this}
+297 \textcolor{comment}{                                        // test will ALWAYS fail.}
+298 \textcolor{comment}{                                        // It is NOT related to SOSC running or not running}
+299 \textcolor{comment}{    return RTCC\_CLK\_NRDY;}
+300 \textcolor{comment}{    */}
+301     \textcolor{keywordflow}{return} \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a32df43c419b49c4562f647e49216d640}{RTCC\_SOSC\_ON};
+302 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_adf609b60934d03abb6862754a0429f78}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Sync@{R\-T\-C\-C\-\_\-\-Get\-Sync}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Sync@{R\-T\-C\-C\-\_\-\-Get\-Sync}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Sync}]{\setlength{\rightskip}{0pt plus 5cm}int R\-T\-C\-C\-\_\-\-Get\-Sync (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_adf609b60934d03abb6862754a0429f78}
+
+
+Definition at line 749 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+750 \{
+751      \textcolor{keywordflow}{return} RTCCONbits.RTCSYNC!=0;
+752 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a4f4c7bae8c4a33e185a6a18b3586472a}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Time@{R\-T\-C\-C\-\_\-\-Get\-Time}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Time@{R\-T\-C\-C\-\_\-\-Get\-Time}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rtcc\-Time} R\-T\-C\-C\-\_\-\-Get\-Time (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a4f4c7bae8c4a33e185a6a18b3586472a}
+
+
+Definition at line 367 of file rtcc.\-c.
+
+
+
+References rtcc\-Time\-::l.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Set\-Calibration().
+
+
+\begin{DoxyCode}
+368 \{
+369     \hyperlink{unionrtcc_time}{rtccTime} t0, t1;
+370     \textcolor{keywordflow}{do}
+371     \{
+372         t0.\hyperlink{unionrtcc_time_a97b22435f07e68bf751cddd2226228ab}{l} = RTCTIME;
+373         t1.\hyperlink{unionrtcc_time_a97b22435f07e68bf751cddd2226228ab}{l} = RTCTIME;
+374     \} \textcolor{keywordflow}{while} (t0.\hyperlink{unionrtcc_time_a97b22435f07e68bf751cddd2226228ab}{l} != t1.\hyperlink{unionrtcc_time_a97b22435f07e68bf751cddd2226228ab}{l});
+375     \textcolor{keywordflow}{return} t0;
+376 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a1dbff3cc5a57cfce880aa5c3d97389bf}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Time\-Date@{R\-T\-C\-C\-\_\-\-Get\-Time\-Date}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Time\-Date@{R\-T\-C\-C\-\_\-\-Get\-Time\-Date}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Time\-Date}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Get\-Time\-Date (
+\begin{DoxyParamCaption}
+\item[{{\bf rtcc\-Time} $\ast$}]{p\-Tm, }
+\item[{{\bf rtcc\-Date} $\ast$}]{p\-Dt}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a1dbff3cc5a57cfce880aa5c3d97389bf}
+
+
+Definition at line 442 of file rtcc.\-c.
+
+
+
+References rtcc\-Time\-::l, and rtcc\-Date\-::l.
+
+
+
+Referenced by get\-\_\-fattime().
+
+
+\begin{DoxyCode}
+443 \{
+444     \hyperlink{unionrtcc_time}{rtccTime}    t0;
+445     \hyperlink{unionrtcc_date}{rtccDate}    d0;
+446     \textcolor{keywordflow}{do}
+447     \{
+448         d0.\hyperlink{unionrtcc_date_a97b22435f07e68bf751cddd2226228ab}{l} = RTCDATE;
+449         t0.\hyperlink{unionrtcc_time_a97b22435f07e68bf751cddd2226228ab}{l} = RTCTIME;
+450         pTm->\hyperlink{unionrtcc_time_a97b22435f07e68bf751cddd2226228ab}{l} = RTCTIME;
+451         pDt->\hyperlink{unionrtcc_date_a97b22435f07e68bf751cddd2226228ab}{l} = RTCDATE;
+452     \} \textcolor{keywordflow}{while} ((d0.\hyperlink{unionrtcc_date_a97b22435f07e68bf751cddd2226228ab}{l} != pDt->\hyperlink{unionrtcc_date_a97b22435f07e68bf751cddd2226228ab}{l}) || (t0.\hyperlink{unionrtcc_time_a97b22435f07e68bf751cddd2226228ab}{l} != pTm->\hyperlink{unionrtcc_time_a97b22435f07e68bf751cddd2226228ab}{l})); \textcolor{comment}{// update the user requested data}
+453 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_adc88556be0517e64c7ae1e5a8158f56b}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Get\-Write\-Enable@{R\-T\-C\-C\-\_\-\-Get\-Write\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Get\-Write\-Enable@{R\-T\-C\-C\-\_\-\-Get\-Write\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Get\-Write\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}int R\-T\-C\-C\-\_\-\-Get\-Write\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_adc88556be0517e64c7ae1e5a8158f56b}
+
+
+Definition at line 236 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+237 \{
+238      \textcolor{keywordflow}{return} RTCCONbits.RTCWREN!=0;
+239 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a1f240160630db7b74362763ac201ec0b}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-init@{R\-T\-C\-C\-\_\-init}}
+\index{R\-T\-C\-C\-\_\-init@{R\-T\-C\-C\-\_\-init}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a1f240160630db7b74362763ac201ec0b}
+
+
+Definition at line 937 of file rtcc.\-c.
+
+
+
+References I\-N\-T\-\_\-\-R\-E\-A\-L\-\_\-\-T\-I\-M\-E\-\_\-\-C\-L\-O\-C\-K, Int\-Clear\-Flag(), R\-T\-C\-C\-\_\-\-Alarm\-Disable(), R\-T\-C\-C\-\_\-\-Enable(), R\-T\-C\-C\-\_\-\-Output\-Disable(), R\-T\-C\-C\-\_\-\-Set\-Write\-Disable(), and R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable().
+
+
+\begin{DoxyCode}
+938 \{
+939     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_afafaaf8df5a7a8f987b1f328982e6343}{RTCC\_SOSCenable}();
+940     \hyperlink{p8_2pinguino_2core_2rtcc_8c_a4e406886a6756df9694c406b5a05cf08}{RTCC\_Enable}();
+941     \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{RTCC\_SetWriteDisable}();
+942     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ad83a0df1f279606453fef1481f5511df}{RTCC\_AlarmDisable}();
+943     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a0802bdbee600239b1d4a9d9f96d42caa}{RTCC\_OutputDisable}();
+944     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a48a3efc73921037a269e73aff25f8470}{INT\_REAL\_TIME\_CLOCK});
+945 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a82337a7bdf8bad7e7ce22dd25b5a08a1}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Open@{R\-T\-C\-C\-\_\-\-Open}}
+\index{R\-T\-C\-C\-\_\-\-Open@{R\-T\-C\-C\-\_\-\-Open}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rtcc\-Res} R\-T\-C\-C\-\_\-\-Open (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{tm, }
+\item[{unsigned long}]{dt, }
+\item[{int}]{drift}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a82337a7bdf8bad7e7ce22dd25b5a08a1}
+
+
+Definition at line 976 of file rtcc.\-c.
+
+
+
+References I\-N\-T\-\_\-\-R\-E\-A\-L\-\_\-\-T\-I\-M\-E\-\_\-\-C\-L\-O\-C\-K, Int\-Clear\-Flag(), R\-T\-C\-C\-\_\-\-Alarm\-Disable(), R\-T\-C\-C\-\_\-\-Enable(), R\-T\-C\-C\-\_\-\-Output\-Disable(), R\-T\-C\-C\-\_\-\-Set\-Calibration(), R\-T\-C\-C\-\_\-\-Set\-Date(), R\-T\-C\-C\-\_\-\-Set\-Time(), R\-T\-C\-C\-\_\-\-Set\-Write\-Disable(), and R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable().
+
+
+\begin{DoxyCode}
+977 \{
+978     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_afafaaf8df5a7a8f987b1f328982e6343}{RTCC\_SOSCenable}();
+979     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a890930404ad555c8d21cbd1431e22352}{RTCC\_SetTime}(tm);
+980     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a289f29e6a1502df4cb4ef4670ae57d1b}{RTCC\_SetDate}(dt);
+981     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a46129a73ed5237407f689fbb01779792}{RTCC\_SetCalibration}(drift);
+982     \hyperlink{p8_2pinguino_2core_2rtcc_8c_a4e406886a6756df9694c406b5a05cf08}{RTCC\_Enable}();
+983     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ad83a0df1f279606453fef1481f5511df}{RTCC\_AlarmDisable}();
+984     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a0802bdbee600239b1d4a9d9f96d42caa}{RTCC\_OutputDisable}();
+985     \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{RTCC\_SetWriteDisable}();
+986     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a48a3efc73921037a269e73aff25f8470}{INT\_REAL\_TIME\_CLOCK});
+987 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a0802bdbee600239b1d4a9d9f96d42caa}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Output\-Disable@{R\-T\-C\-C\-\_\-\-Output\-Disable}}
+\index{R\-T\-C\-C\-\_\-\-Output\-Disable@{R\-T\-C\-C\-\_\-\-Output\-Disable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Output\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Output\-Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a0802bdbee600239b1d4a9d9f96d42caa}
+
+
+Definition at line 870 of file rtcc.\-c.
+
+
+
+References False, and R\-T\-C\-C\-\_\-\-Set\-Output\-Enable().
+
+
+
+Referenced by R\-T\-C\-C\-\_\-init(), R\-T\-C\-C\-\_\-\-Open(), and R\-T\-C\-C\-\_\-\-Shutdown().
+
+
+\begin{DoxyCode}
+871 \{
+872     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a992cd480fd79ea0bc9ef8d8d6bdd4b6b}{RTCC\_SetOutputEnable}(\hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False});
+873 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_aa7784247ba5a08e3e5fd557125c500b7}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Output\-Enable@{R\-T\-C\-C\-\_\-\-Output\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Output\-Enable@{R\-T\-C\-C\-\_\-\-Output\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Output\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Output\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_aa7784247ba5a08e3e5fd557125c500b7}
+
+
+Definition at line 865 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Set\-Output\-Enable(), and True.
+
+
+\begin{DoxyCode}
+866 \{
+867     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a992cd480fd79ea0bc9ef8d8d6bdd4b6b}{RTCC\_SetOutputEnable}(\hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True});
+868 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a9d2f5a8691055fbeb15aa1d93e896896}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Seconds\-Pulse\-Output@{R\-T\-C\-C\-\_\-\-Seconds\-Pulse\-Output}}
+\index{R\-T\-C\-C\-\_\-\-Seconds\-Pulse\-Output@{R\-T\-C\-C\-\_\-\-Seconds\-Pulse\-Output}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Seconds\-Pulse\-Output}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Seconds\-Pulse\-Output (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a9d2f5a8691055fbeb15aa1d93e896896}
+
+
+Definition at line 788 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+789 \{
+790         RTCCONbits.RTSECSEL = 1;    \textcolor{comment}{// RTCC Seconds Clock is selected for the RTCC pin}
+791 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a7348ab86fa2870859baf7663e5ed5d5d}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Alarm\-Date@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Date}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Date@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Date}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Date}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Alarm\-Date (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{al\-Date}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a7348ab86fa2870859baf7663e5ed5d5d}
+
+
+Definition at line 695 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+696 \{
+697     \textcolor{keywordflow}{while} (RTCALRM & 0x1000);   \textcolor{comment}{// wait ALRMSYNC to be off}
+698     RTCALRMCLR = 0xCFFF;            \textcolor{comment}{// clear the ALRMEN, CHIME, AMASK and ARPT;}
+699     ALRMDATE = alDate;
+700 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ad0d10e8bd2ed5dff85339cdaaf477455}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable (
+\begin{DoxyParamCaption}
+\item[{int}]{enable}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ad0d10e8bd2ed5dff85339cdaaf477455}
+
+
+Definition at line 498 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Disable(), and R\-T\-C\-C\-\_\-\-Enable().
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Disable(), R\-T\-C\-C\-\_\-\-Alarm\-Enable(), and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse().
+
+
+\begin{DoxyCode}
+499 \{
+500     \textcolor{keywordflow}{while} (RTCALRM & 0x1000);   \textcolor{comment}{// wait ALRMSYNC to be off}
+501     \hyperlink{p8_2pinguino_2core_2rtcc_8c_af79dca3fe51ab983cf52d238e762e2d8}{RTCC\_Disable}();
+502     \textcolor{keywordflow}{if} (enable)
+503         RTCALRMbits.ALRMEN = 1;     \textcolor{comment}{// Alarm is enabled}
+504     \textcolor{keywordflow}{else}
+505         RTCALRMbits.ALRMEN = 0;     \textcolor{comment}{// Alarm is disabled}
+506     \hyperlink{p8_2pinguino_2core_2rtcc_8c_a4e406886a6756df9694c406b5a05cf08}{RTCC\_Enable}();
+507 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a89ba773422644091d0dbaf5bd066a20d}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse (
+\begin{DoxyParamCaption}
+\item[{int}]{enable}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a89ba773422644091d0dbaf5bd066a20d}
+
+
+Definition at line 805 of file rtcc.\-c.
+
+
+
+References False, R\-T\-C\-C\-\_\-\-Disable(), R\-T\-C\-C\-\_\-\-Enable(), R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable(), and True.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-High(), R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Low(), and R\-T\-C\-C\-\_\-\-Alarm\-Initial\-Pulse\-Toggle().
+
+
+\begin{DoxyCode}
+806 \{
+807     \textcolor{keywordflow}{while} (RTCALRM & 0x1000);   \textcolor{comment}{// wait ALRMSYNC to be off}
+808     \hyperlink{p8_2pinguino_2core_2rtcc_8c_af79dca3fe51ab983cf52d238e762e2d8}{RTCC\_Disable}();             \textcolor{comment}{// }
+809     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ad0d10e8bd2ed5dff85339cdaaf477455}{RTCC\_SetAlarmEnable}(\hyperlink{p8_2pinguino_2core_2const_8h_a306ebd41c0cd1303b1372c6153f0caf8}{False});\textcolor{comment}{// Alarm is disabled, PIV is writable}
+810     \textcolor{keywordflow}{if} (enable)
+811         RTCALRMbits.PIV = 1;        \textcolor{comment}{// the initial value of the Alarm Pulse is high}
+812     \textcolor{keywordflow}{else}
+813         RTCALRMbits.PIV = 0;        \textcolor{comment}{// the initial value of the Alarm Pulse is low}
+814     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ad0d10e8bd2ed5dff85339cdaaf477455}{RTCC\_SetAlarmEnable}(\hyperlink{p8_2pinguino_2core_2const_8h_add3ca9eefe3b5b754426f51d3043e579}{True});   \textcolor{comment}{// Alarm is enabled}
+815     \hyperlink{p8_2pinguino_2core_2rtcc_8c_a4e406886a6756df9694c406b5a05cf08}{RTCC\_Enable}();                   \textcolor{comment}{// }
+816 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a7ea375da707f4037dc553d2c2d71df8d}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Alarm\-Int\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Int\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Int\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Int\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Int\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Alarm\-Int\-Enable (
+\begin{DoxyParamCaption}
+\item[{int}]{enable}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a7ea375da707f4037dc553d2c2d71df8d}
+
+
+Definition at line 884 of file rtcc.\-c.
+
+
+
+References I\-N\-T\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y\-\_\-3, I\-N\-T\-\_\-\-R\-E\-A\-L\-\_\-\-T\-I\-M\-E\-\_\-\-C\-L\-O\-C\-K, I\-N\-T\-\_\-\-R\-T\-C\-C\-\_\-\-V\-E\-C\-T\-O\-R, I\-N\-T\-\_\-\-S\-U\-B\-P\-R\-I\-O\-R\-I\-T\-Y\-\_\-1, I\-N\-T\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-M\-U\-L\-T\-\_\-\-V\-E\-C\-T\-O\-R, Int\-Clear\-Flag(), Int\-Configure\-System(), Int\-Disable(), Int\-Enable(), and Int\-Set\-Vector\-Priority().
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Int\-Disable(), and R\-T\-C\-C\-\_\-\-Alarm\-Int\-Enable().
+
+
+\begin{DoxyCode}
+885 \{
+886     \textcolor{keywordflow}{if} (enable)
+887     \{
+888         \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a9e4ebfd3f20cf6de4cfda78c4043f872}{IntConfigureSystem}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a8b1e2aaa6d775c7a98062aa9c5de70bb}{INT\_SYSTEM\_CONFIG\_MULT\_VECTOR});
+889         \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_acdb435df21146161ff09d20d610432ab}{IntSetVectorPriority}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_aaebe6a5ee786ec6266e55553f4469e3e}{INT\_RTCC\_VECTOR}, 
+      \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_af3c84daf9c75a030246a01afa27a6138}{INT\_PRIORITY\_3}, \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_aa441f83a73f701eb743cc7cb976bdb5a}{INT\_SUBPRIORITY\_1});
+890         \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a48a3efc73921037a269e73aff25f8470}{INT\_REAL\_TIME\_CLOCK});
+891         \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a06f9af7832fa5c1b2bd93084df9831b1}{IntEnable}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a48a3efc73921037a269e73aff25f8470}{INT\_REAL\_TIME\_CLOCK});
+892     \}
+893     \textcolor{keywordflow}{else}
+894     \{
+895         \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a0c3150b583f433afe8772b8e6e170117}{IntDisable}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a48a3efc73921037a269e73aff25f8470}{INT\_REAL\_TIME\_CLOCK});
+896     \}
+897 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat (
+\begin{DoxyParamCaption}
+\item[{int}]{rpt}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a53dd6bd08955122dcd8455cd7382b2d9}
+
+
+Definition at line 575 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Alarm\-Every\-Day(), R\-T\-C\-C\-\_\-\-Alarm\-Every\-Half\-Second(), R\-T\-C\-C\-\_\-\-Alarm\-Every\-Hour(), R\-T\-C\-C\-\_\-\-Alarm\-Every\-Minute(), R\-T\-C\-C\-\_\-\-Alarm\-Every\-Month(), R\-T\-C\-C\-\_\-\-Alarm\-Every\-Second(), R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Minutes(), R\-T\-C\-C\-\_\-\-Alarm\-Every\-Ten\-Seconds(), R\-T\-C\-C\-\_\-\-Alarm\-Every\-Week(), and R\-T\-C\-C\-\_\-\-Alarm\-Every\-Year().
+
+
+\begin{DoxyCode}
+576 \{
+577     \textcolor{keywordflow}{while} (RTCALRM & 0x1000);   \textcolor{comment}{// wait ALRMSYNC to be off}
+578     RTCALRMbits.AMASK = rpt;
+579 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ab16618c8cfae5809dc7e01f1f3448b0c}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat\-Count@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat\-Count}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat\-Count@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat\-Count}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Alarm\-Repeat\-Count (
+\begin{DoxyParamCaption}
+\item[{char}]{rpt\-Cnt}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ab16618c8cfae5809dc7e01f1f3448b0c}
+
+
+Definition at line 645 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+646 \{
+647     \textcolor{keywordflow}{while} (RTCALRM & 0x1000);   \textcolor{comment}{// wait ALRMSYNC to be off}
+648     RTCALRMbits.ARPT = rptCnt;
+649 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_afd1c438d216b010e36a4193bc301fb35}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Alarm\-Sync@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Sync}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Sync@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Sync}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Sync}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Alarm\-Sync (
+\begin{DoxyParamCaption}
+\item[{int}]{sync}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_afd1c438d216b010e36a4193bc301fb35}
+
+
+Definition at line 754 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+755 \{
+756     \textcolor{keywordflow}{if} (sync)
+757         RTCALRMbits.ALRMSYNC = 1;
+758     \textcolor{keywordflow}{else}
+759         RTCALRMbits.ALRMSYNC = 0;
+760 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a5a30435d4cfe01c0701509484c5babce}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{al\-Time}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a5a30435d4cfe01c0701509484c5babce}
+
+
+Definition at line 675 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+676 \{
+677     \textcolor{keywordflow}{while} (RTCALRM & 0x1000);   \textcolor{comment}{// wait ALRMSYNC to be off}
+678     RTCALRMCLR = 0xCFFF;        \textcolor{comment}{// clear the ALRMEN, CHIME, AMASK and ARPT;}
+679     ALRMTIME = alTime;
+680 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ab120d67f7c80613699a3c1fe498896d5}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time\-Date@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time\-Date}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time\-Date@{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time\-Date}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time\-Date}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Alarm\-Time\-Date (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{al\-Time, }
+\item[{unsigned long}]{al\-Date}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ab120d67f7c80613699a3c1fe498896d5}
+
+
+Definition at line 715 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+716 \{
+717     \textcolor{keywordflow}{while} (RTCALRM & 0x1000);   \textcolor{comment}{// wait ALRMSYNC to be off}
+718     RTCALRMCLR = 0xCFFF;            \textcolor{comment}{// clear the ALRMEN, CHIME, AMASK and ARPT;}
+719     ALRMTIME = alTime;
+720     ALRMDATE = alDate;
+721 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a46129a73ed5237407f689fbb01779792}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Calibration@{R\-T\-C\-C\-\_\-\-Set\-Calibration}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Calibration@{R\-T\-C\-C\-\_\-\-Set\-Calibration}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Calibration}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Calibration (
+\begin{DoxyParamCaption}
+\item[{int}]{cal}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a46129a73ed5237407f689fbb01779792}
+
+
+Definition at line 462 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Get\-Time(), R\-T\-C\-C\-\_\-\-Set\-Write\-Disable(), R\-T\-C\-C\-\_\-\-Set\-Write\-Enable(), and rtcc\-Time\-::seconds.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Open().
+
+
+\begin{DoxyCode}
+463 \{
+464     \hyperlink{unionrtcc_time}{rtccTime} t0;
+465 
+466     \textcolor{keywordflow}{if} (cal < -512) cal = -512;
+467     \textcolor{keywordflow}{if} (cal >  511) cal =  511;
+468     \textcolor{keywordflow}{if} (RTCCON & 0x8000)                    \textcolor{comment}{// if RTCC is ON}
+469     \{
+470         t0 = \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4f4c7bae8c4a33e185a6a18b3586472a}{RTCC\_GetTime}();
+471         \textcolor{keywordflow}{if} ((t0.\hyperlink{unionrtcc_time_ae53e173daf8fcf970bb3324ae545f21c}{seconds} & 0xFF) == 00)           \textcolor{comment}{// we're at second 00, wait auto-adjust to be
+       performed}
+472             \textcolor{keywordflow}{while}(!(RTCCON & 0x2));         \textcolor{comment}{// wait until second half...}
+473     \}
+474     \hyperlink{p8_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{RTCC\_SetWriteEnable}();
+475     RTCCONCLR = 0x03FF0000;                 \textcolor{comment}{// clear the calibration}
+476     RTCCONbits.CAL = cal;
+477     \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{RTCC\_SetWriteDisable}();
+478 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ab84295236323b830a7d7f273e827c099}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Chime\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Chime\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Chime\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Chime\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Chime\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Chime\-Enable (
+\begin{DoxyParamCaption}
+\item[{int}]{enable}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ab84295236323b830a7d7f273e827c099}
+
+
+Definition at line 538 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Chime\-Disable(), and R\-T\-C\-C\-\_\-\-Chime\-Enable().
+
+
+\begin{DoxyCode}
+539 \{
+540     \textcolor{keywordflow}{while} (RTCALRM & 0x1000);   \textcolor{comment}{// wait ALRMSYNC to be off}
+541     \textcolor{comment}{//RTCC\_Disable();}
+542     \textcolor{keywordflow}{if} (enable)
+543         RTCALRMbits.CHIME = 1;      \textcolor{comment}{// chime is on}
+544     \textcolor{keywordflow}{else}
+545         RTCALRMbits.CHIME = 0;      \textcolor{comment}{// chime is off}
+546     \textcolor{comment}{//RTCC\_Enable();}
+547 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a289f29e6a1502df4cb4ef4670ae57d1b}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Date@{R\-T\-C\-C\-\_\-\-Set\-Date}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Date@{R\-T\-C\-C\-\_\-\-Set\-Date}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Date}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Date (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{dt}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a289f29e6a1502df4cb4ef4670ae57d1b}
+
+
+Definition at line 388 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Set\-Write\-Disable(), and R\-T\-C\-C\-\_\-\-Set\-Write\-Enable().
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Open().
+
+
+\begin{DoxyCode}
+389 \{
+390     \hyperlink{p8_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{RTCC\_SetWriteEnable}();
+391     RTCCONCLR = 0x8000;         \textcolor{comment}{// turn off the RTCC}
+392     \textcolor{comment}{//Delayus(50);}
+393     \textcolor{keywordflow}{while} (RTCCON & 0x40);      \textcolor{comment}{// wait for clock to be turned off}
+394     RTCDATE = dt;               \textcolor{comment}{// Set date}
+395     RTCCONSET = 0x8000;         \textcolor{comment}{// turn on the RTCC}
+396     \textcolor{comment}{//Delayus(50);}
+397     \textcolor{keywordflow}{while} (!(RTCCON & 0x40));   \textcolor{comment}{// wait for clock to be turned on}
+398     \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{RTCC\_SetWriteDisable}();
+399 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a992cd480fd79ea0bc9ef8d8d6bdd4b6b}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Output\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Output\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Output\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Output\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Output\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Output\-Enable (
+\begin{DoxyParamCaption}
+\item[{int}]{enable}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a992cd480fd79ea0bc9ef8d8d6bdd4b6b}
+
+
+Definition at line 857 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Output\-Disable(), and R\-T\-C\-C\-\_\-\-Output\-Enable().
+
+
+\begin{DoxyCode}
+858 \{
+859     \textcolor{keywordflow}{if}(enable)
+860         RTCCONbits.RTCOE = 1;
+861     \textcolor{keywordflow}{else}
+862         RTCCONbits.RTCOE = 0;
+863 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_aed51920f0aef214b33af5336205e86e8}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Sync@{R\-T\-C\-C\-\_\-\-Set\-Sync}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Sync@{R\-T\-C\-C\-\_\-\-Set\-Sync}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Sync}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Sync (
+\begin{DoxyParamCaption}
+\item[{int}]{sync}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_aed51920f0aef214b33af5336205e86e8}
+
+
+Definition at line 741 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+742 \{
+743     \textcolor{keywordflow}{if} (sync)
+744         RTCCONbits.RTCSYNC = 1;
+745     \textcolor{keywordflow}{else}
+746         RTCCONbits.RTCSYNC = 0;
+747 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a890930404ad555c8d21cbd1431e22352}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Time@{R\-T\-C\-C\-\_\-\-Set\-Time}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Time@{R\-T\-C\-C\-\_\-\-Set\-Time}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Time (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{tm}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a890930404ad555c8d21cbd1431e22352}
+
+
+Definition at line 351 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Set\-Write\-Disable(), and R\-T\-C\-C\-\_\-\-Set\-Write\-Enable().
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Open().
+
+
+\begin{DoxyCode}
+352 \{
+353     \hyperlink{p8_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{RTCC\_SetWriteEnable}();
+354     RTCCONCLR = 0x8000;         \textcolor{comment}{// turn off the RTCC}
+355     \textcolor{comment}{//Delayus(50);}
+356     \textcolor{keywordflow}{while} (RTCCON & 0x40);      \textcolor{comment}{// wait for clock to be turned off}
+357     RTCTIME = tm;               \textcolor{comment}{// Set time}
+358     RTCCONSET = 0x8000;         \textcolor{comment}{// turn on the RTCC}
+359     \textcolor{comment}{//Delayus(50);}
+360     \textcolor{keywordflow}{while} (!(RTCCON & 0x40));   \textcolor{comment}{// wait for clock to be turned on}
+361     \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{RTCC\_SetWriteDisable}();
+362 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a61d28d42f5dc4f2955d05e0f41988da8}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Time\-Date@{R\-T\-C\-C\-\_\-\-Set\-Time\-Date}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Time\-Date@{R\-T\-C\-C\-\_\-\-Set\-Time\-Date}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Time\-Date}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Time\-Date (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{tm, }
+\item[{unsigned long}]{dt}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a61d28d42f5dc4f2955d05e0f41988da8}
+
+
+Definition at line 425 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Set\-Write\-Disable(), and R\-T\-C\-C\-\_\-\-Set\-Write\-Enable().
+
+
+\begin{DoxyCode}
+426 \{
+427     \hyperlink{p8_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{RTCC\_SetWriteEnable}();
+428     RTCCONCLR = 0x8000;         \textcolor{comment}{// turn off the RTCC}
+429     \textcolor{comment}{//Delayus(50);}
+430     \textcolor{keywordflow}{while} (RTCCON & 0x40);      \textcolor{comment}{// wait for clock to be turned off}
+431     RTCTIME = tm;               \textcolor{comment}{// Set time}
+432     RTCDATE = dt;               \textcolor{comment}{// Set date}
+433     RTCCONSET = 0x8000;         \textcolor{comment}{// turn on the RTCC}
+434     \textcolor{comment}{//Delayus(50);}
+435     \textcolor{keywordflow}{while} (!(RTCCON & 0x40));   \textcolor{comment}{// wait for clock to be turned on}
+436     \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{RTCC\_SetWriteDisable}();
+437 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Write\-Disable@{R\-T\-C\-C\-\_\-\-Set\-Write\-Disable}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Write\-Disable@{R\-T\-C\-C\-\_\-\-Set\-Write\-Disable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Write\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Write\-Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}
+
+
+Definition at line 220 of file rtcc.\-c.
+
+
+
+References System\-Lock(), and System\-Unlock().
+
+
+\begin{DoxyCode}
+221 \{
+222     \textcolor{comment}{// assume interrupts are disabled}
+223     \textcolor{comment}{// assume the DMA controller is suspended}
+224     \textcolor{comment}{// assume the device is locked}
+225     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a44dad2edd2d7ec6080c320b533294af8}{SystemUnlock}();
+226     RTCCONCLR = 0x8; \textcolor{comment}{// clear RTCWREN (bit 3) in RTCCON}
+227     \hyperlink{p32_2include_2pinguino_2core_2system_8c_ab91cf81fb590451a97b90b2ccbced9c3}{SystemLock}();
+228     \textcolor{comment}{// re-enable interrupts}
+229     \textcolor{comment}{// re-enable the DMA controller}
+230 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Write\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Write\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Write\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Write\-Enable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Write\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Write\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}
+
+
+Definition at line 208 of file rtcc.\-c.
+
+
+
+References System\-Lock(), and System\-Unlock().
+
+
+\begin{DoxyCode}
+209 \{
+210     \textcolor{comment}{// assume interrupts are disabled}
+211     \textcolor{comment}{// assume the DMA controller is suspended}
+212     \textcolor{comment}{// assume the device is locked}
+213     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a44dad2edd2d7ec6080c320b533294af8}{SystemUnlock}();
+214     RTCCONSET = 0x8; \textcolor{comment}{// set RTCWREN (bit 3) in RTCCON}
+215     \hyperlink{p32_2include_2pinguino_2core_2system_8c_ab91cf81fb590451a97b90b2ccbced9c3}{SystemLock}();
+216     \textcolor{comment}{// re-enable interrupts}
+217     \textcolor{comment}{// re-enable the DMA controller}
+218 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_ad59614d588c39390ac7a3fdf4925eb36}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Shutdown@{R\-T\-C\-C\-\_\-\-Shutdown}}
+\index{R\-T\-C\-C\-\_\-\-Shutdown@{R\-T\-C\-C\-\_\-\-Shutdown}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_ad59614d588c39390ac7a3fdf4925eb36}
+
+
+Definition at line 956 of file rtcc.\-c.
+
+
+
+References I\-N\-T\-\_\-\-R\-E\-A\-L\-\_\-\-T\-I\-M\-E\-\_\-\-C\-L\-O\-C\-K, Int\-Clear\-Flag(), R\-T\-C\-C\-\_\-\-Alarm\-Disable(), R\-T\-C\-C\-\_\-\-Disable(), R\-T\-C\-C\-\_\-\-Output\-Disable(), R\-T\-C\-C\-\_\-\-Set\-Write\-Disable(), and R\-T\-C\-C\-\_\-\-S\-O\-S\-Cdisable().
+
+
+\begin{DoxyCode}
+957 \{
+958     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_aeff7bda0ac921eac4ab9c87f3f95150e}{RTCC\_SOSCdisable}();
+959     \hyperlink{p8_2pinguino_2core_2rtcc_8c_af79dca3fe51ab983cf52d238e762e2d8}{RTCC\_Disable}();
+960     \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{RTCC\_SetWriteDisable}();
+961     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_ad83a0df1f279606453fef1481f5511df}{RTCC\_AlarmDisable}();
+962     \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a0802bdbee600239b1d4a9d9f96d42caa}{RTCC\_OutputDisable}();
+963     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a48a3efc73921037a269e73aff25f8470}{INT\_REAL\_TIME\_CLOCK});
+964 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_aeff7bda0ac921eac4ab9c87f3f95150e}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-S\-O\-S\-Cdisable@{R\-T\-C\-C\-\_\-\-S\-O\-S\-Cdisable}}
+\index{R\-T\-C\-C\-\_\-\-S\-O\-S\-Cdisable@{R\-T\-C\-C\-\_\-\-S\-O\-S\-Cdisable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-S\-O\-S\-Cdisable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-S\-O\-S\-Cdisable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_aeff7bda0ac921eac4ab9c87f3f95150e}
+
+
+Definition at line 334 of file rtcc.\-c.
+
+
+
+References System\-Lock(), and System\-Unlock().
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Shutdown().
+
+
+\begin{DoxyCode}
+335 \{
+336     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a44dad2edd2d7ec6080c320b533294af8}{SystemUnlock}();
+337     OSCCONbits.SOSCEN = 0;
+338     \hyperlink{p32_2include_2pinguino_2core_2system_8c_ab91cf81fb590451a97b90b2ccbced9c3}{SystemLock}();
+339 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_afafaaf8df5a7a8f987b1f328982e6343}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable@{R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable}}
+\index{R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable@{R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-S\-O\-S\-Cenable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_afafaaf8df5a7a8f987b1f328982e6343}
+
+
+Definition at line 314 of file rtcc.\-c.
+
+
+
+References R\-T\-C\-C\-\_\-\-Get\-S\-O\-S\-Cstatus(), R\-T\-C\-C\-\_\-\-S\-O\-S\-C\-\_\-\-O\-N, System\-Lock(), and System\-Unlock().
+
+
+
+Referenced by R\-T\-C\-C\-\_\-init(), and R\-T\-C\-C\-\_\-\-Open().
+
+
+\begin{DoxyCode}
+315 \{
+316     \hyperlink{p32_2include_2pinguino_2core_2system_8c_a44dad2edd2d7ec6080c320b533294af8}{SystemUnlock}();
+317     OSCCONbits.SOSCEN = 1;
+318     \hyperlink{p32_2include_2pinguino_2core_2system_8c_ab91cf81fb590451a97b90b2ccbced9c3}{SystemLock}();
+319     \textcolor{comment}{// Wait for stable SOCSC oscillator output before enabling the RTCC.}
+320     \textcolor{comment}{// This typically requires a 32 ms delay between enabling the SOSC and enabling the RTCC.}
+321     \textcolor{comment}{// 1st option}
+322     \textcolor{comment}{//  Delayms(50);}
+323     \textcolor{comment}{// 2nd option}
+324     \textcolor{comment}{// Wait for the SOSC to run}
+325     \textcolor{keywordflow}{while} (\hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a8d0f7830f68fdd9a1e574ac856422bad}{RTCC\_GetSOSCstatus}() != \hyperlink{p32_2include_2pinguino_2core_2rtcc_8c_a4639e41f09ecd1753127fd02eaf75e77a32df43c419b49c4562f647e49216d640}{RTCC\_SOSC\_ON});
+326 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2rtcc_8c_a9ffac0704ee5ebe58284a52dc42b57ae}{\index{p32/include/pinguino/core/rtcc.\-c@{p32/include/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-Interrupt@{R\-T\-C\-C\-Interrupt}}
+\index{R\-T\-C\-C\-Interrupt@{R\-T\-C\-C\-Interrupt}!p32/include/pinguino/core/rtcc.c@{p32/include/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-Interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2rtcc_8c_a9ffac0704ee5ebe58284a52dc42b57ae}
+
+
+Definition at line 919 of file rtcc.\-c.
+
+
+
+References I\-N\-T\-\_\-\-R\-E\-A\-L\-\_\-\-T\-I\-M\-E\-\_\-\-C\-L\-O\-C\-K, Int\-Clear\-Flag(), and Int\-Get\-Flag().
+
+
+\begin{DoxyCode}
+920 \{
+921     \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a39a57c6ba2a98e87154d50b2c2eb4c9d}{IntGetFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a48a3efc73921037a269e73aff25f8470}{INT\_REAL\_TIME\_CLOCK}))
+922     \{
+923         \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a48a3efc73921037a269e73aff25f8470}{INT\_REAL\_TIME\_CLOCK});
+924         intFunction();
+925     \}
+926 \}
+\end{DoxyCode}

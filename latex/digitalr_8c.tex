@@ -1,0 +1,85 @@
+\hypertarget{digitalr_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalr.c File Reference}
+\label{digitalr_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalr.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalr.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$pin.\-h$>$}\\*
+{\ttfamily \#include $<$digital.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{digitalr_8c_a843bd16231a7a61ceb033a7d37335c2c}{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-R\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread} (unsigned char pin)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{digitalr_8c_a843bd16231a7a61ceb033a7d37335c2c}{\index{digitalr.\-c@{digitalr.\-c}!\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-R\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-R\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-R\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-R\-\_\-\-\_\-}!digitalr.c@{digitalr.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-R\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-R\-\_\-\-\_\-}}\label{digitalr_8c_a843bd16231a7a61ceb033a7d37335c2c}
+
+
+Definition at line 38 of file digitalr.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{\index{digitalr.\-c@{digitalr.\-c}!digitalread@{digitalread}}
+\index{digitalread@{digitalread}!digitalr.c@{digitalr.\-c}}
+\subsubsection[{digitalread}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char digitalread (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{pin}
+\end{DoxyParamCaption}
+)}}\label{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}
+
+
+Definition at line 48 of file digitalr.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, p\-E, and P\-W\-M\-\_\-close().
+
+
+
+Referenced by D\-C\-F77\-\_\-scan\-Signal(), Keyboard\-\_\-get(), Keypad\-\_\-get\-Key(), One\-Wire\-Read\-Bit(), One\-Wire\-Reset(), pulse\-In(), S\-P\-I\-Loc\-\_\-\-Read(), Switch\-Debounce(), Led\-::toggle(), toggle(), touch\-\_\-data\-Available(), and touch\-\_\-read\-Data().
+
+
+\begin{DoxyCode}
+49 \{
+50 \textcolor{preprocessor}{    #if defined(ANALOGWRITE) || defined(\_\_PWM\_\_)}
+51 \textcolor{preprocessor}{}    \hyperlink{pwmclose_8c_a40552d82b976add7920ed8de5533bc7c}{PWM\_close}(pin);
+52 \textcolor{preprocessor}{    #endif}
+53 \textcolor{preprocessor}{}
+54     \textcolor{keywordflow}{switch} (port[pin])
+55     \{
+56         \textcolor{keywordflow}{case} \hyperlink{digital_8h_a166cc8406becb925e56e7e43ab4faaef}{pA}:
+57             \textcolor{keywordflow}{if} ((PORTA & mask[pin])!=0) \textcolor{keywordflow}{return} (1);
+58             \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} (0);
+59             \textcolor{keywordflow}{break};
+60         \textcolor{keywordflow}{case} \hyperlink{digital_8h_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}:
+61             \textcolor{keywordflow}{if} ((PORTB & mask[pin])!=0) \textcolor{keywordflow}{return} (1);
+62             \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} (0);
+63             \textcolor{keywordflow}{break};
+64         \textcolor{keywordflow}{case} \hyperlink{digital_8h_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}:
+65             \textcolor{keywordflow}{if} ((PORTC & mask[pin])!=0) \textcolor{keywordflow}{return} (1);
+66             \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} (0);
+67             \textcolor{keywordflow}{break};
+68 \textcolor{preprocessor}{        #if defined(PINGUINO4455)   || defined(PINGUINO4550)  || \(\backslash\)}
+69 \textcolor{preprocessor}{            defined(PINGUINO45K50)  || defined(PINGUINO46J50) || \(\backslash\)}
+70 \textcolor{preprocessor}{            defined(PINGUINO47J53A) || defined(PICUNO\_EQUO)}
+71 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{digital_8h_aeb46d85e02eebbe66bcbcbb44f403841}{pD}:
+72             \textcolor{keywordflow}{if} ((PORTD & mask[pin])!=0) \textcolor{keywordflow}{return} (1);
+73             \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} (0);
+74             \textcolor{keywordflow}{break};
+75         \textcolor{keywordflow}{case} \hyperlink{digital_8h_a9aba3e923a2537bfbd31131da85a2d0a}{pE}:
+76             \textcolor{keywordflow}{if} ((PORTE & mask[pin])!=0) \textcolor{keywordflow}{return} (1);
+77             \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} (0);
+78             \textcolor{keywordflow}{break};
+79 \textcolor{preprocessor}{        #endif}
+80 \textcolor{preprocessor}{}    \}
+81     \textcolor{keywordflow}{return} (0);
+82 \}
+\end{DoxyCode}

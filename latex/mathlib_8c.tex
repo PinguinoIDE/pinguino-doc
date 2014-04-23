@@ -1,0 +1,100 @@
+\hypertarget{mathlib_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/mathlib.c File Reference}
+\label{mathlib_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/mathlib.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/mathlib.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{mathlib_8c_abac5052fac0ffac7dc31e9011979c3b4}{\-\_\-\-\_\-\-M\-A\-T\-H\-L\-I\-B\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{mathlib_8c_a55afa626cd6ca4a3271016cd75888ecb}{abs} (int v)
+\item 
+int \hyperlink{mathlib_8c_a201553eba89673a33c78d3894b301ba8}{random} (int mini, int maxi)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_adafe97a8e4be18b0198f234819016582}{s32} \hyperlink{mathlib_8c_a6a676eaa7dd2432b4f76983e5acae13d}{map} (\hyperlink{p8_2pinguino_2core_2typedef_8h_adafe97a8e4be18b0198f234819016582}{s32} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_adafe97a8e4be18b0198f234819016582}{s32} in\-\_\-min, \hyperlink{p8_2pinguino_2core_2typedef_8h_adafe97a8e4be18b0198f234819016582}{s32} in\-\_\-max, \hyperlink{p8_2pinguino_2core_2typedef_8h_adafe97a8e4be18b0198f234819016582}{s32} out\-\_\-min, \hyperlink{p8_2pinguino_2core_2typedef_8h_adafe97a8e4be18b0198f234819016582}{s32} out\-\_\-max)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{mathlib_8c_abac5052fac0ffac7dc31e9011979c3b4}{\index{mathlib.\-c@{mathlib.\-c}!\-\_\-\-\_\-\-M\-A\-T\-H\-L\-I\-B\-\_\-\-C@{\-\_\-\-\_\-\-M\-A\-T\-H\-L\-I\-B\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-M\-A\-T\-H\-L\-I\-B\-\_\-\-C@{\-\_\-\-\_\-\-M\-A\-T\-H\-L\-I\-B\-\_\-\-C}!mathlib.c@{mathlib.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-M\-A\-T\-H\-L\-I\-B\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-M\-A\-T\-H\-L\-I\-B\-\_\-\-C}}\label{mathlib_8c_abac5052fac0ffac7dc31e9011979c3b4}
+
+
+Definition at line 29 of file mathlib.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{mathlib_8c_a55afa626cd6ca4a3271016cd75888ecb}{\index{mathlib.\-c@{mathlib.\-c}!abs@{abs}}
+\index{abs@{abs}!mathlib.c@{mathlib.\-c}}
+\subsubsection[{abs}]{\setlength{\rightskip}{0pt plus 5cm}int abs (
+\begin{DoxyParamCaption}
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)}}\label{mathlib_8c_a55afa626cd6ca4a3271016cd75888ecb}
+
+
+Definition at line 34 of file mathlib.\-c.
+
+
+
+Referenced by draw\-Line().
+
+
+\begin{DoxyCode}
+35 \{
+36     \textcolor{keywordflow}{return} (v < 0) ? -(unsigned)v : v;
+37 \}
+\end{DoxyCode}
+\hypertarget{mathlib_8c_a6a676eaa7dd2432b4f76983e5acae13d}{\index{mathlib.\-c@{mathlib.\-c}!map@{map}}
+\index{map@{map}!mathlib.c@{mathlib.\-c}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s32} map (
+\begin{DoxyParamCaption}
+\item[{{\bf s32}}]{x, }
+\item[{{\bf s32}}]{in\-\_\-min, }
+\item[{{\bf s32}}]{in\-\_\-max, }
+\item[{{\bf s32}}]{out\-\_\-min, }
+\item[{{\bf s32}}]{out\-\_\-max}
+\end{DoxyParamCaption}
+)}}\label{mathlib_8c_a6a676eaa7dd2432b4f76983e5acae13d}
+
+
+ \subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- Map }
+
+Description \-: map(value, from\-Low, from\-High, to\-Low, to\-High) Parameters \-: \subsubsection*{Returns \-: }
+
+Definition at line 61 of file mathlib.\-c.
+
+
+\begin{DoxyCode}
+62 \{
+63   \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} - in\_min) * (out\_max - out\_min) / (in\_max - in\_min) + out\_min;
+64 \}
+\end{DoxyCode}
+\hypertarget{mathlib_8c_a201553eba89673a33c78d3894b301ba8}{\index{mathlib.\-c@{mathlib.\-c}!random@{random}}
+\index{random@{random}!mathlib.c@{mathlib.\-c}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}int random (
+\begin{DoxyParamCaption}
+\item[{int}]{mini, }
+\item[{int}]{maxi}
+\end{DoxyParamCaption}
+)}}\label{mathlib_8c_a201553eba89673a33c78d3894b301ba8}
+
+
+ \subsubsection*{-\/-\/-\/-\/-\/-\/-\/--- random }
+
+Description \-: returns pseudo random number between mini and maxi Parameters \-: Returns \-: integer between mini and maxi \subsubsection*{Nota \-: random number generator must be initialize with random\-Seed function }
+
+Definition at line 48 of file mathlib.\-c.
+
+
+\begin{DoxyCode}
+49 \{
+50     \textcolor{keywordflow}{return} ((rand()%maxi) + mini);
+51 \}
+\end{DoxyCode}

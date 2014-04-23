@@ -1,0 +1,228 @@
+\hypertarget{p8_2pinguino_2libraries_21wire_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/1wire.c File Reference}
+\label{p8_2pinguino_2libraries_21wire_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/1wire.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/1wire.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$delayus.\-c$>$}\\*
+{\ttfamily \#include $<$digitalp.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$digitalr.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_21wire_8c_af951e800158d3e3ff274e1104db52633}{\-\_\-\-\_\-\-O\-N\-E\-W\-I\-R\-E\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{One\-Wire\-Reset} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_21wire_8c_adb3ba32b27d5ceb94f2bdc16ecfaa863}{One\-Wire\-Read\-Bit} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_21wire_8c_ad98c6798b245b809656daceaaccc4679}{One\-Wire\-Write\-Bit} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_21wire_8c_a2a4dab359a0b37abd64cfae70904a1b7}{One\-Wire\-Read\-Byte} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_21wire_8c_abaffc709af0a30377751a1b3d32eb72b}{One\-Wire\-Write\-Byte} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_21wire_8c_a337192c23554911cb001972a9cb9c241}{One\-Wire\-Read} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} D\-Qpin)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{One\-Wire\-Write} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} D\-Qpin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} val)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2libraries_21wire_8c_af951e800158d3e3ff274e1104db52633}{\index{p8/pinguino/libraries/1wire.\-c@{p8/pinguino/libraries/1wire.\-c}!\-\_\-\-\_\-\-O\-N\-E\-W\-I\-R\-E\-\_\-\-C@{\-\_\-\-\_\-\-O\-N\-E\-W\-I\-R\-E\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-O\-N\-E\-W\-I\-R\-E\-\_\-\-C@{\-\_\-\-\_\-\-O\-N\-E\-W\-I\-R\-E\-\_\-\-C}!p8/pinguino/libraries/1wire.c@{p8/pinguino/libraries/1wire.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-O\-N\-E\-W\-I\-R\-E\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-O\-N\-E\-W\-I\-R\-E\-\_\-\-C}}\label{p8_2pinguino_2libraries_21wire_8c_af951e800158d3e3ff274e1104db52633}
+
+
+Definition at line 29 of file 1wire.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_21wire_8c_a337192c23554911cb001972a9cb9c241}{\index{p8/pinguino/libraries/1wire.\-c@{p8/pinguino/libraries/1wire.\-c}!One\-Wire\-Read@{One\-Wire\-Read}}
+\index{One\-Wire\-Read@{One\-Wire\-Read}!p8/pinguino/libraries/1wire.c@{p8/pinguino/libraries/1wire.\-c}}
+\subsubsection[{One\-Wire\-Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} One\-Wire\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{D\-Qpin}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_21wire_8c_a337192c23554911cb001972a9cb9c241}
+
+
+Definition at line 109 of file 1wire.\-c.
+
+
+
+References One\-Wire\-Read\-Bit().
+
+
+
+Referenced by D\-S18\-B20\-Read(), D\-S18\-B20\-Read\-Measure(), and D\-S18\-B20\-Read\-Rom().
+
+
+\begin{DoxyCode}
+110     \{
+111         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i, value = 0;
+112         \textcolor{keywordflow}{for} (i=0; i<8; i++)
+113         \{
+114             \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_21wire_8c_adb3ba32b27d5ceb94f2bdc16ecfaa863}{OneWireReadBit}(DQpin))    \textcolor{comment}{// reads byte in, one bit at a time}
+115             \{
+116                 value |= 0x01 << i;         \textcolor{comment}{// and then shifts it left}
+117             \}
+118         \}
+119         \textcolor{keywordflow}{return}(value);
+120     \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_21wire_8c_adb3ba32b27d5ceb94f2bdc16ecfaa863}{\index{p8/pinguino/libraries/1wire.\-c@{p8/pinguino/libraries/1wire.\-c}!One\-Wire\-Read\-Bit@{One\-Wire\-Read\-Bit}}
+\index{One\-Wire\-Read\-Bit@{One\-Wire\-Read\-Bit}!p8/pinguino/libraries/1wire.c@{p8/pinguino/libraries/1wire.\-c}}
+\subsubsection[{One\-Wire\-Read\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} One\-Wire\-Read\-Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{D\-Qpin}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_21wire_8c_adb3ba32b27d5ceb94f2bdc16ecfaa863}
+
+
+Definition at line 92 of file 1wire.\-c.
+
+
+
+References Delayus(), and digitalread().
+
+
+
+Referenced by D\-S18\-B20\-Get\-Next(), and One\-Wire\-Read().
+
+
+\begin{DoxyCode}
+93     \{
+94         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} dq;
+95 
+96         OneWireLow(DQpin);          \textcolor{comment}{// pull DQ line low to start time slot}
+97         \textcolor{comment}{//myDelay\_us(1);                // 1us}
+98         OneWireHigh(DQpin);         \textcolor{comment}{// allow line to return high}
+99         \textcolor{comment}{//myDelay\_us(5);                    // Read within 15uS from start of time slot}
+100         dq = \hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(DQpin);     \textcolor{comment}{// get presence signal}
+101         \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(50);             \textcolor{comment}{// wait for rest of timeslot}
+102         \textcolor{keywordflow}{return} (dq);                    \textcolor{comment}{// return value of DQ line}
+103     \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_21wire_8c_a2a4dab359a0b37abd64cfae70904a1b7}{\index{p8/pinguino/libraries/1wire.\-c@{p8/pinguino/libraries/1wire.\-c}!One\-Wire\-Read\-Byte@{One\-Wire\-Read\-Byte}}
+\index{One\-Wire\-Read\-Byte@{One\-Wire\-Read\-Byte}!p8/pinguino/libraries/1wire.c@{p8/pinguino/libraries/1wire.\-c}}
+\subsubsection[{One\-Wire\-Read\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} One\-Wire\-Read\-Byte (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_21wire_8c_a2a4dab359a0b37abd64cfae70904a1b7}
+\hypertarget{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}{\index{p8/pinguino/libraries/1wire.\-c@{p8/pinguino/libraries/1wire.\-c}!One\-Wire\-Reset@{One\-Wire\-Reset}}
+\index{One\-Wire\-Reset@{One\-Wire\-Reset}!p8/pinguino/libraries/1wire.c@{p8/pinguino/libraries/1wire.\-c}}
+\subsubsection[{One\-Wire\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} One\-Wire\-Reset (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{D\-Qpin}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_21wire_8c_a05ef9dcd806f8b1c5496022badfbd4d0}
+
+
+Definition at line 75 of file 1wire.\-c.
+
+
+
+References Delayus(), and digitalread().
+
+
+
+Referenced by D\-S18\-B20\-Configure(), D\-S18\-B20\-Find(), D\-S18\-B20\-Get\-Next(), D\-S18\-B20\-Match\-Rom(), D\-S18\-B20\-Read(), D\-S18\-B20\-Read\-Measure(), D\-S18\-B20\-Read\-Rom(), and D\-S18\-B20\-Start\-Measure().
+
+
+\begin{DoxyCode}
+76     \{
+77         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} presence;
+78 
+79         OneWireLow(DQpin);          \textcolor{comment}{// pull DQ line low}
+80         \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(480);                \textcolor{comment}{// leave it low for min. 480us}
+81         OneWireHigh(DQpin);         \textcolor{comment}{// allow line to return high}
+82         \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(60);             \textcolor{comment}{// takes 15 to 60 us}
+83         presence = \hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(DQpin);   \textcolor{comment}{// get presence signal}
+84         \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(420);                \textcolor{comment}{// wait for end of timeslot (960-480-60=420)}
+85         \textcolor{keywordflow}{return} (presence);
+86     \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}{\index{p8/pinguino/libraries/1wire.\-c@{p8/pinguino/libraries/1wire.\-c}!One\-Wire\-Write@{One\-Wire\-Write}}
+\index{One\-Wire\-Write@{One\-Wire\-Write}!p8/pinguino/libraries/1wire.c@{p8/pinguino/libraries/1wire.\-c}}
+\subsubsection[{One\-Wire\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void One\-Wire\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{D\-Qpin, }
+\item[{{\bf u8}}]{val}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_21wire_8c_a1344915a42b70df9a6193f37e0754430}
+
+
+Definition at line 147 of file 1wire.\-c.
+
+
+
+References One\-Wire\-Write\-Bit().
+
+
+
+Referenced by D\-S18\-B20\-Configure(), D\-S18\-B20\-Get\-Next(), D\-S18\-B20\-Match\-Rom(), D\-S18\-B20\-Read(), D\-S18\-B20\-Read\-Measure(), D\-S18\-B20\-Read\-Rom(), and D\-S18\-B20\-Start\-Measure().
+
+
+\begin{DoxyCode}
+148     \{
+149         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i, temp;
+150         \textcolor{keywordflow}{for} (i=0; i<8; i++)                 \textcolor{comment}{// writes byte, one bit at a time}
+151         \{
+152             temp = val >> i;                \textcolor{comment}{// shifts val right 'i' spaces}
+153             temp &= 0x01;                   \textcolor{comment}{// copy that bit to temp}
+154             \hyperlink{p8_2pinguino_2libraries_21wire_8c_ad98c6798b245b809656daceaaccc4679}{OneWireWriteBit}(DQpin, temp);    \textcolor{comment}{// write bit in temp into}
+155         \}
+156     \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_21wire_8c_ad98c6798b245b809656daceaaccc4679}{\index{p8/pinguino/libraries/1wire.\-c@{p8/pinguino/libraries/1wire.\-c}!One\-Wire\-Write\-Bit@{One\-Wire\-Write\-Bit}}
+\index{One\-Wire\-Write\-Bit@{One\-Wire\-Write\-Bit}!p8/pinguino/libraries/1wire.c@{p8/pinguino/libraries/1wire.\-c}}
+\subsubsection[{One\-Wire\-Write\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}void One\-Wire\-Write\-Bit (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{D\-Qpin, }
+\item[{{\bf u8}}]{bitval}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_21wire_8c_ad98c6798b245b809656daceaaccc4679}
+
+
+Definition at line 126 of file 1wire.\-c.
+
+
+
+References Delayus().
+
+
+
+Referenced by D\-S18\-B20\-Get\-Next(), and One\-Wire\-Write().
+
+
+\begin{DoxyCode}
+127     \{
+128         \textcolor{keywordflow}{if}(bitval == 1)
+129         \{
+130             OneWireLow(DQpin);              \textcolor{comment}{// pull DQ line low}
+131             \textcolor{comment}{//myDelay\_us(5);                    // for max. 15us}
+132             OneWireHigh(DQpin);             \textcolor{comment}{// allow line to return high}
+133             \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(60);
+134         \}
+135         \textcolor{keywordflow}{else}
+136         \{
+137             OneWireLow(DQpin);              \textcolor{comment}{// pull DQ line low}
+138             \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(60);                 \textcolor{comment}{// for the whole time slot}
+139             OneWireHigh(DQpin);             \textcolor{comment}{// allow line to return high}
+140         \}
+141     \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_21wire_8c_abaffc709af0a30377751a1b3d32eb72b}{\index{p8/pinguino/libraries/1wire.\-c@{p8/pinguino/libraries/1wire.\-c}!One\-Wire\-Write\-Byte@{One\-Wire\-Write\-Byte}}
+\index{One\-Wire\-Write\-Byte@{One\-Wire\-Write\-Byte}!p8/pinguino/libraries/1wire.c@{p8/pinguino/libraries/1wire.\-c}}
+\subsubsection[{One\-Wire\-Write\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}void One\-Wire\-Write\-Byte (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{, }
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_21wire_8c_abaffc709af0a30377751a1b3d32eb72b}

@@ -1,0 +1,774 @@
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-P\-C\-D8544.h File Reference}
+\label{p8_2pinguino_2libraries_2_p_c_d8544_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-P\-C\-D8544.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcoord__t}{coord\-\_\-t}
+\item 
+struct \hyperlink{structfont__t}{font\-\_\-t}
+\item 
+struct \hyperlink{structcolor__t}{color\-\_\-t}
+\item 
+struct \hyperlink{structrect__t}{rect\-\_\-t}
+\item 
+union \hyperlink{unionword__t}{word\-\_\-t}
+\item 
+struct \hyperlink{structlcd__t}{lcd\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_af6e9455273a3628e6cd5a5925e82d34a}{P\-C\-D8544\-\_\-\-S\-P\-I\-H\-W}~1$<$$<$0
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5eac8d0d3d48f1897c304bdbbb59205d}{P\-C\-D8544\-\_\-\-S\-P\-I\-S\-W}~1$<$$<$1
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a649d0a8b6d146563e0f4585fdd152898}{P\-C\-D8544\-\_\-\-P\-O\-R\-T\-B}~1$<$$<$2
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a4f37cfb1ccdc09e3f555874bbc2c911c}{P\-C\-D8544\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}~\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8h_a5eac8d0d3d48f1897c304bdbbb59205d}{P\-C\-D8544\-\_\-\-S\-P\-I\-S\-W}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a46d67d48a7faab308f2e058dc35da83a}{D\-I\-S\-P\-L\-A\-Y\-\_\-\-W\-I\-D\-T\-H}~84
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a43b7b2061f733ea1dc0a5a6028e131ff}{D\-I\-S\-P\-L\-A\-Y\-\_\-\-H\-E\-I\-G\-H\-T}~48
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a035c0b93babde37c8919064af8b67928}{D\-I\-S\-P\-L\-A\-Y\-\_\-\-S\-I\-Z\-E}~(\hyperlink{p32_2include_2pinguino_2libraries_2_s_s_d1306_8h_a46d67d48a7faab308f2e058dc35da83a}{D\-I\-S\-P\-L\-A\-Y\-\_\-\-W\-I\-D\-T\-H} $\ast$ \hyperlink{p32_2include_2pinguino_2libraries_2_s_s_d1306_8h_a43b7b2061f733ea1dc0a5a6028e131ff}{D\-I\-S\-P\-L\-A\-Y\-\_\-\-H\-E\-I\-G\-H\-T} / 8)
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_abdc19d7f30976562c2d3efce365ef8f4}{D\-I\-S\-P\-L\-A\-Y\-\_\-\-R\-O\-W\-S}~((\hyperlink{p32_2include_2pinguino_2libraries_2_s_s_d1306_8h_a43b7b2061f733ea1dc0a5a6028e131ff}{D\-I\-S\-P\-L\-A\-Y\-\_\-\-H\-E\-I\-G\-H\-T} / 8) -\/ 1)
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ace36b7c479b1c327e8f69cac72d06f1c}{P\-C\-D8544\-\_\-\-P\-O\-W\-E\-R\-D\-O\-W\-N}~0x04
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_abe829bb979b286ad48aef9f679117d92}{P\-C\-D8544\-\_\-\-E\-N\-T\-R\-Y\-M\-O\-D\-E}~0x02
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_afd931e406641de8e4d59de5e8ee2600e}{P\-C\-D8544\-\_\-\-E\-X\-T\-E\-N\-D\-E\-D\-I\-N\-S\-T\-R\-U\-C\-T\-I\-O\-N}~0x01
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_abc1b8b8560953772b165955b56e9484e}{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-B\-L\-A\-N\-K}~0x0
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a4788bf0bc4379a2e97f522ee4cc25f92}{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-N\-O\-R\-M\-A\-L}~0x4
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a8f6eb081f953f84b7e458000de9a7bae}{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-A\-L\-L\-O\-N}~0x1
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ab47eeeaa67441735045b022c241cb7b9}{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-I\-N\-V\-E\-R\-T\-E\-D}~0x5
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a44bff445cb9978ff1648afacc44b18fc}{P\-C\-D8544\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S\-E\-T}~0x20
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a9a6247679d4f6552a5e9c96c89265635}{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-C\-O\-N\-T\-R\-O\-L}~0x08
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_aeb2416459f0db43bfc03b6662536694a}{P\-C\-D8544\-\_\-\-S\-E\-T\-Y\-A\-D\-D\-R}~0x40
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5c673c82f36ffec51a07fecd110a0d3c}{P\-C\-D8544\-\_\-\-S\-E\-T\-X\-A\-D\-D\-R}~0x80
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a72e28f9614fd19ff3daa8a81495c133e}{P\-C\-D8544\-\_\-\-S\-E\-T\-T\-E\-M\-P}~0x04
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a313ccc7748fe43d999d3b239c5183dad}{P\-C\-D8544\-\_\-\-S\-E\-T\-B\-I\-A\-S}~0x10
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_aa6b3f31170b18f602a66b9a95b530078}{P\-C\-D8544\-\_\-\-S\-E\-T\-V\-O\-P}~0x80
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a7b3b25cba33b07c303f3060fe41887f6}{B\-L\-A\-C\-K}~1
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a87b537f5fa5c109d3c05c13d6b18f382}{W\-H\-I\-T\-E}~0
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{P\-O\-R\-T\-R\-A\-I\-T}~1
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a211dd160685be8a5a4f43be3fc3195a4}{L\-A\-N\-D\-S\-C\-A\-P\-E}~0
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_adb1b61d03b12b900d7364bd4a52cca15}{P\-C\-D8544\-\_\-get\-Font\-Width}()~(\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{P\-C\-D8544.\-font.\-width})
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a0e1b8b5afbe71b6716d920c5122b408b}{P\-C\-D8544\-\_\-get\-Font\-Height}()~(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{P\-C\-D8544.\-font.\-height})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ae7e2314cd08ef673802f10e3d5f379f6}{P\-C\-D8544\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} S\-C\-L\-K, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} D\-I\-N, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} D\-C, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} C\-S, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} R\-S\-T)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a98d9a6820f2ff05e07152642c632c688}{P\-C\-D8544\-\_\-command} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac3b2d2dd64bc0251c1d0dc9c130c1c73}{P\-C\-D8544\-\_\-data} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a0273ee32c83d13fd0e25e54aec191d30}{P\-C\-D8544\-\_\-set\-Contrast} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} val)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ade01773386132b8291562f209bb3f6fe}{P\-C\-D8544\-\_\-clear\-Screen} ()
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a46190802fafcf8365114d273672cc1e4}{P\-C\-D8544\-\_\-refresh} ()
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a2a1aac499e9dc13527ab883ae7cdd1a1}{P\-C\-D8544\-\_\-draw\-Pixel} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a02f501a0265777d66c9f96ab5bae6d62}{P\-C\-D8544\-\_\-clear\-Pixel} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a8f5af54b656d715ec77704c5fd064105}{P\-C\-D8544\-\_\-get\-Pixel} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_aaf6190c54f1ceb73c956d7b726523d76}{P\-C\-D8544\-\_\-set\-Cursor} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ab622d6b82fd323f07dc3882166275fdc}{P\-C\-D8544\-\_\-shift\-Out} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ab6d79918a27d4c1af2615ab1b5b31c91}{P\-C\-D8544\-\_\-print\-Char} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a243d1c30f691dd4be2874c209605ab35}{P\-C\-D8544\-\_\-print} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$string)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a2a9c944e8e712111ba5d448c704fa0d7}{P\-C\-D8544\-\_\-println} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$string)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5ca322604394a2841647911e4d6cafc2}{P\-C\-D8544\-\_\-printf} (const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$fmt,...)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a26a2e8d196e803021dfdeec59b90e55d}{P\-C\-D8544\-\_\-print\-Number} (long value, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} base)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a4dab865094d4a8708157c511a7f22f46}{P\-C\-D8544\-\_\-print\-Float} (float number, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} digits)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structlcd__t}{lcd\-\_\-t} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{P\-C\-D8544}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$ \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a72df0a7ecfc037bf895bd9c13382aa6a}{P\-C\-D8544\-\_\-buffer} = \hyperlink{p32_2include_2pinguino_2libraries_2logo_2pinguino84x48_8h_a8d791cf513c8334530244977c28f24f8}{logo}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a7b3b25cba33b07c303f3060fe41887f6}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!B\-L\-A\-C\-K@{B\-L\-A\-C\-K}}
+\index{B\-L\-A\-C\-K@{B\-L\-A\-C\-K}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{B\-L\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-L\-A\-C\-K~1}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a7b3b25cba33b07c303f3060fe41887f6}
+
+
+Definition at line 107 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a43b7b2061f733ea1dc0a5a6028e131ff}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!D\-I\-S\-P\-L\-A\-Y\-\_\-\-H\-E\-I\-G\-H\-T@{D\-I\-S\-P\-L\-A\-Y\-\_\-\-H\-E\-I\-G\-H\-T}}
+\index{D\-I\-S\-P\-L\-A\-Y\-\_\-\-H\-E\-I\-G\-H\-T@{D\-I\-S\-P\-L\-A\-Y\-\_\-\-H\-E\-I\-G\-H\-T}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{D\-I\-S\-P\-L\-A\-Y\-\_\-\-H\-E\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-S\-P\-L\-A\-Y\-\_\-\-H\-E\-I\-G\-H\-T~48}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a43b7b2061f733ea1dc0a5a6028e131ff}
+
+
+Definition at line 78 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_abdc19d7f30976562c2d3efce365ef8f4}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!D\-I\-S\-P\-L\-A\-Y\-\_\-\-R\-O\-W\-S@{D\-I\-S\-P\-L\-A\-Y\-\_\-\-R\-O\-W\-S}}
+\index{D\-I\-S\-P\-L\-A\-Y\-\_\-\-R\-O\-W\-S@{D\-I\-S\-P\-L\-A\-Y\-\_\-\-R\-O\-W\-S}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{D\-I\-S\-P\-L\-A\-Y\-\_\-\-R\-O\-W\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-S\-P\-L\-A\-Y\-\_\-\-R\-O\-W\-S~(({\bf D\-I\-S\-P\-L\-A\-Y\-\_\-\-H\-E\-I\-G\-H\-T} / 8) -\/ 1)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_abdc19d7f30976562c2d3efce365ef8f4}
+
+
+Definition at line 80 of file P\-C\-D8544.\-h.
+
+
+
+Referenced by P\-C\-D8544\-\_\-print\-Char(), P\-C\-D8544\-\_\-refresh(), P\-C\-D8544\-\_\-scroll\-Up(), S\-S\-D1306\-\_\-clear\-Pixel(), S\-S\-D1306\-\_\-draw\-Pixel(), and S\-S\-D1306\-\_\-refresh().
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a035c0b93babde37c8919064af8b67928}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!D\-I\-S\-P\-L\-A\-Y\-\_\-\-S\-I\-Z\-E@{D\-I\-S\-P\-L\-A\-Y\-\_\-\-S\-I\-Z\-E}}
+\index{D\-I\-S\-P\-L\-A\-Y\-\_\-\-S\-I\-Z\-E@{D\-I\-S\-P\-L\-A\-Y\-\_\-\-S\-I\-Z\-E}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{D\-I\-S\-P\-L\-A\-Y\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-S\-P\-L\-A\-Y\-\_\-\-S\-I\-Z\-E~({\bf D\-I\-S\-P\-L\-A\-Y\-\_\-\-W\-I\-D\-T\-H} $\ast$ {\bf D\-I\-S\-P\-L\-A\-Y\-\_\-\-H\-E\-I\-G\-H\-T} / 8)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a035c0b93babde37c8919064af8b67928}
+
+
+Definition at line 79 of file P\-C\-D8544.\-h.
+
+
+
+Referenced by P\-C\-D8544\-\_\-clear\-Screen(), S\-S\-D1306\-\_\-clear\-Screen(), and S\-S\-D1306\-\_\-refresh().
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a46d67d48a7faab308f2e058dc35da83a}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!D\-I\-S\-P\-L\-A\-Y\-\_\-\-W\-I\-D\-T\-H@{D\-I\-S\-P\-L\-A\-Y\-\_\-\-W\-I\-D\-T\-H}}
+\index{D\-I\-S\-P\-L\-A\-Y\-\_\-\-W\-I\-D\-T\-H@{D\-I\-S\-P\-L\-A\-Y\-\_\-\-W\-I\-D\-T\-H}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{D\-I\-S\-P\-L\-A\-Y\-\_\-\-W\-I\-D\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-S\-P\-L\-A\-Y\-\_\-\-W\-I\-D\-T\-H~84}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a46d67d48a7faab308f2e058dc35da83a}
+
+
+ \subsubsection*{Display sizes }
+
+Definition at line 77 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a211dd160685be8a5a4f43be3fc3195a4}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!L\-A\-N\-D\-S\-C\-A\-P\-E@{L\-A\-N\-D\-S\-C\-A\-P\-E}}
+\index{L\-A\-N\-D\-S\-C\-A\-P\-E@{L\-A\-N\-D\-S\-C\-A\-P\-E}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{L\-A\-N\-D\-S\-C\-A\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-A\-N\-D\-S\-C\-A\-P\-E~0}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a211dd160685be8a5a4f43be3fc3195a4}
+
+
+Definition at line 112 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a8f6eb081f953f84b7e458000de9a7bae}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-A\-L\-L\-O\-N@{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-A\-L\-L\-O\-N}}
+\index{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-A\-L\-L\-O\-N@{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-A\-L\-L\-O\-N}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-A\-L\-L\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-A\-L\-L\-O\-N~0x1}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a8f6eb081f953f84b7e458000de9a7bae}
+
+
+Definition at line 92 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_abc1b8b8560953772b165955b56e9484e}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-B\-L\-A\-N\-K@{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-B\-L\-A\-N\-K}}
+\index{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-B\-L\-A\-N\-K@{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-B\-L\-A\-N\-K}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-B\-L\-A\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-B\-L\-A\-N\-K~0x0}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_abc1b8b8560953772b165955b56e9484e}
+
+
+Definition at line 90 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a9a6247679d4f6552a5e9c96c89265635}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-C\-O\-N\-T\-R\-O\-L@{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-C\-O\-N\-T\-R\-O\-L}}
+\index{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-C\-O\-N\-T\-R\-O\-L@{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-C\-O\-N\-T\-R\-O\-L}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-C\-O\-N\-T\-R\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-C\-O\-N\-T\-R\-O\-L~0x08}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a9a6247679d4f6552a5e9c96c89265635}
+
+
+Definition at line 97 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_ab47eeeaa67441735045b022c241cb7b9}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-I\-N\-V\-E\-R\-T\-E\-D@{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-I\-N\-V\-E\-R\-T\-E\-D}}
+\index{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-I\-N\-V\-E\-R\-T\-E\-D@{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-I\-N\-V\-E\-R\-T\-E\-D}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-I\-N\-V\-E\-R\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-I\-N\-V\-E\-R\-T\-E\-D~0x5}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_ab47eeeaa67441735045b022c241cb7b9}
+
+
+Definition at line 93 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a4788bf0bc4379a2e97f522ee4cc25f92}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-N\-O\-R\-M\-A\-L@{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-N\-O\-R\-M\-A\-L}}
+\index{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-N\-O\-R\-M\-A\-L@{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-N\-O\-R\-M\-A\-L}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-N\-O\-R\-M\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-D\-I\-S\-P\-L\-A\-Y\-N\-O\-R\-M\-A\-L~0x4}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a4788bf0bc4379a2e97f522ee4cc25f92}
+
+
+Definition at line 91 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_abe829bb979b286ad48aef9f679117d92}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-E\-N\-T\-R\-Y\-M\-O\-D\-E@{P\-C\-D8544\-\_\-\-E\-N\-T\-R\-Y\-M\-O\-D\-E}}
+\index{P\-C\-D8544\-\_\-\-E\-N\-T\-R\-Y\-M\-O\-D\-E@{P\-C\-D8544\-\_\-\-E\-N\-T\-R\-Y\-M\-O\-D\-E}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-E\-N\-T\-R\-Y\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-E\-N\-T\-R\-Y\-M\-O\-D\-E~0x02}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_abe829bb979b286ad48aef9f679117d92}
+
+
+Definition at line 87 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_afd931e406641de8e4d59de5e8ee2600e}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-E\-X\-T\-E\-N\-D\-E\-D\-I\-N\-S\-T\-R\-U\-C\-T\-I\-O\-N@{P\-C\-D8544\-\_\-\-E\-X\-T\-E\-N\-D\-E\-D\-I\-N\-S\-T\-R\-U\-C\-T\-I\-O\-N}}
+\index{P\-C\-D8544\-\_\-\-E\-X\-T\-E\-N\-D\-E\-D\-I\-N\-S\-T\-R\-U\-C\-T\-I\-O\-N@{P\-C\-D8544\-\_\-\-E\-X\-T\-E\-N\-D\-E\-D\-I\-N\-S\-T\-R\-U\-C\-T\-I\-O\-N}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-E\-X\-T\-E\-N\-D\-E\-D\-I\-N\-S\-T\-R\-U\-C\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-E\-X\-T\-E\-N\-D\-E\-D\-I\-N\-S\-T\-R\-U\-C\-T\-I\-O\-N~0x01}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_afd931e406641de8e4d59de5e8ee2600e}
+
+
+Definition at line 88 of file P\-C\-D8544.\-h.
+
+
+
+Referenced by P\-C\-D8544\-\_\-set\-Contrast().
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a44bff445cb9978ff1648afacc44b18fc}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S\-E\-T@{P\-C\-D8544\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S\-E\-T}}
+\index{P\-C\-D8544\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S\-E\-T@{P\-C\-D8544\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S\-E\-T}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-F\-U\-N\-C\-T\-I\-O\-N\-S\-E\-T~0x20}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a44bff445cb9978ff1648afacc44b18fc}
+
+
+Definition at line 96 of file P\-C\-D8544.\-h.
+
+
+
+Referenced by P\-C\-D8544\-\_\-set\-Contrast().
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a0e1b8b5afbe71b6716d920c5122b408b}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-get\-Font\-Height@{P\-C\-D8544\-\_\-get\-Font\-Height}}
+\index{P\-C\-D8544\-\_\-get\-Font\-Height@{P\-C\-D8544\-\_\-get\-Font\-Height}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-get\-Font\-Height}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-get\-Font\-Height(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf P\-C\-D8544.\-font.\-height})}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a0e1b8b5afbe71b6716d920c5122b408b}
+
+
+Definition at line 284 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_adb1b61d03b12b900d7364bd4a52cca15}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-get\-Font\-Width@{P\-C\-D8544\-\_\-get\-Font\-Width}}
+\index{P\-C\-D8544\-\_\-get\-Font\-Width@{P\-C\-D8544\-\_\-get\-Font\-Width}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-get\-Font\-Width}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-get\-Font\-Width(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf P\-C\-D8544.\-font.\-width})}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_adb1b61d03b12b900d7364bd4a52cca15}
+
+
+Definition at line 283 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a4f37cfb1ccdc09e3f555874bbc2c911c}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E@{P\-C\-D8544\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}}
+\index{P\-C\-D8544\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E@{P\-C\-D8544\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E~{\bf P\-C\-D8544\-\_\-\-S\-P\-I\-S\-W}}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a4f37cfb1ccdc09e3f555874bbc2c911c}
+
+
+Definition at line 59 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a649d0a8b6d146563e0f4585fdd152898}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-P\-O\-R\-T\-B@{P\-C\-D8544\-\_\-\-P\-O\-R\-T\-B}}
+\index{P\-C\-D8544\-\_\-\-P\-O\-R\-T\-B@{P\-C\-D8544\-\_\-\-P\-O\-R\-T\-B}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-P\-O\-R\-T\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-P\-O\-R\-T\-B~1$<$$<$2}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a649d0a8b6d146563e0f4585fdd152898}
+
+
+Definition at line 57 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_ace36b7c479b1c327e8f69cac72d06f1c}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-P\-O\-W\-E\-R\-D\-O\-W\-N@{P\-C\-D8544\-\_\-\-P\-O\-W\-E\-R\-D\-O\-W\-N}}
+\index{P\-C\-D8544\-\_\-\-P\-O\-W\-E\-R\-D\-O\-W\-N@{P\-C\-D8544\-\_\-\-P\-O\-W\-E\-R\-D\-O\-W\-N}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-P\-O\-W\-E\-R\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-P\-O\-W\-E\-R\-D\-O\-W\-N~0x04}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_ace36b7c479b1c327e8f69cac72d06f1c}
+
+
+ \subsubsection*{Display commands }
+
+Definition at line 86 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a313ccc7748fe43d999d3b239c5183dad}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-S\-E\-T\-B\-I\-A\-S@{P\-C\-D8544\-\_\-\-S\-E\-T\-B\-I\-A\-S}}
+\index{P\-C\-D8544\-\_\-\-S\-E\-T\-B\-I\-A\-S@{P\-C\-D8544\-\_\-\-S\-E\-T\-B\-I\-A\-S}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-S\-E\-T\-B\-I\-A\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-S\-E\-T\-B\-I\-A\-S~0x10}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a313ccc7748fe43d999d3b239c5183dad}
+
+
+Definition at line 103 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a72e28f9614fd19ff3daa8a81495c133e}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-S\-E\-T\-T\-E\-M\-P@{P\-C\-D8544\-\_\-\-S\-E\-T\-T\-E\-M\-P}}
+\index{P\-C\-D8544\-\_\-\-S\-E\-T\-T\-E\-M\-P@{P\-C\-D8544\-\_\-\-S\-E\-T\-T\-E\-M\-P}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-S\-E\-T\-T\-E\-M\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-S\-E\-T\-T\-E\-M\-P~0x04}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a72e28f9614fd19ff3daa8a81495c133e}
+
+
+Definition at line 102 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_aa6b3f31170b18f602a66b9a95b530078}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-S\-E\-T\-V\-O\-P@{P\-C\-D8544\-\_\-\-S\-E\-T\-V\-O\-P}}
+\index{P\-C\-D8544\-\_\-\-S\-E\-T\-V\-O\-P@{P\-C\-D8544\-\_\-\-S\-E\-T\-V\-O\-P}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-S\-E\-T\-V\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-S\-E\-T\-V\-O\-P~0x80}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_aa6b3f31170b18f602a66b9a95b530078}
+
+
+Definition at line 104 of file P\-C\-D8544.\-h.
+
+
+
+Referenced by P\-C\-D8544\-\_\-set\-Contrast().
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5c673c82f36ffec51a07fecd110a0d3c}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-S\-E\-T\-X\-A\-D\-D\-R@{P\-C\-D8544\-\_\-\-S\-E\-T\-X\-A\-D\-D\-R}}
+\index{P\-C\-D8544\-\_\-\-S\-E\-T\-X\-A\-D\-D\-R@{P\-C\-D8544\-\_\-\-S\-E\-T\-X\-A\-D\-D\-R}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-S\-E\-T\-X\-A\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-S\-E\-T\-X\-A\-D\-D\-R~0x80}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5c673c82f36ffec51a07fecd110a0d3c}
+
+
+Definition at line 99 of file P\-C\-D8544.\-h.
+
+
+
+Referenced by P\-C\-D8544\-\_\-refresh().
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_aeb2416459f0db43bfc03b6662536694a}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-S\-E\-T\-Y\-A\-D\-D\-R@{P\-C\-D8544\-\_\-\-S\-E\-T\-Y\-A\-D\-D\-R}}
+\index{P\-C\-D8544\-\_\-\-S\-E\-T\-Y\-A\-D\-D\-R@{P\-C\-D8544\-\_\-\-S\-E\-T\-Y\-A\-D\-D\-R}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-S\-E\-T\-Y\-A\-D\-D\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-S\-E\-T\-Y\-A\-D\-D\-R~0x40}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_aeb2416459f0db43bfc03b6662536694a}
+
+
+Definition at line 98 of file P\-C\-D8544.\-h.
+
+
+
+Referenced by P\-C\-D8544\-\_\-refresh().
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_af6e9455273a3628e6cd5a5925e82d34a}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-S\-P\-I\-H\-W@{P\-C\-D8544\-\_\-\-S\-P\-I\-H\-W}}
+\index{P\-C\-D8544\-\_\-\-S\-P\-I\-H\-W@{P\-C\-D8544\-\_\-\-S\-P\-I\-H\-W}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-S\-P\-I\-H\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-S\-P\-I\-H\-W~1$<$$<$0}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_af6e9455273a3628e6cd5a5925e82d34a}
+
+
+ \subsubsection*{Display interfaces }
+
+Definition at line 55 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5eac8d0d3d48f1897c304bdbbb59205d}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-\-S\-P\-I\-S\-W@{P\-C\-D8544\-\_\-\-S\-P\-I\-S\-W}}
+\index{P\-C\-D8544\-\_\-\-S\-P\-I\-S\-W@{P\-C\-D8544\-\_\-\-S\-P\-I\-S\-W}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-\-S\-P\-I\-S\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-C\-D8544\-\_\-\-S\-P\-I\-S\-W~1$<$$<$1}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5eac8d0d3d48f1897c304bdbbb59205d}
+
+
+Definition at line 56 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-O\-R\-T\-R\-A\-I\-T@{P\-O\-R\-T\-R\-A\-I\-T}}
+\index{P\-O\-R\-T\-R\-A\-I\-T@{P\-O\-R\-T\-R\-A\-I\-T}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-O\-R\-T\-R\-A\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-O\-R\-T\-R\-A\-I\-T~1}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a20d6fe800ee77dff684c05b86d5ab3b7}
+
+
+Definition at line 111 of file P\-C\-D8544.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a87b537f5fa5c109d3c05c13d6b18f382}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!W\-H\-I\-T\-E@{W\-H\-I\-T\-E}}
+\index{W\-H\-I\-T\-E@{W\-H\-I\-T\-E}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{W\-H\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-H\-I\-T\-E~0}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a87b537f5fa5c109d3c05c13d6b18f382}
+
+
+Definition at line 108 of file P\-C\-D8544.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a02f501a0265777d66c9f96ab5bae6d62}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-clear\-Pixel@{P\-C\-D8544\-\_\-clear\-Pixel}}
+\index{P\-C\-D8544\-\_\-clear\-Pixel@{P\-C\-D8544\-\_\-clear\-Pixel}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-clear\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-clear\-Pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a02f501a0265777d66c9f96ab5bae6d62}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_ade01773386132b8291562f209bb3f6fe}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-clear\-Screen@{P\-C\-D8544\-\_\-clear\-Screen}}
+\index{P\-C\-D8544\-\_\-clear\-Screen@{P\-C\-D8544\-\_\-clear\-Screen}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-clear\-Screen}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-clear\-Screen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_ade01773386132b8291562f209bb3f6fe}
+
+
+Definition at line 369 of file P\-C\-D8544.\-c.
+
+
+\begin{DoxyCode}
+370 \{   
+371     \textcolor{comment}{//memset(PCD8544\_buffer, 0, DISPLAY\_SIZE);}
+372 
+373     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} i;
+374 
+375     \textcolor{keywordflow}{for} (i = 0; i < \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a035c0b93babde37c8919064af8b67928}{DISPLAY\_SIZE}; i++)
+376         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a72df0a7ecfc037bf895bd9c13382aa6a}{PCD8544\_buffer}[i] = 0;
+377 
+378 \textcolor{preprocessor}{    #ifdef enablePartialUpdate}
+379 \textcolor{preprocessor}{}    PCD8544\_updateBoundingBox(0, 0, \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a46d67d48a7faab308f2e058dc35da83a}{DISPLAY\_WIDTH}-1, \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a43b7b2061f733ea1dc0a5a6028e131ff}{DISPLAY\_HEIGHT}-1);
+380 \textcolor{preprocessor}{    #endif}
+381 \textcolor{preprocessor}{}
+382     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_aae823bf8305b29bd7ace3d02c1ffe687}{y} = 0;
+383     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x} = 0;
+384 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a98d9a6820f2ff05e07152642c632c688}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-command@{P\-C\-D8544\-\_\-command}}
+\index{P\-C\-D8544\-\_\-command@{P\-C\-D8544\-\_\-command}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-command}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-command (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{c}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a98d9a6820f2ff05e07152642c632c688}
+
+
+Definition at line 131 of file P\-C\-D8544.\-c.
+
+
+\begin{DoxyCode}
+132 \{
+133 \textcolor{preprocessor}{    #if (PCD8544\_INTERFACE & PCD8544\_SPISW)}
+134 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #if (PCD8544\_INTERFACE & PCD8544\_PORTB)}
+135 \textcolor{preprocessor}{}            Low(PCD8544\_DC);
+136             Low(PCD8544\_SCE);
+137             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_ab622d6b82fd323f07dc3882166275fdc}{PCD8544\_shiftOut}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+138             High(PCD8544\_SCE); 
+139 \textcolor{preprocessor}{        #else}
+140 \textcolor{preprocessor}{}            \textcolor{comment}{// DC = LOW => COMMAND}
+141             \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_adf10cf9d52f9a336b72a4465b4665cf4}{\_dc}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+142             \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs} > 0)
+143                 \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+144                 
+145             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_ab622d6b82fd323f07dc3882166275fdc}{PCD8544\_shiftOut}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+146             
+147             \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs} > 0)
+148                 \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH}); 
+149 \textcolor{preprocessor}{        #endif}
+150 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #elif (PCD8544\_INTERFACE & PCD8544\_SPIHW)}
+151 \textcolor{preprocessor}{}        \textcolor{comment}{// DC = LOW => COMMAND}
+152         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_adf10cf9d52f9a336b72a4465b4665cf4}{\_dc}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+153         \hyperlink{p8_2pinguino_2core_2spi_8c_a56e8d2ffde94d0c5fdf14b772a32a77f}{SELECT}();
+154         \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+155         \hyperlink{p8_2pinguino_2core_2spi_8c_a1cbd972fc333e07d29999e284020c362}{DESELECT}();
+156 \textcolor{preprocessor}{    #endif}
+157 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac3b2d2dd64bc0251c1d0dc9c130c1c73}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-data@{P\-C\-D8544\-\_\-data}}
+\index{P\-C\-D8544\-\_\-data@{P\-C\-D8544\-\_\-data}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{c}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac3b2d2dd64bc0251c1d0dc9c130c1c73}
+
+
+Definition at line 159 of file P\-C\-D8544.\-c.
+
+
+\begin{DoxyCode}
+160 \{
+161 \textcolor{preprocessor}{    #if (PCD8544\_INTERFACE & PCD8544\_SPISW)}
+162 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #if (PCD8544\_INTERFACE & PCD8544\_PORTB)}
+163 \textcolor{preprocessor}{}            High(PCD8544\_DC);
+164             Low(PCD8544\_SCE);
+165             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_ab622d6b82fd323f07dc3882166275fdc}{PCD8544\_shiftOut}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+166             High(PCD8544\_SCE); 
+167 \textcolor{preprocessor}{        #else}
+168 \textcolor{preprocessor}{}            \textcolor{comment}{// DC = HIGH => DATA}
+169             \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_adf10cf9d52f9a336b72a4465b4665cf4}{\_dc}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+170             \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs} > 0)
+171                 \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+172                 
+173             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_ab622d6b82fd323f07dc3882166275fdc}{PCD8544\_shiftOut}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+174             
+175             \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs} > 0)
+176                 \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+177 \textcolor{preprocessor}{        #endif}
+178 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #elif (PCD8544\_INTERFACE & PCD8544\_SPIHW)}
+179 \textcolor{preprocessor}{}        \textcolor{comment}{// DC = HIGH => DATA}
+180         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_adf10cf9d52f9a336b72a4465b4665cf4}{\_dc}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+181         \hyperlink{p8_2pinguino_2core_2spi_8c_a56e8d2ffde94d0c5fdf14b772a32a77f}{SELECT}();
+182         \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+183         \hyperlink{p8_2pinguino_2core_2spi_8c_a1cbd972fc333e07d29999e284020c362}{DESELECT}();
+184 \textcolor{preprocessor}{    #endif}
+185 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a2a1aac499e9dc13527ab883ae7cdd1a1}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-draw\-Pixel@{P\-C\-D8544\-\_\-draw\-Pixel}}
+\index{P\-C\-D8544\-\_\-draw\-Pixel@{P\-C\-D8544\-\_\-draw\-Pixel}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-draw\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-draw\-Pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a2a1aac499e9dc13527ab883ae7cdd1a1}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a8f5af54b656d715ec77704c5fd064105}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-get\-Pixel@{P\-C\-D8544\-\_\-get\-Pixel}}
+\index{P\-C\-D8544\-\_\-get\-Pixel@{P\-C\-D8544\-\_\-get\-Pixel}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-get\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} P\-C\-D8544\-\_\-get\-Pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a8f5af54b656d715ec77704c5fd064105}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_ae7e2314cd08ef673802f10e3d5f379f6}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-init@{P\-C\-D8544\-\_\-init}}
+\index{P\-C\-D8544\-\_\-init@{P\-C\-D8544\-\_\-init}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{S\-C\-L\-K, }
+\item[{{\bf u8}}]{D\-I\-N, }
+\item[{{\bf u8}}]{D\-C, }
+\item[{{\bf u8}}]{C\-S, }
+\item[{{\bf u8}}]{R\-S\-T}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_ae7e2314cd08ef673802f10e3d5f379f6}
+
+
+ \subsubsection*{Prototypes }\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a243d1c30f691dd4be2874c209605ab35}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-print@{P\-C\-D8544\-\_\-print}}
+\index{P\-C\-D8544\-\_\-print@{P\-C\-D8544\-\_\-print}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-print (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a243d1c30f691dd4be2874c209605ab35}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_ab6d79918a27d4c1af2615ab1b5b31c91}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-print\-Char@{P\-C\-D8544\-\_\-print\-Char}}
+\index{P\-C\-D8544\-\_\-print\-Char@{P\-C\-D8544\-\_\-print\-Char}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-print\-Char}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-print\-Char (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{c}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_ab6d79918a27d4c1af2615ab1b5b31c91}
+
+
+Definition at line 446 of file P\-C\-D8544.\-c.
+
+
+\begin{DoxyCode}
+447 \{
+448     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}  b;
+449 
+450     \textcolor{keywordflow}{while} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x} >= (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_a5103232dda61eefd81b5b849643c5753}{width} / 
+      \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2efb3d8aba13baee6ea9250b1075454a}{font}.\hyperlink{structfont__t_a2c1d87ba049f447519d1a92e6550f822}{width}))
+451     \{
+452         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x} -= (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_a5103232dda61eefd81b5b849643c5753}{width} / 
+      \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2efb3d8aba13baee6ea9250b1075454a}{font}.\hyperlink{structfont__t_a2c1d87ba049f447519d1a92e6550f822}{width});
+453         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_aae823bf8305b29bd7ace3d02c1ffe687}{y}++;            
+454     \}
+455 
+456     \textcolor{keywordflow}{while} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_aae823bf8305b29bd7ace3d02c1ffe687}{y} > \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_abdc19d7f30976562c2d3efce365ef8f4}{DISPLAY\_ROWS})
+457     \{
+458         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a06e302998d4dc52d7c5a5d5d49936f59}{PCD8544\_scrollUp}();            
+459     \}
+460 
+461     \textcolor{keywordflow}{switch} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+462     \{
+463         \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)n'}:
+464             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_aae823bf8305b29bd7ace3d02c1ffe687}{y}++;
+465             \textcolor{keywordflow}{break};
+466             
+467         \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)r'}:
+468             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x} = 0;
+469             \textcolor{keywordflow}{break};
+470             
+471         \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)t'}:
+472             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x} = (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x} + 4) % 4;
+473             \textcolor{keywordflow}{break};
+474             
+475         \textcolor{keywordflow}{default}:
+476             \textcolor{keywordflow}{for} (b = 0; b < \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2efb3d8aba13baee6ea9250b1075454a}{font}.\hyperlink{structfont__t_a2c1d87ba049f447519d1a92e6550f822}{width}; b++)
+477             \{
+478                 \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a72df0a7ecfc037bf895bd9c13382aa6a}{PCD8544\_buffer}[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x} * 
+      \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2efb3d8aba13baee6ea9250b1075454a}{font}.\hyperlink{structfont__t_a2c1d87ba049f447519d1a92e6550f822}{width} + \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_aae823bf8305b29bd7ace3d02c1ffe687}{y} * \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.
+      \hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_a5103232dda61eefd81b5b849643c5753}{width} + b] = 
+479                     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2efb3d8aba13baee6ea9250b1075454a}{font}.\hyperlink{structfont__t_ac601b72531c4bc309bb1d926491e4988}{address}[2 + (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c} - 32) * 
+      \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2efb3d8aba13baee6ea9250b1075454a}{font}.\hyperlink{structfont__t_a2c1d87ba049f447519d1a92e6550f822}{width} + b];
+480             \}
+481         
+482         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x}++;
+483     \}            
+484 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5ca322604394a2841647911e4d6cafc2}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-printf@{P\-C\-D8544\-\_\-printf}}
+\index{P\-C\-D8544\-\_\-printf@{P\-C\-D8544\-\_\-printf}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-printf}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-printf (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8} $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5ca322604394a2841647911e4d6cafc2}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a4dab865094d4a8708157c511a7f22f46}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-print\-Float@{P\-C\-D8544\-\_\-print\-Float}}
+\index{P\-C\-D8544\-\_\-print\-Float@{P\-C\-D8544\-\_\-print\-Float}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-print\-Float}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-print\-Float (
+\begin{DoxyParamCaption}
+\item[{float}]{number, }
+\item[{{\bf u8}}]{digits}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a4dab865094d4a8708157c511a7f22f46}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a2a9c944e8e712111ba5d448c704fa0d7}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-println@{P\-C\-D8544\-\_\-println}}
+\index{P\-C\-D8544\-\_\-println@{P\-C\-D8544\-\_\-println}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-println}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-println (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{string}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a2a9c944e8e712111ba5d448c704fa0d7}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a26a2e8d196e803021dfdeec59b90e55d}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-print\-Number@{P\-C\-D8544\-\_\-print\-Number}}
+\index{P\-C\-D8544\-\_\-print\-Number@{P\-C\-D8544\-\_\-print\-Number}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-print\-Number}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-print\-Number (
+\begin{DoxyParamCaption}
+\item[{long}]{value, }
+\item[{{\bf u8}}]{base}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a26a2e8d196e803021dfdeec59b90e55d}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a46190802fafcf8365114d273672cc1e4}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-refresh@{P\-C\-D8544\-\_\-refresh}}
+\index{P\-C\-D8544\-\_\-refresh@{P\-C\-D8544\-\_\-refresh}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-refresh}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-refresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a46190802fafcf8365114d273672cc1e4}
+
+
+Definition at line 309 of file P\-C\-D8544.\-c.
+
+
+\begin{DoxyCode}
+310 \{
+311     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} col, p;
+312      
+313 \textcolor{preprocessor}{    #if (PCD8544\_INTERFACE & PCD8544\_SPISW)}
+314 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #if (PCD8544\_INTERFACE & PCD8544\_PORTB)}
+315 \textcolor{preprocessor}{}            \textcolor{keywordflow}{for}(p = 0; p <= \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_abdc19d7f30976562c2d3efce365ef8f4}{DISPLAY\_ROWS}; p++) 
+316             \{
+317                 col = 0;
+318                 \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a98d9a6820f2ff05e07152642c632c688}{PCD8544\_command}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_aeb2416459f0db43bfc03b6662536694a}{PCD8544\_SETYADDR} | p);
+319                 \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a98d9a6820f2ff05e07152642c632c688}{PCD8544\_command}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5c673c82f36ffec51a07fecd110a0d3c}{PCD8544\_SETXADDR} | col);
+320                 \textcolor{comment}{// send data in DDRAM}
+321                 High(PCD8544\_DC);
+322                 Low(PCD8544\_SCE);
+323                 \textcolor{keywordflow}{for}(; col < \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a46d67d48a7faab308f2e058dc35da83a}{DISPLAY\_WIDTH}; col++) 
+324                     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_ab622d6b82fd323f07dc3882166275fdc}{PCD8544\_shiftOut}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a72df0a7ecfc037bf895bd9c13382aa6a}{PCD8544\_buffer}[(DISPLAY\_WIDTH*p)+col]);
+325                 High(PCD8544\_SCE);
+326             \}
+327 \textcolor{preprocessor}{        #else}
+328 \textcolor{preprocessor}{}            \textcolor{keywordflow}{for}(p = 0; p <= \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_abdc19d7f30976562c2d3efce365ef8f4}{DISPLAY\_ROWS}; p++) 
+329             \{
+330                 col = 0;
+331                 \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a98d9a6820f2ff05e07152642c632c688}{PCD8544\_command}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_aeb2416459f0db43bfc03b6662536694a}{PCD8544\_SETYADDR} | p);
+332                 \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a98d9a6820f2ff05e07152642c632c688}{PCD8544\_command}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5c673c82f36ffec51a07fecd110a0d3c}{PCD8544\_SETXADDR} | col);
+333                 \textcolor{comment}{// send data in DDRAM}
+334                 \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_adf10cf9d52f9a336b72a4465b4665cf4}{\_dc}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+335                 \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs} > 0)
+336                     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+337                 \textcolor{keywordflow}{for}(; col < \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a46d67d48a7faab308f2e058dc35da83a}{DISPLAY\_WIDTH}; col++) 
+338                     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_ab622d6b82fd323f07dc3882166275fdc}{PCD8544\_shiftOut}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a72df0a7ecfc037bf895bd9c13382aa6a}{PCD8544\_buffer}[(DISPLAY\_WIDTH*p)+col]);
+339                 \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs} > 0)
+340                     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a2756566f95a83c4536681f348b552787}{\_cs}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+341             \}
+342 \textcolor{preprocessor}{        #endif}
+343 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #elif (PCD8544\_INTERFACE & PCD8544\_SPIHW)}
+344 \textcolor{preprocessor}{}        \textcolor{keywordflow}{for}(p = 0; p <= \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_abdc19d7f30976562c2d3efce365ef8f4}{DISPLAY\_ROWS}; p++) 
+345         \{
+346             col = 0;
+347             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a98d9a6820f2ff05e07152642c632c688}{PCD8544\_command}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_aeb2416459f0db43bfc03b6662536694a}{PCD8544\_SETYADDR} | p);
+348             \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a98d9a6820f2ff05e07152642c632c688}{PCD8544\_command}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a5c673c82f36ffec51a07fecd110a0d3c}{PCD8544\_SETXADDR} | col);
+349             \textcolor{comment}{// send data in DDRAM}
+350             \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_adf10cf9d52f9a336b72a4465b4665cf4}{\_dc}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+351             \hyperlink{p8_2pinguino_2core_2spi_8c_a56e8d2ffde94d0c5fdf14b772a32a77f}{SELECT}();
+352             \textcolor{keywordflow}{for}(; col < \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a46d67d48a7faab308f2e058dc35da83a}{DISPLAY\_WIDTH}; col++) 
+353                 \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a72df0a7ecfc037bf895bd9c13382aa6a}{PCD8544\_buffer}[(DISPLAY\_WIDTH*p)+col]);
+354             \hyperlink{p8_2pinguino_2core_2spi_8c_a1cbd972fc333e07d29999e284020c362}{DESELECT}();
+355         \}
+356 \textcolor{preprocessor}{    #endif}
+357 \textcolor{preprocessor}{}
+358     \textcolor{comment}{// no idea why this is necessary but it is to finish the last byte?}
+359     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a98d9a6820f2ff05e07152642c632c688}{PCD8544\_command}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_aeb2416459f0db43bfc03b6662536694a}{PCD8544\_SETYADDR} );
+360 
+361 \textcolor{preprocessor}{    #ifdef enablePartialUpdate}
+362 \textcolor{preprocessor}{}      xUpdateMin = DISPLAY\_WIDTH - 1;
+363       xUpdateMax = 0;
+364       yUpdateMin = \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a43b7b2061f733ea1dc0a5a6028e131ff}{DISPLAY\_HEIGHT}-1;
+365       yUpdateMax = 0;
+366 \textcolor{preprocessor}{    #endif}
+367 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a0273ee32c83d13fd0e25e54aec191d30}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-set\-Contrast@{P\-C\-D8544\-\_\-set\-Contrast}}
+\index{P\-C\-D8544\-\_\-set\-Contrast@{P\-C\-D8544\-\_\-set\-Contrast}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-set\-Contrast}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-set\-Contrast (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{val}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a0273ee32c83d13fd0e25e54aec191d30}
+
+
+Definition at line 401 of file P\-C\-D8544.\-c.
+
+
+\begin{DoxyCode}
+402 \{
+403     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a98d9a6820f2ff05e07152642c632c688}{PCD8544\_command}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a44bff445cb9978ff1648afacc44b18fc}{PCD8544\_FUNCTIONSET} | 
+      \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_afd931e406641de8e4d59de5e8ee2600e}{PCD8544\_EXTENDEDINSTRUCTION} );
+404     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a98d9a6820f2ff05e07152642c632c688}{PCD8544\_command}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_aa6b3f31170b18f602a66b9a95b530078}{PCD8544\_SETVOP} | (val & 0x7F)); 
+405     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a98d9a6820f2ff05e07152642c632c688}{PCD8544\_command}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_a44bff445cb9978ff1648afacc44b18fc}{PCD8544\_FUNCTIONSET});
+406 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_aaf6190c54f1ceb73c956d7b726523d76}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-set\-Cursor@{P\-C\-D8544\-\_\-set\-Cursor}}
+\index{P\-C\-D8544\-\_\-set\-Cursor@{P\-C\-D8544\-\_\-set\-Cursor}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-set\-Cursor}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-set\-Cursor (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_aaf6190c54f1ceb73c956d7b726523d76}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_ab622d6b82fd323f07dc3882166275fdc}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-shift\-Out@{P\-C\-D8544\-\_\-shift\-Out}}
+\index{P\-C\-D8544\-\_\-shift\-Out@{P\-C\-D8544\-\_\-shift\-Out}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-shift\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void P\-C\-D8544\-\_\-shift\-Out (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{c}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_ab622d6b82fd323f07dc3882166275fdc}
+
+
+ \subsubsection*{Core functions }
+
+Definition at line 106 of file P\-C\-D8544.\-c.
+
+
+\begin{DoxyCode}
+107 \{
+108     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+109 
+110     \textcolor{keywordflow}{for} (i = 0; i < 8; i++)
+111     \{
+112 \textcolor{preprocessor}{        #if (PCD8544\_INTERFACE & PCD8544\_SPISW)}
+113 \textcolor{preprocessor}{}\textcolor{preprocessor}{            #if (PCD8544\_INTERFACE & PCD8544\_PORTB)}
+114 \textcolor{preprocessor}{}                \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c} & 0x80)
+115                     High(PCD8544\_SDIN);
+116                 \textcolor{keywordflow}{else}
+117                     Low(PCD8544\_SDIN);
+118                 High(PCD8544\_SCLK);
+119                 Low(PCD8544\_SCLK);
+120 \textcolor{preprocessor}{            #else}
+121 \textcolor{preprocessor}{}                \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_a7c3db95b39144d3fc60192e2f08beb29}{\_din}, (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c} & 0x80) ? 
+      \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH} : \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+122                 \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_adabf5610095f79e1ca781233a23f2c2a}{\_sclk}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+123                 \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{PCD8544}.\hyperlink{structlcd__t_adabf5610095f79e1ca781233a23f2c2a}{\_sclk}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+124 \textcolor{preprocessor}{            #endif}
+125 \textcolor{preprocessor}{}            \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c} <<= 1;
+126 \textcolor{preprocessor}{        #endif}
+127 \textcolor{preprocessor}{}    \}
+128 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544@{P\-C\-D8544}}
+\index{P\-C\-D8544@{P\-C\-D8544}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544}]{\setlength{\rightskip}{0pt plus 5cm}{\bf lcd\-\_\-t} P\-C\-D8544}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_ac190fa3a2937606a8729408813150107}
+
+
+ \subsubsection*{Globals }
+
+Definition at line 198 of file P\-C\-D8544.\-h.
+
+
+
+Referenced by if(), P\-C\-D8544\-\_\-clear\-Screen(), P\-C\-D8544\-\_\-command(), P\-C\-D8544\-\_\-data(), P\-C\-D8544\-\_\-print\-Char(), P\-C\-D8544\-\_\-refresh(), P\-C\-D8544\-\_\-scroll\-Up(), P\-C\-D8544\-\_\-set\-Font(), and P\-C\-D8544\-\_\-shift\-Out().
+
+\hypertarget{p8_2pinguino_2libraries_2_p_c_d8544_8h_a72df0a7ecfc037bf895bd9c13382aa6a}{\index{p8/pinguino/libraries/\-P\-C\-D8544.\-h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}!P\-C\-D8544\-\_\-buffer@{P\-C\-D8544\-\_\-buffer}}
+\index{P\-C\-D8544\-\_\-buffer@{P\-C\-D8544\-\_\-buffer}!p8/pinguino/libraries/PCD8544.h@{p8/pinguino/libraries/\-P\-C\-D8544.\-h}}
+\subsubsection[{P\-C\-D8544\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8}$\ast$ P\-C\-D8544\-\_\-buffer = {\bf logo}}}\label{p8_2pinguino_2libraries_2_p_c_d8544_8h_a72df0a7ecfc037bf895bd9c13382aa6a}
+
+
+Definition at line 199 of file P\-C\-D8544.\-h.
+
+
+
+Referenced by P\-C\-D8544\-\_\-clear\-Screen(), P\-C\-D8544\-\_\-print\-Char(), P\-C\-D8544\-\_\-refresh(), and P\-C\-D8544\-\_\-scroll\-Up().
+

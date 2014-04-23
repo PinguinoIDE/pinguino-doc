@@ -1,0 +1,86 @@
+\hypertarget{spisw_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/spisw.c File Reference}
+\label{spisw_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/spisw.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/spisw.\-c}}
+}
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{spisw_8c_ae792e82eb28a98e602c7f812342fa97f}{\-\_\-\-S\-P\-I\-S\-W\-\_\-\-C\-\_\-}
+\item 
+\#define \hyperlink{spisw_8c_a5811613d98580676f67f0dde8125433e}{L\-S\-B\-F\-I\-R\-S\-T}~0
+\item 
+\#define \hyperlink{spisw_8c_a1c7ef42eff02618bde70868af4944d81}{M\-S\-B\-F\-I\-R\-S\-T}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{spisw_8c_a178d9db2b2a191a5e8433f6582d49e9a}{shift\-Out} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} data\-Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} clock\-Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} bit\-Order, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} val)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{spisw_8c_ae792e82eb28a98e602c7f812342fa97f}{\index{spisw.\-c@{spisw.\-c}!\-\_\-\-S\-P\-I\-S\-W\-\_\-\-C\-\_\-@{\-\_\-\-S\-P\-I\-S\-W\-\_\-\-C\-\_\-}}
+\index{\-\_\-\-S\-P\-I\-S\-W\-\_\-\-C\-\_\-@{\-\_\-\-S\-P\-I\-S\-W\-\_\-\-C\-\_\-}!spisw.c@{spisw.\-c}}
+\subsubsection[{\-\_\-\-S\-P\-I\-S\-W\-\_\-\-C\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-S\-P\-I\-S\-W\-\_\-\-C\-\_\-}}\label{spisw_8c_ae792e82eb28a98e602c7f812342fa97f}
+
+
+Definition at line 25 of file spisw.\-c.
+
+\hypertarget{spisw_8c_a5811613d98580676f67f0dde8125433e}{\index{spisw.\-c@{spisw.\-c}!L\-S\-B\-F\-I\-R\-S\-T@{L\-S\-B\-F\-I\-R\-S\-T}}
+\index{L\-S\-B\-F\-I\-R\-S\-T@{L\-S\-B\-F\-I\-R\-S\-T}!spisw.c@{spisw.\-c}}
+\subsubsection[{L\-S\-B\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-S\-B\-F\-I\-R\-S\-T~0}}\label{spisw_8c_a5811613d98580676f67f0dde8125433e}
+
+
+Definition at line 29 of file spisw.\-c.
+
+
+
+Referenced by shift\-Out().
+
+\hypertarget{spisw_8c_a1c7ef42eff02618bde70868af4944d81}{\index{spisw.\-c@{spisw.\-c}!M\-S\-B\-F\-I\-R\-S\-T@{M\-S\-B\-F\-I\-R\-S\-T}}
+\index{M\-S\-B\-F\-I\-R\-S\-T@{M\-S\-B\-F\-I\-R\-S\-T}!spisw.c@{spisw.\-c}}
+\subsubsection[{M\-S\-B\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-B\-F\-I\-R\-S\-T~1}}\label{spisw_8c_a1c7ef42eff02618bde70868af4944d81}
+
+
+Definition at line 30 of file spisw.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{spisw_8c_a178d9db2b2a191a5e8433f6582d49e9a}{\index{spisw.\-c@{spisw.\-c}!shift\-Out@{shift\-Out}}
+\index{shift\-Out@{shift\-Out}!spisw.c@{spisw.\-c}}
+\subsubsection[{shift\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void shift\-Out (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{data\-Pin, }
+\item[{{\bf u8}}]{clock\-Pin, }
+\item[{{\bf u8}}]{bit\-Order, }
+\item[{{\bf u8}}]{val}
+\end{DoxyParamCaption}
+)}}\label{spisw_8c_a178d9db2b2a191a5e8433f6582d49e9a}
+
+
+Definition at line 32 of file spisw.\-c.
+
+
+
+References digitalwrite(), H\-I\-G\-H, L\-O\-W, and L\-S\-B\-F\-I\-R\-S\-T.
+
+
+\begin{DoxyCode}
+33 \{
+34     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+35     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} bitMask;
+36 
+37     \textcolor{keywordflow}{for} (i = 0; i < 8; i++)
+38     \{
+39         \textcolor{keywordflow}{if} (bitOrder == \hyperlink{spisw_8c_a5811613d98580676f67f0dde8125433e}{LSBFIRST})
+40             bitMask = (1 << i);
+41         \textcolor{keywordflow}{else}
+42             bitMask = (1 << (7 - i));
+43 
+44         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(dataPin, (val & bitMask) ? \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH} : \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+45         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(clockPin, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+46         \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(clockPin, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});            
+47     \}
+48 \}
+\end{DoxyCode}

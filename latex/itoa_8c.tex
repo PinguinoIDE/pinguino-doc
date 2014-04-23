@@ -1,0 +1,218 @@
+\hypertarget{itoa_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/itoa.c File Reference}
+\label{itoa_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/itoa.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/itoa.\-c}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{itoa_8c_ac2653d412419e159cf44dd3642bb0ff5}{H\-E\-X\-A}~16
+\item 
+\#define \hyperlink{itoa_8c_a7c2d2b121faf048e9623df797612378c}{D\-E\-C\-I\-M\-A\-L}~10
+\item 
+\#define \hyperlink{itoa_8c_a5cd8b22af5187daa3d34709d3b516851}{O\-C\-T\-A\-L}~8
+\item 
+\#define \hyperlink{itoa_8c_acc166508d5cfbf4100f8622ce97f4985}{B\-I\-N\-A\-R\-Y}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{itoa_8c_a80edb36f87fd9a03669733b4b4d5a9dd}{itoa} (int value, char $\ast$string, int base)
+\item 
+char $\ast$ \hyperlink{itoa_8c_af7a157a789d3da4cbe54f89b034b139b}{ltoa} (long value, char $\ast$string, int base)
+\item 
+char $\ast$ \hyperlink{itoa_8c_ab393a711ad96b0f3ace586e83b6c0634}{ultoa} (unsigned long value, char $\ast$string, int base)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{itoa_8c_acc166508d5cfbf4100f8622ce97f4985}{\index{itoa.\-c@{itoa.\-c}!B\-I\-N\-A\-R\-Y@{B\-I\-N\-A\-R\-Y}}
+\index{B\-I\-N\-A\-R\-Y@{B\-I\-N\-A\-R\-Y}!itoa.c@{itoa.\-c}}
+\subsubsection[{B\-I\-N\-A\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-I\-N\-A\-R\-Y~2}}\label{itoa_8c_acc166508d5cfbf4100f8622ce97f4985}
+
+
+Definition at line 15 of file itoa.\-c.
+
+\hypertarget{itoa_8c_a7c2d2b121faf048e9623df797612378c}{\index{itoa.\-c@{itoa.\-c}!D\-E\-C\-I\-M\-A\-L@{D\-E\-C\-I\-M\-A\-L}}
+\index{D\-E\-C\-I\-M\-A\-L@{D\-E\-C\-I\-M\-A\-L}!itoa.c@{itoa.\-c}}
+\subsubsection[{D\-E\-C\-I\-M\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-C\-I\-M\-A\-L~10}}\label{itoa_8c_a7c2d2b121faf048e9623df797612378c}
+
+
+Definition at line 13 of file itoa.\-c.
+
+\hypertarget{itoa_8c_ac2653d412419e159cf44dd3642bb0ff5}{\index{itoa.\-c@{itoa.\-c}!H\-E\-X\-A@{H\-E\-X\-A}}
+\index{H\-E\-X\-A@{H\-E\-X\-A}!itoa.c@{itoa.\-c}}
+\subsubsection[{H\-E\-X\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-E\-X\-A~16}}\label{itoa_8c_ac2653d412419e159cf44dd3642bb0ff5}
+
+
+Definition at line 12 of file itoa.\-c.
+
+\hypertarget{itoa_8c_a5cd8b22af5187daa3d34709d3b516851}{\index{itoa.\-c@{itoa.\-c}!O\-C\-T\-A\-L@{O\-C\-T\-A\-L}}
+\index{O\-C\-T\-A\-L@{O\-C\-T\-A\-L}!itoa.c@{itoa.\-c}}
+\subsubsection[{O\-C\-T\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-C\-T\-A\-L~8}}\label{itoa_8c_a5cd8b22af5187daa3d34709d3b516851}
+
+
+Definition at line 14 of file itoa.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{itoa_8c_a80edb36f87fd9a03669733b4b4d5a9dd}{\index{itoa.\-c@{itoa.\-c}!itoa@{itoa}}
+\index{itoa@{itoa}!itoa.c@{itoa.\-c}}
+\subsubsection[{itoa}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ itoa (
+\begin{DoxyParamCaption}
+\item[{int}]{value, }
+\item[{char $\ast$}]{string, }
+\item[{int}]{base}
+\end{DoxyParamCaption}
+)}}\label{itoa_8c_a80edb36f87fd9a03669733b4b4d5a9dd}
+
+
+Definition at line 17 of file itoa.\-c.
+
+
+
+Referenced by pftoa().
+
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{keywordtype}{char} tmp[33];
+20     \textcolor{keywordtype}{char} *tp = tmp;
+21     \textcolor{keywordtype}{int} i;
+22     \textcolor{keywordtype}{unsigned} v;
+23     \textcolor{keywordtype}{int} sign;
+24     \textcolor{keywordtype}{char} *sp;
+25 
+26     \textcolor{keywordflow}{if} (base > 36 || base <= 1)
+27         \textcolor{keywordflow}{return} 0;
+28 
+29     sign = (base == 10 && value < 0);
+30     \textcolor{keywordflow}{if} (sign)
+31         v = -value;
+32     \textcolor{keywordflow}{else}
+33         v = (unsigned)value;
+34     \textcolor{keywordflow}{while} (v || tp == tmp)
+35     \{
+36         i = v % base;
+37         v = v / base;
+38         \textcolor{keywordflow}{if} (i < 10)
+39             *tp++ = i+\textcolor{charliteral}{'0'};
+40         \textcolor{keywordflow}{else}
+41             *tp++ = i + \textcolor{charliteral}{'a'} - 10;
+42     \}
+43 
+44     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string} == 0)
+45         \textcolor{keywordtype}{string} = (\textcolor{keywordtype}{char} *)malloc((tp-tmp)+sign+1);
+46     sp = string;
+47 
+48     \textcolor{keywordflow}{if} (sign)
+49         *sp++ = \textcolor{charliteral}{'-'};
+50     \textcolor{keywordflow}{while} (tp > tmp)
+51         *sp++ = *--tp;
+52     *sp = 0;
+53     \textcolor{keywordflow}{return} string;
+54 \}
+\end{DoxyCode}
+\hypertarget{itoa_8c_af7a157a789d3da4cbe54f89b034b139b}{\index{itoa.\-c@{itoa.\-c}!ltoa@{ltoa}}
+\index{ltoa@{ltoa}!itoa.c@{itoa.\-c}}
+\subsubsection[{ltoa}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ ltoa (
+\begin{DoxyParamCaption}
+\item[{long}]{value, }
+\item[{char $\ast$}]{string, }
+\item[{int}]{base}
+\end{DoxyParamCaption}
+)}}\label{itoa_8c_af7a157a789d3da4cbe54f89b034b139b}
+
+
+Definition at line 57 of file itoa.\-c.
+
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{keywordtype}{char} tmp[33];
+60     \textcolor{keywordtype}{char} *tp = tmp;
+61     \textcolor{keywordtype}{long} i;
+62     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} v;
+63     \textcolor{keywordtype}{int} sign;
+64     \textcolor{keywordtype}{char} *sp;
+65 
+66     \textcolor{keywordflow}{if} (base > 36 || base <= 1)
+67         \textcolor{keywordflow}{return} 0;
+68 
+69     sign = (base == 10 && value < 0);
+70     \textcolor{keywordflow}{if} (sign)
+71         v = -value;
+72     \textcolor{keywordflow}{else}
+73         v = (\textcolor{keywordtype}{unsigned} long)value;
+74     \textcolor{keywordflow}{while} (v || tp == tmp)
+75     \{
+76         i = v % base;
+77         v = v / base;
+78         \textcolor{keywordflow}{if} (i < 10)
+79             *tp++ = i+\textcolor{charliteral}{'0'};
+80         \textcolor{keywordflow}{else}
+81             *tp++ = i + \textcolor{charliteral}{'a'} - 10;
+82     \}
+83 
+84     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string} == 0)
+85         \textcolor{keywordtype}{string} = (\textcolor{keywordtype}{char} *)malloc((tp-tmp)+sign+1);
+86     sp = string;
+87 
+88     \textcolor{keywordflow}{if} (sign)
+89         *sp++ = \textcolor{charliteral}{'-'};
+90     \textcolor{keywordflow}{while} (tp > tmp)
+91         *sp++ = *--tp;
+92     *sp = 0;
+93     \textcolor{keywordflow}{return} string;
+94 \}
+\end{DoxyCode}
+\hypertarget{itoa_8c_ab393a711ad96b0f3ace586e83b6c0634}{\index{itoa.\-c@{itoa.\-c}!ultoa@{ultoa}}
+\index{ultoa@{ultoa}!itoa.c@{itoa.\-c}}
+\subsubsection[{ultoa}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ ultoa (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{value, }
+\item[{char $\ast$}]{string, }
+\item[{int}]{base}
+\end{DoxyParamCaption}
+)}}\label{itoa_8c_ab393a711ad96b0f3ace586e83b6c0634}
+
+
+Definition at line 96 of file itoa.\-c.
+
+
+
+Referenced by B\-T\-\_\-set\-U\-A\-R\-T\-Speed().
+
+
+\begin{DoxyCode}
+97 \{
+98     \textcolor{keywordtype}{char} tmp[33];
+99     \textcolor{keywordtype}{char} *tp = tmp;
+100     \textcolor{keywordtype}{long} i;
+101     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} v = value;
+102     \textcolor{keywordtype}{char} *sp;
+103 
+104     \textcolor{keywordflow}{if} (base > 36 || base <= 1)
+105         \textcolor{keywordflow}{return} 0;
+106  
+107     \textcolor{keywordflow}{while} (v || tp == tmp)
+108     \{
+109         i = v % base;
+110         v = v / base;
+111         \textcolor{keywordflow}{if} (i < 10)
+112             *tp++ = i + \textcolor{charliteral}{'0'};
+113         \textcolor{keywordflow}{else}
+114             *tp++ = i + \textcolor{charliteral}{'a'} - 10;
+115     \}
+116 
+117     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string} == 0)
+118         \textcolor{keywordtype}{string} = (\textcolor{keywordtype}{char} *)malloc((tp-tmp)+1);
+119     sp = string;
+120 
+121  
+122     \textcolor{keywordflow}{while} (tp > tmp)
+123         *sp++ = *--tp;
+124     *sp = 0;
+125     \textcolor{keywordflow}{return} string;
+126 \}
+\end{DoxyCode}

@@ -1,0 +1,130 @@
+\hypertarget{p8_2pinguino_2core_2trigo_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/trigo.c File Reference}
+\label{p8_2pinguino_2core_2trigo_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/trigo.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/trigo.\-c}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2trigo_8c_adaf87bc5069e397d4455957105e1ba9d}{\-\_\-\-\_\-\-T\-R\-I\-G\-O\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{p8_2pinguino_2core_2trigo_8c_af9af8ccd7cdad9c1af3097457852e51e}{sine} (int i)
+\item 
+float \hyperlink{p8_2pinguino_2core_2trigo_8c_aa10c01c27c31ced2804f4144b505432e}{sinr} (int alpha)
+\item 
+float \hyperlink{p8_2pinguino_2core_2trigo_8c_ac6eccce8c5b26a39878ab8578a4d776c}{cosr} (int alpha)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2trigo_8c_adaf87bc5069e397d4455957105e1ba9d}{\index{p8/pinguino/core/trigo.\-c@{p8/pinguino/core/trigo.\-c}!\-\_\-\-\_\-\-T\-R\-I\-G\-O\-\_\-\-C@{\-\_\-\-\_\-\-T\-R\-I\-G\-O\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-T\-R\-I\-G\-O\-\_\-\-C@{\-\_\-\-\_\-\-T\-R\-I\-G\-O\-\_\-\-C}!p8/pinguino/core/trigo.c@{p8/pinguino/core/trigo.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-T\-R\-I\-G\-O\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-T\-R\-I\-G\-O\-\_\-\-C}}\label{p8_2pinguino_2core_2trigo_8c_adaf87bc5069e397d4455957105e1ba9d}
+
+
+Definition at line 31 of file trigo.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2trigo_8c_ac6eccce8c5b26a39878ab8578a4d776c}{\index{p8/pinguino/core/trigo.\-c@{p8/pinguino/core/trigo.\-c}!cosr@{cosr}}
+\index{cosr@{cosr}!p8/pinguino/core/trigo.c@{p8/pinguino/core/trigo.\-c}}
+\subsubsection[{cosr}]{\setlength{\rightskip}{0pt plus 5cm}float cosr (
+\begin{DoxyParamCaption}
+\item[{int}]{alpha}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2trigo_8c_ac6eccce8c5b26a39878ab8578a4d776c}
+
+
+Definition at line 101 of file trigo.\-c.
+
+
+
+References sinr().
+
+
+\begin{DoxyCode}
+102 \{
+103     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2trigo_8c_aa10c01c27c31ced2804f4144b505432e}{sinr}(alpha + 90);
+104 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2trigo_8c_af9af8ccd7cdad9c1af3097457852e51e}{\index{p8/pinguino/core/trigo.\-c@{p8/pinguino/core/trigo.\-c}!sine@{sine}}
+\index{sine@{sine}!p8/pinguino/core/trigo.c@{p8/pinguino/core/trigo.\-c}}
+\subsubsection[{sine}]{\setlength{\rightskip}{0pt plus 5cm}float sine (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2trigo_8c_af9af8ccd7cdad9c1af3097457852e51e}
+
+
+Definition at line 49 of file trigo.\-c.
+
+
+
+References B, C, x, and y.
+
+
+
+Referenced by sinr().
+
+
+\begin{DoxyCode}
+50 \{
+51     \textcolor{keywordtype}{float} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} =  0.01745329 * (float)i;   \textcolor{comment}{// degree to rad}
+52     \textcolor{keywordtype}{float} \hyperlink{p8_2pinguino_2core_2sound_8c_a111da81ae5883147168bbb8366377b10}{B} =  1.27323954;              \textcolor{comment}{// 4/pi;}
+53     \textcolor{keywordtype}{float} \hyperlink{p8_2pinguino_2core_2sound_8c_ac4cf4b2ab929bd23951a8676eeac086b}{C} = -0.40528473;              \textcolor{comment}{//-4/(pi*pi);}
+54     \textcolor{keywordtype}{float} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} = B * x + C * x * \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x};
+55     \textcolor{keywordtype}{float} P = 0.225;
+56     y = P * (y * y - \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}) + y;
+57     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y};
+58 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2trigo_8c_aa10c01c27c31ced2804f4144b505432e}{\index{p8/pinguino/core/trigo.\-c@{p8/pinguino/core/trigo.\-c}!sinr@{sinr}}
+\index{sinr@{sinr}!p8/pinguino/core/trigo.c@{p8/pinguino/core/trigo.\-c}}
+\subsubsection[{sinr}]{\setlength{\rightskip}{0pt plus 5cm}float sinr (
+\begin{DoxyParamCaption}
+\item[{int}]{alpha}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2trigo_8c_aa10c01c27c31ced2804f4144b505432e}
+
+
+Definition at line 66 of file trigo.\-c.
+
+
+
+References sine().
+
+
+
+Referenced by cosr().
+
+
+\begin{DoxyCode}
+67 \{
+68     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} sign = 0; \textcolor{comment}{// positive}
+69 
+70     \textcolor{comment}{// normalize the angle}
+71     \textcolor{keywordflow}{if} (alpha < 0)
+72         alpha = 360 - ((-alpha) % 360);
+73     \textcolor{keywordflow}{else}
+74         alpha %= 360;
+75 
+76     \textcolor{comment}{// sin(a+180) = - sin(a)}
+77     \textcolor{keywordflow}{if} (alpha >= 180)
+78     \{
+79         alpha -= 180;
+80         sign = 1; \textcolor{comment}{// negative }
+81     \}
+82 
+83     \textcolor{comment}{// now a < 180}
+84     \textcolor{comment}{// sin(180-a) == sin(a);}
+85     \textcolor{keywordflow}{if} (alpha > 90)
+86         alpha = 180 - alpha;
+87 
+88     \textcolor{keywordflow}{if} (sign)
+89         \textcolor{keywordflow}{return} -\hyperlink{p8_2pinguino_2core_2trigo_8c_af9af8ccd7cdad9c1af3097457852e51e}{sine}(alpha);
+90     \textcolor{keywordflow}{else}
+91         \textcolor{keywordflow}{return}  \hyperlink{p8_2pinguino_2core_2trigo_8c_af9af8ccd7cdad9c1af3097457852e51e}{sine}(alpha);
+92 \}
+\end{DoxyCode}

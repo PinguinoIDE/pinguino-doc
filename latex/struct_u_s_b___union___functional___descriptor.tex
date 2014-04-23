@@ -1,0 +1,107 @@
+\hypertarget{struct_u_s_b___union___functional___descriptor}{\section{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor Struct Reference}
+\label{struct_u_s_b___union___functional___descriptor}\index{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}}
+}
+
+
+{\ttfamily \#include $<$usb\-\_\-cdc.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___union___functional___descriptor_a26c0bc44674a4154a958ce07a0d5b0fd}{b\-Function\-Length}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___union___functional___descriptor_af6d6c7e334878414c973fc10e54cfb4e}{b\-Descriptor\-Type}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___union___functional___descriptor_aa6c02ce2914ff851df5c3ac40bc4bba7}{b\-Master\-Interface}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___union___functional___descriptor_a0329be90e8ea172f2fa8c0e14ff4e95f}{b\-Slave\-Interface0}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___union___functional___descriptor_a10bb62fbd7e26591abf171f512791d81}{b\-Slave\-Interface1}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{struct_u_s_b___union___functional___descriptor_a2d45c545dca79b1a912a7fa0e8d3a691}{b\-Function\-Length}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{struct_u_s_b___union___functional___descriptor_a0b4dacbe8b9cc6e176f298a4fe7bbd39}{b\-Descriptor\-Type}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{struct_u_s_b___union___functional___descriptor_a38161403ddd7bcc7d1cd008d6d78139d}{b\-Master\-Interface}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{struct_u_s_b___union___functional___descriptor_a649dbf17f4722360bbc65565714a613e}{b\-Slave\-Interface0}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Union Functional Descriptor The Union functional descriptor describes the relationship between a group of interfaces that can be considered to form a functional unit. It can only occur within the class-\/specific portion of an Interface descriptor. One of the interfaces in the group is designated as a master or controlling interface for the group, and certain class-\/specific messages can be sent to this interface to act upon the group as a whole. Similarly, notifications for the entire group can be sent from this interface but apply to the entire group of interfaces. Interfaces in this group can include Communication, Data, or any other valid U\-S\-B interface class (including, but not limited to, Audio, H\-I\-D, and Monitor). T\-O\-D\-O\-: expand to more than 1 slave interfaces 
+
+Definition at line 173 of file usb\-\_\-cdc.\-h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_u_s_b___union___functional___descriptor_af6d6c7e334878414c973fc10e54cfb4e}{\index{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}!b\-Descriptor\-Type@{b\-Descriptor\-Type}}
+\index{b\-Descriptor\-Type@{b\-Descriptor\-Type}!USB_Union_Functional_Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}}
+\subsubsection[{b\-Descriptor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Descriptor\-Type}}\label{struct_u_s_b___union___functional___descriptor_af6d6c7e334878414c973fc10e54cfb4e}
+C\-S\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E 
+
+Definition at line 176 of file usb\-\_\-cdc.\-h.
+
+\hypertarget{struct_u_s_b___union___functional___descriptor_a0b4dacbe8b9cc6e176f298a4fe7bbd39}{\index{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}!b\-Descriptor\-Type@{b\-Descriptor\-Type}}
+\index{b\-Descriptor\-Type@{b\-Descriptor\-Type}!USB_Union_Functional_Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}}
+\subsubsection[{b\-Descriptor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} b\-Descriptor\-Type}}\label{struct_u_s_b___union___functional___descriptor_a0b4dacbe8b9cc6e176f298a4fe7bbd39}
+C\-S\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E 
+
+Definition at line 189 of file usb\-\_\-uart.\-h.
+
+\hypertarget{struct_u_s_b___union___functional___descriptor_a26c0bc44674a4154a958ce07a0d5b0fd}{\index{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}!b\-Function\-Length@{b\-Function\-Length}}
+\index{b\-Function\-Length@{b\-Function\-Length}!USB_Union_Functional_Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}}
+\subsubsection[{b\-Function\-Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Function\-Length}}\label{struct_u_s_b___union___functional___descriptor_a26c0bc44674a4154a958ce07a0d5b0fd}
+Size of this functional descriptor, in u8s. 
+
+Definition at line 175 of file usb\-\_\-cdc.\-h.
+
+\hypertarget{struct_u_s_b___union___functional___descriptor_a2d45c545dca79b1a912a7fa0e8d3a691}{\index{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}!b\-Function\-Length@{b\-Function\-Length}}
+\index{b\-Function\-Length@{b\-Function\-Length}!USB_Union_Functional_Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}}
+\subsubsection[{b\-Function\-Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} b\-Function\-Length}}\label{struct_u_s_b___union___functional___descriptor_a2d45c545dca79b1a912a7fa0e8d3a691}
+Size of this functional descriptor, in bytes. 
+
+Definition at line 188 of file usb\-\_\-uart.\-h.
+
+\hypertarget{struct_u_s_b___union___functional___descriptor_aa6c02ce2914ff851df5c3ac40bc4bba7}{\index{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}!b\-Master\-Interface@{b\-Master\-Interface}}
+\index{b\-Master\-Interface@{b\-Master\-Interface}!USB_Union_Functional_Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}}
+\subsubsection[{b\-Master\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Master\-Interface}}\label{struct_u_s_b___union___functional___descriptor_aa6c02ce2914ff851df5c3ac40bc4bba7}
+The interface number of the Communication or Data Class interface, designated as the master or controlling interface for the union. 
+
+Definition at line 177 of file usb\-\_\-cdc.\-h.
+
+\hypertarget{struct_u_s_b___union___functional___descriptor_a38161403ddd7bcc7d1cd008d6d78139d}{\index{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}!b\-Master\-Interface@{b\-Master\-Interface}}
+\index{b\-Master\-Interface@{b\-Master\-Interface}!USB_Union_Functional_Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}}
+\subsubsection[{b\-Master\-Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} b\-Master\-Interface}}\label{struct_u_s_b___union___functional___descriptor_a38161403ddd7bcc7d1cd008d6d78139d}
+The interface number of the Communication or Data Class interface, designated as the master or controlling interface for the union. 
+
+Definition at line 190 of file usb\-\_\-uart.\-h.
+
+\hypertarget{struct_u_s_b___union___functional___descriptor_a0329be90e8ea172f2fa8c0e14ff4e95f}{\index{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}!b\-Slave\-Interface0@{b\-Slave\-Interface0}}
+\index{b\-Slave\-Interface0@{b\-Slave\-Interface0}!USB_Union_Functional_Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}}
+\subsubsection[{b\-Slave\-Interface0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Slave\-Interface0}}\label{struct_u_s_b___union___functional___descriptor_a0329be90e8ea172f2fa8c0e14ff4e95f}
+Interface number of first slave or associated interface in the union. 
+
+Definition at line 178 of file usb\-\_\-cdc.\-h.
+
+\hypertarget{struct_u_s_b___union___functional___descriptor_a649dbf17f4722360bbc65565714a613e}{\index{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}!b\-Slave\-Interface0@{b\-Slave\-Interface0}}
+\index{b\-Slave\-Interface0@{b\-Slave\-Interface0}!USB_Union_Functional_Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}}
+\subsubsection[{b\-Slave\-Interface0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf byte} b\-Slave\-Interface0}}\label{struct_u_s_b___union___functional___descriptor_a649dbf17f4722360bbc65565714a613e}
+Interface number of first slave or associated interface in the union. 
+
+Definition at line 191 of file usb\-\_\-uart.\-h.
+
+\hypertarget{struct_u_s_b___union___functional___descriptor_a10bb62fbd7e26591abf171f512791d81}{\index{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}!b\-Slave\-Interface1@{b\-Slave\-Interface1}}
+\index{b\-Slave\-Interface1@{b\-Slave\-Interface1}!USB_Union_Functional_Descriptor@{U\-S\-B\-\_\-\-Union\-\_\-\-Functional\-\_\-\-Descriptor}}
+\subsubsection[{b\-Slave\-Interface1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Slave\-Interface1}}\label{struct_u_s_b___union___functional___descriptor_a10bb62fbd7e26591abf171f512791d81}
+
+
+Definition at line 179 of file usb\-\_\-cdc.\-h.
+
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/\hyperlink{usb__cdc_8h}{usb\-\_\-cdc.\-h}\item 
+/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/\hyperlink{usb__uart_8h}{usb\-\_\-uart.\-h}\end{DoxyCompactItemize}

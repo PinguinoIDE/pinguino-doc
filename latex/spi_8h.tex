@@ -1,0 +1,543 @@
+\hypertarget{spi_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/spi.h File Reference}
+\label{spi_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/spi.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/spi.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{spi_8h_ae09a2779c2d141aa6a8f8be6d78fe210}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R}~0b0000
+\item 
+\#define \hyperlink{spi_8h_aca77f8d4b16105be1b1d533f2231b20a}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-4}~0b0000
+\item 
+\#define \hyperlink{spi_8h_a11e81639d121b1b722de8636c6d3cdbf}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-8}~0b1010
+\item 
+\#define \hyperlink{spi_8h_abf191be78e513782c91bff554bfc8c97}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-16}~0b0001
+\item 
+\#define \hyperlink{spi_8h_a860f0cd8dbb02994d9a61b12de36b172}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-64}~0b0010
+\item 
+\#define \hyperlink{spi_8h_a107e4d1d22a385596937f3eddf8f9440}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-\-T2}~0b0011
+\item 
+\#define \hyperlink{spi_8h_aade7220829d5fa3b677685ba85efbc27}{S\-P\-I\-\_\-\-S\-L\-A\-V\-E\-\_\-\-S\-S}~0b0100
+\item 
+\#define \hyperlink{spi_8h_a943af7f8a98cf5a3f2107ed593215a4b}{S\-P\-I\-\_\-\-S\-L\-A\-V\-E}~0b0101
+\item 
+\#define \hyperlink{spi_8h_aa5277a58d46a44a61456b5c32b70d596}{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4}~\hyperlink{spi_8h_aca77f8d4b16105be1b1d533f2231b20a}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-4}
+\item 
+\#define \hyperlink{spi_8h_a1c17812f1dcf847c8c5f97ea58659663}{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8}~\hyperlink{spi_8h_a11e81639d121b1b722de8636c6d3cdbf}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-8}
+\item 
+\#define \hyperlink{spi_8h_a84c3e36d173ca9b2bf4314da5fb688a9}{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16}~\hyperlink{spi_8h_abf191be78e513782c91bff554bfc8c97}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-16}
+\item 
+\#define \hyperlink{spi_8h_ae5d8e597407d89c8fe4e7d2cddfd4963}{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64}~\hyperlink{spi_8h_a860f0cd8dbb02994d9a61b12de36b172}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-64}
+\item 
+\#define \hyperlink{spi_8h_a146563fb446f4181faee489e6e589c40}{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-T\-I\-M\-E\-R2}~\hyperlink{spi_8h_a107e4d1d22a385596937f3eddf8f9440}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-\-T2}
+\item 
+\#define \hyperlink{spi_8h_ac9d0bde2b42b2403d00b7a611514b006}{S\-P\-I\-\_\-\-M\-O\-D\-E0}~0x00
+\item 
+\#define \hyperlink{spi_8h_a9481b7327b91aa52ff5f70eb2d0acc95}{S\-P\-I\-\_\-\-M\-O\-D\-E1}~0x04
+\item 
+\#define \hyperlink{spi_8h_a991dec04d2fb38979cfb0d9fc7f8b026}{S\-P\-I\-\_\-\-M\-O\-D\-E2}~0x08
+\item 
+\#define \hyperlink{spi_8h_a5f928a2445070981765ee0416c12369d}{S\-P\-I\-\_\-\-M\-O\-D\-E3}~0x0\-C
+\item 
+\#define \hyperlink{spi_8h_a8ec3f01f010f9d822d589f64b293d9da}{S\-P\-I\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}~0x00
+\item 
+\#define \hyperlink{spi_8h_a8a7a1bc89f52b354fbefdc776786dcd8}{S\-P\-I\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}~0x01
+\item 
+\#define \hyperlink{spi_8h_a8562db9fe4aa83e619f26ace4f073d5e}{S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D}~1$<$$<$7
+\item 
+\#define \hyperlink{spi_8h_a7f157edf173ea33cf6ce3995da1720be}{S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T}~0
+\item 
+\#define \hyperlink{spi_8h_ae77748f6ed40c1bc713dbe98e29df4ea}{S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{spi_8h_af78b8e02699943b5766d9e0cbbce33f9}{S\-P\-I\-\_\-begin} ()
+\begin{DoxyCompactList}\small\item\em Prototypes. \end{DoxyCompactList}\item 
+void \hyperlink{spi_8h_ac0055f801ff78bc7fafccc46e3e15ba7}{S\-P\-I\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} sync\-\_\-mode, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} bus\-\_\-mode, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} smp\-\_\-phase)
+\item 
+void \hyperlink{spi_8h_ade9a4be0e7853bd60295f98a1e87c7e6}{S\-P\-I\-\_\-set\-Mode} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} mode)
+\item 
+void \hyperlink{spi_8h_ae3eb49c2e0b11e6c3577d39784111c96}{S\-P\-I\-\_\-set\-Bit\-Order} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} bitorder)
+\item 
+void \hyperlink{spi_8h_a7f96725deb683afacf1f4bbbffcf88e7}{S\-P\-I\-\_\-set\-Data\-Mode} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} mode)
+\item 
+void \hyperlink{spi_8h_a381f0497a07535ccd0a9a00dda811234}{S\-P\-I\-\_\-set\-Clock\-Divider} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} clock)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{spi_8h_ab8a3068e4b6e7823d486a8cbc52bda3d}{S\-P\-I\-\_\-write} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} datax)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{spi_8h_a86865b0227db1f86d21c95a2fee0cc3b}{S\-P\-I\-\_\-read} (void)
+\item 
+void \hyperlink{spi_8h_a134fe35e671462a8ddfcb8ba45170e61}{S\-P\-I\-\_\-interrupt} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{spi_8h_a84c3e36d173ca9b2bf4314da5fb688a9}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16@{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16}}
+\index{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16@{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16~{\bf S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-16}}}\label{spi_8h_a84c3e36d173ca9b2bf4314da5fb688a9}
+
+
+Definition at line 106 of file spi.\-h.
+
+\hypertarget{spi_8h_aa5277a58d46a44a61456b5c32b70d596}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4@{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4}}
+\index{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4@{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4~{\bf S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-4}}}\label{spi_8h_aa5277a58d46a44a61456b5c32b70d596}
+
+
+Definition at line 104 of file spi.\-h.
+
+\hypertarget{spi_8h_ae5d8e597407d89c8fe4e7d2cddfd4963}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64@{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64}}
+\index{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64@{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64~{\bf S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-64}}}\label{spi_8h_ae5d8e597407d89c8fe4e7d2cddfd4963}
+
+
+Definition at line 107 of file spi.\-h.
+
+\hypertarget{spi_8h_a1c17812f1dcf847c8c5f97ea58659663}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8@{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8}}
+\index{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8@{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8~{\bf S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-8}}}\label{spi_8h_a1c17812f1dcf847c8c5f97ea58659663}
+
+
+Definition at line 105 of file spi.\-h.
+
+\hypertarget{spi_8h_a146563fb446f4181faee489e6e589c40}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-T\-I\-M\-E\-R2@{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-T\-I\-M\-E\-R2}}
+\index{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-T\-I\-M\-E\-R2@{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-T\-I\-M\-E\-R2}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-T\-I\-M\-E\-R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-T\-I\-M\-E\-R2~{\bf S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-\-T2}}}\label{spi_8h_a146563fb446f4181faee489e6e589c40}
+
+
+Definition at line 108 of file spi.\-h.
+
+\hypertarget{spi_8h_a8ec3f01f010f9d822d589f64b293d9da}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E@{S\-P\-I\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}}
+\index{S\-P\-I\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E@{S\-P\-I\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-F\-A\-L\-L\-I\-N\-G\-\_\-\-E\-D\-G\-E~0x00}}\label{spi_8h_a8ec3f01f010f9d822d589f64b293d9da}
+
+
+Definition at line 116 of file spi.\-h.
+
+\hypertarget{spi_8h_a7f157edf173ea33cf6ce3995da1720be}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T@{S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T}}
+\index{S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T@{S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T~0}}\label{spi_8h_a7f157edf173ea33cf6ce3995da1720be}
+
+
+Definition at line 121 of file spi.\-h.
+
+\hypertarget{spi_8h_ae09a2779c2d141aa6a8f8be6d78fe210}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R}}
+\index{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R~0b0000}}\label{spi_8h_ae09a2779c2d141aa6a8f8be6d78fe210}
+S\-P\-I Hardware library for pinguino project
+
+Author\-: Francisco J. Sánchez Rivas (F\-J\-\_\-\-Sanchez) fran \mbox{[}at\mbox{]} mipixel \mbox{[}dot\mbox{]} com
+
+\href{http://www.mipixel.com}{\tt http\-://www.\-mipixel.\-com} 
+
+Definition at line 95 of file spi.\-h.
+
+\hypertarget{spi_8h_abf191be78e513782c91bff554bfc8c97}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-16@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-16}}
+\index{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-16@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-16}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-16}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-16~0b0001}}\label{spi_8h_abf191be78e513782c91bff554bfc8c97}
+
+
+Definition at line 98 of file spi.\-h.
+
+\hypertarget{spi_8h_aca77f8d4b16105be1b1d533f2231b20a}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-4@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-4}}
+\index{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-4@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-4}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-4~0b0000}}\label{spi_8h_aca77f8d4b16105be1b1d533f2231b20a}
+
+
+Definition at line 96 of file spi.\-h.
+
+\hypertarget{spi_8h_a860f0cd8dbb02994d9a61b12de36b172}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-64@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-64}}
+\index{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-64@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-64}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-64}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-64~0b0010}}\label{spi_8h_a860f0cd8dbb02994d9a61b12de36b172}
+
+
+Definition at line 99 of file spi.\-h.
+
+\hypertarget{spi_8h_a11e81639d121b1b722de8636c6d3cdbf}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-8@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-8}}
+\index{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-8@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-8}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-8}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-8~0b1010}}\label{spi_8h_a11e81639d121b1b722de8636c6d3cdbf}
+
+
+Definition at line 97 of file spi.\-h.
+
+\hypertarget{spi_8h_a107e4d1d22a385596937f3eddf8f9440}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-\-T2@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-\-T2}}
+\index{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-\-T2@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-\-T2}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-\-T2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-\-T2~0b0011}}\label{spi_8h_a107e4d1d22a385596937f3eddf8f9440}
+
+
+Definition at line 100 of file spi.\-h.
+
+\hypertarget{spi_8h_ac9d0bde2b42b2403d00b7a611514b006}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-M\-O\-D\-E0@{S\-P\-I\-\_\-\-M\-O\-D\-E0}}
+\index{S\-P\-I\-\_\-\-M\-O\-D\-E0@{S\-P\-I\-\_\-\-M\-O\-D\-E0}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-O\-D\-E0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-O\-D\-E0~0x00}}\label{spi_8h_ac9d0bde2b42b2403d00b7a611514b006}
+
+
+Definition at line 110 of file spi.\-h.
+
+\hypertarget{spi_8h_a9481b7327b91aa52ff5f70eb2d0acc95}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-M\-O\-D\-E1@{S\-P\-I\-\_\-\-M\-O\-D\-E1}}
+\index{S\-P\-I\-\_\-\-M\-O\-D\-E1@{S\-P\-I\-\_\-\-M\-O\-D\-E1}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-O\-D\-E1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-O\-D\-E1~0x04}}\label{spi_8h_a9481b7327b91aa52ff5f70eb2d0acc95}
+
+
+Definition at line 111 of file spi.\-h.
+
+\hypertarget{spi_8h_a991dec04d2fb38979cfb0d9fc7f8b026}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-M\-O\-D\-E2@{S\-P\-I\-\_\-\-M\-O\-D\-E2}}
+\index{S\-P\-I\-\_\-\-M\-O\-D\-E2@{S\-P\-I\-\_\-\-M\-O\-D\-E2}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-O\-D\-E2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-O\-D\-E2~0x08}}\label{spi_8h_a991dec04d2fb38979cfb0d9fc7f8b026}
+
+
+Definition at line 112 of file spi.\-h.
+
+\hypertarget{spi_8h_a5f928a2445070981765ee0416c12369d}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-M\-O\-D\-E3@{S\-P\-I\-\_\-\-M\-O\-D\-E3}}
+\index{S\-P\-I\-\_\-\-M\-O\-D\-E3@{S\-P\-I\-\_\-\-M\-O\-D\-E3}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-O\-D\-E3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-O\-D\-E3~0x0\-C}}\label{spi_8h_a5f928a2445070981765ee0416c12369d}
+
+
+Definition at line 113 of file spi.\-h.
+
+\hypertarget{spi_8h_ae77748f6ed40c1bc713dbe98e29df4ea}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T@{S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T}}
+\index{S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T@{S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T~1}}\label{spi_8h_ae77748f6ed40c1bc713dbe98e29df4ea}
+
+
+Definition at line 122 of file spi.\-h.
+
+\hypertarget{spi_8h_a8a7a1bc89f52b354fbefdc776786dcd8}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E@{S\-P\-I\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}}
+\index{S\-P\-I\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E@{S\-P\-I\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-R\-I\-S\-I\-N\-G\-\_\-\-E\-D\-G\-E~0x01}}\label{spi_8h_a8a7a1bc89f52b354fbefdc776786dcd8}
+
+
+Definition at line 117 of file spi.\-h.
+
+\hypertarget{spi_8h_a943af7f8a98cf5a3f2107ed593215a4b}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-S\-L\-A\-V\-E@{S\-P\-I\-\_\-\-S\-L\-A\-V\-E}}
+\index{S\-P\-I\-\_\-\-S\-L\-A\-V\-E@{S\-P\-I\-\_\-\-S\-L\-A\-V\-E}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-S\-L\-A\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-S\-L\-A\-V\-E~0b0101}}\label{spi_8h_a943af7f8a98cf5a3f2107ed593215a4b}
+
+
+Definition at line 102 of file spi.\-h.
+
+\hypertarget{spi_8h_aade7220829d5fa3b677685ba85efbc27}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-S\-L\-A\-V\-E\-\_\-\-S\-S@{S\-P\-I\-\_\-\-S\-L\-A\-V\-E\-\_\-\-S\-S}}
+\index{S\-P\-I\-\_\-\-S\-L\-A\-V\-E\-\_\-\-S\-S@{S\-P\-I\-\_\-\-S\-L\-A\-V\-E\-\_\-\-S\-S}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-S\-L\-A\-V\-E\-\_\-\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-S\-L\-A\-V\-E\-\_\-\-S\-S~0b0100}}\label{spi_8h_aade7220829d5fa3b677685ba85efbc27}
+
+
+Definition at line 101 of file spi.\-h.
+
+
+
+Referenced by S\-P\-I\-\_\-begin().
+
+\hypertarget{spi_8h_a8562db9fe4aa83e619f26ace4f073d5e}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D@{S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D}}
+\index{S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D@{S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D~1$<$$<$7}}\label{spi_8h_a8562db9fe4aa83e619f26ace4f073d5e}
+
+
+Definition at line 119 of file spi.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{spi_8h_af78b8e02699943b5766d9e0cbbce33f9}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-begin@{S\-P\-I\-\_\-begin}}
+\index{S\-P\-I\-\_\-begin@{S\-P\-I\-\_\-begin}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{spi_8h_af78b8e02699943b5766d9e0cbbce33f9}
+
+
+Prototypes. 
+
+This function initializes the S\-P\-I hardware configuring polarity and edge of transition using Standard S\-P\-I Mode Terminology (datasheet Table 19-\/1 p206)
+
+Mode0,Mode1 C\-K\-P C\-K\-E 0,0 0 1 0,1 0 0 1,0 1 1 1,1 1 0
+
+Also is possible to use L\-O\-W or H\-I\-G\-H for mode0 to indicate the idle state clock level, and R\-I\-S\-I\-N\-G or F\-A\-L\-L\-I\-N\-G to indicate when the transmit should take place.
+
+The sync\-\_\-mode param could be any of S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R, M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-4, M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-16, M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-64, S\-L\-A\-V\-E\-\_\-\-S\-S or S\-L\-A\-V\-E, where M\-A\-S\-T\-E\-R\-\_\-\-F\-O\-S\-C\-\_\-\-X indicates the S\-P\-I clock speed used. If you want to use the /\-S\-S pin in slave mode you should initialize the S\-P\-I using S\-P\-I\-\_\-\-S\-L\-A\-V\-E\-\_\-\-S\-S. sync\-\_\-mode description 0 S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R mode, clock = F\-O\-S\-C\-\_\-4 1 S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R, clock = F\-O\-S\-C\-\_\-16 2 S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R, clock = F\-O\-S\-C\-\_\-64 3 S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R, clock = T\-M\-R2 output/2 4 S\-P\-I\-\_\-\-S\-L\-A\-V\-E mode, /\-S\-S pin enabled 5 S\-P\-I\-\_\-\-S\-L\-A\-V\-E, /\-S\-S pin disabled smp\-\_\-phase = Sample bit 0 in slave mode 0 in master mode \-: Input data sampled at middle of data output time 1 in master mode \-: Input data sampled at end of data output time Nota bene \-: enter 128 as decimal value or 0x80 as hexadecimal value for the below smp\-\_\-phase parameter-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---
+
+The following code assumes that none of the S\-P\-Ix input pins are shared with an analog input. If so, the A\-D1\-P\-C\-F\-G and corresponding T\-R\-I\-S registers have to be properly configured.
+
+Perform the following steps to set up the S\-P\-I module for the Master mode operation\-:
+\begin{DoxyEnumerate}
+\item Disable the S\-P\-I interrupts in the respective I\-E\-C0/1 register.
+\item Stop and reset the S\-P\-I module by clearing the O\-N bit.
+\item Clear the receive buffer.
+\item Clear the E\-N\-H\-B\-U\-F bit (S\-P\-Ix\-C\-O\-N$<$16$>$) if using Standard Buffer mode or set the bit if using Enhanced Buffer mode.
+\item If S\-P\-I interrupts are not going to be used, skip this step and continue to step 5. Otherwise the following additional steps are performed\-: a) Clear the S\-P\-Ix interrupt flags/events in the respective I\-F\-S0/1 register. b) Set the S\-P\-Ix interrupt enable bits in the respective I\-E\-C0/1 register. c) Write the S\-P\-Ix interrupt priority and subpriority bits in the respective I\-P\-C5/7 register.
+\item Write the Baud Rate register, S\-P\-Ix\-B\-R\-G.
+\item Clear the S\-P\-I\-R\-O\-V bit (S\-P\-Ix\-S\-T\-A\-T$<$6$>$).
+\item Write the desired settings to the S\-P\-Ix\-C\-O\-N register with M\-S\-T\-E\-N (S\-P\-Ix\-C\-O\-N$<$5$>$) = 1.
+\item Enable S\-P\-I operation by setting the O\-N bit (S\-P\-Ix\-C\-O\-N$<$15$>$).
+\end{DoxyEnumerate}
+
+The following code assumes that none of the S\-P\-Ix input pins are shared with an analog input. If so, the A\-D1\-P\-C\-F\-G and corresponding T\-R\-I\-S registers have to be properly configured.
+
+Perform the following steps to set up the S\-P\-I module for the Master mode operation\-:
+\begin{DoxyEnumerate}
+\item Disable the S\-P\-I interrupts in the respective I\-E\-C0/1 register.
+\item Stop and reset the S\-P\-I module by clearing the O\-N bit.
+\item Clear the receive buffer.
+\item Clear the E\-N\-H\-B\-U\-F bit (S\-P\-Ix\-C\-O\-N$<$16$>$) if using Standard Buffer mode or set the bit if using Enhanced Buffer mode.
+\item If S\-P\-I interrupts are not going to be used, skip this step and continue to step 5. Otherwise the following additional steps are performed\-: a) Clear the S\-P\-Ix interrupt flags/events in the respective I\-F\-S0/1 register. b) Set the S\-P\-Ix interrupt enable bits in the respective I\-E\-C0/1 register. c) Write the S\-P\-Ix interrupt priority and subpriority bits in the respective I\-P\-C5/7 register.
+\item Write the Baud Rate register, S\-P\-Ix\-B\-R\-G.
+\item Clear the S\-P\-I\-R\-O\-V bit (S\-P\-Ix\-S\-T\-A\-T$<$6$>$).
+\item Write the desired settings to the S\-P\-Ix\-C\-O\-N register with M\-S\-T\-E\-N (S\-P\-Ix\-C\-O\-N$<$5$>$) = 1.
+\item Enable S\-P\-I operation by setting the O\-N bit (S\-P\-Ix\-C\-O\-N$<$15$>$). 
+\end{DoxyEnumerate}
+
+Definition at line 118 of file spi.\-c.
+
+
+
+References Delayms(), D\-E\-S\-E\-L\-E\-C\-T, Int\-Disable(), S\-P\-I\-\_\-\-M\-O\-D\-E0, S\-P\-I\-\_\-\-M\-O\-D\-E1, S\-P\-I\-\_\-\-M\-O\-D\-E2, S\-P\-I\-\_\-\-M\-O\-D\-E3, S\-P\-I\-\_\-\-S\-L\-A\-V\-E, S\-P\-I\-\_\-\-S\-L\-A\-V\-E\-\_\-\-S\-S, S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D, this\-\_\-clock, this\-\_\-mode, this\-\_\-phase, and this\-\_\-role.
+
+
+
+Referenced by D\-S1306\-\_\-init().
+
+
+\begin{DoxyCode}
+119 \{
+120     \hyperlink{p8_2pinguino_2core_2spi_8c_a1cbd972fc333e07d29999e284020c362}{DESELECT}();
+121     ENABLE = 0;
+122     STATUS = 0x3F;                 \textcolor{comment}{// power on state (SMP=0) }
+123     CONFIG = \hyperlink{p8_2pinguino_2core_2spi_8c_a6518d81df088c145643a32e2228db5fb}{this\_clock};           \textcolor{comment}{// select serial mode}
+124 
+125     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2spi_8c_afc4a5d21e29121611a2a9e5f53376f47}{this\_phase} == \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a8562db9fe4aa83e619f26ace4f073d5e}{SPI\_SMPEND})
+126         SMP = 1;                   \textcolor{comment}{// input data sampled at end of data output time}
+127 
+128     \textcolor{keywordflow}{switch}( \hyperlink{p8_2pinguino_2core_2spi_8c_a7391bcb6df1a7af4fde6de4f9297c03d}{this\_mode} )
+129     \{
+130         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ac9d0bde2b42b2403d00b7a611514b006}{SPI\_MODE0}:              \textcolor{comment}{// SPI bus mode 0,0}
+131           CKP = 0;
+132           CKE = 0;                   \textcolor{comment}{// data transmitted on falling edge}
+133           \textcolor{keywordflow}{break};    
+134         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a9481b7327b91aa52ff5f70eb2d0acc95}{SPI\_MODE1}:              \textcolor{comment}{// default SPI bus mode 0,1}
+135           CKP = 0;
+136           CKE = 1;                   \textcolor{comment}{// data transmitted on falling edge}
+137           \textcolor{keywordflow}{break};
+138         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a991dec04d2fb38979cfb0d9fc7f8b026}{SPI\_MODE2}:              \textcolor{comment}{// SPI bus mode 1,0}
+139           CKP = 1;                   \textcolor{comment}{// clock idle state high}
+140           CKE = 0;                   \textcolor{comment}{// data transmitted on rising edge}
+141           \textcolor{keywordflow}{break};
+142         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a5f928a2445070981765ee0416c12369d}{SPI\_MODE3}:              \textcolor{comment}{// SPI bus mode 1,1}
+143           CKP = 1;                   \textcolor{comment}{// clock idle state high}
+144           CKE = 1;                   \textcolor{comment}{// data transmitted on falling edge}
+145           \textcolor{keywordflow}{break};
+146     \}
+147 
+148     \textcolor{keywordflow}{switch}( \hyperlink{p8_2pinguino_2core_2spi_8c_ad87a09bc776ded02f47eda704e6d6e92}{this\_role} )
+149     \{
+150         \textcolor{keywordflow}{case} \hyperlink{spi_8h_aade7220829d5fa3b677685ba85efbc27}{SPI\_SLAVE\_SS}:           \textcolor{comment}{// slave mode w /SS enable}
+151             SSPIN = 1;               \textcolor{comment}{// define /SS pin as input}
+152             SCKPIN = 1;              \textcolor{comment}{// define clock pin as input}
+153             \textcolor{keywordflow}{break};
+154 
+155         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a943af7f8a98cf5a3f2107ed593215a4b}{SPI\_SLAVE}:              \textcolor{comment}{// slave mode w/o /SS enable}
+156             SCKPIN = 1;              \textcolor{comment}{// define clock pin as input}
+157             \textcolor{keywordflow}{break};
+158 
+159         \textcolor{keywordflow}{default}:                     \textcolor{comment}{// master mode, define clock en SS pin as output}
+160             SSPIN  = 0;              \textcolor{comment}{// define SS  pin as output}
+161             SCKPIN = 0;              \textcolor{comment}{// define clock pin as output}
+162             \textcolor{keywordflow}{break};
+163     \}
+164 
+165     SDIPIN = 1;                    \textcolor{comment}{// define SDI pin as input}
+166     SDOPIN = 0;                    \textcolor{comment}{// define SDO pin as output}
+167     ENABLE = 1;
+168     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(30);
+169 
+170 \textcolor{preprocessor}{    #ifdef SPIINT}
+171 \textcolor{preprocessor}{}        SSPIE = 1;
+172         INTCONbits.GIEH = 1;
+173         INTCONbits.GIEL = 1;
+174         INTCONbits.PEIE = 1;
+175         \textcolor{comment}{//SSPHPE = 1;}
+176         FLAG = 0;
+177 \textcolor{preprocessor}{    #endif}
+178 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{spi_8h_ac0055f801ff78bc7fafccc46e3e15ba7}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-init@{S\-P\-I\-\_\-init}}
+\index{S\-P\-I\-\_\-init@{S\-P\-I\-\_\-init}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{sync\-\_\-mode, }
+\item[{{\bf u8}}]{bus\-\_\-mode, }
+\item[{{\bf u8}}]{smp\-\_\-phase}
+\end{DoxyParamCaption}
+)}}\label{spi_8h_ac0055f801ff78bc7fafccc46e3e15ba7}
+
+
+Referenced by D\-S1306\-\_\-\-Init(), enc28j60\-Init(), M\-C\-P23\-S17\-\_\-init(), and mrf24j40\-\_\-setup\-\_\-io().
+
+\hypertarget{spi_8h_a134fe35e671462a8ddfcb8ba45170e61}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-interrupt@{S\-P\-I\-\_\-interrupt}}
+\index{S\-P\-I\-\_\-interrupt@{S\-P\-I\-\_\-interrupt}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-interrupt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{spi_8h_a134fe35e671462a8ddfcb8ba45170e61}
+
+
+Definition at line 264 of file spi.\-c.
+
+
+
+References c.
+
+
+\begin{DoxyCode}
+265 \{
+266 \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+267    \textcolor{keywordflow}{if} (! FLAG)
+268       \textcolor{keywordflow}{return};
+269    c = BUFFER;
+270    FLAG = 0;
+271    BUFFER = SPI\_onEvent\_func(c);
+272 \}  \textcolor{comment}{// end of interrupt routine SPI\_STC\_vect}
+\end{DoxyCode}
+\hypertarget{spi_8h_a86865b0227db1f86d21c95a2fee0cc3b}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-read@{S\-P\-I\-\_\-read}}
+\index{S\-P\-I\-\_\-read@{S\-P\-I\-\_\-read}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} S\-P\-I\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{spi_8h_a86865b0227db1f86d21c95a2fee0cc3b}
+
+
+Definition at line 254 of file spi.\-c.
+
+
+\begin{DoxyCode}
+254                   \{
+255     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} clear;
+256     clear = BUFFER; \textcolor{comment}{//clear BF}
+257     FLAG = 0;
+258     BUFFER = 0xFF; \textcolor{comment}{// Initiate bus cycle}
+259     \textcolor{keywordflow}{while} (!FLAG);
+260     \textcolor{keywordflow}{return}(BUFFER);
+261 \}
+\end{DoxyCode}
+\hypertarget{spi_8h_ae3eb49c2e0b11e6c3577d39784111c96}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-set\-Bit\-Order@{S\-P\-I\-\_\-set\-Bit\-Order}}
+\index{S\-P\-I\-\_\-set\-Bit\-Order@{S\-P\-I\-\_\-set\-Bit\-Order}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-set\-Bit\-Order}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-set\-Bit\-Order (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{bitorder}
+\end{DoxyParamCaption}
+)}}\label{spi_8h_ae3eb49c2e0b11e6c3577d39784111c96}
+This function sets the order of the bits shifted out of and into the S\-P\-I bus, either L\-S\-B\-F\-I\-R\-S\-T (least-\/significant bit first) or M\-S\-B\-F\-I\-R\-S\-T (most-\/significant bit first). 
+
+Definition at line 187 of file spi.\-c.
+
+
+\begin{DoxyCode}
+188 \{
+189     \hyperlink{p8_2pinguino_2core_2spi_8c_a16e63d09f658920c0bbaf7fb212c5fd5}{this\_bitorder} = bitorder;
+190 \}
+\end{DoxyCode}
+\hypertarget{spi_8h_a381f0497a07535ccd0a9a00dda811234}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-set\-Clock\-Divider@{S\-P\-I\-\_\-set\-Clock\-Divider}}
+\index{S\-P\-I\-\_\-set\-Clock\-Divider@{S\-P\-I\-\_\-set\-Clock\-Divider}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-set\-Clock\-Divider}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-set\-Clock\-Divider (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{clock}
+\end{DoxyParamCaption}
+)}}\label{spi_8h_a381f0497a07535ccd0a9a00dda811234}
+This function sets the S\-P\-I clock divider relative to the system clock. The dividers available are 4, 8, 16, 64. The default setting is S\-P\-I\-\_\-\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4, which sets the S\-P\-I clock to one-\/quarter the frequency of the system clock.
+
+This function sets the S\-P\-I clock divider relative to the peripheral clock. The dividers available are 2, 4, 8, 16, 32 and 64. The default setting is S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64, which sets the S\-P\-I clock to 1/64 of the frequency of the peripheral clock.
+
+This function sets the S\-P\-I clock divider relative to the peripheral clock. The dividers available are 2, 4, 8, 16, 32 and 64. The default setting is S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64, which sets the S\-P\-I clock to 1/64 of the frequency of the peripheral clock. 
+
+Definition at line 226 of file spi.\-c.
+
+
+
+References this\-\_\-clock, and this\-\_\-role.
+
+
+\begin{DoxyCode}
+227 \{
+228     \hyperlink{p8_2pinguino_2core_2spi_8c_a6518d81df088c145643a32e2228db5fb}{this\_clock} = clock;
+229     \hyperlink{p8_2pinguino_2core_2spi_8c_ad87a09bc776ded02f47eda704e6d6e92}{this\_role}  = clock;
+230 \}
+\end{DoxyCode}
+\hypertarget{spi_8h_a7f96725deb683afacf1f4bbbffcf88e7}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-set\-Data\-Mode@{S\-P\-I\-\_\-set\-Data\-Mode}}
+\index{S\-P\-I\-\_\-set\-Data\-Mode@{S\-P\-I\-\_\-set\-Data\-Mode}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-set\-Data\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-set\-Data\-Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{mode}
+\end{DoxyParamCaption}
+)}}\label{spi_8h_a7f96725deb683afacf1f4bbbffcf88e7}
+This function sets the S\-P\-I data mode (clock polarity and phase) Modes available are S\-P\-I\-\_\-\-M\-O\-D\-E0, S\-P\-I\-\_\-\-M\-O\-D\-E1, S\-P\-I\-\_\-\-M\-O\-D\-E2, or S\-P\-I\-\_\-\-M\-O\-D\-E3 Mode C\-K\-P C\-K\-E 0 0 0 1 0 1 2 1 0 3 1 1
+
+This function sets the order of the bits shifted out of and into the S\-P\-I bus, either S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T (least-\/significant bit first) or S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T (most-\/significant bit first). This function sets the S\-P\-I data mode (clock polarity and phase) Bits C\-K\-P (S\-P\-Ix\-C\-O\-N$<$6$>$) and C\-K\-E (S\-P\-Ix\-C\-O\-N$<$8$>$) determine on which edge of the clock data transmission occurs. Modes available are S\-P\-I\-\_\-\-M\-O\-D\-E0, S\-P\-I\-\_\-\-M\-O\-D\-E1, S\-P\-I\-\_\-\-M\-O\-D\-E2, or S\-P\-I\-\_\-\-M\-O\-D\-E3 Mode C\-K\-P C\-K\-E 0 0 0 1 0 1 2 1 0 3 1 1
+
+This function sets the order of the bits shifted out of and into the S\-P\-I bus, either S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T (least-\/significant bit first) or S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T (most-\/significant bit first). This function sets the S\-P\-I data mode (clock polarity and phase) Bits C\-K\-P (S\-P\-Ix\-C\-O\-N$<$6$>$) and C\-K\-E (S\-P\-Ix\-C\-O\-N$<$8$>$) determine on which edge of the clock data transmission occurs. Modes available are S\-P\-I\-\_\-\-M\-O\-D\-E0, S\-P\-I\-\_\-\-M\-O\-D\-E1, S\-P\-I\-\_\-\-M\-O\-D\-E2, or S\-P\-I\-\_\-\-M\-O\-D\-E3 Mode C\-K\-P C\-K\-E 0 0 0 1 0 1 2 1 0 3 1 1 
+
+Definition at line 204 of file spi.\-c.
+
+
+
+References this\-\_\-mode.
+
+
+\begin{DoxyCode}
+205 \{
+206     \hyperlink{p8_2pinguino_2core_2spi_8c_a7391bcb6df1a7af4fde6de4f9297c03d}{this\_mode} = mode;
+207 \}
+\end{DoxyCode}
+\hypertarget{spi_8h_ade9a4be0e7853bd60295f98a1e87c7e6}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-set\-Mode@{S\-P\-I\-\_\-set\-Mode}}
+\index{S\-P\-I\-\_\-set\-Mode@{S\-P\-I\-\_\-set\-Mode}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-set\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-set\-Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{mode}
+\end{DoxyParamCaption}
+)}}\label{spi_8h_ade9a4be0e7853bd60295f98a1e87c7e6}
+This function sets the S\-P\-I mode. Possible values are S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R or S\-P\-I\-\_\-\-S\-L\-A\-V\-E. The default setting is S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R. 
+
+Definition at line 211 of file spi.\-c.
+
+
+
+References this\-\_\-clock, and this\-\_\-role.
+
+
+\begin{DoxyCode}
+212 \{
+213     \hyperlink{p8_2pinguino_2core_2spi_8c_ad87a09bc776ded02f47eda704e6d6e92}{this\_role}  = mode;
+214     \hyperlink{p8_2pinguino_2core_2spi_8c_a6518d81df088c145643a32e2228db5fb}{this\_clock} = mode;
+215 \}
+\end{DoxyCode}
+\hypertarget{spi_8h_ab8a3068e4b6e7823d486a8cbc52bda3d}{\index{spi.\-h@{spi.\-h}!S\-P\-I\-\_\-write@{S\-P\-I\-\_\-write}}
+\index{S\-P\-I\-\_\-write@{S\-P\-I\-\_\-write}!spi.h@{spi.\-h}}
+\subsubsection[{S\-P\-I\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} S\-P\-I\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{data\-\_\-out}
+\end{DoxyParamCaption}
+)}}\label{spi_8h_ab8a3068e4b6e7823d486a8cbc52bda3d}
+\subsubsection*{}
+
+Write the data to be transmitted to the S\-P\-Ix\-B\-U\-F register. Transmission (and reception) will start as soon as data is written to the S\-P\-Ix\-B\-U\-F register.
+
+Write the data to be transmitted to the S\-P\-Ix\-B\-U\-F register. Transmission (and reception) will start as soon as data is written to the S\-P\-Ix\-B\-U\-F register. 
+
+Definition at line 238 of file spi.\-c.
+
+
+\begin{DoxyCode}
+238                        \{
+239     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} clear;
+240     clear = BUFFER;        \textcolor{comment}{// clear BF}
+241     FLAG = 0;              \textcolor{comment}{// enable SPI2 interrupt}
+242     WCOL = 0;
+243     BUFFER = datax;        \textcolor{comment}{// send data}
+244 
+245     \textcolor{keywordflow}{if} (WCOL)
+246         \textcolor{keywordflow}{return} (1);
+247     \textcolor{keywordflow}{else}
+248         \textcolor{keywordflow}{while} (!FLAG);
+249     \textcolor{keywordflow}{return}(0);
+250 \}
+\end{DoxyCode}

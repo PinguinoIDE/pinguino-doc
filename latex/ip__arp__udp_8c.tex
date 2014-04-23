@@ -1,0 +1,394 @@
+\hypertarget{ip__arp__udp_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/ethernet/ip\-\_\-arp\-\_\-udp.c File Reference}
+\label{ip__arp__udp_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/ethernet/ip\-\_\-arp\-\_\-udp.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/ethernet/ip\-\_\-arp\-\_\-udp.\-c}}
+}
+{\ttfamily \#include \char`\"{}net.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}enc28j60.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} \hyperlink{ip__arp__udp_8c_acda4291ff558e4c9c4ca87e87679e4a7}{checksum} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$buf, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} len, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} type)
+\item 
+void \hyperlink{ip__arp__udp_8c_a267b98b834c011a4408f3fed423a4142}{init\-\_\-ip\-\_\-arp\-\_\-udp} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$mymac, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$myip)
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} \hyperlink{ip__arp__udp_8c_ad76ad2183ef1a48254472e4a7ba7df8c}{eth\-\_\-type\-\_\-is\-\_\-arp\-\_\-and\-\_\-my\-\_\-ip} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$buf, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} len)
+\item 
+\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} \hyperlink{ip__arp__udp_8c_a777faa0fac52943b40285224c3097715}{eth\-\_\-type\-\_\-is\-\_\-ip\-\_\-and\-\_\-my\-\_\-ip} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$buf, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} len)
+\item 
+void \hyperlink{ip__arp__udp_8c_a0b1ae978a785d4da05a5c17be80f6314}{make\-\_\-eth} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$buf)
+\item 
+void \hyperlink{ip__arp__udp_8c_a03c6b5196ad75d2eeca9ff69537a3214}{make\-\_\-ip} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$buf)
+\item 
+void \hyperlink{ip__arp__udp_8c_a33e23802710063559ac47f19678f1d91}{make\-\_\-arp\-\_\-answer\-\_\-from\-\_\-request} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$buf, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} len)
+\item 
+void \hyperlink{ip__arp__udp_8c_aa68bf66a8854e09c6f6ffdd2ded233ea}{make\-\_\-echo\-\_\-reply\-\_\-from\-\_\-request} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$buf, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} len)
+\item 
+void \hyperlink{ip__arp__udp_8c_ac0efc1db347429bbbdc0a204aad47c99}{make\-\_\-udp\-\_\-reply\-\_\-from\-\_\-request} (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} $\ast$buf, char $\ast$data, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\-\_\-t} datalen, \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} port)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{ip__arp__udp_8c_acda4291ff558e4c9c4ca87e87679e4a7}{\index{ip\-\_\-arp\-\_\-udp.\-c@{ip\-\_\-arp\-\_\-udp.\-c}!checksum@{checksum}}
+\index{checksum@{checksum}!ip_arp_udp.c@{ip\-\_\-arp\-\_\-udp.\-c}}
+\subsubsection[{checksum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\-\_\-t} checksum (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t} $\ast$}]{buf, }
+\item[{{\bf uint16\-\_\-t}}]{len, }
+\item[{{\bf uint8\-\_\-t}}]{type}
+\end{DoxyParamCaption}
+)}}\label{ip__arp__udp_8c_acda4291ff558e4c9c4ca87e87679e4a7}
+
+
+Definition at line 38 of file ip\-\_\-arp\-\_\-udp.\-c.
+
+
+
+References I\-P\-\_\-\-P\-R\-O\-T\-O\-\_\-\-T\-C\-P\-\_\-\-V, and I\-P\-\_\-\-P\-R\-O\-T\-O\-\_\-\-U\-D\-P\-\_\-\-V.
+
+
+
+Referenced by make\-\_\-ip(), and make\-\_\-udp\-\_\-reply\-\_\-from\-\_\-request().
+
+
+\begin{DoxyCode}
+38                                                           \{
+39         \textcolor{comment}{// type 0=ip }
+40         \textcolor{comment}{//      1=udp}
+41         \textcolor{comment}{//      2=tcp}
+42         \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_a33594304e786b158f3fb30289278f5af}{uint32\_t} sum = 0;
+43 
+44         \textcolor{keywordflow}{if}(type==1)\{
+45                 sum+=\hyperlink{net_8h_af197bd006505ea01b4cafbf596916af7}{IP\_PROTO\_UDP\_V}; \textcolor{comment}{// protocol udp}
+46                 \textcolor{comment}{// the length here is the length of udp (data+header len)}
+47                 \textcolor{comment}{// =length - IP addr length}
+48                 sum+=len-8; \textcolor{comment}{// = real udp len}
+49         \}
+50         \textcolor{keywordflow}{if}(type==2)\{
+51                 sum+=\hyperlink{net_8h_a9c81cf21add56a1f1fb3d59df1d6a5c8}{IP\_PROTO\_TCP\_V}; 
+52                 \textcolor{comment}{// the length here is the length of tcp (data+header len)}
+53                 \textcolor{comment}{// =length - IP addr length}
+54                 sum+=len-8; \textcolor{comment}{// = real tcp len}
+55         \}
+56         \textcolor{comment}{// build the sum of 16bit words}
+57         \textcolor{keywordflow}{while}(len >1)\{
+58                 sum += 0xFFFF & (*buf<<8|*(buf+1));
+59                 buf+=2;
+60                 len-=2;
+61         \}
+62         \textcolor{comment}{// if there is a byte left then add it (padded with zero)}
+63         \textcolor{keywordflow}{if} (len)\{
+64                 sum += (0xFF & *buf)<<8;
+65         \}
+66         \textcolor{comment}{// now calculate the sum over the bytes in the sum}
+67         \textcolor{comment}{// until the result is only 16bit long}
+68         \textcolor{keywordflow}{while} (sum>>16)\{
+69                 sum = (sum & 0xFFFF)+(sum >> 16);
+70         \}
+71         \textcolor{comment}{// build 1's complement:}
+72         \textcolor{keywordflow}{return}( (\hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\_t}) sum ^ 0xFFFF);
+73 \}
+\end{DoxyCode}
+\hypertarget{ip__arp__udp_8c_ad76ad2183ef1a48254472e4a7ba7df8c}{\index{ip\-\_\-arp\-\_\-udp.\-c@{ip\-\_\-arp\-\_\-udp.\-c}!eth\-\_\-type\-\_\-is\-\_\-arp\-\_\-and\-\_\-my\-\_\-ip@{eth\-\_\-type\-\_\-is\-\_\-arp\-\_\-and\-\_\-my\-\_\-ip}}
+\index{eth\-\_\-type\-\_\-is\-\_\-arp\-\_\-and\-\_\-my\-\_\-ip@{eth\-\_\-type\-\_\-is\-\_\-arp\-\_\-and\-\_\-my\-\_\-ip}!ip_arp_udp.c@{ip\-\_\-arp\-\_\-udp.\-c}}
+\subsubsection[{eth\-\_\-type\-\_\-is\-\_\-arp\-\_\-and\-\_\-my\-\_\-ip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\-\_\-t} eth\-\_\-type\-\_\-is\-\_\-arp\-\_\-and\-\_\-my\-\_\-ip (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t} $\ast$}]{buf, }
+\item[{{\bf uint8\-\_\-t}}]{len}
+\end{DoxyParamCaption}
+)}}\label{ip__arp__udp_8c_ad76ad2183ef1a48254472e4a7ba7df8c}
+
+
+Definition at line 89 of file ip\-\_\-arp\-\_\-udp.\-c.
+
+
+
+References E\-T\-H\-\_\-\-A\-R\-P\-\_\-\-D\-S\-T\-\_\-\-I\-P\-\_\-\-P, E\-T\-H\-\_\-\-T\-Y\-P\-E\-\_\-\-H\-\_\-\-P, E\-T\-H\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-\_\-\-P, E\-T\-H\-T\-Y\-P\-E\-\_\-\-A\-R\-P\-\_\-\-H\-\_\-\-V, and E\-T\-H\-T\-Y\-P\-E\-\_\-\-A\-R\-P\-\_\-\-L\-\_\-\-V.
+
+
+\begin{DoxyCode}
+89                                                            \{
+90         \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} i=0;
+91         \textcolor{comment}{//}
+92         \textcolor{keywordflow}{if} (len<41)\{
+93                 \textcolor{keywordflow}{return}(0);
+94         \}
+95         \textcolor{keywordflow}{if}(buf[\hyperlink{net_8h_afa6d3ef1566c3290aab9916e63bf5fc5}{ETH\_TYPE\_H\_P}] != \hyperlink{net_8h_abe5d0b955430ac312d3b2fd96a5f67b5}{ETHTYPE\_ARP\_H\_V} || 
+96            buf[\hyperlink{net_8h_a27cff6edf78472708f78ad7a90ef4be8}{ETH\_TYPE\_L\_P}] != \hyperlink{net_8h_a77f5c72342c7d1813f76ee28382c9fa7}{ETHTYPE\_ARP\_L\_V})\{
+97                 \textcolor{keywordflow}{return}(0);
+98         \}
+99         \textcolor{keywordflow}{while}(i<4)\{
+100                 \textcolor{keywordflow}{if}(buf[\hyperlink{net_8h_adcab7146ba6255ffd2eff7977019e645}{ETH\_ARP\_DST\_IP\_P}+i] != ipaddr[i])\{
+101                         \textcolor{keywordflow}{return}(0);
+102                 \}
+103                 i++;
+104         \}
+105         \textcolor{keywordflow}{return}(1);
+106 \}
+\end{DoxyCode}
+\hypertarget{ip__arp__udp_8c_a777faa0fac52943b40285224c3097715}{\index{ip\-\_\-arp\-\_\-udp.\-c@{ip\-\_\-arp\-\_\-udp.\-c}!eth\-\_\-type\-\_\-is\-\_\-ip\-\_\-and\-\_\-my\-\_\-ip@{eth\-\_\-type\-\_\-is\-\_\-ip\-\_\-and\-\_\-my\-\_\-ip}}
+\index{eth\-\_\-type\-\_\-is\-\_\-ip\-\_\-and\-\_\-my\-\_\-ip@{eth\-\_\-type\-\_\-is\-\_\-ip\-\_\-and\-\_\-my\-\_\-ip}!ip_arp_udp.c@{ip\-\_\-arp\-\_\-udp.\-c}}
+\subsubsection[{eth\-\_\-type\-\_\-is\-\_\-ip\-\_\-and\-\_\-my\-\_\-ip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8\-\_\-t} eth\-\_\-type\-\_\-is\-\_\-ip\-\_\-and\-\_\-my\-\_\-ip (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t} $\ast$}]{buf, }
+\item[{{\bf uint8\-\_\-t}}]{len}
+\end{DoxyParamCaption}
+)}}\label{ip__arp__udp_8c_a777faa0fac52943b40285224c3097715}
+
+
+Definition at line 108 of file ip\-\_\-arp\-\_\-udp.\-c.
+
+
+
+References E\-T\-H\-\_\-\-T\-Y\-P\-E\-\_\-\-H\-\_\-\-P, E\-T\-H\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-\_\-\-P, E\-T\-H\-T\-Y\-P\-E\-\_\-\-I\-P\-\_\-\-H\-\_\-\-V, E\-T\-H\-T\-Y\-P\-E\-\_\-\-I\-P\-\_\-\-L\-\_\-\-V, and I\-P\-\_\-\-D\-S\-T\-\_\-\-P.
+
+
+\begin{DoxyCode}
+108                                                           \{
+109         \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} i=0;
+110         \textcolor{comment}{//eth+ip+udp header is 42}
+111         \textcolor{keywordflow}{if} (len<42)\{
+112                 \textcolor{keywordflow}{return}(0);
+113         \}
+114         \textcolor{keywordflow}{if}(buf[\hyperlink{net_8h_afa6d3ef1566c3290aab9916e63bf5fc5}{ETH\_TYPE\_H\_P}]!=\hyperlink{net_8h_abd570c69c474bff5874030a29ce83e80}{ETHTYPE\_IP\_H\_V} || 
+115            buf[\hyperlink{net_8h_a27cff6edf78472708f78ad7a90ef4be8}{ETH\_TYPE\_L\_P}]!=\hyperlink{net_8h_a838baeea7a95a1fae5c01212d3ea699a}{ETHTYPE\_IP\_L\_V})\{
+116                 \textcolor{keywordflow}{return}(0);
+117         \}
+118         \textcolor{keywordflow}{while}(i<4)\{
+119                 \textcolor{keywordflow}{if}(buf[\hyperlink{net_8h_aa5f1e0d5a75462eaacf6cd2f50601e65}{IP\_DST\_P}+i]!=ipaddr[i])\{
+120                         \textcolor{keywordflow}{return}(0);
+121                 \}
+122                 i++;
+123         \}
+124         \textcolor{keywordflow}{return}(1);
+125 \}
+\end{DoxyCode}
+\hypertarget{ip__arp__udp_8c_a267b98b834c011a4408f3fed423a4142}{\index{ip\-\_\-arp\-\_\-udp.\-c@{ip\-\_\-arp\-\_\-udp.\-c}!init\-\_\-ip\-\_\-arp\-\_\-udp@{init\-\_\-ip\-\_\-arp\-\_\-udp}}
+\index{init\-\_\-ip\-\_\-arp\-\_\-udp@{init\-\_\-ip\-\_\-arp\-\_\-udp}!ip_arp_udp.c@{ip\-\_\-arp\-\_\-udp.\-c}}
+\subsubsection[{init\-\_\-ip\-\_\-arp\-\_\-udp}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-ip\-\_\-arp\-\_\-udp (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t} $\ast$}]{mymac, }
+\item[{{\bf uint8\-\_\-t} $\ast$}]{myip}
+\end{DoxyParamCaption}
+)}}\label{ip__arp__udp_8c_a267b98b834c011a4408f3fed423a4142}
+
+
+Definition at line 76 of file ip\-\_\-arp\-\_\-udp.\-c.
+
+
+\begin{DoxyCode}
+76                                                   \{
+77         \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} i=0;
+78         \textcolor{keywordflow}{while}(i<4)\{
+79                 ipaddr[i]=myip[i];
+80                 i++;
+81         \}
+82         i=0;
+83         \textcolor{keywordflow}{while}(i<6)\{
+84                 macaddr[i]=mymac[i];
+85                 i++;
+86         \}
+87 \}
+\end{DoxyCode}
+\hypertarget{ip__arp__udp_8c_a33e23802710063559ac47f19678f1d91}{\index{ip\-\_\-arp\-\_\-udp.\-c@{ip\-\_\-arp\-\_\-udp.\-c}!make\-\_\-arp\-\_\-answer\-\_\-from\-\_\-request@{make\-\_\-arp\-\_\-answer\-\_\-from\-\_\-request}}
+\index{make\-\_\-arp\-\_\-answer\-\_\-from\-\_\-request@{make\-\_\-arp\-\_\-answer\-\_\-from\-\_\-request}!ip_arp_udp.c@{ip\-\_\-arp\-\_\-udp.\-c}}
+\subsubsection[{make\-\_\-arp\-\_\-answer\-\_\-from\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}void make\-\_\-arp\-\_\-answer\-\_\-from\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t} $\ast$}]{buf, }
+\item[{{\bf uint8\-\_\-t}}]{len}
+\end{DoxyParamCaption}
+)}}\label{ip__arp__udp_8c_a33e23802710063559ac47f19678f1d91}
+
+
+Definition at line 161 of file ip\-\_\-arp\-\_\-udp.\-c.
+
+
+
+References enc28j60\-Packet\-Send(), E\-T\-H\-\_\-\-A\-R\-P\-\_\-\-D\-S\-T\-\_\-\-I\-P\-\_\-\-P, E\-T\-H\-\_\-\-A\-R\-P\-\_\-\-D\-S\-T\-\_\-\-M\-A\-C\-\_\-\-P, E\-T\-H\-\_\-\-A\-R\-P\-\_\-\-O\-P\-C\-O\-D\-E\-\_\-\-H\-\_\-\-P, E\-T\-H\-\_\-\-A\-R\-P\-\_\-\-O\-P\-C\-O\-D\-E\-\_\-\-L\-\_\-\-P, E\-T\-H\-\_\-\-A\-R\-P\-\_\-\-O\-P\-C\-O\-D\-E\-\_\-\-R\-E\-P\-L\-Y\-\_\-\-H\-\_\-\-V, E\-T\-H\-\_\-\-A\-R\-P\-\_\-\-O\-P\-C\-O\-D\-E\-\_\-\-R\-E\-P\-L\-Y\-\_\-\-L\-\_\-\-V, E\-T\-H\-\_\-\-A\-R\-P\-\_\-\-S\-R\-C\-\_\-\-I\-P\-\_\-\-P, E\-T\-H\-\_\-\-A\-R\-P\-\_\-\-S\-R\-C\-\_\-\-M\-A\-C\-\_\-\-P, and make\-\_\-eth().
+
+
+\begin{DoxyCode}
+162 \{
+163         \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} i=0;
+164         \textcolor{comment}{//}
+165         \hyperlink{ip__arp__udp_8c_a0b1ae978a785d4da05a5c17be80f6314}{make\_eth}(buf);
+166         buf[\hyperlink{net_8h_ac8400357dcbd87cd33747de7789f1dca}{ETH\_ARP\_OPCODE\_H\_P}]=\hyperlink{net_8h_a3eb75e7c90e75f9f94e866efde0ffd2f}{ETH\_ARP\_OPCODE\_REPLY\_H\_V};
+167         buf[\hyperlink{net_8h_aa2bbba722abd83207771f0d9403022d3}{ETH\_ARP\_OPCODE\_L\_P}]=\hyperlink{net_8h_a346e1013b74f8bb6e118f2118f18cb99}{ETH\_ARP\_OPCODE\_REPLY\_L\_V};
+168         \textcolor{comment}{// fill the mac addresses:}
+169         \textcolor{keywordflow}{while}(i<6)\{
+170                 buf[\hyperlink{net_8h_a2f1d1f617d1b7a5b3bcc046f58ecf94b}{ETH\_ARP\_DST\_MAC\_P}+i]=buf[\hyperlink{net_8h_aa9f97382663167b869737e43fe9feac7}{ETH\_ARP\_SRC\_MAC\_P}+i];
+171                 buf[\hyperlink{net_8h_aa9f97382663167b869737e43fe9feac7}{ETH\_ARP\_SRC\_MAC\_P}+i]=macaddr[i];
+172                 i++;
+173         \}
+174         i=0;
+175         \textcolor{keywordflow}{while}(i<4)\{
+176                 buf[\hyperlink{net_8h_adcab7146ba6255ffd2eff7977019e645}{ETH\_ARP\_DST\_IP\_P}+i]=buf[\hyperlink{net_8h_a0e68ecdc04dc1766de2323068bc08a6f}{ETH\_ARP\_SRC\_IP\_P}+i];
+177                 buf[\hyperlink{net_8h_a0e68ecdc04dc1766de2323068bc08a6f}{ETH\_ARP\_SRC\_IP\_P}+i]=ipaddr[i];
+178                 i++;
+179         \}
+180         \textcolor{comment}{// eth+arp is 42 bytes:}
+181         \hyperlink{ecn28j60_8c_aed668455f7269eec646050b897827d86}{enc28j60PacketSend}(42,buf); 
+182 \}
+\end{DoxyCode}
+\hypertarget{ip__arp__udp_8c_aa68bf66a8854e09c6f6ffdd2ded233ea}{\index{ip\-\_\-arp\-\_\-udp.\-c@{ip\-\_\-arp\-\_\-udp.\-c}!make\-\_\-echo\-\_\-reply\-\_\-from\-\_\-request@{make\-\_\-echo\-\_\-reply\-\_\-from\-\_\-request}}
+\index{make\-\_\-echo\-\_\-reply\-\_\-from\-\_\-request@{make\-\_\-echo\-\_\-reply\-\_\-from\-\_\-request}!ip_arp_udp.c@{ip\-\_\-arp\-\_\-udp.\-c}}
+\subsubsection[{make\-\_\-echo\-\_\-reply\-\_\-from\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}void make\-\_\-echo\-\_\-reply\-\_\-from\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t} $\ast$}]{buf, }
+\item[{{\bf uint8\-\_\-t}}]{len}
+\end{DoxyParamCaption}
+)}}\label{ip__arp__udp_8c_aa68bf66a8854e09c6f6ffdd2ded233ea}
+
+
+Definition at line 184 of file ip\-\_\-arp\-\_\-udp.\-c.
+
+
+
+References enc28j60\-Packet\-Send(), I\-C\-M\-P\-\_\-\-C\-H\-E\-C\-K\-S\-U\-M\-\_\-\-P, I\-C\-M\-P\-\_\-\-T\-Y\-P\-E\-\_\-\-E\-C\-H\-O\-R\-E\-P\-L\-Y\-\_\-\-V, I\-C\-M\-P\-\_\-\-T\-Y\-P\-E\-\_\-\-P, make\-\_\-eth(), and make\-\_\-ip().
+
+
+\begin{DoxyCode}
+185 \{
+186         \hyperlink{ip__arp__udp_8c_a0b1ae978a785d4da05a5c17be80f6314}{make\_eth}(buf);
+187         \hyperlink{ip__arp__udp_8c_a03c6b5196ad75d2eeca9ff69537a3214}{make\_ip}(buf);
+188         buf[\hyperlink{net_8h_af4d84ceabffe9baf6af2687d56657dfe}{ICMP\_TYPE\_P}]=\hyperlink{net_8h_aa39d5141e0de02219157482fdcc849b9}{ICMP\_TYPE\_ECHOREPLY\_V};
+189         \textcolor{comment}{// we changed only the icmp.type field from request(=8) to reply(=0).}
+190         \textcolor{comment}{// we can therefore easily correct the checksum:}
+191         \textcolor{keywordflow}{if} (buf[\hyperlink{net_8h_a2d857ee9bba69c4511b2acad46b23e49}{ICMP\_CHECKSUM\_P}] > (0xff-0x08))\{
+192                 buf[\hyperlink{net_8h_a2d857ee9bba69c4511b2acad46b23e49}{ICMP\_CHECKSUM\_P}+1]++;
+193         \}
+194         buf[\hyperlink{net_8h_a2d857ee9bba69c4511b2acad46b23e49}{ICMP\_CHECKSUM\_P}]+=0x08;
+195         \textcolor{comment}{//}
+196         \hyperlink{ecn28j60_8c_aed668455f7269eec646050b897827d86}{enc28j60PacketSend}(len,buf);
+197 \}
+\end{DoxyCode}
+\hypertarget{ip__arp__udp_8c_a0b1ae978a785d4da05a5c17be80f6314}{\index{ip\-\_\-arp\-\_\-udp.\-c@{ip\-\_\-arp\-\_\-udp.\-c}!make\-\_\-eth@{make\-\_\-eth}}
+\index{make\-\_\-eth@{make\-\_\-eth}!ip_arp_udp.c@{ip\-\_\-arp\-\_\-udp.\-c}}
+\subsubsection[{make\-\_\-eth}]{\setlength{\rightskip}{0pt plus 5cm}void make\-\_\-eth (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t} $\ast$}]{buf}
+\end{DoxyParamCaption}
+)}}\label{ip__arp__udp_8c_a0b1ae978a785d4da05a5c17be80f6314}
+
+
+Definition at line 127 of file ip\-\_\-arp\-\_\-udp.\-c.
+
+
+
+References E\-T\-H\-\_\-\-D\-S\-T\-\_\-\-M\-A\-C, and E\-T\-H\-\_\-\-S\-R\-C\-\_\-\-M\-A\-C.
+
+
+
+Referenced by make\-\_\-arp\-\_\-answer\-\_\-from\-\_\-request(), make\-\_\-echo\-\_\-reply\-\_\-from\-\_\-request(), and make\-\_\-udp\-\_\-reply\-\_\-from\-\_\-request().
+
+
+\begin{DoxyCode}
+128 \{
+129         \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} i=0;
+130         \textcolor{comment}{//}
+131         \textcolor{comment}{//copy the destination mac from the source and fill my mac into src}
+132         \textcolor{keywordflow}{while}(i<6)\{
+133                 buf[\hyperlink{net_8h_ab7537cf48a3c0323f5f3efc6394f7aaa}{ETH\_DST\_MAC} +i]=buf[\hyperlink{net_8h_a08c7f7257dfd57b273f26a044c83583a}{ETH\_SRC\_MAC} +i];
+134                 buf[\hyperlink{net_8h_a08c7f7257dfd57b273f26a044c83583a}{ETH\_SRC\_MAC} +i]=macaddr[i];
+135                 i++;
+136         \}
+137 \}
+\end{DoxyCode}
+\hypertarget{ip__arp__udp_8c_a03c6b5196ad75d2eeca9ff69537a3214}{\index{ip\-\_\-arp\-\_\-udp.\-c@{ip\-\_\-arp\-\_\-udp.\-c}!make\-\_\-ip@{make\-\_\-ip}}
+\index{make\-\_\-ip@{make\-\_\-ip}!ip_arp_udp.c@{ip\-\_\-arp\-\_\-udp.\-c}}
+\subsubsection[{make\-\_\-ip}]{\setlength{\rightskip}{0pt plus 5cm}void make\-\_\-ip (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t} $\ast$}]{buf}
+\end{DoxyParamCaption}
+)}}\label{ip__arp__udp_8c_a03c6b5196ad75d2eeca9ff69537a3214}
+
+
+Definition at line 140 of file ip\-\_\-arp\-\_\-udp.\-c.
+
+
+
+References checksum(), I\-P\-\_\-\-C\-H\-E\-C\-K\-S\-U\-M\-\_\-\-P, I\-P\-\_\-\-D\-S\-T\-\_\-\-P, I\-P\-\_\-\-F\-L\-A\-G\-S\-\_\-\-P, I\-P\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-L\-E\-N, I\-P\-\_\-\-P, I\-P\-\_\-\-S\-R\-C\-\_\-\-P, and I\-P\-\_\-\-T\-T\-L\-\_\-\-P.
+
+
+
+Referenced by make\-\_\-echo\-\_\-reply\-\_\-from\-\_\-request(), and make\-\_\-udp\-\_\-reply\-\_\-from\-\_\-request().
+
+
+\begin{DoxyCode}
+141 \{
+142         \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} i=0;
+143         \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\_t} ck;
+144         \textcolor{keywordflow}{while}(i<4)\{
+145                 buf[\hyperlink{net_8h_aa5f1e0d5a75462eaacf6cd2f50601e65}{IP\_DST\_P}+i]=buf[\hyperlink{net_8h_a9288e7acf3c9011f0f99eed5ea866698}{IP\_SRC\_P}+i];
+146                 buf[\hyperlink{net_8h_a9288e7acf3c9011f0f99eed5ea866698}{IP\_SRC\_P}+i]=ipaddr[i];
+147                 i++;
+148         \}
+149         \textcolor{comment}{// clear the 2 byte checksum}
+150         buf[\hyperlink{net_8h_ad3e2eb9acb5d5e133af3ce68a3cd5b2a}{IP\_CHECKSUM\_P}]=0;
+151         buf[\hyperlink{net_8h_ad3e2eb9acb5d5e133af3ce68a3cd5b2a}{IP\_CHECKSUM\_P}+1]=0;
+152         buf[\hyperlink{net_8h_a1101d91e0c5eae35609dd0a3df5a196b}{IP\_FLAGS\_P}]=0x40; \textcolor{comment}{// don't fragment}
+153         buf[\hyperlink{net_8h_a1101d91e0c5eae35609dd0a3df5a196b}{IP\_FLAGS\_P}+1]=0;  \textcolor{comment}{// fragement offset}
+154         buf[\hyperlink{net_8h_a5c6cdbd7479e284f33e2b291d40fe389}{IP\_TTL\_P}]=64; \textcolor{comment}{// ttl}
+155         \textcolor{comment}{// calculate the checksum:}
+156         ck=\hyperlink{ip__arp__udp_8c_acda4291ff558e4c9c4ca87e87679e4a7}{checksum}(&buf[\hyperlink{net_8h_a971527e7fb194f5f15b6c7ffcfcc3916}{IP\_P}], \hyperlink{net_8h_a956b187f1ee557ac6c330bc95bad53e9}{IP\_HEADER\_LEN},0);
+157         buf[\hyperlink{net_8h_ad3e2eb9acb5d5e133af3ce68a3cd5b2a}{IP\_CHECKSUM\_P}]=ck>>8;
+158         buf[\hyperlink{net_8h_ad3e2eb9acb5d5e133af3ce68a3cd5b2a}{IP\_CHECKSUM\_P}+1]=ck& 0xff;
+159 \}
+\end{DoxyCode}
+\hypertarget{ip__arp__udp_8c_ac0efc1db347429bbbdc0a204aad47c99}{\index{ip\-\_\-arp\-\_\-udp.\-c@{ip\-\_\-arp\-\_\-udp.\-c}!make\-\_\-udp\-\_\-reply\-\_\-from\-\_\-request@{make\-\_\-udp\-\_\-reply\-\_\-from\-\_\-request}}
+\index{make\-\_\-udp\-\_\-reply\-\_\-from\-\_\-request@{make\-\_\-udp\-\_\-reply\-\_\-from\-\_\-request}!ip_arp_udp.c@{ip\-\_\-arp\-\_\-udp.\-c}}
+\subsubsection[{make\-\_\-udp\-\_\-reply\-\_\-from\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}void make\-\_\-udp\-\_\-reply\-\_\-from\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8\-\_\-t} $\ast$}]{buf, }
+\item[{char $\ast$}]{data, }
+\item[{{\bf uint8\-\_\-t}}]{datalen, }
+\item[{{\bf uint16\-\_\-t}}]{port}
+\end{DoxyParamCaption}
+)}}\label{ip__arp__udp_8c_ac0efc1db347429bbbdc0a204aad47c99}
+
+
+Definition at line 200 of file ip\-\_\-arp\-\_\-udp.\-c.
+
+
+
+References checksum(), enc28j60\-Packet\-Send(), E\-T\-H\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-L\-E\-N, I\-P\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-L\-E\-N, I\-P\-\_\-\-S\-R\-C\-\_\-\-P, I\-P\-\_\-\-T\-O\-T\-L\-E\-N\-\_\-\-H\-\_\-\-P, I\-P\-\_\-\-T\-O\-T\-L\-E\-N\-\_\-\-L\-\_\-\-P, make\-\_\-eth(), make\-\_\-ip(), U\-D\-P\-\_\-\-C\-H\-E\-C\-K\-S\-U\-M\-\_\-\-H\-\_\-\-P, U\-D\-P\-\_\-\-C\-H\-E\-C\-K\-S\-U\-M\-\_\-\-L\-\_\-\-P, U\-D\-P\-\_\-\-D\-A\-T\-A\-\_\-\-P, U\-D\-P\-\_\-\-D\-S\-T\-\_\-\-P\-O\-R\-T\-\_\-\-H\-\_\-\-P, U\-D\-P\-\_\-\-D\-S\-T\-\_\-\-P\-O\-R\-T\-\_\-\-L\-\_\-\-P, U\-D\-P\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-L\-E\-N, U\-D\-P\-\_\-\-L\-E\-N\-\_\-\-H\-\_\-\-P, U\-D\-P\-\_\-\-L\-E\-N\-\_\-\-L\-\_\-\-P, U\-D\-P\-\_\-\-S\-R\-C\-\_\-\-P\-O\-R\-T\-\_\-\-H\-\_\-\-P, and U\-D\-P\-\_\-\-S\-R\-C\-\_\-\-P\-O\-R\-T\-\_\-\-L\-\_\-\-P.
+
+
+\begin{DoxyCode}
+201 \{
+202         \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_aba7bc1797add20fe3efdf37ced1182c5}{uint8\_t} i=0;
+203         \hyperlink{p32_2include_2pinguino_2core_2typedef_8h_adf4d876453337156dde61095e1f20223}{uint16\_t} ck;
+204         \hyperlink{ip__arp__udp_8c_a0b1ae978a785d4da05a5c17be80f6314}{make\_eth}(buf);
+205         \textcolor{keywordflow}{if} (datalen>220)\{
+206                 datalen=220;
+207         \}
+208         \textcolor{comment}{// total length field in the IP header must be set:}
+209         buf[\hyperlink{net_8h_a07afbd22b129e73427b7ff01463b24ea}{IP\_TOTLEN\_H\_P}]=0;
+210         buf[\hyperlink{net_8h_a970d4973348f49ab866cabd98ebf06f8}{IP\_TOTLEN\_L\_P}]=\hyperlink{net_8h_a956b187f1ee557ac6c330bc95bad53e9}{IP\_HEADER\_LEN}+
+      \hyperlink{net_8h_ac8932031ba2c6d324056a751296553ba}{UDP\_HEADER\_LEN}+datalen;
+211         \hyperlink{ip__arp__udp_8c_a03c6b5196ad75d2eeca9ff69537a3214}{make\_ip}(buf);
+212         \textcolor{comment}{// send to port:}
+213         \textcolor{comment}{//buf[UDP\_DST\_PORT\_H\_P]=port>>8;}
+214         \textcolor{comment}{//buf[UDP\_DST\_PORT\_L\_P]=port & 0xff;}
+215         \textcolor{comment}{// sent to port of sender and use "port" as own source:}
+216         buf[\hyperlink{net_8h_aae46ec841823ccfd750448dd4e449b6a}{UDP\_DST\_PORT\_H\_P}]=buf[\hyperlink{net_8h_acc96829b7e154cccadc0e5211f16a803}{UDP\_SRC\_PORT\_H\_P}];
+217         buf[\hyperlink{net_8h_a00e1e2760160911a7f480bfdda7ee4ef}{UDP\_DST\_PORT\_L\_P}]= buf[\hyperlink{net_8h_abcb0833d59b139c4641ae397f2dd2067}{UDP\_SRC\_PORT\_L\_P}];
+218         buf[\hyperlink{net_8h_acc96829b7e154cccadc0e5211f16a803}{UDP\_SRC\_PORT\_H\_P}]=port>>8;
+219         buf[\hyperlink{net_8h_abcb0833d59b139c4641ae397f2dd2067}{UDP\_SRC\_PORT\_L\_P}]=port & 0xff;
+220         \textcolor{comment}{// source port does not matter and is what the sender used.}
+221         \textcolor{comment}{// calculte the udp length:}
+222         buf[\hyperlink{net_8h_ad09eed4965e5328be4c917e1ffd78e54}{UDP\_LEN\_H\_P}]=0;
+223         buf[\hyperlink{net_8h_abce857433254bf3e2b5e5f1b65dc2e45}{UDP\_LEN\_L\_P}]=\hyperlink{net_8h_ac8932031ba2c6d324056a751296553ba}{UDP\_HEADER\_LEN}+datalen;
+224         \textcolor{comment}{// zero the checksum}
+225         buf[\hyperlink{net_8h_af823ef0dbb12f00f8bdcf6f8bb44cb96}{UDP\_CHECKSUM\_H\_P}]=0;
+226         buf[\hyperlink{net_8h_a56590a4e078c15a9992b81d0e4071950}{UDP\_CHECKSUM\_L\_P}]=0;
+227         \textcolor{comment}{// copy the data:}
+228         \textcolor{keywordflow}{while}(i<datalen)\{
+229                 buf[\hyperlink{net_8h_ac885920a5ba75634915351b35c577928}{UDP\_DATA\_P}+i]=data[i];
+230                 i++;
+231         \}
+232         ck=\hyperlink{ip__arp__udp_8c_acda4291ff558e4c9c4ca87e87679e4a7}{checksum}(&buf[\hyperlink{net_8h_a9288e7acf3c9011f0f99eed5ea866698}{IP\_SRC\_P}], 16 + datalen,1);
+233         buf[\hyperlink{net_8h_af823ef0dbb12f00f8bdcf6f8bb44cb96}{UDP\_CHECKSUM\_H\_P}]=ck>>8;
+234         buf[\hyperlink{net_8h_a56590a4e078c15a9992b81d0e4071950}{UDP\_CHECKSUM\_L\_P}]=ck& 0xff;
+235         \hyperlink{ecn28j60_8c_aed668455f7269eec646050b897827d86}{enc28j60PacketSend}(\hyperlink{net_8h_ac8932031ba2c6d324056a751296553ba}{UDP\_HEADER\_LEN}+
+      \hyperlink{net_8h_a956b187f1ee557ac6c330bc95bad53e9}{IP\_HEADER\_LEN}+\hyperlink{net_8h_a055d3f576495c1e6018012e1d952da1f}{ETH\_HEADER\_LEN}+datalen,buf);
+236 \}
+\end{DoxyCode}

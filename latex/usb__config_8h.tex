@@ -1,0 +1,67 @@
+\hypertarget{usb__config_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/usb\-\_\-config.h File Reference}
+\label{usb__config_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/usb\-\_\-config.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/usb\-\_\-config.\-h}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}pic\-U\-S\-B.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{usb__config_8h_a90b06c3af3d0e4cf9925dbbcd8d4ea9c}{U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}~0
+\item 
+\#define \hyperlink{usb__config_8h_a3b329def81974e705f20980c87bc2dc4}{U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}~1
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\-\_\-\-\_\-code \hyperlink{struct_u_s_b___device___descriptor}{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor} \hyperlink{usb__config_8h_a82c3241716dd16e0a0f1c822d854f5a6}{libdevice\-\_\-descriptor}
+\item 
+\-\_\-\-\_\-code U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor \hyperlink{usb__config_8h_a6ad9d633318374b9161df82d241af202}{libconfiguration\-\_\-descriptor}
+\item 
+const char $\ast$const \hyperlink{usb__config_8h_a54002dfd77c49d181c86fb2069853a7a}{libstring\-\_\-descriptor} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usb__config_8h_a3b329def81974e705f20980c87bc2dc4}{\index{usb\-\_\-config.\-h@{usb\-\_\-config.\-h}!U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N@{U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}}
+\index{U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N@{U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}!usb_config.h@{usb\-\_\-config.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N~1}}\label{usb__config_8h_a3b329def81974e705f20980c87bc2dc4}
+how many different configuration should be available. At least configuration 1 must exist. T\-O\-D\-O\-: implement ;) 
+
+Definition at line 19 of file usb\-\_\-config.\-h.
+
+\hypertarget{usb__config_8h_a90b06c3af3d0e4cf9925dbbcd8d4ea9c}{\index{usb\-\_\-config.\-h@{usb\-\_\-config.\-h}!U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S@{U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}}
+\index{U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S@{U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}!usb_config.h@{usb\-\_\-config.\-h}}
+\subsubsection[{U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-\_\-\-M\-A\-X\-\_\-\-E\-N\-D\-P\-O\-I\-N\-T\-S~0}}\label{usb__config_8h_a90b06c3af3d0e4cf9925dbbcd8d4ea9c}
+This file need to be filled up with the desired data for the usb bus See also\-: \href{http://www.linuxjournal.com/article/6573}{\tt http\-://www.\-linuxjournal.\-com/article/6573} How many Endpoints do we have, should be at least one for the configuration endpoint not used A\-T\-M T\-O\-D\-O\-: use it 
+
+Definition at line 14 of file usb\-\_\-config.\-h.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{usb__config_8h_a6ad9d633318374b9161df82d241af202}{\index{usb\-\_\-config.\-h@{usb\-\_\-config.\-h}!libconfiguration\-\_\-descriptor@{libconfiguration\-\_\-descriptor}}
+\index{libconfiguration\-\_\-descriptor@{libconfiguration\-\_\-descriptor}!usb_config.h@{usb\-\_\-config.\-h}}
+\subsubsection[{libconfiguration\-\_\-descriptor}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-code U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor libconfiguration\-\_\-descriptor}}\label{usb__config_8h_a6ad9d633318374b9161df82d241af202}
+
+
+Referenced by \-\_\-\-\_\-at().
+
+\hypertarget{usb__config_8h_a82c3241716dd16e0a0f1c822d854f5a6}{\index{usb\-\_\-config.\-h@{usb\-\_\-config.\-h}!libdevice\-\_\-descriptor@{libdevice\-\_\-descriptor}}
+\index{libdevice\-\_\-descriptor@{libdevice\-\_\-descriptor}!usb_config.h@{usb\-\_\-config.\-h}}
+\subsubsection[{libdevice\-\_\-descriptor}]{\setlength{\rightskip}{0pt plus 5cm}\-\_\-\-\_\-code {\bf U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor} libdevice\-\_\-descriptor}}\label{usb__config_8h_a82c3241716dd16e0a0f1c822d854f5a6}
+Example Composite of Configuration Header and Interface Descriptors for an A\-C\-M Header See U\-S\-B C\-D\-C 1.\-1 Page 15 Define your own Configuration Descriptor here. 
+
+Referenced by \-\_\-\-\_\-at().
+
+\hypertarget{usb__config_8h_a54002dfd77c49d181c86fb2069853a7a}{\index{usb\-\_\-config.\-h@{usb\-\_\-config.\-h}!libstring\-\_\-descriptor@{libstring\-\_\-descriptor}}
+\index{libstring\-\_\-descriptor@{libstring\-\_\-descriptor}!usb_config.h@{usb\-\_\-config.\-h}}
+\subsubsection[{libstring\-\_\-descriptor}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ const libstring\-\_\-descriptor\mbox{[}$\,$\mbox{]}}}\label{usb__config_8h_a54002dfd77c49d181c86fb2069853a7a}
+
+
+Definition at line 182 of file usb\-\_\-config.\-c.
+
+
+
+Referenced by \-\_\-\-\_\-at().
+

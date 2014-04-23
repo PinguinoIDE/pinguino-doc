@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['r',['r',['../structcolor__t.html#a024565753c9b4a462348578bb2fe6757',1,'color_t']]],
+  ['rawbuf',['rawbuf',['../structdecode__results.html#a07b0ebd92141cf1bdd9178daab29c040',1,'decode_results::rawbuf()'],['../structirparams__t.html#a94732347617676924147d2b6deab4cda',1,'irparams_t::rawbuf()']]],
+  ['rawlen',['rawlen',['../structdecode__results.html#ad02b5d14a59e79e0a330e030a7cfdaf1',1,'decode_results::rawlen()'],['../structirparams__t.html#a709f7aaae8e4e2aa1e5d5d261137eb70',1,'irparams_t::rawlen()']]],
+  ['rcvstate',['rcvstate',['../structirparams__t.html#ad19b6aa0f045f1d4ae8e8d91427b43fb',1,'irparams_t']]],
+  ['recvpin',['recvpin',['../structirparams__t.html#a4831b4b2b741b9a1c9e40a3cb4384b4b',1,'irparams_t']]],
+  ['regs',['regs',['../struct_m_o_d_b_u_s_s___d_a_t_a.html#a0c404e2fd21adae90a9b7df0526e835e',1,'MODBUSS_DATA']]],
+  ['remotewakeup',['remoteWakeup',['../pic_u_s_b_8c.html#a8f6657264342ba68ae2efa649f018cf9',1,'remoteWakeup():&#160;picUSB.c'],['../pic_u_s_b_8h.html#a8f6657264342ba68ae2efa649f018cf9',1,'remoteWakeup():&#160;picUSB.c']]],
+  ['requesthandled',['requestHandled',['../pic_u_s_b_8c.html#ace62f6e112eb236da7f0728df0f2c87a',1,'picUSB.c']]],
+  ['res',['Res',['../structtag_m_c_p342x_c_h.html#a8573f92bdf8f12f4d330c68aee4ce26a',1,'tagMCP342xCH::Res()'],['../tff_8c.html#aab43d7bcfb87e7ef71138d651ce1bea1',1,'res():&#160;tff.c']]],
+  ['reserved',['reserved',['../struct_d_i_r_t_a_b_l_e.html#afbdb0ad610aca15517b193c2c5ec7791',1,'DIRTABLE']]],
+  ['rom',['ROM',['../p8_2pinguino_2libraries_218b20_8c.html#a4b776ebf547da62d9de6cb3c9ed6fcfb',1,'ROM():&#160;18b20.c'],['../p32_2include_2pinguino_2libraries_218b20_8c.html#a4b776ebf547da62d9de6cb3c9ed6fcfb',1,'ROM():&#160;18b20.c']]],
+  ['root',['root',['../struct_m_e_d_i_a.html#a484ff55c205f0fa8283a246f2d77f94d',1,'MEDIA']]],
+  ['rowpins',['rowPins',['../keypad_8c.html#abd0424a6c8b273b46a42ba12697bd680',1,'rowPins():&#160;keypad.c'],['../keypad32_8c.html#abd0424a6c8b273b46a42ba12697bd680',1,'rowPins():&#160;keypad32.c']]],
+  ['rpointer',['rpointer',['../p8_2pinguino_2core_2serial_8c.html#ab0fd0066c2d4e42328325e2390d511cc',1,'serial.c']]],
+  ['rst',['rst',['../_s_t7565_8c.html#a709cb1f161a6612e2bd5285f6f197eec',1,'ST7565.c']]],
+  ['rsvd',['rsvd',['../unionrtcc_time.html#a49330ff1e61822649a18c185fddcf0b1',1,'rtccTime']]],
+  ['rtclock',['RTClock',['../p8_2pinguino_2libraries_2dcf77_8h.html#a41f4f3e553ba5a06245571c636f342b2',1,'RTClock():&#160;dcf77.h'],['../p32_2include_2pinguino_2libraries_2dcf77_8h.html#a41f4f3e553ba5a06245571c636f342b2',1,'RTClock():&#160;dcf77.h']]],
+  ['rx',['rx',['../p8_2pinguino_2core_2serial_8c.html#a64ae21cc10dfc8fdc3416a98a70b56b8',1,'serial.c']]]
+];

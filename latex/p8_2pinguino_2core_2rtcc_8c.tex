@@ -1,0 +1,258 @@
+\hypertarget{p8_2pinguino_2core_2rtcc_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/rtcc.c File Reference}
+\label{p8_2pinguino_2core_2rtcc_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/rtcc.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/rtcc.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$rtcc.\-h$>$}\\*
+{\ttfamily \#include $<$bcd.\-c$>$}\\*
+{\ttfamily \#include $<$system.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2rtcc_8c_a78e37c733ac4e8d934b30a86661ac14e}{\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2rtcc_8c_a1e482285a28923082ff610147c31b359}{R\-T\-C\-C\-\_\-\-Wait}()~while (R\-T\-C\-C\-F\-Gbits.\-R\-T\-C\-S\-Y\-N\-C);
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2core_2rtcc_8c_a827e4753332ef9b673ec39e960c3d0de}{R\-T\-C\-C\-\_\-\-Convert\-Time} (\hyperlink{unionrtcc_time}{rtcc\-Time} $\ast$p\-Tm)
+\item 
+void \hyperlink{p8_2pinguino_2core_2rtcc_8c_a6686cea9b23ceaf8ce04f794fe302533}{R\-T\-C\-C\-\_\-\-Convert\-Date} (\hyperlink{unionrtcc_date}{rtcc\-Date} $\ast$p\-Dt)
+\item 
+void \hyperlink{p8_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{R\-T\-C\-C\-\_\-\-Set\-Write\-Enable} (void)
+\item 
+void \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{R\-T\-C\-C\-\_\-\-Set\-Write\-Disable} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2core_2rtcc_8c_a6716490524c6acb7798eedf6e134aa10}{R\-T\-C\-C\-\_\-\-Is\-Write\-Enable} (void)
+\item 
+void \hyperlink{p8_2pinguino_2core_2rtcc_8c_a4e406886a6756df9694c406b5a05cf08}{R\-T\-C\-C\-\_\-\-Enable} (void)
+\item 
+void \hyperlink{p8_2pinguino_2core_2rtcc_8c_af79dca3fe51ab983cf52d238e762e2d8}{R\-T\-C\-C\-\_\-\-Disable} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2core_2rtcc_8c_aa75ccd698f2ac8d3775a6e067d034449}{R\-T\-C\-C\-\_\-\-Is\-Enable} (void)
+\item 
+void \hyperlink{p8_2pinguino_2core_2rtcc_8c_ad59614d588c39390ac7a3fdf4925eb36}{R\-T\-C\-C\-\_\-\-Shutdown} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2rtcc_8c_a78e37c733ac4e8d934b30a86661ac14e}{\index{p8/pinguino/core/rtcc.\-c@{p8/pinguino/core/rtcc.\-c}!\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-}!p8/pinguino/core/rtcc.c@{p8/pinguino/core/rtcc.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-R\-T\-C\-C\-\_\-\-\_\-}}\label{p8_2pinguino_2core_2rtcc_8c_a78e37c733ac4e8d934b30a86661ac14e}
+
+
+Definition at line 31 of file rtcc.\-c.
+
+\hypertarget{p8_2pinguino_2core_2rtcc_8c_a1e482285a28923082ff610147c31b359}{\index{p8/pinguino/core/rtcc.\-c@{p8/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Wait@{R\-T\-C\-C\-\_\-\-Wait}}
+\index{R\-T\-C\-C\-\_\-\-Wait@{R\-T\-C\-C\-\_\-\-Wait}!p8/pinguino/core/rtcc.c@{p8/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Wait}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-T\-C\-C\-\_\-\-Wait(
+\begin{DoxyParamCaption}
+\item[{}]{void}
+\end{DoxyParamCaption}
+)~while (R\-T\-C\-C\-F\-Gbits.\-R\-T\-C\-S\-Y\-N\-C);}}\label{p8_2pinguino_2core_2rtcc_8c_a1e482285a28923082ff610147c31b359}
+
+
+Definition at line 56 of file rtcc.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2rtcc_8c_a6686cea9b23ceaf8ce04f794fe302533}{\index{p8/pinguino/core/rtcc.\-c@{p8/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Convert\-Date@{R\-T\-C\-C\-\_\-\-Convert\-Date}}
+\index{R\-T\-C\-C\-\_\-\-Convert\-Date@{R\-T\-C\-C\-\_\-\-Convert\-Date}!p8/pinguino/core/rtcc.c@{p8/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Convert\-Date}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rtcc\-Date} R\-T\-C\-C\-\_\-\-Convert\-Date (
+\begin{DoxyParamCaption}
+\item[{{\bf rtcc\-Date} $\ast$}]{p\-Dt}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2rtcc_8c_a6686cea9b23ceaf8ce04f794fe302533}
+
+
+Definition at line 69 of file rtcc.\-c.
+
+
+
+Referenced by get\-\_\-fattime().
+
+
+\begin{DoxyCode}
+70 \{
+71     pDt->\hyperlink{unionrtcc_date_a97419c23eb9097f89c83ce342df499f8}{dayofweek}  = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pDt->\hyperlink{unionrtcc_date_a97419c23eb9097f89c83ce342df499f8}{dayofweek});
+72     pDt->\hyperlink{unionrtcc_date_af980355fa766196214d34395ebed0a89}{dayofmonth} = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pDt->\hyperlink{unionrtcc_date_af980355fa766196214d34395ebed0a89}{dayofmonth});
+73     pDt->\hyperlink{unionrtcc_date_ad5f8cd6773aef677b920ae4e4265bb10}{month}      = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pDt->\hyperlink{unionrtcc_date_ad5f8cd6773aef677b920ae4e4265bb10}{month});
+74     pDt->\hyperlink{unionrtcc_date_ab02bacda75d48acac498f0c9f4e9b1cf}{year}       = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pDt->\hyperlink{unionrtcc_date_ab02bacda75d48acac498f0c9f4e9b1cf}{year});
+75 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2rtcc_8c_a827e4753332ef9b673ec39e960c3d0de}{\index{p8/pinguino/core/rtcc.\-c@{p8/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Convert\-Time@{R\-T\-C\-C\-\_\-\-Convert\-Time}}
+\index{R\-T\-C\-C\-\_\-\-Convert\-Time@{R\-T\-C\-C\-\_\-\-Convert\-Time}!p8/pinguino/core/rtcc.c@{p8/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Convert\-Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rtcc\-Time} R\-T\-C\-C\-\_\-\-Convert\-Time (
+\begin{DoxyParamCaption}
+\item[{{\bf rtcc\-Time} $\ast$}]{p\-Tm}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2rtcc_8c_a827e4753332ef9b673ec39e960c3d0de}
+
+
+Definition at line 62 of file rtcc.\-c.
+
+
+
+Referenced by get\-\_\-fattime().
+
+
+\begin{DoxyCode}
+63 \{
+64     pTm->\hyperlink{unionrtcc_time_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours}    = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pTm->\hyperlink{unionrtcc_time_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours});
+65     pTm->\hyperlink{unionrtcc_time_a517646d9969ae9c9f8921e133b1b872b}{minutes}  = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pTm->\hyperlink{unionrtcc_time_a517646d9969ae9c9f8921e133b1b872b}{minutes});
+66     pTm->\hyperlink{unionrtcc_time_ae53e173daf8fcf970bb3324ae545f21c}{seconds}  = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(pTm->\hyperlink{unionrtcc_time_ae53e173daf8fcf970bb3324ae545f21c}{seconds});
+67 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2rtcc_8c_af79dca3fe51ab983cf52d238e762e2d8}{\index{p8/pinguino/core/rtcc.\-c@{p8/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Disable@{R\-T\-C\-C\-\_\-\-Disable}}
+\index{R\-T\-C\-C\-\_\-\-Disable@{R\-T\-C\-C\-\_\-\-Disable}!p8/pinguino/core/rtcc.c@{p8/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2rtcc_8c_af79dca3fe51ab983cf52d238e762e2d8}
+
+
+Definition at line 129 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable(), R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse(), and R\-T\-C\-C\-\_\-\-Shutdown().
+
+
+\begin{DoxyCode}
+130 \{
+131     \hyperlink{p8_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{RTCC\_SetWriteEnable}();
+132     RTCCFGbits.RTCEN = 0;
+133     \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{RTCC\_SetWriteDisable}();
+134 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2rtcc_8c_a4e406886a6756df9694c406b5a05cf08}{\index{p8/pinguino/core/rtcc.\-c@{p8/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Enable@{R\-T\-C\-C\-\_\-\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Enable@{R\-T\-C\-C\-\_\-\-Enable}!p8/pinguino/core/rtcc.c@{p8/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2rtcc_8c_a4e406886a6756df9694c406b5a05cf08}
+
+
+Definition at line 116 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-init(), R\-T\-C\-C\-\_\-\-Open(), R\-T\-C\-C\-\_\-\-Set\-Alarm\-Enable(), and R\-T\-C\-C\-\_\-\-Set\-Alarm\-Initial\-Pulse().
+
+
+\begin{DoxyCode}
+117 \{
+118     \hyperlink{p8_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{RTCC\_SetWriteEnable}();
+119     RTCCFGbits.RTCEN = 1;
+120     \hyperlink{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{RTCC\_SetWriteDisable}();
+121     PIR3bits.RTCCIF = 0;
+122 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2rtcc_8c_aa75ccd698f2ac8d3775a6e067d034449}{\index{p8/pinguino/core/rtcc.\-c@{p8/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Is\-Enable@{R\-T\-C\-C\-\_\-\-Is\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Is\-Enable@{R\-T\-C\-C\-\_\-\-Is\-Enable}!p8/pinguino/core/rtcc.c@{p8/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Is\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} R\-T\-C\-C\-\_\-\-Is\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2rtcc_8c_aa75ccd698f2ac8d3775a6e067d034449}
+
+
+Definition at line 140 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+141 \{
+142     \textcolor{keywordflow}{return} RTCCFGbits.RTCEN != 0;
+143 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2rtcc_8c_a6716490524c6acb7798eedf6e134aa10}{\index{p8/pinguino/core/rtcc.\-c@{p8/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Is\-Write\-Enable@{R\-T\-C\-C\-\_\-\-Is\-Write\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Is\-Write\-Enable@{R\-T\-C\-C\-\_\-\-Is\-Write\-Enable}!p8/pinguino/core/rtcc.c@{p8/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Is\-Write\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} R\-T\-C\-C\-\_\-\-Is\-Write\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2rtcc_8c_a6716490524c6acb7798eedf6e134aa10}
+
+
+Definition at line 105 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+106 \{
+107     \textcolor{keywordflow}{return} RTCCFGbits.RTCWREN != 0;
+108 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}{\index{p8/pinguino/core/rtcc.\-c@{p8/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Write\-Disable@{R\-T\-C\-C\-\_\-\-Set\-Write\-Disable}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Write\-Disable@{R\-T\-C\-C\-\_\-\-Set\-Write\-Disable}!p8/pinguino/core/rtcc.c@{p8/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Write\-Disable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Write\-Disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2rtcc_8c_ae3d118337a0126bd0444631261c4b936}
+
+
+Definition at line 92 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Disable(), R\-T\-C\-C\-\_\-\-Enable(), R\-T\-C\-C\-\_\-init(), R\-T\-C\-C\-\_\-\-Open(), R\-T\-C\-C\-\_\-\-Set\-Calibration(), R\-T\-C\-C\-\_\-\-Set\-Date(), R\-T\-C\-C\-\_\-\-Set\-Time(), R\-T\-C\-C\-\_\-\-Set\-Time\-Date(), and R\-T\-C\-C\-\_\-\-Shutdown().
+
+
+\begin{DoxyCode}
+93 \{
+94 \textcolor{comment}{//    SystemUnlock();}
+95     EECON2 = 0x55;          \textcolor{comment}{// magic sequence}
+96     EECON2 = 0xAA;
+97     RTCCFGbits.RTCWREN = 0; \textcolor{comment}{// disable write}
+98 \textcolor{comment}{//    SystemLock();}
+99 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}{\index{p8/pinguino/core/rtcc.\-c@{p8/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Set\-Write\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Write\-Enable}}
+\index{R\-T\-C\-C\-\_\-\-Set\-Write\-Enable@{R\-T\-C\-C\-\_\-\-Set\-Write\-Enable}!p8/pinguino/core/rtcc.c@{p8/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Set\-Write\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Set\-Write\-Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2rtcc_8c_aa64bf17e80955df5d18c4368e17f413e}
+
+
+Definition at line 83 of file rtcc.\-c.
+
+
+
+Referenced by R\-T\-C\-C\-\_\-\-Disable(), R\-T\-C\-C\-\_\-\-Enable(), R\-T\-C\-C\-\_\-\-Set\-Calibration(), R\-T\-C\-C\-\_\-\-Set\-Date(), R\-T\-C\-C\-\_\-\-Set\-Time(), and R\-T\-C\-C\-\_\-\-Set\-Time\-Date().
+
+
+\begin{DoxyCode}
+84 \{
+85 \textcolor{comment}{//    SystemUnlock();}
+86     EECON2 = 0x55;          \textcolor{comment}{// magic sequence}
+87     EECON2 = 0xAA;
+88     RTCCFGbits.RTCWREN = 1; \textcolor{comment}{// enable write}
+89 \textcolor{comment}{//    SystemLock();}
+90 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2rtcc_8c_ad59614d588c39390ac7a3fdf4925eb36}{\index{p8/pinguino/core/rtcc.\-c@{p8/pinguino/core/rtcc.\-c}!R\-T\-C\-C\-\_\-\-Shutdown@{R\-T\-C\-C\-\_\-\-Shutdown}}
+\index{R\-T\-C\-C\-\_\-\-Shutdown@{R\-T\-C\-C\-\_\-\-Shutdown}!p8/pinguino/core/rtcc.c@{p8/pinguino/core/rtcc.\-c}}
+\subsubsection[{R\-T\-C\-C\-\_\-\-Shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void R\-T\-C\-C\-\_\-\-Shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2rtcc_8c_ad59614d588c39390ac7a3fdf4925eb36}
+
+
+Definition at line 153 of file rtcc.\-c.
+
+
+\begin{DoxyCode}
+154 \{
+155     \hyperlink{p8_2pinguino_2core_2rtcc_8c_af79dca3fe51ab983cf52d238e762e2d8}{RTCC\_Disable}();
+156     PIR3bits.RTCCIF = 0;
+157 \}
+\end{DoxyCode}

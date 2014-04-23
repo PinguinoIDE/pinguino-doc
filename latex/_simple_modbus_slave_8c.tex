@@ -1,0 +1,751 @@
+\hypertarget{_simple_modbus_slave_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-Simple\-Modbus\-Slave.c File Reference}
+\label{_simple_modbus_slave_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-Simple\-Modbus\-Slave.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-Simple\-Modbus\-Slave.\-c}}
+}
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$delay.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_simple_modbus_slave_8c_a77375f8b5fd613a95866d4d4a0c8df89}{\-\_\-\-\_\-\-M\-O\-D\-B\-U\-S\-S\-\_\-\-C}
+\item 
+\#define \hyperlink{_simple_modbus_slave_8c_a221290ca5462952fc70496b8ff7e745f}{M\-O\-D\-B\-U\-S\-S\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~128
+\item 
+\#define \hyperlink{_simple_modbus_slave_8c_a191a1c29afece775727c5c4f8062f44e}{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1}~1
+\item 
+\#define \hyperlink{_simple_modbus_slave_8c_a9a24b03288aeb267aa4bd9c642e44b4e}{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2}~2
+\item 
+\#define \hyperlink{_simple_modbus_slave_8c_a8e47901c67f6bc376748c7503a76113c}{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_simple_modbus_slave_8c_a6e65875bae114ef192d1bfeede906ddb}{modbuss\-\_\-exception\-Response} (\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$Mod\-Bus\-S\-\_\-\-Data, unsigned char exception)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{_simple_modbus_slave_8c_ac66677b919cb28d35eb037b3a1ab0d98}{modbuss\-\_\-calculate\-C\-R\-C} (\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$Mod\-Bus\-S\-\_\-\-Data, unsigned char buffer\-Size)
+\item 
+void \hyperlink{_simple_modbus_slave_8c_a0de90afc7744c50896a730a18e1f0595}{modbuss\-\_\-send\-Packet} (\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$Mod\-Bus\-S\-\_\-\-Data, unsigned char buffer\-Size)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_simple_modbus_slave_8c_ad39d1b95e9401d6ba75c998782a87869}{modbuss\-\_\-\-Serial\-Clear\-Rx\-Error} (\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$Mod\-Bus\-S\-\_\-\-Data)
+\item 
+char \hyperlink{_simple_modbus_slave_8c_a76af03942fd670720b8b03f6bef807ca}{modbuss\-\_\-\-Serial\-Available} (\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$Mod\-Bus\-S\-\_\-\-Data)
+\item 
+char \hyperlink{_simple_modbus_slave_8c_a008d3beef82cb9885da551409199e286}{modbuss\-\_\-\-Serial\-Read} (\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$Mod\-Bus\-S\-\_\-\-Data)
+\item 
+int \hyperlink{_simple_modbus_slave_8c_a82ec6816638027a4a29bb68a533a28b0}{modbuss\-\_\-\-Serial\-Begin} (\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$Mod\-Bus\-S\-\_\-\-Data, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} speed)
+\item 
+void \hyperlink{_simple_modbus_slave_8c_ae69ecf50f936f9f546bbfac1518855e4}{modbuss\-\_\-\-Serial\-Write} (\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$Mod\-Bus\-S\-\_\-\-Data, char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{_simple_modbus_slave_8c_ac2f89a55815f5dd1a129b9b804de36b0}{modbuss\-\_\-\-Serial\-Flush} (\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$Mod\-Bus\-S\-\_\-\-Data)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{_simple_modbus_slave_8c_ad001cb3f8c610f4af959060662fa85a7}{modbuss\-\_\-update} (\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$Mod\-Bus\-S\-\_\-\-Data)
+\item 
+void \hyperlink{_simple_modbus_slave_8c_ab023aa2f8eb7f3ac3f0912a9d6dca4f4}{modbuss\-\_\-configure} (\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a}{M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$Mod\-Bus\-S\-\_\-\-Data, char port, long baud, unsigned char \-\_\-slave\-I\-D, unsigned char \-\_\-\-Tx\-Enable\-Pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \-\_\-holding\-Regs\-Size, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} $\ast$\-\_\-regs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_simple_modbus_slave_8c_a77375f8b5fd613a95866d4d4a0c8df89}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!\-\_\-\-\_\-\-M\-O\-D\-B\-U\-S\-S\-\_\-\-C@{\-\_\-\-\_\-\-M\-O\-D\-B\-U\-S\-S\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-M\-O\-D\-B\-U\-S\-S\-\_\-\-C@{\-\_\-\-\_\-\-M\-O\-D\-B\-U\-S\-S\-\_\-\-C}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-M\-O\-D\-B\-U\-S\-S\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-M\-O\-D\-B\-U\-S\-S\-\_\-\-C}}\label{_simple_modbus_slave_8c_a77375f8b5fd613a95866d4d4a0c8df89}
+
+
+Definition at line 71 of file Simple\-Modbus\-Slave.\-c.
+
+\hypertarget{_simple_modbus_slave_8c_a221290ca5462952fc70496b8ff7e745f}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!M\-O\-D\-B\-U\-S\-S\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{M\-O\-D\-B\-U\-S\-S\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{M\-O\-D\-B\-U\-S\-S\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{M\-O\-D\-B\-U\-S\-S\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{M\-O\-D\-B\-U\-S\-S\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-O\-D\-B\-U\-S\-S\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E~128}}\label{_simple_modbus_slave_8c_a221290ca5462952fc70496b8ff7e745f}
+
+
+Definition at line 78 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+Referenced by modbuss\-\_\-update().
+
+\hypertarget{_simple_modbus_slave_8c_a191a1c29afece775727c5c4f8062f44e}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1@{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1}}
+\index{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1@{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1~1}}\label{_simple_modbus_slave_8c_a191a1c29afece775727c5c4f8062f44e}
+
+
+Definition at line 80 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+Referenced by modbuss\-\_\-\-Serial\-Available(), modbuss\-\_\-\-Serial\-Begin(), modbuss\-\_\-\-Serial\-Clear\-Rx\-Error(), modbuss\-\_\-\-Serial\-Flush(), modbuss\-\_\-\-Serial\-Read(), and modbuss\-\_\-\-Serial\-Write().
+
+\hypertarget{_simple_modbus_slave_8c_a9a24b03288aeb267aa4bd9c642e44b4e}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2@{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2}}
+\index{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2@{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2~2}}\label{_simple_modbus_slave_8c_a9a24b03288aeb267aa4bd9c642e44b4e}
+
+
+Definition at line 81 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+Referenced by modbuss\-\_\-\-Serial\-Available(), modbuss\-\_\-\-Serial\-Begin(), modbuss\-\_\-\-Serial\-Clear\-Rx\-Error(), modbuss\-\_\-\-Serial\-Flush(), modbuss\-\_\-\-Serial\-Read(), and modbuss\-\_\-\-Serial\-Write().
+
+\hypertarget{_simple_modbus_slave_8c_a8e47901c67f6bc376748c7503a76113c}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3@{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3}}
+\index{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3@{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3~3}}\label{_simple_modbus_slave_8c_a8e47901c67f6bc376748c7503a76113c}
+
+
+Definition at line 82 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+Referenced by modbuss\-\_\-\-Serial\-Available(), modbuss\-\_\-\-Serial\-Begin(), modbuss\-\_\-\-Serial\-Clear\-Rx\-Error(), modbuss\-\_\-\-Serial\-Flush(), modbuss\-\_\-\-Serial\-Read(), and modbuss\-\_\-\-Serial\-Write().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_simple_modbus_slave_8c_ac66677b919cb28d35eb037b3a1ab0d98}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!modbuss\-\_\-calculate\-C\-R\-C@{modbuss\-\_\-calculate\-C\-R\-C}}
+\index{modbuss\-\_\-calculate\-C\-R\-C@{modbuss\-\_\-calculate\-C\-R\-C}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{modbuss\-\_\-calculate\-C\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} modbuss\-\_\-calculate\-C\-R\-C (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$}]{Mod\-Bus\-S\-\_\-\-Data, }
+\item[{unsigned char}]{buffer\-Size}
+\end{DoxyParamCaption}
+)}}\label{_simple_modbus_slave_8c_ac66677b919cb28d35eb037b3a1ab0d98}
+
+
+Definition at line 496 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+References M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::frame.
+
+
+
+Referenced by modbuss\-\_\-exception\-Response(), and modbuss\-\_\-update().
+
+
+\begin{DoxyCode}
+497 \{
+498  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} temp, temp2, flag;
+499  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} i;
+500  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} j;
+501  temp = 0xFFFF;
+502  \textcolor{keywordflow}{for} (i = 0; i < bufferSize; i++)
+503   \{
+504    temp = temp ^ ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[i];
+505    \textcolor{keywordflow}{for} (j = 1; j <= 8; j++)
+506     \{
+507      flag = temp & 0x0001;
+508      temp >>= 1;
+509      \textcolor{keywordflow}{if} (flag)
+510       temp ^= 0xA001;
+511     \}
+512   \}
+513  \textcolor{comment}{// Reverse byte order. }
+514  temp2 = temp >> 8;
+515  temp = (temp << 8) | temp2;
+516  temp &= 0xFFFF; 
+517  \textcolor{comment}{// the returned value is already swapped}
+518  \textcolor{comment}{// crcLo byte is first & crcHi byte is last}
+519  \textcolor{keywordflow}{return} temp; 
+520 \}
+\end{DoxyCode}
+\hypertarget{_simple_modbus_slave_8c_ab023aa2f8eb7f3ac3f0912a9d6dca4f4}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!modbuss\-\_\-configure@{modbuss\-\_\-configure}}
+\index{modbuss\-\_\-configure@{modbuss\-\_\-configure}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{modbuss\-\_\-configure}]{\setlength{\rightskip}{0pt plus 5cm}void modbuss\-\_\-configure (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$}]{Mod\-Bus\-S\-\_\-\-Data, }
+\item[{char}]{port, }
+\item[{long}]{baud, }
+\item[{unsigned char}]{\-\_\-slave\-I\-D, }
+\item[{unsigned char}]{\-\_\-\-Tx\-Enable\-Pin, }
+\item[{{\bf u16}}]{\-\_\-holding\-Regs\-Size, }
+\item[{{\bf u16} $\ast$}]{\-\_\-regs}
+\end{DoxyParamCaption}
+)}}\label{_simple_modbus_slave_8c_ab023aa2f8eb7f3ac3f0912a9d6dca4f4}
+
+
+Definition at line 458 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+References digitalwrite(), M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::error\-Count, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::holding\-Regs\-Size, L\-O\-W, modbuss\-\_\-\-Serial\-Begin(), O\-U\-T\-P\-U\-T, pinmode(), M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::port, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::regs, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::slave\-I\-D, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::\-T1\-\_\-5, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::\-T3\-\_\-5, and M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::\-Tx\-Enable\-Pin.
+
+
+\begin{DoxyCode}
+461 \{
+462  ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ac89e2c19de60b8f23bdd3789b2af094d}{port} = port;
+463  ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a4449d3474c101465e5039718e8130fce}{slaveID} = \_slaveID;
+464  \hyperlink{_simple_modbus_slave_8c_a82ec6816638027a4a29bb68a533a28b0}{modbuss\_SerialBegin}(ModBusS\_Data,baud);
+465  ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_afbecce71fe40843114ff8c05dc8236a3}{holdingRegsSize} = \_holdingRegsSize; 
+466  ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a0c404e2fd21adae90a9b7df0526e835e}{regs} = \_regs;
+467  ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ad048cd33a540516a2e4ec649694e2f1a}{TxEnablePin} = \_TxEnablePin; 
+468  \textcolor{keywordflow}{if} (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ad048cd33a540516a2e4ec649694e2f1a}{TxEnablePin} > 0)
+469   \{
+470    \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ad048cd33a540516a2e4ec649694e2f1a}{TxEnablePin}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+471    \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ad048cd33a540516a2e4ec649694e2f1a}{TxEnablePin}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+472   \}
+473  ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a948d8d10cfc452655af4092061d7ac97}{errorCount} = 0; \textcolor{comment}{// initialize errorCount}
+474     
+475  \textcolor{comment}{// Modbus states that a baud rate higher than 19200 must use a fixed 750 us }
+476  \textcolor{comment}{// for inter character time out and 1.75 ms for a ModBusS\_Data->frame delay for baud rates}
+477  \textcolor{comment}{// below 19200 the timing is more critical and has to be calculated.}
+478  \textcolor{comment}{// E.g. 9600 baud in a 10 bit packet is 960 characters per second}
+479  \textcolor{comment}{// In milliseconds this will be 960characters per 1000ms. So for 1 character}
+480  \textcolor{comment}{// 1000ms/960characters is 1.04167ms per character and finally modbus states}
+481  \textcolor{comment}{// an inter-character must be 1.5T or 1.5 times longer than a character. Thus}
+482  \textcolor{comment}{// 1.5T = 1.04167ms * 1.5 = 1.5625ms. A ModBusS\_Data->frame delay is 3.5T.}
+483     
+484  \textcolor{keywordflow}{if} (baud > 19200)
+485   \{
+486    ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a958e218469d86d7b186a26e7c03ddcd9}{T1\_5} = 750; 
+487    ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a447e609a8854bfac7df24c9fef39dfc7}{T3\_5} = 1750; 
+488   \}
+489  \textcolor{keywordflow}{else} 
+490   \{
+491    ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a958e218469d86d7b186a26e7c03ddcd9}{T1\_5} = 15000000/baud; \textcolor{comment}{// 1T * 1.5 = T1.5}
+492    ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a447e609a8854bfac7df24c9fef39dfc7}{T3\_5} = 35000000/baud; \textcolor{comment}{// 1T * 3.5 = T3.5}
+493   \}
+494 \}   
+\end{DoxyCode}
+\hypertarget{_simple_modbus_slave_8c_a6e65875bae114ef192d1bfeede906ddb}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!modbuss\-\_\-exception\-Response@{modbuss\-\_\-exception\-Response}}
+\index{modbuss\-\_\-exception\-Response@{modbuss\-\_\-exception\-Response}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{modbuss\-\_\-exception\-Response}]{\setlength{\rightskip}{0pt plus 5cm}void modbuss\-\_\-exception\-Response (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$}]{Mod\-Bus\-S\-\_\-\-Data, }
+\item[{unsigned char}]{exception}
+\end{DoxyParamCaption}
+)}}\label{_simple_modbus_slave_8c_a6e65875bae114ef192d1bfeede906ddb}
+
+
+Definition at line 438 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+References M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::broadcast\-Flag, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::error\-Count, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::frame, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::function, modbuss\-\_\-calculate\-C\-R\-C(), modbuss\-\_\-send\-Packet(), and M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::slave\-I\-D.
+
+
+
+Referenced by modbuss\-\_\-update().
+
+
+\begin{DoxyCode}
+439 \{
+440  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} crc16;
+441  \textcolor{comment}{// each call to modbuss\_exceptionResponse() will increment the errorCount}
+442  ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a948d8d10cfc452655af4092061d7ac97}{errorCount}++; 
+443  \textcolor{keywordflow}{if} (!ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a81875e8eaabbfa2c8076e6115ef1202b}{broadcastFlag}) \textcolor{comment}{// don't respond if its a broadcast message}
+444   \{
+445    ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[0] = ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a4449d3474c101465e5039718e8130fce}{slaveID};
+446    ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[1] = (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_aa975eee0843aaf71c1023b79871849b9}{function} | 0x80); \textcolor{comment}{// set MSB bit high, informs the
+       master of an exception}
+447    ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[2] = exception;
+448    crc16 = \hyperlink{_simple_modbus_slave_8c_ac66677b919cb28d35eb037b3a1ab0d98}{modbuss\_calculateCRC}(ModBusS\_Data,3); \textcolor{comment}{// ID, function|0x80, exception code}
+449    ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[3] = crc16 >> 8;
+450    ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[4] = crc16 & 0xFF;
+451    \textcolor{comment}{// exception response is always 5 bytes }
+452    \textcolor{comment}{// ID, function + 0x80, exception code, 2 bytes crc}
+453    \hyperlink{_simple_modbus_slave_8c_a0de90afc7744c50896a730a18e1f0595}{modbuss\_sendPacket}(ModBusS\_Data,5); 
+454   \}
+455 \}
+\end{DoxyCode}
+\hypertarget{_simple_modbus_slave_8c_a0de90afc7744c50896a730a18e1f0595}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!modbuss\-\_\-send\-Packet@{modbuss\-\_\-send\-Packet}}
+\index{modbuss\-\_\-send\-Packet@{modbuss\-\_\-send\-Packet}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{modbuss\-\_\-send\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}void modbuss\-\_\-send\-Packet (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$}]{Mod\-Bus\-S\-\_\-\-Data, }
+\item[{unsigned char}]{buffer\-Size}
+\end{DoxyParamCaption}
+)}}\label{_simple_modbus_slave_8c_a0de90afc7744c50896a730a18e1f0595}
+
+
+Definition at line 522 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+References Delayus(), digitalwrite(), M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::frame, H\-I\-G\-H, L\-O\-W, modbuss\-\_\-\-Serial\-Flush(), modbuss\-\_\-\-Serial\-Write(), M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::\-T3\-\_\-5, and M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::\-Tx\-Enable\-Pin.
+
+
+
+Referenced by modbuss\-\_\-exception\-Response(), and modbuss\-\_\-update().
+
+
+\begin{DoxyCode}
+523 \{
+524  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} i;
+525  \textcolor{keywordflow}{if} (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ad048cd33a540516a2e4ec649694e2f1a}{TxEnablePin} > 0)
+526   \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ad048cd33a540516a2e4ec649694e2f1a}{TxEnablePin}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+527         
+528  \textcolor{keywordflow}{for} (i = 0; i < bufferSize; i++)
+529  \hyperlink{_simple_modbus_slave_8c_ae69ecf50f936f9f546bbfac1518855e4}{modbuss\_SerialWrite}(ModBusS\_Data,ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[i]);
+530         
+531  \hyperlink{_simple_modbus_slave_8c_ac2f89a55815f5dd1a129b9b804de36b0}{modbuss\_SerialFlush}(ModBusS\_Data);
+532     
+533  \textcolor{comment}{// allow a frame delay to indicate end of transmission}
+534  \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a447e609a8854bfac7df24c9fef39dfc7}{T3\_5}); 
+535     
+536  \textcolor{keywordflow}{if} (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ad048cd33a540516a2e4ec649694e2f1a}{TxEnablePin} > 0)
+537   \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ad048cd33a540516a2e4ec649694e2f1a}{TxEnablePin}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+538 \}
+\end{DoxyCode}
+\hypertarget{_simple_modbus_slave_8c_a76af03942fd670720b8b03f6bef807ca}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!modbuss\-\_\-\-Serial\-Available@{modbuss\-\_\-\-Serial\-Available}}
+\index{modbuss\-\_\-\-Serial\-Available@{modbuss\-\_\-\-Serial\-Available}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{modbuss\-\_\-\-Serial\-Available}]{\setlength{\rightskip}{0pt plus 5cm}char modbuss\-\_\-\-Serial\-Available (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$}]{Mod\-Bus\-S\-\_\-\-Data}
+\end{DoxyParamCaption}
+)}}\label{_simple_modbus_slave_8c_a76af03942fd670720b8b03f6bef807ca}
+
+
+Definition at line 148 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+References M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::port, serial1available(), serial2available(), and serial3available().
+
+
+
+Referenced by modbuss\-\_\-update().
+
+
+\begin{DoxyCode}
+149 \{
+150  \textcolor{keywordflow}{switch} (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ac89e2c19de60b8f23bdd3789b2af094d}{port})
+151   \{
+152 \textcolor{preprocessor}{#ifdef MODBUSS\_SER1\_OK}
+153 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a191a1c29afece775727c5c4f8062f44e}{MODBUSS\_SER1}:
+154     \textcolor{keywordflow}{return}(\hyperlink{pinguinoserial1_8c_a89c6700ad36db66f8fb5569cb828c772}{serial1available}());
+155     \textcolor{keywordflow}{break};
+156 \textcolor{preprocessor}{#endif}
+157 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER2\_OK}
+158 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a9a24b03288aeb267aa4bd9c642e44b4e}{MODBUSS\_SER2}:
+159     \textcolor{keywordflow}{return}(\hyperlink{pinguinoserial2_8c_ac321b2db1da637e096ed310f2ae8e099}{serial2available}());
+160     \textcolor{keywordflow}{break};
+161 \textcolor{preprocessor}{#endif}
+162 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER3\_OK}
+163 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a8e47901c67f6bc376748c7503a76113c}{MODBUSS\_SER3}:
+164     \textcolor{keywordflow}{return}(\hyperlink{pinguinoserial3_8c_ae6b915308bc4a0796de009821b063cb5}{serial3available}());
+165     \textcolor{keywordflow}{break};
+166 \textcolor{preprocessor}{#endif}
+167 \textcolor{preprocessor}{}   \textcolor{keywordflow}{default}:
+168     \textcolor{keywordflow}{return}(0);
+169     \textcolor{keywordflow}{break};
+170   \}
+171 \}
+\end{DoxyCode}
+\hypertarget{_simple_modbus_slave_8c_a82ec6816638027a4a29bb68a533a28b0}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!modbuss\-\_\-\-Serial\-Begin@{modbuss\-\_\-\-Serial\-Begin}}
+\index{modbuss\-\_\-\-Serial\-Begin@{modbuss\-\_\-\-Serial\-Begin}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{modbuss\-\_\-\-Serial\-Begin}]{\setlength{\rightskip}{0pt plus 5cm}int modbuss\-\_\-\-Serial\-Begin (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$}]{Mod\-Bus\-S\-\_\-\-Data, }
+\item[{{\bf u32}}]{speed}
+\end{DoxyParamCaption}
+)}}\label{_simple_modbus_slave_8c_a82ec6816638027a4a29bb68a533a28b0}
+
+
+Definition at line 200 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+References M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::port, serial1init(), serial2init(), and serial3init().
+
+
+
+Referenced by modbuss\-\_\-configure().
+
+
+\begin{DoxyCode}
+201 \{
+202  \textcolor{keywordflow}{switch} (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ac89e2c19de60b8f23bdd3789b2af094d}{port})
+203   \{
+204 \textcolor{preprocessor}{#ifdef MODBUSS\_SER1\_OK}
+205 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a191a1c29afece775727c5c4f8062f44e}{MODBUSS\_SER1}:
+206     \hyperlink{pinguinoserial1_8c_ae3749e4cb27c2d4db0f4eb843a66149f}{serial1init}(speed);
+207     \textcolor{keywordflow}{return} (1);
+208     \textcolor{keywordflow}{break};
+209 \textcolor{preprocessor}{#endif}
+210 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER2\_OK}
+211 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a9a24b03288aeb267aa4bd9c642e44b4e}{MODBUSS\_SER2}:
+212     \hyperlink{pinguinoserial2_8c_a7c1ae73f9b470de097965f144a8d05dd}{serial2init}(speed);
+213     \textcolor{keywordflow}{return} (1);
+214     \textcolor{keywordflow}{break};
+215 \textcolor{preprocessor}{#endif}
+216 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER3\_OK}
+217 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a8e47901c67f6bc376748c7503a76113c}{MODBUSS\_SER3}:
+218     \hyperlink{pinguinoserial3_8c_a602c2a1c75147d690e1e5062eea69aad}{serial3init}(speed);
+219     \textcolor{keywordflow}{return} (1);
+220     \textcolor{keywordflow}{break};
+221 \textcolor{preprocessor}{#endif}
+222 \textcolor{preprocessor}{}   \textcolor{keywordflow}{default}:
+223     \textcolor{keywordflow}{return} (-1);
+224     \textcolor{keywordflow}{break};
+225   \}
+226 \}
+\end{DoxyCode}
+\hypertarget{_simple_modbus_slave_8c_ad39d1b95e9401d6ba75c998782a87869}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!modbuss\-\_\-\-Serial\-Clear\-Rx\-Error@{modbuss\-\_\-\-Serial\-Clear\-Rx\-Error}}
+\index{modbuss\-\_\-\-Serial\-Clear\-Rx\-Error@{modbuss\-\_\-\-Serial\-Clear\-Rx\-Error}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{modbuss\-\_\-\-Serial\-Clear\-Rx\-Error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} modbuss\-\_\-\-Serial\-Clear\-Rx\-Error (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$}]{Mod\-Bus\-S\-\_\-\-Data}
+\end{DoxyParamCaption}
+)}}\label{_simple_modbus_slave_8c_ad39d1b95e9401d6ba75c998782a87869}
+
+
+Definition at line 122 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+References F\-A\-L\-S\-E, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::port, serial1clearrxerror(), serial2clearrxerror(), and serial3clearrxerror().
+
+
+
+Referenced by modbuss\-\_\-update().
+
+
+\begin{DoxyCode}
+123 \{
+124  \textcolor{keywordflow}{switch} (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ac89e2c19de60b8f23bdd3789b2af094d}{port})
+125   \{
+126 \textcolor{preprocessor}{#ifdef MODBUSS\_SER1\_OK}
+127 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a191a1c29afece775727c5c4f8062f44e}{MODBUSS\_SER1}:
+128     \textcolor{keywordflow}{return}(\hyperlink{pinguinoserial1_8c_ad4a429bc6d66722b1a849899c6a8c6b1}{serial1clearrxerror}());
+129     \textcolor{keywordflow}{break};
+130 \textcolor{preprocessor}{#endif}
+131 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER2\_OK}
+132 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a9a24b03288aeb267aa4bd9c642e44b4e}{MODBUSS\_SER2}:
+133     \textcolor{keywordflow}{return}(\hyperlink{pinguinoserial2_8c_a18dfc0779f3e51240925a61b588a881d}{serial2clearrxerror}());
+134     \textcolor{keywordflow}{break};
+135 \textcolor{preprocessor}{#endif}
+136 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER3\_OK}
+137 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a8e47901c67f6bc376748c7503a76113c}{MODBUSS\_SER3}:
+138     \textcolor{keywordflow}{return}(\hyperlink{pinguinoserial3_8c_ad8344ea92a25e468fcc857c9b370e0a2}{serial3clearrxerror}());
+139     \textcolor{keywordflow}{break};
+140 \textcolor{preprocessor}{#endif}
+141 \textcolor{preprocessor}{}   \textcolor{keywordflow}{default}:
+142     \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+143     \textcolor{keywordflow}{break};
+144   \}
+145 \}
+\end{DoxyCode}
+\hypertarget{_simple_modbus_slave_8c_ac2f89a55815f5dd1a129b9b804de36b0}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!modbuss\-\_\-\-Serial\-Flush@{modbuss\-\_\-\-Serial\-Flush}}
+\index{modbuss\-\_\-\-Serial\-Flush@{modbuss\-\_\-\-Serial\-Flush}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{modbuss\-\_\-\-Serial\-Flush}]{\setlength{\rightskip}{0pt plus 5cm}void modbuss\-\_\-\-Serial\-Flush (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$}]{Mod\-Bus\-S\-\_\-\-Data}
+\end{DoxyParamCaption}
+)}}\label{_simple_modbus_slave_8c_ac2f89a55815f5dd1a129b9b804de36b0}
+
+
+Definition at line 254 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+References M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::port, serial1flush(), serial2flush(), and serial3flush().
+
+
+
+Referenced by modbuss\-\_\-send\-Packet().
+
+
+\begin{DoxyCode}
+255 \{
+256  \textcolor{keywordflow}{switch} (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ac89e2c19de60b8f23bdd3789b2af094d}{port})
+257   \{
+258 \textcolor{preprocessor}{#ifdef MODBUSS\_SER1\_OK}
+259 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a191a1c29afece775727c5c4f8062f44e}{MODBUSS\_SER1}:
+260     \hyperlink{pinguinoserial1_8c_a5bff5322af7e08535428ac4e104c5bd6}{serial1flush}();
+261     \textcolor{keywordflow}{break};
+262 \textcolor{preprocessor}{#endif}
+263 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER2\_OK}
+264 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a9a24b03288aeb267aa4bd9c642e44b4e}{MODBUSS\_SER2}:
+265     \hyperlink{pinguinoserial2_8c_a52e598378c3e0f1935762e62fc14ecdc}{serial2flush}();
+266     \textcolor{keywordflow}{break};
+267 \textcolor{preprocessor}{#endif}
+268 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER3\_OK}
+269 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a8e47901c67f6bc376748c7503a76113c}{MODBUSS\_SER3}:
+270     \hyperlink{pinguinoserial3_8c_a38fae151383aeeb6e8b0bbcd637fff1b}{serial3flush}();
+271     \textcolor{keywordflow}{break};
+272 \textcolor{preprocessor}{#endif}
+273 \textcolor{preprocessor}{}   \textcolor{keywordflow}{default}:
+274     \textcolor{keywordflow}{break};
+275   \}
+276 \}
+\end{DoxyCode}
+\hypertarget{_simple_modbus_slave_8c_a008d3beef82cb9885da551409199e286}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!modbuss\-\_\-\-Serial\-Read@{modbuss\-\_\-\-Serial\-Read}}
+\index{modbuss\-\_\-\-Serial\-Read@{modbuss\-\_\-\-Serial\-Read}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{modbuss\-\_\-\-Serial\-Read}]{\setlength{\rightskip}{0pt plus 5cm}char modbuss\-\_\-\-Serial\-Read (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$}]{Mod\-Bus\-S\-\_\-\-Data}
+\end{DoxyParamCaption}
+)}}\label{_simple_modbus_slave_8c_a008d3beef82cb9885da551409199e286}
+
+
+Definition at line 174 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+References M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::port, serial1read(), serial2read(), and serial3read().
+
+
+
+Referenced by modbuss\-\_\-update().
+
+
+\begin{DoxyCode}
+175 \{
+176  \textcolor{keywordflow}{switch} (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ac89e2c19de60b8f23bdd3789b2af094d}{port})
+177   \{
+178 \textcolor{preprocessor}{#ifdef MODBUSS\_SER1\_OK}
+179 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a191a1c29afece775727c5c4f8062f44e}{MODBUSS\_SER1}:
+180     \textcolor{keywordflow}{return}(\hyperlink{pinguinoserial1_8c_a9fccd44c312d5da81b6e3655c106786f}{serial1read}());
+181     \textcolor{keywordflow}{break};
+182 \textcolor{preprocessor}{#endif}
+183 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER2\_OK}
+184 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a9a24b03288aeb267aa4bd9c642e44b4e}{MODBUSS\_SER2}:
+185     \textcolor{keywordflow}{return}(\hyperlink{pinguinoserial2_8c_a2c61d8d4175acf8a053134c70be4f144}{serial2read}());
+186     \textcolor{keywordflow}{break};
+187 \textcolor{preprocessor}{#endif}
+188 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER3\_OK}
+189 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a8e47901c67f6bc376748c7503a76113c}{MODBUSS\_SER3}:
+190     \textcolor{keywordflow}{return}(\hyperlink{pinguinoserial3_8c_ae9e723166ddfe3262013f4bbb2f356d8}{serial3read}());
+191     \textcolor{keywordflow}{break};
+192 \textcolor{preprocessor}{#endif}
+193 \textcolor{preprocessor}{}   \textcolor{keywordflow}{default}:
+194     \textcolor{keywordflow}{return}(0);
+195     \textcolor{keywordflow}{break};
+196   \}
+197 \}
+\end{DoxyCode}
+\hypertarget{_simple_modbus_slave_8c_ae69ecf50f936f9f546bbfac1518855e4}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!modbuss\-\_\-\-Serial\-Write@{modbuss\-\_\-\-Serial\-Write}}
+\index{modbuss\-\_\-\-Serial\-Write@{modbuss\-\_\-\-Serial\-Write}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{modbuss\-\_\-\-Serial\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void modbuss\-\_\-\-Serial\-Write (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$}]{Mod\-Bus\-S\-\_\-\-Data, }
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{_simple_modbus_slave_8c_ae69ecf50f936f9f546bbfac1518855e4}
+
+
+Definition at line 229 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+References M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R1, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R2, M\-O\-D\-B\-U\-S\-S\-\_\-\-S\-E\-R3, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::port, serial1write(), serial2write(), and serial3write().
+
+
+
+Referenced by modbuss\-\_\-send\-Packet().
+
+
+\begin{DoxyCode}
+230 \{
+231  \textcolor{keywordflow}{switch} (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_ac89e2c19de60b8f23bdd3789b2af094d}{port})
+232   \{
+233 \textcolor{preprocessor}{#ifdef MODBUSS\_SER1\_OK}
+234 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a191a1c29afece775727c5c4f8062f44e}{MODBUSS\_SER1}:
+235     \hyperlink{pinguinoserial1_8c_a6711c659926592dbf6aa6e170a5987db}{serial1write}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+236     \textcolor{keywordflow}{break};
+237 \textcolor{preprocessor}{#endif}
+238 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER2\_OK}
+239 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a9a24b03288aeb267aa4bd9c642e44b4e}{MODBUSS\_SER2}:
+240     \hyperlink{pinguinoserial2_8c_ab7dbd4dde7cdc62a89c3b9b44873f120}{serial2write}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+241     \textcolor{keywordflow}{break};
+242 \textcolor{preprocessor}{#endif}
+243 \textcolor{preprocessor}{}\textcolor{preprocessor}{#ifdef MODBUSS\_SER3\_OK}
+244 \textcolor{preprocessor}{}   \textcolor{keywordflow}{case} \hyperlink{_simple_modbus_slave_8c_a8e47901c67f6bc376748c7503a76113c}{MODBUSS\_SER3}:
+245     \hyperlink{pinguinoserial3_8c_a731ad14ccdf37bb5471c7c18321fa6c6}{serial3write}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+246     \textcolor{keywordflow}{break};
+247 \textcolor{preprocessor}{#endif}
+248 \textcolor{preprocessor}{}   \textcolor{keywordflow}{default}:
+249     \textcolor{keywordflow}{break};
+250   \}
+251 \}
+\end{DoxyCode}
+\hypertarget{_simple_modbus_slave_8c_ad001cb3f8c610f4af959060662fa85a7}{\index{Simple\-Modbus\-Slave.\-c@{Simple\-Modbus\-Slave.\-c}!modbuss\-\_\-update@{modbuss\-\_\-update}}
+\index{modbuss\-\_\-update@{modbuss\-\_\-update}!SimpleModbusSlave.c@{Simple\-Modbus\-Slave.\-c}}
+\subsubsection[{modbuss\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} modbuss\-\_\-update (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A} $\ast$}]{Mod\-Bus\-S\-\_\-\-Data}
+\end{DoxyParamCaption}
+)}}\label{_simple_modbus_slave_8c_ad001cb3f8c610f4af959060662fa85a7}
+
+
+Definition at line 280 of file Simple\-Modbus\-Slave.\-c.
+
+
+
+References M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::broadcast\-Flag, Delayus(), M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::error\-Count, F\-A\-L\-S\-E, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::frame, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::function, M\-O\-D\-B\-U\-S\-S\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E, modbuss\-\_\-calculate\-C\-R\-C(), modbuss\-\_\-exception\-Response(), modbuss\-\_\-send\-Packet(), modbuss\-\_\-\-Serial\-Available(), modbuss\-\_\-\-Serial\-Clear\-Rx\-Error(), modbuss\-\_\-\-Serial\-Read(), M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::regs, M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::slave\-I\-D, and M\-O\-D\-B\-U\-S\-S\-\_\-\-D\-A\-T\-A\-::\-T1\-\_\-5.
+
+
+\begin{DoxyCode}
+281 \{
+282  \textcolor{keywordtype}{char} caract;
+283  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buffer;
+284  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} overflow;
+285  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} id;
+286  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} crc;
+287  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} startingAddress;
+288  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} no\_of\_registers;
+289  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} maxData;
+290  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} index;
+291  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} address;
+292  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} crc16;
+293  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} noOfBytes;
+294  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} responseFrameSize;
+295  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} temp;
+296 
+297  \textcolor{keywordflow}{if} (\hyperlink{_simple_modbus_slave_8c_ad39d1b95e9401d6ba75c998782a87869}{modbuss\_SerialClearRxError}(ModBusS\_Data) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+298    \textcolor{keywordflow}{return};  
+299 
+300  \textcolor{keywordflow}{if} (\hyperlink{_simple_modbus_slave_8c_a76af03942fd670720b8b03f6bef807ca}{modbuss\_SerialAvailable}(ModBusS\_Data))
+301   \{
+302    buffer = 0;
+303    overflow = 0;
+304     
+305    \textcolor{keywordflow}{while} (\hyperlink{_simple_modbus_slave_8c_a76af03942fd670720b8b03f6bef807ca}{modbuss\_SerialAvailable}(ModBusS\_Data))
+306     \{
+307      \textcolor{comment}{// The maximum number of bytes is limited to the serial buffer size of 128 bytes}
+308      \textcolor{comment}{// If more bytes is received than the MODBUSS\_BUFFER\_SIZE the overflow flag will be set and the }
+309      \textcolor{comment}{// serial buffer will be red untill all the data is cleared from the receive buffer.}
+310      \textcolor{keywordflow}{if} (overflow) 
+311       \hyperlink{_simple_modbus_slave_8c_a008d3beef82cb9885da551409199e286}{modbuss\_SerialRead}(ModBusS\_Data);
+312      \textcolor{keywordflow}{else}
+313       \{
+314        caract = \hyperlink{_simple_modbus_slave_8c_a008d3beef82cb9885da551409199e286}{modbuss\_SerialRead}(ModBusS\_Data);
+315        \textcolor{keywordflow}{if} (buffer == \hyperlink{_simple_modbus_slave_8c_a221290ca5462952fc70496b8ff7e745f}{MODBUSS\_BUFFER\_SIZE})
+316         overflow = 1;
+317        \textcolor{keywordflow}{else}
+318         \{
+319          ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[buffer] = caract;
+320          buffer++;
+321         \}
+322       \}
+323      \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a958e218469d86d7b186a26e7c03ddcd9}{T1\_5}); \textcolor{comment}{// inter character time out}
+324     \}
+325     
+326    \textcolor{comment}{// If an overflow occurred increment the errorCount}
+327    \textcolor{comment}{// variable and return to the main sketch without }
+328    \textcolor{comment}{// responding to the request i.e. force a timeout}
+329    \textcolor{keywordflow}{if} (overflow)
+330     \textcolor{keywordflow}{return} ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a948d8d10cfc452655af4092061d7ac97}{errorCount}++;
+331     
+332    \textcolor{comment}{// The minimum request packet is 8 bytes for function 3 & 16}
+333    \textcolor{keywordflow}{if} (buffer > 7) 
+334     \{
+335      \textcolor{keywordtype}{id} = ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[0];
+336      ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a81875e8eaabbfa2c8076e6115ef1202b}{broadcastFlag} = 0;
+337      \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == 0)
+338       ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a81875e8eaabbfa2c8076e6115ef1202b}{broadcastFlag} = 1;
+339         
+340      \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a4449d3474c101465e5039718e8130fce}{slaveID} || ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a81875e8eaabbfa2c8076e6115ef1202b}{broadcastFlag}) \textcolor{comment}{// if the recieved
+       ID matches the ModBusS\_Data->slaveID or broadcasting id (0), continue}
+341       \{
+342        crc = ((ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[buffer - 2] << 8) | ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[buffer - 1]); \textcolor{comment}{//
+       combine the crc Low & High bytes}
+343        \textcolor{keywordflow}{if} (\hyperlink{_simple_modbus_slave_8c_ac66677b919cb28d35eb037b3a1ab0d98}{modbuss\_calculateCRC}(ModBusS\_Data,buffer - 2) == crc) \textcolor{comment}{// if the calculated
+       crc matches the recieved crc continue}
+344         \{
+345          ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_aa975eee0843aaf71c1023b79871849b9}{function} = ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[1];
+346          startingAddress = ((ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[2] << 8) | ModBusS\_Data->
+      \hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[3]); \textcolor{comment}{// combine the starting address bytes}
+347          no\_of\_registers = ((ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[4] << 8) | ModBusS\_Data->
+      \hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[5]); \textcolor{comment}{// combine the number of register bytes }
+348          maxData = startingAddress + no\_of\_registers;
+349                 
+350          \textcolor{comment}{// broadcasting is not supported for function 3 }
+351          \textcolor{keywordflow}{if} (!ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a81875e8eaabbfa2c8076e6115ef1202b}{broadcastFlag} && (ModBusS\_Data->
+      \hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_aa975eee0843aaf71c1023b79871849b9}{function} == 3))
+352           \{
+353            \textcolor{keywordflow}{if} (startingAddress < ModBusS\_Data->holdingRegsSize) \textcolor{comment}{// check exception 2 ILLEGAL DATA ADDRESS}
+354             \{
+355              \textcolor{keywordflow}{if} (maxData <= ModBusS\_Data->holdingRegsSize) \textcolor{comment}{// check exception 3 ILLEGAL DATA VALUE}
+356               \{
+357                noOfBytes = no\_of\_registers * 2; 
+358                \textcolor{comment}{// ID, function, noOfBytes, (dataLo + dataHi)*number of registers,}
+359                \textcolor{comment}{//  crcLo, crcHi}
+360                responseFrameSize = 5 + noOfBytes; 
+361                ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[0] = ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a4449d3474c101465e5039718e8130fce}{slaveID};
+362                ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[1] = ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_aa975eee0843aaf71c1023b79871849b9}{function};
+363                ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[2] = noOfBytes;
+364                address = 3; \textcolor{comment}{// PDU starts at the 4th byte}
+365                             
+366                \textcolor{keywordflow}{for} (index = startingAddress; index < maxData; index++)
+367                 \{
+368                  temp = ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a0c404e2fd21adae90a9b7df0526e835e}{regs}[index];
+369                  ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[address] = temp >> 8; \textcolor{comment}{// split the register into 2 bytes}
+370                  address++;
+371                  ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[address] = temp & 0xFF;
+372                  address++;
+373                 \}   
+374                             
+375                crc16 = \hyperlink{_simple_modbus_slave_8c_ac66677b919cb28d35eb037b3a1ab0d98}{modbuss\_calculateCRC}(ModBusS\_Data,responseFrameSize - 2);
+376                ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[responseFrameSize - 2] = crc16 >> 8; \textcolor{comment}{// split crc into 2 bytes}
+377                ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[responseFrameSize - 1] = crc16 & 0xFF;
+378                \hyperlink{_simple_modbus_slave_8c_a0de90afc7744c50896a730a18e1f0595}{modbuss\_sendPacket}(ModBusS\_Data,responseFrameSize);
+379               \}
+380              \textcolor{keywordflow}{else}   
+381               \hyperlink{_simple_modbus_slave_8c_a6e65875bae114ef192d1bfeede906ddb}{modbuss\_exceptionResponse}(ModBusS\_Data,3); \textcolor{comment}{// exception 3 ILLEGAL
+       DATA VALUE}
+382             \}
+383            \textcolor{keywordflow}{else}
+384             \hyperlink{_simple_modbus_slave_8c_a6e65875bae114ef192d1bfeede906ddb}{modbuss\_exceptionResponse}(ModBusS\_Data,2); \textcolor{comment}{// exception 2 ILLEGAL DATA
+       ADDRESS}
+385           \}
+386          \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_aa975eee0843aaf71c1023b79871849b9}{function} == 16)
+387           \{
+388            \textcolor{comment}{// Check if the recieved number of bytes matches the calculated bytes }
+389            \textcolor{comment}{// minus the request bytes.}
+390        \textcolor{comment}{// id + function + (2 * address bytes) + (2 * no of register bytes) + }
+391            \textcolor{comment}{// byte count + (2 * CRC bytes) = 9 bytes}
+392            \textcolor{keywordflow}{if} (ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[6] == (buffer - 9)) 
+393             \{
+394              \textcolor{keywordflow}{if} (startingAddress < ModBusS\_Data->holdingRegsSize) \textcolor{comment}{// check exception 2 ILLEGAL DATA ADDRESS}
+395               \{
+396                \textcolor{keywordflow}{if} (maxData <= ModBusS\_Data->holdingRegsSize) \textcolor{comment}{// check exception 3 ILLEGAL DATA VALUE}
+397                 \{
+398                  address = 7; \textcolor{comment}{// start at the 8th byte in the ModBusS\_Data->frame}
+399                  \textcolor{keywordflow}{for} (index = startingAddress; index < maxData; index++)
+400                   \{
+401                    ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a0c404e2fd21adae90a9b7df0526e835e}{regs}[index] = ((ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[address] << 8) | ModBusS\_Data
+      ->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[address + 1]);
+402                    address += 2;
+403                   \} 
+404                  \textcolor{comment}{// only the first 6 bytes are used for CRC calculation}
+405                  crc16 = \hyperlink{_simple_modbus_slave_8c_ac66677b919cb28d35eb037b3a1ab0d98}{modbuss\_calculateCRC}(ModBusS\_Data,6); 
+406                  ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[6] = crc16 >> 8; \textcolor{comment}{// split crc into 2 bytes}
+407                  ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_adde99c1f81da19926ec37aefb352105f}{frame}[7] = crc16 & 0xFF;
+408                                 
+409                  \textcolor{comment}{// a function 16 response is an echo of the first 6 bytes from }
+410                  \textcolor{comment}{// the request + 2 crc bytes}
+411                  \textcolor{keywordflow}{if} (!ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a81875e8eaabbfa2c8076e6115ef1202b}{broadcastFlag}) \textcolor{comment}{// don't respond if it's a broadcast
+       message}
+412                  \hyperlink{_simple_modbus_slave_8c_a0de90afc7744c50896a730a18e1f0595}{modbuss\_sendPacket}(ModBusS\_Data,8); 
+413                 \}
+414                \textcolor{keywordflow}{else} 
+415                 \hyperlink{_simple_modbus_slave_8c_a6e65875bae114ef192d1bfeede906ddb}{modbuss\_exceptionResponse}(ModBusS\_Data,3); \textcolor{comment}{// exception 3 ILLEGAL
+       DATA VALUE}
+416               \}
+417              \textcolor{keywordflow}{else}
+418               \hyperlink{_simple_modbus_slave_8c_a6e65875bae114ef192d1bfeede906ddb}{modbuss\_exceptionResponse}(ModBusS\_Data,2); \textcolor{comment}{// exception 2 ILLEGAL
+       DATA ADDRESS}
+419             \}
+420            \textcolor{keywordflow}{else} 
+421             ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a948d8d10cfc452655af4092061d7ac97}{errorCount}++; \textcolor{comment}{// corrupted packet}
+422           \}                 
+423          \textcolor{keywordflow}{else}
+424           \hyperlink{_simple_modbus_slave_8c_a6e65875bae114ef192d1bfeede906ddb}{modbuss\_exceptionResponse}(ModBusS\_Data,1); \textcolor{comment}{// exception 1 ILLEGAL
+       FUNCTION}
+425         \}
+426        \textcolor{keywordflow}{else} \textcolor{comment}{// checksum failed}
+427         ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a948d8d10cfc452655af4092061d7ac97}{errorCount}++;
+428       \} \textcolor{comment}{// incorrect id}
+429     \}
+430    \textcolor{keywordflow}{else}
+431     \textcolor{keywordflow}{if} (buffer > 0 && buffer < 8)
+432      ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a948d8d10cfc452655af4092061d7ac97}{errorCount}++; \textcolor{comment}{// corrupted packet}
+433   \}
+434  \textcolor{keywordflow}{return} ModBusS\_Data->\hyperlink{struct_m_o_d_b_u_s_s___d_a_t_a_a948d8d10cfc452655af4092061d7ac97}{errorCount};
+435 \}   
+\end{DoxyCode}

@@ -1,0 +1,662 @@
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/spi.c File Reference}
+\label{p32_2include_2pinguino_2core_2spi_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/spi.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/spi.\-c}}
+}
+{\ttfamily \#include $<$system.\-c$>$}\\*
+{\ttfamily \#include $<$interrupt.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ab7a319f73a40bfed41d6ca1c71fdce6c}{\-\_\-\-\_\-\-S\-P\-I\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ab2ca34290f0a875f59c8eb5ab2bd68e1}{S\-P\-Ix}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ae09a2779c2d141aa6a8f8be6d78fe210}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_aaeb6e2ac767ca528e7b8432b2b36fadc}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R8}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a1a265dcd62854da6eb87dce383c12712}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R16}~2
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ad328536fc35077ba39292e68abab2cb4}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R32}~3
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a943af7f8a98cf5a3f2107ed593215a4b}{S\-P\-I\-\_\-\-S\-L\-A\-V\-E}~0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a7f157edf173ea33cf6ce3995da1720be}{S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T}~0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ae77748f6ed40c1bc713dbe98e29df4ea}{S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a9149f65df81446cac672e8def88b0094}{S\-P\-I\-\_\-\-S\-M\-P\-M\-I\-D}~0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a8562db9fe4aa83e619f26ace4f073d5e}{S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a003a0bdd8b4045617b36a021075f9fc5}{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V2}~2
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a26c758986d0765202f2f10c82d827222}{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4}~4
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a817a71356062d0de8aa6dbabf46a7385}{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8}~8
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_aaad874feae2a939729a9c95ca9becc3d}{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16}~16
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a1de0fa9a539546cc924909de0a916c1c}{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V32}~32
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a82dbbddbdf68ad5bf864c98d2c8dc464}{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64}~64
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ac9d0bde2b42b2403d00b7a611514b006}{S\-P\-I\-\_\-\-M\-O\-D\-E0}~0
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a9481b7327b91aa52ff5f70eb2d0acc95}{S\-P\-I\-\_\-\-M\-O\-D\-E1}~1
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a991dec04d2fb38979cfb0d9fc7f8b026}{S\-P\-I\-\_\-\-M\-O\-D\-E2}~2
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a5f928a2445070981765ee0416c12369d}{S\-P\-I\-\_\-\-M\-O\-D\-E3}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ae3eb49c2e0b11e6c3577d39784111c96}{S\-P\-I\-\_\-set\-Bit\-Order} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} bitorder)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a7f96725deb683afacf1f4bbbffcf88e7}{S\-P\-I\-\_\-set\-Data\-Mode} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} mode)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ade9a4be0e7853bd60295f98a1e87c7e6}{S\-P\-I\-\_\-set\-Mode} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} mode)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a06ff2574ad058bdbab7039785e1917c8}{S\-P\-I\-\_\-set\-Clock} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} speed)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a381f0497a07535ccd0a9a00dda811234}{S\-P\-I\-\_\-set\-Clock\-Divider} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} clock)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2spi_8c_abc097bcd239a61f604e03b6b7dc0bf19}{S\-P\-I\-\_\-close} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2spi_8c_af78b8e02699943b5766d9e0cbbce33f9}{S\-P\-I\-\_\-begin} ()
+\begin{DoxyCompactList}\small\item\em Prototypes. \end{DoxyCompactList}\item 
+unsigned char \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a237b82cdd3a5087180677794fe4764e2}{S\-P\-I\-\_\-write} (unsigned char data\-\_\-out)
+\item 
+unsigned char \hyperlink{p32_2include_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{S\-P\-I\-\_\-read} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a5493248466cc139453a9bc03002e84e1}{S\-P\-Ix\-Interrupt} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a68bcb5fdc725e4f26254adc8a078fd75}{this\-\_\-mode} = \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ac9d0bde2b42b2403d00b7a611514b006}{S\-P\-I\-\_\-\-M\-O\-D\-E0}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a1f086f22bb5cc115ec6fbcf7d180a33a}{this\-\_\-clock} = \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a82dbbddbdf68ad5bf864c98d2c8dc464}{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a421e5394c80b22bdf5e645abc8ba0b4f}{this\-\_\-role} = \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ae09a2779c2d141aa6a8f8be6d78fe210}{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a4de626fede6de66e552d3041e3ab1bf0}{this\-\_\-bitorder} = \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ae77748f6ed40c1bc713dbe98e29df4ea}{S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a5eef880951127d6650d4db63e0735684}{this\-\_\-phase} = \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a8562db9fe4aa83e619f26ace4f073d5e}{S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_ab7a319f73a40bfed41d6ca1c71fdce6c}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!\-\_\-\-\_\-\-S\-P\-I\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-P\-I\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-S\-P\-I\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-P\-I\-\_\-\-\_\-}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-S\-P\-I\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-S\-P\-I\-\_\-\-\_\-}}\label{p32_2include_2pinguino_2core_2spi_8c_ab7a319f73a40bfed41d6ca1c71fdce6c}
+Microchip making changes to S\-P\-I S\-F\-R numbers and changing 2\-A to 3, and 3\-A to 4 but it needs a new processor.\-o and updated compiler libraries, not released at this time.
+
+M\-X440 and M\-X460 have only 2 S\-P\-I ports 
+
+Definition at line 44 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a7f157edf173ea33cf6ce3995da1720be}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T@{S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T}}
+\index{S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T@{S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T~0}}\label{p32_2include_2pinguino_2core_2spi_8c_a7f157edf173ea33cf6ce3995da1720be}
+
+
+Definition at line 151 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_ae09a2779c2d141aa6a8f8be6d78fe210}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R}}
+\index{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R~1}}\label{p32_2include_2pinguino_2core_2spi_8c_ae09a2779c2d141aa6a8f8be6d78fe210}
+
+
+Definition at line 145 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a1a265dcd62854da6eb87dce383c12712}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R16@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R16}}
+\index{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R16@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R16}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R16}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R16~2}}\label{p32_2include_2pinguino_2core_2spi_8c_a1a265dcd62854da6eb87dce383c12712}
+
+
+Definition at line 147 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_ad328536fc35077ba39292e68abab2cb4}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R32@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R32}}
+\index{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R32@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R32}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R32}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R32~3}}\label{p32_2include_2pinguino_2core_2spi_8c_ad328536fc35077ba39292e68abab2cb4}
+
+
+Definition at line 148 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_aaeb6e2ac767ca528e7b8432b2b36fadc}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R8@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R8}}
+\index{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R8@{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R8}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R8}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R8~1}}\label{p32_2include_2pinguino_2core_2spi_8c_aaeb6e2ac767ca528e7b8432b2b36fadc}
+
+
+Definition at line 146 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_ac9d0bde2b42b2403d00b7a611514b006}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-M\-O\-D\-E0@{S\-P\-I\-\_\-\-M\-O\-D\-E0}}
+\index{S\-P\-I\-\_\-\-M\-O\-D\-E0@{S\-P\-I\-\_\-\-M\-O\-D\-E0}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-O\-D\-E0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-O\-D\-E0~0}}\label{p32_2include_2pinguino_2core_2spi_8c_ac9d0bde2b42b2403d00b7a611514b006}
+
+
+Definition at line 164 of file spi.\-c.
+
+
+
+Referenced by S\-P\-I\-\_\-begin().
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a9481b7327b91aa52ff5f70eb2d0acc95}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-M\-O\-D\-E1@{S\-P\-I\-\_\-\-M\-O\-D\-E1}}
+\index{S\-P\-I\-\_\-\-M\-O\-D\-E1@{S\-P\-I\-\_\-\-M\-O\-D\-E1}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-O\-D\-E1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-O\-D\-E1~1}}\label{p32_2include_2pinguino_2core_2spi_8c_a9481b7327b91aa52ff5f70eb2d0acc95}
+
+
+Definition at line 165 of file spi.\-c.
+
+
+
+Referenced by S\-P\-I\-\_\-begin().
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a991dec04d2fb38979cfb0d9fc7f8b026}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-M\-O\-D\-E2@{S\-P\-I\-\_\-\-M\-O\-D\-E2}}
+\index{S\-P\-I\-\_\-\-M\-O\-D\-E2@{S\-P\-I\-\_\-\-M\-O\-D\-E2}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-O\-D\-E2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-O\-D\-E2~2}}\label{p32_2include_2pinguino_2core_2spi_8c_a991dec04d2fb38979cfb0d9fc7f8b026}
+
+
+Definition at line 166 of file spi.\-c.
+
+
+
+Referenced by S\-P\-I\-\_\-begin().
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a5f928a2445070981765ee0416c12369d}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-M\-O\-D\-E3@{S\-P\-I\-\_\-\-M\-O\-D\-E3}}
+\index{S\-P\-I\-\_\-\-M\-O\-D\-E3@{S\-P\-I\-\_\-\-M\-O\-D\-E3}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-O\-D\-E3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-O\-D\-E3~3}}\label{p32_2include_2pinguino_2core_2spi_8c_a5f928a2445070981765ee0416c12369d}
+
+
+Definition at line 167 of file spi.\-c.
+
+
+
+Referenced by S\-P\-I\-\_\-begin().
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_ae77748f6ed40c1bc713dbe98e29df4ea}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T@{S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T}}
+\index{S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T@{S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T~1}}\label{p32_2include_2pinguino_2core_2spi_8c_ae77748f6ed40c1bc713dbe98e29df4ea}
+
+
+Definition at line 152 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_aaad874feae2a939729a9c95ca9becc3d}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16}}
+\index{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V16~16}}\label{p32_2include_2pinguino_2core_2spi_8c_aaad874feae2a939729a9c95ca9becc3d}
+
+
+Definition at line 160 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a003a0bdd8b4045617b36a021075f9fc5}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V2@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V2}}
+\index{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V2@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V2}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V2~2}}\label{p32_2include_2pinguino_2core_2spi_8c_a003a0bdd8b4045617b36a021075f9fc5}
+
+
+Definition at line 157 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a1de0fa9a539546cc924909de0a916c1c}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V32@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V32}}
+\index{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V32@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V32}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V32}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V32~32}}\label{p32_2include_2pinguino_2core_2spi_8c_a1de0fa9a539546cc924909de0a916c1c}
+
+
+Definition at line 161 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a26c758986d0765202f2f10c82d827222}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4}}
+\index{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V4~4}}\label{p32_2include_2pinguino_2core_2spi_8c_a26c758986d0765202f2f10c82d827222}
+
+
+Definition at line 158 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a82dbbddbdf68ad5bf864c98d2c8dc464}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64}}
+\index{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64~64}}\label{p32_2include_2pinguino_2core_2spi_8c_a82dbbddbdf68ad5bf864c98d2c8dc464}
+
+
+Definition at line 162 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a817a71356062d0de8aa6dbabf46a7385}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8}}
+\index{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8@{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V8~8}}\label{p32_2include_2pinguino_2core_2spi_8c_a817a71356062d0de8aa6dbabf46a7385}
+
+
+Definition at line 159 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a943af7f8a98cf5a3f2107ed593215a4b}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-S\-L\-A\-V\-E@{S\-P\-I\-\_\-\-S\-L\-A\-V\-E}}
+\index{S\-P\-I\-\_\-\-S\-L\-A\-V\-E@{S\-P\-I\-\_\-\-S\-L\-A\-V\-E}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-S\-L\-A\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-S\-L\-A\-V\-E~0}}\label{p32_2include_2pinguino_2core_2spi_8c_a943af7f8a98cf5a3f2107ed593215a4b}
+
+
+Definition at line 149 of file spi.\-c.
+
+
+
+Referenced by S\-P\-I\-\_\-begin().
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a8562db9fe4aa83e619f26ace4f073d5e}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D@{S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D}}
+\index{S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D@{S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D~1}}\label{p32_2include_2pinguino_2core_2spi_8c_a8562db9fe4aa83e619f26ace4f073d5e}
+
+
+Definition at line 155 of file spi.\-c.
+
+
+
+Referenced by S\-P\-I\-\_\-begin().
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a9149f65df81446cac672e8def88b0094}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-\-S\-M\-P\-M\-I\-D@{S\-P\-I\-\_\-\-S\-M\-P\-M\-I\-D}}
+\index{S\-P\-I\-\_\-\-S\-M\-P\-M\-I\-D@{S\-P\-I\-\_\-\-S\-M\-P\-M\-I\-D}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-\-S\-M\-P\-M\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-I\-\_\-\-S\-M\-P\-M\-I\-D~0}}\label{p32_2include_2pinguino_2core_2spi_8c_a9149f65df81446cac672e8def88b0094}
+
+
+Definition at line 154 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_ab2ca34290f0a875f59c8eb5ab2bd68e1}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-Ix@{S\-P\-Ix}}
+\index{S\-P\-Ix@{S\-P\-Ix}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-Ix}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-Ix~1}}\label{p32_2include_2pinguino_2core_2spi_8c_ab2ca34290f0a875f59c8eb5ab2bd68e1}
+
+
+Definition at line 55 of file spi.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_af78b8e02699943b5766d9e0cbbce33f9}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-begin@{S\-P\-I\-\_\-begin}}
+\index{S\-P\-I\-\_\-begin@{S\-P\-I\-\_\-begin}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2spi_8c_af78b8e02699943b5766d9e0cbbce33f9}
+
+
+Prototypes. 
+
+The following code assumes that none of the S\-P\-Ix input pins are shared with an analog input. If so, the A\-D1\-P\-C\-F\-G and corresponding T\-R\-I\-S registers have to be properly configured.
+
+Perform the following steps to set up the S\-P\-I module for the Master mode operation\-:
+\begin{DoxyEnumerate}
+\item Disable the S\-P\-I interrupts in the respective I\-E\-C0/1 register.
+\item Stop and reset the S\-P\-I module by clearing the O\-N bit.
+\item Clear the receive buffer.
+\item Clear the E\-N\-H\-B\-U\-F bit (S\-P\-Ix\-C\-O\-N$<$16$>$) if using Standard Buffer mode or set the bit if using Enhanced Buffer mode.
+\item If S\-P\-I interrupts are not going to be used, skip this step and continue to step 5. Otherwise the following additional steps are performed\-: a) Clear the S\-P\-Ix interrupt flags/events in the respective I\-F\-S0/1 register. b) Set the S\-P\-Ix interrupt enable bits in the respective I\-E\-C0/1 register. c) Write the S\-P\-Ix interrupt priority and subpriority bits in the respective I\-P\-C5/7 register.
+\item Write the Baud Rate register, S\-P\-Ix\-B\-R\-G.
+\item Clear the S\-P\-I\-R\-O\-V bit (S\-P\-Ix\-S\-T\-A\-T$<$6$>$).
+\item Write the desired settings to the S\-P\-Ix\-C\-O\-N register with M\-S\-T\-E\-N (S\-P\-Ix\-C\-O\-N$<$5$>$) = 1.
+\item Enable S\-P\-I operation by setting the O\-N bit (S\-P\-Ix\-C\-O\-N$<$15$>$). 
+\end{DoxyEnumerate}
+
+Definition at line 366 of file spi.\-c.
+
+
+
+References Delayms(), D\-E\-S\-E\-L\-E\-C\-T, Int\-Disable(), S\-P\-I\-\_\-\-M\-O\-D\-E0, S\-P\-I\-\_\-\-M\-O\-D\-E1, S\-P\-I\-\_\-\-M\-O\-D\-E2, S\-P\-I\-\_\-\-M\-O\-D\-E3, S\-P\-I\-\_\-\-S\-L\-A\-V\-E, S\-P\-I\-\_\-\-S\-L\-A\-V\-E\-\_\-\-S\-S, S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D, this\-\_\-clock, this\-\_\-mode, this\-\_\-phase, and this\-\_\-role.
+
+
+\begin{DoxyCode}
+367 \{
+368     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} rData;
+369 
+370     \textcolor{comment}{// 1.  Disable the SPI interrupts in the respective IEC0/1 register.}
+371     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a0c3150b583f433afe8772b8e6e170117}{IntDisable}(INTFAULT); 
+372     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a0c3150b583f433afe8772b8e6e170117}{IntDisable}(INTTXDONE); 
+373     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a0c3150b583f433afe8772b8e6e170117}{IntDisable}(INTRXDONE);
+374 
+375     \textcolor{comment}{// 2.  Stop and reset the SPI module by clearing the ON bit.}
+376     SPICONF = 0;
+377 
+378     \textcolor{comment}{// 3.  Clear the receive buffer.}
+379     rData = BUFFER;
+380 
+381     \textcolor{comment}{// 4.  Clear the ENHBUF bit (SPIxCON<16>) if using Standard Buffer mode.}
+382     \textcolor{comment}{// This bit can only be written when the ON bit = 0}
+383     \textcolor{comment}{// SPIENHBUF = 0; // not available on all devices}
+384 
+385     \textcolor{comment}{// 5. If SPI interrupts are not going to be used, skip this step and}
+386     \textcolor{comment}{// continue to step 6. Otherwise the following additional steps are performed:}
+387     \textcolor{comment}{//   a) Clear the SPIx interrupt flags/events in the respective IFS0/1 register.}
+388 \textcolor{comment}{/*}
+389 \textcolor{comment}{    IntClearFlag(INTFAULT);}
+390 \textcolor{comment}{    IntClearFlag(INTTXDONE);}
+391 \textcolor{comment}{    IntClearFlag(INTRXDONE);}
+392 \textcolor{comment}{}
+393 \textcolor{comment}{    //   b) Set the SPIx interrupt enable bits in the respective IEC0/1 register.}
+394 \textcolor{comment}{    IntEnable(INTFAULT); }
+395 \textcolor{comment}{    IntEnable(INTTXDONE); }
+396 \textcolor{comment}{    IntEnable(INTRXDONE);}
+397 \textcolor{comment}{}
+398 \textcolor{comment}{    //   c) Write the SPIx interrupt priority and subpriority bits in the respective IPC5/7 register.}
+399 \textcolor{comment}{    IntSetVectorPriority(INTVECTOR, 3, 1);}
+400 \textcolor{comment}{*/}
+401     \textcolor{comment}{// 6. Write the Baud Rate register, SPIxBRG.}
+402     CLKSPD = \hyperlink{p8_2pinguino_2core_2spi_8c_a6518d81df088c145643a32e2228db5fb}{this\_clock}; \textcolor{comment}{// Default SPI\_PBCLOCK\_DIV64}
+403     
+404     \textcolor{comment}{// 7. Clear the SPIROV bit (SPIxSTAT<6>).}
+405     STATUS = 0;                         \textcolor{comment}{// clear the Overflow}
+406 
+407     \textcolor{comment}{// 8. Write the desired settings to the SPIxCON register.}
+408 
+409     \textcolor{keywordflow}{switch} (\hyperlink{p8_2pinguino_2core_2spi_8c_a7391bcb6df1a7af4fde6de4f9297c03d}{this\_mode})
+410     \{
+411         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_ac9d0bde2b42b2403d00b7a611514b006}{SPI\_MODE0}:                 \textcolor{comment}{// SPI bus mode 0,0}
+412           CKP = 0;
+413           CKE = 0;                      \textcolor{comment}{// data transmitted on falling edge}
+414           \textcolor{keywordflow}{break};    
+415         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a9481b7327b91aa52ff5f70eb2d0acc95}{SPI\_MODE1}:                 \textcolor{comment}{// default SPI bus mode 0,1}
+416           CKP = 0;
+417           CKE = 1;                      \textcolor{comment}{// data transmitted on falling edge}
+418           \textcolor{keywordflow}{break};
+419         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a991dec04d2fb38979cfb0d9fc7f8b026}{SPI\_MODE2}:                 \textcolor{comment}{// SPI bus mode 1,0}
+420           CKP = 1;                      \textcolor{comment}{// clock idle state high}
+421           CKE = 0;                      \textcolor{comment}{// data transmitted on rising edge}
+422           \textcolor{keywordflow}{break};
+423         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a5f928a2445070981765ee0416c12369d}{SPI\_MODE3}:                 \textcolor{comment}{// SPI bus mode 1,1}
+424           CKP = 1;                      \textcolor{comment}{// clock idle state high}
+425           CKE = 1;                      \textcolor{comment}{// data transmitted on falling edge}
+426           \textcolor{keywordflow}{break};
+427     \}
+428     
+429     SMP = \hyperlink{p8_2pinguino_2core_2spi_8c_afc4a5d21e29121611a2a9e5f53376f47}{this\_phase};                   \textcolor{comment}{// Input data sampled at end of middle of data output
+       time}
+430     MSTEN = \hyperlink{p8_2pinguino_2core_2spi_8c_ad87a09bc776ded02f47eda704e6d6e92}{this\_role};                  \textcolor{comment}{// Master or Slave mode}
+431     
+432     \textcolor{comment}{// The SSx pin is not driven by the SPI Master.}
+433     \textcolor{comment}{// User have to drive the bit himself and pulse it before the SPI}
+434     \textcolor{comment}{// transmission takes place.}
+435     \textcolor{comment}{// He can therefore use any other I/O pin for that purpose,}
+436     \textcolor{comment}{// but we provide one ;-)}
+437 
+438     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2core_2spi_8c_ad87a09bc776ded02f47eda704e6d6e92}{this\_role} != \hyperlink{p32_2include_2pinguino_2core_2spi_8c_a943af7f8a98cf5a3f2107ed593215a4b}{SPI\_SLAVE})
+439     \{
+440 \textcolor{preprocessor}{        #if defined(PINGUINO32MX250) || defined(PINGUINO32MX220)}
+441 \textcolor{preprocessor}{}            TRISBCLR = 1<<7;            \textcolor{comment}{// RB7 is defined as SS1 pin (cf. io.c)}
+442 \textcolor{preprocessor}{        #endif}
+443 \textcolor{preprocessor}{}    \}
+444 
+445     \textcolor{comment}{// 9. Enable SPI operation by setting the ON bit (SPIxCON<15>).}
+446     SPICONSET = 0x8000;                 \textcolor{comment}{// Set bit 15}
+447 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_abc097bcd239a61f604e03b6b7dc0bf19}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-close@{S\-P\-I\-\_\-close}}
+\index{S\-P\-I\-\_\-close@{S\-P\-I\-\_\-close}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2spi_8c_abc097bcd239a61f604e03b6b7dc0bf19}
+Disable all S\-P\-Ix interrupts Stops and resets the S\-P\-Ix Clears the receive buffer 
+
+Definition at line 329 of file spi.\-c.
+
+
+
+References Int\-Disable().
+
+
+\begin{DoxyCode}
+330 \{
+331     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} rData;
+332     \textcolor{comment}{// Disable all SPIx interrupts}
+333     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a0c3150b583f433afe8772b8e6e170117}{IntDisable}(INTFAULT); 
+334     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a0c3150b583f433afe8772b8e6e170117}{IntDisable}(INTTXDONE); 
+335     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a0c3150b583f433afe8772b8e6e170117}{IntDisable}(INTRXDONE);
+336     \textcolor{comment}{// Stops and resets the SPIx}
+337     SPICONF = 0;
+338     \textcolor{comment}{// clears the receive buffer}
+339     rData=BUFFER;
+340 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-read@{S\-P\-I\-\_\-read}}
+\index{S\-P\-I\-\_\-read@{S\-P\-I\-\_\-read}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char S\-P\-I\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}
+
+
+Definition at line 462 of file spi.\-c.
+
+
+
+Referenced by disk\-\_\-initialize().
+
+
+\begin{DoxyCode}
+463 \{
+464     \textcolor{comment}{// return SPI\_write(0);}
+465     BUFFER = 0x00;          \textcolor{comment}{// dummy byte to capture the response}
+466     \textcolor{keywordflow}{while} (!STATRX);        \textcolor{comment}{// wait until cycle complete}
+467     \textcolor{keywordflow}{return} BUFFER;          \textcolor{comment}{// return with byte read}
+468 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_ae3eb49c2e0b11e6c3577d39784111c96}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-set\-Bit\-Order@{S\-P\-I\-\_\-set\-Bit\-Order}}
+\index{S\-P\-I\-\_\-set\-Bit\-Order@{S\-P\-I\-\_\-set\-Bit\-Order}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-set\-Bit\-Order}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-set\-Bit\-Order (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{bitorder}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2spi_8c_ae3eb49c2e0b11e6c3577d39784111c96}
+This function sets the order of the bits shifted out of and into the S\-P\-I bus, either L\-S\-B\-F\-I\-R\-S\-T (least-\/significant bit first) or M\-S\-B\-F\-I\-R\-S\-T (most-\/significant bit first). 
+
+Definition at line 187 of file spi.\-c.
+
+
+
+References this\-\_\-bitorder.
+
+
+\begin{DoxyCode}
+188 \{
+189     \hyperlink{p8_2pinguino_2core_2spi_8c_a16e63d09f658920c0bbaf7fb212c5fd5}{this\_bitorder} = bitorder;
+190 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a06ff2574ad058bdbab7039785e1917c8}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-set\-Clock@{S\-P\-I\-\_\-set\-Clock}}
+\index{S\-P\-I\-\_\-set\-Clock@{S\-P\-I\-\_\-set\-Clock}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-set\-Clock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} S\-P\-I\-\_\-set\-Clock (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{speed}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2spi_8c_a06ff2574ad058bdbab7039785e1917c8}
+Baud Rate generation Fsck = Fpb / (2 $\ast$ (S\-P\-Ix\-B\-R\-G + 1) Therefore, the maximum baud rate possible is Fpb/2 (S\-P\-Ix\-B\-R\-G = 0), and the minimum baud rate possible is Fpb/1024. S\-P\-Ix\-B\-R\-G = (Fpb / (2 $\ast$ Fsck)) -\/ 1 speed must be in bauds 
+
+Definition at line 278 of file spi.\-c.
+
+
+
+References Get\-Peripheral\-Clock(), and this\-\_\-clock.
+
+
+\begin{DoxyCode}
+279 \{
+280     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} Fpb;
+281     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} clk;
+282 
+283     Fpb = \hyperlink{p32_2include_2pinguino_2core_2system_8c_a78e9ff88927e18f2346bc9c33069c5ef}{GetPeripheralClock}();
+284     \textcolor{keywordflow}{if} (speed > (Fpb / 2))
+285     \{
+286         \hyperlink{p8_2pinguino_2core_2spi_8c_a6518d81df088c145643a32e2228db5fb}{this\_clock} = 0;                 \textcolor{comment}{// use the maximum baud rate possible}
+287         \textcolor{keywordflow}{return} (Fpb / 2);               \textcolor{comment}{// and return the real speed}
+288     \}
+289     \textcolor{keywordflow}{else}
+290     \{
+291         clk = (Fpb / (2 * speed)) - 1;
+292         
+293         \textcolor{keywordflow}{if} (clk > 511)
+294         \{
+295             \hyperlink{p8_2pinguino_2core_2spi_8c_a6518d81df088c145643a32e2228db5fb}{this\_clock} = 511;           \textcolor{comment}{// use the minimum baud rate possible}
+296             \textcolor{keywordflow}{return} (Fpb / 1024);        \textcolor{comment}{// and return the real speed}
+297         \}
+298         \textcolor{keywordflow}{else}                            \textcolor{comment}{// ** fix for bug identified by dk=KiloOne}
+299         \{
+300             \hyperlink{p8_2pinguino_2core_2spi_8c_a6518d81df088c145643a32e2228db5fb}{this\_clock} = clk;           \textcolor{comment}{// use calculated divider-baud rate}
+301             \textcolor{keywordflow}{return} (Fpb / (2*clk+1));             \textcolor{comment}{// and return the real speed}
+302         \}
+303     \}
+304 
+305     \textcolor{comment}{//SPI\_begin();}
+306 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a381f0497a07535ccd0a9a00dda811234}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-set\-Clock\-Divider@{S\-P\-I\-\_\-set\-Clock\-Divider}}
+\index{S\-P\-I\-\_\-set\-Clock\-Divider@{S\-P\-I\-\_\-set\-Clock\-Divider}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-set\-Clock\-Divider}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-set\-Clock\-Divider (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{clock}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2spi_8c_a381f0497a07535ccd0a9a00dda811234}
+This function sets the S\-P\-I clock divider relative to the peripheral clock. The dividers available are 2, 4, 8, 16, 32 and 64. The default setting is S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64, which sets the S\-P\-I clock to 1/64 of the frequency of the peripheral clock. 
+
+Definition at line 316 of file spi.\-c.
+
+
+
+References this\-\_\-clock, and this\-\_\-role.
+
+
+\begin{DoxyCode}
+317 \{
+318     \hyperlink{p8_2pinguino_2core_2spi_8c_a6518d81df088c145643a32e2228db5fb}{this\_clock} = clock/2 - 1;
+319     \textcolor{comment}{//SPI\_begin();}
+320 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a7f96725deb683afacf1f4bbbffcf88e7}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-set\-Data\-Mode@{S\-P\-I\-\_\-set\-Data\-Mode}}
+\index{S\-P\-I\-\_\-set\-Data\-Mode@{S\-P\-I\-\_\-set\-Data\-Mode}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-set\-Data\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-set\-Data\-Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{mode}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2spi_8c_a7f96725deb683afacf1f4bbbffcf88e7}
+This function sets the order of the bits shifted out of and into the S\-P\-I bus, either S\-P\-I\-\_\-\-L\-S\-B\-F\-I\-R\-S\-T (least-\/significant bit first) or S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T (most-\/significant bit first). This function sets the S\-P\-I data mode (clock polarity and phase) Bits C\-K\-P (S\-P\-Ix\-C\-O\-N$<$6$>$) and C\-K\-E (S\-P\-Ix\-C\-O\-N$<$8$>$) determine on which edge of the clock data transmission occurs. Modes available are S\-P\-I\-\_\-\-M\-O\-D\-E0, S\-P\-I\-\_\-\-M\-O\-D\-E1, S\-P\-I\-\_\-\-M\-O\-D\-E2, or S\-P\-I\-\_\-\-M\-O\-D\-E3 Mode C\-K\-P C\-K\-E 0 0 0 1 0 1 2 1 0 3 1 1 
+
+Definition at line 250 of file spi.\-c.
+
+
+
+References this\-\_\-mode.
+
+
+\begin{DoxyCode}
+251 \{
+252     \hyperlink{p8_2pinguino_2core_2spi_8c_a7391bcb6df1a7af4fde6de4f9297c03d}{this\_mode} = mode;
+253     \textcolor{comment}{//SPI\_begin();}
+254 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_ade9a4be0e7853bd60295f98a1e87c7e6}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-set\-Mode@{S\-P\-I\-\_\-set\-Mode}}
+\index{S\-P\-I\-\_\-set\-Mode@{S\-P\-I\-\_\-set\-Mode}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-set\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-I\-\_\-set\-Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{mode}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2spi_8c_ade9a4be0e7853bd60295f98a1e87c7e6}
+This function sets the S\-P\-I mode. Possible values are S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R or S\-P\-I\-\_\-\-S\-L\-A\-V\-E. The default setting is S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R. 
+
+Definition at line 263 of file spi.\-c.
+
+
+
+References this\-\_\-clock, and this\-\_\-role.
+
+
+\begin{DoxyCode}
+264 \{
+265     \hyperlink{p8_2pinguino_2core_2spi_8c_ad87a09bc776ded02f47eda704e6d6e92}{this\_role}  = mode;
+266     \textcolor{comment}{//SPI\_begin();}
+267 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a237b82cdd3a5087180677794fe4764e2}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-I\-\_\-write@{S\-P\-I\-\_\-write}}
+\index{S\-P\-I\-\_\-write@{S\-P\-I\-\_\-write}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-I\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char S\-P\-I\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{data\-\_\-out}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2spi_8c_a237b82cdd3a5087180677794fe4764e2}
+Write the data to be transmitted to the S\-P\-Ix\-B\-U\-F register. Transmission (and reception) will start as soon as data is written to the S\-P\-Ix\-B\-U\-F register. 
+
+Definition at line 455 of file spi.\-c.
+
+
+
+Referenced by disk\-\_\-initialize().
+
+
+\begin{DoxyCode}
+456 \{
+457     BUFFER = data\_out;  \textcolor{comment}{// write to buffer for TX}
+458     \textcolor{keywordflow}{while} (!STATRX);        \textcolor{comment}{// wait for the receive flag (transfer complete)}
+459     \textcolor{keywordflow}{return} BUFFER;
+460 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a5493248466cc139453a9bc03002e84e1}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!S\-P\-Ix\-Interrupt@{S\-P\-Ix\-Interrupt}}
+\index{S\-P\-Ix\-Interrupt@{S\-P\-Ix\-Interrupt}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{S\-P\-Ix\-Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-Ix\-Interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2spi_8c_a5493248466cc139453a9bc03002e84e1}
+S\-P\-I\-Interrupt T\-O\-D\-O\-: move this to interrupt library and add it to main32.\-c ? 
+
+Definition at line 475 of file spi.\-c.
+
+
+
+References Int\-Clear\-Flag(), and Int\-Get\-Flag().
+
+
+\begin{DoxyCode}
+476 \{
+477     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} rData;
+478 
+479     \textcolor{comment}{// Is this an RX interrupt ?}
+480     \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a39a57c6ba2a98e87154d50b2c2eb4c9d}{IntGetFlag}(INTRXDONE))
+481     \{
+482         rData = BUFFER;         \textcolor{comment}{// Read SPI data buffer}
+483         \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(INTRXDONE);
+484     \}
+485     \textcolor{comment}{// Is this an TX interrupt ?}
+486     \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a39a57c6ba2a98e87154d50b2c2eb4c9d}{IntGetFlag}(INTTXDONE))
+487     \{
+488         \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a75aead61bba639d38c86db0b5b6d4e2e}{IntClearFlag}(INTTXDONE);
+489     \}
+490 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a4de626fede6de66e552d3041e3ab1bf0}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!this\-\_\-bitorder@{this\-\_\-bitorder}}
+\index{this\-\_\-bitorder@{this\-\_\-bitorder}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{this\-\_\-bitorder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} this\-\_\-bitorder = {\bf S\-P\-I\-\_\-\-M\-S\-B\-F\-I\-R\-S\-T}}}\label{p32_2include_2pinguino_2core_2spi_8c_a4de626fede6de66e552d3041e3ab1bf0}
+
+
+Definition at line 182 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a1f086f22bb5cc115ec6fbcf7d180a33a}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!this\-\_\-clock@{this\-\_\-clock}}
+\index{this\-\_\-clock@{this\-\_\-clock}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{this\-\_\-clock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} this\-\_\-clock = {\bf S\-P\-I\-\_\-\-P\-B\-C\-L\-O\-C\-K\-\_\-\-D\-I\-V64}}}\label{p32_2include_2pinguino_2core_2spi_8c_a1f086f22bb5cc115ec6fbcf7d180a33a}
+
+
+Definition at line 180 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a68bcb5fdc725e4f26254adc8a078fd75}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!this\-\_\-mode@{this\-\_\-mode}}
+\index{this\-\_\-mode@{this\-\_\-mode}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{this\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} this\-\_\-mode = {\bf S\-P\-I\-\_\-\-M\-O\-D\-E0}}}\label{p32_2include_2pinguino_2core_2spi_8c_a68bcb5fdc725e4f26254adc8a078fd75}
+
+
+Definition at line 179 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a5eef880951127d6650d4db63e0735684}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!this\-\_\-phase@{this\-\_\-phase}}
+\index{this\-\_\-phase@{this\-\_\-phase}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{this\-\_\-phase}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} this\-\_\-phase = {\bf S\-P\-I\-\_\-\-S\-M\-P\-E\-N\-D}}}\label{p32_2include_2pinguino_2core_2spi_8c_a5eef880951127d6650d4db63e0735684}
+
+
+Definition at line 183 of file spi.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2spi_8c_a421e5394c80b22bdf5e645abc8ba0b4f}{\index{p32/include/pinguino/core/spi.\-c@{p32/include/pinguino/core/spi.\-c}!this\-\_\-role@{this\-\_\-role}}
+\index{this\-\_\-role@{this\-\_\-role}!p32/include/pinguino/core/spi.c@{p32/include/pinguino/core/spi.\-c}}
+\subsubsection[{this\-\_\-role}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} this\-\_\-role = {\bf S\-P\-I\-\_\-\-M\-A\-S\-T\-E\-R}}}\label{p32_2include_2pinguino_2core_2spi_8c_a421e5394c80b22bdf5e645abc8ba0b4f}
+
+
+Definition at line 181 of file spi.\-c.
+

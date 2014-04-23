@@ -1,0 +1,795 @@
+\hypertarget{bluetooth_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/bt/bluetooth.c File Reference}
+\label{bluetooth_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/bt/bluetooth.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/bt/bluetooth.\-c}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$serial.\-c$>$}\\*
+{\ttfamily \#include $<$delay.\-c$>$}\\*
+{\ttfamily \#include $<$itoa.\-c$>$}\\*
+{\ttfamily \#include $<$\-\_\-\-\_\-cdc.\-c$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{bluetooth_8c_a52427b13bb27e19d380d2bf17053f620}{\-\_\-\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H\-\_\-\-C}
+\item 
+\#define \hyperlink{bluetooth_8c_a271c889da383a61f6b7928762074fdb1}{B\-T\-\_\-\-D\-E\-L\-A\-Y}~10
+\item 
+\#define \hyperlink{bluetooth_8c_a6cb23a858b0a21bdaa644b9181dc415f}{C\-R\-L\-F}~\char`\"{}/r/n\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7ce}{B\-T\-\_\-\-S\-T\-A\-T\-U\-S} \{ \hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7ceaf0b396a88834dd5a33a9f243228c992f}{B\-T\-\_\-\-O\-K} = 111, 
+\hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7cea53d6f3382c2e7fe9c5c8025046f2de8e}{B\-T\-\_\-\-E\-R\-R\-O\-R}, 
+\hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7cea8f68fda3d4de71c22b21029548339910}{B\-T\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$ \hyperlink{bluetooth_8c_a7b1b6a651ff33994f691a3fb1457a768}{B\-T\-\_\-get\-Buffer} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$buffer)
+\item 
+\hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7ce}{B\-T\-\_\-\-S\-T\-A\-T\-U\-S} \hyperlink{bluetooth_8c_a299f11c70533a47e767517cdbdf908a8}{B\-T\-\_\-get\-Status\-Code} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$\hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status})
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_afe74572fd122cd1e436a6e2337875c61}{B\-T\-\_\-get\-Response} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port, \hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} response)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{B\-T\-\_\-get\-Extended\-Response} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{B\-T\-\_\-send\-Command} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$fmt,...)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_ab6ff1c6b356ec144124ffd7dd18ce7b7}{B\-T\-\_\-set\-Command\-Mode} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a3054afe6f71029201d00528fcebfc4ec}{B\-T\-\_\-echo\-Off} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_ac7e080c7ef3dbd5562679525491157c5}{B\-T\-\_\-echo\-On} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a8f53510030ff6437ae69de9345e5e5fa}{B\-T\-\_\-restore} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a80ee1dee63905eae7518816bc002c031}{B\-T\-\_\-reset} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a74a8d60729450c8d63fda6ddb42179c2}{B\-T\-\_\-get\-Firmware} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_ab0259be99dbfcec77d1adf70b735799e}{B\-T\-\_\-set\-Device\-Name} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$name)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a6940786b92ef1ccfd0835662894cf479}{B\-T\-\_\-get\-Device\-Name} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a7d0cd94890d35e2d5c7728c592ebd80b}{B\-T\-\_\-set\-Device\-Address} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$bdaddr)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a7572f5ebc31259587d76ddc5e673468d}{B\-T\-\_\-get\-Device\-Address} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a94f9a99a25801dec3a3804001b27e986}{B\-T\-\_\-set\-Auto\-Connection} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a778fb0110554e8638a284f48dc42c90b}{B\-T\-\_\-set\-U\-A\-R\-T\-Speed} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} baud\-\_\-rate)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a122b1d9559dc0be815971d9cd51f6ce3}{B\-T\-\_\-disable\-Security} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a8c861b8f766079b3e50ea98635e0340a}{B\-T\-\_\-write\-Flash} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_ac1cfca9bfbc817e78e87ab8d195a6d09}{B\-T\-\_\-start} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a4fe61000f60dbc32fc8d2205ad23b4b5}{B\-T\-\_\-sleep} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a76100232f76c3226214e86f40d989a33}{B\-T\-\_\-search} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} s)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a3e74a5dee05a53c9d7fbb9aba8c2cfca}{B\-T\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} baud\-\_\-rate)
+\item 
+\hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} \hyperlink{bluetooth_8c_a6c68dcf2b23e5237bdec70186193f4da}{B\-T\-\_\-connect} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} uart\-\_\-port, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$bdaddr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{bluetooth_8c_a52427b13bb27e19d380d2bf17053f620}{\index{bluetooth.\-c@{bluetooth.\-c}!\-\_\-\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H\-\_\-\-C@{\-\_\-\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H\-\_\-\-C@{\-\_\-\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H\-\_\-\-C}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-B\-L\-U\-E\-T\-O\-O\-T\-H\-\_\-\-C}}\label{bluetooth_8c_a52427b13bb27e19d380d2bf17053f620}
+
+
+Definition at line 25 of file bluetooth.\-c.
+
+\hypertarget{bluetooth_8c_a271c889da383a61f6b7928762074fdb1}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-\-D\-E\-L\-A\-Y@{B\-T\-\_\-\-D\-E\-L\-A\-Y}}
+\index{B\-T\-\_\-\-D\-E\-L\-A\-Y@{B\-T\-\_\-\-D\-E\-L\-A\-Y}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-\-D\-E\-L\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-T\-\_\-\-D\-E\-L\-A\-Y~10}}\label{bluetooth_8c_a271c889da383a61f6b7928762074fdb1}
+
+
+Definition at line 37 of file bluetooth.\-c.
+
+
+
+Referenced by B\-T\-\_\-send\-Command().
+
+\hypertarget{bluetooth_8c_a6cb23a858b0a21bdaa644b9181dc415f}{\index{bluetooth.\-c@{bluetooth.\-c}!C\-R\-L\-F@{C\-R\-L\-F}}
+\index{C\-R\-L\-F@{C\-R\-L\-F}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{C\-R\-L\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-R\-L\-F~\char`\"{}/r/n\char`\"{}}}\label{bluetooth_8c_a6cb23a858b0a21bdaa644b9181dc415f}
+
+
+Definition at line 38 of file bluetooth.\-c.
+
+
+
+Referenced by B\-T\-\_\-get\-Response().
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7ce}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-\-S\-T\-A\-T\-U\-S@{B\-T\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{B\-T\-\_\-\-S\-T\-A\-T\-U\-S@{B\-T\-\_\-\-S\-T\-A\-T\-U\-S}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf B\-T\-\_\-\-S\-T\-A\-T\-U\-S}}}\label{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7ce}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\-T\-\_\-\-O\-K@{B\-T\-\_\-\-O\-K}!bluetooth.\-c@{bluetooth.\-c}}\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-\-O\-K@{B\-T\-\_\-\-O\-K}}\item[{\em 
+\hypertarget{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7ceaf0b396a88834dd5a33a9f243228c992f}{B\-T\-\_\-\-O\-K}\label{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7ceaf0b396a88834dd5a33a9f243228c992f}
+}]\index{B\-T\-\_\-\-E\-R\-R\-O\-R@{B\-T\-\_\-\-E\-R\-R\-O\-R}!bluetooth.\-c@{bluetooth.\-c}}\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-\-E\-R\-R\-O\-R@{B\-T\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7cea53d6f3382c2e7fe9c5c8025046f2de8e}{B\-T\-\_\-\-E\-R\-R\-O\-R}\label{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7cea53d6f3382c2e7fe9c5c8025046f2de8e}
+}]\index{B\-T\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E@{B\-T\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E}!bluetooth.\-c@{bluetooth.\-c}}\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E@{B\-T\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E}}\item[{\em 
+\hypertarget{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7cea8f68fda3d4de71c22b21029548339910}{B\-T\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E}\label{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7cea8f68fda3d4de71c22b21029548339910}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 41 of file bluetooth.\-c.
+
+
+\begin{DoxyCode}
+42 \{
+43     \hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7ceaf0b396a88834dd5a33a9f243228c992f}{BT\_OK}      =   111,
+44     \hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7cea53d6f3382c2e7fe9c5c8025046f2de8e}{BT\_ERROR},
+45     \hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7cea8f68fda3d4de71c22b21029548339910}{BT\_COMPLETE}
+46 \} \hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7ce}{BT\_STATUS};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{bluetooth_8c_a6c68dcf2b23e5237bdec70186193f4da}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-connect@{B\-T\-\_\-connect}}
+\index{B\-T\-\_\-connect@{B\-T\-\_\-connect}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-connect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-connect (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port, }
+\item[{{\bf u8} $\ast$}]{bdaddr}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a6c68dcf2b23e5237bdec70186193f4da}
+
+
+Definition at line 386 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-\-E\-R\-R\-O\-R, B\-T\-\_\-get\-Extended\-Response(), B\-T\-\_\-send\-Command(), and B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E\-::code.
+
+
+\begin{DoxyCode}
+387 \{
+388     \hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{BT\_RESPONSE} response;
+389     
+390     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTPAR=1,%s\(\backslash\)r"}, bdaddr); \textcolor{comment}{// Pair with remote device}
+391     response = \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+392     \textcolor{keywordflow}{if} (response.\hyperlink{struct_b_t___r_e_s_p_o_n_s_e_a7425c776792208fc8fb7ee7a28ee1510}{code} == \hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7cea53d6f3382c2e7fe9c5c8025046f2de8e}{BT\_ERROR}) \textcolor{keywordflow}{return} response;
+393     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTCLT=%s,1\(\backslash\)r"}, bdaddr); \textcolor{comment}{// on Port 1}
+394     response = \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+395     \textcolor{comment}{// the device will enter data mode if OK}
+396     \textcolor{keywordflow}{return} response;
+397 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a122b1d9559dc0be815971d9cd51f6ce3}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-disable\-Security@{B\-T\-\_\-disable\-Security}}
+\index{B\-T\-\_\-disable\-Security@{B\-T\-\_\-disable\-Security}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-disable\-Security}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-disable\-Security (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a122b1d9559dc0be815971d9cd51f6ce3}
+
+
+Definition at line 296 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Extended\-Response(), and B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+297 \{
+298     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTSEC=0\(\backslash\)r"});
+299     \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+300 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a3054afe6f71029201d00528fcebfc4ec}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-echo\-Off@{B\-T\-\_\-echo\-Off}}
+\index{B\-T\-\_\-echo\-Off@{B\-T\-\_\-echo\-Off}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-echo\-Off}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-echo\-Off (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a3054afe6f71029201d00528fcebfc4ec}
+
+
+Definition at line 180 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+181 \{
+182     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"ATE0\(\backslash\)r"});
+183     \textcolor{comment}{//return BT\_getResponse(uart\_port);}
+184 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_ac7e080c7ef3dbd5562679525491157c5}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-echo\-On@{B\-T\-\_\-echo\-On}}
+\index{B\-T\-\_\-echo\-On@{B\-T\-\_\-echo\-On}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-echo\-On}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-echo\-On (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_ac7e080c7ef3dbd5562679525491157c5}
+
+
+Definition at line 190 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+191 \{
+192     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"ATE1\(\backslash\)r"});
+193     \textcolor{comment}{//return BT\_getResponse(uart\_port);}
+194 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a7b1b6a651ff33994f691a3fb1457a768}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-get\-Buffer@{B\-T\-\_\-get\-Buffer}}
+\index{B\-T\-\_\-get\-Buffer@{B\-T\-\_\-get\-Buffer}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-get\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8}$\ast$ B\-T\-\_\-get\-Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port, }
+\item[{{\bf u8} $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a7b1b6a651ff33994f691a3fb1457a768}
+
+
+Definition at line 61 of file bluetooth.\-c.
+
+
+
+References c, Serial\-Available(), and Serial\-Read().
+
+
+
+Referenced by B\-T\-\_\-get\-Response().
+
+
+\begin{DoxyCode}
+62 \{
+63     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}, i = 0;
+64     
+65     \textcolor{comment}{// wait until something is received}
+66     \textcolor{keywordflow}{while} (!\hyperlink{p32_2include_2pinguino_2core_2serial_8c_a878269e804f48bb8a690ed20115c4ce4}{SerialAvailable}(uart\_port));
+67 
+68     \textcolor{keywordflow}{do} \{
+69         c = \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a46b4e3730df878a192c4e1aeb3a4325d}{SerialRead}(uart\_port);            \textcolor{comment}{// return 255 (-1) if no reception}
+70         \textcolor{keywordflow}{if} (c != 255) buffer[i++] = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+71     \} \textcolor{keywordflow}{while} (c != 255);\textcolor{comment}{// && (i < 80) );}
+72     \textcolor{comment}{// C string must be null-terminated}
+73     \textcolor{comment}{//BT\_BUFFER[i] = '\(\backslash\)0';}
+74     buffer[i] = \textcolor{charliteral}{'\(\backslash\)0'};
+75     \textcolor{comment}{//CDCprintf("buffer = [%s]\(\backslash\)r\(\backslash\)n", BT\_BUFFER);}
+76 
+77     \textcolor{comment}{//return BT\_BUFFER;}
+78     \textcolor{keywordflow}{return} buffer;
+79 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a7572f5ebc31259587d76ddc5e673468d}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-get\-Device\-Address@{B\-T\-\_\-get\-Device\-Address}}
+\index{B\-T\-\_\-get\-Device\-Address@{B\-T\-\_\-get\-Device\-Address}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-get\-Device\-Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-get\-Device\-Address (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a7572f5ebc31259587d76ddc5e673468d}
+
+
+Definition at line 262 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Extended\-Response(), and B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+263 \{
+264     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTBDA?\(\backslash\)r"});
+265     \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+266 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a6940786b92ef1ccfd0835662894cf479}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-get\-Device\-Name@{B\-T\-\_\-get\-Device\-Name}}
+\index{B\-T\-\_\-get\-Device\-Name@{B\-T\-\_\-get\-Device\-Name}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-get\-Device\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-get\-Device\-Name (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a6940786b92ef1ccfd0835662894cf479}
+
+
+Definition at line 242 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Extended\-Response(), and B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+243 \{
+244     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTLNM?\(\backslash\)r"});
+245     \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+246 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-get\-Extended\-Response@{B\-T\-\_\-get\-Extended\-Response}}
+\index{B\-T\-\_\-get\-Extended\-Response@{B\-T\-\_\-get\-Extended\-Response}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-get\-Extended\-Response}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-get\-Extended\-Response (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}
+
+
+Definition at line 130 of file bluetooth.\-c.
+
+
+
+Referenced by B\-T\-\_\-connect(), B\-T\-\_\-disable\-Security(), B\-T\-\_\-get\-Device\-Address(), B\-T\-\_\-get\-Device\-Name(), B\-T\-\_\-search(), B\-T\-\_\-set\-Auto\-Connection(), B\-T\-\_\-set\-Device\-Address(), B\-T\-\_\-set\-Device\-Name(), B\-T\-\_\-set\-U\-A\-R\-T\-Speed(), B\-T\-\_\-sleep(), B\-T\-\_\-start(), and B\-T\-\_\-write\-Flash().
+
+
+\begin{DoxyCode}
+131 \{
+132     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} length;
+133     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *buffer;
+134     \hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{BT\_RESPONSE} response;
+135     
+136     \textcolor{comment}{// get a complete response from the module}
+137     \textcolor{comment}{//buffer = BT\_getBuffer(uart\_port, buffer);}
+138 
+139     \textcolor{comment}{// response's format is :}
+140     \textcolor{comment}{//    <CR><LF><status><CR><LF> with status = OK or ERROR}
+141 \textcolor{comment}{/*  }
+142 \textcolor{comment}{    response.command = strtok(buffer, CRLF); // to remove the first CRLF }
+143 \textcolor{comment}{    response.command = strtok(buffer, CRLF);}
+144 \textcolor{comment}{    response.data    = strtok(NULL, CRLF);}
+145 \textcolor{comment}{    response.status  = strtok(NULL, CRLF);}
+146 \textcolor{comment}{    response.code    = BT\_getStatusCode(response.status);}
+147 \textcolor{comment}{}
+148 \textcolor{comment}{    return response;}
+149 \textcolor{comment}{*/}
+150 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a74a8d60729450c8d63fda6ddb42179c2}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-get\-Firmware@{B\-T\-\_\-get\-Firmware}}
+\index{B\-T\-\_\-get\-Firmware@{B\-T\-\_\-get\-Firmware}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-get\-Firmware}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-get\-Firmware (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a74a8d60729450c8d63fda6ddb42179c2}
+
+
+Definition at line 222 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+223 \{
+224     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"ATI\(\backslash\)r"});
+225     \textcolor{comment}{//return BT\_getExtendedResponse(uart\_port);}
+226 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_afe74572fd122cd1e436a6e2337875c61}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-get\-Response@{B\-T\-\_\-get\-Response}}
+\index{B\-T\-\_\-get\-Response@{B\-T\-\_\-get\-Response}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-get\-Response}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-get\-Response (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port, }
+\item[{{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E}}]{response}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_afe74572fd122cd1e436a6e2337875c61}
+
+
+Definition at line 107 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Buffer(), B\-T\-\_\-get\-Status\-Code(), B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E\-::code, B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E\-::command, C\-R\-L\-F, B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E\-::data, N\-U\-L\-L, and B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E\-::status.
+
+
+\begin{DoxyCode}
+108 \{
+109     \textcolor{comment}{//u8 *buffer;}
+110     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *buffer = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}*) malloc(128);
+111 
+112     \textcolor{comment}{// get a complete response from the module}
+113     buffer = \hyperlink{bluetooth_8c_a7b1b6a651ff33994f691a3fb1457a768}{BT\_getBuffer}(uart\_port, buffer);
+114     \textcolor{comment}{//CDCprintf("buffer=[%s]", buffer);}
+115 
+116     response.\hyperlink{struct_b_t___r_e_s_p_o_n_s_e_a8d1ef2a2d0701e536e45f0ef64ab3c7e}{command} = \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+117     response.\hyperlink{struct_b_t___r_e_s_p_o_n_s_e_a40767ad71451f60885c01f28dd2a4b47}{data}    = strtok(buffer, \hyperlink{bluetooth_8c_a6cb23a858b0a21bdaa644b9181dc415f}{CRLF}); \textcolor{comment}{// to remove the first CRLF }
+118     response.\hyperlink{struct_b_t___r_e_s_p_o_n_s_e_a40767ad71451f60885c01f28dd2a4b47}{data}    = strtok(\hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}, \hyperlink{bluetooth_8c_a6cb23a858b0a21bdaa644b9181dc415f}{CRLF});
+119     response.\hyperlink{struct_b_t___r_e_s_p_o_n_s_e_a938eb71a1ec2d6626b341381e12a0c61}{status}  = strtok(\hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}, \hyperlink{bluetooth_8c_a6cb23a858b0a21bdaa644b9181dc415f}{CRLF});
+120     response.\hyperlink{struct_b_t___r_e_s_p_o_n_s_e_a7425c776792208fc8fb7ee7a28ee1510}{code}    = \hyperlink{bluetooth_8c_a299f11c70533a47e767517cdbdf908a8}{BT\_getStatusCode}(response.\hyperlink{struct_b_t___r_e_s_p_o_n_s_e_a938eb71a1ec2d6626b341381e12a0c61}{status});
+121 
+122     \textcolor{keywordflow}{return} response;
+123 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a299f11c70533a47e767517cdbdf908a8}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-get\-Status\-Code@{B\-T\-\_\-get\-Status\-Code}}
+\index{B\-T\-\_\-get\-Status\-Code@{B\-T\-\_\-get\-Status\-Code}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-get\-Status\-Code}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-S\-T\-A\-T\-U\-S} B\-T\-\_\-get\-Status\-Code (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{status}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a299f11c70533a47e767517cdbdf908a8}
+
+
+Definition at line 85 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E, B\-T\-\_\-\-E\-R\-R\-O\-R, and B\-T\-\_\-\-O\-K.
+
+
+
+Referenced by B\-T\-\_\-get\-Response().
+
+
+\begin{DoxyCode}
+86 \{
+87     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} length;
+88     \hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7ce}{BT\_STATUS} code;
+89     
+90     length = strlen(\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status});
+91     
+92     \textcolor{comment}{// check last char if status is OK, ERROR or COMPLETE}
+93     \textcolor{keywordflow}{switch} (\hyperlink{p8_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status}[length-1])
+94     \{
+95         \textcolor{keywordflow}{case} \textcolor{charliteral}{'K'}: \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7ceaf0b396a88834dd5a33a9f243228c992f}{BT\_OK};
+96         \textcolor{keywordflow}{case} \textcolor{charliteral}{'R'}: \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7cea53d6f3382c2e7fe9c5c8025046f2de8e}{BT\_ERROR};
+97         \textcolor{keywordflow}{case} \textcolor{charliteral}{'E'}: \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_af17ab5c1acc876e64d4e684b5dd7a7cea8f68fda3d4de71c22b21029548339910}{BT\_COMPLETE};
+98     \}
+99 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a3e74a5dee05a53c9d7fbb9aba8c2cfca}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-init@{B\-T\-\_\-init}}
+\index{B\-T\-\_\-init@{B\-T\-\_\-init}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port, }
+\item[{{\bf u32}}]{baud\-\_\-rate}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a3e74a5dee05a53c9d7fbb9aba8c2cfca}
+
+
+Definition at line 349 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-set\-Command\-Mode().
+
+
+\begin{DoxyCode}
+350 \{
+351     \hyperlink{struct_b_t___r_e_s_p_o_n_s_e}{BT\_RESPONSE} response;
+352 
+353     \textcolor{comment}{// 115200 bauds is the default configuration value}
+354     \textcolor{comment}{//SerialConfigure(uart\_port, UART\_ENABLE, UART\_RX\_TX\_ENABLED,   115200);}
+355 
+356     response = \hyperlink{bluetooth_8c_ab6ff1c6b356ec144124ffd7dd18ce7b7}{BT\_setCommandMode}(uart\_port); 
+357     \textcolor{comment}{//BT\_getFirmware(uart\_port);}
+358     \textcolor{comment}{//BT\_echoOff(uart\_port);}
+359     \textcolor{comment}{//BT\_restore(uart\_port);}
+360     \textcolor{comment}{//BT\_setDeviceName(uart\_port, "Pinguino");}
+361     \textcolor{comment}{// Pass through, DCE, enable escape sequence, disable entering in command mode with DTR/DSR, enable LED}
+362     \textcolor{comment}{//BT\_sendCommand(uart\_port,"AT+BTCFG=33");}
+363     \textcolor{comment}{//BT\_setAutoConnection(uart\_port);}
+364 \textcolor{comment}{/*}
+365 \textcolor{comment}{    if (baud\_rate != 115200)}
+366 \textcolor{comment}{    \{}
+367 \textcolor{comment}{        BT\_setUARTSpeed(uart\_port, baud\_rate);}
+368 \textcolor{comment}{        // new UART speed}
+369 \textcolor{comment}{        SerialConfigure(uart\_port, UART\_ENABLE, UART\_RX\_TX\_ENABLED, baud\_rate);}
+370 \textcolor{comment}{    \}}
+371 \textcolor{comment}{*/}
+372     \textcolor{comment}{//BT\_disableSecurity(uart\_port);}
+373     \textcolor{comment}{//BT\_writeFlash(uart\_port);}
+374     \textcolor{comment}{//BT\_start(uart\_port);}
+375     \textcolor{keywordflow}{return} response;
+376 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a80ee1dee63905eae7518816bc002c031}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-reset@{B\-T\-\_\-reset}}
+\index{B\-T\-\_\-reset@{B\-T\-\_\-reset}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-reset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-reset (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a80ee1dee63905eae7518816bc002c031}
+
+
+Definition at line 212 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+213 \{
+214     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"ATZ\(\backslash\)r"});
+215     \textcolor{comment}{//return BT\_getResponse(uart\_port);}
+216 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a8f53510030ff6437ae69de9345e5e5fa}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-restore@{B\-T\-\_\-restore}}
+\index{B\-T\-\_\-restore@{B\-T\-\_\-restore}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-restore}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-restore (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a8f53510030ff6437ae69de9345e5e5fa}
+
+
+Definition at line 202 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+203 \{
+204     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT&F\(\backslash\)r"});
+205     \textcolor{comment}{//return BT\_getResponse(uart\_port);}
+206 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a76100232f76c3226214e86f40d989a33}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-search@{B\-T\-\_\-search}}
+\index{B\-T\-\_\-search@{B\-T\-\_\-search}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-search (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port, }
+\item[{{\bf u8}}]{s}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a76100232f76c3226214e86f40d989a33}
+
+
+Definition at line 336 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Extended\-Response(), and B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+337 \{
+338     \textcolor{comment}{// cancels any current commands}
+339     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTCAN\(\backslash\)r"});
+340     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTINQ=%d\(\backslash\)r"}, s);
+341     \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+342 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-send\-Command@{B\-T\-\_\-send\-Command}}
+\index{B\-T\-\_\-send\-Command@{B\-T\-\_\-send\-Command}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-send\-Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-send\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port, }
+\item[{{\bf u8} $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}
+
+
+Definition at line 156 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-\-D\-E\-L\-A\-Y, Delayms(), and Serial\-Flush().
+
+
+
+Referenced by B\-T\-\_\-connect(), B\-T\-\_\-disable\-Security(), B\-T\-\_\-echo\-Off(), B\-T\-\_\-echo\-On(), B\-T\-\_\-get\-Device\-Address(), B\-T\-\_\-get\-Device\-Name(), B\-T\-\_\-get\-Firmware(), B\-T\-\_\-reset(), B\-T\-\_\-restore(), B\-T\-\_\-search(), B\-T\-\_\-set\-Auto\-Connection(), B\-T\-\_\-set\-Command\-Mode(), B\-T\-\_\-set\-Device\-Address(), B\-T\-\_\-set\-Device\-Name(), B\-T\-\_\-set\-U\-A\-R\-T\-Speed(), B\-T\-\_\-sleep(), B\-T\-\_\-start(), and B\-T\-\_\-write\-Flash().
+
+
+\begin{DoxyCode}
+157 \{
+158     \hyperlink{p32_2include_2pinguino_2core_2serial_8c_a26fe5a83dff28031ab497e5cafc6eeda}{SerialFlush}(uart\_port);
+159     SerialPrintf(uart\_port, fmt);
+160     \textcolor{comment}{//CDCprintf(fmt);}
+161     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(\hyperlink{bluetooth_8c_a271c889da383a61f6b7928762074fdb1}{BT\_DELAY});
+162 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a94f9a99a25801dec3a3804001b27e986}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-set\-Auto\-Connection@{B\-T\-\_\-set\-Auto\-Connection}}
+\index{B\-T\-\_\-set\-Auto\-Connection@{B\-T\-\_\-set\-Auto\-Connection}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-set\-Auto\-Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-set\-Auto\-Connection (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a94f9a99a25801dec3a3804001b27e986}
+
+
+Definition at line 272 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Extended\-Response(), and B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+273 \{
+274     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTAUT=1,0\(\backslash\)r"});
+275     \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+276 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_ab6ff1c6b356ec144124ffd7dd18ce7b7}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-set\-Command\-Mode@{B\-T\-\_\-set\-Command\-Mode}}
+\index{B\-T\-\_\-set\-Command\-Mode@{B\-T\-\_\-set\-Command\-Mode}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-set\-Command\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-set\-Command\-Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_ab6ff1c6b356ec144124ffd7dd18ce7b7}
+
+
+Definition at line 168 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-send\-Command().
+
+
+
+Referenced by B\-T\-\_\-init().
+
+
+\begin{DoxyCode}
+169 \{
+170     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"+++\(\backslash\)r"});
+171     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"+++\(\backslash\)r"});
+172     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"+++\(\backslash\)r"});
+173     \textcolor{comment}{//return BT\_getResponse(uart\_port);}
+174 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a7d0cd94890d35e2d5c7728c592ebd80b}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-set\-Device\-Address@{B\-T\-\_\-set\-Device\-Address}}
+\index{B\-T\-\_\-set\-Device\-Address@{B\-T\-\_\-set\-Device\-Address}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-set\-Device\-Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-set\-Device\-Address (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port, }
+\item[{{\bf u8} $\ast$}]{bdaddr}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a7d0cd94890d35e2d5c7728c592ebd80b}
+
+
+Definition at line 252 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Extended\-Response(), and B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+253 \{
+254     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTSET=1,%s\(\backslash\)r"}, bdaddr);
+255     \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+256 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_ab0259be99dbfcec77d1adf70b735799e}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-set\-Device\-Name@{B\-T\-\_\-set\-Device\-Name}}
+\index{B\-T\-\_\-set\-Device\-Name@{B\-T\-\_\-set\-Device\-Name}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-set\-Device\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-set\-Device\-Name (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port, }
+\item[{{\bf u8} $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_ab0259be99dbfcec77d1adf70b735799e}
+
+
+Definition at line 232 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Extended\-Response(), and B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+233 \{
+234     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTLNM=\(\backslash\)"%s\(\backslash\)"\(\backslash\)r"}, name); 
+235     \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+236 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a778fb0110554e8638a284f48dc42c90b}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-set\-U\-A\-R\-T\-Speed@{B\-T\-\_\-set\-U\-A\-R\-T\-Speed}}
+\index{B\-T\-\_\-set\-U\-A\-R\-T\-Speed@{B\-T\-\_\-set\-U\-A\-R\-T\-Speed}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-set\-U\-A\-R\-T\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-set\-U\-A\-R\-T\-Speed (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port, }
+\item[{{\bf u32}}]{baud\-\_\-rate}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a778fb0110554e8638a284f48dc42c90b}
+
+
+Definition at line 282 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Extended\-Response(), B\-T\-\_\-send\-Command(), and ultoa().
+
+
+\begin{DoxyCode}
+283 \{
+284     \textcolor{keywordtype}{char} *string;
+285 
+286     \textcolor{comment}{// Change UART settings (baud rate, data bits, stop bits, parity, stop bits, flow control)}
+287     \textcolor{comment}{// Enable RTS/CTS, DTR/DSR Flow control}
+288     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTURT=%s,8,0,1,3\(\backslash\)r"}, \hyperlink{itoa_8c_ab393a711ad96b0f3ace586e83b6c0634}{ultoa}(baud\_rate, \textcolor{keywordtype}{string}, 10));
+289     \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+290 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a4fe61000f60dbc32fc8d2205ad23b4b5}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-sleep@{B\-T\-\_\-sleep}}
+\index{B\-T\-\_\-sleep@{B\-T\-\_\-sleep}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-sleep}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-sleep (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a4fe61000f60dbc32fc8d2205ad23b4b5}
+
+
+Definition at line 326 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Extended\-Response(), and B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+327 \{
+328     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTSLP\(\backslash\)r"});
+329     \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+330 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_ac1cfca9bfbc817e78e87ab8d195a6d09}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-start@{B\-T\-\_\-start}}
+\index{B\-T\-\_\-start@{B\-T\-\_\-start}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_ac1cfca9bfbc817e78e87ab8d195a6d09}
+
+
+Definition at line 316 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Extended\-Response(), and B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+317 \{
+318     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTSRV=1\(\backslash\)r"});
+319     \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+320 \}
+\end{DoxyCode}
+\hypertarget{bluetooth_8c_a8c861b8f766079b3e50ea98635e0340a}{\index{bluetooth.\-c@{bluetooth.\-c}!B\-T\-\_\-write\-Flash@{B\-T\-\_\-write\-Flash}}
+\index{B\-T\-\_\-write\-Flash@{B\-T\-\_\-write\-Flash}!bluetooth.c@{bluetooth.\-c}}
+\subsubsection[{B\-T\-\_\-write\-Flash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-T\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E} B\-T\-\_\-write\-Flash (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{uart\-\_\-port}
+\end{DoxyParamCaption}
+)}}\label{bluetooth_8c_a8c861b8f766079b3e50ea98635e0340a}
+
+
+Definition at line 306 of file bluetooth.\-c.
+
+
+
+References B\-T\-\_\-get\-Extended\-Response(), and B\-T\-\_\-send\-Command().
+
+
+\begin{DoxyCode}
+307 \{
+308     \hyperlink{bluetooth_8c_a33e2c2060afd550c75a5e94c4ce9072e}{BT\_sendCommand}(uart\_port,\textcolor{stringliteral}{"AT+BTFLS\(\backslash\)r"});
+309     \textcolor{keywordflow}{return} \hyperlink{bluetooth_8c_ab32adde3ec9727b170c12d4934d12db0}{BT\_getExtendedResponse}(uart\_port);
+310 \}
+\end{DoxyCode}

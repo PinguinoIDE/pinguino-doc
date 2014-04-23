@@ -1,0 +1,170 @@
+\hypertarget{_i_rremote_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-I\-Rremote.c File Reference}
+\label{_i_rremote_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-I\-Rremote.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/\-I\-Rremote.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$pin.\-h$>$}\\*
+{\ttfamily \#include $<$interrupt.\-h$>$}\\*
+{\ttfamily \#include $<$I\-Rremote.\-h$>$}\\*
+{\ttfamily \#include $<$pwm.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$digitalr.\-c$>$}\\*
+{\ttfamily \#include $<$delayms.\-c$>$}\\*
+{\ttfamily \#include $<$oscillator.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_i_rremote_8c_a14023957dab5b6f2974e60e7fe83dae5}{I\-R\-R\-E\-M\-O\-T\-E\-\_\-\-C}
+\item 
+\#define \hyperlink{_i_rremote_8c_a04a1be8a7270e3297905524313abc758}{\-\_\-1us\-\_\-}~\{ \hyperlink{p32_2include_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}{nop}(); \hyperlink{p32_2include_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}{nop}(); \hyperlink{p32_2include_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}{nop}(); \hyperlink{p32_2include_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}{nop}(); \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_i_rremote_8c_a2abbfabdfd2b8b1b898020af530f57f7}{I\-Rsend\-\_\-mark} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} time)
+\item 
+void \hyperlink{_i_rremote_8c_a897385f09f9f64f54bd155df94e8a9b7}{I\-Rsend\-\_\-space} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} time)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{_i_rremote_8c_a2ca2b96f41308b8386a0911539d612cb}{\-\_\-t3\-\_\-reload\-\_\-val}
+\item 
+volatile \hyperlink{structirparams__t}{irparams\-\_\-t} \hyperlink{_i_rremote_8c_a5620be27a7445f25d43dbe3432ed6fd1}{irparams}
+\item 
+volatile \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{_i_rremote_8c_a7f883f93800be10f5f86b0e3c2812d0f}{irdata}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_i_rremote_8c_a04a1be8a7270e3297905524313abc758}{\index{I\-Rremote.\-c@{I\-Rremote.\-c}!\-\_\-1us\-\_\-@{\-\_\-1us\-\_\-}}
+\index{\-\_\-1us\-\_\-@{\-\_\-1us\-\_\-}!IRremote.c@{I\-Rremote.\-c}}
+\subsubsection[{\-\_\-1us\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-1us\-\_\-~\{ {\bf nop}(); {\bf nop}(); {\bf nop}(); {\bf nop}(); \}}}\label{_i_rremote_8c_a04a1be8a7270e3297905524313abc758}
+
+
+Definition at line 40 of file I\-Rremote.\-c.
+
+
+
+Referenced by I\-Rsend\-\_\-mark(), and I\-Rsend\-\_\-space().
+
+\hypertarget{_i_rremote_8c_a14023957dab5b6f2974e60e7fe83dae5}{\index{I\-Rremote.\-c@{I\-Rremote.\-c}!I\-R\-R\-E\-M\-O\-T\-E\-\_\-\-C@{I\-R\-R\-E\-M\-O\-T\-E\-\_\-\-C}}
+\index{I\-R\-R\-E\-M\-O\-T\-E\-\_\-\-C@{I\-R\-R\-E\-M\-O\-T\-E\-\_\-\-C}!IRremote.c@{I\-Rremote.\-c}}
+\subsubsection[{I\-R\-R\-E\-M\-O\-T\-E\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-R\-R\-E\-M\-O\-T\-E\-\_\-\-C}}\label{_i_rremote_8c_a14023957dab5b6f2974e60e7fe83dae5}
+
+
+Definition at line 25 of file I\-Rremote.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_i_rremote_8c_a2abbfabdfd2b8b1b898020af530f57f7}{\index{I\-Rremote.\-c@{I\-Rremote.\-c}!I\-Rsend\-\_\-mark@{I\-Rsend\-\_\-mark}}
+\index{I\-Rsend\-\_\-mark@{I\-Rsend\-\_\-mark}!IRremote.c@{I\-Rremote.\-c}}
+\subsubsection[{I\-Rsend\-\_\-mark}]{\setlength{\rightskip}{0pt plus 5cm}void I\-Rsend\-\_\-mark (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{time}
+\end{DoxyParamCaption}
+)}}\label{_i_rremote_8c_a2abbfabdfd2b8b1b898020af530f57f7}
+
+
+Definition at line 289 of file I\-Rremote.\-c.
+
+
+
+References \-\_\-1us\-\_\-, irparams\-\_\-t\-::outpin, and P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle().
+
+
+\begin{DoxyCode}
+290 \{
+291     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} i;
+292     \textcolor{comment}{// Sends an IR mark for the specified number of microseconds.}
+293     \textcolor{comment}{// The mark output is modulated at the PWM frequency.}
+294 
+295     \textcolor{comment}{// duty cycle = 50% = Enable PWM output}
+296     \hyperlink{p8_2pinguino_2core_2pwm_8c_ad79c2597ad3679319968d279d23efbc6}{PWM\_setPercentDutyCycle}(\hyperlink{_i_rremote_8c_a5620be27a7445f25d43dbe3432ed6fd1}{irparams}.\hyperlink{structirparams__t_ac90c4f59fb73d64a42331fcb09778461}{outpin}, 50);
+297     
+298     \textcolor{comment}{// loopcounter i = time - correction factor}
+299     \textcolor{comment}{// Without the NOPs the loop has an execution time of ~13 microseconds}
+300     i = time-13;
+301     
+302     \textcolor{comment}{// while () \{\} needs much less time than for (;;) \{\}}
+303     \textcolor{comment}{// for loop without NOPs : ~ 1,3 ms (889 iterations on 18f26j50)}
+304     \textcolor{comment}{// while loop without NOPs: ~ 712 µs (889 Iterations on 18f26j50)}
+305     \textcolor{keywordflow}{while} (i) \{
+306       \hyperlink{_i_rremote_8c_a04a1be8a7270e3297905524313abc758}{\_1us\_}
+307       i--;
+308     \}
+309     
+310 \textcolor{comment}{/*}
+311 \textcolor{comment}{    for (i=0; i<time; i++)}
+312 \textcolor{comment}{    \{}
+313 \textcolor{comment}{;        \_1us\_}
+314 \textcolor{comment}{    \}}
+315 \textcolor{comment}{*/}
+316 \}
+\end{DoxyCode}
+\hypertarget{_i_rremote_8c_a897385f09f9f64f54bd155df94e8a9b7}{\index{I\-Rremote.\-c@{I\-Rremote.\-c}!I\-Rsend\-\_\-space@{I\-Rsend\-\_\-space}}
+\index{I\-Rsend\-\_\-space@{I\-Rsend\-\_\-space}!IRremote.c@{I\-Rremote.\-c}}
+\subsubsection[{I\-Rsend\-\_\-space}]{\setlength{\rightskip}{0pt plus 5cm}void I\-Rsend\-\_\-space (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{time}
+\end{DoxyParamCaption}
+)}}\label{_i_rremote_8c_a897385f09f9f64f54bd155df94e8a9b7}
+
+
+Definition at line 319 of file I\-Rremote.\-c.
+
+
+
+References \-\_\-1us\-\_\-, irparams\-\_\-t\-::outpin, and P\-W\-M\-\_\-set\-Percent\-Duty\-Cycle().
+
+
+\begin{DoxyCode}
+320 \{
+321     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} i;
+322     \textcolor{comment}{// Sends an IR space for the specified number of microseconds.}
+323     \textcolor{comment}{// A space is no output, so the PWM output is disabled.}
+324 
+325     \textcolor{comment}{// duty cycle = 0% = Disable PWM output}
+326     \hyperlink{p8_2pinguino_2core_2pwm_8c_ad79c2597ad3679319968d279d23efbc6}{PWM\_setPercentDutyCycle}(\hyperlink{_i_rremote_8c_a5620be27a7445f25d43dbe3432ed6fd1}{irparams}.\hyperlink{structirparams__t_ac90c4f59fb73d64a42331fcb09778461}{outpin}, 0);
+327 
+328     \textcolor{comment}{// loopcounter i = time - correction factor}
+329     \textcolor{comment}{// without the NOPs the loop has an execution time of ~70 microseconds}
+330   
+331     i = time - 70; \textcolor{comment}{// correction factor: 13 microseconds}
+332     \textcolor{keywordflow}{while} (i) \{
+333       \hyperlink{_i_rremote_8c_a04a1be8a7270e3297905524313abc758}{\_1us\_}
+334       i--;
+335     \}
+336 \textcolor{comment}{/*}
+337 \textcolor{comment}{    for (i=0; i<time; i++)}
+338 \textcolor{comment}{    \{}
+339 \textcolor{comment}{        \_1us\_}
+340 \textcolor{comment}{    \}}
+341 \textcolor{comment}{*/}
+342 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_i_rremote_8c_a2ca2b96f41308b8386a0911539d612cb}{\index{I\-Rremote.\-c@{I\-Rremote.\-c}!\-\_\-t3\-\_\-reload\-\_\-val@{\-\_\-t3\-\_\-reload\-\_\-val}}
+\index{\-\_\-t3\-\_\-reload\-\_\-val@{\-\_\-t3\-\_\-reload\-\_\-val}!IRremote.c@{I\-Rremote.\-c}}
+\subsubsection[{\-\_\-t3\-\_\-reload\-\_\-val}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf u16} \-\_\-t3\-\_\-reload\-\_\-val}}\label{_i_rremote_8c_a2ca2b96f41308b8386a0911539d612cb}
+
+
+Definition at line 42 of file I\-Rremote.\-c.
+
+\hypertarget{_i_rremote_8c_a7f883f93800be10f5f86b0e3c2812d0f}{\index{I\-Rremote.\-c@{I\-Rremote.\-c}!irdata@{irdata}}
+\index{irdata@{irdata}!IRremote.c@{I\-Rremote.\-c}}
+\subsubsection[{irdata}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf u8} irdata}}\label{_i_rremote_8c_a7f883f93800be10f5f86b0e3c2812d0f}
+
+
+Definition at line 44 of file I\-Rremote.\-c.
+
+\hypertarget{_i_rremote_8c_a5620be27a7445f25d43dbe3432ed6fd1}{\index{I\-Rremote.\-c@{I\-Rremote.\-c}!irparams@{irparams}}
+\index{irparams@{irparams}!IRremote.c@{I\-Rremote.\-c}}
+\subsubsection[{irparams}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf irparams\-\_\-t} irparams}}\label{_i_rremote_8c_a5620be27a7445f25d43dbe3432ed6fd1}
+
+
+Definition at line 43 of file I\-Rremote.\-c.
+

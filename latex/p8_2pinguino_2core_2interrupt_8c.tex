@@ -1,0 +1,483 @@
+\hypertarget{p8_2pinguino_2core_2interrupt_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/interrupt.c File Reference}
+\label{p8_2pinguino_2core_2interrupt_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/interrupt.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/interrupt.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$interrupt.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$oscillator.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2interrupt_8c_afe44bd30b10613ddbf3289e033fa508e}{\-\_\-\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2interrupt_8c_a24d2045ebad46b6981015430ae3807b6}{O\-N\-\_\-\-E\-V\-E\-N\-T}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{p8_2pinguino_2core_2interrupt_8c_ac25f106378b79fe2dde575b8314cd4b1}{callback} )(void)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2core_2interrupt_8c_a039d14d5b40221255f9dd7a150758265}{Int\-Timer\-Start} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2interrupt_8c_a02965e12203f4b186a5101b657b4f00e}{Int\-Timer\-Stop} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2interrupt_8c_a4421da6fa566a3eddfaa8f2ffcf01809}{userhighinterrupt} ()
+\item 
+void \hyperlink{p8_2pinguino_2core_2interrupt_8c_aa1eb49bc723faba63fb78dc75db46124}{userlowinterrupt} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2core_2interrupt_8c_ab8a7a85fefb54a2c3552558f4eeaef52}{int\-Used} \mbox{[}\hyperlink{interrupt_8h_aa96d5096c16af4ea4327b0f2c551fc02}{I\-N\-T\-\_\-\-N\-U\-M}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2interrupt_8c_afe44bd30b10613ddbf3289e033fa508e}{\index{p8/pinguino/core/interrupt.\-c@{p8/pinguino/core/interrupt.\-c}!\-\_\-\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C@{\-\_\-\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C@{\-\_\-\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C}!p8/pinguino/core/interrupt.c@{p8/pinguino/core/interrupt.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-I\-N\-T\-E\-R\-R\-U\-P\-T\-\_\-\-C}}\label{p8_2pinguino_2core_2interrupt_8c_afe44bd30b10613ddbf3289e033fa508e}
+
+
+Definition at line 43 of file interrupt.\-c.
+
+\hypertarget{p8_2pinguino_2core_2interrupt_8c_a24d2045ebad46b6981015430ae3807b6}{\index{p8/pinguino/core/interrupt.\-c@{p8/pinguino/core/interrupt.\-c}!O\-N\-\_\-\-E\-V\-E\-N\-T@{O\-N\-\_\-\-E\-V\-E\-N\-T}}
+\index{O\-N\-\_\-\-E\-V\-E\-N\-T@{O\-N\-\_\-\-E\-V\-E\-N\-T}!p8/pinguino/core/interrupt.c@{p8/pinguino/core/interrupt.\-c}}
+\subsubsection[{O\-N\-\_\-\-E\-V\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-N\-\_\-\-E\-V\-E\-N\-T}}\label{p8_2pinguino_2core_2interrupt_8c_a24d2045ebad46b6981015430ae3807b6}
+
+
+Definition at line 46 of file interrupt.\-c.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{p8_2pinguino_2core_2interrupt_8c_ac25f106378b79fe2dde575b8314cd4b1}{\index{p8/pinguino/core/interrupt.\-c@{p8/pinguino/core/interrupt.\-c}!callback@{callback}}
+\index{callback@{callback}!p8/pinguino/core/interrupt.c@{p8/pinguino/core/interrupt.\-c}}
+\subsubsection[{callback}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ callback)(void)}}\label{p8_2pinguino_2core_2interrupt_8c_ac25f106378b79fe2dde575b8314cd4b1}
+
+
+Definition at line 59 of file interrupt.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2interrupt_8c_a039d14d5b40221255f9dd7a150758265}{\index{p8/pinguino/core/interrupt.\-c@{p8/pinguino/core/interrupt.\-c}!Int\-Timer\-Start@{Int\-Timer\-Start}}
+\index{Int\-Timer\-Start@{Int\-Timer\-Start}!p8/pinguino/core/interrupt.c@{p8/pinguino/core/interrupt.\-c}}
+\subsubsection[{Int\-Timer\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void Int\-Timer\-Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2interrupt_8c_a039d14d5b40221255f9dd7a150758265}
+
+
+Definition at line 769 of file interrupt.\-c.
+
+
+
+References O\-N.
+
+
+\begin{DoxyCode}
+770 \{
+771 \textcolor{preprocessor}{    #ifdef TMR0INT}
+772 \textcolor{preprocessor}{}        T0CONbits.TMR0ON = \hyperlink{p8_2pinguino_2core_2const_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON};
+773 \textcolor{preprocessor}{    #endif}
+774 \textcolor{preprocessor}{}
+775 \textcolor{preprocessor}{    #ifdef TMR1INT}
+776 \textcolor{preprocessor}{}        T1CONbits.TMR1ON = \hyperlink{p8_2pinguino_2core_2const_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON};
+777 \textcolor{preprocessor}{    #endif}
+778 \textcolor{preprocessor}{}
+779 \textcolor{preprocessor}{    #ifdef TMR2INT}
+780 \textcolor{preprocessor}{}        T2CONbits.TMR2ON = \hyperlink{p8_2pinguino_2core_2const_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON};
+781 \textcolor{preprocessor}{    #endif}
+782 \textcolor{preprocessor}{}
+783 \textcolor{preprocessor}{    #ifdef TMR3INT}
+784 \textcolor{preprocessor}{}        T3CONbits.TMR3ON = \hyperlink{p8_2pinguino_2core_2const_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON};
+785 \textcolor{preprocessor}{    #endif}
+786 \textcolor{preprocessor}{}
+787 \textcolor{preprocessor}{    #if defined(\_\_18f26j50) || defined(\_\_18f46j50) || \(\backslash\)}
+788 \textcolor{preprocessor}{        defined(\_\_18f26j53) || defined(\_\_18f46j53) || \(\backslash\)}
+789 \textcolor{preprocessor}{        defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+790 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef TMR4INT}
+791 \textcolor{preprocessor}{}            T4CONbits.TMR4ON = \hyperlink{p8_2pinguino_2core_2const_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON};
+792 \textcolor{preprocessor}{        #endif}
+793 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #endif}
+794 \textcolor{preprocessor}{}
+795 \textcolor{preprocessor}{    #if defined(\_\_18f26j53) || defined(\_\_18f46j53) || \(\backslash\)}
+796 \textcolor{preprocessor}{        defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+797 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef TMR5INT}
+798 \textcolor{preprocessor}{}            T5CONbits.TMR5ON = \hyperlink{p8_2pinguino_2core_2const_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON};
+799 \textcolor{preprocessor}{        #endif}
+800 \textcolor{preprocessor}{}
+801 \textcolor{preprocessor}{        #ifdef TMR6INT}
+802 \textcolor{preprocessor}{}            T6CONbits.TMR6ON = \hyperlink{p8_2pinguino_2core_2const_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON};
+803 \textcolor{preprocessor}{        #endif}
+804 \textcolor{preprocessor}{}
+805 \textcolor{preprocessor}{        #ifdef TMR8INT}
+806 \textcolor{preprocessor}{}            T8CONbits.TMR8ON = \hyperlink{p8_2pinguino_2core_2const_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON};
+807 \textcolor{preprocessor}{        #endif}
+808 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #endif}
+809 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2interrupt_8c_a02965e12203f4b186a5101b657b4f00e}{\index{p8/pinguino/core/interrupt.\-c@{p8/pinguino/core/interrupt.\-c}!Int\-Timer\-Stop@{Int\-Timer\-Stop}}
+\index{Int\-Timer\-Stop@{Int\-Timer\-Stop}!p8/pinguino/core/interrupt.c@{p8/pinguino/core/interrupt.\-c}}
+\subsubsection[{Int\-Timer\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}void Int\-Timer\-Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2interrupt_8c_a02965e12203f4b186a5101b657b4f00e}
+
+
+Definition at line 818 of file interrupt.\-c.
+
+
+
+References O\-F\-F.
+
+
+\begin{DoxyCode}
+819 \{
+820 \textcolor{preprocessor}{    #ifdef TMR0INT}
+821 \textcolor{preprocessor}{}        T0CONbits.TMR0ON = \hyperlink{p8_2pinguino_2core_2const_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF};
+822 \textcolor{preprocessor}{    #endif}
+823 \textcolor{preprocessor}{}
+824 \textcolor{preprocessor}{    #ifdef TMR1INT}
+825 \textcolor{preprocessor}{}        T1CONbits.TMR1ON = \hyperlink{p8_2pinguino_2core_2const_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF};
+826 \textcolor{preprocessor}{    #endif}
+827 \textcolor{preprocessor}{}
+828 \textcolor{preprocessor}{    #ifdef TMR2INT}
+829 \textcolor{preprocessor}{}        T2CONbits.TMR2ON = \hyperlink{p8_2pinguino_2core_2const_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF};
+830 \textcolor{preprocessor}{    #endif}
+831 \textcolor{preprocessor}{}
+832 \textcolor{preprocessor}{    #ifdef TMR3INT}
+833 \textcolor{preprocessor}{}        T3CONbits.TMR3ON = \hyperlink{p8_2pinguino_2core_2const_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF};
+834 \textcolor{preprocessor}{    #endif}
+835 \textcolor{preprocessor}{}
+836 \textcolor{preprocessor}{    #if defined(\_\_18f26j50) || defined(\_\_18f46j50) || \(\backslash\)}
+837 \textcolor{preprocessor}{        defined(\_\_18f26j53) || defined(\_\_18f46j53) || \(\backslash\)}
+838 \textcolor{preprocessor}{        defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+839 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef TMR4INT}
+840 \textcolor{preprocessor}{}            T4CONbits.TMR4ON = \hyperlink{p8_2pinguino_2core_2const_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF};
+841 \textcolor{preprocessor}{        #endif}
+842 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #endif}
+843 \textcolor{preprocessor}{}
+844 \textcolor{preprocessor}{    #if defined(\_\_18f26j53) || defined(\_\_18f46j53) || \(\backslash\)}
+845 \textcolor{preprocessor}{        defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+846 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef TMR5INT}
+847 \textcolor{preprocessor}{}            T5CONbits.TMR5ON = \hyperlink{p8_2pinguino_2core_2const_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF};
+848 \textcolor{preprocessor}{        #endif}
+849 \textcolor{preprocessor}{}
+850 \textcolor{preprocessor}{        #ifdef TMR6INT}
+851 \textcolor{preprocessor}{}            T6CONbits.TMR6ON = \hyperlink{p8_2pinguino_2core_2const_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF};
+852 \textcolor{preprocessor}{        #endif}
+853 \textcolor{preprocessor}{}
+854 \textcolor{preprocessor}{        #ifdef TMR8INT}
+855 \textcolor{preprocessor}{}            T8CONbits.TMR8ON = \hyperlink{p8_2pinguino_2core_2const_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF};
+856 \textcolor{preprocessor}{        #endif}
+857 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #endif}
+858 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2interrupt_8c_a4421da6fa566a3eddfaa8f2ffcf01809}{\index{p8/pinguino/core/interrupt.\-c@{p8/pinguino/core/interrupt.\-c}!userhighinterrupt@{userhighinterrupt}}
+\index{userhighinterrupt@{userhighinterrupt}!p8/pinguino/core/interrupt.c@{p8/pinguino/core/interrupt.\-c}}
+\subsubsection[{userhighinterrupt}]{\setlength{\rightskip}{0pt plus 5cm}void userhighinterrupt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2interrupt_8c_a4421da6fa566a3eddfaa8f2ffcf01809}
+
+
+Definition at line 1951 of file interrupt.\-c.
+
+
+
+References I\-N\-T\-\_\-\-I\-N\-T0.
+
+
+\begin{DoxyCode}
+1952 \{
+1953 \textcolor{preprocessor}{    #ifdef INT0INT}
+1954 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (INTCONbits.INT0IE && INTCONbits.INT0IF)
+1955     \{
+1956         INTCONbits.INT0IF = 0;
+1957         intFunction[\hyperlink{interrupt_8h_a07f4a014d2b630308eae40f0663db562}{INT\_INT0}]();
+1958     \}
+1959 \textcolor{preprocessor}{    #endif}
+1960 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2core_2interrupt_8c_aa1eb49bc723faba63fb78dc75db46124}{\index{p8/pinguino/core/interrupt.\-c@{p8/pinguino/core/interrupt.\-c}!userlowinterrupt@{userlowinterrupt}}
+\index{userlowinterrupt@{userlowinterrupt}!p8/pinguino/core/interrupt.c@{p8/pinguino/core/interrupt.\-c}}
+\subsubsection[{userlowinterrupt}]{\setlength{\rightskip}{0pt plus 5cm}void userlowinterrupt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2interrupt_8c_aa1eb49bc723faba63fb78dc75db46124}
+
+
+Definition at line 1970 of file interrupt.\-c.
+
+
+
+References I\-N\-T\-\_\-\-A\-D, I\-N\-T\-\_\-\-B\-C\-L, I\-N\-T\-\_\-\-C\-C\-P1, I\-N\-T\-\_\-\-C\-C\-P2, I\-N\-T\-\_\-\-C\-M, I\-N\-T\-\_\-\-E\-E, I\-N\-T\-\_\-\-H\-L\-V\-D, I\-N\-T\-\_\-\-I\-N\-T1, I\-N\-T\-\_\-\-I\-N\-T2, I\-N\-T\-\_\-\-O\-S\-C\-F, I\-N\-T\-\_\-\-P\-M\-P, I\-N\-T\-\_\-\-R\-B, I\-N\-T\-\_\-\-R\-C, I\-N\-T\-\_\-\-S\-S\-P, I\-N\-T\-\_\-\-T\-M\-R0, I\-N\-T\-\_\-\-T\-M\-R1, I\-N\-T\-\_\-\-T\-M\-R2, I\-N\-T\-\_\-\-T\-M\-R3, I\-N\-T\-\_\-\-T\-M\-R4, I\-N\-T\-\_\-\-T\-M\-R5, I\-N\-T\-\_\-\-T\-M\-R6, I\-N\-T\-\_\-\-T\-M\-R8, I\-N\-T\-\_\-\-T\-X, and I\-N\-T\-\_\-\-U\-S\-B.
+
+
+\begin{DoxyCode}
+1971 \{
+1972 \textcolor{preprocessor}{    #ifdef INT1INT}
+1973 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (INTCON3bits.INT1IE && INTCON3bits.INT1IF)
+1974     \{
+1975         INTCON3bits.INT1IF = 0;
+1976         intFunction[\hyperlink{interrupt_8h_af4b10633d550054fc34f22022ab25bf3}{INT\_INT1}]();
+1977     \}
+1978 \textcolor{preprocessor}{    #endif}
+1979 \textcolor{preprocessor}{}    
+1980 \textcolor{preprocessor}{    #ifdef INT2INT}
+1981 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (INTCON3bits.INT2IE && INTCON3bits.INT2IF)
+1982     \{
+1983         INTCON3bits.INT2IF = 0;
+1984         intFunction[\hyperlink{interrupt_8h_a63fd1e5768624201b60a588bd88acf5c}{INT\_INT2}]();
+1985     \}
+1986 \textcolor{preprocessor}{    #endif}
+1987 \textcolor{preprocessor}{}    
+1988 \textcolor{preprocessor}{    #ifdef RBINT}
+1989 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (INTCONbits.RBIE && INTCONbits.RBIF)
+1990     \{
+1991         INTCONbits.RBIF = 0;
+1992         intFunction[\hyperlink{interrupt_8h_a54847d8a13305608055fdb59ca809f3a}{INT\_RB}]();
+1993     \}
+1994 \textcolor{preprocessor}{    #endif}
+1995 \textcolor{preprocessor}{}    
+1996 \textcolor{preprocessor}{    #if defined (TMR0INT) || defined(CNTR0INT)}
+1997 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (INTCONbits.TMR0IE && INTCONbits.TMR0IF)
+1998     \{
+1999         \textcolor{comment}{//T0CONbits.TMR0ON = OFF;}
+2000         TMR0H = preloadH[\hyperlink{interrupt_8h_a1d1cbabd3d27a7ce01bee0cf9e193652}{INT\_TMR0}];
+2001         TMR0L = preloadL[\hyperlink{interrupt_8h_a1d1cbabd3d27a7ce01bee0cf9e193652}{INT\_TMR0}];
+2002         INTCONbits.TMR0IF = 0;
+2003         \textcolor{keywordflow}{if} (intCount[\hyperlink{interrupt_8h_a1d1cbabd3d27a7ce01bee0cf9e193652}{INT\_TMR0}]++ >= intCountLimit[\hyperlink{interrupt_8h_a1d1cbabd3d27a7ce01bee0cf9e193652}{INT\_TMR0}])
+2004         \{
+2005             intCount[\hyperlink{interrupt_8h_a1d1cbabd3d27a7ce01bee0cf9e193652}{INT\_TMR0}] = 0;
+2006             intFunction[\hyperlink{interrupt_8h_a1d1cbabd3d27a7ce01bee0cf9e193652}{INT\_TMR0}]();
+2007         \}
+2008     \}
+2009 \textcolor{preprocessor}{    #endif}
+2010 \textcolor{preprocessor}{}    
+2011 \textcolor{preprocessor}{    #if defined (TMR1INT) || defined(CNTR1INT)}
+2012 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE1bits.TMR1IE && PIR1bits.TMR1IF)
+2013     \{
+2014         \textcolor{comment}{//T1CONbits.TMR1ON = OFF;}
+2015         TMR1H = preloadH[\hyperlink{interrupt_8h_a8e0f5865c5bff98dcce74abedf67960f}{INT\_TMR1}];
+2016         TMR1L = preloadL[\hyperlink{interrupt_8h_a8e0f5865c5bff98dcce74abedf67960f}{INT\_TMR1}];
+2017         PIR1bits.TMR1IF = 0;
+2018         \textcolor{keywordflow}{if} (intCount[\hyperlink{interrupt_8h_a8e0f5865c5bff98dcce74abedf67960f}{INT\_TMR1}]++ >= intCountLimit[\hyperlink{interrupt_8h_a8e0f5865c5bff98dcce74abedf67960f}{INT\_TMR1}])
+2019         \{
+2020             intCount[\hyperlink{interrupt_8h_a8e0f5865c5bff98dcce74abedf67960f}{INT\_TMR1}] = 0;
+2021             intFunction[\hyperlink{interrupt_8h_a8e0f5865c5bff98dcce74abedf67960f}{INT\_TMR1}]();
+2022         \}
+2023     \}
+2024 \textcolor{preprocessor}{    #endif}
+2025 \textcolor{preprocessor}{}    
+2026 \textcolor{preprocessor}{    #ifdef TMR2INT}
+2027 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE1bits.TMR2IE && PIR1bits.TMR2IF)
+2028     \{
+2029         \textcolor{comment}{//T2CONbits.TMR2ON = OFF;}
+2030         PIR1bits.TMR2IF = 0;
+2031         \textcolor{keywordflow}{if} (intCount[\hyperlink{interrupt_8h_a525445a1ab7e1d2855d18fd416f66a8d}{INT\_TMR2}]++ >= intCountLimit[\hyperlink{interrupt_8h_a525445a1ab7e1d2855d18fd416f66a8d}{INT\_TMR2}])
+2032         \{
+2033             intCount[\hyperlink{interrupt_8h_a525445a1ab7e1d2855d18fd416f66a8d}{INT\_TMR2}] = 0;
+2034             intFunction[\hyperlink{interrupt_8h_a525445a1ab7e1d2855d18fd416f66a8d}{INT\_TMR2}]();
+2035         \}
+2036         \textcolor{comment}{// NB : no need to reload PR2}
+2037     \}
+2038 \textcolor{preprocessor}{    #endif}
+2039 \textcolor{preprocessor}{}    
+2040 \textcolor{preprocessor}{    #if defined (TMR3INT) || defined(CNTR3INT)}
+2041 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE2bits.TMR3IE && PIR2bits.TMR3IF)
+2042     \{
+2043         \textcolor{comment}{//T3CONbits.TMR3ON = OFF;}
+2044         TMR3H = preloadH[\hyperlink{interrupt_8h_a2032337fbb51bb7e9086ca28da0446c5}{INT\_TMR3}];
+2045         TMR3L = preloadL[\hyperlink{interrupt_8h_a2032337fbb51bb7e9086ca28da0446c5}{INT\_TMR3}];
+2046         PIR2bits.TMR3IF = 0;
+2047         \textcolor{keywordflow}{if} (intCount[\hyperlink{interrupt_8h_a2032337fbb51bb7e9086ca28da0446c5}{INT\_TMR3}]++ >= intCountLimit[\hyperlink{interrupt_8h_a2032337fbb51bb7e9086ca28da0446c5}{INT\_TMR3}])
+2048         \{
+2049             intCount[\hyperlink{interrupt_8h_a2032337fbb51bb7e9086ca28da0446c5}{INT\_TMR3}] = 0;
+2050             intFunction[\hyperlink{interrupt_8h_a2032337fbb51bb7e9086ca28da0446c5}{INT\_TMR3}]();
+2051         \}
+2052     \}
+2053 \textcolor{preprocessor}{    #endif}
+2054 \textcolor{preprocessor}{}    
+2055 \textcolor{preprocessor}{    #ifdef TMR4INT}
+2056 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE3bits.TMR4IE && PIR3bits.TMR4IF)
+2057     \{
+2058         \textcolor{comment}{//T4CONbits.TMR4ON = OFF;}
+2059         PIR3bits.TMR4IF = 0;
+2060         \textcolor{keywordflow}{if} (intCount[\hyperlink{interrupt_8h_ae1a21fe5e3606226d79e047d5ae739b0}{INT\_TMR4}]++ >= intCountLimit[\hyperlink{interrupt_8h_ae1a21fe5e3606226d79e047d5ae739b0}{INT\_TMR4}])
+2061         \{
+2062             intCount[\hyperlink{interrupt_8h_ae1a21fe5e3606226d79e047d5ae739b0}{INT\_TMR4}] = 0;
+2063             intFunction[\hyperlink{interrupt_8h_ae1a21fe5e3606226d79e047d5ae739b0}{INT\_TMR4}]();
+2064         \}
+2065         \textcolor{comment}{// NB : no need to reload PR4}
+2066     \}
+2067 \textcolor{preprocessor}{    #endif}
+2068 \textcolor{preprocessor}{}    
+2069 \textcolor{preprocessor}{    #ifdef TMR5INT}
+2070 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE5bits.TMR5IE && PIR5bits.TMR5IF)
+2071     \{
+2072         \textcolor{comment}{//T5CONbits.TMR5ON = OFF;}
+2073         PIR5bits.TMR5IF = 0;
+2074         \textcolor{keywordflow}{if} (intCount[\hyperlink{interrupt_8h_a352d63f59443ab14f7ebcb06882420ef}{INT\_TMR5}]++ >= intCountLimit[\hyperlink{interrupt_8h_a352d63f59443ab14f7ebcb06882420ef}{INT\_TMR5}])
+2075         \{
+2076             intCount[\hyperlink{interrupt_8h_a352d63f59443ab14f7ebcb06882420ef}{INT\_TMR5}] = 0;
+2077             intFunction[\hyperlink{interrupt_8h_a352d63f59443ab14f7ebcb06882420ef}{INT\_TMR5}]();
+2078         \}
+2079     \}
+2080 \textcolor{preprocessor}{    #endif}
+2081 \textcolor{preprocessor}{}    
+2082 \textcolor{preprocessor}{    #ifdef TMR6INT}
+2083 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE5bits.TMR6IE && PIR5bits.TMR6IF)
+2084     \{
+2085         \textcolor{comment}{//T6CONbits.TMR6ON = OFF;}
+2086         PIR5bits.TMR6IF = 0;
+2087         \textcolor{keywordflow}{if} (intCount[\hyperlink{interrupt_8h_a9a7493422d361eeb666324eee4e72c46}{INT\_TMR6}]++ >= intCountLimit[\hyperlink{interrupt_8h_a9a7493422d361eeb666324eee4e72c46}{INT\_TMR6}])
+2088         \{
+2089             intCount[\hyperlink{interrupt_8h_a9a7493422d361eeb666324eee4e72c46}{INT\_TMR6}] = 0;
+2090             intFunction[\hyperlink{interrupt_8h_a9a7493422d361eeb666324eee4e72c46}{INT\_TMR6}]();
+2091         \}
+2092     \}
+2093 \textcolor{preprocessor}{    #endif}
+2094 \textcolor{preprocessor}{}    
+2095 \textcolor{preprocessor}{    #ifdef TMR8INT}
+2096 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE5bits.TMR8IE && PIR5bits.TMR8IF)
+2097     \{
+2098         \textcolor{comment}{//T8CONbits.TMR8ON = OFF;}
+2099         PIR5bits.TMR8IF = 0;
+2100         \textcolor{keywordflow}{if} (intCount[\hyperlink{interrupt_8h_afd7397866748897d9c4ab2e9357c0a5a}{INT\_TMR8}]++ >= intCountLimit[\hyperlink{interrupt_8h_afd7397866748897d9c4ab2e9357c0a5a}{INT\_TMR8}])
+2101         \{
+2102             intCount[\hyperlink{interrupt_8h_afd7397866748897d9c4ab2e9357c0a5a}{INT\_TMR8}] = 0;
+2103             intFunction[\hyperlink{interrupt_8h_afd7397866748897d9c4ab2e9357c0a5a}{INT\_TMR8}]();
+2104         \}
+2105     \}
+2106 \textcolor{preprocessor}{    #endif}
+2107 \textcolor{preprocessor}{}    
+2108 \textcolor{preprocessor}{    #ifdef ADINT}
+2109 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE1bits.ADIE && PIR1bits.ADIF)
+2110     \{
+2111         PIR1bits.ADIF = 0;
+2112         intFunction[\hyperlink{interrupt_8h_a85d66591e1cab863a514af47bdf671d9}{INT\_AD}]();
+2113     \}
+2114 \textcolor{preprocessor}{    #endif}
+2115 \textcolor{preprocessor}{}    
+2116 \textcolor{preprocessor}{    #ifdef RCINT}
+2117 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE1bits.RCIE && PIR1bits.RCIF)
+2118     \{
+2119         PIR1bits.RCIF = 0;
+2120         intFunction[\hyperlink{interrupt_8h_afaa9f7c5fe94cf74964c1206f2b2c959}{INT\_RC}]();
+2121     \}
+2122 \textcolor{preprocessor}{    #endif}
+2123 \textcolor{preprocessor}{}    
+2124 \textcolor{preprocessor}{    #ifdef TXINT}
+2125 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE1bits.TXIE && PIR1bits.TXIF)
+2126     \{
+2127         PIR1bits.TXIF = 0;
+2128         intFunction[\hyperlink{interrupt_8h_ae4b980b956c3a627cbc50deaa33efb0d}{INT\_TX}]();
+2129     \}
+2130 \textcolor{preprocessor}{    #endif}
+2131 \textcolor{preprocessor}{}    
+2132 \textcolor{preprocessor}{    #ifdef CCP1INT}
+2133 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE1bits.CCP1IE && PIR1bits.CCP1IF)
+2134     \{
+2135         PIR1bits.CCP1IF = 0;
+2136         intFunction[\hyperlink{interrupt_8h_a9e751270bdd089f2f9e0dfa1fb3548fa}{INT\_CCP1}]();
+2137     \}
+2138 \textcolor{preprocessor}{    #endif}
+2139 \textcolor{preprocessor}{}    
+2140 \textcolor{preprocessor}{    #ifdef CCP2INT}
+2141 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE2bits.CCP2IE && PIR2bits.CCP2IF)
+2142     \{
+2143         PIR2bits.CCP2IF = 0;
+2144         intFunction[\hyperlink{interrupt_8h_ae7952254a56c6ad94873ac960b0e0577}{INT\_CCP2}]();
+2145     \}
+2146 \textcolor{preprocessor}{    #endif}
+2147 \textcolor{preprocessor}{}    
+2148 \textcolor{preprocessor}{    #ifdef EEINT}
+2149 \textcolor{preprocessor}{}    
+2150     \textcolor{keywordflow}{if} (PIE2bits.EEIE && PIR2bits.EEIF)
+2151     \{
+2152         PIR2bits.EEIF = 0;
+2153         intFunction[\hyperlink{interrupt_8h_ace3d00e09690b38faa21e754a6ea035b}{INT\_EE}]();
+2154     \}
+2155 \textcolor{preprocessor}{    #endif}
+2156 \textcolor{preprocessor}{}    
+2157 \textcolor{preprocessor}{    #ifdef USBINT}
+2158 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE2bits.USBIE && PIR2bits.USBIF)
+2159     \{
+2160         PIR2bits.USBIF = 0;
+2161         intFunction[\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a5dae4195f004e6899a36066e00dcd13d}{INT\_USB}]();
+2162     \}
+2163 \textcolor{preprocessor}{    #endif}
+2164 \textcolor{preprocessor}{}    
+2165 \textcolor{preprocessor}{    #ifdef OSCFINT}
+2166 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE2bits.OSCFIE && PIR2bits.OSCFIF)
+2167     \{
+2168         PIR2bits.OSCFIF = 0;
+2169         intFunction[\hyperlink{interrupt_8h_a77d1f90becda08972f61baba06388c18}{INT\_OSCF}]();
+2170     \}
+2171 \textcolor{preprocessor}{    #endif}
+2172 \textcolor{preprocessor}{}    
+2173 \textcolor{preprocessor}{    #ifdef CMINT}
+2174 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE2bits.CMIE && PIR2bits.CMIF)
+2175     \{
+2176         PIR2bits.CMIF = 0;
+2177         intFunction[\hyperlink{interrupt_8h_a3881911c4ed895695d2e741cc02a1154}{INT\_CM}]();
+2178     \}
+2179 \textcolor{preprocessor}{    #endif}
+2180 \textcolor{preprocessor}{}    
+2181 \textcolor{preprocessor}{    #ifdef BCLINT}
+2182 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE2bits.BCLIE && PIR2bits.BCLIF)
+2183     \{
+2184         PIR2bits.BCLIF = 0;
+2185         intFunction[\hyperlink{interrupt_8h_a8c32a75724d4778bdaefc630f0c0954e}{INT\_BCL}]();
+2186     \}
+2187 \textcolor{preprocessor}{    #endif}
+2188 \textcolor{preprocessor}{}    
+2189 \textcolor{preprocessor}{    #ifdef HLVDINT}
+2190 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE2bits.HLVDIE && PIR2bits.HLVDIF)
+2191     \{
+2192         PIR2bits.HLVDIF = 0;
+2193         intFunction[\hyperlink{interrupt_8h_a749178e166f40b96d363ba9ae1ad57c7}{INT\_HLVD}]();
+2194     \}
+2195 \textcolor{preprocessor}{    #endif}
+2196 \textcolor{preprocessor}{}    
+2197 \textcolor{preprocessor}{    #ifdef SSPINT}
+2198 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE1bits.SSPIE && PIR1bits.SSPIF)
+2199     \{
+2200         PIR1bits.SSPIF = 0;
+2201         intFunction[\hyperlink{interrupt_8h_a855d7c70fa51d173537f137eb76263c9}{INT\_SSP}]();
+2202     \}
+2203 \textcolor{preprocessor}{    #endif}
+2204 \textcolor{preprocessor}{}
+2205 \textcolor{preprocessor}{    #if defined(\_\_18f46j53) || defined(\_\_18f47j53)}
+2206 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #if defined(PMPINT)}
+2207 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (PIE1bits.PMPIE && PIR1bits.PMPIF)
+2208     \{
+2209         PIR1bits.PMPIF = 0;
+2210         intFunction[\hyperlink{interrupt_8h_a3e060da74fb4117541d878ecfa9513cd}{INT\_PMP}]();
+2211     \}
+2212 \textcolor{preprocessor}{    #endif}
+2213 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #endif}
+2214 \textcolor{preprocessor}{}
+2215     \textcolor{comment}{//int\_start();}
+2216 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2core_2interrupt_8c_ab8a7a85fefb54a2c3552558f4eeaef52}{\index{p8/pinguino/core/interrupt.\-c@{p8/pinguino/core/interrupt.\-c}!int\-Used@{int\-Used}}
+\index{int\-Used@{int\-Used}!p8/pinguino/core/interrupt.c@{p8/pinguino/core/interrupt.\-c}}
+\subsubsection[{int\-Used}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} int\-Used\mbox{[}{\bf I\-N\-T\-\_\-\-N\-U\-M}\mbox{]}}}\label{p8_2pinguino_2core_2interrupt_8c_ab8a7a85fefb54a2c3552558f4eeaef52}
+
+
+Definition at line 62 of file interrupt.\-c.
+

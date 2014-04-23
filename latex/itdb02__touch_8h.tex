@@ -1,0 +1,484 @@
+\hypertarget{itdb02__touch_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/itdb02/itdb02\-\_\-touch.h File Reference}
+\label{itdb02__touch_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/itdb02/itdb02\-\_\-touch.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/itdb02/itdb02\-\_\-touch.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{itdb02__touch_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{P\-O\-R\-T\-R\-A\-I\-T}~0
+\item 
+\#define \hyperlink{itdb02__touch_8h_a211dd160685be8a5a4f43be3fc3195a4}{L\-A\-N\-D\-S\-C\-A\-P\-E}~1
+\item 
+\#define \hyperlink{itdb02__touch_8h_a7dea406a5c1447d12b8413346a3fff97}{P\-R\-E\-C\-\_\-\-L\-O\-W}~1
+\item 
+\#define \hyperlink{itdb02__touch_8h_a5613e0ac97fb6daa0d7fe26110296480}{P\-R\-E\-C\-\_\-\-M\-E\-D\-I\-U\-M}~2
+\item 
+\#define \hyperlink{itdb02__touch_8h_ab0746e6cf4fec66f091a394780136197}{P\-R\-E\-C\-\_\-\-H\-I}~3
+\item 
+\#define \hyperlink{itdb02__touch_8h_a6527f97e200ab289ecb8c167bcf3990c}{P\-R\-E\-C\-\_\-\-E\-X\-T\-R\-E\-M\-E}~4
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{itdb02__touch_8h_ac995285b60c9d245b98a847b092f728f}{touch\-\_\-set\-Touch} (unsigned char tclk, unsigned char tcs, unsigned char tdin, unsigned char dout, unsigned char irq)
+\item 
+void \hyperlink{itdb02__touch_8h_ad2a4d147724783bcc39880c5615b93ad}{touch\-\_\-init\-Touch} (unsigned char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_ad3274afa69408ce3e36e151a4d4ad663}{orientation})
+\item 
+void \hyperlink{itdb02__touch_8h_a366389c4ec5d1bcb3b92ba0424dac363}{touch\-\_\-read} ()
+\item 
+unsigned char \hyperlink{itdb02__touch_8h_ad4608736e8236d74ded15d3d6da295fb}{touch\-\_\-data\-Available} ()
+\item 
+int \hyperlink{itdb02__touch_8h_aad73fce17d7d0573a7a8df60e64a3a8c}{touch\-\_\-get\-X} ()
+\item 
+int \hyperlink{itdb02__touch_8h_a3c4914f90e8092468449c1108e3f3a75}{touch\-\_\-get\-Y} ()
+\item 
+void \hyperlink{itdb02__touch_8h_aa7f4f0649f95226e71499147b29daa27}{touch\-\_\-set\-Precision} (unsigned char precision)
+\item 
+void \hyperlink{itdb02__touch_8h_adf60f92e0bd5ded1fd73450ab603675b}{touch\-\_\-\-Write\-Data} (unsigned char data)
+\item 
+unsigned int \hyperlink{itdb02__touch_8h_aa26379fe3305d8ddfe9b58509ad52f65}{touch\-\_\-\-Read\-Data} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{itdb02__touch_8h_a071cf564bf9f0421181993dfff8396d4}{T\-P\-\_\-\-X}
+\item 
+int \hyperlink{itdb02__touch_8h_a459474dff8fc2778e79551d500af8a7a}{T\-P\-\_\-\-Y}
+\item 
+unsigned char \hyperlink{itdb02__touch_8h_a9b21e5a2ed974e661d71a8ca4c5c3114}{T\-\_\-\-C\-L\-K}
+\item 
+unsigned char \hyperlink{itdb02__touch_8h_a6071afa0c336d3042bb81d6b8b3166b5}{T\-\_\-\-C\-S}
+\item 
+unsigned char \hyperlink{itdb02__touch_8h_a60a894ed74863c698bd213cfa08f3152}{T\-\_\-\-D\-I\-N}
+\item 
+unsigned char \hyperlink{itdb02__touch_8h_ad9713a2c61304b6271f817cd86d25ebf}{T\-\_\-\-D\-O\-U\-T}
+\item 
+unsigned char \hyperlink{itdb02__touch_8h_a5c3650cbe9f7ee535bec7a6832a3f2ea}{T\-\_\-\-I\-R\-Q}
+\item 
+unsigned char \hyperlink{itdb02__touch_8h_aad8256c91131c5ec7b3a7cb6c6de6675}{orient\-\_\-t}
+\item 
+unsigned char \hyperlink{itdb02__touch_8h_aa6f23547fb4cf1df2070ce6d08626588}{prec}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{itdb02__touch_8h_a211dd160685be8a5a4f43be3fc3195a4}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!L\-A\-N\-D\-S\-C\-A\-P\-E@{L\-A\-N\-D\-S\-C\-A\-P\-E}}
+\index{L\-A\-N\-D\-S\-C\-A\-P\-E@{L\-A\-N\-D\-S\-C\-A\-P\-E}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{L\-A\-N\-D\-S\-C\-A\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-A\-N\-D\-S\-C\-A\-P\-E~1}}\label{itdb02__touch_8h_a211dd160685be8a5a4f43be3fc3195a4}
+
+
+Definition at line 42 of file itdb02\-\_\-touch.\-h.
+
+\hypertarget{itdb02__touch_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!P\-O\-R\-T\-R\-A\-I\-T@{P\-O\-R\-T\-R\-A\-I\-T}}
+\index{P\-O\-R\-T\-R\-A\-I\-T@{P\-O\-R\-T\-R\-A\-I\-T}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{P\-O\-R\-T\-R\-A\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-O\-R\-T\-R\-A\-I\-T~0}}\label{itdb02__touch_8h_a20d6fe800ee77dff684c05b86d5ab3b7}
+
+
+Definition at line 41 of file itdb02\-\_\-touch.\-h.
+
+\hypertarget{itdb02__touch_8h_a6527f97e200ab289ecb8c167bcf3990c}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!P\-R\-E\-C\-\_\-\-E\-X\-T\-R\-E\-M\-E@{P\-R\-E\-C\-\_\-\-E\-X\-T\-R\-E\-M\-E}}
+\index{P\-R\-E\-C\-\_\-\-E\-X\-T\-R\-E\-M\-E@{P\-R\-E\-C\-\_\-\-E\-X\-T\-R\-E\-M\-E}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{P\-R\-E\-C\-\_\-\-E\-X\-T\-R\-E\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-E\-C\-\_\-\-E\-X\-T\-R\-E\-M\-E~4}}\label{itdb02__touch_8h_a6527f97e200ab289ecb8c167bcf3990c}
+
+
+Definition at line 47 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-set\-Precision().
+
+\hypertarget{itdb02__touch_8h_ab0746e6cf4fec66f091a394780136197}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!P\-R\-E\-C\-\_\-\-H\-I@{P\-R\-E\-C\-\_\-\-H\-I}}
+\index{P\-R\-E\-C\-\_\-\-H\-I@{P\-R\-E\-C\-\_\-\-H\-I}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{P\-R\-E\-C\-\_\-\-H\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-E\-C\-\_\-\-H\-I~3}}\label{itdb02__touch_8h_ab0746e6cf4fec66f091a394780136197}
+
+
+Definition at line 46 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-set\-Precision().
+
+\hypertarget{itdb02__touch_8h_a7dea406a5c1447d12b8413346a3fff97}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!P\-R\-E\-C\-\_\-\-L\-O\-W@{P\-R\-E\-C\-\_\-\-L\-O\-W}}
+\index{P\-R\-E\-C\-\_\-\-L\-O\-W@{P\-R\-E\-C\-\_\-\-L\-O\-W}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{P\-R\-E\-C\-\_\-\-L\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-E\-C\-\_\-\-L\-O\-W~1}}\label{itdb02__touch_8h_a7dea406a5c1447d12b8413346a3fff97}
+
+
+Definition at line 44 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-set\-Precision().
+
+\hypertarget{itdb02__touch_8h_a5613e0ac97fb6daa0d7fe26110296480}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!P\-R\-E\-C\-\_\-\-M\-E\-D\-I\-U\-M@{P\-R\-E\-C\-\_\-\-M\-E\-D\-I\-U\-M}}
+\index{P\-R\-E\-C\-\_\-\-M\-E\-D\-I\-U\-M@{P\-R\-E\-C\-\_\-\-M\-E\-D\-I\-U\-M}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{P\-R\-E\-C\-\_\-\-M\-E\-D\-I\-U\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-E\-C\-\_\-\-M\-E\-D\-I\-U\-M~2}}\label{itdb02__touch_8h_a5613e0ac97fb6daa0d7fe26110296480}
+
+
+Definition at line 45 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-set\-Precision().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{itdb02__touch_8h_ad4608736e8236d74ded15d3d6da295fb}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!touch\-\_\-data\-Available@{touch\-\_\-data\-Available}}
+\index{touch\-\_\-data\-Available@{touch\-\_\-data\-Available}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{touch\-\_\-data\-Available}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char touch\-\_\-data\-Available (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{itdb02__touch_8h_ad4608736e8236d74ded15d3d6da295fb}
+
+
+Definition at line 156 of file itdb02\-\_\-touch.\-c.
+
+
+
+References digitalread(), and T\-\_\-\-I\-R\-Q.
+
+
+\begin{DoxyCode}
+156                                    \{
+157   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} avail;
+158   avail = !\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(\hyperlink{itdb02__touch_8h_a5c3650cbe9f7ee535bec7a6832a3f2ea}{T\_IRQ});
+159   \textcolor{keywordflow}{return} avail;
+160 \}
+\end{DoxyCode}
+\hypertarget{itdb02__touch_8h_aad73fce17d7d0573a7a8df60e64a3a8c}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!touch\-\_\-get\-X@{touch\-\_\-get\-X}}
+\index{touch\-\_\-get\-X@{touch\-\_\-get\-X}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{touch\-\_\-get\-X}]{\setlength{\rightskip}{0pt plus 5cm}int touch\-\_\-get\-X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{itdb02__touch_8h_aad73fce17d7d0573a7a8df60e64a3a8c}
+
+
+Definition at line 162 of file itdb02\-\_\-touch.\-c.
+
+
+
+References orient\-\_\-t, Pix\-Offs\-X, Pix\-Offs\-Y, Pix\-Size\-X, Pix\-Size\-Y, P\-O\-R\-T\-R\-A\-I\-T, T\-P\-\_\-\-X, and T\-P\-\_\-\-Y.
+
+
+\begin{DoxyCode}
+162                 \{
+163     \textcolor{keywordtype}{int} value;
+164 
+165     \textcolor{keywordflow}{if} (\hyperlink{itdb02__touch_8h_aad8256c91131c5ec7b3a7cb6c6de6675}{orient\_t} == \hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT}) \{
+166         \textcolor{keywordflow}{if} (\hyperlink{itdb02__touch_8c_a7701ab61924281ae4d220fa5a13181d5}{PixSizeX}>=0) \{
+167         value = (240-(\hyperlink{itdb02__touch_8h_a071cf564bf9f0421181993dfff8396d4}{TP\_X}-\hyperlink{itdb02__touch_8c_a5014199e5edf4a164bf2023988047c0e}{PixOffsX})/\hyperlink{itdb02__touch_8c_a7701ab61924281ae4d220fa5a13181d5}{PixSizeX});
+168         \}
+169         \textcolor{keywordflow}{else} \{
+170         value = ((\hyperlink{itdb02__touch_8h_a071cf564bf9f0421181993dfff8396d4}{TP\_X}-\hyperlink{itdb02__touch_8c_a5014199e5edf4a164bf2023988047c0e}{PixOffsX})/-(\hyperlink{itdb02__touch_8c_a7701ab61924281ae4d220fa5a13181d5}{PixSizeX}));
+171         \}
+172     \}
+173     \textcolor{keywordflow}{else} \{
+174     \textcolor{keywordflow}{if} (\hyperlink{itdb02__touch_8c_a0c557ade2aa40043006574c2e025de75}{PixSizeY}<0)
+175         value = (400-(\hyperlink{itdb02__touch_8h_a459474dff8fc2778e79551d500af8a7a}{TP\_Y}-\hyperlink{itdb02__touch_8c_a24a819037c219f0bbc25e2c8576ff4ea}{PixOffsY})/-\hyperlink{itdb02__touch_8c_a0c557ade2aa40043006574c2e025de75}{PixSizeY});
+176     \textcolor{keywordflow}{else}
+177         value = ((\hyperlink{itdb02__touch_8h_a459474dff8fc2778e79551d500af8a7a}{TP\_Y}-\hyperlink{itdb02__touch_8c_a24a819037c219f0bbc25e2c8576ff4ea}{PixOffsY})/\hyperlink{itdb02__touch_8c_a0c557ade2aa40043006574c2e025de75}{PixSizeY});
+178     \}
+179 
+180     \textcolor{keywordflow}{if} (value < 0)
+181     value = 0;
+182     
+183     \textcolor{keywordflow}{return} value;
+184 \}
+\end{DoxyCode}
+\hypertarget{itdb02__touch_8h_a3c4914f90e8092468449c1108e3f3a75}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!touch\-\_\-get\-Y@{touch\-\_\-get\-Y}}
+\index{touch\-\_\-get\-Y@{touch\-\_\-get\-Y}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{touch\-\_\-get\-Y}]{\setlength{\rightskip}{0pt plus 5cm}int touch\-\_\-get\-Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{itdb02__touch_8h_a3c4914f90e8092468449c1108e3f3a75}
+
+
+Definition at line 186 of file itdb02\-\_\-touch.\-c.
+
+
+
+References orient\-\_\-t, Pix\-Offs\-X, Pix\-Offs\-Y, Pix\-Size\-X, Pix\-Size\-Y, P\-O\-R\-T\-R\-A\-I\-T, T\-P\-\_\-\-X, and T\-P\-\_\-\-Y.
+
+
+\begin{DoxyCode}
+186                 \{
+187     \textcolor{keywordtype}{int} value;
+188 
+189     \textcolor{keywordflow}{if} (\hyperlink{itdb02__touch_8h_aad8256c91131c5ec7b3a7cb6c6de6675}{orient\_t} == \hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})\{
+190         \textcolor{keywordflow}{if} (\hyperlink{itdb02__touch_8c_a0c557ade2aa40043006574c2e025de75}{PixSizeY}<0)
+191             value = ((\hyperlink{itdb02__touch_8h_a459474dff8fc2778e79551d500af8a7a}{TP\_Y}-\hyperlink{itdb02__touch_8c_a24a819037c219f0bbc25e2c8576ff4ea}{PixOffsY})/-\hyperlink{itdb02__touch_8c_a0c557ade2aa40043006574c2e025de75}{PixSizeY});
+192         \textcolor{keywordflow}{else}
+193             value = (320-(\hyperlink{itdb02__touch_8h_a459474dff8fc2778e79551d500af8a7a}{TP\_Y}-\hyperlink{itdb02__touch_8c_a24a819037c219f0bbc25e2c8576ff4ea}{PixOffsY})/\hyperlink{itdb02__touch_8c_a0c557ade2aa40043006574c2e025de75}{PixSizeY});
+194     \}
+195     \textcolor{keywordflow}{else}\{
+196     \textcolor{keywordflow}{if} (\hyperlink{itdb02__touch_8c_a7701ab61924281ae4d220fa5a13181d5}{PixSizeX}>=0)\{
+197         value = (240-(\hyperlink{itdb02__touch_8h_a071cf564bf9f0421181993dfff8396d4}{TP\_X}-\hyperlink{itdb02__touch_8c_a5014199e5edf4a164bf2023988047c0e}{PixOffsX})/\hyperlink{itdb02__touch_8c_a7701ab61924281ae4d220fa5a13181d5}{PixSizeX});
+198     \}
+199     \textcolor{keywordflow}{else}\{
+200         value = ((\hyperlink{itdb02__touch_8h_a071cf564bf9f0421181993dfff8396d4}{TP\_X}-\hyperlink{itdb02__touch_8c_a5014199e5edf4a164bf2023988047c0e}{PixOffsX})/-(\hyperlink{itdb02__touch_8c_a7701ab61924281ae4d220fa5a13181d5}{PixSizeX}));
+201     \}
+202     \}
+203 
+204     \textcolor{keywordflow}{if} (value < 0)
+205         value = 0;
+206     \textcolor{keywordflow}{return} value;  
+207 \}
+\end{DoxyCode}
+\hypertarget{itdb02__touch_8h_ad2a4d147724783bcc39880c5615b93ad}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!touch\-\_\-init\-Touch@{touch\-\_\-init\-Touch}}
+\index{touch\-\_\-init\-Touch@{touch\-\_\-init\-Touch}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{touch\-\_\-init\-Touch}]{\setlength{\rightskip}{0pt plus 5cm}void touch\-\_\-init\-Touch (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{orientation}
+\end{DoxyParamCaption}
+)}}\label{itdb02__touch_8h_ad2a4d147724783bcc39880c5615b93ad}
+
+
+Definition at line 78 of file itdb02\-\_\-touch.\-c.
+
+
+
+References digitalwrite(), H\-I\-G\-H, I\-N\-P\-U\-T, orient\-\_\-t, O\-U\-T\-P\-U\-T, pinmode(), T\-\_\-\-C\-L\-K, T\-\_\-\-C\-S, T\-\_\-\-D\-I\-N, T\-\_\-\-D\-O\-U\-T, and T\-\_\-\-I\-R\-Q.
+
+
+\begin{DoxyCode}
+78                                                  \{
+79     \hyperlink{itdb02__touch_8h_aad8256c91131c5ec7b3a7cb6c6de6675}{orient\_t} = orient\_tation;
+80 
+81     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{itdb02__touch_8h_a9b21e5a2ed974e661d71a8ca4c5c3114}{T\_CLK},  \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+82     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{itdb02__touch_8h_a6071afa0c336d3042bb81d6b8b3166b5}{T\_CS},   \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+83     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{itdb02__touch_8h_a60a894ed74863c698bd213cfa08f3152}{T\_DIN},  \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});
+84     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{itdb02__touch_8h_ad9713a2c61304b6271f817cd86d25ebf}{T\_DOUT}, \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT});
+85     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{itdb02__touch_8h_a5c3650cbe9f7ee535bec7a6832a3f2ea}{T\_IRQ},  \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT});
+86 
+87     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{itdb02__touch_8h_a6071afa0c336d3042bb81d6b8b3166b5}{T\_CS},  \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+88     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{itdb02__touch_8h_a9b21e5a2ed974e661d71a8ca4c5c3114}{T\_CLK}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+89     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{itdb02__touch_8h_a60a894ed74863c698bd213cfa08f3152}{T\_DIN}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+90     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{itdb02__touch_8h_a9b21e5a2ed974e661d71a8ca4c5c3114}{T\_CLK}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+91 \}
+\end{DoxyCode}
+\hypertarget{itdb02__touch_8h_a366389c4ec5d1bcb3b92ba0424dac363}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!touch\-\_\-read@{touch\-\_\-read}}
+\index{touch\-\_\-read@{touch\-\_\-read}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{touch\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}void touch\-\_\-read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{itdb02__touch_8h_a366389c4ec5d1bcb3b92ba0424dac363}
+
+
+Definition at line 132 of file itdb02\-\_\-touch.\-c.
+
+
+
+References digitalwrite(), H\-I\-G\-H, L\-O\-W, prec, T\-\_\-\-C\-L\-K, T\-\_\-\-C\-S, touch\-\_\-read\-Data(), touch\-\_\-write\-Data(), T\-P\-\_\-\-X, and T\-P\-\_\-\-Y.
+
+
+\begin{DoxyCode}
+132                   \{
+133     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} tx=0;
+134     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} ty=0;
+135     \textcolor{keywordtype}{int} i;
+136     
+137     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{itdb02__touch_8h_a6071afa0c336d3042bb81d6b8b3166b5}{T\_CS},\hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+138                   
+139     \textcolor{keywordflow}{for} (i=0; i<\hyperlink{itdb02__touch_8h_aa6f23547fb4cf1df2070ce6d08626588}{prec}; i++)\{
+140     \hyperlink{itdb02__touch_8c_a72aea7b15fea9d9d92d101996d300c1a}{touch\_writeData}(0x90);        
+141     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{itdb02__touch_8h_a9b21e5a2ed974e661d71a8ca4c5c3114}{T\_CLK},\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+142     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{itdb02__touch_8h_a9b21e5a2ed974e661d71a8ca4c5c3114}{T\_CLK},\hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});    
+143     ty+=\hyperlink{itdb02__touch_8c_abf1b36e1f44dcd14e87d7f5b7bd8c158}{touch\_readData}();
+144     \hyperlink{itdb02__touch_8c_a72aea7b15fea9d9d92d101996d300c1a}{touch\_writeData}(0xD0);      
+145     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{itdb02__touch_8h_a9b21e5a2ed974e661d71a8ca4c5c3114}{T\_CLK},\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});  
+146     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{itdb02__touch_8h_a9b21e5a2ed974e661d71a8ca4c5c3114}{T\_CLK},\hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW});
+147     tx+=\hyperlink{itdb02__touch_8c_abf1b36e1f44dcd14e87d7f5b7bd8c158}{touch\_readData}();
+148     \}
+149 
+150     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{itdb02__touch_8h_a6071afa0c336d3042bb81d6b8b3166b5}{T\_CS},\hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});
+151     
+152     \hyperlink{itdb02__touch_8h_a071cf564bf9f0421181993dfff8396d4}{TP\_X}=tx/\hyperlink{itdb02__touch_8h_aa6f23547fb4cf1df2070ce6d08626588}{prec};
+153     \hyperlink{itdb02__touch_8h_a459474dff8fc2778e79551d500af8a7a}{TP\_Y}=ty/\hyperlink{itdb02__touch_8h_aa6f23547fb4cf1df2070ce6d08626588}{prec};
+154 \}
+\end{DoxyCode}
+\hypertarget{itdb02__touch_8h_aa26379fe3305d8ddfe9b58509ad52f65}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!touch\-\_\-\-Read\-Data@{touch\-\_\-\-Read\-Data}}
+\index{touch\-\_\-\-Read\-Data@{touch\-\_\-\-Read\-Data}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{touch\-\_\-\-Read\-Data}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int touch\-\_\-\-Read\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{itdb02__touch_8h_aa26379fe3305d8ddfe9b58509ad52f65}
+\hypertarget{itdb02__touch_8h_aa7f4f0649f95226e71499147b29daa27}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!touch\-\_\-set\-Precision@{touch\-\_\-set\-Precision}}
+\index{touch\-\_\-set\-Precision@{touch\-\_\-set\-Precision}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{touch\-\_\-set\-Precision}]{\setlength{\rightskip}{0pt plus 5cm}void touch\-\_\-set\-Precision (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{precision}
+\end{DoxyParamCaption}
+)}}\label{itdb02__touch_8h_aa7f4f0649f95226e71499147b29daa27}
+
+
+Definition at line 209 of file itdb02\-\_\-touch.\-c.
+
+
+
+References prec, P\-R\-E\-C\-\_\-\-E\-X\-T\-R\-E\-M\-E, P\-R\-E\-C\-\_\-\-H\-I, P\-R\-E\-C\-\_\-\-L\-O\-W, and P\-R\-E\-C\-\_\-\-M\-E\-D\-I\-U\-M.
+
+
+\begin{DoxyCode}
+209                                                 \{
+210     \textcolor{keywordflow}{switch} (precision)\{
+211     \textcolor{keywordflow}{case} \hyperlink{itdb02__touch_8h_a7dea406a5c1447d12b8413346a3fff97}{PREC\_LOW}:
+212         \hyperlink{itdb02__touch_8h_aa6f23547fb4cf1df2070ce6d08626588}{prec}=1;
+213         \textcolor{keywordflow}{break};
+214     \textcolor{keywordflow}{case} \hyperlink{itdb02__touch_8h_a5613e0ac97fb6daa0d7fe26110296480}{PREC\_MEDIUM}:
+215         \hyperlink{itdb02__touch_8h_aa6f23547fb4cf1df2070ce6d08626588}{prec}=10;
+216         \textcolor{keywordflow}{break};
+217     \textcolor{keywordflow}{case} \hyperlink{itdb02__touch_8h_ab0746e6cf4fec66f091a394780136197}{PREC\_HI}:
+218         \hyperlink{itdb02__touch_8h_aa6f23547fb4cf1df2070ce6d08626588}{prec}=25;
+219         \textcolor{keywordflow}{break};
+220     \textcolor{keywordflow}{case} \hyperlink{itdb02__touch_8h_a6527f97e200ab289ecb8c167bcf3990c}{PREC\_EXTREME}:
+221         \hyperlink{itdb02__touch_8h_aa6f23547fb4cf1df2070ce6d08626588}{prec}=100;
+222         \textcolor{keywordflow}{break};
+223     \textcolor{keywordflow}{default}:
+224         \hyperlink{itdb02__touch_8h_aa6f23547fb4cf1df2070ce6d08626588}{prec}=10;
+225         \textcolor{keywordflow}{break};
+226     \}
+227 \}
+\end{DoxyCode}
+\hypertarget{itdb02__touch_8h_ac995285b60c9d245b98a847b092f728f}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!touch\-\_\-set\-Touch@{touch\-\_\-set\-Touch}}
+\index{touch\-\_\-set\-Touch@{touch\-\_\-set\-Touch}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{touch\-\_\-set\-Touch}]{\setlength{\rightskip}{0pt plus 5cm}void touch\-\_\-set\-Touch (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{tclk, }
+\item[{unsigned char}]{tcs, }
+\item[{unsigned char}]{tdin, }
+\item[{unsigned char}]{dout, }
+\item[{unsigned char}]{irq}
+\end{DoxyParamCaption}
+)}}\label{itdb02__touch_8h_ac995285b60c9d245b98a847b092f728f}
+
+
+Definition at line 70 of file itdb02\-\_\-touch.\-c.
+
+
+
+References T\-\_\-\-C\-L\-K, T\-\_\-\-C\-S, T\-\_\-\-D\-I\-N, T\-\_\-\-D\-O\-U\-T, and T\-\_\-\-I\-R\-Q.
+
+
+\begin{DoxyCode}
+70                                                                                                            
+               \{
+71     \hyperlink{itdb02__touch_8h_a9b21e5a2ed974e661d71a8ca4c5c3114}{T\_CLK} = tclk;
+72     \hyperlink{itdb02__touch_8h_a6071afa0c336d3042bb81d6b8b3166b5}{T\_CS}  = tcs;
+73     \hyperlink{itdb02__touch_8h_a60a894ed74863c698bd213cfa08f3152}{T\_DIN} = din;
+74     \hyperlink{itdb02__touch_8h_ad9713a2c61304b6271f817cd86d25ebf}{T\_DOUT}= dout;
+75     \hyperlink{itdb02__touch_8h_a5c3650cbe9f7ee535bec7a6832a3f2ea}{T\_IRQ} = irq;
+76 \}
+\end{DoxyCode}
+\hypertarget{itdb02__touch_8h_adf60f92e0bd5ded1fd73450ab603675b}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!touch\-\_\-\-Write\-Data@{touch\-\_\-\-Write\-Data}}
+\index{touch\-\_\-\-Write\-Data@{touch\-\_\-\-Write\-Data}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{touch\-\_\-\-Write\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void touch\-\_\-\-Write\-Data (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{data}
+\end{DoxyParamCaption}
+)}}\label{itdb02__touch_8h_adf60f92e0bd5ded1fd73450ab603675b}
+
+
+\subsection{Variable Documentation}
+\hypertarget{itdb02__touch_8h_aad8256c91131c5ec7b3a7cb6c6de6675}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!orient\-\_\-t@{orient\-\_\-t}}
+\index{orient\-\_\-t@{orient\-\_\-t}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{orient\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char orient\-\_\-t}}\label{itdb02__touch_8h_aad8256c91131c5ec7b3a7cb6c6de6675}
+
+
+Definition at line 62 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-get\-X(), touch\-\_\-get\-Y(), and touch\-\_\-init\-Touch().
+
+\hypertarget{itdb02__touch_8h_aa6f23547fb4cf1df2070ce6d08626588}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!prec@{prec}}
+\index{prec@{prec}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{prec}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char prec}}\label{itdb02__touch_8h_aa6f23547fb4cf1df2070ce6d08626588}
+
+
+Definition at line 63 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-read(), and touch\-\_\-set\-Precision().
+
+\hypertarget{itdb02__touch_8h_a9b21e5a2ed974e661d71a8ca4c5c3114}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!T\-\_\-\-C\-L\-K@{T\-\_\-\-C\-L\-K}}
+\index{T\-\_\-\-C\-L\-K@{T\-\_\-\-C\-L\-K}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{T\-\_\-\-C\-L\-K}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char T\-\_\-\-C\-L\-K}}\label{itdb02__touch_8h_a9b21e5a2ed974e661d71a8ca4c5c3114}
+
+
+Definition at line 61 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-init\-Touch(), touch\-\_\-read(), touch\-\_\-read\-Data(), touch\-\_\-set\-Touch(), and touch\-\_\-write\-Data().
+
+\hypertarget{itdb02__touch_8h_a6071afa0c336d3042bb81d6b8b3166b5}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!T\-\_\-\-C\-S@{T\-\_\-\-C\-S}}
+\index{T\-\_\-\-C\-S@{T\-\_\-\-C\-S}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{T\-\_\-\-C\-S}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char T\-\_\-\-C\-S}}\label{itdb02__touch_8h_a6071afa0c336d3042bb81d6b8b3166b5}
+
+
+Definition at line 61 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-init\-Touch(), touch\-\_\-read(), and touch\-\_\-set\-Touch().
+
+\hypertarget{itdb02__touch_8h_a60a894ed74863c698bd213cfa08f3152}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!T\-\_\-\-D\-I\-N@{T\-\_\-\-D\-I\-N}}
+\index{T\-\_\-\-D\-I\-N@{T\-\_\-\-D\-I\-N}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{T\-\_\-\-D\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char T\-\_\-\-D\-I\-N}}\label{itdb02__touch_8h_a60a894ed74863c698bd213cfa08f3152}
+
+
+Definition at line 61 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-init\-Touch(), touch\-\_\-set\-Touch(), and touch\-\_\-write\-Data().
+
+\hypertarget{itdb02__touch_8h_ad9713a2c61304b6271f817cd86d25ebf}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!T\-\_\-\-D\-O\-U\-T@{T\-\_\-\-D\-O\-U\-T}}
+\index{T\-\_\-\-D\-O\-U\-T@{T\-\_\-\-D\-O\-U\-T}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{T\-\_\-\-D\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char T\-\_\-\-D\-O\-U\-T}}\label{itdb02__touch_8h_ad9713a2c61304b6271f817cd86d25ebf}
+
+
+Definition at line 61 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-init\-Touch(), touch\-\_\-read\-Data(), and touch\-\_\-set\-Touch().
+
+\hypertarget{itdb02__touch_8h_a5c3650cbe9f7ee535bec7a6832a3f2ea}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!T\-\_\-\-I\-R\-Q@{T\-\_\-\-I\-R\-Q}}
+\index{T\-\_\-\-I\-R\-Q@{T\-\_\-\-I\-R\-Q}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{T\-\_\-\-I\-R\-Q}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char T\-\_\-\-I\-R\-Q}}\label{itdb02__touch_8h_a5c3650cbe9f7ee535bec7a6832a3f2ea}
+
+
+Definition at line 61 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-data\-Available(), touch\-\_\-init\-Touch(), and touch\-\_\-set\-Touch().
+
+\hypertarget{itdb02__touch_8h_a071cf564bf9f0421181993dfff8396d4}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!T\-P\-\_\-\-X@{T\-P\-\_\-\-X}}
+\index{T\-P\-\_\-\-X@{T\-P\-\_\-\-X}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{T\-P\-\_\-\-X}]{\setlength{\rightskip}{0pt plus 5cm}int T\-P\-\_\-\-X}}\label{itdb02__touch_8h_a071cf564bf9f0421181993dfff8396d4}
+
+
+Definition at line 50 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-get\-X(), touch\-\_\-get\-Y(), and touch\-\_\-read().
+
+\hypertarget{itdb02__touch_8h_a459474dff8fc2778e79551d500af8a7a}{\index{itdb02\-\_\-touch.\-h@{itdb02\-\_\-touch.\-h}!T\-P\-\_\-\-Y@{T\-P\-\_\-\-Y}}
+\index{T\-P\-\_\-\-Y@{T\-P\-\_\-\-Y}!itdb02_touch.h@{itdb02\-\_\-touch.\-h}}
+\subsubsection[{T\-P\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}int T\-P\-\_\-\-Y}}\label{itdb02__touch_8h_a459474dff8fc2778e79551d500af8a7a}
+
+
+Definition at line 50 of file itdb02\-\_\-touch.\-h.
+
+
+
+Referenced by touch\-\_\-get\-X(), touch\-\_\-get\-Y(), and touch\-\_\-read().
+

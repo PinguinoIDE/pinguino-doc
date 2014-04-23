@@ -1,0 +1,74 @@
+\hypertarget{p8_2pinguino_2core_2debug_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/debug.c File Reference}
+\label{p8_2pinguino_2core_2debug_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/debug.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/debug.\-c}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2debug_8c_ac2e2bf401cce1a158f95da10d89658d0}{\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2debug_8c_ad72dbcf6d0153db1b8d8a58001feed83}{D\-E\-B\-U\-G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2core_2debug_8c_adacf73b93ca6fa3985f2999f7d6b3b29}{debug} (const char $\ast$format,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2debug_8c_ac2e2bf401cce1a158f95da10d89658d0}{\index{p8/pinguino/core/debug.\-c@{p8/pinguino/core/debug.\-c}!\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C@{\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C@{\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C}!p8/pinguino/core/debug.c@{p8/pinguino/core/debug.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C}}\label{p8_2pinguino_2core_2debug_8c_ac2e2bf401cce1a158f95da10d89658d0}
+
+
+Definition at line 9 of file debug.\-c.
+
+\hypertarget{p8_2pinguino_2core_2debug_8c_ad72dbcf6d0153db1b8d8a58001feed83}{\index{p8/pinguino/core/debug.\-c@{p8/pinguino/core/debug.\-c}!D\-E\-B\-U\-G@{D\-E\-B\-U\-G}}
+\index{D\-E\-B\-U\-G@{D\-E\-B\-U\-G}!p8/pinguino/core/debug.c@{p8/pinguino/core/debug.\-c}}
+\subsubsection[{D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-B\-U\-G}}\label{p8_2pinguino_2core_2debug_8c_ad72dbcf6d0153db1b8d8a58001feed83}
+
+
+Definition at line 10 of file debug.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2debug_8c_adacf73b93ca6fa3985f2999f7d6b3b29}{\index{p8/pinguino/core/debug.\-c@{p8/pinguino/core/debug.\-c}!debug@{debug}}
+\index{debug@{debug}!p8/pinguino/core/debug.c@{p8/pinguino/core/debug.\-c}}
+\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}void debug (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2debug_8c_adacf73b93ca6fa3985f2999f7d6b3b29}
+
+
+Definition at line 22 of file debug.\-c.
+
+
+\begin{DoxyCode}
+23 \{
+24     va\_list args;
+25     va\_start(args, format);
+26 
+27 \textcolor{preprocessor}{    #if defined(NODEBUG)}
+28 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #endif}
+29 \textcolor{preprocessor}{}
+30 \textcolor{preprocessor}{    #if defined(USBCDCDEBUG)}
+31 \textcolor{preprocessor}{}        CDCprintf(\textcolor{stringliteral}{"debug: "});
+32         CDCprintf(format, args);
+33         CDCprintf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});
+34 \textcolor{preprocessor}{    #endif}
+35 \textcolor{preprocessor}{}
+36 \textcolor{preprocessor}{    #if defined(UART1DEBUG)}
+37 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #include <serial.c>}
+38         serial\_begin(9600);
+39         serial\_printf(\textcolor{stringliteral}{"debug: "});
+40         serial\_printf(format, args);
+41         serial\_printf(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});
+42 \textcolor{preprocessor}{    #endif}
+43 \textcolor{preprocessor}{}
+44     va\_end(args);
+45 \}
+\end{DoxyCode}

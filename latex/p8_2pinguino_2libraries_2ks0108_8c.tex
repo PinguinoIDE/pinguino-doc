@@ -1,0 +1,1314 @@
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/ks0108.c File Reference}
+\label{p8_2pinguino_2libraries_2ks0108_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/ks0108.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/ks0108.\-c}}
+}
+{\ttfamily \#include $<$ks0108.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af2360aabb0b36a59354fb15504efaa70}{K\-S0108\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fast\-Write\-High} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fast\-Write\-Low} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a3033de18501eced42691f424dc40c457}{delay450ns} (void)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af5c5ed63e70b1ad24c5ff241fd6736b8}{Clear\-Page} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a412cbb03b9cf3e5c6192d016ae82d2ae}{page}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a4ba5c03deff46289ed6fe8b5af542ccc}{Clear\-Screen} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ad98730934019be858a310a23879b3230}{Draw\-Line} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} x1, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} y1, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} x2, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} y2, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a09d760c68a2f5606a86cd568ac4cc33c}{Draw\-Rect} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_aa6a9682f0a46f00bea2cf60fff9c5e83}{Draw\-Round\-Rect} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} radius, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a29728f0df25f7b1f19ab8ef389e93cc9}{Fill\-Rect} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a38c385b0b41843ca73f7d7978b7c3154}{Invert\-Rect} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac21f74defa8cfae1f8a8ed623d147685}{Set\-Inverted} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} invert)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a070e2023efb07893364208907abeb59c}{Set\-Dot} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a639aa9530a377605ba9c0735c5f536ca}{Select\-Font} (const char $\ast$\hyperlink{_s_t7565_8c_afc019ed26f2d57e2b415e12fb53ae54a}{font}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a203139d74e039622eb5e570746145309}{Print\-Number} (long n)
+\item 
+int \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac5cc59012354dd7a5926667a54ebafb6}{Put\-Char} (char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a358b5f7848ef553f4a1f565704ddcfc8}{Puts} (char $\ast$str)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6a8d9588edb5c47bd31096cd1dd1faff}{Char\-Width} (char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a34b41d3c8c0db2bc334ea0af6c0b79ff}{String\-Width} (char $\ast$str)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a5314f974ccb6335dd318fe9996c7e013}{Cursor\-To} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{Goto\-X\-Y} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y})
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a87d0fd254a3e5af400fa5949e2c06cef}{Init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} invert)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_aebec479a7234241b3b664d7cfcb43401}{Enable} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a0dd8ea2a4de343420a7d0426af60b1e2}{Do\-Read\-Data} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} first)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ae0fe46bf79a0e9e29841808b4d722bef}{Read\-Data} (void)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a7f16c42269110211b6a65fe034cb0e11}{Write\-Command} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} cmd, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} chip)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{Write\-Data} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} dat)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6e41adc7b73dc5688aa7fd3c2b382ae6}{Draw\-Bitmap} (const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$bitmap, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} color)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structlcd_coord}{lcd\-Coord} \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a4bc6413537c76e9edc2afb18384476f9}{Inverted} =0
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a925b25b33f788091fb294892cfc9a999}{Font\-Color}
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$ \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_af2360aabb0b36a59354fb15504efaa70}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!K\-S0108\-\_\-\-C@{K\-S0108\-\_\-\-C}}
+\index{K\-S0108\-\_\-\-C@{K\-S0108\-\_\-\-C}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{K\-S0108\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\-S0108\-\_\-\-C}}\label{p8_2pinguino_2libraries_2ks0108_8c_af2360aabb0b36a59354fb15504efaa70}
+
+
+Definition at line 15 of file ks0108.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a6a8d9588edb5c47bd31096cd1dd1faff}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Char\-Width@{Char\-Width}}
+\index{Char\-Width@{Char\-Width}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Char\-Width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Char\-Width (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a6a8d9588edb5c47bd31096cd1dd1faff}
+
+
+Definition at line 472 of file ks0108.\-c.
+
+
+
+Referenced by String\-Width().
+
+
+\begin{DoxyCode}
+472                      \{
+473     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width} = 0;
+474     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} firstChar = *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_abf840ca631179d25994d5f1dc3594646}{FONT\_FIRST\_CHAR});
+475     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} charCount = *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a4546cd12e3ae03bca0659ed77eeb872e}{FONT\_CHAR\_COUNT});
+476 
+477     \textcolor{comment}{// read width data}
+478     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c} >= firstChar && \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c} < (firstChar+charCount)) \{
+479         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c} -= firstChar;
+480         width = *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_ae6bf0901cff58e47324da9487d0ee938}{FONT\_WIDTH\_TABLE}+\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c})+1;
+481     \}
+482 
+483     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width};
+484 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_af5c5ed63e70b1ad24c5ff241fd6736b8}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Clear\-Page@{Clear\-Page}}
+\index{Clear\-Page@{Clear\-Page}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Clear\-Page}]{\setlength{\rightskip}{0pt plus 5cm}void Clear\-Page (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{page, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_af5c5ed63e70b1ad24c5ff241fd6736b8}
+
+
+Definition at line 47 of file ks0108.\-c.
+
+
+
+Referenced by Clear\-Screen().
+
+
+\begin{DoxyCode}
+47                                  \{
+48     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x};
+49     \textcolor{keywordflow}{for}(x=0; x < \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a46d67d48a7faab308f2e058dc35da83a}{DISPLAY\_WIDTH}; x++)\{  
+50        \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(x, \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a412cbb03b9cf3e5c6192d016ae82d2ae}{page} * 8);
+51        \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(color);
+52    \}    
+53 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a4ba5c03deff46289ed6fe8b5af542ccc}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Clear\-Screen@{Clear\-Screen}}
+\index{Clear\-Screen@{Clear\-Screen}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Clear\-Screen}]{\setlength{\rightskip}{0pt plus 5cm}void Clear\-Screen (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a4ba5c03deff46289ed6fe8b5af542ccc}
+
+
+Definition at line 55 of file ks0108.\-c.
+
+
+
+Referenced by Init().
+
+
+\begin{DoxyCode}
+55                           \{
+56  \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a412cbb03b9cf3e5c6192d016ae82d2ae}{page};
+57     \textcolor{keywordflow}{for}( page = 0; page < 8; page++)\{
+58         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(0, page * 8);
+59         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af5c5ed63e70b1ad24c5ff241fd6736b8}{ClearPage}(page, color);
+60     \}
+61 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a5314f974ccb6335dd318fe9996c7e013}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Cursor\-To@{Cursor\-To}}
+\index{Cursor\-To@{Cursor\-To}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Cursor\-To}]{\setlength{\rightskip}{0pt plus 5cm}void Cursor\-To (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a5314f974ccb6335dd318fe9996c7e013}
+
+
+Definition at line 497 of file ks0108.\-c.
+
+
+\begin{DoxyCode}
+497                           \{    \textcolor{comment}{// 0 based coordinates for fixed width fonts (i.e. systemFont5x7)}
+498    \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}( \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} * (*(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_afc65866121cd2eba3caa85d2946eeec0}{FONT\_FIXED\_WIDTH})+1),
+499            \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} * (*(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a33f4fac49f2a5e27e2857eb27f054510}{FONT\_HEIGHT})+1)
+500          ) ; 
+501 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a3033de18501eced42691f424dc40c457}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!delay450ns@{delay450ns}}
+\index{delay450ns@{delay450ns}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{delay450ns}]{\setlength{\rightskip}{0pt plus 5cm}void delay450ns (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a3033de18501eced42691f424dc40c457}
+Just a delay 
+
+Definition at line 36 of file ks0108.\-c.
+
+
+
+Referenced by Do\-Read\-Data(), and Enable().
+
+
+\begin{DoxyCode}
+36                      \{
+37     \textcolor{comment}{//6 nops for about 450ns at 20MHz?    }
+38     \_\_asm
+39         \hyperlink{p8_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}{nop}
+40         \hyperlink{p8_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}{nop}
+41         \hyperlink{p8_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}{nop}
+42         \hyperlink{p8_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}{nop}
+43         \hyperlink{p8_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}{nop}             
+44     \_\_endasm;
+45 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a0dd8ea2a4de343420a7d0426af60b1e2}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Do\-Read\-Data@{Do\-Read\-Data}}
+\index{Do\-Read\-Data@{Do\-Read\-Data}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Do\-Read\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Do\-Read\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{first}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a0dd8ea2a4de343420a7d0426af60b1e2}
+
+
+Definition at line 552 of file ks0108.\-c.
+
+
+
+Referenced by Read\-Data().
+
+
+\begin{DoxyCode}
+552                         \{
+553     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} dat;
+554     \textcolor{comment}{//u8 i;}
+555 
+556     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a3da78e9342befc54d33d83ac57ca7b63}{LCD\_DATA\_OUT} = 0x00;
+557     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7287a84fef726dc7e0cd3ffebc27a70d}{LCD\_DATA\_DIR} = 0xFF;                \textcolor{comment}{// data port is input}
+558 
+559     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x} < \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aeddcf705e650e4abf53f05c69f65ac50}{CHIP\_WIDTH}) \{
+560         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7cd6c934ae85fb14cd28344d4c443e1d}{CSEL2});           \textcolor{comment}{// deselect chip 2}
+561         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a6029681d780c82ba19599dcb56c91052}{CSEL1});         \textcolor{comment}{// select chip 1}
+562     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x} >= \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aeddcf705e650e4abf53f05c69f65ac50}{CHIP\_WIDTH}) \{
+563         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a6029681d780c82ba19599dcb56c91052}{CSEL1});           \textcolor{comment}{// deselect chip 1}
+564         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7cd6c934ae85fb14cd28344d4c443e1d}{CSEL2});         \textcolor{comment}{// select chip 2}
+565     \}
+566     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x} == \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aeddcf705e650e4abf53f05c69f65ac50}{CHIP\_WIDTH} && first) \{    \textcolor{comment}{// chip2 X-address = 0}
+567         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a7f16c42269110211b6a65fe034cb0e11}{WriteCommand}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a8f56dd11a06a5f7dcd2045a555143cb4}{LCD\_SET\_ADD}, \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a15e370cefbcf8cd791fd46d18bff260a}{CHIP2});   \textcolor{comment}{// wuff wuff}
+568     \}
+569 
+570     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_ae74d7a7a200a441a3ca10ca39937fd9c}{D\_I});                 \textcolor{comment}{// D/I = 1}
+571     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a58cc6c67bb1f75b4bc8951fead179541}{R\_W});                 \textcolor{comment}{// R/W = 1}
+572 
+573     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN});                   \textcolor{comment}{// EN high level width: min. 450ns}
+574 
+575     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a3033de18501eced42691f424dc40c457}{delay450ns}();
+576 
+577     dat = \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aaf469a71c776564ce543a8e73e257068}{LCD\_DATA\_IN};                   \textcolor{comment}{// read Data}
+578 
+579     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN}); 
+580 \textcolor{comment}{//  for(volatile u8 i=0; i<8; i++);  // big delay loop in Fabian's code, was 5.7us, replaced by 450ns delay
+       below}
+581     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a3033de18501eced42691f424dc40c457}{delay450ns}();
+582     
+583     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7287a84fef726dc7e0cd3ffebc27a70d}{LCD\_DATA\_DIR} = 0x00;                 \textcolor{comment}{//Output mode?}
+584 
+585     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x}, \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_ad87f9078b74ef74a58041131d06283c2}{y});
+586 
+587     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a4bc6413537c76e9edc2afb18384476f9}{Inverted})
+588         dat = ~dat;
+589     \textcolor{keywordflow}{return} dat;
+590 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a6e41adc7b73dc5688aa7fd3c2b382ae6}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Draw\-Bitmap@{Draw\-Bitmap}}
+\index{Draw\-Bitmap@{Draw\-Bitmap}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Draw\-Bitmap}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\-Bitmap (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8} $\ast$}]{bitmap, }
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a6e41adc7b73dc5688aa7fd3c2b382ae6}
+Loads a Bitmap to G\-L\-C\-D 
+
+Definition at line 683 of file ks0108.\-c.
+
+
+\begin{DoxyCode}
+683                                                         \{
+684 \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height};
+685 \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i, j;
+686 
+687   width = *(bitmap++); 
+688   height = *(bitmap++);
+689   \textcolor{keywordflow}{for}(j = 0; j < height / 8; j++) \{
+690      \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} + (j*8) );
+691      \textcolor{keywordflow}{for}(i = 0; i < \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}; i++) \{
+692          \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} displayData = *(bitmap++);
+693          \textcolor{keywordflow}{if}(color == \hyperlink{ili9325_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK})
+694             \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(displayData);
+695          \textcolor{keywordflow}{else}
+696             \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(~displayData);
+697      \}
+698   \}
+699 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_ad98730934019be858a310a23879b3230}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Draw\-Line@{Draw\-Line}}
+\index{Draw\-Line@{Draw\-Line}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Draw\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\-Line (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x1, }
+\item[{{\bf u8}}]{y1, }
+\item[{{\bf u8}}]{x2, }
+\item[{{\bf u8}}]{y2, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_ad98730934019be858a310a23879b3230}
+
+
+Definition at line 63 of file ks0108.\-c.
+
+
+
+Referenced by Draw\-Line().
+
+
+\begin{DoxyCode}
+63                                                     \{
+64     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} length, i, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, yAlt, xTmp, yTmp;
+65     \textcolor{keywordtype}{int} m;
+66     \textcolor{comment}{//}
+67     \textcolor{comment}{// vertical line}
+68     \textcolor{comment}{//}
+69     \textcolor{keywordflow}{if}(x1 == x2) \{
+70         \textcolor{comment}{// x1|y1 must be the upper point}
+71         \textcolor{keywordflow}{if}(y1 > y2) \{
+72             yTmp = y1;
+73             y1 = y2;
+74             y2 = yTmp;
+75         \}
+76         \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aebd94f4f4affba8649b2a8c86a77c9a8}{DrawVertLine}(x1, y1, y2-y1, color);
+77     
+78     \textcolor{comment}{//}
+79     \textcolor{comment}{// horizontal line}
+80     \textcolor{comment}{//}
+81     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(y1 == y2) \{   
+82         \textcolor{comment}{// x1|y1 must be the left point}
+83         \textcolor{keywordflow}{if}(x1 > x2) \{
+84             xTmp = x1;
+85             x1 = x2;
+86             x2 = xTmp;
+87         \}
+88         \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a850caf832e335987d2afb2466eba766f}{DrawHoriLine}(x1, y1, x2-x1, color);
+89     
+90     \textcolor{comment}{//}
+91     \textcolor{comment}{// angled line :)}
+92     \textcolor{comment}{//}
+93     \} \textcolor{keywordflow}{else} \{
+94         \textcolor{comment}{// angle >= 45°     if((y2-y1) >= (x2-x1) || (y1-y2) >= (x2-x1)) \{
+            // x1 must be smaller than x2
+            if(x1 > x2) \{
+                xTmp = x1;
+                yTmp = y1;
+                x1 = x2;
+                y1 = y2;
+                x2 = xTmp;
+                y2 = yTmp;
+            \}
+        
+            length = x2-x1;     // not really the length :)
+            m = ((y2-y1)*200)/length;
+            yAlt = y1;
+            
+            for(i=0; i<=length; i++) \{
+                y = ((m*i)/200)+y1;
+                
+                if((m*i)%200 >= 100)
+                    y++;
+                else if((m*i)%200 <= -100)
+                    y--;
+                
+                DrawLine(x1+i, yAlt, x1+i, y, color);
+                
+                if(length <= (y2-y1) && y1 < y2)
+                    yAlt = y+1;
+                else if(length <= (y1-y2) && y1 > y2)
+                    yAlt = y-1;
+                else
+                    yAlt = y;
+            \}
+        
+        // angle < 45°
+      \} else \{
+            // y1 must be smaller than y2
+            if(y1 > y2) \{
+                xTmp = x1;
+                yTmp = y1;
+                x1 = x2;
+                y1 = y2;
+                x2 = xTmp;
+                y2 = yTmp;
+            \}
+            
+            length = y2-y1;
+            m = ((x2-x1)*200)/length;
+            yAlt = x1;
+            
+            for(i=0; i<=length; i++) \{
+                y = ((m*i)/200)+x1;
+                
+                if((m*i)%200 >= 100)
+                    y++;
+                else if((m*i)%200 <= -100)
+                    y--;
+                
+                DrawLine(yAlt, y1+i, y, y1+i, color);
+                if(length <= (x2-x1) && x1 < x2)
+                    yAlt = y+1;
+                else if(length <= (x1-x2) && x1 > x2)
+                    yAlt = y-1;
+                else
+                    yAlt = y;
+            \}
+        \}
+    \}
+\}
+}
+95         \textcolor{keywordflow}{if}((y2-y1) >= (x2-x1) || (y1-y2) >= (x2-x1)) \{
+96             \textcolor{comment}{// x1 must be smaller than x2}
+97             \textcolor{keywordflow}{if}(x1 > x2) \{
+98                 xTmp = x1;
+99                 yTmp = y1;
+100                 x1 = x2;
+101                 y1 = y2;
+102                 x2 = xTmp;
+103                 y2 = yTmp;
+104             \}
+105         
+106             length = x2-x1;     \textcolor{comment}{// not really the length :)}
+107             m = ((y2-y1)*200)/length;
+108             yAlt = y1;
+109             
+110             \textcolor{keywordflow}{for}(i=0; i<=length; i++) \{
+111                 y = ((m*i)/200)+y1;
+112                 
+113                 \textcolor{keywordflow}{if}((m*i)%200 >= 100)
+114                     y++;
+115                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((m*i)%200 <= -100)
+116                     y--;
+117                 
+118                 \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ad98730934019be858a310a23879b3230}{DrawLine}(x1+i, yAlt, x1+i, y, color);
+119                 
+120                 \textcolor{keywordflow}{if}(length <= (y2-y1) && y1 < y2)
+121                     yAlt = y+1;
+122                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(length <= (y1-y2) && y1 > y2)
+123                     yAlt = y-1;
+124                 \textcolor{keywordflow}{else}
+125                     yAlt = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y};
+126             \}
+127         
+128         \textcolor{comment}{// angle < 45°      \} else \{
+            // y1 must be smaller than y2
+            if(y1 > y2) \{
+                xTmp = x1;
+                yTmp = y1;
+                x1 = x2;
+                y1 = y2;
+                x2 = xTmp;
+                y2 = yTmp;
+            \}
+            
+            length = y2-y1;
+            m = ((x2-x1)*200)/length;
+            yAlt = x1;
+            
+            for(i=0; i<=length; i++) \{
+                y = ((m*i)/200)+x1;
+                
+                if((m*i)%200 >= 100)
+                    y++;
+                else if((m*i)%200 <= -100)
+                    y--;
+                
+                DrawLine(yAlt, y1+i, y, y1+i, color);
+                if(length <= (x2-x1) && x1 < x2)
+                    yAlt = y+1;
+                else if(length <= (x1-x2) && x1 > x2)
+                    yAlt = y-1;
+                else
+                    yAlt = y;
+            \}
+        \}
+    \}
+\}
+}
+129         \} \textcolor{keywordflow}{else} \{
+130             \textcolor{comment}{// y1 must be smaller than y2}
+131             \textcolor{keywordflow}{if}(y1 > y2) \{
+132                 xTmp = x1;
+133                 yTmp = y1;
+134                 x1 = x2;
+135                 y1 = y2;
+136                 x2 = xTmp;
+137                 y2 = yTmp;
+138             \}
+139             
+140             length = y2-y1;
+141             m = ((x2-x1)*200)/length;
+142             yAlt = x1;
+143             
+144             \textcolor{keywordflow}{for}(i=0; i<=length; i++) \{
+145                 y = ((m*i)/200)+x1;
+146                 
+147                 \textcolor{keywordflow}{if}((m*i)%200 >= 100)
+148                     y++;
+149                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((m*i)%200 <= -100)
+150                     y--;
+151                 
+152                 \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ad98730934019be858a310a23879b3230}{DrawLine}(yAlt, y1+i, y, y1+i, color);
+153                 \textcolor{keywordflow}{if}(length <= (x2-x1) && x1 < x2)
+154                     yAlt = y+1;
+155                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(length <= (x1-x2) && x1 > x2)
+156                     yAlt = y-1;
+157                 \textcolor{keywordflow}{else}
+158                     yAlt = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y};
+159             \}
+160         \}
+161     \}
+162 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a09d760c68a2f5606a86cd568ac4cc33c}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Draw\-Rect@{Draw\-Rect}}
+\index{Draw\-Rect@{Draw\-Rect}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Draw\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\-Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y, }
+\item[{{\bf u8}}]{width, }
+\item[{{\bf u8}}]{height, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a09d760c68a2f5606a86cd568ac4cc33c}
+
+
+Definition at line 164 of file ks0108.\-c.
+
+
+\begin{DoxyCode}
+164                                                          \{
+165     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a850caf832e335987d2afb2466eba766f}{DrawHoriLine}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}, color);                \textcolor{comment}{// top}
+166     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a850caf832e335987d2afb2466eba766f}{DrawHoriLine}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}, \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}, color);       \textcolor{comment}{// bottom}
+167     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aebd94f4f4affba8649b2a8c86a77c9a8}{DrawVertLine}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}, color);              \textcolor{comment}{// left}
+168     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aebd94f4f4affba8649b2a8c86a77c9a8}{DrawVertLine}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}, color);       \textcolor{comment}{// right}
+169 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_aa6a9682f0a46f00bea2cf60fff9c5e83}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Draw\-Round\-Rect@{Draw\-Round\-Rect}}
+\index{Draw\-Round\-Rect@{Draw\-Round\-Rect}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Draw\-Round\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\-Round\-Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y, }
+\item[{{\bf u8}}]{width, }
+\item[{{\bf u8}}]{height, }
+\item[{{\bf u8}}]{radius, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_aa6a9682f0a46f00bea2cf60fff9c5e83}
+
+
+Definition at line 171 of file ks0108.\-c.
+
+
+\begin{DoxyCode}
+171                                                                          \{
+172     \textcolor{keywordtype}{int} tSwitch, x1 = 0, y1 = radius;
+173     tSwitch = 3 - 2 * radius;
+174 
+175     \textcolor{keywordflow}{while} (x1 <= y1) \{
+176         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a070e2023efb07893364208907abeb59c}{SetDot}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+radius - x1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+radius - y1, color);
+177         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a070e2023efb07893364208907abeb59c}{SetDot}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+radius - y1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+radius - x1, color);
+178 
+179         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a070e2023efb07893364208907abeb59c}{SetDot}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}-radius + x1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+radius - y1, color);
+180         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a070e2023efb07893364208907abeb59c}{SetDot}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}-radius + y1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+radius - x1, color);
+181 
+182         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a070e2023efb07893364208907abeb59c}{SetDot}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}-radius + x1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}-radius + y1, color);
+183         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a070e2023efb07893364208907abeb59c}{SetDot}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}-radius + y1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}-radius + x1, color);
+184 
+185         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a070e2023efb07893364208907abeb59c}{SetDot}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+radius - x1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}-radius + y1, color);
+186         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a070e2023efb07893364208907abeb59c}{SetDot}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+radius - y1, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}-radius + x1, color);
+187 
+188         \textcolor{keywordflow}{if} (tSwitch < 0) \{
+189             tSwitch += (4 * x1 + 6);
+190         \} \textcolor{keywordflow}{else} \{
+191             tSwitch += (4 * (x1 - y1) + 10);
+192             y1--;
+193         \}
+194         x1++;
+195     \}
+196 
+197     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a850caf832e335987d2afb2466eba766f}{DrawHoriLine}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+radius, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}, \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}-(2*radius), color);          \textcolor{comment}{// top}
+198     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a850caf832e335987d2afb2466eba766f}{DrawHoriLine}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+radius, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}, \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}-(2*radius), color); \textcolor{comment}{// bottom}
+199     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aebd94f4f4affba8649b2a8c86a77c9a8}{DrawVertLine}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+radius, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}-(2*radius), color);        \textcolor{comment}{// left}
+200     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aebd94f4f4affba8649b2a8c86a77c9a8}{DrawVertLine}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}+\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+radius, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}-(2*radius), color); \textcolor{comment}{// right}
+201 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_aebec479a7234241b3b664d7cfcb43401}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Enable@{Enable}}
+\index{Enable@{Enable}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Enable}]{\setlength{\rightskip}{0pt plus 5cm}void Enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_aebec479a7234241b3b664d7cfcb43401}
+
+
+Definition at line 544 of file ks0108.\-c.
+
+
+
+Referenced by Write\-Command(), and Write\-Data().
+
+
+\begin{DoxyCode}
+544                   \{
+545     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN});                   \textcolor{comment}{// EN high level width: min. 450ns}
+546     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a3033de18501eced42691f424dc40c457}{delay450ns}();
+547     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN});
+548 \textcolor{comment}{//for(volatile u8 i=0; i<8; i++);  // big delay loop in Fabian's code, was 5.7us, replaced by call to 450ns
+       delay function}
+549     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a3033de18501eced42691f424dc40c457}{delay450ns}(); 
+550 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!fast\-Write\-High@{fast\-Write\-High}}
+\index{fast\-Write\-High@{fast\-Write\-High}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{fast\-Write\-High}]{\setlength{\rightskip}{0pt plus 5cm}void fast\-Write\-High (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}
+
+
+Definition at line 27 of file ks0108.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D\-\_\-\-P\-O\-R\-T.
+
+
+
+Referenced by Do\-Read\-Data(), Enable(), Write\-Command(), and Write\-Data().
+
+
+\begin{DoxyCode}
+27                           \{
+28     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a79eb482cd288d22a1eb2a0e3cfa6ca1b}{LCD\_CMD\_PORT}=\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a79eb482cd288d22a1eb2a0e3cfa6ca1b}{LCD\_CMD\_PORT} | pin;
+29 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!fast\-Write\-Low@{fast\-Write\-Low}}
+\index{fast\-Write\-Low@{fast\-Write\-Low}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{fast\-Write\-Low}]{\setlength{\rightskip}{0pt plus 5cm}void fast\-Write\-Low (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}
+
+
+Definition at line 30 of file ks0108.\-c.
+
+
+
+References L\-C\-D\-\_\-\-C\-M\-D\-\_\-\-P\-O\-R\-T.
+
+
+
+Referenced by Do\-Read\-Data(), Enable(), Write\-Command(), and Write\-Data().
+
+
+\begin{DoxyCode}
+30                          \{
+31     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a79eb482cd288d22a1eb2a0e3cfa6ca1b}{LCD\_CMD\_PORT}=\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a79eb482cd288d22a1eb2a0e3cfa6ca1b}{LCD\_CMD\_PORT} & (0XFF-pin);
+32 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a29728f0df25f7b1f19ab8ef389e93cc9}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Fill\-Rect@{Fill\-Rect}}
+\index{Fill\-Rect@{Fill\-Rect}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Fill\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}void Fill\-Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y, }
+\item[{{\bf u8}}]{width, }
+\item[{{\bf u8}}]{height, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a29728f0df25f7b1f19ab8ef389e93cc9}
+Hardware-\/\-Functions 
+
+Definition at line 206 of file ks0108.\-c.
+
+
+\begin{DoxyCode}
+206                                                          \{
+207     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} mask, pageOffset, \hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}, i, dat;
+208     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}++;
+209 
+210     pageOffset = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}%8;
+211     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} -= pageOffset;
+212     mask = 0xFF;
+213     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height} < 8-pageOffset) \{
+214         mask >>= (8-\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height});
+215         h = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height};
+216     \} \textcolor{keywordflow}{else} \{
+217         h = 8-pageOffset;
+218     \}
+219     mask <<= pageOffset;
+220 
+221     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+222     \textcolor{keywordflow}{for}(i=0; i<=\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}; i++) \{
+223         dat = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ae0fe46bf79a0e9e29841808b4d722bef}{ReadData}();
+224 
+225         \textcolor{keywordflow}{if}(color == \hyperlink{ili9325_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}) \{
+226             dat |= mask;
+227         \} \textcolor{keywordflow}{else} \{
+228             dat &= ~mask;
+229         \}
+230 
+231         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(dat);
+232     \}
+233 
+234     \textcolor{keywordflow}{while}(h+8 <= \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}) \{
+235         h += 8;
+236         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} += 8;
+237         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+238 
+239         \textcolor{keywordflow}{for}(i=0; i<=\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}; i++) \{
+240             \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(color);
+241         \}
+242     \}
+243 
+244     \textcolor{keywordflow}{if}(h < \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}) \{
+245         mask = ~(0xFF << (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}-\hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}));
+246         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+8);
+247 
+248         \textcolor{keywordflow}{for}(i=0; i<=\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}; i++) \{
+249             dat = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ae0fe46bf79a0e9e29841808b4d722bef}{ReadData}();
+250 
+251             \textcolor{keywordflow}{if}(color == \hyperlink{ili9325_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}) \{
+252                 dat |= mask;
+253             \} \textcolor{keywordflow}{else} \{
+254                 dat &= ~mask;
+255             \}
+256 
+257             \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(dat);
+258         \}
+259     \}
+260 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Goto\-X\-Y@{Goto\-X\-Y}}
+\index{Goto\-X\-Y@{Goto\-X\-Y}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Goto\-X\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void Goto\-X\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}
+
+
+Definition at line 503 of file ks0108.\-c.
+
+
+
+Referenced by Clear\-Page(), Clear\-Screen(), Cursor\-To(), Do\-Read\-Data(), Draw\-Bitmap(), Fill\-Rect(), Init(), Invert\-Rect(), Put\-Char(), Puts(), Set\-Dot(), and Write\-Data().
+
+
+\begin{DoxyCode}
+503                         \{
+504   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} chip, cmd;
+505     
+506   \textcolor{keywordflow}{if}( (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} > \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a46d67d48a7faab308f2e058dc35da83a}{DISPLAY\_WIDTH}-1) || (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} > \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a43b7b2061f733ea1dc0a5a6028e131ff}{DISPLAY\_HEIGHT}-1) )    \textcolor{comment}{// exit if
+       coordinates are not legal}
+507     \textcolor{keywordflow}{return};
+508   \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x};                               \textcolor{comment}{// save new coordinates}
+509   \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_ad87f9078b74ef74a58041131d06283c2}{y} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y};
+510     
+511   \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}/8 != \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_aadf5933189a2ff92dae7ee979000ff43}{page}) \{
+512     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_aadf5933189a2ff92dae7ee979000ff43}{page} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}/8;
+513     cmd = \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a57cd5350bbd1a24edc81b12cfe2d7bca}{LCD\_SET\_PAGE} | \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_aadf5933189a2ff92dae7ee979000ff43}{page};       \textcolor{comment}{// set y address on all chips   }
+514     \textcolor{keywordflow}{for}(chip=0; chip < \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a46d67d48a7faab308f2e058dc35da83a}{DISPLAY\_WIDTH}/\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aeddcf705e650e4abf53f05c69f65ac50}{CHIP\_WIDTH}; chip++)\{
+515        \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a7f16c42269110211b6a65fe034cb0e11}{WriteCommand}(cmd, chip); 
+516     \}
+517   \}
+518   chip = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x}/\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aeddcf705e650e4abf53f05c69f65ac50}{CHIP\_WIDTH};
+519   \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} % \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_aeddcf705e650e4abf53f05c69f65ac50}{CHIP\_WIDTH};
+520   cmd = \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a8f56dd11a06a5f7dcd2045a555143cb4}{LCD\_SET\_ADD} | \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x};
+521   \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a7f16c42269110211b6a65fe034cb0e11}{WriteCommand}(cmd, chip);                  \textcolor{comment}{// set x address on active chip }
+522 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a87d0fd254a3e5af400fa5949e2c06cef}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Init@{Init}}
+\index{Init@{Init}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void Init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{invert}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a87d0fd254a3e5af400fa5949e2c06cef}
+Start G\-L\-C\-D... 
+
+Definition at line 525 of file ks0108.\-c.
+
+
+\begin{DoxyCode}
+525                      \{
+526     \textcolor{comment}{/*RSTOUT = 0;}
+527 \textcolor{comment}{    RST = 1;*/}
+528     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x} = 0;
+529     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_ad87f9078b74ef74a58041131d06283c2}{y} = 0;
+530     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_aadf5933189a2ff92dae7ee979000ff43}{page} = 0;
+531 
+532     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a4bc6413537c76e9edc2afb18384476f9}{Inverted} = invert;
+533 
+534     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a3a766b357036040f0c8ecbad00896105}{LCD\_CMD\_DIR} = 0x00;                          \textcolor{comment}{// command port is output}
+535     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a7f16c42269110211b6a65fe034cb0e11}{WriteCommand}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a47a809dfec086fdeca93dedc4fb83b44}{LCD\_ON}, \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a0c1a0a2df5479814f6ffc82c35c323cb}{CHIP1});             \textcolor{comment}{// power on}
+536     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a7f16c42269110211b6a65fe034cb0e11}{WriteCommand}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a47a809dfec086fdeca93dedc4fb83b44}{LCD\_ON}, \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a15e370cefbcf8cd791fd46d18bff260a}{CHIP2});
+537 
+538     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a7f16c42269110211b6a65fe034cb0e11}{WriteCommand}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a0f48accc6ca33f88a532d1fda6ea26ae}{LCD\_DISP\_START}, \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a0c1a0a2df5479814f6ffc82c35c323cb}{CHIP1});     \textcolor{comment}{// display start line = 0}
+539     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a7f16c42269110211b6a65fe034cb0e11}{WriteCommand}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a0f48accc6ca33f88a532d1fda6ea26ae}{LCD\_DISP\_START}, \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a15e370cefbcf8cd791fd46d18bff260a}{CHIP2});
+540     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a4ba5c03deff46289ed6fe8b5af542ccc}{ClearScreen}(invert ? \hyperlink{ili9325_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK} : \hyperlink{ili9325_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE});       \textcolor{comment}{// display clear}
+541     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(0,0);
+542 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a38c385b0b41843ca73f7d7978b7c3154}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Invert\-Rect@{Invert\-Rect}}
+\index{Invert\-Rect@{Invert\-Rect}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Invert\-Rect}]{\setlength{\rightskip}{0pt plus 5cm}void Invert\-Rect (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y, }
+\item[{{\bf u8}}]{width, }
+\item[{{\bf u8}}]{height}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a38c385b0b41843ca73f7d7978b7c3154}
+
+
+Definition at line 262 of file ks0108.\-c.
+
+
+
+Referenced by Set\-Inverted().
+
+
+\begin{DoxyCode}
+262                                                  \{
+263     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} mask, pageOffset, \hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}, i, dat, tmpData;
+264     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}++;
+265 
+266     pageOffset = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}%8;
+267     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} -= pageOffset;
+268     mask = 0xFF;
+269     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height} < 8-pageOffset) \{
+270         mask >>= (8-\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height});
+271         h = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height};
+272     \} \textcolor{keywordflow}{else} \{
+273         h = 8-pageOffset;
+274     \}
+275     mask <<= pageOffset;
+276 
+277     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+278     \textcolor{keywordflow}{for}(i=0; i<=\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}; i++) \{
+279         dat = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ae0fe46bf79a0e9e29841808b4d722bef}{ReadData}();
+280         tmpData = ~dat;
+281         dat = (tmpData & mask) | (dat & ~mask);
+282         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(dat);
+283     \}
+284 
+285     \textcolor{keywordflow}{while}(h+8 <= \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}) \{
+286         h += 8;
+287         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} += 8;
+288         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+289 
+290         \textcolor{keywordflow}{for}(i=0; i<=\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}; i++) \{
+291             dat = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ae0fe46bf79a0e9e29841808b4d722bef}{ReadData}();
+292             \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(~dat);
+293         \}
+294     \}
+295 
+296     \textcolor{keywordflow}{if}(h < \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}) \{
+297         mask = ~(0xFF << (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height}-\hyperlink{____adb_8c_a65bb5c5a7c282f3e11d4399fb75dc1ef}{h}));
+298         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}+8);
+299 
+300         \textcolor{keywordflow}{for}(i=0; i<=\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}; i++) \{
+301             dat = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ae0fe46bf79a0e9e29841808b4d722bef}{ReadData}();
+302             tmpData = ~dat;
+303             dat = (tmpData & mask) | (dat & ~mask);
+304             \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(dat);
+305         \}
+306     \}
+307 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a203139d74e039622eb5e570746145309}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Print\-Number@{Print\-Number}}
+\index{Print\-Number@{Print\-Number}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Print\-Number}]{\setlength{\rightskip}{0pt plus 5cm}void Print\-Number (
+\begin{DoxyParamCaption}
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a203139d74e039622eb5e570746145309}
+Print a integer number on L\-C\-D 
+
+Definition at line 340 of file ks0108.\-c.
+
+
+\begin{DoxyCode}
+340                         \{
+341    \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} buf[10];  \textcolor{comment}{// prints up to 10 digits  }
+342    \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i=0;
+343    \textcolor{keywordflow}{if}(n==0)
+344        \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac5cc59012354dd7a5926667a54ebafb6}{PutChar}(\textcolor{charliteral}{'0'});
+345    \textcolor{keywordflow}{else}\{
+346      \textcolor{keywordflow}{if}(n < 0)\{
+347         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac5cc59012354dd7a5926667a54ebafb6}{PutChar}(\textcolor{charliteral}{'-'});
+348         n = -n;
+349      \}
+350      \textcolor{keywordflow}{while}(n>0 && i <= 10)\{
+351        buf[i++] = n % 10;  \textcolor{comment}{// n % base}
+352        n /= 10;   \textcolor{comment}{// n/= base}
+353      \}
+354      \textcolor{keywordflow}{for}(; i >0; i--)
+355          \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac5cc59012354dd7a5926667a54ebafb6}{PutChar}((\textcolor{keywordtype}{char}) (buf[i-1] < 10 ? \textcolor{charliteral}{'0'} + buf[i-1] : \textcolor{charliteral}{'A'} + buf[i-1] - 10));   
+356    \}
+357 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_ac5cc59012354dd7a5926667a54ebafb6}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Put\-Char@{Put\-Char}}
+\index{Put\-Char@{Put\-Char}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Put\-Char}]{\setlength{\rightskip}{0pt plus 5cm}int Put\-Char (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_ac5cc59012354dd7a5926667a54ebafb6}
+Print a float number to L\-C\-D 
+
+Definition at line 398 of file ks0108.\-c.
+
+
+
+Referenced by Print\-Number(), and Puts().
+
+
+\begin{DoxyCode}
+398                     \{
+399     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width} = 0;
+400     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0b80b0357f56f22e1f503dd0ec20e47f}{height} = *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a33f4fac49f2a5e27e2857eb27f054510}{FONT\_HEIGHT});
+401     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} bytes = (height+7)/8;
+402     
+403     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} firstChar = *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_abf840ca631179d25994d5f1dc3594646}{FONT\_FIRST\_CHAR});
+404     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} charCount = *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a4546cd12e3ae03bca0659ed77eeb872e}{FONT\_CHAR\_COUNT});
+405     
+406     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} index = 0;
+407     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x};
+408     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_ad87f9078b74ef74a58041131d06283c2}{y};
+409     
+410     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i, j;
+411     
+412     \textcolor{keywordflow}{if}(c < firstChar || c >= (firstChar+charCount)) \{
+413         \textcolor{keywordflow}{return} 1;
+414     \}
+415     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}-= firstChar;
+416 
+417     \textcolor{keywordflow}{if}( *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_ae06dc7b9804bb102859f0e32754e79a5}{FONT\_LENGTH}) == 0 && *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_ae06dc7b9804bb102859f0e32754e79a5}{FONT\_LENGTH}+1) == 0) \{
+418     \textcolor{comment}{// zero length is flag indicating fixed width font (array does not contain width data entries)}
+419        width = *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_afc65866121cd2eba3caa85d2946eeec0}{FONT\_FIXED\_WIDTH}); 
+420        index = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}*bytes*width+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_ae6bf0901cff58e47324da9487d0ee938}{FONT\_WIDTH\_TABLE};
+421     \}
+422     \textcolor{keywordflow}{else}\{
+423     \textcolor{comment}{// variable width font, read width data, to get the index}
+424        \textcolor{keywordflow}{for}(i=0; i<\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}; i++) \{  
+425          index += *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_ae6bf0901cff58e47324da9487d0ee938}{FONT\_WIDTH\_TABLE}+i);
+426        \}
+427        index = index*bytes+charCount+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_ae6bf0901cff58e47324da9487d0ee938}{FONT\_WIDTH\_TABLE};
+428        width = *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+FONT\_WIDTH\_TABLE+\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c});
+429     \}
+430 
+431     \textcolor{comment}{// last but not least, draw the character}
+432     \textcolor{keywordflow}{for}(i=0; i<bytes; i++) \{
+433         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a412cbb03b9cf3e5c6192d016ae82d2ae}{page} = i*\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width};
+434         \textcolor{keywordflow}{for}(j=0; j<\hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width}; j++) \{
+435             \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} dat = *(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+index+page+j);
+436         
+437             \textcolor{keywordflow}{if}(height > 8 && height < (i+1)*8) \{
+438                 dat >>= (i+1)*8-height;
+439             \}
+440             
+441             \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a925b25b33f788091fb294892cfc9a999}{FontColor} == \hyperlink{ili9325_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}) \{
+442                 \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(dat);
+443             \} \textcolor{keywordflow}{else} \{
+444                 \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(~dat);
+445             \}
+446         \}
+447         \textcolor{comment}{// 1px gap between chars}
+448         \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a925b25b33f788091fb294892cfc9a999}{FontColor} == \hyperlink{ili9325_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}) \{
+449             \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(0x00);
+450         \} \textcolor{keywordflow}{else} \{
+451             \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(0xFF);
+452         \}
+453         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(x, \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_ad87f9078b74ef74a58041131d06283c2}{y}+8);
+454     \}
+455     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(x+width+1, y);
+456 
+457     \textcolor{keywordflow}{return} 0;
+458 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a358b5f7848ef553f4a1f565704ddcfc8}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Puts@{Puts}}
+\index{Puts@{Puts}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Puts}]{\setlength{\rightskip}{0pt plus 5cm}void Puts (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a358b5f7848ef553f4a1f565704ddcfc8}
+
+
+Definition at line 460 of file ks0108.\-c.
+
+
+\begin{DoxyCode}
+460                      \{
+461     \textcolor{keywordtype}{int} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x};
+462     \textcolor{keywordflow}{while}(*str != 0) \{
+463         \textcolor{keywordflow}{if}(*str == \textcolor{charliteral}{'\(\backslash\)n'}) \{
+464             \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(x, \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_ad87f9078b74ef74a58041131d06283c2}{y}+*(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font}+\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a33f4fac49f2a5e27e2857eb27f054510}{FONT\_HEIGHT}));
+465         \} \textcolor{keywordflow}{else} \{
+466             \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac5cc59012354dd7a5926667a54ebafb6}{PutChar}(*str);
+467         \}
+468         str++;
+469     \}
+470 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_ae0fe46bf79a0e9e29841808b4d722bef}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Read\-Data@{Read\-Data}}
+\index{Read\-Data@{Read\-Data}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Read\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Read\-Data (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_ae0fe46bf79a0e9e29841808b4d722bef}
+
+
+Definition at line 592 of file ks0108.\-c.
+
+
+
+Referenced by Fill\-Rect(), Invert\-Rect(), Set\-Dot(), and Write\-Data().
+
+
+\begin{DoxyCode}
+592                   \{
+593     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a0dd8ea2a4de343420a7d0426af60b1e2}{DoReadData}(1);                            \textcolor{comment}{// dummy read}
+594     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a0dd8ea2a4de343420a7d0426af60b1e2}{DoReadData}(0);                 \textcolor{comment}{// "real" read}
+595 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a639aa9530a377605ba9c0735c5f536ca}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Select\-Font@{Select\-Font}}
+\index{Select\-Font@{Select\-Font}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Select\-Font}]{\setlength{\rightskip}{0pt plus 5cm}void Select\-Font (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{font, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a639aa9530a377605ba9c0735c5f536ca}
+Font Functions 
+
+Definition at line 334 of file ks0108.\-c.
+
+
+\begin{DoxyCode}
+334                                             \{
+335     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{Font} = \hyperlink{_s_t7565_8c_afc019ed26f2d57e2b415e12fb53ae54a}{font};    
+336     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a925b25b33f788091fb294892cfc9a999}{FontColor} = color;
+337 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a070e2023efb07893364208907abeb59c}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Set\-Dot@{Set\-Dot}}
+\index{Set\-Dot@{Set\-Dot}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Set\-Dot}]{\setlength{\rightskip}{0pt plus 5cm}void Set\-Dot (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{x, }
+\item[{{\bf u8}}]{y, }
+\item[{{\bf u8}}]{color}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a070e2023efb07893364208907abeb59c}
+
+
+Definition at line 316 of file ks0108.\-c.
+
+
+
+Referenced by Draw\-Round\-Rect().
+
+
+\begin{DoxyCode}
+316                                   \{
+317     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} dat;
+318 
+319     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}-\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}%8);                  \textcolor{comment}{// read data from display memory}
+320     dat = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ae0fe46bf79a0e9e29841808b4d722bef}{ReadData}();
+321 
+322     \textcolor{keywordflow}{if}(color == \hyperlink{ili9325_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}) \{
+323         dat |= 0x01 << (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}%8);          \textcolor{comment}{// set dot}
+324     \} \textcolor{keywordflow}{else} \{
+325         dat &= ~(0x01 << (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y}%8));       \textcolor{comment}{// clear dot}
+326     \}
+327 
+328     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{WriteData}(dat);                        \textcolor{comment}{// write data back to display}
+329 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_ac21f74defa8cfae1f8a8ed623d147685}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Set\-Inverted@{Set\-Inverted}}
+\index{Set\-Inverted@{Set\-Inverted}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Set\-Inverted}]{\setlength{\rightskip}{0pt plus 5cm}void Set\-Inverted (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{invert}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_ac21f74defa8cfae1f8a8ed623d147685}
+
+
+Definition at line 309 of file ks0108.\-c.
+
+
+\begin{DoxyCode}
+309                             \{
+310     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a4bc6413537c76e9edc2afb18384476f9}{Inverted} != invert) \{
+311         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a38c385b0b41843ca73f7d7978b7c3154}{InvertRect}(0,0,\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a46d67d48a7faab308f2e058dc35da83a}{DISPLAY\_WIDTH}-1,\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a43b7b2061f733ea1dc0a5a6028e131ff}{DISPLAY\_HEIGHT}-1);
+312         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a4bc6413537c76e9edc2afb18384476f9}{Inverted} = invert;
+313     \}
+314 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a34b41d3c8c0db2bc334ea0af6c0b79ff}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!String\-Width@{String\-Width}}
+\index{String\-Width@{String\-Width}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{String\-Width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} String\-Width (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a34b41d3c8c0db2bc334ea0af6c0b79ff}
+
+
+Definition at line 486 of file ks0108.\-c.
+
+
+\begin{DoxyCode}
+486                            \{
+487     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width} = 0;
+488 
+489     \textcolor{keywordflow}{while}(*str != 0) \{
+490         width += \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a6a8d9588edb5c47bd31096cd1dd1faff}{CharWidth}(*str++);
+491     \}
+492 
+493     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2_s_s_d1306_8c_a6d241c5fe0d45b2fbeba79d8ad18a4cb}{width};
+494 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a7f16c42269110211b6a65fe034cb0e11}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Write\-Command@{Write\-Command}}
+\index{Write\-Command@{Write\-Command}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Write\-Command}]{\setlength{\rightskip}{0pt plus 5cm}void Write\-Command (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{cmd, }
+\item[{{\bf u8}}]{chip}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a7f16c42269110211b6a65fe034cb0e11}
+Write a command to chip 
+
+Definition at line 598 of file ks0108.\-c.
+
+
+
+Referenced by Do\-Read\-Data(), Goto\-X\-Y(), Init(), and Write\-Data().
+
+
+\begin{DoxyCode}
+598                                    \{
+599     \textcolor{keywordflow}{if}(chip == \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a0c1a0a2df5479814f6ffc82c35c323cb}{CHIP1}) \{
+600         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7cd6c934ae85fb14cd28344d4c443e1d}{CSEL2});           \textcolor{comment}{// deselect chip 2}
+601         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a6029681d780c82ba19599dcb56c91052}{CSEL1});         \textcolor{comment}{// select chip 1}
+602     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(chip == \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a15e370cefbcf8cd791fd46d18bff260a}{CHIP2}) \{
+603         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a6029681d780c82ba19599dcb56c91052}{CSEL1});           \textcolor{comment}{// deselect chip 1}
+604         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7cd6c934ae85fb14cd28344d4c443e1d}{CSEL2});         \textcolor{comment}{// select chip 2}
+605     \}
+606 
+607     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_ae74d7a7a200a441a3ca10ca39937fd9c}{D\_I});                   \textcolor{comment}{// D/I = 0}
+608     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a58cc6c67bb1f75b4bc8951fead179541}{R\_W});                   \textcolor{comment}{// R/W = 0}
+609     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7287a84fef726dc7e0cd3ffebc27a70d}{LCD\_DATA\_DIR} = 0x00;                \textcolor{comment}{// data port is output}
+610     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a3da78e9342befc54d33d83ac57ca7b63}{LCD\_DATA\_OUT} = cmd;                 \textcolor{comment}{// write command}
+611     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_aebec479a7234241b3b664d7cfcb43401}{Enable}();                         \textcolor{comment}{// enable}
+612     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a3da78e9342befc54d33d83ac57ca7b63}{LCD\_DATA\_OUT} = 0x00;
+613 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Write\-Data@{Write\-Data}}
+\index{Write\-Data@{Write\-Data}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Write\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Write\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{dat}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2ks0108_8c_a761eed7339a3fa9a2c6a80d552b495c3}
+Write data to chip 
+
+Definition at line 616 of file ks0108.\-c.
+
+
+
+Referenced by Clear\-Page(), Draw\-Bitmap(), Fill\-Rect(), Invert\-Rect(), Put\-Char(), and Set\-Dot().
+
+
+\begin{DoxyCode}
+616                        \{
+617     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} displayData, yOffset, cmdPort;
+618 
+619 \textcolor{preprocessor}{#ifdef DEBUG}
+620 \textcolor{preprocessor}{}    \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} i;
+621     \textcolor{keywordflow}{for}(i=0; i<5000; i++);
+622 \textcolor{preprocessor}{#endif}
+623 \textcolor{preprocessor}{}
+624     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x} >= 128)
+625         \textcolor{keywordflow}{return};
+626 
+627     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x} < 64) \{
+628         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7cd6c934ae85fb14cd28344d4c443e1d}{CSEL2});           \textcolor{comment}{// deselect chip 2}
+629         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a6029681d780c82ba19599dcb56c91052}{CSEL1});         \textcolor{comment}{// select chip 1}
+630     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x} >= 64) \{
+631         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a6029681d780c82ba19599dcb56c91052}{CSEL1});           \textcolor{comment}{// deselect chip 1}
+632         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7cd6c934ae85fb14cd28344d4c443e1d}{CSEL2});         \textcolor{comment}{// select chip 2}
+633     \}
+634     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x} == 64)                 \textcolor{comment}{// chip2 X-address = 0}
+635         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a7f16c42269110211b6a65fe034cb0e11}{WriteCommand}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a8f56dd11a06a5f7dcd2045a555143cb4}{LCD\_SET\_ADD}, \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a15e370cefbcf8cd791fd46d18bff260a}{CHIP2});
+636 
+637     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ab6fd74f009ca35d383b894264537d579}{fastWriteHigh}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_ae74d7a7a200a441a3ca10ca39937fd9c}{D\_I});                 \textcolor{comment}{// D/I = 1}
+638     \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ac1e275e027938ea17394c7006844ed04}{fastWriteLow}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a58cc6c67bb1f75b4bc8951fead179541}{R\_W});               \textcolor{comment}{// R/W = 0}
+639     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7287a84fef726dc7e0cd3ffebc27a70d}{LCD\_DATA\_DIR} = 0x00;                \textcolor{comment}{// data port is output}
+640 
+641 
+642     yOffset = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_ad87f9078b74ef74a58041131d06283c2}{y}%8;
+643     \textcolor{keywordflow}{if}(yOffset != 0) \{
+644         \textcolor{comment}{// first page}
+645         cmdPort = \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a79eb482cd288d22a1eb2a0e3cfa6ca1b}{LCD\_CMD\_PORT};                     \textcolor{comment}{// save command port}
+646         displayData = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ae0fe46bf79a0e9e29841808b4d722bef}{ReadData}();
+647 
+648         \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a79eb482cd288d22a1eb2a0e3cfa6ca1b}{LCD\_CMD\_PORT} = cmdPort;                     \textcolor{comment}{// restore command port}
+649         \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7287a84fef726dc7e0cd3ffebc27a70d}{LCD\_DATA\_DIR} = 0x00;                        \textcolor{comment}{// data port is output}
+650 
+651         displayData |= dat << yOffset;
+652         \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a4bc6413537c76e9edc2afb18384476f9}{Inverted})
+653             displayData = ~displayData;
+654         \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a3da78e9342befc54d33d83ac57ca7b63}{LCD\_DATA\_OUT} = displayData;             \textcolor{comment}{// write data}
+655         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_aebec479a7234241b3b664d7cfcb43401}{Enable}();                             \textcolor{comment}{// enable}
+656 
+657         \textcolor{comment}{// second page}
+658         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x}, \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_ad87f9078b74ef74a58041131d06283c2}{y}+8);
+659 
+660         displayData = \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_ae0fe46bf79a0e9e29841808b4d722bef}{ReadData}();
+661 
+662         \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a79eb482cd288d22a1eb2a0e3cfa6ca1b}{LCD\_CMD\_PORT} = cmdPort;                     \textcolor{comment}{// restore command port}
+663         \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a7287a84fef726dc7e0cd3ffebc27a70d}{LCD\_DATA\_DIR} = 0x00;                        \textcolor{comment}{// data port is output}
+664 
+665         displayData |= dat >> (8-yOffset);
+666         \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a4bc6413537c76e9edc2afb18384476f9}{Inverted})
+667             displayData = ~displayData;
+668         \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a3da78e9342befc54d33d83ac57ca7b63}{LCD\_DATA\_OUT} = displayData;             \textcolor{comment}{// write data}
+669         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_aebec479a7234241b3b664d7cfcb43401}{Enable}();                             \textcolor{comment}{// enable}
+670 
+671         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a680a6e17b7103be477b59b1043aa5acd}{GotoXY}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x}+1, \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_ad87f9078b74ef74a58041131d06283c2}{y}-8);
+672     \} \textcolor{keywordflow}{else} \{
+673         \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2ks0108_8c_a4bc6413537c76e9edc2afb18384476f9}{Inverted})
+674             dat = ~dat;
+675         \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a3da78e9342befc54d33d83ac57ca7b63}{LCD\_DATA\_OUT} = dat;                     \textcolor{comment}{// write data}
+676         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_aebec479a7234241b3b664d7cfcb43401}{Enable}();                             \textcolor{comment}{// enable}
+677         \hyperlink{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{Coord}.\hyperlink{structlcd_coord_a66ab7498cbcfba822aa9a2891beffae2}{x}++;
+678     \}
+679     \hyperlink{p8_2pinguino_2libraries_2ks0108_8h_a3da78e9342befc54d33d83ac57ca7b63}{LCD\_DATA\_OUT} = 0x00;
+680 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Coord@{Coord}}
+\index{Coord@{Coord}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Coord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf lcd\-Coord} Coord}}\label{p8_2pinguino_2libraries_2ks0108_8c_af02d1c5ebc6d9a918f52f3dea6947fbc}
+
+
+Definition at line 20 of file ks0108.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Font@{Font}}
+\index{Font@{Font}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Font}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8}$\ast$ Font}}\label{p8_2pinguino_2libraries_2ks0108_8c_a6348b1612af2f6e37e39ad87c0eec2b7}
+
+
+Definition at line 23 of file ks0108.\-c.
+
+
+
+Referenced by Char\-Width(), Cursor\-To(), Put\-Char(), Puts(), and Select\-Font().
+
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a925b25b33f788091fb294892cfc9a999}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Font\-Color@{Font\-Color}}
+\index{Font\-Color@{Font\-Color}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Font\-Color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Font\-Color}}\label{p8_2pinguino_2libraries_2ks0108_8c_a925b25b33f788091fb294892cfc9a999}
+
+
+Definition at line 22 of file ks0108.\-c.
+
+
+
+Referenced by Put\-Char(), and Select\-Font().
+
+\hypertarget{p8_2pinguino_2libraries_2ks0108_8c_a4bc6413537c76e9edc2afb18384476f9}{\index{p8/pinguino/libraries/ks0108.\-c@{p8/pinguino/libraries/ks0108.\-c}!Inverted@{Inverted}}
+\index{Inverted@{Inverted}!p8/pinguino/libraries/ks0108.c@{p8/pinguino/libraries/ks0108.\-c}}
+\subsubsection[{Inverted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Inverted =0}}\label{p8_2pinguino_2libraries_2ks0108_8c_a4bc6413537c76e9edc2afb18384476f9}
+
+
+Definition at line 21 of file ks0108.\-c.
+
+
+
+Referenced by Do\-Read\-Data(), Init(), Set\-Inverted(), and Write\-Data().
+

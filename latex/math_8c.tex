@@ -1,0 +1,84 @@
+\hypertarget{math_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/math.c File Reference}
+\label{math_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/math.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/math.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{math_8c_aa0c7e1cce65ede592cd4c179dc5771ed}{\-\_\-\-\_\-\-M\-A\-T\-H\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{math_8c_aada2d75bc8a8c6eb845bd940eadfa3fd}{map} (long \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, long in\-\_\-min, long in\-\_\-max, long out\-\_\-min, long out\-\_\-max)
+\item 
+long \hyperlink{math_8c_a261df0b38e480e28a370c80e0ab82407}{bounds} (long \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, long \-\_\-min, long \-\_\-max)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{math_8c_aa0c7e1cce65ede592cd4c179dc5771ed}{\index{math.\-c@{math.\-c}!\-\_\-\-\_\-\-M\-A\-T\-H\-\_\-\-C@{\-\_\-\-\_\-\-M\-A\-T\-H\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-M\-A\-T\-H\-\_\-\-C@{\-\_\-\-\_\-\-M\-A\-T\-H\-\_\-\-C}!math.c@{math.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-M\-A\-T\-H\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-M\-A\-T\-H\-\_\-\-C}}\label{math_8c_aa0c7e1cce65ede592cd4c179dc5771ed}
+
+
+Definition at line 25 of file math.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{math_8c_a261df0b38e480e28a370c80e0ab82407}{\index{math.\-c@{math.\-c}!bounds@{bounds}}
+\index{bounds@{bounds}!math.c@{math.\-c}}
+\subsubsection[{bounds}]{\setlength{\rightskip}{0pt plus 5cm}long bounds (
+\begin{DoxyParamCaption}
+\item[{long}]{x, }
+\item[{long}]{\-\_\-min, }
+\item[{long}]{\-\_\-max}
+\end{DoxyParamCaption}
+)}}\label{math_8c_a261df0b38e480e28a370c80e0ab82407}
+
+
+Definition at line 35 of file math.\-c.
+
+
+
+References x.
+
+
+\begin{DoxyCode}
+36 \{
+37     \textcolor{keywordtype}{long} temp;
+38     
+39     \textcolor{keywordflow}{if} (\_max < \_min)
+40     \{
+41         temp = \_max;
+42         \_max = \_min;
+43         \_min = temp;
+44     \}
+45     
+46     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} > \_max) \textcolor{keywordflow}{return} \_max;
+47     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} < \_min) \textcolor{keywordflow}{return} \_min;
+48     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x};
+49 \}
+\end{DoxyCode}
+\hypertarget{math_8c_aada2d75bc8a8c6eb845bd940eadfa3fd}{\index{math.\-c@{math.\-c}!map@{map}}
+\index{map@{map}!math.c@{math.\-c}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}long map (
+\begin{DoxyParamCaption}
+\item[{long}]{x, }
+\item[{long}]{in\-\_\-min, }
+\item[{long}]{in\-\_\-max, }
+\item[{long}]{out\-\_\-min, }
+\item[{long}]{out\-\_\-max}
+\end{DoxyParamCaption}
+)}}\label{math_8c_aada2d75bc8a8c6eb845bd940eadfa3fd}
+
+
+Definition at line 30 of file math.\-c.
+
+
+\begin{DoxyCode}
+31 \{
+32   \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} - in\_min) * (out\_max - out\_min) / (in\_max - in\_min) + out\_min;
+33 \}
+\end{DoxyCode}

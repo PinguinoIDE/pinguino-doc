@@ -1,0 +1,913 @@
+\hypertarget{_m_c_p342x_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-M\-C\-P342x.c File Reference}
+\label{_m_c_p342x_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-M\-C\-P342x.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/\-M\-C\-P342x.\-c}}
+}
+{\ttfamily \#include $<$pinguinoi2c1.\-c$>$}\\*
+{\ttfamily \#include $<$millis.\-c$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtag_m_c_p342x_c_h}{tag\-M\-C\-P342x\-C\-H}
+\item 
+struct \hyperlink{structtag_m_c_p342x}{tag\-M\-C\-P342x}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a3c5cfc7002f39a1b557d8376160a7089}{M\-C\-P342x\-\_\-h}
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a39a410ccadf75a071505a01fd2511381}{M\-C\-P342x\-\_\-\-A\-D\-D\-R\-E\-S\-S}~0\-X68
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a96f5763ce2c274ce2912481a3e0336f9}{M\-C\-P342x\-\_\-2048m\-V\-F\-S}~0\-X00
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a38cd3e3424b8b4d5cb7e15596a556b5b}{M\-C\-P342x\-\_\-1024m\-V\-F\-S}~0\-X01
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a257834291cd8abfcab6da85d8c704bfa}{M\-C\-P342x\-\_\-512m\-V\-F\-S}~0\-X02
+\item 
+\#define \hyperlink{_m_c_p342x_8c_ab154b465cedf5be97b5d38e9bdebafcd}{M\-C\-P342x\-\_\-256m\-V\-F\-S}~0\-X03
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a4fd9193f00a88bbc03ef779caeeac625}{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T}~0\-X00$\ast$4
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a16d48e4722ad56b1a260ef548fe72cc8}{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T}~0\-X01$\ast$4
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a8560c2b0c33ad9ca016ec6b5061df0af}{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T}~0\-X02$\ast$4
+\item 
+\#define \hyperlink{_m_c_p342x_8c_ac3cce34c4e2eca72f883b7607e81c4da}{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T}~0\-X03$\ast$4
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a393d66d372f28c95b8fea54c490f46ea}{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-N\-V}~1000000
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a661b63293ba19264777a8a96a385217c}{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-N\-V}~250000
+\item 
+\#define \hyperlink{_m_c_p342x_8c_ae89f4d299716aea8cf2fcbe7979611b9}{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-N\-V}~62500
+\item 
+\#define \hyperlink{_m_c_p342x_8c_af923b373aff3acee045780e8587870bc}{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-N\-V}~15625
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a248d6fe77ca29aee5947d82e01b12643}{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-M\-S}~5
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a460aca88c3b7bb7e13754f7641dc58a9}{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-M\-S}~17
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a83f86fa8337080c38fc070fcd7fcc939}{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-M\-S}~67
+\item 
+\#define \hyperlink{_m_c_p342x_8c_ab9199c8fe4c21a2bce0e9f474d2b1e58}{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-M\-S}~267
+\item 
+\#define \hyperlink{_m_c_p342x_8c_af22275daa0a7e1115ae8c8d408d6e9f7}{M\-C\-P342x\-\_\-\-C\-O\-N\-T\-I\-N\-U\-O\-U\-S}~0\-X10
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a0aae4c29fac7b22553096fb9a53290ba}{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-1}~0\-X00
+\item 
+\#define \hyperlink{_m_c_p342x_8c_af620199f99e00ecb372df80ada983f0c}{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-2}~0\-X20
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a813c2d7f02cfe5163e0ba26cbb11c8ba}{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-3}~0\-X40
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a91915e6e192f2890f44d4fdef3449b83}{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-4}~0\-X60
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a31729f8c5323524968a9bd7deedc90d0}{M\-C\-P342x\-\_\-\-S\-T\-A\-R\-T}~0\-X80
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a1796cb01ecf7838acf8291e4024cfc6f}{M\-C\-P342x\-\_\-\-B\-U\-S\-Y}~0\-X80
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a7066469a54c3dbb590fc6095af4b1108}{M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-P}~0x00\-F\-F\-F\-F\-F\-F
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a1598621aaae4ed61b39852aca5ee1dcd}{M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-N}~2100000000
+\item 
+\#define \hyperlink{_m_c_p342x_8c_aab202f60b8c5bd2722fe008dd056e70e}{M\-C\-P342x\-\_\-\-P\-O\-I\-N\-T\-S}~\hyperlink{p32_2include_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{T\-R\-U\-E}
+\item 
+\#define \hyperlink{_m_c_p342x_8c_a98a5f7d98efdc2cd5a748859c200520e}{M\-C\-P342x\-\_\-\-N\-V}~\hyperlink{p32_2include_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{F\-A\-L\-S\-E}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structtag_m_c_p342x_c_h}{tag\-M\-C\-P342x\-C\-H} \hyperlink{_m_c_p342x_8c_ac8d1971fbd29c07099b21723634185ff}{M\-C\-P342x\-C\-H}
+\item 
+typedef struct \hyperlink{structtag_m_c_p342x}{tag\-M\-C\-P342x} \hyperlink{_m_c_p342x_8c_a587209d554cad2c8e39559c75b433e22}{M\-C\-P342x}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p342x_8c_a1696cee718a6136b80b1fbaa092365ca}{M\-C\-P342x\-\_\-\-Fault} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} Valo)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p342x_8c_acbedc0df74f799d031b9a44d4e59ec40}{M\-C\-P342x\-\_\-write} (\hyperlink{_m_c_p342x_8c_a587209d554cad2c8e39559c75b433e22}{M\-C\-P342x} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Val)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p342x_8c_a4462e74094c37814c1fa1e982dd0b842}{M\-C\-P342x\-\_\-read\-\_\-\-Data} (\hyperlink{_m_c_p342x_8c_a587209d554cad2c8e39559c75b433e22}{M\-C\-P342x} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p342x_8c_ac3a3ef06315318489ac2f59bdbb247c5}{M\-C\-P342x\-\_\-init} (\hyperlink{_m_c_p342x_8c_a587209d554cad2c8e39559c75b433e22}{M\-C\-P342x} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} I2\-C\-Addr, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Num\-Ch)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p342x_8c_ae4e232438eadba15382c951b325f4490}{M\-C\-P342x\-\_\-start\-Ch} (\hyperlink{_m_c_p342x_8c_a587209d554cad2c8e39559c75b433e22}{M\-C\-P342x} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Ch, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Gain, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Res)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p342x_8c_a4c84fe982d978658c2dd9918605398f5}{M\-C\-P342x\-\_\-stop\-Ch} (\hyperlink{_m_c_p342x_8c_a587209d554cad2c8e39559c75b433e22}{M\-C\-P342x} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Ch)
+\item 
+int \hyperlink{_m_c_p342x_8c_af5d27cbfe9428a43bd82ea2831c3c466}{M\-C\-P342x\-\_\-loop} (\hyperlink{_m_c_p342x_8c_a587209d554cad2c8e39559c75b433e22}{M\-C\-P342x} $\ast$Mcp)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{_m_c_p342x_8c_a1877a6686fad7cbb555fa713ec013e55}{M\-C\-P342x\-\_\-get\-Data} (\hyperlink{_m_c_p342x_8c_a587209d554cad2c8e39559c75b433e22}{M\-C\-P342x} $\ast$Mcp, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Ch, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Type, int $\ast$Valo)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_m_c_p342x_8c_a38cd3e3424b8b4d5cb7e15596a556b5b}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-1024m\-V\-F\-S@{M\-C\-P342x\-\_\-1024m\-V\-F\-S}}
+\index{M\-C\-P342x\-\_\-1024m\-V\-F\-S@{M\-C\-P342x\-\_\-1024m\-V\-F\-S}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-1024m\-V\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-1024m\-V\-F\-S~0\-X01}}\label{_m_c_p342x_8c_a38cd3e3424b8b4d5cb7e15596a556b5b}
+
+
+Definition at line 78 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop(), and M\-C\-P342x\-\_\-start\-Ch().
+
+\hypertarget{_m_c_p342x_8c_a4fd9193f00a88bbc03ef779caeeac625}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T@{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T}}
+\index{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T@{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T~0\-X00$\ast$4}}\label{_m_c_p342x_8c_a4fd9193f00a88bbc03ef779caeeac625}
+
+
+Definition at line 82 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-init(), M\-C\-P342x\-\_\-loop(), and M\-C\-P342x\-\_\-start\-Ch().
+
+\hypertarget{_m_c_p342x_8c_a248d6fe77ca29aee5947d82e01b12643}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-M\-S@{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-M\-S}}
+\index{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-M\-S@{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-M\-S}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-M\-S~5}}\label{_m_c_p342x_8c_a248d6fe77ca29aee5947d82e01b12643}
+
+
+Definition at line 92 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_a393d66d372f28c95b8fea54c490f46ea}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-N\-V@{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-N\-V}}
+\index{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-N\-V@{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-N\-V}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-N\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-N\-V~1000000}}\label{_m_c_p342x_8c_a393d66d372f28c95b8fea54c490f46ea}
+
+
+Definition at line 87 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_a16d48e4722ad56b1a260ef548fe72cc8}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T@{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T}}
+\index{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T@{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T~0\-X01$\ast$4}}\label{_m_c_p342x_8c_a16d48e4722ad56b1a260ef548fe72cc8}
+
+
+Definition at line 83 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop(), and M\-C\-P342x\-\_\-start\-Ch().
+
+\hypertarget{_m_c_p342x_8c_a460aca88c3b7bb7e13754f7641dc58a9}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-M\-S@{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-M\-S}}
+\index{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-M\-S@{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-M\-S}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-M\-S~17}}\label{_m_c_p342x_8c_a460aca88c3b7bb7e13754f7641dc58a9}
+
+
+Definition at line 93 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_a661b63293ba19264777a8a96a385217c}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-N\-V@{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-N\-V}}
+\index{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-N\-V@{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-N\-V}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-N\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-N\-V~250000}}\label{_m_c_p342x_8c_a661b63293ba19264777a8a96a385217c}
+
+
+Definition at line 88 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_a8560c2b0c33ad9ca016ec6b5061df0af}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T@{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T}}
+\index{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T@{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T~0\-X02$\ast$4}}\label{_m_c_p342x_8c_a8560c2b0c33ad9ca016ec6b5061df0af}
+
+
+Definition at line 84 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop(), and M\-C\-P342x\-\_\-start\-Ch().
+
+\hypertarget{_m_c_p342x_8c_a83f86fa8337080c38fc070fcd7fcc939}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-M\-S@{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-M\-S}}
+\index{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-M\-S@{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-M\-S}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-M\-S~67}}\label{_m_c_p342x_8c_a83f86fa8337080c38fc070fcd7fcc939}
+
+
+Definition at line 94 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_ae89f4d299716aea8cf2fcbe7979611b9}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-N\-V@{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-N\-V}}
+\index{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-N\-V@{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-N\-V}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-N\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-N\-V~62500}}\label{_m_c_p342x_8c_ae89f4d299716aea8cf2fcbe7979611b9}
+
+
+Definition at line 89 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_ac3cce34c4e2eca72f883b7607e81c4da}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T@{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T}}
+\index{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T@{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T~0\-X03$\ast$4}}\label{_m_c_p342x_8c_ac3cce34c4e2eca72f883b7607e81c4da}
+
+
+Definition at line 85 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop(), and M\-C\-P342x\-\_\-start\-Ch().
+
+\hypertarget{_m_c_p342x_8c_ab9199c8fe4c21a2bce0e9f474d2b1e58}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-M\-S@{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-M\-S}}
+\index{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-M\-S@{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-M\-S}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-M\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-M\-S~267}}\label{_m_c_p342x_8c_ab9199c8fe4c21a2bce0e9f474d2b1e58}
+
+
+Definition at line 95 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_af923b373aff3acee045780e8587870bc}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-N\-V@{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-N\-V}}
+\index{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-N\-V@{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-N\-V}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-N\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-N\-V~15625}}\label{_m_c_p342x_8c_af923b373aff3acee045780e8587870bc}
+
+
+Definition at line 90 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_a96f5763ce2c274ce2912481a3e0336f9}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-2048m\-V\-F\-S@{M\-C\-P342x\-\_\-2048m\-V\-F\-S}}
+\index{M\-C\-P342x\-\_\-2048m\-V\-F\-S@{M\-C\-P342x\-\_\-2048m\-V\-F\-S}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-2048m\-V\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-2048m\-V\-F\-S~0\-X00}}\label{_m_c_p342x_8c_a96f5763ce2c274ce2912481a3e0336f9}
+
+
+Definition at line 77 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-init(), M\-C\-P342x\-\_\-loop(), and M\-C\-P342x\-\_\-start\-Ch().
+
+\hypertarget{_m_c_p342x_8c_ab154b465cedf5be97b5d38e9bdebafcd}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-256m\-V\-F\-S@{M\-C\-P342x\-\_\-256m\-V\-F\-S}}
+\index{M\-C\-P342x\-\_\-256m\-V\-F\-S@{M\-C\-P342x\-\_\-256m\-V\-F\-S}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-256m\-V\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-256m\-V\-F\-S~0\-X03}}\label{_m_c_p342x_8c_ab154b465cedf5be97b5d38e9bdebafcd}
+
+
+Definition at line 80 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop(), and M\-C\-P342x\-\_\-start\-Ch().
+
+\hypertarget{_m_c_p342x_8c_a257834291cd8abfcab6da85d8c704bfa}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-512m\-V\-F\-S@{M\-C\-P342x\-\_\-512m\-V\-F\-S}}
+\index{M\-C\-P342x\-\_\-512m\-V\-F\-S@{M\-C\-P342x\-\_\-512m\-V\-F\-S}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-512m\-V\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-512m\-V\-F\-S~0\-X02}}\label{_m_c_p342x_8c_a257834291cd8abfcab6da85d8c704bfa}
+
+
+Definition at line 79 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop(), and M\-C\-P342x\-\_\-start\-Ch().
+
+\hypertarget{_m_c_p342x_8c_a39a410ccadf75a071505a01fd2511381}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-A\-D\-D\-R\-E\-S\-S@{M\-C\-P342x\-\_\-\-A\-D\-D\-R\-E\-S\-S}}
+\index{M\-C\-P342x\-\_\-\-A\-D\-D\-R\-E\-S\-S@{M\-C\-P342x\-\_\-\-A\-D\-D\-R\-E\-S\-S}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-A\-D\-D\-R\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-A\-D\-D\-R\-E\-S\-S~0\-X68}}\label{_m_c_p342x_8c_a39a410ccadf75a071505a01fd2511381}
+
+
+Definition at line 75 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-read\-\_\-\-Data(), and M\-C\-P342x\-\_\-write().
+
+\hypertarget{_m_c_p342x_8c_a1796cb01ecf7838acf8291e4024cfc6f}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-B\-U\-S\-Y@{M\-C\-P342x\-\_\-\-B\-U\-S\-Y}}
+\index{M\-C\-P342x\-\_\-\-B\-U\-S\-Y@{M\-C\-P342x\-\_\-\-B\-U\-S\-Y}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-B\-U\-S\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-B\-U\-S\-Y~0\-X80}}\label{_m_c_p342x_8c_a1796cb01ecf7838acf8291e4024cfc6f}
+
+
+Definition at line 105 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_a0aae4c29fac7b22553096fb9a53290ba}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-1@{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-1}}
+\index{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-1@{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-1}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-1~0\-X00}}\label{_m_c_p342x_8c_a0aae4c29fac7b22553096fb9a53290ba}
+
+
+Definition at line 99 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_af620199f99e00ecb372df80ada983f0c}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-2@{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-2}}
+\index{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-2@{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-2}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-2~0\-X20}}\label{_m_c_p342x_8c_af620199f99e00ecb372df80ada983f0c}
+
+
+Definition at line 100 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_a813c2d7f02cfe5163e0ba26cbb11c8ba}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-3@{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-3}}
+\index{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-3@{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-3}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-3~0\-X40}}\label{_m_c_p342x_8c_a813c2d7f02cfe5163e0ba26cbb11c8ba}
+
+
+Definition at line 101 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_a91915e6e192f2890f44d4fdef3449b83}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-4@{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-4}}
+\index{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-4@{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-4}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-4~0\-X60}}\label{_m_c_p342x_8c_a91915e6e192f2890f44d4fdef3449b83}
+
+
+Definition at line 102 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+\hypertarget{_m_c_p342x_8c_af22275daa0a7e1115ae8c8d408d6e9f7}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-C\-O\-N\-T\-I\-N\-U\-O\-U\-S@{M\-C\-P342x\-\_\-\-C\-O\-N\-T\-I\-N\-U\-O\-U\-S}}
+\index{M\-C\-P342x\-\_\-\-C\-O\-N\-T\-I\-N\-U\-O\-U\-S@{M\-C\-P342x\-\_\-\-C\-O\-N\-T\-I\-N\-U\-O\-U\-S}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-C\-O\-N\-T\-I\-N\-U\-O\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-C\-O\-N\-T\-I\-N\-U\-O\-U\-S~0\-X10}}\label{_m_c_p342x_8c_af22275daa0a7e1115ae8c8d408d6e9f7}
+
+
+Definition at line 97 of file M\-C\-P342x.\-c.
+
+\hypertarget{_m_c_p342x_8c_a3c5cfc7002f39a1b557d8376160a7089}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-h@{M\-C\-P342x\-\_\-h}}
+\index{M\-C\-P342x\-\_\-h@{M\-C\-P342x\-\_\-h}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-h}}\label{_m_c_p342x_8c_a3c5cfc7002f39a1b557d8376160a7089}
+
+
+Definition at line 66 of file M\-C\-P342x.\-c.
+
+\hypertarget{_m_c_p342x_8c_a1598621aaae4ed61b39852aca5ee1dcd}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-N@{M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-N}}
+\index{M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-N@{M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-N}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-N~2100000000}}\label{_m_c_p342x_8c_a1598621aaae4ed61b39852aca5ee1dcd}
+
+
+Definition at line 108 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-get\-Data(), M\-C\-P342x\-\_\-init(), M\-C\-P342x\-\_\-start\-Ch(), and M\-C\-P342x\-\_\-stop\-Ch().
+
+\hypertarget{_m_c_p342x_8c_a7066469a54c3dbb590fc6095af4b1108}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-P@{M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-P}}
+\index{M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-P@{M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-P}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-P~0x00\-F\-F\-F\-F\-F\-F}}\label{_m_c_p342x_8c_a7066469a54c3dbb590fc6095af4b1108}
+
+
+Definition at line 107 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-get\-Data(), M\-C\-P342x\-\_\-init(), M\-C\-P342x\-\_\-start\-Ch(), and M\-C\-P342x\-\_\-stop\-Ch().
+
+\hypertarget{_m_c_p342x_8c_a98a5f7d98efdc2cd5a748859c200520e}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-N\-V@{M\-C\-P342x\-\_\-\-N\-V}}
+\index{M\-C\-P342x\-\_\-\-N\-V@{M\-C\-P342x\-\_\-\-N\-V}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-N\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-N\-V~{\bf F\-A\-L\-S\-E}}}\label{_m_c_p342x_8c_a98a5f7d98efdc2cd5a748859c200520e}
+
+
+Definition at line 111 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-get\-Data().
+
+\hypertarget{_m_c_p342x_8c_aab202f60b8c5bd2722fe008dd056e70e}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-P\-O\-I\-N\-T\-S@{M\-C\-P342x\-\_\-\-P\-O\-I\-N\-T\-S}}
+\index{M\-C\-P342x\-\_\-\-P\-O\-I\-N\-T\-S@{M\-C\-P342x\-\_\-\-P\-O\-I\-N\-T\-S}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-P\-O\-I\-N\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-P\-O\-I\-N\-T\-S~{\bf T\-R\-U\-E}}}\label{_m_c_p342x_8c_aab202f60b8c5bd2722fe008dd056e70e}
+
+
+Definition at line 110 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-get\-Data().
+
+\hypertarget{_m_c_p342x_8c_a31729f8c5323524968a9bd7deedc90d0}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-S\-T\-A\-R\-T@{M\-C\-P342x\-\_\-\-S\-T\-A\-R\-T}}
+\index{M\-C\-P342x\-\_\-\-S\-T\-A\-R\-T@{M\-C\-P342x\-\_\-\-S\-T\-A\-R\-T}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-S\-T\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-C\-P342x\-\_\-\-S\-T\-A\-R\-T~0\-X80}}\label{_m_c_p342x_8c_a31729f8c5323524968a9bd7deedc90d0}
+
+
+Definition at line 104 of file M\-C\-P342x.\-c.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_m_c_p342x_8c_a587209d554cad2c8e39559c75b433e22}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x@{M\-C\-P342x}}
+\index{M\-C\-P342x@{M\-C\-P342x}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\-M\-C\-P342x}  {\bf M\-C\-P342x}}}\label{_m_c_p342x_8c_a587209d554cad2c8e39559c75b433e22}
+\hypertarget{_m_c_p342x_8c_ac8d1971fbd29c07099b21723634185ff}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-C\-H@{M\-C\-P342x\-C\-H}}
+\index{M\-C\-P342x\-C\-H@{M\-C\-P342x\-C\-H}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-C\-H}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\-M\-C\-P342x\-C\-H}  {\bf M\-C\-P342x\-C\-H}}}\label{_m_c_p342x_8c_ac8d1971fbd29c07099b21723634185ff}
+
+
+\subsection{Function Documentation}
+\hypertarget{_m_c_p342x_8c_a1696cee718a6136b80b1fbaa092365ca}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-\-Fault@{M\-C\-P342x\-\_\-\-Fault}}
+\index{M\-C\-P342x\-\_\-\-Fault@{M\-C\-P342x\-\_\-\-Fault}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-\-Fault}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P342x\-\_\-\-Fault (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{Valo}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p342x_8c_a1696cee718a6136b80b1fbaa092365ca}
+
+
+Definition at line 142 of file M\-C\-P342x.\-c.
+
+
+
+References F\-A\-L\-S\-E, and I2\-C1\-\_\-stop().
+
+
+
+Referenced by M\-C\-P342x\-\_\-read\-\_\-\-Data(), and M\-C\-P342x\-\_\-write().
+
+
+\begin{DoxyCode}
+143 \{
+144  \hyperlink{pinguinoi2c1_8c_aed15ea00091e0ecd9d34c9b90ac6c66c}{I2C1\_stop}();
+145  \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}); 
+146 \}
+\end{DoxyCode}
+\hypertarget{_m_c_p342x_8c_a1877a6686fad7cbb555fa713ec013e55}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-get\-Data@{M\-C\-P342x\-\_\-get\-Data}}
+\index{M\-C\-P342x\-\_\-get\-Data@{M\-C\-P342x\-\_\-get\-Data}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-get\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P342x\-\_\-get\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P342x} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{Ch, }
+\item[{{\bf u8}}]{Type, }
+\item[{int $\ast$}]{Valo}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p342x_8c_a1877a6686fad7cbb555fa713ec013e55}
+
+
+Definition at line 530 of file M\-C\-P342x.\-c.
+
+
+
+References tag\-M\-C\-P342x\-::\-Ch, F\-A\-L\-S\-E, M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-N, M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-P, M\-C\-P342x\-\_\-\-N\-V, M\-C\-P342x\-\_\-\-P\-O\-I\-N\-T\-S, N\-U\-L\-L, tag\-M\-C\-P342x\-::\-Num\-Ch, tag\-M\-C\-P342x\-C\-H\-::n\-V, tag\-M\-C\-P342x\-C\-H\-::\-Points, and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+531  \{
+532   \textcolor{keywordflow}{if} ( (Mcp == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) || (Ch > 4)  || (Ch < 1) || (Ch > Mcp->\hyperlink{structtag_m_c_p342x_a0205dd711b1cc7c32042fe54634bfe84}{NumCh}) )
+533    \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+534   *Valo = 0;
+535   \textcolor{keywordflow}{switch} (Type)
+536    \{
+537     \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_aab202f60b8c5bd2722fe008dd056e70e}{MCP342x\_POINTS}:
+538      \textcolor{keywordflow}{if} (Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_a4e6fa56ee9cc8075628f24656cbe03ba}{Points} == \hyperlink{_m_c_p342x_8c_a7066469a54c3dbb590fc6095af4b1108}{MCP342x\_NORE\_P})
+539       \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+540      *Valo = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_a4e6fa56ee9cc8075628f24656cbe03ba}{Points};
+541      Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_a4e6fa56ee9cc8075628f24656cbe03ba}{Points} = \hyperlink{_m_c_p342x_8c_a7066469a54c3dbb590fc6095af4b1108}{MCP342x\_NORE\_P};
+542      \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+543      
+544     \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a98a5f7d98efdc2cd5a748859c200520e}{MCP342x\_NV}:
+545      \textcolor{keywordflow}{if} (Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_affe84419e6828165e18a52d724db74fd}{nV} == \hyperlink{_m_c_p342x_8c_a1598621aaae4ed61b39852aca5ee1dcd}{MCP342x\_NORE\_N})
+546       \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+547      *Valo = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_affe84419e6828165e18a52d724db74fd}{nV};
+548      Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_affe84419e6828165e18a52d724db74fd}{nV} = \hyperlink{_m_c_p342x_8c_a1598621aaae4ed61b39852aca5ee1dcd}{MCP342x\_NORE\_N};
+549      \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+550      
+551     \textcolor{keywordflow}{default}:
+552      \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+553    \}
+554  \}\end{DoxyCode}
+\hypertarget{_m_c_p342x_8c_ac3a3ef06315318489ac2f59bdbb247c5}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-init@{M\-C\-P342x\-\_\-init}}
+\index{M\-C\-P342x\-\_\-init@{M\-C\-P342x\-\_\-init}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P342x\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P342x} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{I2\-C\-Addr, }
+\item[{{\bf u8}}]{Num\-Ch}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p342x_8c_ac3a3ef06315318489ac2f59bdbb247c5}
+
+
+Definition at line 209 of file M\-C\-P342x.\-c.
+
+
+
+References tag\-M\-C\-P342x\-::\-Act\-Ch, tag\-M\-C\-P342x\-::\-Ch, F\-A\-L\-S\-E, tag\-M\-C\-P342x\-C\-H\-::\-Gain, I2\-C1\-\_\-init(), tag\-M\-C\-P342x\-::\-I2\-C\-Addr, tag\-M\-C\-P342x\-::\-In\-Sample, M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T, M\-C\-P342x\-\_\-2048m\-V\-F\-S, M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-N, M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-P, N\-U\-L\-L, tag\-M\-C\-P342x\-::\-Num\-Ch, tag\-M\-C\-P342x\-C\-H\-::n\-V, tag\-M\-C\-P342x\-C\-H\-::\-On, tag\-M\-C\-P342x\-::\-On, tag\-M\-C\-P342x\-C\-H\-::\-Points, tag\-M\-C\-P342x\-C\-H\-::\-Res, and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+210  \{
+211   \textcolor{keywordflow}{if} ( (Mcp == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) || (I2CAddr > 7) || (NumCh > 4)  || (NumCh < 1))
+212    \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+213   Mcp->\hyperlink{structtag_m_c_p342x_a2d1f06ea4f608600e241eeded488b0df}{On} = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+214   Mcp->\hyperlink{structtag_m_c_p342x_a134d70693df6521dd8d693f79a14737e}{InSample} = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+215   Mcp->\hyperlink{structtag_m_c_p342x_a525e929bfd993f97bf03022b3d01e334}{I2CAddr} = I2CAddr;
+216   Mcp->\hyperlink{structtag_m_c_p342x_a0205dd711b1cc7c32042fe54634bfe84}{NumCh} = NumCh;
+217   Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh} = 0;
+218   Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[0].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[1].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[2].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[3].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} = 
+      \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+219   Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[0].\hyperlink{structtag_m_c_p342x_c_h_af6edf66b290ce5c676f8fc96531593cd}{Gain} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[1].\hyperlink{structtag_m_c_p342x_c_h_af6edf66b290ce5c676f8fc96531593cd}{Gain} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[2].\hyperlink{structtag_m_c_p342x_c_h_af6edf66b290ce5c676f8fc96531593cd}{Gain} = Mcp->
+      \hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[3].\hyperlink{structtag_m_c_p342x_c_h_af6edf66b290ce5c676f8fc96531593cd}{Gain} = \hyperlink{_m_c_p342x_8c_a96f5763ce2c274ce2912481a3e0336f9}{MCP342x\_2048mVFS};
+220   Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[0].\hyperlink{structtag_m_c_p342x_c_h_a8573f92bdf8f12f4d330c68aee4ce26a}{Res} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[1].\hyperlink{structtag_m_c_p342x_c_h_a8573f92bdf8f12f4d330c68aee4ce26a}{Res} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[2].\hyperlink{structtag_m_c_p342x_c_h_a8573f92bdf8f12f4d330c68aee4ce26a}{Res} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[3].
+      \hyperlink{structtag_m_c_p342x_c_h_a8573f92bdf8f12f4d330c68aee4ce26a}{Res} = \hyperlink{_m_c_p342x_8c_a4fd9193f00a88bbc03ef779caeeac625}{MCP342x\_12\_BIT};
+221   Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[0].\hyperlink{structtag_m_c_p342x_c_h_a4e6fa56ee9cc8075628f24656cbe03ba}{Points} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[1].\hyperlink{structtag_m_c_p342x_c_h_a4e6fa56ee9cc8075628f24656cbe03ba}{Points} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[2].\hyperlink{structtag_m_c_p342x_c_h_a4e6fa56ee9cc8075628f24656cbe03ba}{Points} = Mcp->
+      \hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[3].\hyperlink{structtag_m_c_p342x_c_h_a4e6fa56ee9cc8075628f24656cbe03ba}{Points} = \hyperlink{_m_c_p342x_8c_a7066469a54c3dbb590fc6095af4b1108}{MCP342x\_NORE\_P};
+222   Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[0].\hyperlink{structtag_m_c_p342x_c_h_affe84419e6828165e18a52d724db74fd}{nV} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[1].\hyperlink{structtag_m_c_p342x_c_h_affe84419e6828165e18a52d724db74fd}{nV} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[2].\hyperlink{structtag_m_c_p342x_c_h_affe84419e6828165e18a52d724db74fd}{nV} = Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[3].\hyperlink{structtag_m_c_p342x_c_h_affe84419e6828165e18a52d724db74fd}{nV} = 
+      \hyperlink{_m_c_p342x_8c_a1598621aaae4ed61b39852aca5ee1dcd}{MCP342x\_NORE\_N};
+223   \hyperlink{pinguinoi2c1_8c_a7cadc90b69a684c7860aee661907d85e}{I2C1\_init}(); 
+224   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+225  \}
+\end{DoxyCode}
+\hypertarget{_m_c_p342x_8c_af5d27cbfe9428a43bd82ea2831c3c466}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-loop@{M\-C\-P342x\-\_\-loop}}
+\index{M\-C\-P342x\-\_\-loop@{M\-C\-P342x\-\_\-loop}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}int M\-C\-P342x\-\_\-loop (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P342x} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p342x_8c_af5d27cbfe9428a43bd82ea2831c3c466}
+
+
+Definition at line 321 of file M\-C\-P342x.\-c.
+
+
+
+References tag\-M\-C\-P342x\-::\-Act\-Ch, tag\-M\-C\-P342x\-::\-Ch, tag\-M\-C\-P342x\-::\-Ct\-Err, F\-A\-L\-S\-E, tag\-M\-C\-P342x\-::\-Frame\-Rx, tag\-M\-C\-P342x\-C\-H\-::\-Gain, tag\-M\-C\-P342x\-::\-In\-Sample, M\-C\-P342x\-\_\-1024m\-V\-F\-S, M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T, M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-M\-S, M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T\-\_\-\-N\-V, M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T, M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-M\-S, M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T\-\_\-\-N\-V, M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T, M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-M\-S, M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T\-\_\-\-N\-V, M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T, M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-M\-S, M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T\-\_\-\-N\-V, M\-C\-P342x\-\_\-2048m\-V\-F\-S, M\-C\-P342x\-\_\-256m\-V\-F\-S, M\-C\-P342x\-\_\-512m\-V\-F\-S, M\-C\-P342x\-\_\-\-B\-U\-S\-Y, M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-1, M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-2, M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-3, M\-C\-P342x\-\_\-\-C\-H\-A\-N\-N\-E\-L\-\_\-4, M\-C\-P342x\-\_\-read\-\_\-\-Data(), M\-C\-P342x\-\_\-\-S\-T\-A\-R\-T, M\-C\-P342x\-\_\-write(), millis(), tag\-M\-C\-P342x\-::\-Milli\-Sec, N\-U\-L\-L, tag\-M\-C\-P342x\-::\-Num\-Ch, tag\-M\-C\-P342x\-C\-H\-::n\-V, tag\-M\-C\-P342x\-C\-H\-::\-On, tag\-M\-C\-P342x\-::\-On, tag\-M\-C\-P342x\-C\-H\-::\-Points, tag\-M\-C\-P342x\-C\-H\-::\-Res, and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+322  \{
+323   \textcolor{keywordtype}{int} Valo;
+324   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *Vb = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *)&Valo; 
+325   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Ctn, Found,ValTx;
+326     
+327   \textcolor{comment}{// No valid structure return error}
+328   \textcolor{keywordflow}{if} (Mcp == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+329    \textcolor{keywordflow}{return} (-1);
+330    
+331   \textcolor{keywordflow}{if} ( (Mcp->\hyperlink{structtag_m_c_p342x_a2d1f06ea4f608600e241eeded488b0df}{On} == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}) || (\hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}() < Mcp->\hyperlink{structtag_m_c_p342x_a8421761e0e1b887991b4192078254bcf}{MilliSec}) )
+332    \textcolor{keywordflow}{return} (1);
+333    
+334   \textcolor{comment}{//Test if sampling started}
+335   \textcolor{keywordflow}{if} (Mcp->\hyperlink{structtag_m_c_p342x_a134d70693df6521dd8d693f79a14737e}{InSample} == \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})
+336    \{
+337     \textcolor{comment}{//Read Data from I2C port}
+338     \textcolor{keywordflow}{if} (\hyperlink{_m_c_p342x_8c_a4462e74094c37814c1fa1e982dd0b842}{MCP342x\_read\_Data}(Mcp) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+339      \textcolor{keywordflow}{return}(-2);
+340     \textcolor{comment}{//Test if data not available}
+341     \textcolor{keywordflow}{if} ((Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[0] & \hyperlink{_m_c_p342x_8c_a1796cb01ecf7838acf8291e4024cfc6f}{MCP342x\_BUSY}) != 0)
+342      \{
+343       \textcolor{comment}{//Inc error count}
+344       Mcp->\hyperlink{structtag_m_c_p342x_a0577a7cb96b0af0dda91c4efe1150643}{CtErr}++;
+345       \textcolor{comment}{//if too many error abort sampling}
+346       \textcolor{keywordflow}{if} (Mcp->\hyperlink{structtag_m_c_p342x_a0577a7cb96b0af0dda91c4efe1150643}{CtErr} > 10)
+347        \{
+348         Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh} = 0;
+349         Mcp->\hyperlink{structtag_m_c_p342x_a8421761e0e1b887991b4192078254bcf}{MilliSec} = \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}() + 2;
+350         Mcp->\hyperlink{structtag_m_c_p342x_a134d70693df6521dd8d693f79a14737e}{InSample} = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+351         \textcolor{keywordflow}{return}(-3);
+352        \}
+353       \textcolor{keywordflow}{else}
+354        \{
+355         \textcolor{comment}{//else wait 50mS}
+356         Mcp->\hyperlink{structtag_m_c_p342x_a8421761e0e1b887991b4192078254bcf}{MilliSec} = \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}() + 50;
+357         \textcolor{keywordflow}{return}(2);
+358        \}
+359      \}
+360     \textcolor{keywordflow}{else} 
+361      \{
+362       \textcolor{comment}{//Data available}
+363       Mcp->\hyperlink{structtag_m_c_p342x_a0577a7cb96b0af0dda91c4efe1150643}{CtErr} = 0;
+364       \textcolor{comment}{//propagate sign}
+365       Vb[3] = Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[3] & 0X80 ? 0XFF : 0; 
+366       \textcolor{comment}{//check for 16 or 18 bit data}
+367       \textcolor{keywordflow}{if} ((Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[0] & \hyperlink{_m_c_p342x_8c_ac3cce34c4e2eca72f883b7607e81c4da}{MCP342x\_18\_BIT}) == 
+      \hyperlink{_m_c_p342x_8c_ac3cce34c4e2eca72f883b7607e81c4da}{MCP342x\_18\_BIT})
+368        \{ 
+369         \textcolor{comment}{//transfer 18 bit data}
+370         Vb[0] = Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[1];
+371         Vb[1] = Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[2];
+372         Vb[2] = Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[3];
+373        \}
+374       \textcolor{keywordflow}{else} 
+375        \{ 
+376         \textcolor{comment}{//transfer 16 bit data}
+377         Vb[0] = Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[2];
+378         Vb[1] = Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[3];
+379         Vb[2] = Vb[3];        
+380        \}
+381       Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh}-1].\hyperlink{structtag_m_c_p342x_c_h_a4e6fa56ee9cc8075628f24656cbe03ba}{Points} = Valo;
+382       \textcolor{comment}{//calculate nV ((Point * nV/point) / Gain)}
+383       \textcolor{keywordflow}{switch} (Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[0] & \hyperlink{_m_c_p342x_8c_ac3cce34c4e2eca72f883b7607e81c4da}{MCP342x\_18\_BIT})
+384        \{
+385         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a4fd9193f00a88bbc03ef779caeeac625}{MCP342x\_12\_BIT}:
+386          Valo *= \hyperlink{_m_c_p342x_8c_a393d66d372f28c95b8fea54c490f46ea}{MCP342x\_12\_BIT\_NV}; 
+387          \textcolor{keywordflow}{break};
+388         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a16d48e4722ad56b1a260ef548fe72cc8}{MCP342x\_14\_BIT}:
+389          Valo *= \hyperlink{_m_c_p342x_8c_a661b63293ba19264777a8a96a385217c}{MCP342x\_14\_BIT\_NV}; 
+390          \textcolor{keywordflow}{break};
+391         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a8560c2b0c33ad9ca016ec6b5061df0af}{MCP342x\_16\_BIT}:
+392          Valo *= \hyperlink{_m_c_p342x_8c_ae89f4d299716aea8cf2fcbe7979611b9}{MCP342x\_16\_BIT\_NV}; 
+393          \textcolor{keywordflow}{break};
+394         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_ac3cce34c4e2eca72f883b7607e81c4da}{MCP342x\_18\_BIT}:
+395          Valo *= \hyperlink{_m_c_p342x_8c_af923b373aff3acee045780e8587870bc}{MCP342x\_18\_BIT\_NV}; 
+396          \textcolor{keywordflow}{break};
+397        \}
+398 
+399       \textcolor{keywordflow}{switch} (Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[0] & \hyperlink{_m_c_p342x_8c_ab154b465cedf5be97b5d38e9bdebafcd}{MCP342x\_256mVFS})
+400        \{
+401         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a96f5763ce2c274ce2912481a3e0336f9}{MCP342x\_2048mVFS}:
+402          Valo /= 1;
+403          \textcolor{keywordflow}{break};
+404         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a38cd3e3424b8b4d5cb7e15596a556b5b}{MCP342x\_1024mVFS}:
+405          Valo /= 2;
+406          \textcolor{keywordflow}{break};
+407         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a257834291cd8abfcab6da85d8c704bfa}{MCP342x\_512mVFS}:
+408          Valo /= 4;
+409          \textcolor{keywordflow}{break};
+410         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_ab154b465cedf5be97b5d38e9bdebafcd}{MCP342x\_256mVFS}:
+411          Valo /= 8;
+412          \textcolor{keywordflow}{break};
+413        \}
+414       Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh}-1].\hyperlink{structtag_m_c_p342x_c_h_affe84419e6828165e18a52d724db74fd}{nV} = Valo;
+415       Mcp->\hyperlink{structtag_m_c_p342x_a134d70693df6521dd8d693f79a14737e}{InSample} = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+416      \}
+417    \}
+418 
+419   \textcolor{comment}{//Test if not in sampling}
+420   \textcolor{keywordflow}{if} (Mcp->\hyperlink{structtag_m_c_p342x_a134d70693df6521dd8d693f79a14737e}{InSample} == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+421    \{
+422     Found = 0;
+423     \textcolor{comment}{//If channel not assigned or wrong channel or channel stopped }
+424     \textcolor{keywordflow}{if} ( (Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh} == 0) || (Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh} > Mcp->\hyperlink{structtag_m_c_p342x_a0205dd711b1cc7c32042fe54634bfe84}{NumCh}) || (Mcp->
+      \hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh}-1].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}))
+425      \{
+426       \textcolor{comment}{//find first valid channell}
+427       \textcolor{keywordflow}{for} (Ctn = 1 ; Ctn <= Mcp->\hyperlink{structtag_m_c_p342x_a0205dd711b1cc7c32042fe54634bfe84}{NumCh} ; Ctn++)
+428        \textcolor{keywordflow}{if} (Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ctn-1].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} == \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})
+429         \{
+430          Found = Ctn;
+431          \textcolor{keywordflow}{break};
+432         \}
+433      \}
+434     \textcolor{keywordflow}{else}
+435      \{
+436       \textcolor{comment}{//Find Next valid channell}
+437       Ctn = Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh}+1;
+438       \textcolor{keywordflow}{while} (Found == 0)
+439        \{
+440         \textcolor{keywordflow}{if} (Ctn > Mcp->\hyperlink{structtag_m_c_p342x_a0205dd711b1cc7c32042fe54634bfe84}{NumCh})
+441          Ctn = 1;
+442         \textcolor{keywordflow}{if} (Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ctn-1].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} == \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})
+443          \{
+444           Found = Ctn;
+445           \textcolor{keywordflow}{break};
+446          \}
+447         \textcolor{keywordflow}{if} (Ctn == Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh})
+448          \{
+449           \textcolor{keywordflow}{if} (Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ctn-1].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} == \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE})
+450            Found = Ctn;
+451           \textcolor{keywordflow}{break};
+452          \}
+453         Ctn++; 
+454        \}
+455      \}
+456     \textcolor{comment}{//Test if valid channel not found}
+457     \textcolor{keywordflow}{if} (Found == 0)
+458      \{
+459       \textcolor{comment}{//Stop any sampling and return error}
+460       Mcp->\hyperlink{structtag_m_c_p342x_a2d1f06ea4f608600e241eeded488b0df}{On} = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+461       Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh} = 0;
+462       Mcp->\hyperlink{structtag_m_c_p342x_a8421761e0e1b887991b4192078254bcf}{MilliSec} = \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}()+50;
+463       \textcolor{keywordflow}{return} (-4);
+464      \}
+465     \textcolor{keywordflow}{else}
+466      \{
+467       \textcolor{comment}{//set actual channel}
+468       Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh} = Found;
+469       \textcolor{comment}{//Set channel parameters}
+470       \textcolor{keywordflow}{switch} (Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh})
+471        \{
+472         \textcolor{keywordflow}{case} 1:
+473          ValTx = \hyperlink{_m_c_p342x_8c_a31729f8c5323524968a9bd7deedc90d0}{MCP342x\_START} | \hyperlink{_m_c_p342x_8c_a0aae4c29fac7b22553096fb9a53290ba}{MCP342x\_CHANNEL\_1} | Mcp->
+      \hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[0].\hyperlink{structtag_m_c_p342x_c_h_a8573f92bdf8f12f4d330c68aee4ce26a}{Res} | Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[0].\hyperlink{structtag_m_c_p342x_c_h_af6edf66b290ce5c676f8fc96531593cd}{Gain};
+474         \textcolor{keywordflow}{break};
+475         \textcolor{keywordflow}{case} 2:
+476          ValTx = \hyperlink{_m_c_p342x_8c_a31729f8c5323524968a9bd7deedc90d0}{MCP342x\_START} | \hyperlink{_m_c_p342x_8c_af620199f99e00ecb372df80ada983f0c}{MCP342x\_CHANNEL\_2} | Mcp->
+      \hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[1].\hyperlink{structtag_m_c_p342x_c_h_a8573f92bdf8f12f4d330c68aee4ce26a}{Res} | Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[1].\hyperlink{structtag_m_c_p342x_c_h_af6edf66b290ce5c676f8fc96531593cd}{Gain};
+477         \textcolor{keywordflow}{break};
+478         \textcolor{keywordflow}{case} 3:
+479          ValTx = \hyperlink{_m_c_p342x_8c_a31729f8c5323524968a9bd7deedc90d0}{MCP342x\_START} | \hyperlink{_m_c_p342x_8c_a813c2d7f02cfe5163e0ba26cbb11c8ba}{MCP342x\_CHANNEL\_3} | Mcp->
+      \hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[2].\hyperlink{structtag_m_c_p342x_c_h_a8573f92bdf8f12f4d330c68aee4ce26a}{Res} | Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[2].\hyperlink{structtag_m_c_p342x_c_h_af6edf66b290ce5c676f8fc96531593cd}{Gain};
+480         \textcolor{keywordflow}{break};
+481         \textcolor{keywordflow}{case} 4:
+482          ValTx = \hyperlink{_m_c_p342x_8c_a31729f8c5323524968a9bd7deedc90d0}{MCP342x\_START} | \hyperlink{_m_c_p342x_8c_a91915e6e192f2890f44d4fdef3449b83}{MCP342x\_CHANNEL\_4} | Mcp->
+      \hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[3].\hyperlink{structtag_m_c_p342x_c_h_a8573f92bdf8f12f4d330c68aee4ce26a}{Res} | Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[3].\hyperlink{structtag_m_c_p342x_c_h_af6edf66b290ce5c676f8fc96531593cd}{Gain};
+483         \textcolor{keywordflow}{break};
+484        \}
+485       \textcolor{comment}{//Start a new sampling}
+486       \textcolor{keywordflow}{if} (\hyperlink{_m_c_p342x_8c_acbedc0df74f799d031b9a44d4e59ec40}{MCP342x\_write}(Mcp,ValTx) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+487        \{
+488         Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh} = 0;
+489         Mcp->\hyperlink{structtag_m_c_p342x_a8421761e0e1b887991b4192078254bcf}{MilliSec} = \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}()+70;
+490         \textcolor{keywordflow}{return} (-5);
+491        \}
+492 
+493       \textcolor{comment}{//Calculate and set the appropriate conversion delay}
+494       \textcolor{keywordflow}{switch} (Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Mcp->\hyperlink{structtag_m_c_p342x_a5409b7b9c64e9f1f92d6aa5f39152103}{ActCh}-1].\hyperlink{structtag_m_c_p342x_c_h_a8573f92bdf8f12f4d330c68aee4ce26a}{Res} & \hyperlink{_m_c_p342x_8c_ac3cce34c4e2eca72f883b7607e81c4da}{MCP342x\_18\_BIT})
+495        \{
+496         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a4fd9193f00a88bbc03ef779caeeac625}{MCP342x\_12\_BIT}:
+497          Mcp->\hyperlink{structtag_m_c_p342x_a8421761e0e1b887991b4192078254bcf}{MilliSec} = \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}()+\hyperlink{_m_c_p342x_8c_a248d6fe77ca29aee5947d82e01b12643}{MCP342x\_12\_BIT\_MS}; 
+498          \textcolor{keywordflow}{break};
+499         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a16d48e4722ad56b1a260ef548fe72cc8}{MCP342x\_14\_BIT}:
+500          Mcp->\hyperlink{structtag_m_c_p342x_a8421761e0e1b887991b4192078254bcf}{MilliSec} = \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}()+\hyperlink{_m_c_p342x_8c_a460aca88c3b7bb7e13754f7641dc58a9}{MCP342x\_14\_BIT\_MS}; 
+501          \textcolor{keywordflow}{break};
+502         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a8560c2b0c33ad9ca016ec6b5061df0af}{MCP342x\_16\_BIT}:
+503          Mcp->\hyperlink{structtag_m_c_p342x_a8421761e0e1b887991b4192078254bcf}{MilliSec} = \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}()+\hyperlink{_m_c_p342x_8c_a83f86fa8337080c38fc070fcd7fcc939}{MCP342x\_16\_BIT\_MS}; 
+504          \textcolor{keywordflow}{break};
+505         \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_ac3cce34c4e2eca72f883b7607e81c4da}{MCP342x\_18\_BIT}:
+506          Mcp->\hyperlink{structtag_m_c_p342x_a8421761e0e1b887991b4192078254bcf}{MilliSec} = \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}()+\hyperlink{_m_c_p342x_8c_ab9199c8fe4c21a2bce0e9f474d2b1e58}{MCP342x\_18\_BIT\_MS}; 
+507          \textcolor{keywordflow}{break};
+508        \}
+509       \textcolor{comment}{//set sampling in progress}
+510       Mcp->\hyperlink{structtag_m_c_p342x_a134d70693df6521dd8d693f79a14737e}{InSample} = \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+511       \textcolor{keywordflow}{return}(3);
+512      \}
+513    \}
+514  \}
+\end{DoxyCode}
+\hypertarget{_m_c_p342x_8c_a4462e74094c37814c1fa1e982dd0b842}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-read\-\_\-\-Data@{M\-C\-P342x\-\_\-read\-\_\-\-Data}}
+\index{M\-C\-P342x\-\_\-read\-\_\-\-Data@{M\-C\-P342x\-\_\-read\-\_\-\-Data}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-read\-\_\-\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P342x\-\_\-read\-\_\-\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P342x} $\ast$}]{Mcp}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p342x_8c_a4462e74094c37814c1fa1e982dd0b842}
+
+
+Definition at line 180 of file M\-C\-P342x.\-c.
+
+
+
+References F\-A\-L\-S\-E, tag\-M\-C\-P342x\-::\-Frame\-Rx, I2\-C1\-\_\-readchar(), I2\-C1\-\_\-readchar\-Ack(), I2\-C1\-\_\-start(), I2\-C1\-\_\-stop(), I2\-C1\-\_\-writechar(), tag\-M\-C\-P342x\-::\-I2\-C\-Addr, M\-C\-P342x\-\_\-\-A\-D\-D\-R\-E\-S\-S, M\-C\-P342x\-\_\-\-Fault(), and T\-R\-U\-E.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+
+\begin{DoxyCode}
+181 \{
+182  \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Va;
+183 \textcolor{comment}{// char Str[20];}
+184  \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} Ctn;
+185 
+186  \hyperlink{pinguinoi2c1_8c_a02f1896dc332c6120f7855b33d0d19e7}{I2C1\_start}();
+187  \textcolor{keywordflow}{if} (\hyperlink{pinguinoi2c1_8c_a5501d7ae88a9e0f17133f5d85d6cc9bd}{I2C1\_writechar}(((\hyperlink{_m_c_p342x_8c_a39a410ccadf75a071505a01fd2511381}{MCP342x\_ADDRESS} | (Mcp->
+      \hyperlink{structtag_m_c_p342x_a525e929bfd993f97bf03022b3d01e334}{I2CAddr}&7))<<1)|1) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})        \textcolor{comment}{//Write Into Device}
+188   \textcolor{keywordflow}{return}(\hyperlink{_m_c_p342x_8c_a1696cee718a6136b80b1fbaa092365ca}{MCP342x\_Fault}(1));
+189  Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[3] = \hyperlink{pinguinoi2c1_8c_a2d82bc25d47a5258793a1bb67c106b94}{I2C1\_readcharAck}();
+190  Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[2] = \hyperlink{pinguinoi2c1_8c_a2d82bc25d47a5258793a1bb67c106b94}{I2C1\_readcharAck}();
+191  Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[1] = \hyperlink{pinguinoi2c1_8c_a2d82bc25d47a5258793a1bb67c106b94}{I2C1\_readcharAck}();
+192  Mcp->\hyperlink{structtag_m_c_p342x_a1f30f05b6ad09b1daa7195f6ec245656}{FrameRx}[0] = \hyperlink{pinguinoi2c1_8c_a83daf3749f56af805accb385800ebdbf}{I2C1\_readchar}();
+193  \hyperlink{pinguinoi2c1_8c_aed15ea00091e0ecd9d34c9b90ac6c66c}{I2C1\_stop}();
+194  \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+195 \} 
+\end{DoxyCode}
+\hypertarget{_m_c_p342x_8c_ae4e232438eadba15382c951b325f4490}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-start\-Ch@{M\-C\-P342x\-\_\-start\-Ch}}
+\index{M\-C\-P342x\-\_\-start\-Ch@{M\-C\-P342x\-\_\-start\-Ch}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-start\-Ch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P342x\-\_\-start\-Ch (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P342x} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{Ch, }
+\item[{{\bf u8}}]{Gain, }
+\item[{{\bf u8}}]{Res}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p342x_8c_ae4e232438eadba15382c951b325f4490}
+
+
+Definition at line 240 of file M\-C\-P342x.\-c.
+
+
+
+References tag\-M\-C\-P342x\-::\-Ch, F\-A\-L\-S\-E, tag\-M\-C\-P342x\-C\-H\-::\-Gain, M\-C\-P342x\-\_\-1024m\-V\-F\-S, M\-C\-P342x\-\_\-12\-\_\-\-B\-I\-T, M\-C\-P342x\-\_\-14\-\_\-\-B\-I\-T, M\-C\-P342x\-\_\-16\-\_\-\-B\-I\-T, M\-C\-P342x\-\_\-18\-\_\-\-B\-I\-T, M\-C\-P342x\-\_\-2048m\-V\-F\-S, M\-C\-P342x\-\_\-256m\-V\-F\-S, M\-C\-P342x\-\_\-512m\-V\-F\-S, M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-N, M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-P, millis(), tag\-M\-C\-P342x\-::\-Milli\-Sec, N\-U\-L\-L, tag\-M\-C\-P342x\-::\-Num\-Ch, tag\-M\-C\-P342x\-C\-H\-::n\-V, tag\-M\-C\-P342x\-C\-H\-::\-On, tag\-M\-C\-P342x\-::\-On, tag\-M\-C\-P342x\-C\-H\-::\-Points, tag\-M\-C\-P342x\-C\-H\-::\-Res, and T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+241  \{
+242   \textcolor{keywordflow}{if} ( (Mcp == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) || (Ch > 4) || (Ch < 1) || (Ch > Mcp->\hyperlink{structtag_m_c_p342x_a0205dd711b1cc7c32042fe54634bfe84}{NumCh}) )
+243    \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+244   Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_a4e6fa56ee9cc8075628f24656cbe03ba}{Points} = \hyperlink{_m_c_p342x_8c_a7066469a54c3dbb590fc6095af4b1108}{MCP342x\_NORE\_P};
+245   Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_affe84419e6828165e18a52d724db74fd}{nV} = \hyperlink{_m_c_p342x_8c_a1598621aaae4ed61b39852aca5ee1dcd}{MCP342x\_NORE\_N};
+246   \textcolor{keywordflow}{switch} (Gain)
+247    \{
+248     \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a96f5763ce2c274ce2912481a3e0336f9}{MCP342x\_2048mVFS}:
+249     \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a38cd3e3424b8b4d5cb7e15596a556b5b}{MCP342x\_1024mVFS}:
+250     \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a257834291cd8abfcab6da85d8c704bfa}{MCP342x\_512mVFS}:
+251     \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_ab154b465cedf5be97b5d38e9bdebafcd}{MCP342x\_256mVFS}:
+252      Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_af6edf66b290ce5c676f8fc96531593cd}{Gain} = Gain;
+253      \textcolor{keywordflow}{break};
+254     \textcolor{keywordflow}{default}:
+255      \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+256    \}
+257   \textcolor{keywordflow}{switch} (Res)
+258    \{
+259     \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a4fd9193f00a88bbc03ef779caeeac625}{MCP342x\_12\_BIT}:
+260     \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a16d48e4722ad56b1a260ef548fe72cc8}{MCP342x\_14\_BIT}:
+261     \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_a8560c2b0c33ad9ca016ec6b5061df0af}{MCP342x\_16\_BIT}:
+262     \textcolor{keywordflow}{case} \hyperlink{_m_c_p342x_8c_ac3cce34c4e2eca72f883b7607e81c4da}{MCP342x\_18\_BIT}:
+263      Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_a8573f92bdf8f12f4d330c68aee4ce26a}{Res} = Res;
+264      \textcolor{keywordflow}{break};
+265     \textcolor{keywordflow}{default}:
+266      \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+267    \}
+268   Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} = \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+269   \textcolor{keywordflow}{if}(Mcp->\hyperlink{structtag_m_c_p342x_a2d1f06ea4f608600e241eeded488b0df}{On} == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+270    \{
+271     Mcp->\hyperlink{structtag_m_c_p342x_a2d1f06ea4f608600e241eeded488b0df}{On} = \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+272     Mcp->\hyperlink{structtag_m_c_p342x_a8421761e0e1b887991b4192078254bcf}{MilliSec} = \hyperlink{p8_2pinguino_2core_2millis_8c_a190d4a405ba3ef438a70b7da56b27f34}{millis}()+10;
+273    \}
+274   \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+275  \}
+\end{DoxyCode}
+\hypertarget{_m_c_p342x_8c_a4c84fe982d978658c2dd9918605398f5}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-stop\-Ch@{M\-C\-P342x\-\_\-stop\-Ch}}
+\index{M\-C\-P342x\-\_\-stop\-Ch@{M\-C\-P342x\-\_\-stop\-Ch}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-stop\-Ch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P342x\-\_\-stop\-Ch (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P342x} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{Ch}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p342x_8c_a4c84fe982d978658c2dd9918605398f5}
+
+
+Definition at line 288 of file M\-C\-P342x.\-c.
+
+
+
+References tag\-M\-C\-P342x\-::\-Ch, tag\-M\-C\-P342x\-::\-Ct\-Err, F\-A\-L\-S\-E, tag\-M\-C\-P342x\-::\-In\-Sample, M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-N, M\-C\-P342x\-\_\-\-N\-O\-R\-E\-\_\-\-P, N\-U\-L\-L, tag\-M\-C\-P342x\-::\-Num\-Ch, tag\-M\-C\-P342x\-C\-H\-::n\-V, tag\-M\-C\-P342x\-C\-H\-::\-On, tag\-M\-C\-P342x\-::\-On, and tag\-M\-C\-P342x\-C\-H\-::\-Points.
+
+
+\begin{DoxyCode}
+289  \{
+290   \textcolor{keywordflow}{if} ( (Mcp == \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}) || (Ch > 4)  || (Ch < 1) || (Ch > Mcp->\hyperlink{structtag_m_c_p342x_a0205dd711b1cc7c32042fe54634bfe84}{NumCh}) )
+291    \textcolor{keywordflow}{return} (\hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE});
+292   Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+293   Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_a4e6fa56ee9cc8075628f24656cbe03ba}{Points} = \hyperlink{_m_c_p342x_8c_a7066469a54c3dbb590fc6095af4b1108}{MCP342x\_NORE\_P};
+294   Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[Ch-1].\hyperlink{structtag_m_c_p342x_c_h_affe84419e6828165e18a52d724db74fd}{nV} = \hyperlink{_m_c_p342x_8c_a1598621aaae4ed61b39852aca5ee1dcd}{MCP342x\_NORE\_N};
+295   \textcolor{keywordflow}{if}( (Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[0].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}) && (Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[1].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}) && (Mcp->
+      \hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[2].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}) && (Mcp->\hyperlink{structtag_m_c_p342x_ac430268b4a9aeacbabc611343812e308}{Ch}[3].\hyperlink{structtag_m_c_p342x_c_h_a2d1f06ea4f608600e241eeded488b0df}{On} == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE}) )
+296    \{
+297     Mcp->\hyperlink{structtag_m_c_p342x_a2d1f06ea4f608600e241eeded488b0df}{On} = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+298     Mcp->\hyperlink{structtag_m_c_p342x_a134d70693df6521dd8d693f79a14737e}{InSample} = \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+299     Mcp->\hyperlink{structtag_m_c_p342x_a0577a7cb96b0af0dda91c4efe1150643}{CtErr} = 0;
+300    \}
+301  \}
+\end{DoxyCode}
+\hypertarget{_m_c_p342x_8c_acbedc0df74f799d031b9a44d4e59ec40}{\index{M\-C\-P342x.\-c@{M\-C\-P342x.\-c}!M\-C\-P342x\-\_\-write@{M\-C\-P342x\-\_\-write}}
+\index{M\-C\-P342x\-\_\-write@{M\-C\-P342x\-\_\-write}!MCP342x.c@{M\-C\-P342x.\-c}}
+\subsubsection[{M\-C\-P342x\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} M\-C\-P342x\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-C\-P342x} $\ast$}]{Mcp, }
+\item[{{\bf u8}}]{Val}
+\end{DoxyParamCaption}
+)}}\label{_m_c_p342x_8c_acbedc0df74f799d031b9a44d4e59ec40}
+
+
+Definition at line 159 of file M\-C\-P342x.\-c.
+
+
+
+References F\-A\-L\-S\-E, I2\-C1\-\_\-start(), I2\-C1\-\_\-stop(), I2\-C1\-\_\-writechar(), tag\-M\-C\-P342x\-::\-I2\-C\-Addr, M\-C\-P342x\-\_\-\-A\-D\-D\-R\-E\-S\-S, M\-C\-P342x\-\_\-\-Fault(), and T\-R\-U\-E.
+
+
+
+Referenced by M\-C\-P342x\-\_\-loop().
+
+
+\begin{DoxyCode}
+160 \{
+161  \hyperlink{pinguinoi2c1_8c_a02f1896dc332c6120f7855b33d0d19e7}{I2C1\_start}();
+162  \textcolor{keywordflow}{if} (\hyperlink{pinguinoi2c1_8c_a5501d7ae88a9e0f17133f5d85d6cc9bd}{I2C1\_writechar}(((\hyperlink{_m_c_p342x_8c_a39a410ccadf75a071505a01fd2511381}{MCP342x\_ADDRESS} | (Mcp->
+      \hyperlink{structtag_m_c_p342x_a525e929bfd993f97bf03022b3d01e334}{I2CAddr}&7))<<1)&~1) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})       \textcolor{comment}{//Write Into Device}
+163   \textcolor{keywordflow}{return}(\hyperlink{_m_c_p342x_8c_a1696cee718a6136b80b1fbaa092365ca}{MCP342x\_Fault}(1));
+164  \textcolor{keywordflow}{if} (\hyperlink{pinguinoi2c1_8c_a5501d7ae88a9e0f17133f5d85d6cc9bd}{I2C1\_writechar}(Val) == \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE})
+165   \textcolor{keywordflow}{return}(\hyperlink{_m_c_p342x_8c_a1696cee718a6136b80b1fbaa092365ca}{MCP342x\_Fault}(2));
+166  \hyperlink{pinguinoi2c1_8c_aed15ea00091e0ecd9d34c9b90ac6c66c}{I2C1\_stop}();
+167  \textcolor{keywordflow}{return}(\hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE});
+168 \}
+\end{DoxyCode}

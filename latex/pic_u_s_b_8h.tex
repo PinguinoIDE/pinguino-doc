@@ -1,0 +1,976 @@
+\hypertarget{pic_u_s_b_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/pic\-U\-S\-B.h File Reference}
+\label{pic_u_s_b_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/pic\-U\-S\-B.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/pic\-U\-S\-B.\-h}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union_b_d_stat}{B\-D\-Stat}
+\item 
+union \hyperlink{union_buffer_descriptor_table}{Buffer\-Descriptor\-Table}
+\item 
+struct \hyperlink{struct_u_s_b___device___descriptor}{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}
+\item 
+struct \hyperlink{struct_u_s_b___configuration___descriptor___header}{U\-S\-B\-\_\-\-Configuration\-\_\-\-Descriptor\-\_\-\-Header}
+\item 
+union \hyperlink{unionsetup_packet_struct}{setup\-Packet\-Struct}
+\item 
+struct \hyperlink{struct_u_s_b___interface___descriptor}{U\-S\-B\-\_\-\-Interface\-\_\-\-Descriptor}
+\item 
+struct \hyperlink{struct_u_s_b___endpoint___descriptor}{U\-S\-B\-\_\-\-Endpoint\-\_\-\-Descriptor}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pic_u_s_b_8h_af6cb843eae51baccea7482dec09f8030}{P\-T\-R16}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~((\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})(((unsigned long)\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}) \& 0x\-F\-F\-F\-F))
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a34a3aa6cbadec6a80ab1eae8efd0083d}{L\-S\-B}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} \& 0x\-F\-F)
+\item 
+\#define \hyperlink{pic_u_s_b_8h_aeb61a4e8fff2f4624a632a3189cbd3a0}{M\-S\-B}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~((\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} \& 0x\-F\-F00) $>$$>$ 8)
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a6f14b739a5aa3c5fe517de514f1ec7e2}{E\-P0\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}~64
+\item 
+\#define \hyperlink{pic_u_s_b_8h_aec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T}~0
+\item 
+\#define \hyperlink{pic_u_s_b_8h_ac2bbd6d630a06a980d9a92ddb9a49928}{I\-N}~1
+\item 
+\#define \hyperlink{pic_u_s_b_8h_ae13b33a030a1eade0fc81785285fdadb}{E\-P\-\_\-\-C\-T\-R\-L}~0x06
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a3a942d7df9f25be538925b91fa1317c3}{E\-P\-\_\-\-O\-U\-T}~0x0\-C
+\item 
+\#define \hyperlink{pic_u_s_b_8h_ab79ba3999449c3d32abd0462936ca52c}{E\-P\-\_\-\-I\-N}~0x0\-A
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a7dd548b535b66abf8028667d0ee97b3f}{E\-P\-\_\-\-O\-U\-T\-\_\-\-I\-N}~0x0\-E
+\item 
+\#define \hyperlink{pic_u_s_b_8h_ad9b2ef082540a0da668f9ae8e06319f6}{H\-S\-H\-K\-\_\-\-E\-N}~0x10
+\item 
+\#define \hyperlink{pic_u_s_b_8h_aeba76c92af8f1a94982ec4cb767452f0}{G\-E\-T\-\_\-\-S\-T\-A\-T\-U\-S}~0
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a1908d37748e7d545ee5f190715624150}{C\-L\-E\-A\-R\-\_\-\-F\-E\-A\-T\-U\-R\-E}~1
+\item 
+\#define \hyperlink{pic_u_s_b_8h_af8b97e67097fbf7d56c3dcac52fe679e}{S\-E\-T\-\_\-\-F\-E\-A\-T\-U\-R\-E}~3
+\item 
+\#define \hyperlink{pic_u_s_b_8h_ad3c9f5426c07d7d4da8cf1752a111576}{S\-E\-T\-\_\-\-A\-D\-D\-R\-E\-S\-S}~5
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a115a1d866ed9498300d59c90549ead0d}{G\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}~6
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a264a9bda1309d7cc0311d57274194ca3}{S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}~7
+\item 
+\#define \hyperlink{pic_u_s_b_8h_ac6bffdcb940a0338051c4baa72498beb}{G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}~8
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a5cdfe3de183eb4e190b2ccaa299045bf}{S\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}~9
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a1846f3a13493771ceced447397221de1}{G\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}~10
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a90c9c23759bdbb3ba106f88cb5ffc261}{S\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}~11
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a43c627a14ff41632fa9c234a3df41b2b}{S\-Y\-N\-C\-H\-\_\-\-F\-R\-A\-M\-E}~12
+\item 
+\#define \hyperlink{pic_u_s_b_8h_aecd4c19bbe800ec917cfcaa91e4347d1}{D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}~0x01
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a16d470261826d2b3f2af975f7a965b90}{C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}~0x02
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a875e5da7a1540475d6ee1ca13f30cd00}{S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}~0x03
+\item 
+\#define \hyperlink{pic_u_s_b_8h_aa4c7101997d5cfd2e703858629cae0b8}{I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}~0x04
+\item 
+\#define \hyperlink{pic_u_s_b_8h_ac0a8043ee51f310d6ef9c993d1a79287}{E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}~0x05
+\item 
+\#define \hyperlink{pic_u_s_b_8h_afeb17c285ae0402d737219e1d67f94c6}{D\-E\-V\-I\-C\-E\-\_\-\-Q\-U\-A\-L\-I\-F\-I\-E\-R\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}~0x06
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a77fa7e6093059898a0849f02968fba1d}{D\-E\-V\-I\-C\-E\-\_\-\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P}~0x01
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a4d7a6aea8f3ed0b277c3b40fb5df77fc}{E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-H\-A\-L\-T}~0x00
+\item 
+\#define \hyperlink{pic_u_s_b_8h_abeb46f1eaae8227a3e6b8c38c38ebed3}{B\-D\-S\-\_\-\-C\-O\-W\-N}~0x00
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{B\-D\-S\-\_\-\-U\-O\-W\-N}~0x80
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a6009ca28ad8ba886db3ec053726ff8b1}{B\-D\-S\-\_\-\-D\-T\-S}~0x40
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a801496931babbf57cf6f91506e2f130b}{B\-D\-S\-\_\-\-K\-E\-N}~0x20
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a56360907fa1e1caee1037c7db87e69e3}{B\-D\-S\-\_\-\-I\-N\-C\-D\-I\-S}~0x10
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{B\-D\-S\-\_\-\-D\-T\-S\-E\-N}~0x08
+\item 
+\#define \hyperlink{pic_u_s_b_8h_af8d7dca1fd5ea75549e9f547f55433d2}{B\-D\-S\-\_\-\-B\-S\-T\-A\-L\-L}~0x04
+\item 
+\#define \hyperlink{pic_u_s_b_8h_aa64edb29ad471c896ea1744de332aafb}{B\-D\-S\-\_\-\-B\-C9}~0x02
+\item 
+\#define \hyperlink{pic_u_s_b_8h_adc4617d0b8588d2fa9a36928e9b02b12}{B\-D\-S\-\_\-\-B\-C8}~0x01
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a69597e34c9f34a0f28783a629ac0db62}{B\-D\-S\-\_\-\-D\-A\-T0}~0x00
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a764042abd440b7e064a8a73faa2ff170}{B\-D\-S\-\_\-\-D\-A\-T1}~0x40
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a7dead3b2c769570340a638dbc6c07339}{D\-E\-T\-A\-C\-H\-E\-D}~0
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a762fa5d8c5d91e6acea6891d7ca643ef}{A\-T\-T\-A\-C\-H\-E\-D}~1
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a2695e45377366b596d024f1fbcdf8126}{P\-O\-W\-E\-R\-E\-D}~2
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a188ce67e515b427589d4c363d1132018}{D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S}~3
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a280feb883e9d4a7edcc69c8bcb9f38f2}{A\-D\-D\-R\-E\-S\-S}~4
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a514476189fbaf15c716d5e846955d2b8}{C\-O\-N\-F\-I\-G\-U\-R\-E\-D}~5
+\item 
+\#define \hyperlink{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D}(ep)~(ep\-\_\-bdt\mbox{[}(ep $<$$<$ 1)\mbox{]})
+\item 
+\#define \hyperlink{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{E\-P\-\_\-\-I\-N\-\_\-\-B\-D}(ep)~(ep\-\_\-bdt\mbox{[}(ep $<$$<$ 1) + 1\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+volatile \hyperlink{union_buffer_descriptor_table}{Buffer\-Descriptor\-Table} \hyperlink{pic_u_s_b_8h_a232e737ac533bea0679e470f7f5a6205}{\-\_\-\-\_\-at} (0x400) ep\-\_\-bdt\mbox{[}32\mbox{]}
+\item 
+void \hyperlink{pic_u_s_b_8h_a7ce360ecb075203865186f441fe72574}{Enable\-U\-S\-B\-Module} (void)
+\item 
+void \hyperlink{pic_u_s_b_8h_a72d2fa72a0db42721bb8d9b9de26b431}{Process\-U\-S\-B\-Transactions} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8h_a407ab2762f98c6ab9c6d654308d70f2c}{device\-State}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8h_af8db2005d4e92586c83a261bb869f135}{self\-Powered}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8h_a8f6657264342ba68ae2efa649f018cf9}{remote\-Wakeup}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8h_a1c07dc041da5fe22f47633438dc0c0ac}{current\-Configuration}
+\item 
+volatile \hyperlink{unionsetup_packet_struct}{setup\-Packet\-Struct} \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{Setup\-Packet}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$ \hyperlink{pic_u_s_b_8h_a0e41a62c398ad8a32700a3137f0e0e42}{out\-Ptr}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$ \hyperlink{pic_u_s_b_8h_ae16622319c61882067048c564148ae16}{in\-Ptr}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{pic_u_s_b_8h_adef4432c9d201cf2c137e2787b81f3f7}{w\-Count}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{pic_u_s_b_8h_af7bb57deec874c793aae34290b358e41}{hid\-Rx\-Len}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{pic_u_s_b_8h_a280feb883e9d4a7edcc69c8bcb9f38f2}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!A\-D\-D\-R\-E\-S\-S@{A\-D\-D\-R\-E\-S\-S}}
+\index{A\-D\-D\-R\-E\-S\-S@{A\-D\-D\-R\-E\-S\-S}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{A\-D\-D\-R\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-D\-D\-R\-E\-S\-S~4}}\label{pic_u_s_b_8h_a280feb883e9d4a7edcc69c8bcb9f38f2}
+
+
+Definition at line 105 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Control\-Transfer(), and Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_a762fa5d8c5d91e6acea6891d7ca643ef}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!A\-T\-T\-A\-C\-H\-E\-D@{A\-T\-T\-A\-C\-H\-E\-D}}
+\index{A\-T\-T\-A\-C\-H\-E\-D@{A\-T\-T\-A\-C\-H\-E\-D}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{A\-T\-T\-A\-C\-H\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-T\-T\-A\-C\-H\-E\-D~1}}\label{pic_u_s_b_8h_a762fa5d8c5d91e6acea6891d7ca643ef}
+
+
+Definition at line 102 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Enable\-U\-S\-B\-Module().
+
+\hypertarget{pic_u_s_b_8h_adc4617d0b8588d2fa9a36928e9b02b12}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!B\-D\-S\-\_\-\-B\-C8@{B\-D\-S\-\_\-\-B\-C8}}
+\index{B\-D\-S\-\_\-\-B\-C8@{B\-D\-S\-\_\-\-B\-C8}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{B\-D\-S\-\_\-\-B\-C8}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-D\-S\-\_\-\-B\-C8~0x01}}\label{pic_u_s_b_8h_adc4617d0b8588d2fa9a36928e9b02b12}
+
+
+Definition at line 95 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by In\-Data\-Stage().
+
+\hypertarget{pic_u_s_b_8h_aa64edb29ad471c896ea1744de332aafb}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!B\-D\-S\-\_\-\-B\-C9@{B\-D\-S\-\_\-\-B\-C9}}
+\index{B\-D\-S\-\_\-\-B\-C9@{B\-D\-S\-\_\-\-B\-C9}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{B\-D\-S\-\_\-\-B\-C9}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-D\-S\-\_\-\-B\-C9~0x02}}\label{pic_u_s_b_8h_aa64edb29ad471c896ea1744de332aafb}
+
+
+Definition at line 94 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by In\-Data\-Stage().
+
+\hypertarget{pic_u_s_b_8h_af8d7dca1fd5ea75549e9f547f55433d2}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!B\-D\-S\-\_\-\-B\-S\-T\-A\-L\-L@{B\-D\-S\-\_\-\-B\-S\-T\-A\-L\-L}}
+\index{B\-D\-S\-\_\-\-B\-S\-T\-A\-L\-L@{B\-D\-S\-\_\-\-B\-S\-T\-A\-L\-L}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{B\-D\-S\-\_\-\-B\-S\-T\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-D\-S\-\_\-\-B\-S\-T\-A\-L\-L~0x04}}\label{pic_u_s_b_8h_af8d7dca1fd5ea75549e9f547f55433d2}
+
+
+Definition at line 93 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by epap\-\_\-out(), and Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8h_abeb46f1eaae8227a3e6b8c38c38ebed3}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!B\-D\-S\-\_\-\-C\-O\-W\-N@{B\-D\-S\-\_\-\-C\-O\-W\-N}}
+\index{B\-D\-S\-\_\-\-C\-O\-W\-N@{B\-D\-S\-\_\-\-C\-O\-W\-N}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{B\-D\-S\-\_\-\-C\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-D\-S\-\_\-\-C\-O\-W\-N~0x00}}\label{pic_u_s_b_8h_abeb46f1eaae8227a3e6b8c38c38ebed3}
+
+
+Definition at line 87 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_a69597e34c9f34a0f28783a629ac0db62}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!B\-D\-S\-\_\-\-D\-A\-T0@{B\-D\-S\-\_\-\-D\-A\-T0}}
+\index{B\-D\-S\-\_\-\-D\-A\-T0@{B\-D\-S\-\_\-\-D\-A\-T0}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{B\-D\-S\-\_\-\-D\-A\-T0}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-D\-S\-\_\-\-D\-A\-T0~0x00}}\label{pic_u_s_b_8h_a69597e34c9f34a0f28783a629ac0db62}
+
+
+Definition at line 97 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by epap\-\_\-in(), epap\-\_\-out(), epapout\-\_\-init(), and prepare\-\_\-ep2\-\_\-in().
+
+\hypertarget{pic_u_s_b_8h_a764042abd440b7e064a8a73faa2ff170}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!B\-D\-S\-\_\-\-D\-A\-T1@{B\-D\-S\-\_\-\-D\-A\-T1}}
+\index{B\-D\-S\-\_\-\-D\-A\-T1@{B\-D\-S\-\_\-\-D\-A\-T1}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{B\-D\-S\-\_\-\-D\-A\-T1}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-D\-S\-\_\-\-D\-A\-T1~0x40}}\label{pic_u_s_b_8h_a764042abd440b7e064a8a73faa2ff170}
+
+
+Definition at line 98 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by epap\-\_\-in(), epap\-\_\-out(), epapin\-\_\-init(), and prepare\-\_\-ep2\-\_\-in().
+
+\hypertarget{pic_u_s_b_8h_a6009ca28ad8ba886db3ec053726ff8b1}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!B\-D\-S\-\_\-\-D\-T\-S@{B\-D\-S\-\_\-\-D\-T\-S}}
+\index{B\-D\-S\-\_\-\-D\-T\-S@{B\-D\-S\-\_\-\-D\-T\-S}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{B\-D\-S\-\_\-\-D\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-D\-S\-\_\-\-D\-T\-S~0x40}}\label{pic_u_s_b_8h_a6009ca28ad8ba886db3ec053726ff8b1}
+
+
+Definition at line 89 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Control\-Transfer(), and Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!B\-D\-S\-\_\-\-D\-T\-S\-E\-N@{B\-D\-S\-\_\-\-D\-T\-S\-E\-N}}
+\index{B\-D\-S\-\_\-\-D\-T\-S\-E\-N@{B\-D\-S\-\_\-\-D\-T\-S\-E\-N}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{B\-D\-S\-\_\-\-D\-T\-S\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-D\-S\-\_\-\-D\-T\-S\-E\-N~0x08}}\label{pic_u_s_b_8h_a5f68e5ece0e4a0c1efea70294b7d2ad0}
+
+
+Definition at line 92 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by epap\-\_\-in(), epap\-\_\-out(), epapin\-\_\-init(), epapout\-\_\-init(), prepare\-\_\-ep2\-\_\-in(), Process\-Control\-Transfer(), Setup\-Stage(), and Wait\-For\-Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8h_a56360907fa1e1caee1037c7db87e69e3}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!B\-D\-S\-\_\-\-I\-N\-C\-D\-I\-S@{B\-D\-S\-\_\-\-I\-N\-C\-D\-I\-S}}
+\index{B\-D\-S\-\_\-\-I\-N\-C\-D\-I\-S@{B\-D\-S\-\_\-\-I\-N\-C\-D\-I\-S}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{B\-D\-S\-\_\-\-I\-N\-C\-D\-I\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-D\-S\-\_\-\-I\-N\-C\-D\-I\-S~0x10}}\label{pic_u_s_b_8h_a56360907fa1e1caee1037c7db87e69e3}
+
+
+Definition at line 91 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_a801496931babbf57cf6f91506e2f130b}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!B\-D\-S\-\_\-\-K\-E\-N@{B\-D\-S\-\_\-\-K\-E\-N}}
+\index{B\-D\-S\-\_\-\-K\-E\-N@{B\-D\-S\-\_\-\-K\-E\-N}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{B\-D\-S\-\_\-\-K\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-D\-S\-\_\-\-K\-E\-N~0x20}}\label{pic_u_s_b_8h_a801496931babbf57cf6f91506e2f130b}
+
+
+Definition at line 90 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!B\-D\-S\-\_\-\-U\-O\-W\-N@{B\-D\-S\-\_\-\-U\-O\-W\-N}}
+\index{B\-D\-S\-\_\-\-U\-O\-W\-N@{B\-D\-S\-\_\-\-U\-O\-W\-N}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{B\-D\-S\-\_\-\-U\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-D\-S\-\_\-\-U\-O\-W\-N~0x80}}\label{pic_u_s_b_8h_a232eeae2d1b2030c39f19df4fea2918e}
+
+
+Definition at line 88 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Control\-Transfer(), Setup\-Stage(), and Wait\-For\-Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8h_a1908d37748e7d545ee5f190715624150}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!C\-L\-E\-A\-R\-\_\-\-F\-E\-A\-T\-U\-R\-E@{C\-L\-E\-A\-R\-\_\-\-F\-E\-A\-T\-U\-R\-E}}
+\index{C\-L\-E\-A\-R\-\_\-\-F\-E\-A\-T\-U\-R\-E@{C\-L\-E\-A\-R\-\_\-\-F\-E\-A\-T\-U\-R\-E}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{C\-L\-E\-A\-R\-\_\-\-F\-E\-A\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-L\-E\-A\-R\-\_\-\-F\-E\-A\-T\-U\-R\-E~1}}\label{pic_u_s_b_8h_a1908d37748e7d545ee5f190715624150}
+
+
+Definition at line 63 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_a16d470261826d2b3f2af975f7a965b90}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}}
+\index{C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R~0x02}}\label{pic_u_s_b_8h_a16d470261826d2b3f2af975f7a965b90}
+
+
+Definition at line 76 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by \-\_\-\-\_\-at().
+
+\hypertarget{pic_u_s_b_8h_a514476189fbaf15c716d5e846955d2b8}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!C\-O\-N\-F\-I\-G\-U\-R\-E\-D@{C\-O\-N\-F\-I\-G\-U\-R\-E\-D}}
+\index{C\-O\-N\-F\-I\-G\-U\-R\-E\-D@{C\-O\-N\-F\-I\-G\-U\-R\-E\-D}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{C\-O\-N\-F\-I\-G\-U\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-N\-F\-I\-G\-U\-R\-E\-D~5}}\label{pic_u_s_b_8h_a514476189fbaf15c716d5e846955d2b8}
+
+
+Definition at line 106 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by C\-D\-C\-\_\-init(), init\-\_\-\-C\-D\-C(), and Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_a188ce67e515b427589d4c363d1132018}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S@{D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S@{D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S~3}}\label{pic_u_s_b_8h_a188ce67e515b427589d4c363d1132018}
+
+
+Definition at line 104 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Bus\-Reset(), Process\-Control\-Transfer(), and Process\-U\-S\-B\-Transactions().
+
+\hypertarget{pic_u_s_b_8h_a7dead3b2c769570340a638dbc6c07339}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!D\-E\-T\-A\-C\-H\-E\-D@{D\-E\-T\-A\-C\-H\-E\-D}}
+\index{D\-E\-T\-A\-C\-H\-E\-D@{D\-E\-T\-A\-C\-H\-E\-D}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{D\-E\-T\-A\-C\-H\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-T\-A\-C\-H\-E\-D~0}}\label{pic_u_s_b_8h_a7dead3b2c769570340a638dbc6c07339}
+
+
+Definition at line 101 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by C\-D\-C\-\_\-init(), init\-\_\-\-C\-D\-C(), and Process\-U\-S\-B\-Transactions().
+
+\hypertarget{pic_u_s_b_8h_aecd4c19bbe800ec917cfcaa91e4347d1}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}}
+\index{D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-V\-I\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R~0x01}}\label{pic_u_s_b_8h_aecd4c19bbe800ec917cfcaa91e4347d1}
+
+
+Definition at line 75 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by \-\_\-\-\_\-at().
+
+\hypertarget{pic_u_s_b_8h_afeb17c285ae0402d737219e1d67f94c6}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!D\-E\-V\-I\-C\-E\-\_\-\-Q\-U\-A\-L\-I\-F\-I\-E\-R\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{D\-E\-V\-I\-C\-E\-\_\-\-Q\-U\-A\-L\-I\-F\-I\-E\-R\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}}
+\index{D\-E\-V\-I\-C\-E\-\_\-\-Q\-U\-A\-L\-I\-F\-I\-E\-R\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{D\-E\-V\-I\-C\-E\-\_\-\-Q\-U\-A\-L\-I\-F\-I\-E\-R\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{D\-E\-V\-I\-C\-E\-\_\-\-Q\-U\-A\-L\-I\-F\-I\-E\-R\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-V\-I\-C\-E\-\_\-\-Q\-U\-A\-L\-I\-F\-I\-E\-R\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R~0x06}}\label{pic_u_s_b_8h_afeb17c285ae0402d737219e1d67f94c6}
+
+
+Definition at line 80 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by \-\_\-\-\_\-at().
+
+\hypertarget{pic_u_s_b_8h_a77fa7e6093059898a0849f02968fba1d}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!D\-E\-V\-I\-C\-E\-\_\-\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P@{D\-E\-V\-I\-C\-E\-\_\-\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P}}
+\index{D\-E\-V\-I\-C\-E\-\_\-\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P@{D\-E\-V\-I\-C\-E\-\_\-\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{D\-E\-V\-I\-C\-E\-\_\-\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-V\-I\-C\-E\-\_\-\-R\-E\-M\-O\-T\-E\-\_\-\-W\-A\-K\-E\-U\-P~0x01}}\label{pic_u_s_b_8h_a77fa7e6093059898a0849f02968fba1d}
+
+
+Definition at line 83 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_ac0a8043ee51f310d6ef9c993d1a79287}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}}
+\index{E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R~0x05}}\label{pic_u_s_b_8h_ac0a8043ee51f310d6ef9c993d1a79287}
+
+
+Definition at line 79 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_a4d7a6aea8f3ed0b277c3b40fb5df77fc}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-H\-A\-L\-T@{E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-H\-A\-L\-T}}
+\index{E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-H\-A\-L\-T@{E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-H\-A\-L\-T}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-H\-A\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-N\-D\-P\-O\-I\-N\-T\-\_\-\-H\-A\-L\-T~0x00}}\label{pic_u_s_b_8h_a4d7a6aea8f3ed0b277c3b40fb5df77fc}
+
+
+Definition at line 84 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_a6f14b739a5aa3c5fe517de514f1ec7e2}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!E\-P0\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{E\-P0\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}
+\index{E\-P0\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{E\-P0\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{E\-P0\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P0\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E~64}}\label{pic_u_s_b_8h_a6f14b739a5aa3c5fe517de514f1ec7e2}
+
+
+Definition at line 46 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by In\-Data\-Stage(), Setup\-Stage(), and Wait\-For\-Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8h_ae13b33a030a1eade0fc81785285fdadb}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!E\-P\-\_\-\-C\-T\-R\-L@{E\-P\-\_\-\-C\-T\-R\-L}}
+\index{E\-P\-\_\-\-C\-T\-R\-L@{E\-P\-\_\-\-C\-T\-R\-L}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{E\-P\-\_\-\-C\-T\-R\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-\_\-\-C\-T\-R\-L~0x06}}\label{pic_u_s_b_8h_ae13b33a030a1eade0fc81785285fdadb}
+
+
+Definition at line 53 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Bus\-Reset().
+
+\hypertarget{pic_u_s_b_8h_ab79ba3999449c3d32abd0462936ca52c}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!E\-P\-\_\-\-I\-N@{E\-P\-\_\-\-I\-N}}
+\index{E\-P\-\_\-\-I\-N@{E\-P\-\_\-\-I\-N}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{E\-P\-\_\-\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-\_\-\-I\-N~0x0\-A}}\label{pic_u_s_b_8h_ab79ba3999449c3d32abd0462936ca52c}
+
+
+Definition at line 55 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!E\-P\-\_\-\-I\-N\-\_\-\-B\-D@{E\-P\-\_\-\-I\-N\-\_\-\-B\-D}}
+\index{E\-P\-\_\-\-I\-N\-\_\-\-B\-D@{E\-P\-\_\-\-I\-N\-\_\-\-B\-D}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{E\-P\-\_\-\-I\-N\-\_\-\-B\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-\_\-\-I\-N\-\_\-\-B\-D(
+\begin{DoxyParamCaption}
+\item[{}]{ep}
+\end{DoxyParamCaption}
+)~(ep\-\_\-bdt\mbox{[}(ep $<$$<$ 1) + 1\mbox{]})}}\label{pic_u_s_b_8h_ad14b2b07f1a42a35e0ca6ac87ff2d70f}
+
+
+Definition at line 237 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by epap\-\_\-in(), epapin\-\_\-init(), In\-Data\-Stage(), prepare\-\_\-ep2\-\_\-in(), Process\-Control\-Transfer(), Setup\-Stage(), and Wait\-For\-Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8h_a3a942d7df9f25be538925b91fa1317c3}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!E\-P\-\_\-\-O\-U\-T@{E\-P\-\_\-\-O\-U\-T}}
+\index{E\-P\-\_\-\-O\-U\-T@{E\-P\-\_\-\-O\-U\-T}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{E\-P\-\_\-\-O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-\_\-\-O\-U\-T~0x0\-C}}\label{pic_u_s_b_8h_a3a942d7df9f25be538925b91fa1317c3}
+
+
+Definition at line 54 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D@{E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D}}
+\index{E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D@{E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-\_\-\-O\-U\-T\-\_\-\-B\-D(
+\begin{DoxyParamCaption}
+\item[{}]{ep}
+\end{DoxyParamCaption}
+)~(ep\-\_\-bdt\mbox{[}(ep $<$$<$ 1)\mbox{]})}}\label{pic_u_s_b_8h_a5e07a02615c355f3a466feeb129c3ed1}
+
+
+Definition at line 235 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by epap\-\_\-out(), epapout\-\_\-init(), Out\-Data\-Stage(), Process\-Control\-Transfer(), Setup\-Stage(), and Wait\-For\-Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8h_a7dd548b535b66abf8028667d0ee97b3f}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!E\-P\-\_\-\-O\-U\-T\-\_\-\-I\-N@{E\-P\-\_\-\-O\-U\-T\-\_\-\-I\-N}}
+\index{E\-P\-\_\-\-O\-U\-T\-\_\-\-I\-N@{E\-P\-\_\-\-O\-U\-T\-\_\-\-I\-N}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{E\-P\-\_\-\-O\-U\-T\-\_\-\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-\_\-\-O\-U\-T\-\_\-\-I\-N~0x0\-E}}\label{pic_u_s_b_8h_a7dd548b535b66abf8028667d0ee97b3f}
+
+
+Definition at line 56 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_ac6bffdcb940a0338051c4baa72498beb}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N@{G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}}
+\index{G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N@{G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N~8}}\label{pic_u_s_b_8h_ac6bffdcb940a0338051c4baa72498beb}
+
+
+Definition at line 68 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_a115a1d866ed9498300d59c90549ead0d}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!G\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{G\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}}
+\index{G\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{G\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R~6}}\label{pic_u_s_b_8h_a115a1d866ed9498300d59c90549ead0d}
+
+
+Definition at line 66 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_a1846f3a13493771ceced447397221de1}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!G\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E@{G\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}}
+\index{G\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E@{G\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E~10}}\label{pic_u_s_b_8h_a1846f3a13493771ceced447397221de1}
+
+
+Definition at line 70 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_aeba76c92af8f1a94982ec4cb767452f0}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!G\-E\-T\-\_\-\-S\-T\-A\-T\-U\-S@{G\-E\-T\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{G\-E\-T\-\_\-\-S\-T\-A\-T\-U\-S@{G\-E\-T\-\_\-\-S\-T\-A\-T\-U\-S}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-S\-T\-A\-T\-U\-S~0}}\label{pic_u_s_b_8h_aeba76c92af8f1a94982ec4cb767452f0}
+
+
+Definition at line 62 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_ad9b2ef082540a0da668f9ae8e06319f6}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!H\-S\-H\-K\-\_\-\-E\-N@{H\-S\-H\-K\-\_\-\-E\-N}}
+\index{H\-S\-H\-K\-\_\-\-E\-N@{H\-S\-H\-K\-\_\-\-E\-N}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{H\-S\-H\-K\-\_\-\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\-S\-H\-K\-\_\-\-E\-N~0x10}}\label{pic_u_s_b_8h_ad9b2ef082540a0da668f9ae8e06319f6}
+
+
+Definition at line 57 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Bus\-Reset().
+
+\hypertarget{pic_u_s_b_8h_ac2bbd6d630a06a980d9a92ddb9a49928}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!I\-N@{I\-N}}
+\index{I\-N@{I\-N}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N~1}}\label{pic_u_s_b_8h_ac2bbd6d630a06a980d9a92ddb9a49928}
+
+
+Definition at line 50 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Control\-Transfer().
+
+\hypertarget{pic_u_s_b_8h_aa4c7101997d5cfd2e703858629cae0b8}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}}
+\index{I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-R\-F\-A\-C\-E\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R~0x04}}\label{pic_u_s_b_8h_aa4c7101997d5cfd2e703858629cae0b8}
+
+
+Definition at line 78 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_a34a3aa6cbadec6a80ab1eae8efd0083d}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!L\-S\-B@{L\-S\-B}}
+\index{L\-S\-B@{L\-S\-B}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{L\-S\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-S\-B(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~({\bf x} \& 0x\-F\-F)}}\label{pic_u_s_b_8h_a34a3aa6cbadec6a80ab1eae8efd0083d}
+
+
+Definition at line 40 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_aeb61a4e8fff2f4624a632a3189cbd3a0}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!M\-S\-B@{M\-S\-B}}
+\index{M\-S\-B@{M\-S\-B}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{M\-S\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-S\-B(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~(({\bf x} \& 0x\-F\-F00) $>$$>$ 8)}}\label{pic_u_s_b_8h_aeb61a4e8fff2f4624a632a3189cbd3a0}
+
+
+Definition at line 41 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{pic_u_s_b_8h_aec78e7a9e90a406a56f859ee456e8eae}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!O\-U\-T@{O\-U\-T}}
+\index{O\-U\-T@{O\-U\-T}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{O\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-U\-T~0}}\label{pic_u_s_b_8h_aec78e7a9e90a406a56f859ee456e8eae}
+
+
+Definition at line 49 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Control\-Transfer().
+
+\hypertarget{pic_u_s_b_8h_a2695e45377366b596d024f1fbcdf8126}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!P\-O\-W\-E\-R\-E\-D@{P\-O\-W\-E\-R\-E\-D}}
+\index{P\-O\-W\-E\-R\-E\-D@{P\-O\-W\-E\-R\-E\-D}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{P\-O\-W\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-O\-W\-E\-R\-E\-D~2}}\label{pic_u_s_b_8h_a2695e45377366b596d024f1fbcdf8126}
+
+
+Definition at line 103 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Enable\-U\-S\-B\-Module().
+
+\hypertarget{pic_u_s_b_8h_af6cb843eae51baccea7482dec09f8030}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!P\-T\-R16@{P\-T\-R16}}
+\index{P\-T\-R16@{P\-T\-R16}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{P\-T\-R16}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-T\-R16(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~(({\bf u16})(((unsigned long){\bf x}) \& 0x\-F\-F\-F\-F))}}\label{pic_u_s_b_8h_af6cb843eae51baccea7482dec09f8030}
+T\-O\-D\-O\-:
+\begin{DoxyItemize}
+\item \hyperlink{union_buffer_descriptor_table}{Buffer\-Descriptor\-Table} should be an array 
+\end{DoxyItemize}
+
+Definition at line 38 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by In\-Data\-Stage(), Setup\-Stage(), and Wait\-For\-Setup\-Stage().
+
+\hypertarget{pic_u_s_b_8h_ad3c9f5426c07d7d4da8cf1752a111576}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!S\-E\-T\-\_\-\-A\-D\-D\-R\-E\-S\-S@{S\-E\-T\-\_\-\-A\-D\-D\-R\-E\-S\-S}}
+\index{S\-E\-T\-\_\-\-A\-D\-D\-R\-E\-S\-S@{S\-E\-T\-\_\-\-A\-D\-D\-R\-E\-S\-S}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{S\-E\-T\-\_\-\-A\-D\-D\-R\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-T\-\_\-\-A\-D\-D\-R\-E\-S\-S~5}}\label{pic_u_s_b_8h_ad3c9f5426c07d7d4da8cf1752a111576}
+
+
+Definition at line 65 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_a5cdfe3de183eb4e190b2ccaa299045bf}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!S\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N@{S\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}}
+\index{S\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N@{S\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{S\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-A\-T\-I\-O\-N~9}}\label{pic_u_s_b_8h_a5cdfe3de183eb4e190b2ccaa299045bf}
+
+
+Definition at line 69 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_a264a9bda1309d7cc0311d57274194ca3}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}}
+\index{S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R~7}}\label{pic_u_s_b_8h_a264a9bda1309d7cc0311d57274194ca3}
+
+
+Definition at line 67 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_af8b97e67097fbf7d56c3dcac52fe679e}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!S\-E\-T\-\_\-\-F\-E\-A\-T\-U\-R\-E@{S\-E\-T\-\_\-\-F\-E\-A\-T\-U\-R\-E}}
+\index{S\-E\-T\-\_\-\-F\-E\-A\-T\-U\-R\-E@{S\-E\-T\-\_\-\-F\-E\-A\-T\-U\-R\-E}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{S\-E\-T\-\_\-\-F\-E\-A\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-T\-\_\-\-F\-E\-A\-T\-U\-R\-E~3}}\label{pic_u_s_b_8h_af8b97e67097fbf7d56c3dcac52fe679e}
+
+
+Definition at line 64 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_a90c9c23759bdbb3ba106f88cb5ffc261}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!S\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E@{S\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}}
+\index{S\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E@{S\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{S\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-T\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E~11}}\label{pic_u_s_b_8h_a90c9c23759bdbb3ba106f88cb5ffc261}
+
+
+Definition at line 71 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_a875e5da7a1540475d6ee1ca13f30cd00}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}}
+\index{S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-R\-I\-N\-G\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R~0x03}}\label{pic_u_s_b_8h_a875e5da7a1540475d6ee1ca13f30cd00}
+
+
+Definition at line 77 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by \-\_\-\-\_\-at().
+
+\hypertarget{pic_u_s_b_8h_a43c627a14ff41632fa9c234a3df41b2b}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!S\-Y\-N\-C\-H\-\_\-\-F\-R\-A\-M\-E@{S\-Y\-N\-C\-H\-\_\-\-F\-R\-A\-M\-E}}
+\index{S\-Y\-N\-C\-H\-\_\-\-F\-R\-A\-M\-E@{S\-Y\-N\-C\-H\-\_\-\-F\-R\-A\-M\-E}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{S\-Y\-N\-C\-H\-\_\-\-F\-R\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-N\-C\-H\-\_\-\-F\-R\-A\-M\-E~12}}\label{pic_u_s_b_8h_a43c627a14ff41632fa9c234a3df41b2b}
+
+
+Definition at line 72 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Process\-Standard\-Request().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{pic_u_s_b_8h_a232e737ac533bea0679e470f7f5a6205}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!\-\_\-\-\_\-at@{\-\_\-\-\_\-at}}
+\index{\-\_\-\-\_\-at@{\-\_\-\-\_\-at}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{\-\_\-\-\_\-at}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf Buffer\-Descriptor\-Table} \-\_\-\-\_\-at (
+\begin{DoxyParamCaption}
+\item[{0x400}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8h_a232e737ac533bea0679e470f7f5a6205}
+Buffer descriptors Table (see datasheet page 171) R\-A\-M Bank 4 (0x400 though 0x4ff) is used sp\-Ecifically for endpoint buffer control in a structure known as Buffer Descriptor Table (B\-D\-T\-Z). T\-O\-D\-O\-: find something smarter to allocate the buffer, like in usbmmap.\-c of the microchip firmware. If not all endpoints are used the space in R\-A\-M is wasted. 
+
+Definition at line 95 of file pic\-U\-S\-B.\-c.
+
+
+\begin{DoxyCode}
+110 \{
+111 \textcolor{preprocessor}{    #ifdef DEBUG\_PRINT}
+112 \textcolor{preprocessor}{}    printf(\textcolor{stringliteral}{"GetDescriptor\(\backslash\)r\(\backslash\)n"});
+113 \textcolor{preprocessor}{    #endif}
+114 \textcolor{preprocessor}{}
+115     \textcolor{keywordflow}{if}(\hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9119649a830686614e70e2e8d42c91d3}{bmRequestType} == 0x80)
+116     \{
+117         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} descriptorType  = \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_ae02c3c2f43b18232e17336ffe81c72ea}{wValue1};
+118         \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} descriptorIndex = \hyperlink{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{SetupPacket}.\hyperlink{unionsetup_packet_struct_a9ec22823f856325394796ecddc8c7cee}{wValue0};
+119 
+120         \textcolor{keywordflow}{if} (descriptorType == \hyperlink{pic_u_s_b_8h_aecd4c19bbe800ec917cfcaa91e4347d1}{DEVICE\_DESCRIPTOR})
+121         \{
+122 \textcolor{preprocessor}{        #ifdef DEBUG\_PRINT}
+123 \textcolor{preprocessor}{}        printf(\textcolor{stringliteral}{"DEVICE\_DESCRIPTOR (0x%ux)\(\backslash\)r\(\backslash\)n"},(\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})descriptorType);
+124 \textcolor{preprocessor}{        #endif}
+125 \textcolor{preprocessor}{}          \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+126           \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr} = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *)&\hyperlink{usb__config_8h_a82c3241716dd16e0a0f1c822d854f5a6}{libdevice\_descriptor};
+127           \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = \textcolor{keyword}{sizeof}(\hyperlink{struct_u_s_b___device___descriptor}{USB\_Device\_Descriptor});
+128         \}
+129 
+130         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (descriptorType == \hyperlink{pic_u_s_b_8h_a16d470261826d2b3f2af975f7a965b90}{CONFIGURATION\_DESCRIPTOR})
+131         \{
+132 \textcolor{preprocessor}{            #ifdef DEBUG\_PRINT}
+133 \textcolor{preprocessor}{}            printf(\textcolor{stringliteral}{"CONFIGURATION\_DESCRIPTOR (0x%ux): %d\(\backslash\)r\(\backslash\)n"}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})descriptorType, descriptorIndex);
+134 \textcolor{preprocessor}{            #endif}
+135 \textcolor{preprocessor}{}
+136             \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+137 
+138 \textcolor{preprocessor}{            #if 0}
+139 \textcolor{preprocessor}{}            \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr} = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *)&\hyperlink{usb__config_8h_a6ad9d633318374b9161df82d241af202}{libconfiguration\_descriptor};
+140             \textcolor{comment}{// wCount = *(outPtr + 2);}
+141             \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = CFSZ;
+142 \textcolor{preprocessor}{            #else}
+143 \textcolor{preprocessor}{}            \textcolor{comment}{// SDCC 2.5 makes bad code with the following two lines.  The}
+144             \textcolor{comment}{// unusual thing is that it is the first of the two lines that}
+145             \textcolor{comment}{// is compiled incorrectly (outPtr gets the contents of}
+146             \textcolor{comment}{// libconfiguration\_descriptor rather than the address), even though it}
+147             \textcolor{comment}{// is the second line that changes from above.}
+148             \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr} = (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} *)&\hyperlink{usb__config_8h_a6ad9d633318374b9161df82d241af202}{libconfiguration\_descriptor};
+149             \textcolor{comment}{//wCount = libconfiguration\_descriptor.configHeader[2]; // Note: SDCC makes bad code with this}
+150             \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = \hyperlink{usb__config_8h_a6ad9d633318374b9161df82d241af202}{libconfiguration\_descriptor}.Header.wTotalLength;
+151 \textcolor{preprocessor}{            #endif}
+152 \textcolor{preprocessor}{}
+153 \textcolor{preprocessor}{            #ifdef DEBUG\_PRINT}
+154 \textcolor{preprocessor}{}            printf(\textcolor{stringliteral}{"Total config size: %d\(\backslash\)r\(\backslash\)n"}, \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount});
+155 \textcolor{preprocessor}{            #endif}
+156 \textcolor{preprocessor}{}        \}
+157 
+158         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (descriptorType == \hyperlink{pic_u_s_b_8h_a875e5da7a1540475d6ee1ca13f30cd00}{STRING\_DESCRIPTOR})
+159         \{
+160 \textcolor{preprocessor}{            #ifdef DEBUG\_PRINT}
+161 \textcolor{preprocessor}{}            printf(\textcolor{stringliteral}{"STRING\_DESCRIPTOR: %d\(\backslash\)r\(\backslash\)n"}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})descriptorIndex);
+162 \textcolor{preprocessor}{            #endif}
+163 \textcolor{preprocessor}{}
+164             \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+165             \textcolor{comment}{//outPtr = (u8 *)&libstring\_descriptor[descriptorIndex];}
+166             \hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr} = \hyperlink{usb__config_8c_a54002dfd77c49d181c86fb2069853a7a}{libstring\_descriptor}[descriptorIndex];
+167             \hyperlink{pic_u_s_b_8c_a7acca4f23c273b2d2ed69536a2a7fdfb}{wCount} = *\hyperlink{pic_u_s_b_8c_a0e41a62c398ad8a32700a3137f0e0e42}{outPtr};
+168         \}
+169 
+170         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (descriptorType == \hyperlink{pic_u_s_b_8h_afeb17c285ae0402d737219e1d67f94c6}{DEVICE\_QUALIFIER\_DESCRIPTOR})
+171         \{
+172 \textcolor{preprocessor}{            #ifdef DEBUG\_PRINT}
+173 \textcolor{preprocessor}{}            printf(\textcolor{stringliteral}{"DEVICE\_QUALIFIER\_DESCRIPTOR\(\backslash\)r\(\backslash\)n"});
+174 \textcolor{preprocessor}{            #endif}
+175 \textcolor{preprocessor}{}
+176             \hyperlink{pic_u_s_b_8c_ace62f6e112eb236da7f0728df0f2c87a}{requestHandled} = 1;
+177             \textcolor{comment}{// TODO: check if this is needed if not requestHandled is not set to 1 the device will}
+178             \textcolor{comment}{// stall later when the linux kernel requests this descriptor}
+179             \textcolor{comment}{//outPtr = (u8 *)&libconfiguration\_descriptor;}
+180             \textcolor{comment}{//wCount = sizeof();}
+181         \}
+182 
+183         \textcolor{keywordflow}{else}
+184         \{
+185 \textcolor{preprocessor}{            #ifdef DEBUG\_PRINT}
+186 \textcolor{preprocessor}{}            printf(\textcolor{stringliteral}{"Unknown Descriptor: 0x%ux\(\backslash\)r\(\backslash\)n"}, (\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})descriptorType);
+187 \textcolor{preprocessor}{            #endif}
+188 \textcolor{preprocessor}{}        \}
+189     \}
+190 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8h_a7ce360ecb075203865186f441fe72574}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!Enable\-U\-S\-B\-Module@{Enable\-U\-S\-B\-Module}}
+\index{Enable\-U\-S\-B\-Module@{Enable\-U\-S\-B\-Module}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{Enable\-U\-S\-B\-Module}]{\setlength{\rightskip}{0pt plus 5cm}void Enable\-U\-S\-B\-Module (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8h_a7ce360ecb075203865186f441fe72574}
+
+
+Definition at line 651 of file pic\-U\-S\-B.\-c.
+
+
+
+References A\-T\-T\-A\-C\-H\-E\-D, device\-State, and P\-O\-W\-E\-R\-E\-D.
+
+
+
+Referenced by C\-D\-C\-\_\-init(), and init\-\_\-\-C\-D\-C().
+
+
+\begin{DoxyCode}
+652 \{
+653     \textcolor{comment}{// TBD: Check for voltage coming from the USB cable and use that}
+654     \textcolor{comment}{// as an indication we are attached.}
+655     \textcolor{keywordflow}{if}(UCONbits.USBEN == 0)
+656     \{
+657 \textcolor{preprocessor}{        #ifdef DEBUG\_PRINT}
+658 \textcolor{preprocessor}{}        printf(\textcolor{stringliteral}{"Enable the module\(\backslash\)r\(\backslash\)n"});
+659 \textcolor{preprocessor}{        #endif}
+660 \textcolor{preprocessor}{}        UCON = 0;
+661         UIE = 0;
+662         UCONbits.USBEN = 1;
+663         \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} = \hyperlink{pic_u_s_b_8h_a762fa5d8c5d91e6acea6891d7ca643ef}{ATTACHED};
+664     \}
+665 
+666     \textcolor{comment}{// If we are attached and no single-ended zero is detected, then}
+667     \textcolor{comment}{// we can move to the Powered state.}
+668     \textcolor{keywordflow}{if} ((\hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} == \hyperlink{pic_u_s_b_8h_a762fa5d8c5d91e6acea6891d7ca643ef}{ATTACHED}) && !UCONbits.SE0)
+669     \{
+670         UIR = 0;
+671         UIE = 0;
+672         UIEbits.URSTIE = 1;
+673         UIEbits.IDLEIE = 1;
+674         \hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} = \hyperlink{pic_u_s_b_8h_a2695e45377366b596d024f1fbcdf8126}{POWERED};
+675 \textcolor{preprocessor}{        #ifdef DEBUG\_PRINT}
+676 \textcolor{preprocessor}{}        printf(\textcolor{stringliteral}{"Device powered\(\backslash\)r\(\backslash\)n"});
+677 \textcolor{preprocessor}{        #endif}
+678 \textcolor{preprocessor}{}    \}
+679 \}
+\end{DoxyCode}
+\hypertarget{pic_u_s_b_8h_a72d2fa72a0db42721bb8d9b9de26b431}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!Process\-U\-S\-B\-Transactions@{Process\-U\-S\-B\-Transactions}}
+\index{Process\-U\-S\-B\-Transactions@{Process\-U\-S\-B\-Transactions}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{Process\-U\-S\-B\-Transactions}]{\setlength{\rightskip}{0pt plus 5cm}void Process\-U\-S\-B\-Transactions (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{pic_u_s_b_8h_a72d2fa72a0db42721bb8d9b9de26b431}
+
+
+Definition at line 821 of file pic\-U\-S\-B.\-c.
+
+
+
+References Bus\-Reset(), D\-E\-F\-A\-U\-L\-T\-\_\-\-S\-T\-A\-T\-U\-S, D\-E\-T\-A\-C\-H\-E\-D, device\-State, Process\-Control\-Transfer(), Stall(), Start\-Of\-Frame(), Suspend(), and Un\-Suspend().
+
+
+
+Referenced by C\-D\-C\-\_\-init(), C\-D\-C\-\_\-interrupt(), and init\-\_\-\-C\-D\-C().
+
+
+\begin{DoxyCode}
+822 \{
+823   \textcolor{comment}{// See if the device is connected yet.}
+824   \textcolor{keywordflow}{if}(\hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} == \hyperlink{pic_u_s_b_8h_a7dead3b2c769570340a638dbc6c07339}{DETACHED})
+825     \textcolor{keywordflow}{return};
+826 
+827   \textcolor{comment}{// If the USB became active then wake up from suspend}
+828   \textcolor{keywordflow}{if}(UIRbits.ACTVIF && UIEbits.ACTVIE)
+829     \hyperlink{pic_u_s_b_8c_a272fb225233be964e3b61b708e0c5c64}{UnSuspend}();
+830 
+831   \textcolor{comment}{// If we are supposed to be suspended, then don't try performing any}
+832   \textcolor{comment}{// processing.}
+833   \textcolor{keywordflow}{if}(UCONbits.SUSPND == 1)
+834     \textcolor{keywordflow}{return};
+835 
+836   \textcolor{comment}{// Process a bus reset}
+837   \textcolor{keywordflow}{if} (UIRbits.URSTIF && UIEbits.URSTIE)
+838     \hyperlink{pic_u_s_b_8c_a14ebe200ff243af23432fcbe2c246dec}{BusReset}();
+839 
+840   \textcolor{comment}{// No bus activity for a while - suspend the firmware}
+841   \textcolor{keywordflow}{if} (UIRbits.IDLEIF && UIEbits.IDLEIE)
+842     \hyperlink{pic_u_s_b_8c_a1eb60d4c13f2c21d00ddc5fe6ad57f40}{Suspend}();
+843 
+844   
+845   \textcolor{keywordflow}{if} (UIRbits.SOFIF && UIEbits.SOFIE)
+846     \hyperlink{pic_u_s_b_8c_a457f7be555516059c29fa546b4b38333}{StartOfFrame}();
+847   
+848   \textcolor{keywordflow}{if} (UIRbits.STALLIF && UIEbits.STALLIE)
+849     \hyperlink{pic_u_s_b_8c_a03de205acec4df503c45cde99ba898ef}{Stall}();
+850 
+851   \textcolor{comment}{// TBD: See where the error came from.}
+852   \textcolor{comment}{// Clear errors}
+853   \textcolor{keywordflow}{if} (UIRbits.UERRIF && UIEbits.UERRIE)
+854     UIRbits.UERRIF = 0;
+855 
+856   \textcolor{comment}{// Unless we have been reset by the host, no need to keep processing}
+857   \textcolor{keywordflow}{if} (\hyperlink{pic_u_s_b_8c_a407ab2762f98c6ab9c6d654308d70f2c}{deviceState} < \hyperlink{pic_u_s_b_8h_a188ce67e515b427589d4c363d1132018}{DEFAULT\_STATUS})
+858     \textcolor{keywordflow}{return};
+859 
+860   \textcolor{comment}{// A transaction has finished.  Try default processing on endpoint 0.}
+861   \textcolor{keywordflow}{if}(UIRbits.TRNIF && UIEbits.TRNIE)
+862   \{
+863     \hyperlink{pic_u_s_b_8c_a0cdf23416266db97850174a4a14be599}{ProcessControlTransfer}();
+864     \textcolor{comment}{// Turn off interrupt}
+865     UIRbits.TRNIF = 0;
+866   \}
+867 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{pic_u_s_b_8h_a1c07dc041da5fe22f47633438dc0c0ac}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!current\-Configuration@{current\-Configuration}}
+\index{current\-Configuration@{current\-Configuration}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{current\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} current\-Configuration}}\label{pic_u_s_b_8h_a1c07dc041da5fe22f47633438dc0c0ac}
+
+
+Definition at line 56 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Bus\-Reset(), C\-D\-C\-\_\-init(), init\-\_\-\-C\-D\-C(), and Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_a407ab2762f98c6ab9c6d654308d70f2c}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!device\-State@{device\-State}}
+\index{device\-State@{device\-State}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{device\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} device\-State}}\label{pic_u_s_b_8h_a407ab2762f98c6ab9c6d654308d70f2c}
+
+
+Definition at line 302 of file pic\-U\-S\-B.\-h.
+
+
+
+Referenced by Bus\-Reset(), C\-D\-C\-\_\-init(), Enable\-U\-S\-B\-Module(), init\-\_\-\-C\-D\-C(), Process\-Control\-Transfer(), Process\-Standard\-Request(), and Process\-U\-S\-B\-Transactions().
+
+\hypertarget{pic_u_s_b_8h_af7bb57deec874c793aae34290b358e41}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!hid\-Rx\-Len@{hid\-Rx\-Len}}
+\index{hid\-Rx\-Len@{hid\-Rx\-Len}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{hid\-Rx\-Len}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} hid\-Rx\-Len}}\label{pic_u_s_b_8h_af7bb57deec874c793aae34290b358e41}
+
+
+Definition at line 76 of file pic\-U\-S\-B.\-c.
+
+\hypertarget{pic_u_s_b_8h_ae16622319c61882067048c564148ae16}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!in\-Ptr@{in\-Ptr}}
+\index{in\-Ptr@{in\-Ptr}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{in\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8}$\ast$ in\-Ptr}}\label{pic_u_s_b_8h_ae16622319c61882067048c564148ae16}
+
+
+Definition at line 70 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by In\-Data\-Stage(), and Out\-Data\-Stage().
+
+\hypertarget{pic_u_s_b_8h_a0e41a62c398ad8a32700a3137f0e0e42}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!out\-Ptr@{out\-Ptr}}
+\index{out\-Ptr@{out\-Ptr}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{out\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8}$\ast$ out\-Ptr}}\label{pic_u_s_b_8h_a0e41a62c398ad8a32700a3137f0e0e42}
+
+
+Definition at line 69 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by \-\_\-\-\_\-at(), In\-Data\-Stage(), Out\-Data\-Stage(), and Process\-Standard\-Request().
+
+\hypertarget{pic_u_s_b_8h_a8f6657264342ba68ae2efa649f018cf9}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!remote\-Wakeup@{remote\-Wakeup}}
+\index{remote\-Wakeup@{remote\-Wakeup}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{remote\-Wakeup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} remote\-Wakeup}}\label{pic_u_s_b_8h_a8f6657264342ba68ae2efa649f018cf9}
+
+
+Definition at line 53 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Bus\-Reset(), C\-D\-C\-\_\-init(), and init\-\_\-\-C\-D\-C().
+
+\hypertarget{pic_u_s_b_8h_af8db2005d4e92586c83a261bb869f135}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!self\-Powered@{self\-Powered}}
+\index{self\-Powered@{self\-Powered}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{self\-Powered}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} self\-Powered}}\label{pic_u_s_b_8h_af8db2005d4e92586c83a261bb869f135}
+
+
+Definition at line 55 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by Bus\-Reset().
+
+\hypertarget{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!Setup\-Packet@{Setup\-Packet}}
+\index{Setup\-Packet@{Setup\-Packet}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{Setup\-Packet}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf setup\-Packet\-Struct} Setup\-Packet}}\label{pic_u_s_b_8h_aa31cb09811f902b5fdc2a3ff3966c0ca}
+\hypertarget{pic_u_s_b_8h_adef4432c9d201cf2c137e2787b81f3f7}{\index{pic\-U\-S\-B.\-h@{pic\-U\-S\-B.\-h}!w\-Count@{w\-Count}}
+\index{w\-Count@{w\-Count}!picUSB.h@{pic\-U\-S\-B.\-h}}
+\subsubsection[{w\-Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} w\-Count}}\label{pic_u_s_b_8h_adef4432c9d201cf2c137e2787b81f3f7}
+
+
+Definition at line 71 of file pic\-U\-S\-B.\-c.
+
+
+
+Referenced by \-\_\-\-\_\-at(), In\-Data\-Stage(), Out\-Data\-Stage(), Process\-Standard\-Request(), and Setup\-Stage().
+

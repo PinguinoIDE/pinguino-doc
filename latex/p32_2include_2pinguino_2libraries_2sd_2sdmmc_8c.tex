@@ -1,0 +1,469 @@
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/sd/sdmmc.c File Reference}
+\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/sd/sdmmc.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+}
+{\ttfamily \#include $<$system.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$spi.\-c$>$}\\*
+{\ttfamily \#include $<$sd/sdmmc.\-h$>$}\\*
+{\ttfamily \#include $<$sd/diskio.\-h$>$}\\*
+{\ttfamily \#include $<$sd/ff.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a5cc0f45eb89249d1ed7720e04a5a0130}{\-\_\-\-\_\-\-S\-D\-M\-M\-C\-\_\-\-C\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ad7b4058b669998a3ca854c28167aa0a0}{read\-S\-P\-I}()~\hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8h_a39a07566d7d6294bb14c9069983c36ed}{write\-S\-P\-I}(0x\-F\-F)
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ab71fa577a8bc96bd643f084e22eed47b}{clock\-S\-P\-I}()~\hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8h_a39a07566d7d6294bb14c9069983c36ed}{write\-S\-P\-I}(0x\-F\-F)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a6a1a198a7f27db28761172fa4426daf3}{write\-S\-P\-I} (unsigned char b)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a469e8fffcf5a77dc542d8acea1cfea57}{init\-S\-D} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a1531d2f76a265f4def4044d9c028c1a5}{disable\-S\-D} (void)
+\item 
+void \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_aea80f1bdf2c4aba640129a965f4e071f}{enable\-S\-D} (void)
+\item 
+int \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_af35781ed6bb5671aa7cf321e48ed0009}{send\-S\-D\-Cmd} (unsigned char \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c}, unsigned a)
+\item 
+int \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a0a62982cc6fc4507eacea6f73767da72}{init\-Media} (void)
+\item 
+int \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_aa852b20c06fce185a342322012a3b01e}{read\-S\-E\-C\-T\-O\-R} (\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{L\-B\-A} a, char $\ast$p)
+\item 
+int \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_aa8c1cd442ebabe63060d75c8e8de8cad}{write\-S\-E\-C\-T\-O\-R} (\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_ae191ab80499bded9e0668daa98faa849}{L\-B\-A} a, char $\ast$p)
+\item 
+int \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a333a9ed0bf9a0bcb9500528e812881ab}{get\-C\-D} (void)
+\item 
+int \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a57e48dc648d410cdfe264eecdbd74afc}{get\-W\-P} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a5cc0f45eb89249d1ed7720e04a5a0130}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!\-\_\-\-\_\-\-S\-D\-M\-M\-C\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-D\-M\-M\-C\-\_\-\-C\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-S\-D\-M\-M\-C\-\_\-\-C\-\_\-\-\_\-@{\-\_\-\-\_\-\-S\-D\-M\-M\-C\-\_\-\-C\-\_\-\-\_\-}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-S\-D\-M\-M\-C\-\_\-\-C\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-S\-D\-M\-M\-C\-\_\-\-C\-\_\-\-\_\-}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a5cc0f45eb89249d1ed7720e04a5a0130}
+
+
+Definition at line 15 of file sdmmc.\-c.
+
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ab71fa577a8bc96bd643f084e22eed47b}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!clock\-S\-P\-I@{clock\-S\-P\-I}}
+\index{clock\-S\-P\-I@{clock\-S\-P\-I}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{clock\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define clock\-S\-P\-I(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf write\-S\-P\-I}(0x\-F\-F)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ab71fa577a8bc96bd643f084e22eed47b}
+
+
+Definition at line 53 of file sdmmc.\-c.
+
+
+
+Referenced by disable\-S\-D(), init\-Media(), and write\-S\-E\-C\-T\-O\-R().
+
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ad7b4058b669998a3ca854c28167aa0a0}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!read\-S\-P\-I@{read\-S\-P\-I}}
+\index{read\-S\-P\-I@{read\-S\-P\-I}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{read\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define read\-S\-P\-I(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf write\-S\-P\-I}(0x\-F\-F)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ad7b4058b669998a3ca854c28167aa0a0}
+
+
+Definition at line 52 of file sdmmc.\-c.
+
+
+
+Referenced by read\-S\-E\-C\-T\-O\-R(), send\-S\-D\-Cmd(), and write\-S\-E\-C\-T\-O\-R().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a1531d2f76a265f4def4044d9c028c1a5}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!disable\-S\-D@{disable\-S\-D}}
+\index{disable\-S\-D@{disable\-S\-D}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{disable\-S\-D}]{\setlength{\rightskip}{0pt plus 5cm}void disable\-S\-D (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a1531d2f76a265f4def4044d9c028c1a5}
+
+
+Definition at line 55 of file sdmmc.\-c.
+
+
+
+References clock\-S\-P\-I, digitalwrite(), H\-I\-G\-H, and S\-D\-C\-S.
+
+
+\begin{DoxyCode}
+56 \{
+57     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a9470cb8f6ac9077bf21f815e37d13f09}{SDCS}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});   \textcolor{comment}{// Deselected = SDCS high}
+58     \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ab71fa577a8bc96bd643f084e22eed47b}{clockSPI}();
+59 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_aea80f1bdf2c4aba640129a965f4e071f}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!enable\-S\-D@{enable\-S\-D}}
+\index{enable\-S\-D@{enable\-S\-D}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{enable\-S\-D}]{\setlength{\rightskip}{0pt plus 5cm}void enable\-S\-D (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_aea80f1bdf2c4aba640129a965f4e071f}
+
+
+Definition at line 61 of file sdmmc.\-c.
+
+
+
+References digitalwrite(), L\-O\-W, and S\-D\-C\-S.
+
+
+\begin{DoxyCode}
+62 \{
+63     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a9470cb8f6ac9077bf21f815e37d13f09}{SDCS}, \hyperlink{p8_2pinguino_2core_2const_8h_ab811d8c6ff3a505312d3276590444289}{LOW}); \textcolor{comment}{// Selected = SDCS low}
+64 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a333a9ed0bf9a0bcb9500528e812881ab}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!get\-C\-D@{get\-C\-D}}
+\index{get\-C\-D@{get\-C\-D}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{get\-C\-D}]{\setlength{\rightskip}{0pt plus 5cm}int get\-C\-D (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a333a9ed0bf9a0bcb9500528e812881ab}
+
+
+Definition at line 250 of file sdmmc.\-c.
+
+
+
+References T\-R\-U\-E.
+
+
+\begin{DoxyCode}
+251 \{
+252 \textcolor{comment}{// 07 May 2012 ** Added specific support for PIC32 Pinguino and Micro}
+253 \textcolor{preprocessor}{#if defined (PIC32\_PINGUINO) || defined (PIC32\_PINGUINO\_OTG) || defined (PIC32\_PINGUINO\_MICRO) || defined
+       (EMPEROR460)}
+254 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa8cecfc5c5c054d2875c03e77b7be15d}{TRUE};
+255 \textcolor{preprocessor}{#else}
+256 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} (SDCD);
+257 \textcolor{preprocessor}{#endif}
+258 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a57e48dc648d410cdfe264eecdbd74afc}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!get\-W\-P@{get\-W\-P}}
+\index{get\-W\-P@{get\-W\-P}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{get\-W\-P}]{\setlength{\rightskip}{0pt plus 5cm}int get\-W\-P (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a57e48dc648d410cdfe264eecdbd74afc}
+
+
+Definition at line 263 of file sdmmc.\-c.
+
+
+
+References F\-A\-L\-S\-E.
+
+
+\begin{DoxyCode}
+264 \{
+265 \textcolor{comment}{// 07 May 2012 ** Added specific support for PIC32 Pinguino and Micro}
+266 \textcolor{preprocessor}{#if defined (PIC32\_PINGUINO) || defined (PIC32\_PINGUINO\_OTG) || defined (PIC32\_PINGUINO\_MICRO) ||
+       defined(EMPEROR460)}
+267 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2core_2const_8h_aa93f0eb578d23995850d61f7d61c55c1}{FALSE};
+268 \textcolor{preprocessor}{#else}
+269 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} (SDWP);
+270 \textcolor{preprocessor}{#endif}
+271 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a0a62982cc6fc4507eacea6f73767da72}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!init\-Media@{init\-Media}}
+\index{init\-Media@{init\-Media}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{init\-Media}]{\setlength{\rightskip}{0pt plus 5cm}int init\-Media (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a0a62982cc6fc4507eacea6f73767da72}
+
+
+Definition at line 116 of file sdmmc.\-c.
+
+
+
+References clock\-S\-P\-I, disable\-S\-D(), E\-\_\-\-C\-O\-M\-M\-A\-N\-D\-\_\-\-A\-C\-K, E\-\_\-\-I\-N\-I\-T\-\_\-\-T\-I\-M\-E\-O\-U\-T, enable\-S\-D(), I\-\_\-\-T\-I\-M\-E\-O\-U\-T, I\-N\-I\-T, R\-E\-S\-E\-T, and send\-S\-D\-Cmd().
+
+
+\begin{DoxyCode}
+117 \{
+118     \textcolor{keywordtype}{int} i, r;
+119 
+120     \textcolor{comment}{// 1. with the card NOT selected}
+121     \textcolor{comment}{// Set DI and CS high}
+122     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a1531d2f76a265f4def4044d9c028c1a5}{disableSD}();
+123 
+124     \textcolor{comment}{// 2. send 74 or more clock cycles to start up}
+125     \textcolor{comment}{// apply 74 or more clock pulses to SCLK.}
+126     \textcolor{comment}{// The card will enter its native operating mode and go ready to accept native commands.}
+127     \textcolor{keywordflow}{for} (i=0; i<10; i++)
+128         \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ab71fa577a8bc96bd643f084e22eed47b}{clockSPI}();
+129 
+130     \textcolor{comment}{// 3. now select the card}
+131     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_aea80f1bdf2c4aba640129a965f4e071f}{enableSD}();
+132 
+133     \textcolor{comment}{//card detection is now in disk\_initialize()}
+134 
+135     \textcolor{keywordflow}{return} 0;
+136 \} \textcolor{comment}{// init media}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a469e8fffcf5a77dc542d8acea1cfea57}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!init\-S\-D@{init\-S\-D}}
+\index{init\-S\-D@{init\-S\-D}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{init\-S\-D}]{\setlength{\rightskip}{0pt plus 5cm}void init\-S\-D (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a469e8fffcf5a77dc542d8acea1cfea57}
+
+
+Definition at line 37 of file sdmmc.\-c.
+
+
+
+References digitalwrite(), Get\-Peripheral\-Clock(), H\-I\-G\-H, I\-N\-P\-U\-T, O\-U\-T\-P\-U\-T, pinmode(), and S\-D\-C\-S.
+
+
+\begin{DoxyCode}
+38 \{
+39     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a9470cb8f6ac9077bf21f815e37d13f09}{SDCS}, \hyperlink{p8_2pinguino_2core_2const_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH});   \textcolor{comment}{// initially keep the SD card disabled}
+40     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2sd_2fileio_8h_a9470cb8f6ac9077bf21f815e37d13f09}{SDCS}, \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT});     \textcolor{comment}{// make Card select an output pin}
+41 
+42     \textcolor{comment}{// init the spi module for a slow (safe) clock speed first}
+43 \textcolor{comment}{/*}
+44 \textcolor{comment}{    SPI2CON = 0x8120;   // ON (0x8000), CKE=1 (0x100), CKP=0, Master mode (0x20)}
+45 \textcolor{comment}{    SPI2BRG = (GetPeripheralClock() / (2 * 250000)) - 1;}
+46 \textcolor{comment}{*/}
+47     SPICONF = 0x8120;   \textcolor{comment}{// ON (0x8000), CKE=1 (0x100), CKP=0, Master mode (0x20)}
+48     CLKSPD  = (\hyperlink{p32_2include_2pinguino_2core_2system_8c_a78e9ff88927e18f2346bc9c33069c5ef}{GetPeripheralClock}() / (2 * 250000)) - 1;
+49 
+50 \}   \textcolor{comment}{// initSD}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_aa852b20c06fce185a342322012a3b01e}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!read\-S\-E\-C\-T\-O\-R@{read\-S\-E\-C\-T\-O\-R}}
+\index{read\-S\-E\-C\-T\-O\-R@{read\-S\-E\-C\-T\-O\-R}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{read\-S\-E\-C\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}int read\-S\-E\-C\-T\-O\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-B\-A}}]{a, }
+\item[{char $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_aa852b20c06fce185a342322012a3b01e}
+
+
+Definition at line 142 of file sdmmc.\-c.
+
+
+
+References D\-A\-T\-A\-\_\-\-S\-T\-A\-R\-T, digitalwrite(), disable\-S\-D(), R\-\_\-\-T\-I\-M\-E\-O\-U\-T, R\-E\-A\-D\-\_\-\-S\-I\-N\-G\-L\-E, read\-S\-P\-I, and send\-S\-D\-Cmd().
+
+
+\begin{DoxyCode}
+143 \{
+144     \textcolor{keywordtype}{int} r, i;
+145 
+146 \textcolor{preprocessor}{    #ifdef READ\_LED}
+147 \textcolor{preprocessor}{}    \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(READ\_LED, 0);
+148 \textcolor{preprocessor}{    #endif}
+149 \textcolor{preprocessor}{}
+150     \textcolor{comment}{// 1. send READ command}
+151     r = \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_af35781ed6bb5671aa7cf321e48ed0009}{sendSDCmd}(\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_a549850eb399ab873a7a7c37696adcd5a}{READ\_SINGLE}, (a << 9));
+152     \textcolor{keywordflow}{if} (r == 0)    \textcolor{comment}{// check if command was accepted}
+153     \{
+154     \textcolor{comment}{// 2. wait for a response}
+155     \textcolor{keywordflow}{for}(i=0; i<\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_a73e9971e06d8b2cad0e70db0ef35df42}{R\_TIMEOUT}; i++)
+156     \{
+157     r = \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ad7b4058b669998a3ca854c28167aa0a0}{readSPI}();
+158     \textcolor{keywordflow}{if} (r == \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_a5562e3e4189eff9e71305f172f2b515a}{DATA\_START})
+159     \textcolor{keywordflow}{break};
+160     \}
+161 
+162     \textcolor{comment}{// 3. if it did not timeout, read 512 byte of data}
+163     \textcolor{keywordflow}{if} (i != R\_TIMEOUT)
+164     \{
+165         i = 512;
+166         \textcolor{keywordflow}{do}\{
+167             *p++ = \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ad7b4058b669998a3ca854c28167aa0a0}{readSPI}();
+168         \} \textcolor{keywordflow}{while} (--i>0);
+169 
+170         \textcolor{comment}{// 4. ignore CRC}
+171         \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ad7b4058b669998a3ca854c28167aa0a0}{readSPI}();
+172         \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ad7b4058b669998a3ca854c28167aa0a0}{readSPI}();
+173 
+174     \} \textcolor{comment}{// data arrived}
+175 
+176     \} \textcolor{comment}{// command accepted}
+177 
+178     \textcolor{comment}{// 5. remember to disable the card}
+179     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a1531d2f76a265f4def4044d9c028c1a5}{disableSD}();
+180 
+181 \textcolor{preprocessor}{    #ifdef READLED}
+182 \textcolor{preprocessor}{}    digital(READ\_LED, 1);
+183 \textcolor{preprocessor}{    #endif}
+184 \textcolor{preprocessor}{}
+185     \textcolor{keywordflow}{return} (r == \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_a5562e3e4189eff9e71305f172f2b515a}{DATA\_START});    \textcolor{comment}{// return TRUE if successful}
+186 \} \textcolor{comment}{// readSECTOR}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_af35781ed6bb5671aa7cf321e48ed0009}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!send\-S\-D\-Cmd@{send\-S\-D\-Cmd}}
+\index{send\-S\-D\-Cmd@{send\-S\-D\-Cmd}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{send\-S\-D\-Cmd}]{\setlength{\rightskip}{0pt plus 5cm}int send\-S\-D\-Cmd (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{c, }
+\item[{unsigned}]{a}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_af35781ed6bb5671aa7cf321e48ed0009}
+
+
+Definition at line 68 of file sdmmc.\-c.
+
+
+
+References enable\-S\-D(), read\-S\-P\-I, and write\-S\-P\-I().
+
+
+\begin{DoxyCode}
+69 \{
+70     \textcolor{keywordtype}{int} i, r;
+71 
+72     \textcolor{comment}{// enable SD card}
+73     \textcolor{comment}{// CS low}
+74     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_aea80f1bdf2c4aba640129a965f4e071f}{enableSD}();
+75 
+76     \textcolor{comment}{// send a comand packet (6 bytes)}
+77     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a6a1a198a7f27db28761172fa4426daf3}{writeSPI}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c} | 0x40);    \textcolor{comment}{// send command}
+78     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a6a1a198a7f27db28761172fa4426daf3}{writeSPI}(a>>24);       \textcolor{comment}{// msb of the address}
+79     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a6a1a198a7f27db28761172fa4426daf3}{writeSPI}(a>>16);
+80     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a6a1a198a7f27db28761172fa4426daf3}{writeSPI}(a>>8);
+81     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a6a1a198a7f27db28761172fa4426daf3}{writeSPI}(a);           \textcolor{comment}{// lsb}
+82 
+83     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a6a1a198a7f27db28761172fa4426daf3}{writeSPI}(0x95);        \textcolor{comment}{// send CMD0 CRC}
+84 
+85     \textcolor{comment}{// now wait for a response, allow for up to 8 bytes delay}
+86     \textcolor{keywordflow}{for}(i=0; i<8; i++)
+87     \{
+88         r = \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ad7b4058b669998a3ca854c28167aa0a0}{readSPI}();
+89         \textcolor{keywordflow}{if} (r != 0xFF)
+90             \textcolor{keywordflow}{break};
+91     \}
+92     \textcolor{keywordflow}{return} (r);
+93 
+94     \textcolor{comment}{/* return response}
+95 \textcolor{comment}{    FF - timeout}
+96 \textcolor{comment}{    00 - command accepted}
+97 \textcolor{comment}{    01 - command received, card in idle state after RESET}
+98 \textcolor{comment}{}
+99 \textcolor{comment}{    other codes:}
+100 \textcolor{comment}{    bit 0 = Idle state}
+101 \textcolor{comment}{    bit 1 = Erase Reset}
+102 \textcolor{comment}{    bit 2 = Illegal command}
+103 \textcolor{comment}{    bit 3 = Communication CRC error}
+104 \textcolor{comment}{    bit 4 = Erase sequence error}
+105 \textcolor{comment}{    bit 5 = Address error}
+106 \textcolor{comment}{    bit 6 = Parameter error}
+107 \textcolor{comment}{    bit 7 = Always 0}
+108 \textcolor{comment}{    */}
+109     \textcolor{comment}{// NOTE CSCD is still low!}
+110 \} \textcolor{comment}{// sendSDCmd}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_aa8c1cd442ebabe63060d75c8e8de8cad}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!write\-S\-E\-C\-T\-O\-R@{write\-S\-E\-C\-T\-O\-R}}
+\index{write\-S\-E\-C\-T\-O\-R@{write\-S\-E\-C\-T\-O\-R}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{write\-S\-E\-C\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}int write\-S\-E\-C\-T\-O\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-B\-A}}]{a, }
+\item[{char $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_aa8c1cd442ebabe63060d75c8e8de8cad}
+
+
+Definition at line 192 of file sdmmc.\-c.
+
+
+
+References clock\-S\-P\-I, D\-A\-T\-A\-\_\-\-A\-C\-C\-E\-P\-T, D\-A\-T\-A\-\_\-\-S\-T\-A\-R\-T, digitalwrite(), disable\-S\-D(), F\-A\-I\-L, get\-W\-P(), read\-S\-P\-I, send\-S\-D\-Cmd(), W\-\_\-\-T\-I\-M\-E\-O\-U\-T, W\-R\-I\-T\-E\-\_\-\-S\-I\-N\-G\-L\-E, and write\-S\-P\-I().
+
+
+\begin{DoxyCode}
+193 \{
+194     \textcolor{keywordtype}{unsigned} r, i;
+195 
+196     \textcolor{comment}{// 0. check Write Protect}
+197     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a57e48dc648d410cdfe264eecdbd74afc}{getWP}())
+198         \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};
+199 
+200     \textcolor{comment}{// 1. send WRITE command}
+201     r = \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_af35781ed6bb5671aa7cf321e48ed0009}{sendSDCmd}(\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_aa44d51cd8fac15d4a24ccf8c55ad7da5}{WRITE\_SINGLE}, (a << 9));
+202     \textcolor{keywordflow}{if} (r == 0)    \textcolor{comment}{// check if command was accepted}
+203     \{
+204         \textcolor{comment}{// 2. send data}
+205         \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a6a1a198a7f27db28761172fa4426daf3}{writeSPI}(\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_a5562e3e4189eff9e71305f172f2b515a}{DATA\_START});
+206 
+207         \textcolor{comment}{// send 512 bytes of data}
+208         \textcolor{keywordflow}{for}(i=0; i<512; i++)
+209         \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a6a1a198a7f27db28761172fa4426daf3}{writeSPI}(*p++);
+210 
+211         \textcolor{comment}{// 3. send dummy CRC}
+212         \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ab71fa577a8bc96bd643f084e22eed47b}{clockSPI}();
+213         \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ab71fa577a8bc96bd643f084e22eed47b}{clockSPI}();
+214 
+215         \textcolor{comment}{// 4. check if data accepted}
+216         r = \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ad7b4058b669998a3ca854c28167aa0a0}{readSPI}();
+217         \textcolor{keywordflow}{if} ((r & 0xf) == \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_a11a962adddfd0449f2401bbefeac89bd}{DATA\_ACCEPT})
+218         \{
+219 \textcolor{preprocessor}{            #ifdef WRITE\_LED}
+220 \textcolor{preprocessor}{}            \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(WRITE\_LED, 0);
+221 \textcolor{preprocessor}{            #endif}
+222 \textcolor{preprocessor}{}
+223             \textcolor{comment}{// 5. wait for write completion}
+224             \textcolor{keywordflow}{for}(i=0; i<\hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_a5d89c559dd2f905ae0f8f9d16b16647d}{W\_TIMEOUT}; i++)
+225             \{
+226                 r = \hyperlink{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_ad7b4058b669998a3ca854c28167aa0a0}{readSPI}();
+227                 \textcolor{keywordflow}{if} (r != 0 )
+228                     \textcolor{keywordflow}{break};
+229             \}
+230 \textcolor{preprocessor}{            #ifdef WRITE\_LED}
+231 \textcolor{preprocessor}{}            \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(WRITE\_LED, 1);
+232 \textcolor{preprocessor}{            #endif}
+233 \textcolor{preprocessor}{}        \} \textcolor{comment}{// accepted}
+234         \textcolor{keywordflow}{else}
+235         \{
+236             r = \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8h_abb508ea8227673f419e9fe3a86c30d8e}{FAIL};
+237         \}
+238     \} \textcolor{comment}{// command accepted}
+239 
+240     \textcolor{comment}{// 6. disable the card}
+241     \hyperlink{p8_2pinguino_2libraries_2sd_2sdmmc_8c_a1531d2f76a265f4def4044d9c028c1a5}{disableSD}();
+242 
+243     \textcolor{keywordflow}{return} (r);      \textcolor{comment}{// return TRUE if successful}
+244 \} \textcolor{comment}{// writeSECTOR}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a6a1a198a7f27db28761172fa4426daf3}{\index{p32/include/pinguino/libraries/sd/sdmmc.\-c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}!write\-S\-P\-I@{write\-S\-P\-I}}
+\index{write\-S\-P\-I@{write\-S\-P\-I}!p32/include/pinguino/libraries/sd/sdmmc.c@{p32/include/pinguino/libraries/sd/sdmmc.\-c}}
+\subsubsection[{write\-S\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char write\-S\-P\-I (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{b}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2libraries_2sd_2sdmmc_8c_a6a1a198a7f27db28761172fa4426daf3}
+
+
+Definition at line 25 of file sdmmc.\-c.
+
+
+\begin{DoxyCode}
+26 \{
+27 \textcolor{comment}{/*}
+28 \textcolor{comment}{    SPI2BUF = b;                        }
+29 \textcolor{comment}{    while(!SPI2STATbits.SPIRBF);    // wait transfer complete}
+30 \textcolor{comment}{    return SPI2BUF;                 // read the received value}
+31 \textcolor{comment}{*/}
+32     BUFFER = b;                     \textcolor{comment}{// write to buffer for TX}
+33     \textcolor{keywordflow}{while} (!STATRX);                \textcolor{comment}{// wait until cycle complete}
+34     \textcolor{keywordflow}{return} BUFFER;                  \textcolor{comment}{// return with byte read}
+35 \}   \textcolor{comment}{// writeSPI}
+\end{DoxyCode}

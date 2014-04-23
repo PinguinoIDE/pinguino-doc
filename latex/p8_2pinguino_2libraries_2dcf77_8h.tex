@@ -1,0 +1,123 @@
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/dcf77.h File Reference}
+\label{p8_2pinguino_2libraries_2dcf77_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/dcf77.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/dcf77.\-h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_time___date___format}{Time\-\_\-\-Date\-\_\-\-Format}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a81a79c0d87b9d72f449bfd6a65fc6c4c}{D\-C\-F77\-\_\-start} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_time___date___format}{Time\-\_\-\-Date\-\_\-\-Format} \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{R\-T\-Clock}
+\item 
+\hyperlink{struct_time___date___format}{Time\-\_\-\-Date\-\_\-\-Format} \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{D\-C\-F77}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8h_a81a79c0d87b9d72f449bfd6a65fc6c4c}{\index{p8/pinguino/libraries/dcf77.\-h@{p8/pinguino/libraries/dcf77.\-h}!D\-C\-F77\-\_\-start@{D\-C\-F77\-\_\-start}}
+\index{D\-C\-F77\-\_\-start@{D\-C\-F77\-\_\-start}!p8/pinguino/libraries/dcf77.h@{p8/pinguino/libraries/dcf77.\-h}}
+\subsubsection[{D\-C\-F77\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}void D\-C\-F77\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2dcf77_8h_a81a79c0d87b9d72f449bfd6a65fc6c4c}
+
+
+Definition at line 315 of file dcf77.\-c.
+
+
+\begin{DoxyCode}
+316 \{
+317     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a72089c5a7fb162cb03a206e9fc7ee10b}{SignalPin}  = dcfPin;
+318     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a72089c5a7fb162cb03a206e9fc7ee10b}{SignalPin}, \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT});
+319 
+320     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ae53e173daf8fcf970bb3324ae545f21c}{seconds} = 0;
+321     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a517646d9969ae9c9f8921e133b1b872b}{minutes} = 0;
+322     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours} = 0;
+323     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a97419c23eb9097f89c83ce342df499f8}{dayofweek} = 0;
+324     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af980355fa766196214d34395ebed0a89}{dayofmonth} = 0;
+325     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ad5f8cd6773aef677b920ae4e4265bb10}{month} = 0;
+326     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ab02bacda75d48acac498f0c9f4e9b1cf}{year} = 0;
+327     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_aa1bb3da10a284c040c7fcf3943b36d58}{nosync} = 0;        \textcolor{comment}{// nosync shows minutes}
+328 
+329     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_ad7fde485c0fbd31b276c496139392673}{PrevSignal}    = 0;
+330     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a2cb109a0f7734e6bc37b5568cc42b0bb}{PrevFlank}  = 0;
+331     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{BuffPntr}    = 0;
+332     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}{Buff1}      = 0;
+333     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2}      = 0;
+334     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a3cb782ec380af1661b5a6795b5bdb1f7}{Nosync}        = 1;
+335 
+336     \textcolor{comment}{// general interrupt init}
+337     RCONbits.IPEN = 1;                  \textcolor{comment}{// Enable HP/LP interrupts}
+338     INTCONbits.GIEH = 1;                \textcolor{comment}{// Enable HP interrupts}
+339     INTCONbits.GIEL = 1;                \textcolor{comment}{// Enable LP interrupts}
+340 
+341 \textcolor{comment}{//  if (intUsed[INT\_TMR3] == INT\_NOT\_USED)}
+342 \textcolor{comment}{//  \{}
+343         \textcolor{comment}{//intUsed[INT\_TMR3] = INT\_USED;}
+344         \textcolor{comment}{// timer3 interrupt init}
+345         IPR2bits.TMR3IP = \hyperlink{interrupt_8h_a764fb7c5acbe8969ff8bcdffa153fbae}{INT\_HIGH\_PRIORITY};
+346         PIE2bits.TMR3IE = \hyperlink{interrupt_8h_abf7a56466fd6203663685a04448c9185}{INT\_ENABLE};
+347         PIR2bits.TMR3IF = 0;
+348         TMR3H = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a01e0db9c4829818ac93163bc6a24d526}{TMR\_PRELOADH};
+349         TMR3L = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a335c1d37ec964f664cfd8ef3054148c9}{TMR\_PRELOADL};
+350 \textcolor{preprocessor}{        #if defined(\_\_18f2550) || defined(\_\_18f4550)}
+351 \textcolor{preprocessor}{}            T3CON = \hyperlink{interrupt_8h_a1b7c5dd5c00c431f5c596d7dcabd17cf}{T3\_ON} | T3\_16BIT | \hyperlink{interrupt_8h_a4b6200ff53c4efe3cf482ed1bf5a350f}{T3\_PS\_1\_8} | T3\_SOURCE\_INT;
+352 \textcolor{preprocessor}{        #endif}
+353 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #if defined(\_\_18f26j50) || defined(\_\_18f46j50)}
+354 \textcolor{preprocessor}{}            T3CON = \hyperlink{interrupt_8h_a1b7c5dd5c00c431f5c596d7dcabd17cf}{T3\_ON} | T3\_16BIT | \hyperlink{interrupt_8h_a4b6200ff53c4efe3cf482ed1bf5a350f}{T3\_PS\_1\_8} | T3\_SOURCE\_INT;\textcolor{comment}{// | T3\_SOURCE\_T1OFF;}
+355 \textcolor{preprocessor}{        #endif}
+356 \textcolor{preprocessor}{}\textcolor{comment}{//    \}}
+357 
+358 \textcolor{comment}{/*}
+359 \textcolor{comment}{    else if (intUsed[INT\_TMR1] == INT\_NOT\_USED)}
+360 \textcolor{comment}{    \{}
+361 \textcolor{comment}{        // timer1 interrupt init}
+362 \textcolor{comment}{        //intUsed[INT\_TMR1] = INT\_USED;}
+363 \textcolor{comment}{        IPR1bits.TMR1IP = INT\_HIGH\_PRIORITY;}
+364 \textcolor{comment}{        PIE1bits.TMR1IE = INT\_ENABLE;}
+365 \textcolor{comment}{        PIR1bits.TMR1IF = 0;}
+366 \textcolor{comment}{        TMR1H = high8(TMR\_PRELOAD);}
+367 \textcolor{comment}{        TMR1L =  low8(TMR\_PRELOAD);}
+368 \textcolor{comment}{        #if defined(\_\_18f2550) || defined(\_\_18f4550)}
+369 \textcolor{comment}{            T1CON = T1\_ON | T1\_16BIT | T1\_PS\_1\_8 | T1\_OSC\_OFF | T1\_SYNC\_EXT\_OFF | T1\_SOURCE\_INT |
+       T1\_RUN\_FROM\_ANOTHER;}
+370 \textcolor{comment}{        #elif defined(\_\_18f26j50) || defined(\_\_18f46j50)}
+371 \textcolor{comment}{            T1CON = T1\_ON | T1\_16BIT | T1\_PS\_1\_8 | T1\_OSC\_OFF | T1\_SYNC\_EXT\_OFF | T1\_SOURCE\_INT;}
+372 \textcolor{comment}{        #endif}
+373 \textcolor{comment}{    \}}
+374 \textcolor{comment}{*/}
+375 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{\index{p8/pinguino/libraries/dcf77.\-h@{p8/pinguino/libraries/dcf77.\-h}!D\-C\-F77@{D\-C\-F77}}
+\index{D\-C\-F77@{D\-C\-F77}!p8/pinguino/libraries/dcf77.h@{p8/pinguino/libraries/dcf77.\-h}}
+\subsubsection[{D\-C\-F77}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\-\_\-\-Date\-\_\-\-Format} D\-C\-F77}}\label{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}
+
+
+Definition at line 17 of file dcf77.\-h.
+
+
+
+Referenced by Decode\-\_\-\-Buffer().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{\index{p8/pinguino/libraries/dcf77.\-h@{p8/pinguino/libraries/dcf77.\-h}!R\-T\-Clock@{R\-T\-Clock}}
+\index{R\-T\-Clock@{R\-T\-Clock}!p8/pinguino/libraries/dcf77.h@{p8/pinguino/libraries/dcf77.\-h}}
+\subsubsection[{R\-T\-Clock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\-\_\-\-Date\-\_\-\-Format} R\-T\-Clock}}\label{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}
+
+
+Definition at line 17 of file dcf77.\-h.
+
+
+
+Referenced by D\-C\-F77\-\_\-start(), Decode\-\_\-\-Buffer(), and Update\-\_\-\-Time().
+

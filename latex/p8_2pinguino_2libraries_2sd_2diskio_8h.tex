@@ -1,0 +1,496 @@
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/diskio.h File Reference}
+\label{p8_2pinguino_2libraries_2sd_2diskio_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/diskio.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/diskio.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_afe6d1224687dede333375a2475c78ff6}{\-\_\-\-U\-S\-E\-\_\-\-I\-O\-C\-T\-L}~1	/$\ast$ 1\-: \hyperlink{p32_2include_2pinguino_2libraries_2ks0108_8h_aebec479a7234241b3b664d7cfcb43401}{Enable} \hyperlink{p32_2include_2pinguino_2libraries_2sd_2diskio_8h_ac4daa8f0356ed3012459b52282a9911c}{disk\-\_\-ioctl} function $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_abd6503c70d862b979a3f7080a59e9acd}{S\-T\-A\-\_\-\-N\-O\-I\-N\-I\-T}~0x01	/$\ast$ Drive not initialized $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aec625080763d6cf487e550a6c9a2dd19}{S\-T\-A\-\_\-\-N\-O\-D\-I\-S\-K}~0x02	/$\ast$ No medium in the drive $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a9ec6dc5f6620a33fabe388d3a111ca8c}{S\-T\-A\-\_\-\-P\-R\-O\-T\-E\-C\-T}~0x04	/$\ast$ Write protected $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_ac52ec66c278308382fdf7b2c57f0ad8c}{C\-T\-\_\-\-M\-M\-C}~0x01	/$\ast$ M\-M\-C ver 3 $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_ad1c9fc863ec15d3320b3850dc571626e}{C\-T\-\_\-\-S\-D1}~0x02	/$\ast$ S\-D ver 1 $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a0db1b71113e73184a5ba511e7020a922}{C\-T\-\_\-\-S\-D2}~0x04	/$\ast$ S\-D ver 2 $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_ae76d94ac83c68d1f025cb0bcad77fa5d}{C\-T\-\_\-\-S\-D\-C}~(\hyperlink{p32_2include_2pinguino_2libraries_2sd_2diskio_8h_ad1c9fc863ec15d3320b3850dc571626e}{C\-T\-\_\-\-S\-D1}$\vert$\hyperlink{p32_2include_2pinguino_2libraries_2sd_2diskio_8h_a0db1b71113e73184a5ba511e7020a922}{C\-T\-\_\-\-S\-D2})	/$\ast$ S\-D $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a7d48ce54c27f4f60666309e8627fab47}{C\-T\-\_\-\-B\-L\-O\-C\-K}~0x08	/$\ast$ Block addressing $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a1b3c492f9aec325f0655941b75256f3c}{C\-T\-R\-L\-\_\-\-S\-Y\-N\-C}~0	/$\ast$ Flush disk cache (for \hyperlink{newlib_8c_ad0f87c9a81020afdf227817ffab35de3}{write} functions) $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a570216006f6a8fc4e1698b1bbb2d1dde}{G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-C\-O\-U\-N\-T}~1	/$\ast$ Get media size (for only \hyperlink{ff_8h_a6dd982dae31f4d5912b7d3b2896fd1b3}{f\-\_\-mkfs}()) $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_ac73b5cf2135cbd459d109b96c9aa346a}{G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}~2	/$\ast$ Get sector size (for multiple sector size (\hyperlink{ffconf_8h_ac271b697378912f17132cb9c7d0de024}{\-\_\-\-M\-A\-X\-\_\-\-S\-S} $>$= 1024)) $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aec3bb4dfe075d0ba2f3b07b300a95500}{G\-E\-T\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E}~3	/$\ast$ Get erase block size (for only \hyperlink{ff_8h_a6dd982dae31f4d5912b7d3b2896fd1b3}{f\-\_\-mkfs}()) $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a3b1dc812217ea7ffa118b14a3c1ab151}{C\-T\-R\-L\-\_\-\-E\-R\-A\-S\-E\-\_\-\-S\-E\-C\-T\-O\-R}~4	/$\ast$ Force erased a block of sectors (for only \hyperlink{ffconf_8h_a0e697dc4206d98eac355ae878dcc286e}{\-\_\-\-U\-S\-E\-\_\-\-E\-R\-A\-S\-E}) $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aba3a81a9a47c7d1bf3ac7749bc72dcfd}{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-T\-Y\-P\-E}~10	/$\ast$ Get card type $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_ae3b858b81287929f7c7bea3b7aec3087}{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-S\-D}~11	/$\ast$ Get C\-S\-D $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a17ad303dd18b19a4c90ab30a8a1c14c4}{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-I\-D}~12	/$\ast$ Get C\-I\-D $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aff118ba6bd7a9fe7699cee049cff5d6c}{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-O\-C\-R}~13	/$\ast$ Get O\-C\-R $\ast$/
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a5cc43c8449b872e16ea5ab42592f793e}{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-S\-D\-S\-T\-A\-T}~14	/$\ast$ Get S\-D \hyperlink{p32_2include_2pinguino_2libraries_2ledcontrol_8h_a0e245df1940369c94735090b1ea1a9d9}{status} $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a2aada3fd8fce7bb0c5e36c9061d39b4e}{D\-S\-T\-A\-T\-U\-S}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{D\-R\-E\-S\-U\-L\-T} \{ \\*
+\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}{R\-E\-S\-\_\-\-O\-K} = 0, 
+\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba78011f5557679ec178fb40bd21e89840}{R\-E\-S\-\_\-\-E\-R\-R\-O\-R}, 
+\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba442a6d4393dc404827067bc4e981b322}{R\-E\-S\-\_\-\-W\-R\-P\-R\-T}, 
+\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baad64c27c69eb1ff39ae67c5f77bb2b1d}{R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y}, 
+\\*
+\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3}{R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R}, 
+\hyperlink{p32_2include_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}{R\-E\-S\-\_\-\-O\-K} = 0, 
+\hyperlink{p32_2include_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba78011f5557679ec178fb40bd21e89840}{R\-E\-S\-\_\-\-E\-R\-R\-O\-R}, 
+\hyperlink{p32_2include_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba442a6d4393dc404827067bc4e981b322}{R\-E\-S\-\_\-\-W\-R\-P\-R\-T}, 
+\\*
+\hyperlink{p32_2include_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baad64c27c69eb1ff39ae67c5f77bb2b1d}{R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y}, 
+\hyperlink{p32_2include_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3}{R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a2aada3fd8fce7bb0c5e36c9061d39b4e}{D\-S\-T\-A\-T\-U\-S} \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a0a2a0e7f731987250e733562ce246d4f}{disk\-\_\-initialize} (void)
+\item 
+\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{D\-R\-E\-S\-U\-L\-T} \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a77ba19c0c97a900fac95999446e32308}{disk\-\_\-read} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{D\-R\-E\-S\-U\-L\-T} \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a7ffe0ccc946550a260d00871c6b636e7}{disk\-\_\-write} (const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{D\-R\-E\-S\-U\-L\-T} \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a496d43bee10ca68ee300248495e6006c}{disk\-\_\-readp} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{D\-R\-E\-S\-U\-L\-T} \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a649021bc4537ebb5a4146012aa89a9ac}{disk\-\_\-writep} (const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})
+\item 
+\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{D\-R\-E\-S\-U\-L\-T} \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a53886c98a2899543b4112044d7b2ec0e}{disk\-\_\-ioctl} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, void $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_afe6d1224687dede333375a2475c78ff6}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!\-\_\-\-U\-S\-E\-\_\-\-I\-O\-C\-T\-L@{\-\_\-\-U\-S\-E\-\_\-\-I\-O\-C\-T\-L}}
+\index{\-\_\-\-U\-S\-E\-\_\-\-I\-O\-C\-T\-L@{\-\_\-\-U\-S\-E\-\_\-\-I\-O\-C\-T\-L}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{\-\_\-\-U\-S\-E\-\_\-\-I\-O\-C\-T\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-U\-S\-E\-\_\-\-I\-O\-C\-T\-L~1	/$\ast$ 1\-: {\bf Enable} {\bf disk\-\_\-ioctl} function $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_afe6d1224687dede333375a2475c78ff6}
+
+
+Definition at line 7 of file diskio.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a7d48ce54c27f4f60666309e8627fab47}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!C\-T\-\_\-\-B\-L\-O\-C\-K@{C\-T\-\_\-\-B\-L\-O\-C\-K}}
+\index{C\-T\-\_\-\-B\-L\-O\-C\-K@{C\-T\-\_\-\-B\-L\-O\-C\-K}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{C\-T\-\_\-\-B\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-T\-\_\-\-B\-L\-O\-C\-K~0x08	/$\ast$ Block addressing $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a7d48ce54c27f4f60666309e8627fab47}
+
+
+Definition at line 43 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-initialize(), disk\-\_\-read(), and disk\-\_\-write().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_ac52ec66c278308382fdf7b2c57f0ad8c}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!C\-T\-\_\-\-M\-M\-C@{C\-T\-\_\-\-M\-M\-C}}
+\index{C\-T\-\_\-\-M\-M\-C@{C\-T\-\_\-\-M\-M\-C}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{C\-T\-\_\-\-M\-M\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-T\-\_\-\-M\-M\-C~0x01	/$\ast$ M\-M\-C ver 3 $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_ac52ec66c278308382fdf7b2c57f0ad8c}
+
+
+Definition at line 39 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-initialize().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_ad1c9fc863ec15d3320b3850dc571626e}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!C\-T\-\_\-\-S\-D1@{C\-T\-\_\-\-S\-D1}}
+\index{C\-T\-\_\-\-S\-D1@{C\-T\-\_\-\-S\-D1}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{C\-T\-\_\-\-S\-D1}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-T\-\_\-\-S\-D1~0x02	/$\ast$ S\-D ver 1 $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_ad1c9fc863ec15d3320b3850dc571626e}
+
+
+Definition at line 40 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-initialize(), and disk\-\_\-ioctl().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a0db1b71113e73184a5ba511e7020a922}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!C\-T\-\_\-\-S\-D2@{C\-T\-\_\-\-S\-D2}}
+\index{C\-T\-\_\-\-S\-D2@{C\-T\-\_\-\-S\-D2}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{C\-T\-\_\-\-S\-D2}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-T\-\_\-\-S\-D2~0x04	/$\ast$ S\-D ver 2 $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a0db1b71113e73184a5ba511e7020a922}
+
+
+Definition at line 41 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-initialize(), and disk\-\_\-ioctl().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_ae76d94ac83c68d1f025cb0bcad77fa5d}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!C\-T\-\_\-\-S\-D\-C@{C\-T\-\_\-\-S\-D\-C}}
+\index{C\-T\-\_\-\-S\-D\-C@{C\-T\-\_\-\-S\-D\-C}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{C\-T\-\_\-\-S\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-T\-\_\-\-S\-D\-C~({\bf C\-T\-\_\-\-S\-D1}$\vert${\bf C\-T\-\_\-\-S\-D2})	/$\ast$ S\-D $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_ae76d94ac83c68d1f025cb0bcad77fa5d}
+
+
+Definition at line 42 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-write().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a3b1dc812217ea7ffa118b14a3c1ab151}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!C\-T\-R\-L\-\_\-\-E\-R\-A\-S\-E\-\_\-\-S\-E\-C\-T\-O\-R@{C\-T\-R\-L\-\_\-\-E\-R\-A\-S\-E\-\_\-\-S\-E\-C\-T\-O\-R}}
+\index{C\-T\-R\-L\-\_\-\-E\-R\-A\-S\-E\-\_\-\-S\-E\-C\-T\-O\-R@{C\-T\-R\-L\-\_\-\-E\-R\-A\-S\-E\-\_\-\-S\-E\-C\-T\-O\-R}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{C\-T\-R\-L\-\_\-\-E\-R\-A\-S\-E\-\_\-\-S\-E\-C\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-T\-R\-L\-\_\-\-E\-R\-A\-S\-E\-\_\-\-S\-E\-C\-T\-O\-R~4	/$\ast$ Force erased a block of sectors (for only {\bf \-\_\-\-U\-S\-E\-\_\-\-E\-R\-A\-S\-E}) $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a3b1dc812217ea7ffa118b14a3c1ab151}
+
+
+Definition at line 51 of file diskio.\-h.
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a1b3c492f9aec325f0655941b75256f3c}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!C\-T\-R\-L\-\_\-\-S\-Y\-N\-C@{C\-T\-R\-L\-\_\-\-S\-Y\-N\-C}}
+\index{C\-T\-R\-L\-\_\-\-S\-Y\-N\-C@{C\-T\-R\-L\-\_\-\-S\-Y\-N\-C}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{C\-T\-R\-L\-\_\-\-S\-Y\-N\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-T\-R\-L\-\_\-\-S\-Y\-N\-C~0	/$\ast$ Flush disk cache (for {\bf write} functions) $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a1b3c492f9aec325f0655941b75256f3c}
+
+
+Definition at line 47 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-ioctl().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aec3bb4dfe075d0ba2f3b07b300a95500}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!G\-E\-T\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E@{G\-E\-T\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E}}
+\index{G\-E\-T\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E@{G\-E\-T\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-B\-L\-O\-C\-K\-\_\-\-S\-I\-Z\-E~3	/$\ast$ Get erase block size (for only {\bf f\-\_\-mkfs}()) $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aec3bb4dfe075d0ba2f3b07b300a95500}
+
+
+Definition at line 50 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-ioctl(), and sd\-\_\-status().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a570216006f6a8fc4e1698b1bbb2d1dde}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-C\-O\-U\-N\-T@{G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-C\-O\-U\-N\-T}}
+\index{G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-C\-O\-U\-N\-T@{G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-C\-O\-U\-N\-T}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-C\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-C\-O\-U\-N\-T~1	/$\ast$ Get media size (for only {\bf f\-\_\-mkfs}()) $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a570216006f6a8fc4e1698b1bbb2d1dde}
+
+
+Definition at line 48 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-ioctl(), and sd\-\_\-status().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_ac73b5cf2135cbd459d109b96c9aa346a}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E@{G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}}
+\index{G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E@{G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-S\-E\-C\-T\-O\-R\-\_\-\-S\-I\-Z\-E~2	/$\ast$ Get sector size (for multiple sector size ({\bf \-\_\-\-M\-A\-X\-\_\-\-S\-S} $>$= 1024)) $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_ac73b5cf2135cbd459d109b96c9aa346a}
+
+
+Definition at line 49 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-ioctl().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a17ad303dd18b19a4c90ab30a8a1c14c4}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-I\-D@{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-I\-D}}
+\index{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-I\-D@{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-I\-D}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-I\-D~12	/$\ast$ Get C\-I\-D $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a17ad303dd18b19a4c90ab30a8a1c14c4}
+
+
+Definition at line 57 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-ioctl().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_ae3b858b81287929f7c7bea3b7aec3087}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-S\-D@{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-S\-D}}
+\index{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-S\-D@{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-S\-D}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-S\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-C\-S\-D~11	/$\ast$ Get C\-S\-D $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_ae3b858b81287929f7c7bea3b7aec3087}
+
+
+Definition at line 56 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-ioctl().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aff118ba6bd7a9fe7699cee049cff5d6c}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-O\-C\-R@{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-O\-C\-R}}
+\index{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-O\-C\-R@{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-O\-C\-R}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-O\-C\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-O\-C\-R~13	/$\ast$ Get O\-C\-R $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aff118ba6bd7a9fe7699cee049cff5d6c}
+
+
+Definition at line 58 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-ioctl().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a5cc43c8449b872e16ea5ab42592f793e}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-S\-D\-S\-T\-A\-T@{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-S\-D\-S\-T\-A\-T}}
+\index{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-S\-D\-S\-T\-A\-T@{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-S\-D\-S\-T\-A\-T}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-S\-D\-S\-T\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-S\-D\-S\-T\-A\-T~14	/$\ast$ Get S\-D {\bf status} $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a5cc43c8449b872e16ea5ab42592f793e}
+
+
+Definition at line 59 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-ioctl().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aba3a81a9a47c7d1bf3ac7749bc72dcfd}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-T\-Y\-P\-E@{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-T\-Y\-P\-E}}
+\index{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-T\-Y\-P\-E@{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-T\-Y\-P\-E}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-M\-C\-\_\-\-G\-E\-T\-\_\-\-T\-Y\-P\-E~10	/$\ast$ Get card type $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aba3a81a9a47c7d1bf3ac7749bc72dcfd}
+
+
+Definition at line 55 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-ioctl(), and sd\-\_\-status().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aec625080763d6cf487e550a6c9a2dd19}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!S\-T\-A\-\_\-\-N\-O\-D\-I\-S\-K@{S\-T\-A\-\_\-\-N\-O\-D\-I\-S\-K}}
+\index{S\-T\-A\-\_\-\-N\-O\-D\-I\-S\-K@{S\-T\-A\-\_\-\-N\-O\-D\-I\-S\-K}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{S\-T\-A\-\_\-\-N\-O\-D\-I\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-A\-\_\-\-N\-O\-D\-I\-S\-K~0x02	/$\ast$ No medium in the drive $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aec625080763d6cf487e550a6c9a2dd19}
+
+
+Definition at line 34 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-initialize(), and disk\-\_\-timerproc().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_abd6503c70d862b979a3f7080a59e9acd}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!S\-T\-A\-\_\-\-N\-O\-I\-N\-I\-T@{S\-T\-A\-\_\-\-N\-O\-I\-N\-I\-T}}
+\index{S\-T\-A\-\_\-\-N\-O\-I\-N\-I\-T@{S\-T\-A\-\_\-\-N\-O\-I\-N\-I\-T}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{S\-T\-A\-\_\-\-N\-O\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-A\-\_\-\-N\-O\-I\-N\-I\-T~0x01	/$\ast$ Drive not initialized $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_abd6503c70d862b979a3f7080a59e9acd}
+
+
+Definition at line 33 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-initialize(), disk\-\_\-ioctl(), disk\-\_\-read(), disk\-\_\-status(), disk\-\_\-timerproc(), disk\-\_\-write(), and pf\-\_\-mount().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a9ec6dc5f6620a33fabe388d3a111ca8c}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!S\-T\-A\-\_\-\-P\-R\-O\-T\-E\-C\-T@{S\-T\-A\-\_\-\-P\-R\-O\-T\-E\-C\-T}}
+\index{S\-T\-A\-\_\-\-P\-R\-O\-T\-E\-C\-T@{S\-T\-A\-\_\-\-P\-R\-O\-T\-E\-C\-T}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{S\-T\-A\-\_\-\-P\-R\-O\-T\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-A\-\_\-\-P\-R\-O\-T\-E\-C\-T~0x04	/$\ast$ Write protected $\ast$/}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a9ec6dc5f6620a33fabe388d3a111ca8c}
+
+
+Definition at line 35 of file diskio.\-h.
+
+
+
+Referenced by disk\-\_\-timerproc(), and disk\-\_\-write().
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a2aada3fd8fce7bb0c5e36c9061d39b4e}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!D\-S\-T\-A\-T\-U\-S@{D\-S\-T\-A\-T\-U\-S}}
+\index{D\-S\-T\-A\-T\-U\-S@{D\-S\-T\-A\-T\-U\-S}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{D\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf u8} {\bf D\-S\-T\-A\-T\-U\-S}}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a2aada3fd8fce7bb0c5e36c9061d39b4e}
+
+
+Definition at line 10 of file diskio.\-h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!D\-R\-E\-S\-U\-L\-T@{D\-R\-E\-S\-U\-L\-T}}
+\index{D\-R\-E\-S\-U\-L\-T@{D\-R\-E\-S\-U\-L\-T}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{D\-R\-E\-S\-U\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf D\-R\-E\-S\-U\-L\-T}}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\-E\-S\-\_\-\-O\-K@{R\-E\-S\-\_\-\-O\-K}!p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}}\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!R\-E\-S\-\_\-\-O\-K@{R\-E\-S\-\_\-\-O\-K}}\item[{\em 
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}{R\-E\-S\-\_\-\-O\-K}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}
+}]\index{R\-E\-S\-\_\-\-E\-R\-R\-O\-R@{R\-E\-S\-\_\-\-E\-R\-R\-O\-R}!p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}}\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!R\-E\-S\-\_\-\-E\-R\-R\-O\-R@{R\-E\-S\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba78011f5557679ec178fb40bd21e89840}{R\-E\-S\-\_\-\-E\-R\-R\-O\-R}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba78011f5557679ec178fb40bd21e89840}
+}]\index{R\-E\-S\-\_\-\-W\-R\-P\-R\-T@{R\-E\-S\-\_\-\-W\-R\-P\-R\-T}!p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}}\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!R\-E\-S\-\_\-\-W\-R\-P\-R\-T@{R\-E\-S\-\_\-\-W\-R\-P\-R\-T}}\item[{\em 
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba442a6d4393dc404827067bc4e981b322}{R\-E\-S\-\_\-\-W\-R\-P\-R\-T}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba442a6d4393dc404827067bc4e981b322}
+}]\index{R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y@{R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y}!p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}}\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y@{R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y}}\item[{\em 
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baad64c27c69eb1ff39ae67c5f77bb2b1d}{R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baad64c27c69eb1ff39ae67c5f77bb2b1d}
+}]\index{R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R@{R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R}!p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}}\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R@{R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R}}\item[{\em 
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3}{R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3}
+}]\index{R\-E\-S\-\_\-\-O\-K@{R\-E\-S\-\_\-\-O\-K}!p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}}\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!R\-E\-S\-\_\-\-O\-K@{R\-E\-S\-\_\-\-O\-K}}\item[{\em 
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}{R\-E\-S\-\_\-\-O\-K}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}
+}]\index{R\-E\-S\-\_\-\-E\-R\-R\-O\-R@{R\-E\-S\-\_\-\-E\-R\-R\-O\-R}!p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}}\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!R\-E\-S\-\_\-\-E\-R\-R\-O\-R@{R\-E\-S\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba78011f5557679ec178fb40bd21e89840}{R\-E\-S\-\_\-\-E\-R\-R\-O\-R}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba78011f5557679ec178fb40bd21e89840}
+}]\index{R\-E\-S\-\_\-\-W\-R\-P\-R\-T@{R\-E\-S\-\_\-\-W\-R\-P\-R\-T}!p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}}\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!R\-E\-S\-\_\-\-W\-R\-P\-R\-T@{R\-E\-S\-\_\-\-W\-R\-P\-R\-T}}\item[{\em 
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba442a6d4393dc404827067bc4e981b322}{R\-E\-S\-\_\-\-W\-R\-P\-R\-T}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba442a6d4393dc404827067bc4e981b322}
+}]\index{R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y@{R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y}!p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}}\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y@{R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y}}\item[{\em 
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baad64c27c69eb1ff39ae67c5f77bb2b1d}{R\-E\-S\-\_\-\-N\-O\-T\-R\-D\-Y}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baad64c27c69eb1ff39ae67c5f77bb2b1d}
+}]\index{R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R@{R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R}!p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}}\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R@{R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R}}\item[{\em 
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3}{R\-E\-S\-\_\-\-P\-A\-R\-E\-R\-R}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 14 of file diskio.\-h.
+
+
+\begin{DoxyCode}
+14              \{
+15     \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}{RES\_OK} = 0,       \textcolor{comment}{/* 0: Function succeeded */}
+16     \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba78011f5557679ec178fb40bd21e89840}{RES\_ERROR},     \textcolor{comment}{/* 1: Disk error */}
+17     \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba442a6d4393dc404827067bc4e981b322}{RES\_WRPRT},     \textcolor{comment}{/* 2: Write Protected */}
+18     \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baad64c27c69eb1ff39ae67c5f77bb2b1d}{RES\_NOTRDY},       \textcolor{comment}{/* 2: Not ready */}
+19     \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2baf4dcc07fd46310b5495fa8025c89a9f3}{RES\_PARERR}        \textcolor{comment}{/* 3: Invalid parameter */}
+20 \} \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{DRESULT};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a0a2a0e7f731987250e733562ce246d4f}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!disk\-\_\-initialize@{disk\-\_\-initialize}}
+\index{disk\-\_\-initialize@{disk\-\_\-initialize}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{disk\-\_\-initialize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-S\-T\-A\-T\-U\-S} disk\-\_\-initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a0a2a0e7f731987250e733562ce246d4f}
+
+
+Definition at line 178 of file diskio.\-c.
+
+
+
+References A\-C\-M\-D41, C\-M\-D0, C\-M\-D1, C\-M\-D12, C\-M\-D16, C\-M\-D58, C\-M\-D8, C\-T\-\_\-\-B\-L\-O\-C\-K, C\-T\-\_\-\-M\-M\-C, C\-T\-\_\-\-S\-D1, C\-T\-\_\-\-S\-D2, D\-E\-S\-E\-L\-E\-C\-T, F\-C\-L\-K\-\_\-\-F\-A\-S\-T, S\-E\-L\-E\-C\-T, S\-P\-I\-\_\-init(), S\-P\-I\-\_\-read(), S\-P\-I\-\_\-write(), S\-T\-A\-\_\-\-N\-O\-D\-I\-S\-K, and S\-T\-A\-\_\-\-N\-O\-I\-N\-I\-T.
+
+
+
+Referenced by pf\-\_\-mount().
+
+
+\begin{DoxyCode}
+179 \{
+180     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} n, cmd, ty, ocr[4], rep, timeout;
+181     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} tmr;
+182     \textcolor{keywordflow}{if} (Stat & \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aec625080763d6cf487e550a6c9a2dd19}{STA\_NODISK}) \textcolor{keywordflow}{return} Stat;   \textcolor{comment}{/* No card in the socket */}
+183 
+184     \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_ac0055f801ff78bc7fafccc46e3e15ba7}{SPI\_init}(2,0,0);                            \textcolor{comment}{/* Force socket power on */}
+185 
+186     \textcolor{keywordflow}{for} (n = 10; n; n--) \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_ab8a3068e4b6e7823d486a8cbc52bda3d}{SPI\_write}(0xFF);  \textcolor{comment}{/* Dummy clocks */}
+187     ty = 0;
+188     timeout=100;
+189 \textcolor{comment}{// Trying to enter Idle state}
+190     \textcolor{keywordflow}{do} \{
+191         \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_a1cbd972fc333e07d29999e284020c362}{DESELECT}();
+192         \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_ab8a3068e4b6e7823d486a8cbc52bda3d}{SPI\_write}(0xFF);
+193         \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_a56e8d2ffde94d0c5fdf14b772a32a77f}{SELECT}();
+194         rep = send\_cmd(\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_a938c1466755f12fb04ac0d1b775584d1}{CMD0},0);
+195     \} \textcolor{keywordflow}{while} ((rep != 1) && (--timeout) );
+196     \textcolor{keywordflow}{if}(timeout == 0)
+197     \{
+198         \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_a1cbd972fc333e07d29999e284020c362}{DESELECT}();
+199         \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_ab8a3068e4b6e7823d486a8cbc52bda3d}{SPI\_write}(0xFF);
+200         \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_a56e8d2ffde94d0c5fdf14b772a32a77f}{SELECT}();
+201         rep = send\_cmd(\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_a8d6283c9b060afbaa0e6d1ff7e5ea7b8}{CMD12},0);
+202         rep = send\_cmd(\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_a938c1466755f12fb04ac0d1b775584d1}{CMD0},0);
+203         \textcolor{keywordflow}{if} (rep != 1)   \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_abd6503c70d862b979a3f7080a59e9acd}{STA\_NOINIT};
+204     \}
+205 
+206     rep = send\_cmd(\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_ac75b3e0ad1fb013ea946fb49bbe65668}{CMD8}, 0x1AA);
+207 
+208     \textcolor{keywordflow}{if} ( rep == 1) \{    \textcolor{comment}{/* SDHC */}
+209         \textcolor{keywordflow}{for} (n = 0; n < 4; n++) ocr[n] = \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_af186221002e26e7c7d18779f3ca9a901}{SPI\_read}();        \textcolor{comment}{/* Get trailing return value of R7 resp
+       */}
+210 
+211         \textcolor{keywordflow}{if} (ocr[2] == 0x01 && ocr[3] == 0xAA) \{             \textcolor{comment}{/* The card can work at vdd range of 2.7-3.6V 
+      */}
+212             \textcolor{keywordflow}{for} (tmr = 25000; tmr && send\_cmd(\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_a9b6fdfed1b57ac31269b6b9987e0761b}{ACMD41}, 1UL << 30); tmr--) ;    \textcolor{comment}{/* Wait for leaving
+       idle state (ACMD41 with HCS bit) */}
+213 
+214             \textcolor{keywordflow}{if} (tmr && send\_cmd(\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_aa7a26b2cf17e1ff5967820a1fa41a7aa}{CMD58}, 0) == 0) \{      \textcolor{comment}{/* Check CCS bit in the OCR */}
+215                 \textcolor{keywordflow}{for} (n = 0; n < 4; n++) ocr[n] = \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_af186221002e26e7c7d18779f3ca9a901}{SPI\_read}();
+216                 ty = (ocr[0] & 0x40) ? \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a0db1b71113e73184a5ba511e7020a922}{CT\_SD2} | \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a7d48ce54c27f4f60666309e8627fab47}{CT\_BLOCK} : \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a0db1b71113e73184a5ba511e7020a922}{CT\_SD2};  \textcolor{comment}{/* SDv2 */}
+217             \}
+218         \}
+219 
+220     \} \textcolor{keywordflow}{else} \{                            \textcolor{comment}{/* SDSC or MMC */}
+221 
+222         \textcolor{keywordflow}{if} (send\_cmd(\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_a9b6fdfed1b57ac31269b6b9987e0761b}{ACMD41}, 0) <= 1)     \{
+223             ty = \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_ad1c9fc863ec15d3320b3850dc571626e}{CT\_SD1}; cmd = \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_a9b6fdfed1b57ac31269b6b9987e0761b}{ACMD41};  \textcolor{comment}{/* SDv1 */}
+224         \} \textcolor{keywordflow}{else} \{
+225             ty = \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_ac52ec66c278308382fdf7b2c57f0ad8c}{CT\_MMC}; cmd = \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_aca9979f299fa78c1128d778084478673}{CMD1};  \textcolor{comment}{/* MMCv3 */}
+226         \}
+227 
+228         \textcolor{keywordflow}{for} (tmr = 25000; tmr && send\_cmd(cmd, 0); tmr--) ; \textcolor{comment}{/* Wait for leaving idle state */}
+229 
+230         \textcolor{keywordflow}{if} (!tmr || send\_cmd(\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_aaeab261b94f2031ba41a1d4d857c3541}{CMD16}, 512) != 0)         \textcolor{comment}{/* Set R/W block length to 512 */}
+231             ty = 0;
+232 
+233     \}
+234 
+235     CardType = ty;
+236     release\_spi();
+237 
+238     \textcolor{keywordflow}{if} (ty) \{           \textcolor{comment}{/* Initialization succeded */}
+239         Stat &= ~\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_abd6503c70d862b979a3f7080a59e9acd}{STA\_NOINIT};  \textcolor{comment}{/* Clear STA\_NOINIT */}
+240         \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8c_a1ffcdd6f111fd9b4229f49a5e37046b7}{FCLK\_FAST}();
+241     \} \textcolor{keywordflow}{else} \{            \textcolor{comment}{/* Initialization failed */}
+242         power\_off();
+243     \}
+244     \textcolor{keywordflow}{return} Stat;
+245 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a53886c98a2899543b4112044d7b2ec0e}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!disk\-\_\-ioctl@{disk\-\_\-ioctl}}
+\index{disk\-\_\-ioctl@{disk\-\_\-ioctl}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{disk\-\_\-ioctl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-R\-E\-S\-U\-L\-T} disk\-\_\-ioctl (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{, }
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a53886c98a2899543b4112044d7b2ec0e}
+
+
+Referenced by sd\-\_\-status().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a77ba19c0c97a900fac95999446e32308}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!disk\-\_\-read@{disk\-\_\-read}}
+\index{disk\-\_\-read@{disk\-\_\-read}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{disk\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-R\-E\-S\-U\-L\-T} disk\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{, }
+\item[{{\bf u32}}]{, }
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a77ba19c0c97a900fac95999446e32308}
+
+
+Referenced by f\-\_\-lseek(), f\-\_\-read(), and f\-\_\-write().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a496d43bee10ca68ee300248495e6006c}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!disk\-\_\-readp@{disk\-\_\-readp}}
+\index{disk\-\_\-readp@{disk\-\_\-readp}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{disk\-\_\-readp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-R\-E\-S\-U\-L\-T} disk\-\_\-readp (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{, }
+\item[{{\bf u32}}]{, }
+\item[{{\bf u16}}]{, }
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a496d43bee10ca68ee300248495e6006c}
+
+
+Referenced by pf\-\_\-mount().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a7ffe0ccc946550a260d00871c6b636e7}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!disk\-\_\-write@{disk\-\_\-write}}
+\index{disk\-\_\-write@{disk\-\_\-write}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{disk\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-R\-E\-S\-U\-L\-T} disk\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8} $\ast$}]{, }
+\item[{{\bf u32}}]{, }
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a7ffe0ccc946550a260d00871c6b636e7}
+
+
+Referenced by f\-\_\-lseek(), f\-\_\-mkdir(), f\-\_\-read(), f\-\_\-sync(), and f\-\_\-write().
+
+\hypertarget{p8_2pinguino_2libraries_2sd_2diskio_8h_a649021bc4537ebb5a4146012aa89a9ac}{\index{p8/pinguino/libraries/sd/diskio.\-h@{p8/pinguino/libraries/sd/diskio.\-h}!disk\-\_\-writep@{disk\-\_\-writep}}
+\index{disk\-\_\-writep@{disk\-\_\-writep}!p8/pinguino/libraries/sd/diskio.h@{p8/pinguino/libraries/sd/diskio.\-h}}
+\subsubsection[{disk\-\_\-writep}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-R\-E\-S\-U\-L\-T} disk\-\_\-writep (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8} $\ast$}]{, }
+\item[{{\bf u32}}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2sd_2diskio_8h_a649021bc4537ebb5a4146012aa89a9ac}

@@ -1,0 +1,2144 @@
+\hypertarget{ili9325_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/ili9325.h File Reference}
+\label{ili9325_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/ili9325.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/ili9325.\-h}}
+}
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcoord__t}{coord\-\_\-t}
+\item 
+struct \hyperlink{structfont__t}{font\-\_\-t}
+\item 
+struct \hyperlink{structcolor__t}{color\-\_\-t}
+\item 
+struct \hyperlink{structrect__t}{rect\-\_\-t}
+\item 
+union \hyperlink{unionword__t}{word\-\_\-t}
+\item 
+struct \hyperlink{structlcd__t}{lcd\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ili9325_8h_accd59557f60d394a448416790cc6e955}{Driver\-Code\-Read}~0x00
+\item 
+\#define \hyperlink{ili9325_8h_ab7e9b14d3eaf691667b3b32e9cec0fde}{Driver\-Output\-Control}~0x01
+\item 
+\#define \hyperlink{ili9325_8h_aa2599a98d25e2f9f869c4ce5fdcf5e61}{L\-C\-D\-Driving\-Wave\-Control}~0x02
+\item 
+\#define \hyperlink{ili9325_8h_a67e28bd5cd63a37959eff0fb7efbe388}{Entry\-Mode}~0x03
+\item 
+\#define \hyperlink{ili9325_8h_a2afcc0e55e684f3c9aab1883fc9bdb5b}{Resizing\-Control\-Register}~0x04
+\item 
+\#define \hyperlink{ili9325_8h_a78709a1dfa01a05f4dc10c7ce2a8838a}{Display\-Control1}~0x07
+\item 
+\#define \hyperlink{ili9325_8h_a5da3349d302ba414d3e82ef321019cd5}{Display\-Control2}~0x08
+\item 
+\#define \hyperlink{ili9325_8h_ac9a4baa3c12f8af92d52bb225dbba279}{Display\-Control3}~0x09
+\item 
+\#define \hyperlink{ili9325_8h_ad3555bc6221ddbad4de6a2d9c9818852}{Display\-Control4}~0x0\-A
+\item 
+\#define \hyperlink{ili9325_8h_a51d6f94e7d1c21cfc0a9ebb45f26ae05}{R\-G\-B\-Display\-Interface\-Control1}~0x0\-C
+\item 
+\#define \hyperlink{ili9325_8h_a6f3ce40db55509c53464ba3ae48ca84d}{Frame\-Marker\-Position}~0x0\-D
+\item 
+\#define \hyperlink{ili9325_8h_a238d2e7413a1e44bbc45903f2cbd7865}{R\-G\-B\-Display\-Interface\-Control2}~0x0\-F
+\item 
+\#define \hyperlink{ili9325_8h_ae57bc95b28dc28fc7016664dd62ce1e5}{Power\-Control1}~0x10
+\item 
+\#define \hyperlink{ili9325_8h_ae782009cf408f667f53bfc27ac2ce502}{Power\-Control2}~0x11
+\item 
+\#define \hyperlink{ili9325_8h_ac208aabac588af9e36a3901da2e1328e}{Power\-Control3}~0x12
+\item 
+\#define \hyperlink{ili9325_8h_af7e8706483b7ab1938636359eed2a928}{Power\-Control4}~0x13
+\item 
+\#define \hyperlink{ili9325_8h_a5a5198f3b441388ada02243c6bd6fec9}{G\-R\-A\-M\-Horizontal\-Address\-Set}~0x20
+\item 
+\#define \hyperlink{ili9325_8h_a1b2b0f915f33e76621aaebd3a5bfb5a7}{G\-R\-A\-M\-Vertical\-Address\-Set}~0x21
+\item 
+\#define \hyperlink{ili9325_8h_ae35368ad85970f10666f6ec7f1376d66}{Write\-Datato\-G\-R\-A\-M}~0x22
+\item 
+\#define \hyperlink{ili9325_8h_a7575c4f518d2f14ee7269e00bef852dd}{Read\-Datato\-G\-R\-A\-M}~0x22
+\item 
+\#define \hyperlink{ili9325_8h_a90e9b1f61deb6cbd34ea3a723d224a68}{Power\-Control7}~0x29
+\item 
+\#define \hyperlink{ili9325_8h_a4ee8d904635bb63b7416c8c54c9e3585}{Frame\-Rateand\-Color\-Control}~0x2\-B
+\item 
+\#define \hyperlink{ili9325_8h_a13a341014494267a43f03c01b726018d}{Gamma\-Control1}~0x30
+\item 
+\#define \hyperlink{ili9325_8h_a97a2ef856f33195c6378fff7e0e5fba8}{Gamma\-Control2}~0x31
+\item 
+\#define \hyperlink{ili9325_8h_a8678c5a25a2dd8231b2dc16ec46e2146}{Gamma\-Control3}~0x32
+\item 
+\#define \hyperlink{ili9325_8h_a95250b0f81e9e3b692e76c3a15131be4}{Gamma\-Control4}~0x35
+\item 
+\#define \hyperlink{ili9325_8h_ac585a395484a6a093d14a25183682838}{Gamma\-Control5}~0x36
+\item 
+\#define \hyperlink{ili9325_8h_a9c8a1d483c497c2b19c82ba3f10ed116}{Gamma\-Control6}~0x37
+\item 
+\#define \hyperlink{ili9325_8h_a01d697b00770348f3de7a0b12972f281}{Gamma\-Control7}~0x38
+\item 
+\#define \hyperlink{ili9325_8h_afb4ec22ba9fc2496f8c297ed4ed53f22}{Gamma\-Control8}~0x39
+\item 
+\#define \hyperlink{ili9325_8h_a57cbb5e7b3b0eeb0837b9cc32373b987}{Gamma\-Control9}~0x3\-C
+\item 
+\#define \hyperlink{ili9325_8h_a890e7d10220c48b39ce35f2987e14106}{Gamma\-Control10}~0x3\-D
+\item 
+\#define \hyperlink{ili9325_8h_a0e4eb4d3b97cfb613e379d4a1d38d5c9}{Horizontal\-R\-A\-M\-Start\-Address\-Position}~0x50
+\item 
+\#define \hyperlink{ili9325_8h_af6390d7a36718be0d18ed3574d0694da}{Horizontal\-R\-A\-M\-End\-Address\-Position}~0x51
+\item 
+\#define \hyperlink{ili9325_8h_a39c4d205cacf47dca6431986b01b16f3}{Vertical\-R\-A\-M\-Start\-Address\-Position}~0x52
+\item 
+\#define \hyperlink{ili9325_8h_a22e19fbb3f4cb14a678cc82ea904aa8c}{Vertical\-R\-A\-M\-End\-Address\-Position}~0x53
+\item 
+\#define \hyperlink{ili9325_8h_a775e6b94e174e273d0b534d740d799e8}{Driver\-Output\-Control2}~0x60
+\item 
+\#define \hyperlink{ili9325_8h_aaba5ede76b251ea6f6c32595f642dabb}{Base\-Image\-Display\-Control}~0x61
+\item 
+\#define \hyperlink{ili9325_8h_a30e32f863a93e6b7cfc7704dc15f6f0b}{Vertical\-Scroll\-Control}~0x6\-A
+\item 
+\#define \hyperlink{ili9325_8h_a0c5217b59503b3d051d2effcfa4213d4}{Partial\-Image1\-Display\-Position}~0x80
+\item 
+\#define \hyperlink{ili9325_8h_ac8a9e81ed05be8f5f5a375d2e09a3a45}{Partial\-Image1\-R\-A\-M\-Start\-Address}~0x81
+\item 
+\#define \hyperlink{ili9325_8h_aa32fb3579b6f79af6816a3ddb4dcb45c}{Partial\-Image1\-R\-A\-M\-End\-Address}~0x82
+\item 
+\#define \hyperlink{ili9325_8h_a41ead42e35c11f723837b3e4cc60fa98}{Partial\-Image2\-Display\-Position}~0x83
+\item 
+\#define \hyperlink{ili9325_8h_a65d97a891516abaa82a5abdbaa15aead}{Partial\-Image2\-R\-A\-M\-Start\-Address}~0x84
+\item 
+\#define \hyperlink{ili9325_8h_ac2d74050d60f84aab1ea75afbec78d6f}{Partial\-Image2\-R\-A\-M\-End\-Address}~0x85
+\item 
+\#define \hyperlink{ili9325_8h_a36b4a7aa0251fc670ac9494d655302c0}{Panel\-Interface\-Control1}~0x90
+\item 
+\#define \hyperlink{ili9325_8h_a3d9ad04f0a9072a74b7442fa65df8288}{Panel\-Interface\-Control2}~0x92
+\item 
+\#define \hyperlink{ili9325_8h_a30aaa8f88e166781ced978103ebdea5e}{Panel\-Interface\-Control3}~0x93
+\item 
+\#define \hyperlink{ili9325_8h_aca23d51a262d3cfeeb9c0c1613534df4}{Panel\-Interface\-Control4}~0x95
+\item 
+\#define \hyperlink{ili9325_8h_a80c78ef73f38dbb77c1614df9213da4b}{Panel\-Interface\-Control5}~0x97
+\item 
+\#define \hyperlink{ili9325_8h_aab25b33c274da826625e0200255d05b3}{Panel\-Interface\-Control6}~0x98
+\item 
+\#define \hyperlink{ili9325_8h_aecbcc0cec7cbd2c5fb7f1e493c8c3a84}{O\-T\-P\-V\-C\-M\-Programming\-Control}~0x\-A1
+\item 
+\#define \hyperlink{ili9325_8h_a286635235a72422421348c146224b847}{O\-T\-P\-V\-C\-M\-Statusand\-Enable}~0x\-A2
+\item 
+\#define \hyperlink{ili9325_8h_a1c3a74023dadb0ad78f7a5d3c17b4487}{O\-T\-P\-Programming\-I\-D\-Key}~0x\-A5
+\item 
+\#define \hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{P\-O\-R\-T\-R\-A\-I\-T}~100
+\item 
+\#define \hyperlink{ili9325_8h_a211dd160685be8a5a4f43be3fc3195a4}{L\-A\-N\-D\-S\-C\-A\-P\-E}~101
+\item 
+\#define \hyperlink{ili9325_8h_a298a3b7c7f2ea427a7cd21cdc9a4f054}{White}~0x\-F\-F\-F\-F
+\item 
+\#define \hyperlink{ili9325_8h_a68eb1f80b4df2818e5a0774106748141}{Black}~0x0000
+\item 
+\#define \hyperlink{ili9325_8h_a483c7c7eeb4e05e355f3bdca40bed07e}{Grey}~0x\-F7\-D\-E
+\item 
+\#define \hyperlink{ili9325_8h_a6208a194d702872fdbe1d3c7d7a7c879}{Blue}~0x001\-F
+\item 
+\#define \hyperlink{ili9325_8h_ab09eb0286376d50920d7c6020162bc35}{Blue2}~0x051\-F
+\item 
+\#define \hyperlink{ili9325_8h_ae8e246fd7335d7e27ab04150cbc418ba}{Red}~0x\-F800
+\item 
+\#define \hyperlink{ili9325_8h_a90a970475f83830549da69776a666834}{Magenta}~0x\-F81\-F
+\item 
+\#define \hyperlink{ili9325_8h_aa429cd977709122166b6e31fa10903d1}{Green}~0x07\-E0
+\item 
+\#define \hyperlink{ili9325_8h_a82a8a689788551a1b4e4552e5ddeae40}{Cyan}~0x7\-F\-F\-F
+\item 
+\#define \hyperlink{ili9325_8h_a239cc4651865ee2ac90ac5c1e6d2d8b5}{Yellow}~0x\-F\-F\-E0
+\item 
+\#define \hyperlink{ili9325_8h_a7b3b25cba33b07c303f3060fe41887f6}{B\-L\-A\-C\-K}~0b0000000000000000
+\item 
+\#define \hyperlink{ili9325_8h_a1856ac8f97780221a92b56c5b994b959}{B\-R\-I\-G\-H\-T\-B\-L\-U\-E}~0b0000000000011111
+\item 
+\#define \hyperlink{ili9325_8h_aa52f4996a4480f3f19d881dbff50ae59}{B\-R\-I\-G\-H\-T\-G\-R\-E\-E\-N}~0b0000011111100000
+\item 
+\#define \hyperlink{ili9325_8h_a6c928762de56d07b80b0c9dc9472a4d5}{B\-R\-I\-G\-H\-T\-C\-Y\-A\-N}~0b0000011111111111
+\item 
+\#define \hyperlink{ili9325_8h_a62e8ee733dff17c16de3391bb0fc50c7}{B\-R\-I\-G\-H\-T\-R\-E\-D}~0b1111100000000000
+\item 
+\#define \hyperlink{ili9325_8h_a25c081882d60d0060029256721157d89}{B\-R\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A}~0b1111100000011111
+\item 
+\#define \hyperlink{ili9325_8h_ab95f936e60a13b90646adc2674c9a8e3}{B\-R\-I\-G\-H\-T\-Y\-E\-L\-L\-O\-W}~0b1111111111100000
+\item 
+\#define \hyperlink{ili9325_8h_a79d10e672abb49ad63eeaa8aaef57c38}{B\-L\-U\-E}~0b0000000000010000
+\item 
+\#define \hyperlink{ili9325_8h_acfbc006ea433ad708fdee3e82996e721}{G\-R\-E\-E\-N}~0b0000010000000000
+\item 
+\#define \hyperlink{ili9325_8h_ad243f93c16bc4c1d3e0a13b84421d760}{C\-Y\-A\-N}~0b0000010000010000
+\item 
+\#define \hyperlink{ili9325_8h_a8d23feea868a983c8c2b661e1e16972f}{R\-E\-D}~0b1000000000000000
+\item 
+\#define \hyperlink{ili9325_8h_a6f699060902f800f12aaae150f3a708e}{M\-A\-G\-E\-N\-T\-A}~0b1000000000010000
+\item 
+\#define \hyperlink{ili9325_8h_ab2baea56ece91306020afd6d77fd19f9}{B\-R\-O\-W\-N}~0b1111110000000000
+\item 
+\#define \hyperlink{ili9325_8h_a04c5c34bd701165eade98623d1cc0020}{L\-I\-G\-H\-T\-G\-R\-A\-Y}~0b1000010000010000
+\item 
+\#define \hyperlink{ili9325_8h_a4c08a6ce38e246fb2e4443329645aa5a}{D\-A\-R\-K\-G\-R\-A\-Y}~0b0100001000001000
+\item 
+\#define \hyperlink{ili9325_8h_aaf6e41139cf8cb9ce7824a4f82ff5f83}{L\-I\-G\-H\-T\-B\-L\-U\-E}~0b1000010000011111
+\item 
+\#define \hyperlink{ili9325_8h_a4cc964ad8b138b5bf7d54f1c1032d921}{L\-I\-G\-H\-T\-G\-R\-E\-E\-N}~0b1000011111110000
+\item 
+\#define \hyperlink{ili9325_8h_a27520e6218a2c2253a81bc291b366e90}{L\-I\-G\-H\-T\-C\-Y\-A\-N}~0b1000011111111111
+\item 
+\#define \hyperlink{ili9325_8h_a880e260096b011d770b6983e576e1237}{L\-I\-G\-H\-T\-R\-E\-D}~0b1111110000010000
+\item 
+\#define \hyperlink{ili9325_8h_ad294a323b5a1eebd3ca63f0850937155}{L\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A}~0b1111110000011111
+\item 
+\#define \hyperlink{ili9325_8h_abf681265909adf3d3e8116c93c0ba179}{Y\-E\-L\-L\-O\-W}~0b1111111111110000
+\item 
+\#define \hyperlink{ili9325_8h_ac5b6e19bf06822021f35602c59658de3}{O\-R\-A\-N\-G\-E}~0b1111101111100000
+\item 
+\#define \hyperlink{ili9325_8h_a87b537f5fa5c109d3c05c13d6b18f382}{W\-H\-I\-T\-E}~0b1111111111111111
+\item 
+\#define \hyperlink{ili9325_8h_a6a59edb9881f5760902bc1663dbe9f31}{G\-R\-A\-Y0}~0b1110011100011100
+\item 
+\#define \hyperlink{ili9325_8h_ae3af430a927f413d82da8523af4be3c1}{G\-R\-A\-Y1}~0b1100011000011000
+\item 
+\#define \hyperlink{ili9325_8h_a02e26dea462ea3acc8efaf236162d8c0}{G\-R\-A\-Y2}~0b1010010100010100
+\item 
+\#define \hyperlink{ili9325_8h_a8befac938cf8a22493f291d8f4983238}{G\-R\-A\-Y3}~0b1000010000010000
+\item 
+\#define \hyperlink{ili9325_8h_a009a8ff5088c2cdb0dd1483fd28b1270}{G\-R\-A\-Y4}~0b0110001100001100
+\item 
+\#define \hyperlink{ili9325_8h_a0fa5ced1fee3738353611835167d5410}{G\-R\-A\-Y5}~0b0100001000001000
+\item 
+\#define \hyperlink{ili9325_8h_a2d0a68470590b29f3726d0943d6e8d8e}{G\-R\-A\-Y6}~0b0010000100000100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ili9325_8h_af09111982493955d4ca5c8ce2d32eb24}{I\-L\-I9325\-\_\-write\-Register} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{ili9325_8h_a9c108a44f408f916a6b4fdcef7aacb14}{I\-L\-I9325\-\_\-write\-Data} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{ili9325_8h_a09df35a82fbe3dde7f657810eb3f6f08}{I\-L\-I9325\-\_\-write} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{ili9325_8h_aeacb402082cf44e2b8b11882b14edbcf}{I\-L\-I9325\-\_\-read\-Data} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{ili9325_8h_a31eb4cf65f65f4dabb059b838ec76c0a}{I\-L\-I9325\-\_\-read} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{ili9325_8h_a30d8646c1a822bd9ae7b68515bbac801}{I\-L\-I9325\-\_\-get\-Device} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{ili9325_8h_a4758f6560440f9fd60d73a97ecaa8b72}{I\-L\-I9325\-\_\-color565} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{ili9325_8h_ad90b5d7bb0e7923fc2e863795624714c}{I\-L\-I9325\-\_\-set\-Color} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{ili9325_8h_ac519cb0ce7b6674163e3c8f55081181f}{I\-L\-I9325\-\_\-set\-Background\-Color} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{ili9325_8h_a4be8abeb1479ccecefa2ec9c4b2a8e4e}{I\-L\-I9325\-\_\-set\-Cursor} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{ili9325_8h_aa4bac9a8cf72d45d37ebd0f6a5b206b4}{I\-L\-I9325\-\_\-set\-Window} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{ili9325_8h_a965d2545bb167ccf41670e53850d9fbc}{I\-L\-I9325\-\_\-set\-Portrait} ()
+\item 
+void \hyperlink{ili9325_8h_a07f610e9c7611feb2298a2bd70723087}{I\-L\-I9325\-\_\-set\-Landscape} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{ili9325_8h_abd71c1f1d3d32198ec1b7dc0a43dd0b4}{I\-L\-I9325\-\_\-get\-Screen\-Width} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{ili9325_8h_a10edb32b1a61a8d6dd6b9ab1d50e5d8d}{I\-L\-I9325\-\_\-get\-Screen\-Height} ()
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{ili9325_8h_af4bb12dcc098020c79bcd332018e6ddd}{I\-L\-I9325\-\_\-get\-Font\-Width} ()
+\item 
+const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{ili9325_8h_a1f940e0ae446464fda5f674e3e58a753}{I\-L\-I9325\-\_\-get\-Font\-Height} ()
+\item 
+void \hyperlink{ili9325_8h_ace3b9e89356344de6a3ba307f92243df}{I\-L\-I9325\-\_\-draw\-Pixel} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{ili9325_8h_a10d216a61726e17eeb715e2a4d6cbaf5}{I\-L\-I9325\-\_\-read\-Pixel} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{ili9325_8h_a8834ced1dc8c88935c5ab2951293cbde}{I\-L\-I9325\-\_\-clear\-Screen} ()
+\item 
+void \hyperlink{ili9325_8h_a255e1b3fbc3201b837c50555e232b8fa}{I\-L\-I9325\-\_\-scroll} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{ili9325_8h_aee72f966ce4512ec18ab69454ba447e3}{I\-L\-I9325\-\_\-init} ()
+\item 
+void \hyperlink{ili9325_8h_ac7277e1127f296e375681e63759a1ea4}{I\-L\-I9325\-\_\-enter\-Sleep} ()
+\item 
+void \hyperlink{ili9325_8h_a05e119487c04f67199b11102bb3ad126}{I\-L\-I9325\-\_\-exit\-Sleep} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structlcd__t}{lcd\-\_\-t} \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{I\-L\-I9325}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{ili9325_8h_aaba5ede76b251ea6f6c32595f642dabb}{\index{ili9325.\-h@{ili9325.\-h}!Base\-Image\-Display\-Control@{Base\-Image\-Display\-Control}}
+\index{Base\-Image\-Display\-Control@{Base\-Image\-Display\-Control}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Base\-Image\-Display\-Control}]{\setlength{\rightskip}{0pt plus 5cm}\#define Base\-Image\-Display\-Control~0x61}}\label{ili9325_8h_aaba5ede76b251ea6f6c32595f642dabb}
+
+
+Definition at line 81 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a68eb1f80b4df2818e5a0774106748141}{\index{ili9325.\-h@{ili9325.\-h}!Black@{Black}}
+\index{Black@{Black}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Black}]{\setlength{\rightskip}{0pt plus 5cm}\#define Black~0x0000}}\label{ili9325_8h_a68eb1f80b4df2818e5a0774106748141}
+
+
+Definition at line 110 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a7b3b25cba33b07c303f3060fe41887f6}{\index{ili9325.\-h@{ili9325.\-h}!B\-L\-A\-C\-K@{B\-L\-A\-C\-K}}
+\index{B\-L\-A\-C\-K@{B\-L\-A\-C\-K}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{B\-L\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-L\-A\-C\-K~0b0000000000000000}}\label{ili9325_8h_a7b3b25cba33b07c303f3060fe41887f6}
+
+
+Definition at line 120 of file ili9325.\-h.
+
+
+
+Referenced by Draw\-Bitmap(), Fill\-Rect(), Init(), Put\-Char(), and Set\-Dot().
+
+\hypertarget{ili9325_8h_a6208a194d702872fdbe1d3c7d7a7c879}{\index{ili9325.\-h@{ili9325.\-h}!Blue@{Blue}}
+\index{Blue@{Blue}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Blue}]{\setlength{\rightskip}{0pt plus 5cm}\#define Blue~0x001\-F}}\label{ili9325_8h_a6208a194d702872fdbe1d3c7d7a7c879}
+
+
+Definition at line 112 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), and I\-L\-I9325\-\_\-test().
+
+\hypertarget{ili9325_8h_a79d10e672abb49ad63eeaa8aaef57c38}{\index{ili9325.\-h@{ili9325.\-h}!B\-L\-U\-E@{B\-L\-U\-E}}
+\index{B\-L\-U\-E@{B\-L\-U\-E}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{B\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-L\-U\-E~0b0000000000010000}}\label{ili9325_8h_a79d10e672abb49ad63eeaa8aaef57c38}
+
+
+Definition at line 127 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_ab09eb0286376d50920d7c6020162bc35}{\index{ili9325.\-h@{ili9325.\-h}!Blue2@{Blue2}}
+\index{Blue2@{Blue2}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Blue2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Blue2~0x051\-F}}\label{ili9325_8h_ab09eb0286376d50920d7c6020162bc35}
+
+
+Definition at line 113 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a1856ac8f97780221a92b56c5b994b959}{\index{ili9325.\-h@{ili9325.\-h}!B\-R\-I\-G\-H\-T\-B\-L\-U\-E@{B\-R\-I\-G\-H\-T\-B\-L\-U\-E}}
+\index{B\-R\-I\-G\-H\-T\-B\-L\-U\-E@{B\-R\-I\-G\-H\-T\-B\-L\-U\-E}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{B\-R\-I\-G\-H\-T\-B\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-I\-G\-H\-T\-B\-L\-U\-E~0b0000000000011111}}\label{ili9325_8h_a1856ac8f97780221a92b56c5b994b959}
+
+
+Definition at line 121 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a6c928762de56d07b80b0c9dc9472a4d5}{\index{ili9325.\-h@{ili9325.\-h}!B\-R\-I\-G\-H\-T\-C\-Y\-A\-N@{B\-R\-I\-G\-H\-T\-C\-Y\-A\-N}}
+\index{B\-R\-I\-G\-H\-T\-C\-Y\-A\-N@{B\-R\-I\-G\-H\-T\-C\-Y\-A\-N}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{B\-R\-I\-G\-H\-T\-C\-Y\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-I\-G\-H\-T\-C\-Y\-A\-N~0b0000011111111111}}\label{ili9325_8h_a6c928762de56d07b80b0c9dc9472a4d5}
+
+
+Definition at line 123 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_aa52f4996a4480f3f19d881dbff50ae59}{\index{ili9325.\-h@{ili9325.\-h}!B\-R\-I\-G\-H\-T\-G\-R\-E\-E\-N@{B\-R\-I\-G\-H\-T\-G\-R\-E\-E\-N}}
+\index{B\-R\-I\-G\-H\-T\-G\-R\-E\-E\-N@{B\-R\-I\-G\-H\-T\-G\-R\-E\-E\-N}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{B\-R\-I\-G\-H\-T\-G\-R\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-I\-G\-H\-T\-G\-R\-E\-E\-N~0b0000011111100000}}\label{ili9325_8h_aa52f4996a4480f3f19d881dbff50ae59}
+
+
+Definition at line 122 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a25c081882d60d0060029256721157d89}{\index{ili9325.\-h@{ili9325.\-h}!B\-R\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A@{B\-R\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A}}
+\index{B\-R\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A@{B\-R\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{B\-R\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A~0b1111100000011111}}\label{ili9325_8h_a25c081882d60d0060029256721157d89}
+
+
+Definition at line 125 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a62e8ee733dff17c16de3391bb0fc50c7}{\index{ili9325.\-h@{ili9325.\-h}!B\-R\-I\-G\-H\-T\-R\-E\-D@{B\-R\-I\-G\-H\-T\-R\-E\-D}}
+\index{B\-R\-I\-G\-H\-T\-R\-E\-D@{B\-R\-I\-G\-H\-T\-R\-E\-D}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{B\-R\-I\-G\-H\-T\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-I\-G\-H\-T\-R\-E\-D~0b1111100000000000}}\label{ili9325_8h_a62e8ee733dff17c16de3391bb0fc50c7}
+
+
+Definition at line 124 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_ab95f936e60a13b90646adc2674c9a8e3}{\index{ili9325.\-h@{ili9325.\-h}!B\-R\-I\-G\-H\-T\-Y\-E\-L\-L\-O\-W@{B\-R\-I\-G\-H\-T\-Y\-E\-L\-L\-O\-W}}
+\index{B\-R\-I\-G\-H\-T\-Y\-E\-L\-L\-O\-W@{B\-R\-I\-G\-H\-T\-Y\-E\-L\-L\-O\-W}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{B\-R\-I\-G\-H\-T\-Y\-E\-L\-L\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-I\-G\-H\-T\-Y\-E\-L\-L\-O\-W~0b1111111111100000}}\label{ili9325_8h_ab95f936e60a13b90646adc2674c9a8e3}
+
+
+Definition at line 126 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_ab2baea56ece91306020afd6d77fd19f9}{\index{ili9325.\-h@{ili9325.\-h}!B\-R\-O\-W\-N@{B\-R\-O\-W\-N}}
+\index{B\-R\-O\-W\-N@{B\-R\-O\-W\-N}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{B\-R\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-R\-O\-W\-N~0b1111110000000000}}\label{ili9325_8h_ab2baea56ece91306020afd6d77fd19f9}
+
+
+Definition at line 132 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a82a8a689788551a1b4e4552e5ddeae40}{\index{ili9325.\-h@{ili9325.\-h}!Cyan@{Cyan}}
+\index{Cyan@{Cyan}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Cyan}]{\setlength{\rightskip}{0pt plus 5cm}\#define Cyan~0x7\-F\-F\-F}}\label{ili9325_8h_a82a8a689788551a1b4e4552e5ddeae40}
+
+
+Definition at line 117 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_ad243f93c16bc4c1d3e0a13b84421d760}{\index{ili9325.\-h@{ili9325.\-h}!C\-Y\-A\-N@{C\-Y\-A\-N}}
+\index{C\-Y\-A\-N@{C\-Y\-A\-N}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{C\-Y\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-Y\-A\-N~0b0000010000010000}}\label{ili9325_8h_ad243f93c16bc4c1d3e0a13b84421d760}
+
+
+Definition at line 129 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a4c08a6ce38e246fb2e4443329645aa5a}{\index{ili9325.\-h@{ili9325.\-h}!D\-A\-R\-K\-G\-R\-A\-Y@{D\-A\-R\-K\-G\-R\-A\-Y}}
+\index{D\-A\-R\-K\-G\-R\-A\-Y@{D\-A\-R\-K\-G\-R\-A\-Y}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{D\-A\-R\-K\-G\-R\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-A\-R\-K\-G\-R\-A\-Y~0b0100001000001000}}\label{ili9325_8h_a4c08a6ce38e246fb2e4443329645aa5a}
+
+
+Definition at line 134 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a78709a1dfa01a05f4dc10c7ce2a8838a}{\index{ili9325.\-h@{ili9325.\-h}!Display\-Control1@{Display\-Control1}}
+\index{Display\-Control1@{Display\-Control1}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Display\-Control1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Display\-Control1~0x07}}\label{ili9325_8h_a78709a1dfa01a05f4dc10c7ce2a8838a}
+
+
+Definition at line 44 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-enter\-Sleep(), I\-L\-I9325\-\_\-exit\-Sleep(), and I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a5da3349d302ba414d3e82ef321019cd5}{\index{ili9325.\-h@{ili9325.\-h}!Display\-Control2@{Display\-Control2}}
+\index{Display\-Control2@{Display\-Control2}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Display\-Control2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Display\-Control2~0x08}}\label{ili9325_8h_a5da3349d302ba414d3e82ef321019cd5}
+
+
+Definition at line 45 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_ac9a4baa3c12f8af92d52bb225dbba279}{\index{ili9325.\-h@{ili9325.\-h}!Display\-Control3@{Display\-Control3}}
+\index{Display\-Control3@{Display\-Control3}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Display\-Control3}]{\setlength{\rightskip}{0pt plus 5cm}\#define Display\-Control3~0x09}}\label{ili9325_8h_ac9a4baa3c12f8af92d52bb225dbba279}
+
+
+Definition at line 46 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_ad3555bc6221ddbad4de6a2d9c9818852}{\index{ili9325.\-h@{ili9325.\-h}!Display\-Control4@{Display\-Control4}}
+\index{Display\-Control4@{Display\-Control4}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Display\-Control4}]{\setlength{\rightskip}{0pt plus 5cm}\#define Display\-Control4~0x0\-A}}\label{ili9325_8h_ad3555bc6221ddbad4de6a2d9c9818852}
+
+
+Definition at line 47 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_accd59557f60d394a448416790cc6e955}{\index{ili9325.\-h@{ili9325.\-h}!Driver\-Code\-Read@{Driver\-Code\-Read}}
+\index{Driver\-Code\-Read@{Driver\-Code\-Read}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Driver\-Code\-Read}]{\setlength{\rightskip}{0pt plus 5cm}\#define Driver\-Code\-Read~0x00}}\label{ili9325_8h_accd59557f60d394a448416790cc6e955}
+
+
+ \subsubsection*{Registers }
+
+Definition at line 39 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-get\-Device\-I\-D(), and I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_ab7e9b14d3eaf691667b3b32e9cec0fde}{\index{ili9325.\-h@{ili9325.\-h}!Driver\-Output\-Control@{Driver\-Output\-Control}}
+\index{Driver\-Output\-Control@{Driver\-Output\-Control}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Driver\-Output\-Control}]{\setlength{\rightskip}{0pt plus 5cm}\#define Driver\-Output\-Control~0x01}}\label{ili9325_8h_ab7e9b14d3eaf691667b3b32e9cec0fde}
+
+
+Definition at line 40 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), I\-L\-I9325\-\_\-set\-Landscape(), and I\-L\-I9325\-\_\-set\-Portrait().
+
+\hypertarget{ili9325_8h_a775e6b94e174e273d0b534d740d799e8}{\index{ili9325.\-h@{ili9325.\-h}!Driver\-Output\-Control2@{Driver\-Output\-Control2}}
+\index{Driver\-Output\-Control2@{Driver\-Output\-Control2}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Driver\-Output\-Control2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Driver\-Output\-Control2~0x60}}\label{ili9325_8h_a775e6b94e174e273d0b534d740d799e8}
+
+
+Definition at line 80 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a67e28bd5cd63a37959eff0fb7efbe388}{\index{ili9325.\-h@{ili9325.\-h}!Entry\-Mode@{Entry\-Mode}}
+\index{Entry\-Mode@{Entry\-Mode}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Entry\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}\#define Entry\-Mode~0x03}}\label{ili9325_8h_a67e28bd5cd63a37959eff0fb7efbe388}
+
+
+Definition at line 42 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), I\-L\-I9325\-\_\-set\-Landscape(), and I\-L\-I9325\-\_\-set\-Portrait().
+
+\hypertarget{ili9325_8h_a6f3ce40db55509c53464ba3ae48ca84d}{\index{ili9325.\-h@{ili9325.\-h}!Frame\-Marker\-Position@{Frame\-Marker\-Position}}
+\index{Frame\-Marker\-Position@{Frame\-Marker\-Position}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Frame\-Marker\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\#define Frame\-Marker\-Position~0x0\-D}}\label{ili9325_8h_a6f3ce40db55509c53464ba3ae48ca84d}
+
+
+Definition at line 49 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a4ee8d904635bb63b7416c8c54c9e3585}{\index{ili9325.\-h@{ili9325.\-h}!Frame\-Rateand\-Color\-Control@{Frame\-Rateand\-Color\-Control}}
+\index{Frame\-Rateand\-Color\-Control@{Frame\-Rateand\-Color\-Control}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Frame\-Rateand\-Color\-Control}]{\setlength{\rightskip}{0pt plus 5cm}\#define Frame\-Rateand\-Color\-Control~0x2\-B}}\label{ili9325_8h_a4ee8d904635bb63b7416c8c54c9e3585}
+
+
+Definition at line 62 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a13a341014494267a43f03c01b726018d}{\index{ili9325.\-h@{ili9325.\-h}!Gamma\-Control1@{Gamma\-Control1}}
+\index{Gamma\-Control1@{Gamma\-Control1}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Gamma\-Control1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Gamma\-Control1~0x30}}\label{ili9325_8h_a13a341014494267a43f03c01b726018d}
+
+
+Definition at line 64 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a890e7d10220c48b39ce35f2987e14106}{\index{ili9325.\-h@{ili9325.\-h}!Gamma\-Control10@{Gamma\-Control10}}
+\index{Gamma\-Control10@{Gamma\-Control10}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Gamma\-Control10}]{\setlength{\rightskip}{0pt plus 5cm}\#define Gamma\-Control10~0x3\-D}}\label{ili9325_8h_a890e7d10220c48b39ce35f2987e14106}
+
+
+Definition at line 73 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a97a2ef856f33195c6378fff7e0e5fba8}{\index{ili9325.\-h@{ili9325.\-h}!Gamma\-Control2@{Gamma\-Control2}}
+\index{Gamma\-Control2@{Gamma\-Control2}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Gamma\-Control2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Gamma\-Control2~0x31}}\label{ili9325_8h_a97a2ef856f33195c6378fff7e0e5fba8}
+
+
+Definition at line 65 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a8678c5a25a2dd8231b2dc16ec46e2146}{\index{ili9325.\-h@{ili9325.\-h}!Gamma\-Control3@{Gamma\-Control3}}
+\index{Gamma\-Control3@{Gamma\-Control3}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Gamma\-Control3}]{\setlength{\rightskip}{0pt plus 5cm}\#define Gamma\-Control3~0x32}}\label{ili9325_8h_a8678c5a25a2dd8231b2dc16ec46e2146}
+
+
+Definition at line 66 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a95250b0f81e9e3b692e76c3a15131be4}{\index{ili9325.\-h@{ili9325.\-h}!Gamma\-Control4@{Gamma\-Control4}}
+\index{Gamma\-Control4@{Gamma\-Control4}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Gamma\-Control4}]{\setlength{\rightskip}{0pt plus 5cm}\#define Gamma\-Control4~0x35}}\label{ili9325_8h_a95250b0f81e9e3b692e76c3a15131be4}
+
+
+Definition at line 67 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_ac585a395484a6a093d14a25183682838}{\index{ili9325.\-h@{ili9325.\-h}!Gamma\-Control5@{Gamma\-Control5}}
+\index{Gamma\-Control5@{Gamma\-Control5}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Gamma\-Control5}]{\setlength{\rightskip}{0pt plus 5cm}\#define Gamma\-Control5~0x36}}\label{ili9325_8h_ac585a395484a6a093d14a25183682838}
+
+
+Definition at line 68 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a9c8a1d483c497c2b19c82ba3f10ed116}{\index{ili9325.\-h@{ili9325.\-h}!Gamma\-Control6@{Gamma\-Control6}}
+\index{Gamma\-Control6@{Gamma\-Control6}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Gamma\-Control6}]{\setlength{\rightskip}{0pt plus 5cm}\#define Gamma\-Control6~0x37}}\label{ili9325_8h_a9c8a1d483c497c2b19c82ba3f10ed116}
+
+
+Definition at line 69 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a01d697b00770348f3de7a0b12972f281}{\index{ili9325.\-h@{ili9325.\-h}!Gamma\-Control7@{Gamma\-Control7}}
+\index{Gamma\-Control7@{Gamma\-Control7}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Gamma\-Control7}]{\setlength{\rightskip}{0pt plus 5cm}\#define Gamma\-Control7~0x38}}\label{ili9325_8h_a01d697b00770348f3de7a0b12972f281}
+
+
+Definition at line 70 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_afb4ec22ba9fc2496f8c297ed4ed53f22}{\index{ili9325.\-h@{ili9325.\-h}!Gamma\-Control8@{Gamma\-Control8}}
+\index{Gamma\-Control8@{Gamma\-Control8}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Gamma\-Control8}]{\setlength{\rightskip}{0pt plus 5cm}\#define Gamma\-Control8~0x39}}\label{ili9325_8h_afb4ec22ba9fc2496f8c297ed4ed53f22}
+
+
+Definition at line 71 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a57cbb5e7b3b0eeb0837b9cc32373b987}{\index{ili9325.\-h@{ili9325.\-h}!Gamma\-Control9@{Gamma\-Control9}}
+\index{Gamma\-Control9@{Gamma\-Control9}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Gamma\-Control9}]{\setlength{\rightskip}{0pt plus 5cm}\#define Gamma\-Control9~0x3\-C}}\label{ili9325_8h_a57cbb5e7b3b0eeb0837b9cc32373b987}
+
+
+Definition at line 72 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a5a5198f3b441388ada02243c6bd6fec9}{\index{ili9325.\-h@{ili9325.\-h}!G\-R\-A\-M\-Horizontal\-Address\-Set@{G\-R\-A\-M\-Horizontal\-Address\-Set}}
+\index{G\-R\-A\-M\-Horizontal\-Address\-Set@{G\-R\-A\-M\-Horizontal\-Address\-Set}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{G\-R\-A\-M\-Horizontal\-Address\-Set}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-R\-A\-M\-Horizontal\-Address\-Set~0x20}}\label{ili9325_8h_a5a5198f3b441388ada02243c6bd6fec9}
+
+
+Definition at line 57 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), I\-L\-I9325\-\_\-print\-Char(), and I\-L\-I9325\-\_\-set\-Cursor().
+
+\hypertarget{ili9325_8h_a1b2b0f915f33e76621aaebd3a5bfb5a7}{\index{ili9325.\-h@{ili9325.\-h}!G\-R\-A\-M\-Vertical\-Address\-Set@{G\-R\-A\-M\-Vertical\-Address\-Set}}
+\index{G\-R\-A\-M\-Vertical\-Address\-Set@{G\-R\-A\-M\-Vertical\-Address\-Set}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{G\-R\-A\-M\-Vertical\-Address\-Set}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-R\-A\-M\-Vertical\-Address\-Set~0x21}}\label{ili9325_8h_a1b2b0f915f33e76621aaebd3a5bfb5a7}
+
+
+Definition at line 58 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), I\-L\-I9325\-\_\-print\-Char(), and I\-L\-I9325\-\_\-set\-Cursor().
+
+\hypertarget{ili9325_8h_a6a59edb9881f5760902bc1663dbe9f31}{\index{ili9325.\-h@{ili9325.\-h}!G\-R\-A\-Y0@{G\-R\-A\-Y0}}
+\index{G\-R\-A\-Y0@{G\-R\-A\-Y0}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{G\-R\-A\-Y0}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-R\-A\-Y0~0b1110011100011100}}\label{ili9325_8h_a6a59edb9881f5760902bc1663dbe9f31}
+
+
+Definition at line 144 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_ae3af430a927f413d82da8523af4be3c1}{\index{ili9325.\-h@{ili9325.\-h}!G\-R\-A\-Y1@{G\-R\-A\-Y1}}
+\index{G\-R\-A\-Y1@{G\-R\-A\-Y1}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{G\-R\-A\-Y1}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-R\-A\-Y1~0b1100011000011000}}\label{ili9325_8h_ae3af430a927f413d82da8523af4be3c1}
+
+
+Definition at line 145 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a02e26dea462ea3acc8efaf236162d8c0}{\index{ili9325.\-h@{ili9325.\-h}!G\-R\-A\-Y2@{G\-R\-A\-Y2}}
+\index{G\-R\-A\-Y2@{G\-R\-A\-Y2}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{G\-R\-A\-Y2}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-R\-A\-Y2~0b1010010100010100}}\label{ili9325_8h_a02e26dea462ea3acc8efaf236162d8c0}
+
+
+Definition at line 146 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a8befac938cf8a22493f291d8f4983238}{\index{ili9325.\-h@{ili9325.\-h}!G\-R\-A\-Y3@{G\-R\-A\-Y3}}
+\index{G\-R\-A\-Y3@{G\-R\-A\-Y3}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{G\-R\-A\-Y3}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-R\-A\-Y3~0b1000010000010000}}\label{ili9325_8h_a8befac938cf8a22493f291d8f4983238}
+
+
+Definition at line 147 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a009a8ff5088c2cdb0dd1483fd28b1270}{\index{ili9325.\-h@{ili9325.\-h}!G\-R\-A\-Y4@{G\-R\-A\-Y4}}
+\index{G\-R\-A\-Y4@{G\-R\-A\-Y4}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{G\-R\-A\-Y4}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-R\-A\-Y4~0b0110001100001100}}\label{ili9325_8h_a009a8ff5088c2cdb0dd1483fd28b1270}
+
+
+Definition at line 148 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a0fa5ced1fee3738353611835167d5410}{\index{ili9325.\-h@{ili9325.\-h}!G\-R\-A\-Y5@{G\-R\-A\-Y5}}
+\index{G\-R\-A\-Y5@{G\-R\-A\-Y5}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{G\-R\-A\-Y5}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-R\-A\-Y5~0b0100001000001000}}\label{ili9325_8h_a0fa5ced1fee3738353611835167d5410}
+
+
+Definition at line 149 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a2d0a68470590b29f3726d0943d6e8d8e}{\index{ili9325.\-h@{ili9325.\-h}!G\-R\-A\-Y6@{G\-R\-A\-Y6}}
+\index{G\-R\-A\-Y6@{G\-R\-A\-Y6}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{G\-R\-A\-Y6}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-R\-A\-Y6~0b0010000100000100}}\label{ili9325_8h_a2d0a68470590b29f3726d0943d6e8d8e}
+
+
+Definition at line 150 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_aa429cd977709122166b6e31fa10903d1}{\index{ili9325.\-h@{ili9325.\-h}!Green@{Green}}
+\index{Green@{Green}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Green}]{\setlength{\rightskip}{0pt plus 5cm}\#define Green~0x07\-E0}}\label{ili9325_8h_aa429cd977709122166b6e31fa10903d1}
+
+
+Definition at line 116 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_acfbc006ea433ad708fdee3e82996e721}{\index{ili9325.\-h@{ili9325.\-h}!G\-R\-E\-E\-N@{G\-R\-E\-E\-N}}
+\index{G\-R\-E\-E\-N@{G\-R\-E\-E\-N}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{G\-R\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-R\-E\-E\-N~0b0000010000000000}}\label{ili9325_8h_acfbc006ea433ad708fdee3e82996e721}
+
+
+Definition at line 128 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a483c7c7eeb4e05e355f3bdca40bed07e}{\index{ili9325.\-h@{ili9325.\-h}!Grey@{Grey}}
+\index{Grey@{Grey}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Grey}]{\setlength{\rightskip}{0pt plus 5cm}\#define Grey~0x\-F7\-D\-E}}\label{ili9325_8h_a483c7c7eeb4e05e355f3bdca40bed07e}
+
+
+Definition at line 111 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_af6390d7a36718be0d18ed3574d0694da}{\index{ili9325.\-h@{ili9325.\-h}!Horizontal\-R\-A\-M\-End\-Address\-Position@{Horizontal\-R\-A\-M\-End\-Address\-Position}}
+\index{Horizontal\-R\-A\-M\-End\-Address\-Position@{Horizontal\-R\-A\-M\-End\-Address\-Position}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Horizontal\-R\-A\-M\-End\-Address\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\#define Horizontal\-R\-A\-M\-End\-Address\-Position~0x51}}\label{ili9325_8h_af6390d7a36718be0d18ed3574d0694da}
+
+
+Definition at line 76 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), and I\-L\-I9325\-\_\-set\-Window().
+
+\hypertarget{ili9325_8h_a0e4eb4d3b97cfb613e379d4a1d38d5c9}{\index{ili9325.\-h@{ili9325.\-h}!Horizontal\-R\-A\-M\-Start\-Address\-Position@{Horizontal\-R\-A\-M\-Start\-Address\-Position}}
+\index{Horizontal\-R\-A\-M\-Start\-Address\-Position@{Horizontal\-R\-A\-M\-Start\-Address\-Position}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Horizontal\-R\-A\-M\-Start\-Address\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\#define Horizontal\-R\-A\-M\-Start\-Address\-Position~0x50}}\label{ili9325_8h_a0e4eb4d3b97cfb613e379d4a1d38d5c9}
+
+
+Definition at line 75 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), and I\-L\-I9325\-\_\-set\-Window().
+
+\hypertarget{ili9325_8h_a211dd160685be8a5a4f43be3fc3195a4}{\index{ili9325.\-h@{ili9325.\-h}!L\-A\-N\-D\-S\-C\-A\-P\-E@{L\-A\-N\-D\-S\-C\-A\-P\-E}}
+\index{L\-A\-N\-D\-S\-C\-A\-P\-E@{L\-A\-N\-D\-S\-C\-A\-P\-E}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{L\-A\-N\-D\-S\-C\-A\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-A\-N\-D\-S\-C\-A\-P\-E~101}}\label{ili9325_8h_a211dd160685be8a5a4f43be3fc3195a4}
+
+
+Definition at line 107 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-set\-Cursor(), I\-L\-I9325\-\_\-set\-Landscape(), and set\-X\-Y().
+
+\hypertarget{ili9325_8h_aa2599a98d25e2f9f869c4ce5fdcf5e61}{\index{ili9325.\-h@{ili9325.\-h}!L\-C\-D\-Driving\-Wave\-Control@{L\-C\-D\-Driving\-Wave\-Control}}
+\index{L\-C\-D\-Driving\-Wave\-Control@{L\-C\-D\-Driving\-Wave\-Control}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{L\-C\-D\-Driving\-Wave\-Control}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-C\-D\-Driving\-Wave\-Control~0x02}}\label{ili9325_8h_aa2599a98d25e2f9f869c4ce5fdcf5e61}
+
+
+Definition at line 41 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_aaf6e41139cf8cb9ce7824a4f82ff5f83}{\index{ili9325.\-h@{ili9325.\-h}!L\-I\-G\-H\-T\-B\-L\-U\-E@{L\-I\-G\-H\-T\-B\-L\-U\-E}}
+\index{L\-I\-G\-H\-T\-B\-L\-U\-E@{L\-I\-G\-H\-T\-B\-L\-U\-E}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{L\-I\-G\-H\-T\-B\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-G\-H\-T\-B\-L\-U\-E~0b1000010000011111}}\label{ili9325_8h_aaf6e41139cf8cb9ce7824a4f82ff5f83}
+
+
+Definition at line 135 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a27520e6218a2c2253a81bc291b366e90}{\index{ili9325.\-h@{ili9325.\-h}!L\-I\-G\-H\-T\-C\-Y\-A\-N@{L\-I\-G\-H\-T\-C\-Y\-A\-N}}
+\index{L\-I\-G\-H\-T\-C\-Y\-A\-N@{L\-I\-G\-H\-T\-C\-Y\-A\-N}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{L\-I\-G\-H\-T\-C\-Y\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-G\-H\-T\-C\-Y\-A\-N~0b1000011111111111}}\label{ili9325_8h_a27520e6218a2c2253a81bc291b366e90}
+
+
+Definition at line 137 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a04c5c34bd701165eade98623d1cc0020}{\index{ili9325.\-h@{ili9325.\-h}!L\-I\-G\-H\-T\-G\-R\-A\-Y@{L\-I\-G\-H\-T\-G\-R\-A\-Y}}
+\index{L\-I\-G\-H\-T\-G\-R\-A\-Y@{L\-I\-G\-H\-T\-G\-R\-A\-Y}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{L\-I\-G\-H\-T\-G\-R\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-G\-H\-T\-G\-R\-A\-Y~0b1000010000010000}}\label{ili9325_8h_a04c5c34bd701165eade98623d1cc0020}
+
+
+Definition at line 133 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a4cc964ad8b138b5bf7d54f1c1032d921}{\index{ili9325.\-h@{ili9325.\-h}!L\-I\-G\-H\-T\-G\-R\-E\-E\-N@{L\-I\-G\-H\-T\-G\-R\-E\-E\-N}}
+\index{L\-I\-G\-H\-T\-G\-R\-E\-E\-N@{L\-I\-G\-H\-T\-G\-R\-E\-E\-N}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{L\-I\-G\-H\-T\-G\-R\-E\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-G\-H\-T\-G\-R\-E\-E\-N~0b1000011111110000}}\label{ili9325_8h_a4cc964ad8b138b5bf7d54f1c1032d921}
+
+
+Definition at line 136 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_ad294a323b5a1eebd3ca63f0850937155}{\index{ili9325.\-h@{ili9325.\-h}!L\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A@{L\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A}}
+\index{L\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A@{L\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{L\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-G\-H\-T\-M\-A\-G\-E\-N\-T\-A~0b1111110000011111}}\label{ili9325_8h_ad294a323b5a1eebd3ca63f0850937155}
+
+
+Definition at line 139 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a880e260096b011d770b6983e576e1237}{\index{ili9325.\-h@{ili9325.\-h}!L\-I\-G\-H\-T\-R\-E\-D@{L\-I\-G\-H\-T\-R\-E\-D}}
+\index{L\-I\-G\-H\-T\-R\-E\-D@{L\-I\-G\-H\-T\-R\-E\-D}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{L\-I\-G\-H\-T\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-G\-H\-T\-R\-E\-D~0b1111110000010000}}\label{ili9325_8h_a880e260096b011d770b6983e576e1237}
+
+
+Definition at line 138 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a90a970475f83830549da69776a666834}{\index{ili9325.\-h@{ili9325.\-h}!Magenta@{Magenta}}
+\index{Magenta@{Magenta}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Magenta}]{\setlength{\rightskip}{0pt plus 5cm}\#define Magenta~0x\-F81\-F}}\label{ili9325_8h_a90a970475f83830549da69776a666834}
+
+
+Definition at line 115 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a6f699060902f800f12aaae150f3a708e}{\index{ili9325.\-h@{ili9325.\-h}!M\-A\-G\-E\-N\-T\-A@{M\-A\-G\-E\-N\-T\-A}}
+\index{M\-A\-G\-E\-N\-T\-A@{M\-A\-G\-E\-N\-T\-A}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{M\-A\-G\-E\-N\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-G\-E\-N\-T\-A~0b1000000000010000}}\label{ili9325_8h_a6f699060902f800f12aaae150f3a708e}
+
+
+Definition at line 131 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_ac5b6e19bf06822021f35602c59658de3}{\index{ili9325.\-h@{ili9325.\-h}!O\-R\-A\-N\-G\-E@{O\-R\-A\-N\-G\-E}}
+\index{O\-R\-A\-N\-G\-E@{O\-R\-A\-N\-G\-E}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{O\-R\-A\-N\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-R\-A\-N\-G\-E~0b1111101111100000}}\label{ili9325_8h_ac5b6e19bf06822021f35602c59658de3}
+
+
+Definition at line 141 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a1c3a74023dadb0ad78f7a5d3c17b4487}{\index{ili9325.\-h@{ili9325.\-h}!O\-T\-P\-Programming\-I\-D\-Key@{O\-T\-P\-Programming\-I\-D\-Key}}
+\index{O\-T\-P\-Programming\-I\-D\-Key@{O\-T\-P\-Programming\-I\-D\-Key}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{O\-T\-P\-Programming\-I\-D\-Key}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-T\-P\-Programming\-I\-D\-Key~0x\-A5}}\label{ili9325_8h_a1c3a74023dadb0ad78f7a5d3c17b4487}
+
+
+Definition at line 100 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_aecbcc0cec7cbd2c5fb7f1e493c8c3a84}{\index{ili9325.\-h@{ili9325.\-h}!O\-T\-P\-V\-C\-M\-Programming\-Control@{O\-T\-P\-V\-C\-M\-Programming\-Control}}
+\index{O\-T\-P\-V\-C\-M\-Programming\-Control@{O\-T\-P\-V\-C\-M\-Programming\-Control}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{O\-T\-P\-V\-C\-M\-Programming\-Control}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-T\-P\-V\-C\-M\-Programming\-Control~0x\-A1}}\label{ili9325_8h_aecbcc0cec7cbd2c5fb7f1e493c8c3a84}
+
+
+Definition at line 98 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a286635235a72422421348c146224b847}{\index{ili9325.\-h@{ili9325.\-h}!O\-T\-P\-V\-C\-M\-Statusand\-Enable@{O\-T\-P\-V\-C\-M\-Statusand\-Enable}}
+\index{O\-T\-P\-V\-C\-M\-Statusand\-Enable@{O\-T\-P\-V\-C\-M\-Statusand\-Enable}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{O\-T\-P\-V\-C\-M\-Statusand\-Enable}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-T\-P\-V\-C\-M\-Statusand\-Enable~0x\-A2}}\label{ili9325_8h_a286635235a72422421348c146224b847}
+
+
+Definition at line 99 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a36b4a7aa0251fc670ac9494d655302c0}{\index{ili9325.\-h@{ili9325.\-h}!Panel\-Interface\-Control1@{Panel\-Interface\-Control1}}
+\index{Panel\-Interface\-Control1@{Panel\-Interface\-Control1}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Panel\-Interface\-Control1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Panel\-Interface\-Control1~0x90}}\label{ili9325_8h_a36b4a7aa0251fc670ac9494d655302c0}
+
+
+Definition at line 91 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a3d9ad04f0a9072a74b7442fa65df8288}{\index{ili9325.\-h@{ili9325.\-h}!Panel\-Interface\-Control2@{Panel\-Interface\-Control2}}
+\index{Panel\-Interface\-Control2@{Panel\-Interface\-Control2}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Panel\-Interface\-Control2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Panel\-Interface\-Control2~0x92}}\label{ili9325_8h_a3d9ad04f0a9072a74b7442fa65df8288}
+
+
+Definition at line 92 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a30aaa8f88e166781ced978103ebdea5e}{\index{ili9325.\-h@{ili9325.\-h}!Panel\-Interface\-Control3@{Panel\-Interface\-Control3}}
+\index{Panel\-Interface\-Control3@{Panel\-Interface\-Control3}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Panel\-Interface\-Control3}]{\setlength{\rightskip}{0pt plus 5cm}\#define Panel\-Interface\-Control3~0x93}}\label{ili9325_8h_a30aaa8f88e166781ced978103ebdea5e}
+
+
+Definition at line 93 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_aca23d51a262d3cfeeb9c0c1613534df4}{\index{ili9325.\-h@{ili9325.\-h}!Panel\-Interface\-Control4@{Panel\-Interface\-Control4}}
+\index{Panel\-Interface\-Control4@{Panel\-Interface\-Control4}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Panel\-Interface\-Control4}]{\setlength{\rightskip}{0pt plus 5cm}\#define Panel\-Interface\-Control4~0x95}}\label{ili9325_8h_aca23d51a262d3cfeeb9c0c1613534df4}
+
+
+Definition at line 94 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a80c78ef73f38dbb77c1614df9213da4b}{\index{ili9325.\-h@{ili9325.\-h}!Panel\-Interface\-Control5@{Panel\-Interface\-Control5}}
+\index{Panel\-Interface\-Control5@{Panel\-Interface\-Control5}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Panel\-Interface\-Control5}]{\setlength{\rightskip}{0pt plus 5cm}\#define Panel\-Interface\-Control5~0x97}}\label{ili9325_8h_a80c78ef73f38dbb77c1614df9213da4b}
+
+
+Definition at line 95 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_aab25b33c274da826625e0200255d05b3}{\index{ili9325.\-h@{ili9325.\-h}!Panel\-Interface\-Control6@{Panel\-Interface\-Control6}}
+\index{Panel\-Interface\-Control6@{Panel\-Interface\-Control6}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Panel\-Interface\-Control6}]{\setlength{\rightskip}{0pt plus 5cm}\#define Panel\-Interface\-Control6~0x98}}\label{ili9325_8h_aab25b33c274da826625e0200255d05b3}
+
+
+Definition at line 96 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a0c5217b59503b3d051d2effcfa4213d4}{\index{ili9325.\-h@{ili9325.\-h}!Partial\-Image1\-Display\-Position@{Partial\-Image1\-Display\-Position}}
+\index{Partial\-Image1\-Display\-Position@{Partial\-Image1\-Display\-Position}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Partial\-Image1\-Display\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\#define Partial\-Image1\-Display\-Position~0x80}}\label{ili9325_8h_a0c5217b59503b3d051d2effcfa4213d4}
+
+
+Definition at line 84 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_aa32fb3579b6f79af6816a3ddb4dcb45c}{\index{ili9325.\-h@{ili9325.\-h}!Partial\-Image1\-R\-A\-M\-End\-Address@{Partial\-Image1\-R\-A\-M\-End\-Address}}
+\index{Partial\-Image1\-R\-A\-M\-End\-Address@{Partial\-Image1\-R\-A\-M\-End\-Address}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Partial\-Image1\-R\-A\-M\-End\-Address}]{\setlength{\rightskip}{0pt plus 5cm}\#define Partial\-Image1\-R\-A\-M\-End\-Address~0x82}}\label{ili9325_8h_aa32fb3579b6f79af6816a3ddb4dcb45c}
+
+
+Definition at line 86 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_ac8a9e81ed05be8f5f5a375d2e09a3a45}{\index{ili9325.\-h@{ili9325.\-h}!Partial\-Image1\-R\-A\-M\-Start\-Address@{Partial\-Image1\-R\-A\-M\-Start\-Address}}
+\index{Partial\-Image1\-R\-A\-M\-Start\-Address@{Partial\-Image1\-R\-A\-M\-Start\-Address}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Partial\-Image1\-R\-A\-M\-Start\-Address}]{\setlength{\rightskip}{0pt plus 5cm}\#define Partial\-Image1\-R\-A\-M\-Start\-Address~0x81}}\label{ili9325_8h_ac8a9e81ed05be8f5f5a375d2e09a3a45}
+
+
+Definition at line 85 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a41ead42e35c11f723837b3e4cc60fa98}{\index{ili9325.\-h@{ili9325.\-h}!Partial\-Image2\-Display\-Position@{Partial\-Image2\-Display\-Position}}
+\index{Partial\-Image2\-Display\-Position@{Partial\-Image2\-Display\-Position}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Partial\-Image2\-Display\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\#define Partial\-Image2\-Display\-Position~0x83}}\label{ili9325_8h_a41ead42e35c11f723837b3e4cc60fa98}
+
+
+Definition at line 87 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_ac2d74050d60f84aab1ea75afbec78d6f}{\index{ili9325.\-h@{ili9325.\-h}!Partial\-Image2\-R\-A\-M\-End\-Address@{Partial\-Image2\-R\-A\-M\-End\-Address}}
+\index{Partial\-Image2\-R\-A\-M\-End\-Address@{Partial\-Image2\-R\-A\-M\-End\-Address}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Partial\-Image2\-R\-A\-M\-End\-Address}]{\setlength{\rightskip}{0pt plus 5cm}\#define Partial\-Image2\-R\-A\-M\-End\-Address~0x85}}\label{ili9325_8h_ac2d74050d60f84aab1ea75afbec78d6f}
+
+
+Definition at line 89 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a65d97a891516abaa82a5abdbaa15aead}{\index{ili9325.\-h@{ili9325.\-h}!Partial\-Image2\-R\-A\-M\-Start\-Address@{Partial\-Image2\-R\-A\-M\-Start\-Address}}
+\index{Partial\-Image2\-R\-A\-M\-Start\-Address@{Partial\-Image2\-R\-A\-M\-Start\-Address}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Partial\-Image2\-R\-A\-M\-Start\-Address}]{\setlength{\rightskip}{0pt plus 5cm}\#define Partial\-Image2\-R\-A\-M\-Start\-Address~0x84}}\label{ili9325_8h_a65d97a891516abaa82a5abdbaa15aead}
+
+
+Definition at line 88 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{\index{ili9325.\-h@{ili9325.\-h}!P\-O\-R\-T\-R\-A\-I\-T@{P\-O\-R\-T\-R\-A\-I\-T}}
+\index{P\-O\-R\-T\-R\-A\-I\-T@{P\-O\-R\-T\-R\-A\-I\-T}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{P\-O\-R\-T\-R\-A\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-O\-R\-T\-R\-A\-I\-T~100}}\label{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}
+
+
+ \subsubsection*{Constants }
+
+Definition at line 106 of file ili9325.\-h.
+
+
+
+Referenced by clr\-Scr(), draw\-Bitmap(), draw\-Line(), draw\-Pixel(), fill\-Rect(), fill\-Scr(), I\-L\-I9325\-\_\-get\-Screen\-Height(), I\-L\-I9325\-\_\-get\-Screen\-Width(), I\-L\-I9325\-\_\-init(), I\-L\-I9325\-\_\-set\-Portrait(), my\-G\-L\-C\-D16\-\_\-print(), my\-G\-L\-C\-D16w\-\_\-print(), my\-G\-L\-C\-D\-\_\-print(), print\-Char(), touch\-\_\-get\-X(), and touch\-\_\-get\-Y().
+
+\hypertarget{ili9325_8h_ae57bc95b28dc28fc7016664dd62ce1e5}{\index{ili9325.\-h@{ili9325.\-h}!Power\-Control1@{Power\-Control1}}
+\index{Power\-Control1@{Power\-Control1}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Power\-Control1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Power\-Control1~0x10}}\label{ili9325_8h_ae57bc95b28dc28fc7016664dd62ce1e5}
+
+
+Definition at line 52 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-enter\-Sleep(), I\-L\-I9325\-\_\-exit\-Sleep(), and I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_ae782009cf408f667f53bfc27ac2ce502}{\index{ili9325.\-h@{ili9325.\-h}!Power\-Control2@{Power\-Control2}}
+\index{Power\-Control2@{Power\-Control2}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Power\-Control2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Power\-Control2~0x11}}\label{ili9325_8h_ae782009cf408f667f53bfc27ac2ce502}
+
+
+Definition at line 53 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-enter\-Sleep(), I\-L\-I9325\-\_\-exit\-Sleep(), and I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_ac208aabac588af9e36a3901da2e1328e}{\index{ili9325.\-h@{ili9325.\-h}!Power\-Control3@{Power\-Control3}}
+\index{Power\-Control3@{Power\-Control3}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Power\-Control3}]{\setlength{\rightskip}{0pt plus 5cm}\#define Power\-Control3~0x12}}\label{ili9325_8h_ac208aabac588af9e36a3901da2e1328e}
+
+
+Definition at line 54 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-enter\-Sleep(), I\-L\-I9325\-\_\-exit\-Sleep(), and I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_af7e8706483b7ab1938636359eed2a928}{\index{ili9325.\-h@{ili9325.\-h}!Power\-Control4@{Power\-Control4}}
+\index{Power\-Control4@{Power\-Control4}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Power\-Control4}]{\setlength{\rightskip}{0pt plus 5cm}\#define Power\-Control4~0x13}}\label{ili9325_8h_af7e8706483b7ab1938636359eed2a928}
+
+
+Definition at line 55 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-enter\-Sleep(), I\-L\-I9325\-\_\-exit\-Sleep(), and I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a90e9b1f61deb6cbd34ea3a723d224a68}{\index{ili9325.\-h@{ili9325.\-h}!Power\-Control7@{Power\-Control7}}
+\index{Power\-Control7@{Power\-Control7}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Power\-Control7}]{\setlength{\rightskip}{0pt plus 5cm}\#define Power\-Control7~0x29}}\label{ili9325_8h_a90e9b1f61deb6cbd34ea3a723d224a68}
+
+
+Definition at line 61 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-exit\-Sleep(), and I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a7575c4f518d2f14ee7269e00bef852dd}{\index{ili9325.\-h@{ili9325.\-h}!Read\-Datato\-G\-R\-A\-M@{Read\-Datato\-G\-R\-A\-M}}
+\index{Read\-Datato\-G\-R\-A\-M@{Read\-Datato\-G\-R\-A\-M}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Read\-Datato\-G\-R\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define Read\-Datato\-G\-R\-A\-M~0x22}}\label{ili9325_8h_a7575c4f518d2f14ee7269e00bef852dd}
+
+
+Definition at line 60 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-read\-Pixel().
+
+\hypertarget{ili9325_8h_ae8e246fd7335d7e27ab04150cbc418ba}{\index{ili9325.\-h@{ili9325.\-h}!Red@{Red}}
+\index{Red@{Red}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Red}]{\setlength{\rightskip}{0pt plus 5cm}\#define Red~0x\-F800}}\label{ili9325_8h_ae8e246fd7335d7e27ab04150cbc418ba}
+
+
+Definition at line 114 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-test().
+
+\hypertarget{ili9325_8h_a8d23feea868a983c8c2b661e1e16972f}{\index{ili9325.\-h@{ili9325.\-h}!R\-E\-D@{R\-E\-D}}
+\index{R\-E\-D@{R\-E\-D}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-D~0b1000000000000000}}\label{ili9325_8h_a8d23feea868a983c8c2b661e1e16972f}
+
+
+Definition at line 130 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_a2afcc0e55e684f3c9aab1883fc9bdb5b}{\index{ili9325.\-h@{ili9325.\-h}!Resizing\-Control\-Register@{Resizing\-Control\-Register}}
+\index{Resizing\-Control\-Register@{Resizing\-Control\-Register}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Resizing\-Control\-Register}]{\setlength{\rightskip}{0pt plus 5cm}\#define Resizing\-Control\-Register~0x04}}\label{ili9325_8h_a2afcc0e55e684f3c9aab1883fc9bdb5b}
+
+
+Definition at line 43 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a51d6f94e7d1c21cfc0a9ebb45f26ae05}{\index{ili9325.\-h@{ili9325.\-h}!R\-G\-B\-Display\-Interface\-Control1@{R\-G\-B\-Display\-Interface\-Control1}}
+\index{R\-G\-B\-Display\-Interface\-Control1@{R\-G\-B\-Display\-Interface\-Control1}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{R\-G\-B\-Display\-Interface\-Control1}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-G\-B\-Display\-Interface\-Control1~0x0\-C}}\label{ili9325_8h_a51d6f94e7d1c21cfc0a9ebb45f26ae05}
+
+
+Definition at line 48 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a238d2e7413a1e44bbc45903f2cbd7865}{\index{ili9325.\-h@{ili9325.\-h}!R\-G\-B\-Display\-Interface\-Control2@{R\-G\-B\-Display\-Interface\-Control2}}
+\index{R\-G\-B\-Display\-Interface\-Control2@{R\-G\-B\-Display\-Interface\-Control2}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{R\-G\-B\-Display\-Interface\-Control2}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-G\-B\-Display\-Interface\-Control2~0x0\-F}}\label{ili9325_8h_a238d2e7413a1e44bbc45903f2cbd7865}
+
+
+Definition at line 50 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+\hypertarget{ili9325_8h_a22e19fbb3f4cb14a678cc82ea904aa8c}{\index{ili9325.\-h@{ili9325.\-h}!Vertical\-R\-A\-M\-End\-Address\-Position@{Vertical\-R\-A\-M\-End\-Address\-Position}}
+\index{Vertical\-R\-A\-M\-End\-Address\-Position@{Vertical\-R\-A\-M\-End\-Address\-Position}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Vertical\-R\-A\-M\-End\-Address\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\#define Vertical\-R\-A\-M\-End\-Address\-Position~0x53}}\label{ili9325_8h_a22e19fbb3f4cb14a678cc82ea904aa8c}
+
+
+Definition at line 78 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), and I\-L\-I9325\-\_\-set\-Window().
+
+\hypertarget{ili9325_8h_a39c4d205cacf47dca6431986b01b16f3}{\index{ili9325.\-h@{ili9325.\-h}!Vertical\-R\-A\-M\-Start\-Address\-Position@{Vertical\-R\-A\-M\-Start\-Address\-Position}}
+\index{Vertical\-R\-A\-M\-Start\-Address\-Position@{Vertical\-R\-A\-M\-Start\-Address\-Position}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Vertical\-R\-A\-M\-Start\-Address\-Position}]{\setlength{\rightskip}{0pt plus 5cm}\#define Vertical\-R\-A\-M\-Start\-Address\-Position~0x52}}\label{ili9325_8h_a39c4d205cacf47dca6431986b01b16f3}
+
+
+Definition at line 77 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), and I\-L\-I9325\-\_\-set\-Window().
+
+\hypertarget{ili9325_8h_a30e32f863a93e6b7cfc7704dc15f6f0b}{\index{ili9325.\-h@{ili9325.\-h}!Vertical\-Scroll\-Control@{Vertical\-Scroll\-Control}}
+\index{Vertical\-Scroll\-Control@{Vertical\-Scroll\-Control}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Vertical\-Scroll\-Control}]{\setlength{\rightskip}{0pt plus 5cm}\#define Vertical\-Scroll\-Control~0x6\-A}}\label{ili9325_8h_a30e32f863a93e6b7cfc7704dc15f6f0b}
+
+
+Definition at line 82 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-print\-String(), and I\-L\-I9325\-\_\-scroll().
+
+\hypertarget{ili9325_8h_a298a3b7c7f2ea427a7cd21cdc9a4f054}{\index{ili9325.\-h@{ili9325.\-h}!White@{White}}
+\index{White@{White}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{White}]{\setlength{\rightskip}{0pt plus 5cm}\#define White~0x\-F\-F\-F\-F}}\label{ili9325_8h_a298a3b7c7f2ea427a7cd21cdc9a4f054}
+
+
+Definition at line 109 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), and I\-L\-I9325\-\_\-test().
+
+\hypertarget{ili9325_8h_a87b537f5fa5c109d3c05c13d6b18f382}{\index{ili9325.\-h@{ili9325.\-h}!W\-H\-I\-T\-E@{W\-H\-I\-T\-E}}
+\index{W\-H\-I\-T\-E@{W\-H\-I\-T\-E}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{W\-H\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-H\-I\-T\-E~0b1111111111111111}}\label{ili9325_8h_a87b537f5fa5c109d3c05c13d6b18f382}
+
+
+Definition at line 142 of file ili9325.\-h.
+
+
+
+Referenced by Init().
+
+\hypertarget{ili9325_8h_ae35368ad85970f10666f6ec7f1376d66}{\index{ili9325.\-h@{ili9325.\-h}!Write\-Datato\-G\-R\-A\-M@{Write\-Datato\-G\-R\-A\-M}}
+\index{Write\-Datato\-G\-R\-A\-M@{Write\-Datato\-G\-R\-A\-M}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Write\-Datato\-G\-R\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define Write\-Datato\-G\-R\-A\-M~0x22}}\label{ili9325_8h_ae35368ad85970f10666f6ec7f1376d66}
+
+
+Definition at line 59 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-clear\-Screen(), I\-L\-I9325\-\_\-clear\-Window(), I\-L\-I9325\-\_\-del\-Pixel(), I\-L\-I9325\-\_\-draw\-Pixel(), I\-L\-I9325\-\_\-print\-Char(), and I\-L\-I9325\-\_\-test().
+
+\hypertarget{ili9325_8h_a239cc4651865ee2ac90ac5c1e6d2d8b5}{\index{ili9325.\-h@{ili9325.\-h}!Yellow@{Yellow}}
+\index{Yellow@{Yellow}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Yellow}]{\setlength{\rightskip}{0pt plus 5cm}\#define Yellow~0x\-F\-F\-E0}}\label{ili9325_8h_a239cc4651865ee2ac90ac5c1e6d2d8b5}
+
+
+Definition at line 118 of file ili9325.\-h.
+
+\hypertarget{ili9325_8h_abf681265909adf3d3e8116c93c0ba179}{\index{ili9325.\-h@{ili9325.\-h}!Y\-E\-L\-L\-O\-W@{Y\-E\-L\-L\-O\-W}}
+\index{Y\-E\-L\-L\-O\-W@{Y\-E\-L\-L\-O\-W}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{Y\-E\-L\-L\-O\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define Y\-E\-L\-L\-O\-W~0b1111111111110000}}\label{ili9325_8h_abf681265909adf3d3e8116c93c0ba179}
+
+
+Definition at line 140 of file ili9325.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{ili9325_8h_a8834ced1dc8c88935c5ab2951293cbde}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-clear\-Screen@{I\-L\-I9325\-\_\-clear\-Screen}}
+\index{I\-L\-I9325\-\_\-clear\-Screen@{I\-L\-I9325\-\_\-clear\-Screen}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-clear\-Screen}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-clear\-Screen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a8834ced1dc8c88935c5ab2951293cbde}
+
+
+Definition at line 601 of file ili9325.\-c.
+
+
+
+References lcd\-\_\-t\-::bcolor, color\-\_\-t\-::c, c, word\-\_\-t\-::h8, I\-L\-I9325, I\-L\-I9325\-\_\-set\-Cursor(), I\-L\-I9325\-\_\-write\-Register(), word\-\_\-t\-::l8, word\-\_\-t\-::w, and Write\-Datato\-G\-R\-A\-M.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), I\-L\-I9325\-\_\-set\-Landscape(), and I\-L\-I9325\-\_\-set\-Portrait().
+
+
+\begin{DoxyCode}
+602 \{
+603     \hyperlink{unionword__t}{word\_t} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+604     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} j=76800;                                \textcolor{comment}{// 240*320}
+605     
+606     c.\hyperlink{unionword__t_afba0181b8edd2f6d8219d7042ffc8a35}{w} = \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a30a1d46222004b922cb03a640ee42428}{bcolor}.\hyperlink{structcolor__t_afff0ae4fe505f5b27afed49e21dea41d}{c};                      \textcolor{comment}{// current background color}
+607 
+608     \hyperlink{ili9325_8c_aef5e6641451fa923c465f3fdf0de18f0}{ILI9325\_setCursor}(0, 0);
+609 
+610     \textcolor{comment}{/*}
+611 \textcolor{comment}{    if (ILI9325.orientation == PORTRAIT)}
+612 \textcolor{comment}{        ILI9325\_setWindow(0, 0, 239, 319);}
+613 \textcolor{comment}{    else // if (ILI9325.orientation == LANDSCAPE)}
+614 \textcolor{comment}{        ILI9325\_setWindow(0, 0, 319, 239);}
+615 \textcolor{comment}{    */}
+616     \hyperlink{ili9325_8c_a6b440eb07f3e9bbcaaaf408ad9c7c318}{ILI9325\_writeRegister}(\hyperlink{ili9325_8h_ae35368ad85970f10666f6ec7f1376d66}{WriteDatatoGRAM});     \textcolor{comment}{// write GRAM}
+617 
+618      \textcolor{comment}{//LowCS;  // Enable LCD}
+619     HighRS; \textcolor{comment}{// Disable Register Selection Signal}
+620     HighRD; \textcolor{comment}{// Disable Read Mode}
+621     HighWR; \textcolor{comment}{// Disable Write Mode}
+622 
+623     \textcolor{keywordflow}{while} (j--)
+624     \{
+625         DATA = c.\hyperlink{unionword__t_adcad4dc69be4c39d2fb6307f0cb97ac1}{h8};
+626 
+627         LowWR;  \textcolor{comment}{// Enable Write}
+628         HighWR; \textcolor{comment}{// Disable Write}
+629         
+630         DATA = c.\hyperlink{unionword__t_a533455d8a4ec318e7144be4c1b6b9af3}{l8};
+631 
+632         LowWR;  \textcolor{comment}{// Enable Write}
+633         HighWR; \textcolor{comment}{// Disable Write}
+634     \}
+635 
+636     \textcolor{comment}{//HighCS;                                   // Disable LCD}
+637 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a4758f6560440f9fd60d73a97ecaa8b72}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-color565@{I\-L\-I9325\-\_\-color565}}
+\index{I\-L\-I9325\-\_\-color565@{I\-L\-I9325\-\_\-color565}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-color565}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} I\-L\-I9325\-\_\-color565 (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{r, }
+\item[{{\bf u8}}]{g, }
+\item[{{\bf u8}}]{b}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a4758f6560440f9fd60d73a97ecaa8b72}
+
+
+ \subsubsection*{Color functions }
+
+Definition at line 386 of file ili9325.\-c.
+
+
+\begin{DoxyCode}
+387 \{
+388 \textcolor{comment}{/*}
+389 \textcolor{comment}{    u16 c;}
+390 \textcolor{comment}{}
+391 \textcolor{comment}{    c = r >> 3;}
+392 \textcolor{comment}{    c <<= 6;}
+393 \textcolor{comment}{    c |= g >> 2;}
+394 \textcolor{comment}{    c <<= 5;}
+395 \textcolor{comment}{    c |= b >> 3;}
+396 \textcolor{comment}{}
+397 \textcolor{comment}{    return c;}
+398 \textcolor{comment}{*/}
+399     \textcolor{keywordflow}{return} ((r >> 3) << 11) | ((g >> 2) << 5) | (b >> 3);
+400 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_ace3b9e89356344de6a3ba307f92243df}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-draw\-Pixel@{I\-L\-I9325\-\_\-draw\-Pixel}}
+\index{I\-L\-I9325\-\_\-draw\-Pixel@{I\-L\-I9325\-\_\-draw\-Pixel}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-draw\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-draw\-Pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{, }
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_ace3b9e89356344de6a3ba307f92243df}
+
+
+Definition at line 510 of file ili9325.\-c.
+
+
+
+References color\-\_\-t\-::c, lcd\-\_\-t\-::color, rect\-\_\-t\-::endx, rect\-\_\-t\-::endy, I\-L\-I9325, I\-L\-I9325\-\_\-set\-Cursor(), I\-L\-I9325\-\_\-write(), lcd\-\_\-t\-::screen, and Write\-Datato\-G\-R\-A\-M.
+
+
+
+Referenced by draw\-Pixel().
+
+
+\begin{DoxyCode}
+511 \{
+512     \textcolor{keywordflow}{if} ((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} > \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_aa48474b9abb7bea00980449041dc7c9d}{endx}) || (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} > \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.
+      \hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_aba63ecb5e6ab30685ab49c247da6f11b}{endy})) \textcolor{keywordflow}{return};
+513     \hyperlink{ili9325_8c_aef5e6641451fa923c465f3fdf0de18f0}{ILI9325\_setCursor}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+514     \textcolor{comment}{//LowCS; // Enable LCD}
+515     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae35368ad85970f10666f6ec7f1376d66}{WriteDatatoGRAM}, \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.
+      \hyperlink{structlcd__t_a7b6a8ec65935cf4cd99c962fc7ec93f5}{color}.\hyperlink{structcolor__t_afff0ae4fe505f5b27afed49e21dea41d}{c});\textcolor{comment}{// write color to GRAM}
+516     \textcolor{comment}{//HighCS;   // Disable LCD}
+517 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_ac7277e1127f296e375681e63759a1ea4}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-enter\-Sleep@{I\-L\-I9325\-\_\-enter\-Sleep}}
+\index{I\-L\-I9325\-\_\-enter\-Sleep@{I\-L\-I9325\-\_\-enter\-Sleep}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-enter\-Sleep}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-enter\-Sleep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_ac7277e1127f296e375681e63759a1ea4}
+
+
+Definition at line 909 of file ili9325.\-c.
+
+
+
+References Delayms(), Display\-Control1, I\-L\-I9325\-\_\-write(), Power\-Control1, Power\-Control2, Power\-Control3, and Power\-Control4.
+
+
+\begin{DoxyCode}
+910 \{
+911     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a78709a1dfa01a05f4dc10c7ce2a8838a}{DisplayControl1},0x0131);\textcolor{comment}{//setD1=0,D0=1}
+912     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(10);\textcolor{comment}{//Wait for 2 frames or more}
+913     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a78709a1dfa01a05f4dc10c7ce2a8838a}{DisplayControl1},0x0130);\textcolor{comment}{//setD1=0,D0=0}
+914     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(10);\textcolor{comment}{//Wait for 2 frames or more}
+915     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a78709a1dfa01a05f4dc10c7ce2a8838a}{DisplayControl1},0x0000);\textcolor{comment}{//displayoff }
+916     \textcolor{comment}{//---------- Power off sequence}
+917     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae57bc95b28dc28fc7016664dd62ce1e5}{PowerControl1},0x0000);\textcolor{comment}{//SAP,BT[3:0],AP,DSTB,SLP,STB}
+918     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae782009cf408f667f53bfc27ac2ce502}{PowerControl2},0x0000);\textcolor{comment}{//DC1[2:0],DC0[2:0],VC[2:0]}
+919     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ac208aabac588af9e36a3901da2e1328e}{PowerControl3},0x0000);\textcolor{comment}{//VREG1OUTvoltage}
+920     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_af7e8706483b7ab1938636359eed2a928}{PowerControl4},0x0000);\textcolor{comment}{//VDV[4:0]forVCOMamplitude}
+921     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(200);\textcolor{comment}{//dis-chargecapacitorpowervoltage}
+922     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae57bc95b28dc28fc7016664dd62ce1e5}{PowerControl1},0x0002);\textcolor{comment}{//SAP,BT[3:0],APE,AP,DSTB,SLP}
+923 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a05e119487c04f67199b11102bb3ad126}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-exit\-Sleep@{I\-L\-I9325\-\_\-exit\-Sleep}}
+\index{I\-L\-I9325\-\_\-exit\-Sleep@{I\-L\-I9325\-\_\-exit\-Sleep}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-exit\-Sleep}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-exit\-Sleep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a05e119487c04f67199b11102bb3ad126}
+
+
+Definition at line 933 of file ili9325.\-c.
+
+
+
+References Delayms(), Display\-Control1, I\-L\-I9325\-\_\-write(), Power\-Control1, Power\-Control2, Power\-Control3, Power\-Control4, and Power\-Control7.
+
+
+\begin{DoxyCode}
+934 \{
+935     \textcolor{comment}{//---------- Power On sequence}
+936     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae57bc95b28dc28fc7016664dd62ce1e5}{PowerControl1},0x0000);\textcolor{comment}{// SAP, BT[3:0], AP, DSTB, SLP, STB}
+937     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae782009cf408f667f53bfc27ac2ce502}{PowerControl2},0x0007);\textcolor{comment}{//DC1[2:0], DC0[2:0], VC[2:0]}
+938     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ac208aabac588af9e36a3901da2e1328e}{PowerControl3},0x0000);\textcolor{comment}{//VREG1OUT voltage}
+939     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_af7e8706483b7ab1938636359eed2a928}{PowerControl4},0x0000); \textcolor{comment}{//VDV[4:0] for VCOM amplitude}
+940     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(200);
+941     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae57bc95b28dc28fc7016664dd62ce1e5}{PowerControl1},0x1490);\textcolor{comment}{//SAP, BT[3:0], AP, DSTB, SLP, STB}
+942     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae782009cf408f667f53bfc27ac2ce502}{PowerControl2},0x0227);\textcolor{comment}{//DC1[2:0], DC0[2:0], VC[2:0]}
+943     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);
+944     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ac208aabac588af9e36a3901da2e1328e}{PowerControl3},0x001C);\textcolor{comment}{//External reference voltage=Vci}
+945     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);
+946     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_af7e8706483b7ab1938636359eed2a928}{PowerControl4},0x1800);\textcolor{comment}{//VDV[4:0] for VCOM amplitude}
+947     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a90e9b1f61deb6cbd34ea3a723d224a68}{PowerControl7},0x001C);\textcolor{comment}{//VCM[4:0] for VCOMH}
+948     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);
+949     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a78709a1dfa01a05f4dc10c7ce2a8838a}{DisplayControl1},0x0133);\textcolor{comment}{// }
+950 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a30d8646c1a822bd9ae7b68515bbac801}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-get\-Device@{I\-L\-I9325\-\_\-get\-Device}}
+\index{I\-L\-I9325\-\_\-get\-Device@{I\-L\-I9325\-\_\-get\-Device}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-get\-Device}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} I\-L\-I9325\-\_\-get\-Device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a30d8646c1a822bd9ae7b68515bbac801}
+\hypertarget{ili9325_8h_a1f940e0ae446464fda5f674e3e58a753}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-get\-Font\-Height@{I\-L\-I9325\-\_\-get\-Font\-Height}}
+\index{I\-L\-I9325\-\_\-get\-Font\-Height@{I\-L\-I9325\-\_\-get\-Font\-Height}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-get\-Font\-Height}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} I\-L\-I9325\-\_\-get\-Font\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a1f940e0ae446464fda5f674e3e58a753}
+
+
+Definition at line 789 of file ili9325.\-c.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), and I\-L\-I9325\-\_\-set\-Portrait().
+
+
+\begin{DoxyCode}
+790 \{
+791     \textcolor{keywordflow}{return} Display\_getFontHeight();
+792 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_af4bb12dcc098020c79bcd332018e6ddd}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-get\-Font\-Width@{I\-L\-I9325\-\_\-get\-Font\-Width}}
+\index{I\-L\-I9325\-\_\-get\-Font\-Width@{I\-L\-I9325\-\_\-get\-Font\-Width}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-get\-Font\-Width}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf u8} I\-L\-I9325\-\_\-get\-Font\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_af4bb12dcc098020c79bcd332018e6ddd}
+
+
+ \subsubsection*{Print functions }
+
+Definition at line 784 of file ili9325.\-c.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init(), and I\-L\-I9325\-\_\-set\-Portrait().
+
+
+\begin{DoxyCode}
+785 \{
+786     \textcolor{keywordflow}{return} Display\_getFontWidth();
+787 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a10edb32b1a61a8d6dd6b9ab1d50e5d8d}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-get\-Screen\-Height@{I\-L\-I9325\-\_\-get\-Screen\-Height}}
+\index{I\-L\-I9325\-\_\-get\-Screen\-Height@{I\-L\-I9325\-\_\-get\-Screen\-Height}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-get\-Screen\-Height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} I\-L\-I9325\-\_\-get\-Screen\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a10edb32b1a61a8d6dd6b9ab1d50e5d8d}
+
+
+Definition at line 748 of file ili9325.\-c.
+
+
+
+References rect\-\_\-t\-::height, I\-L\-I9325, lcd\-\_\-t\-::orientation, P\-O\-R\-T\-R\-A\-I\-T, lcd\-\_\-t\-::screen, and rect\-\_\-t\-::width.
+
+
+\begin{DoxyCode}
+749 \{
+750     \textcolor{keywordflow}{if} (\hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a6d94b70b32de86c41ac93f2e2cc21093}{orientation} == \hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+751         \textcolor{keywordflow}{return} \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_a46a3d4708b9b955a65540f1c7f9d47b5}{height};
+752     \textcolor{keywordflow}{else} \textcolor{comment}{// if (ILI9325.orientation == LANDSCAPE)}
+753         \textcolor{keywordflow}{return} \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_a5103232dda61eefd81b5b849643c5753}{width};
+754 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_abd71c1f1d3d32198ec1b7dc0a43dd0b4}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-get\-Screen\-Width@{I\-L\-I9325\-\_\-get\-Screen\-Width}}
+\index{I\-L\-I9325\-\_\-get\-Screen\-Width@{I\-L\-I9325\-\_\-get\-Screen\-Width}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-get\-Screen\-Width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} I\-L\-I9325\-\_\-get\-Screen\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_abd71c1f1d3d32198ec1b7dc0a43dd0b4}
+
+
+Definition at line 740 of file ili9325.\-c.
+
+
+
+References rect\-\_\-t\-::height, I\-L\-I9325, lcd\-\_\-t\-::orientation, P\-O\-R\-T\-R\-A\-I\-T, lcd\-\_\-t\-::screen, and rect\-\_\-t\-::width.
+
+
+\begin{DoxyCode}
+741 \{
+742     \textcolor{keywordflow}{if} (\hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a6d94b70b32de86c41ac93f2e2cc21093}{orientation} == \hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT})
+743         \textcolor{keywordflow}{return} \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_a5103232dda61eefd81b5b849643c5753}{width};
+744     \textcolor{keywordflow}{else} \textcolor{comment}{// if (ILI9325.orientation == LANDSCAPE)}
+745         \textcolor{keywordflow}{return} \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_a46a3d4708b9b955a65540f1c7f9d47b5}{height};
+746 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_aee72f966ce4512ec18ab69454ba447e3}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-init@{I\-L\-I9325\-\_\-init}}
+\index{I\-L\-I9325\-\_\-init@{I\-L\-I9325\-\_\-init}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_aee72f966ce4512ec18ab69454ba447e3}
+-\/--------- Default Screen Values
+
+-\/--------- I\-O's Output by default
+
+-\/--------- Clear Command lines
+
+-\/--------- Idle
+
+-\/--------- Reset L\-C\-D Driver
+
+-\/--------- Start Initial Sequence
+
+-\/--------- Power On sequence
+
+-\/--------- Adjust the Gamma Curve
+
+-\/--------- Set G\-R\-A\-M area
+
+-\/--------- Partial Display Control
+
+-\/-\/-\/-\/------ Panel Control
+
+-\/-\/-\/-\/-\/-\/-\/--- Default settings 
+
+Definition at line 217 of file ili9325.\-c.
+
+
+
+References Base\-Image\-Display\-Control, Blue, lcd\-\_\-t\-::cursor, Delayms(), Display\-Control1, Display\-Control2, Display\-Control3, Display\-Control4, Driver\-Code\-Read, Driver\-Output\-Control, Driver\-Output\-Control2, rect\-\_\-t\-::endx, rect\-\_\-t\-::endy, Entry\-Mode, lcd\-\_\-t\-::font, Frame\-Marker\-Position, Gamma\-Control1, Gamma\-Control10, Gamma\-Control2, Gamma\-Control3, Gamma\-Control4, Gamma\-Control5, Gamma\-Control6, Gamma\-Control7, Gamma\-Control8, Gamma\-Control9, G\-R\-A\-M\-Horizontal\-Address\-Set, G\-R\-A\-M\-Vertical\-Address\-Set, font\-\_\-t\-::height, rect\-\_\-t\-::height, Horizontal\-R\-A\-M\-End\-Address\-Position, Horizontal\-R\-A\-M\-Start\-Address\-Position, I\-L\-I9325, I\-L\-I9325\-\_\-clear\-Screen(), I\-L\-I9325\-\_\-get\-Font\-Height(), I\-L\-I9325\-\_\-get\-Font\-Width(), I\-L\-I9325\-\_\-set\-Background\-Color(), I\-L\-I9325\-\_\-set\-Color(), I\-L\-I9325\-\_\-set\-Portrait(), I\-L\-I9325\-\_\-write(), L\-C\-D\-Driving\-Wave\-Control, lcd\-\_\-t\-::orientation, O\-U\-T\-P\-U\-T, Panel\-Interface\-Control1, Partial\-Image1\-Display\-Position, Partial\-Image1\-R\-A\-M\-End\-Address, Partial\-Image1\-R\-A\-M\-Start\-Address, Partial\-Image2\-Display\-Position, Partial\-Image2\-R\-A\-M\-End\-Address, Partial\-Image2\-R\-A\-M\-Start\-Address, P\-O\-R\-T\-R\-A\-I\-T, Power\-Control1, Power\-Control2, Power\-Control3, Power\-Control4, Power\-Control7, Resizing\-Control\-Register, R\-G\-B\-Display\-Interface\-Control1, R\-G\-B\-Display\-Interface\-Control2, lcd\-\_\-t\-::screen, rect\-\_\-t\-::startx, rect\-\_\-t\-::starty, Vertical\-R\-A\-M\-End\-Address\-Position, Vertical\-R\-A\-M\-Start\-Address\-Position, White, font\-\_\-t\-::width, rect\-\_\-t\-::width, coord\-\_\-t\-::x, and coord\-\_\-t\-::y.
+
+
+\begin{DoxyCode}
+218 \{
+220 
+221     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a6d94b70b32de86c41ac93f2e2cc21093}{orientation} = \hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT};
+222     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x}      = 0;
+223     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_aae823bf8305b29bd7ace3d02c1ffe687}{y}      = 0;
+224     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_af3a2de9f6c223308dc8c2e6598f8a57c}{startx} = 0;
+225     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_af8514b92748148324f80b9df3f2d1366}{starty} = 0;
+226     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_aa48474b9abb7bea00980449041dc7c9d}{endx}   = 239;
+227     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_aba63ecb5e6ab30685ab49c247da6f11b}{endy}   = 319;
+228     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_a5103232dda61eefd81b5b849643c5753}{width}  = 240;
+229     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_a46a3d4708b9b955a65540f1c7f9d47b5}{height} = 320;
+230     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2efb3d8aba13baee6ea9250b1075454a}{font}.\hyperlink{structfont__t_a2c1d87ba049f447519d1a92e6550f822}{width}    = \hyperlink{ili9325_8c_af4bb12dcc098020c79bcd332018e6ddd}{ILI9325\_getFontWidth}();
+231     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2efb3d8aba13baee6ea9250b1075454a}{font}.\hyperlink{structfont__t_ac3f221619d1bd1d6f1d46727f0c913a2}{height}   = \hyperlink{ili9325_8c_a1f940e0ae446464fda5f674e3e58a753}{ILI9325\_getFontHeight}();
+232 
+234 
+235     dDATA = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};
+236     dCMD1 = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};
+237     dCMD2 = \hyperlink{p8_2pinguino_2core_2const_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT};
+238 
+240 
+241     DATA = 0x00;
+242 
+244 
+245     HighCS;
+246     HighRD; \textcolor{comment}{// Disable Read Mode}
+247     HighWR; \textcolor{comment}{// Disable Write Mode}
+248 
+250 
+251     HighRST;
+252     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(5);     \textcolor{comment}{// 1ms min.}
+253     LowRST;
+254     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(2);     \textcolor{comment}{// no min.}
+255     HighRST;
+256     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(100);   \textcolor{comment}{// 50ms min.}
+257 
+258     LowCS;  \textcolor{comment}{// Enable LCD -> not needed if CS is connected to GND}
+259 
+261 
+262     \textcolor{comment}{//---------- Start internal oscillator}
+263     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_accd59557f60d394a448416790cc6e955}{DriverCodeRead}, 0x0001);
+264     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);
+265 
+266     \textcolor{comment}{// SS  = 1 (shift dir. to the right)}
+267     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ab7e9b14d3eaf691667b3b32e9cec0fde}{DriverOutputControl}, 0x0100);
+268 
+269     \textcolor{comment}{// B/C = 1}
+270     \textcolor{comment}{// EOR = 1}
+271     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_aa2599a98d25e2f9f869c4ce5fdcf5e61}{LCDDrivingWaveControl}, 0x0700); \textcolor{comment}{// set the line
+       inversion}
+272 
+273     \textcolor{comment}{// AM  = 0}
+274     \textcolor{comment}{// I/D = 11 (H and V increment)}
+275     \textcolor{comment}{// BGR = 1  (Swap the RGB data to BGR in writing into GRAM)}
+276     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a67e28bd5cd63a37959eff0fb7efbe388}{EntryMode}, 0x1030);         \textcolor{comment}{//set GRAM write direction and BGR=1
+       PORTRAIT MODE}
+277     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a2afcc0e55e684f3c9aab1883fc9bdb5b}{ResizingControlRegister}, 0x0000);
+278     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a5da3349d302ba414d3e82ef321019cd5}{DisplayControl2}, 0x0202); \textcolor{comment}{// set the back and front porch to
+       4 lines}
+279     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ac9a4baa3c12f8af92d52bb225dbba279}{DisplayControl3}, 0x0000); \textcolor{comment}{// set non-display area refresh
+       cycle ISC[3:0]}
+280     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ad3555bc6221ddbad4de6a2d9c9818852}{DisplayControl4}, 0x0000); \textcolor{comment}{// FMARK function}
+281     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a51d6f94e7d1c21cfc0a9ebb45f26ae05}{RGBDisplayInterfaceControl1}, 0x0000); \textcolor{comment}{// RGB
+       interface setting}
+282     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a6f3ce40db55509c53464ba3ae48ca84d}{FrameMarkerPosition}, 0x0000); \textcolor{comment}{// Frame marker Position}
+283     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a238d2e7413a1e44bbc45903f2cbd7865}{RGBDisplayInterfaceControl2}, 0x0000); \textcolor{comment}{// RGB
+       interface polarity}
+284 
+286 
+287     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae57bc95b28dc28fc7016664dd62ce1e5}{PowerControl1},   0x0000); \textcolor{comment}{// SAP, BT[3:0], AP, DSTB, SLP, STB}
+288     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae782009cf408f667f53bfc27ac2ce502}{PowerControl2},   0x0007); \textcolor{comment}{// DC1[2:0], DC0[2:0], VC[2:0]}
+289     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ac208aabac588af9e36a3901da2e1328e}{PowerControl3},   0x0000); \textcolor{comment}{// VREG1OUT voltage}
+290     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_af7e8706483b7ab1938636359eed2a928}{PowerControl4},   0x0000); \textcolor{comment}{// VDV[4:0] for VCOM amplitude}
+291     \textcolor{comment}{//ILI9325\_write(DisplayControl1, 0x0001);}
+292     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(200); \textcolor{comment}{// Discharge capacitor power voltage}
+293 
+294     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae57bc95b28dc28fc7016664dd62ce1e5}{PowerControl1}, 0x14B0); \textcolor{comment}{// SAP=1, BT[3:0]=110, APE=1, AP=001,
+       DSTB=0, SLP=0, STB=0}
+295     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ae782009cf408f667f53bfc27ac2ce502}{PowerControl2}, 0x0007); \textcolor{comment}{// DC1[2:0]=010, DC0[2:0]=010,
+       VC[2:0]=000}
+296     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);
+297 
+298     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ac208aabac588af9e36a3901da2e1328e}{PowerControl3}, 0x008E); \textcolor{comment}{// External reference voltage= Vci;}
+299     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);
+300 
+301     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_af7e8706483b7ab1938636359eed2a928}{PowerControl4}, 0x0C00); \textcolor{comment}{// R13=1200 when R12=009D;VDV[4:0] for
+       VCOM amplitude}
+302     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a90e9b1f61deb6cbd34ea3a723d224a68}{PowerControl7}, 0x0015); \textcolor{comment}{// R29=000C when R12=009D;VCM[5:0] for
+       VCOMH}
+303     \textcolor{comment}{//ILI9325\_write(FrameRateandColorControl, 0x000D); // Set Frame Rate}
+304     \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(50);
+305 
+307 
+308     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a13a341014494267a43f03c01b726018d}{GammaControl1},  0x0000);
+309     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a97a2ef856f33195c6378fff7e0e5fba8}{GammaControl2},  0x0502);
+310     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a8678c5a25a2dd8231b2dc16ec46e2146}{GammaControl3},  0x0307);
+311     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a95250b0f81e9e3b692e76c3a15131be4}{GammaControl4},  0x0305);
+312     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ac585a395484a6a093d14a25183682838}{GammaControl5},  0x0004);
+313     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a9c8a1d483c497c2b19c82ba3f10ed116}{GammaControl6},  0x0402);
+314     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a01d697b00770348f3de7a0b12972f281}{GammaControl7},  0x0707);
+315     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_afb4ec22ba9fc2496f8c297ed4ed53f22}{GammaControl8},  0x0503);
+316     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a57cbb5e7b3b0eeb0837b9cc32373b987}{GammaControl9},  0x1505);
+317     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a890e7d10220c48b39ce35f2987e14106}{GammaControl10}, 0x1505);
+318 
+320 
+321     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a5a5198f3b441388ada02243c6bd6fec9}{GRAMHorizontalAddressSet}, 0x0000);     \textcolor{comment}{// GRAM
+       horizontal Address}
+322     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a1b2b0f915f33e76621aaebd3a5bfb5a7}{GRAMVerticalAddressSet}, 0x0000);       \textcolor{comment}{// GRAM
+       Vertical Address}
+323     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a0e4eb4d3b97cfb613e379d4a1d38d5c9}{HorizontalRAMStartAddressPosition}, 0); \textcolor{comment}{//
+       Horizontal GRAM Start Address}
+324     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_af6390d7a36718be0d18ed3574d0694da}{HorizontalRAMEndAddressPosition}, 239); \textcolor{comment}{//
+       Horizontal GRAM End Address}
+325     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a39c4d205cacf47dca6431986b01b16f3}{VerticalRAMStartAddressPosition}, 0);   \textcolor{comment}{//
+       Vertical GRAM Start Address}
+326     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a22e19fbb3f4cb14a678cc82ea904aa8c}{VerticalRAMEndAddressPosition}, 319);   \textcolor{comment}{//
+       Vertical GRAM Start Address}
+327 
+328     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a775e6b94e174e273d0b534d740d799e8}{DriverOutputControl2}, 0xA700); \textcolor{comment}{// Gate Scan Line}
+329     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_aaba5ede76b251ea6f6c32595f642dabb}{BaseImageDisplayControl}, 0x0003);\textcolor{comment}{//b111); // NDL,
+       VLE, REV}
+330     \textcolor{comment}{//ILI9325\_write(VerticalScrollControl, 0x0000);}
+331     
+333 
+334     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a0c5217b59503b3d051d2effcfa4213d4}{PartialImage1DisplayPosition}, 0x0000);
+335     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ac8a9e81ed05be8f5f5a375d2e09a3a45}{PartialImage1RAMStartAddress}, 0x0000);
+336     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_aa32fb3579b6f79af6816a3ddb4dcb45c}{PartialImage1RAMEndAddress}, 0x0000);
+337     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a41ead42e35c11f723837b3e4cc60fa98}{PartialImage2DisplayPosition}, 0x0000);
+338     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a65d97a891516abaa82a5abdbaa15aead}{PartialImage2RAMStartAddress}, 0x0000);
+339     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ac2d74050d60f84aab1ea75afbec78d6f}{PartialImage2RAMEndAddress}, 0x0000);
+340 
+342 
+343     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a36b4a7aa0251fc670ac9494d655302c0}{PanelInterfaceControl1}, 0x0010); \textcolor{comment}{// sync with fosc/1 -
+       16 clocks/line}
+344     \textcolor{comment}{//ILI9325\_write(PanelInterfaceControl2, 0x0600); // 0 clock overlap period}
+345 \textcolor{comment}{//  ILI9325\_write(PanelInterfaceControl3, 0x0001);}
+346 \textcolor{comment}{//  ILI9325\_write(PanelInterfaceControl4, 0x0110); // 16 clocks/line - min. div. ratio}
+347 \textcolor{comment}{//  ILI9325\_write(PanelInterfaceControl5, 0x0000);}
+348 \textcolor{comment}{//  ILI9325\_write(PanelInterfaceControl6, 0x0000);}
+349 \textcolor{comment}{//  Delayms(50);}
+350 
+351     \textcolor{comment}{//---------- Display ON}
+352 
+353     \textcolor{comment}{// D[1:0] = 11, display ON (00 = display OFF)}
+354     \textcolor{comment}{// CL = 0, 262K color}
+355     \textcolor{comment}{// GON & DET = 11, normal display}
+356     \textcolor{comment}{// BASEE = 1, the base image is displayed}
+357     \textcolor{comment}{// PTDE[1:0] = 00, only base image is displayed}
+358 
+359     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a78709a1dfa01a05f4dc10c7ce2a8838a}{DisplayControl1}, 0x0133);
+360     \textcolor{comment}{//Delayms(50);}
+361     \textcolor{comment}{//I9325\_writeRegister(WriteDatatoGRAM);     // write GRAM}
+362 
+363     \textcolor{comment}{//HighCS;   // Disable LCD}
+364 
+366 
+367     \hyperlink{ili9325_8c_a6539f24c9af021bf3804897eadff6b54}{ILI9325\_setColor}(\hyperlink{ili9325_8h_a298a3b7c7f2ea427a7cd21cdc9a4f054}{White});
+368     \hyperlink{ili9325_8c_a7989202390bfc9a34f041c2a98fce09f}{ILI9325\_setBackgroundColor}(\hyperlink{ili9325_8h_a6208a194d702872fdbe1d3c7d7a7c879}{Blue});
+369     \hyperlink{ili9325_8c_a965d2545bb167ccf41670e53850d9fbc}{ILI9325\_setPortrait}();
+370     \hyperlink{ili9325_8c_a8834ced1dc8c88935c5ab2951293cbde}{ILI9325\_clearScreen}();
+371 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a31eb4cf65f65f4dabb059b838ec76c0a}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-read@{I\-L\-I9325\-\_\-read}}
+\index{I\-L\-I9325\-\_\-read@{I\-L\-I9325\-\_\-read}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} I\-L\-I9325\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a31eb4cf65f65f4dabb059b838ec76c0a}
+
+
+Definition at line 187 of file ili9325.\-c.
+
+
+
+References I\-L\-I9325\-\_\-read\-Data(), and I\-L\-I9325\-\_\-write\-Register().
+
+
+
+Referenced by I\-L\-I9325\-\_\-get\-Device\-I\-D(), and I\-L\-I9325\-\_\-read\-Pixel().
+
+
+\begin{DoxyCode}
+188 \{
+189     \hyperlink{ili9325_8c_a6b440eb07f3e9bbcaaaf408ad9c7c318}{ILI9325\_writeRegister}(index);
+190     \textcolor{keywordflow}{return} \hyperlink{ili9325_8c_aeacb402082cf44e2b8b11882b14edbcf}{ILI9325\_readData}();
+191 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_aeacb402082cf44e2b8b11882b14edbcf}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-read\-Data@{I\-L\-I9325\-\_\-read\-Data}}
+\index{I\-L\-I9325\-\_\-read\-Data@{I\-L\-I9325\-\_\-read\-Data}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-read\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} I\-L\-I9325\-\_\-read\-Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_aeacb402082cf44e2b8b11882b14edbcf}
+
+
+ \subsubsection*{Read functions }
+
+Definition at line 147 of file ili9325.\-c.
+
+
+
+References word\-\_\-t\-::h8, word\-\_\-t\-::l8, and word\-\_\-t\-::w.
+
+
+
+Referenced by I\-L\-I9325\-\_\-read().
+
+
+\begin{DoxyCode}
+148 \{
+149     \hyperlink{unionword__t}{word\_t} d;
+150     
+151     \textcolor{comment}{//LowCS;          // Select LCD}
+152     HighRS;         \textcolor{comment}{// Disable Register Selection Signal}
+153     HighWR;         \textcolor{comment}{// Disable Write Mode}
+154     HighRD;         \textcolor{comment}{// Disable Read (Write Mode)}
+155 
+156     \textcolor{comment}{// Data line as input}
+157     dDATA = 0xFF;
+158 
+159     LowRD;          \textcolor{comment}{// Enable Read Mode}
+160     HighRD;         \textcolor{comment}{// Disable Read Mode}
+161     
+162     d.\hyperlink{unionword__t_adcad4dc69be4c39d2fb6307f0cb97ac1}{h8} = DATA;    \textcolor{comment}{// Read High Byte Data}
+163 
+164     LowRD;          \textcolor{comment}{// Enable Read Mode}
+165     HighRD;         \textcolor{comment}{// Disable Read Mode}
+166 
+167     d.\hyperlink{unionword__t_a533455d8a4ec318e7144be4c1b6b9af3}{l8} = DATA;    \textcolor{comment}{// Read Low Byte Data}
+168 
+169     \textcolor{comment}{// Data line as output}
+170     dDATA = 0x00;
+171 
+172     \textcolor{comment}{//HighCS;         // Release LCD}
+173 
+174     \textcolor{keywordflow}{return} d.\hyperlink{unionword__t_afba0181b8edd2f6d8219d7042ffc8a35}{w};
+175 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a10d216a61726e17eeb715e2a4d6cbaf5}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-read\-Pixel@{I\-L\-I9325\-\_\-read\-Pixel}}
+\index{I\-L\-I9325\-\_\-read\-Pixel@{I\-L\-I9325\-\_\-read\-Pixel}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-read\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} I\-L\-I9325\-\_\-read\-Pixel (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{, }
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a10d216a61726e17eeb715e2a4d6cbaf5}
+
+
+Definition at line 547 of file ili9325.\-c.
+
+
+
+References c, rect\-\_\-t\-::endx, rect\-\_\-t\-::endy, I\-L\-I9325, I\-L\-I9325\-\_\-read(), I\-L\-I9325\-\_\-set\-Cursor(), Read\-Datato\-G\-R\-A\-M, and lcd\-\_\-t\-::screen.
+
+
+\begin{DoxyCode}
+548 \{
+549     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+550     
+551     \textcolor{keywordflow}{if} ((\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} > \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_aa48474b9abb7bea00980449041dc7c9d}{endx}) || (\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} > \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.
+      \hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_aba63ecb5e6ab30685ab49c247da6f11b}{endy})) \textcolor{keywordflow}{return} 0;
+552     \hyperlink{ili9325_8c_aef5e6641451fa923c465f3fdf0de18f0}{ILI9325\_setCursor}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}, \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y});
+553     \textcolor{comment}{//LowCS;}
+554     c = \hyperlink{ili9325_8c_acb28b8f464bb27cd67c2c3a0886b924e}{ILI9325\_read}(\hyperlink{ili9325_8h_a7575c4f518d2f14ee7269e00bef852dd}{ReadDatatoGRAM});
+555     \textcolor{comment}{//HighCS;}
+556     
+557     \textcolor{keywordflow}{return} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+558 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a255e1b3fbc3201b837c50555e232b8fa}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-scroll@{I\-L\-I9325\-\_\-scroll}}
+\index{I\-L\-I9325\-\_\-scroll@{I\-L\-I9325\-\_\-scroll}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-scroll}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-scroll (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a255e1b3fbc3201b837c50555e232b8fa}
+
+
+Definition at line 765 of file ili9325.\-c.
+
+
+
+References I\-L\-I9325\-\_\-write(), Vertical\-Scroll\-Control, and y.
+
+
+\begin{DoxyCode}
+766 \{
+767     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y} = pixels;
+768 
+769     \textcolor{keywordflow}{while} (y < 0)
+770         y += 320;
+771 
+772     \textcolor{keywordflow}{while} (y >= 320)
+773         y -= 320;    
+774 
+775     \textcolor{comment}{//LowCS;                                        // Enable LCD}
+776     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a30e32f863a93e6b7cfc7704dc15f6f0b}{VerticalScrollControl}, y);  
+777     \textcolor{comment}{//HighCS;                                   // Disable LCD}
+778 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_ac519cb0ce7b6674163e3c8f55081181f}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-set\-Background\-Color@{I\-L\-I9325\-\_\-set\-Background\-Color}}
+\index{I\-L\-I9325\-\_\-set\-Background\-Color@{I\-L\-I9325\-\_\-set\-Background\-Color}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-set\-Background\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-set\-Background\-Color (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_ac519cb0ce7b6674163e3c8f55081181f}
+
+
+Definition at line 428 of file ili9325.\-c.
+
+
+
+References color\-\_\-t\-::b, lcd\-\_\-t\-::bcolor, color\-\_\-t\-::c, color\-\_\-t\-::g, I\-L\-I9325, and color\-\_\-t\-::r.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+
+\begin{DoxyCode}
+429 \{
+430     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a30a1d46222004b922cb03a640ee42428}{bcolor}.\hyperlink{structcolor__t_a024565753c9b4a462348578bb2fe6757}{r} = (color >> 11) & 0x1f;
+431     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a30a1d46222004b922cb03a640ee42428}{bcolor}.\hyperlink{structcolor__t_a2e3999b42bd5cf9f9e7d87ef7c135544}{g} = (color >> 5)  & 0x3f;
+432     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a30a1d46222004b922cb03a640ee42428}{bcolor}.\hyperlink{structcolor__t_a78ae961558b7587c97d0a87da7d56c4d}{b} = (color >> 0)  & 0x1f;
+433     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a30a1d46222004b922cb03a640ee42428}{bcolor}.\hyperlink{structcolor__t_afff0ae4fe505f5b27afed49e21dea41d}{c} = color; \textcolor{comment}{// ILI9325\_color565(r,g,b);}
+434 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_ad90b5d7bb0e7923fc2e863795624714c}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-set\-Color@{I\-L\-I9325\-\_\-set\-Color}}
+\index{I\-L\-I9325\-\_\-set\-Color@{I\-L\-I9325\-\_\-set\-Color}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-set\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-set\-Color (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_ad90b5d7bb0e7923fc2e863795624714c}
+
+
+Definition at line 411 of file ili9325.\-c.
+
+
+
+References color\-\_\-t\-::b, color\-\_\-t\-::c, lcd\-\_\-t\-::color, color\-\_\-t\-::g, I\-L\-I9325, and color\-\_\-t\-::r.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+
+\begin{DoxyCode}
+412 \{
+413     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a7b6a8ec65935cf4cd99c962fc7ec93f5}{color}.\hyperlink{structcolor__t_a024565753c9b4a462348578bb2fe6757}{r} = (color >> 11) & 0x1f;
+414     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a7b6a8ec65935cf4cd99c962fc7ec93f5}{color}.\hyperlink{structcolor__t_a2e3999b42bd5cf9f9e7d87ef7c135544}{g} = (color >> 5)  & 0x3f;
+415     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a7b6a8ec65935cf4cd99c962fc7ec93f5}{color}.\hyperlink{structcolor__t_a78ae961558b7587c97d0a87da7d56c4d}{b} = (color >> 0)  & 0x1f;
+416     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a7b6a8ec65935cf4cd99c962fc7ec93f5}{color}.\hyperlink{structcolor__t_afff0ae4fe505f5b27afed49e21dea41d}{c} = color; \textcolor{comment}{// ILI9325\_color565(r,g,b);}
+417 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a4be8abeb1479ccecefa2ec9c4b2a8e4e}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-set\-Cursor@{I\-L\-I9325\-\_\-set\-Cursor}}
+\index{I\-L\-I9325\-\_\-set\-Cursor@{I\-L\-I9325\-\_\-set\-Cursor}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-set\-Cursor}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-set\-Cursor (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{x, }
+\item[{{\bf u16}}]{y}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a4be8abeb1479ccecefa2ec9c4b2a8e4e}
+
+
+ \subsubsection*{Graphic functions }
+
+Definition at line 482 of file ili9325.\-c.
+
+
+
+References lcd\-\_\-t\-::cursor, G\-R\-A\-M\-Horizontal\-Address\-Set, G\-R\-A\-M\-Vertical\-Address\-Set, I\-L\-I9325, I\-L\-I9325\-\_\-write(), L\-A\-N\-D\-S\-C\-A\-P\-E, lcd\-\_\-t\-::orientation, coord\-\_\-t\-::x, x, coord\-\_\-t\-::y, and y.
+
+
+
+Referenced by I\-L\-I9325\-\_\-clear\-Screen(), I\-L\-I9325\-\_\-clear\-Window(), I\-L\-I9325\-\_\-del\-Pixel(), I\-L\-I9325\-\_\-draw\-Pixel(), I\-L\-I9325\-\_\-read\-Pixel(), I\-L\-I9325\-\_\-set\-Window(), and I\-L\-I9325\-\_\-test().
+
+
+\begin{DoxyCode}
+483 \{
+484     \textcolor{keywordflow}{if} (\hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a6d94b70b32de86c41ac93f2e2cc21093}{orientation} == \hyperlink{ili9325_8h_a211dd160685be8a5a4f43be3fc3195a4}{LANDSCAPE})
+485     \{
+486         \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y};            \textcolor{comment}{// save current position}
+487         \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_aae823bf8305b29bd7ace3d02c1ffe687}{y} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x};
+488     \}
+489     \textcolor{keywordflow}{else}
+490     \{
+491         \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x};            \textcolor{comment}{// save current position}
+492         \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_aae823bf8305b29bd7ace3d02c1ffe687}{y} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a0e0b1cdfe7d9850ca963a40d5825d9ad}{y};
+493     \}
+494     
+495     \textcolor{comment}{//LowCS;    // Enable LCD}
+496     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a5a5198f3b441388ada02243c6bd6fec9}{GRAMHorizontalAddressSet}, 
+      \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_ae2825f524c71a19eab26e76a693473fa}{x});
+497     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a1b2b0f915f33e76621aaebd3a5bfb5a7}{GRAMVerticalAddressSet}, 
+      \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2465b2093554ecfe6a0b8a274e17a083}{cursor}.\hyperlink{structcoord__t_aae823bf8305b29bd7ace3d02c1ffe687}{y});
+498     \textcolor{comment}{//HighCS;   // Disable LCD}
+499 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a07f610e9c7611feb2298a2bd70723087}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-set\-Landscape@{I\-L\-I9325\-\_\-set\-Landscape}}
+\index{I\-L\-I9325\-\_\-set\-Landscape@{I\-L\-I9325\-\_\-set\-Landscape}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-set\-Landscape}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-set\-Landscape (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a07f610e9c7611feb2298a2bd70723087}
+
+
+Definition at line 718 of file ili9325.\-c.
+
+
+
+References Driver\-Output\-Control, Entry\-Mode, I\-L\-I9325, I\-L\-I9325\-\_\-clear\-Screen(), I\-L\-I9325\-\_\-set\-Window(), I\-L\-I9325\-\_\-write(), L\-A\-N\-D\-S\-C\-A\-P\-E, and lcd\-\_\-t\-::orientation.
+
+
+\begin{DoxyCode}
+719 \{
+720     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a6d94b70b32de86c41ac93f2e2cc21093}{orientation} = \hyperlink{ili9325_8h_a211dd160685be8a5a4f43be3fc3195a4}{LANDSCAPE};
+721     \textcolor{comment}{//ILI9325.font.width = ILI9325\_getFontHeight();}
+722     \textcolor{comment}{//ILI9325.font.height= ILI9325\_getFontWidth();}
+723 
+724     \textcolor{comment}{//LowCS;}
+725     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a67e28bd5cd63a37959eff0fb7efbe388}{EntryMode}, 0x1028); \textcolor{comment}{// 0x28 = 0b00101000;}
+726     \textcolor{comment}{// shift dir. to the right (SM=0, SS=0)}
+727     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ab7e9b14d3eaf691667b3b32e9cec0fde}{DriverOutputControl}, 0x0000);
+728     \textcolor{comment}{//HighCS;}
+729     
+730     \textcolor{comment}{//ILI9325\_setCursor(0, 0);}
+731     \hyperlink{ili9325_8c_a8781c6c1f32c44f83475aa28e7d2f04e}{ILI9325\_setWindow}(0, 0, 319, 239);
+732     \hyperlink{ili9325_8c_a8834ced1dc8c88935c5ab2951293cbde}{ILI9325\_clearScreen}();
+733 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a965d2545bb167ccf41670e53850d9fbc}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-set\-Portrait@{I\-L\-I9325\-\_\-set\-Portrait}}
+\index{I\-L\-I9325\-\_\-set\-Portrait@{I\-L\-I9325\-\_\-set\-Portrait}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-set\-Portrait}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-set\-Portrait (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a965d2545bb167ccf41670e53850d9fbc}
+
+
+Definition at line 700 of file ili9325.\-c.
+
+
+
+References Driver\-Output\-Control, Entry\-Mode, lcd\-\_\-t\-::font, font\-\_\-t\-::height, I\-L\-I9325, I\-L\-I9325\-\_\-clear\-Screen(), I\-L\-I9325\-\_\-get\-Font\-Height(), I\-L\-I9325\-\_\-get\-Font\-Width(), I\-L\-I9325\-\_\-set\-Window(), I\-L\-I9325\-\_\-write(), lcd\-\_\-t\-::orientation, P\-O\-R\-T\-R\-A\-I\-T, and font\-\_\-t\-::width.
+
+
+
+Referenced by I\-L\-I9325\-\_\-init().
+
+
+\begin{DoxyCode}
+701 \{
+702     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a6d94b70b32de86c41ac93f2e2cc21093}{orientation} = \hyperlink{ili9325_8h_a20d6fe800ee77dff684c05b86d5ab3b7}{PORTRAIT};
+703     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2efb3d8aba13baee6ea9250b1075454a}{font}.\hyperlink{structfont__t_a2c1d87ba049f447519d1a92e6550f822}{width} = \hyperlink{ili9325_8c_af4bb12dcc098020c79bcd332018e6ddd}{ILI9325\_getFontWidth}();
+704     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a2efb3d8aba13baee6ea9250b1075454a}{font}.\hyperlink{structfont__t_ac3f221619d1bd1d6f1d46727f0c913a2}{height}= \hyperlink{ili9325_8c_a1f940e0ae446464fda5f674e3e58a753}{ILI9325\_getFontHeight}();
+705 
+706     \textcolor{comment}{//LowCS;}
+707     \textcolor{comment}{// set GRAM write direction to PORTRAIT MODE}
+708     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a67e28bd5cd63a37959eff0fb7efbe388}{EntryMode}, 0x1030); \textcolor{comment}{// 0x30 = 0b00110000;}
+709     \textcolor{comment}{// shift dir. to the right (SM=0, SS=1)}
+710     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_ab7e9b14d3eaf691667b3b32e9cec0fde}{DriverOutputControl}, 0x0100);
+711     \textcolor{comment}{//HighCS;}
+712     
+713     \textcolor{comment}{//ILI9325\_setCursor(0, 0);}
+714     \hyperlink{ili9325_8c_a8781c6c1f32c44f83475aa28e7d2f04e}{ILI9325\_setWindow}(0, 0, 239, 319);
+715     \hyperlink{ili9325_8c_a8834ced1dc8c88935c5ab2951293cbde}{ILI9325\_clearScreen}();
+716 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_aa4bac9a8cf72d45d37ebd0f6a5b206b4}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-set\-Window@{I\-L\-I9325\-\_\-set\-Window}}
+\index{I\-L\-I9325\-\_\-set\-Window@{I\-L\-I9325\-\_\-set\-Window}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-set\-Window}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-set\-Window (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{, }
+\item[{{\bf u16}}]{, }
+\item[{{\bf u16}}]{, }
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_aa4bac9a8cf72d45d37ebd0f6a5b206b4}
+
+
+Definition at line 572 of file ili9325.\-c.
+
+
+
+References rect\-\_\-t\-::endx, rect\-\_\-t\-::endy, rect\-\_\-t\-::height, Horizontal\-R\-A\-M\-End\-Address\-Position, Horizontal\-R\-A\-M\-Start\-Address\-Position, I\-L\-I9325, I\-L\-I9325\-\_\-set\-Cursor(), I\-L\-I9325\-\_\-write(), lcd\-\_\-t\-::screen, rect\-\_\-t\-::startx, rect\-\_\-t\-::starty, Vertical\-R\-A\-M\-End\-Address\-Position, Vertical\-R\-A\-M\-Start\-Address\-Position, and rect\-\_\-t\-::width.
+
+
+
+Referenced by I\-L\-I9325\-\_\-set\-Landscape(), and I\-L\-I9325\-\_\-set\-Portrait().
+
+
+\begin{DoxyCode}
+573 \{
+574     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_af3a2de9f6c223308dc8c2e6598f8a57c}{startx} = x1;
+575     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_af8514b92748148324f80b9df3f2d1366}{starty} = y1;
+576     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_aa48474b9abb7bea00980449041dc7c9d}{endx} = x2;
+577     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_aba63ecb5e6ab30685ab49c247da6f11b}{endy} = y2;
+578     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_a5103232dda61eefd81b5b849643c5753}{width} = x2 - x1;
+579     \hyperlink{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{ILI9325}.\hyperlink{structlcd__t_a170959ba8d59769ce0c2ceebd8919217}{screen}.\hyperlink{structrect__t_a46a3d4708b9b955a65540f1c7f9d47b5}{height} = y2 - y1;
+580     
+581     \textcolor{comment}{//LowCS;    // Enable LCD}
+582 
+583     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a0e4eb4d3b97cfb613e379d4a1d38d5c9}{HorizontalRAMStartAddressPosition}, x1);
+584     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_af6390d7a36718be0d18ed3574d0694da}{HorizontalRAMEndAddressPosition}, x2);
+585     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a39c4d205cacf47dca6431986b01b16f3}{VerticalRAMStartAddressPosition}, y1);
+586     \hyperlink{ili9325_8c_a2201f3cf0d27465da7bc4c9734d92b46}{ILI9325\_write}(\hyperlink{ili9325_8h_a22e19fbb3f4cb14a678cc82ea904aa8c}{VerticalRAMEndAddressPosition}, y2);
+587 
+588     \textcolor{comment}{//HighCS;   // Disable LCD}
+589 
+590     \hyperlink{ili9325_8c_aef5e6641451fa923c465f3fdf0de18f0}{ILI9325\_setCursor}(x1, y1);
+591 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a09df35a82fbe3dde7f657810eb3f6f08}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-write@{I\-L\-I9325\-\_\-write}}
+\index{I\-L\-I9325\-\_\-write@{I\-L\-I9325\-\_\-write}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{, }
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a09df35a82fbe3dde7f657810eb3f6f08}
+
+
+Definition at line 126 of file ili9325.\-c.
+
+
+
+References I\-L\-I9325\-\_\-write\-Data(), and I\-L\-I9325\-\_\-write\-Register().
+
+
+
+Referenced by I\-L\-I9325\-\_\-del\-Pixel(), I\-L\-I9325\-\_\-draw\-Pixel(), I\-L\-I9325\-\_\-enter\-Sleep(), I\-L\-I9325\-\_\-exit\-Sleep(), I\-L\-I9325\-\_\-init(), I\-L\-I9325\-\_\-print\-Char(), I\-L\-I9325\-\_\-print\-String(), I\-L\-I9325\-\_\-scroll(), I\-L\-I9325\-\_\-set\-Cursor(), I\-L\-I9325\-\_\-set\-Landscape(), I\-L\-I9325\-\_\-set\-Portrait(), and I\-L\-I9325\-\_\-set\-Window().
+
+
+\begin{DoxyCode}
+127 \{
+128     \hyperlink{ili9325_8c_a6b440eb07f3e9bbcaaaf408ad9c7c318}{ILI9325\_writeRegister}(index);
+129     \hyperlink{ili9325_8c_a604b08691a184e0b307b5e56d4a88c78}{ILI9325\_writeData}(data15);
+130 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_a9c108a44f408f916a6b4fdcef7aacb14}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-write\-Data@{I\-L\-I9325\-\_\-write\-Data}}
+\index{I\-L\-I9325\-\_\-write\-Data@{I\-L\-I9325\-\_\-write\-Data}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-write\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-write\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_a9c108a44f408f916a6b4fdcef7aacb14}
+
+
+Definition at line 92 of file ili9325.\-c.
+
+
+
+References word\-\_\-t\-::h8, word\-\_\-t\-::l8, and word\-\_\-t\-::w.
+
+
+
+Referenced by I\-L\-I9325\-\_\-test(), and I\-L\-I9325\-\_\-write().
+
+
+\begin{DoxyCode}
+93 \{
+94     \hyperlink{unionword__t}{word\_t} d;
+95 
+96     d.\hyperlink{unionword__t_afba0181b8edd2f6d8219d7042ffc8a35}{w} = data15;
+97 
+98     \textcolor{comment}{//LowCS;}
+99     HighRS; \textcolor{comment}{// Disable Register Selection Signal}
+100     HighRD; \textcolor{comment}{// Disable Read Mode}
+101     HighWR; \textcolor{comment}{// Disable Write Mode}
+102 
+103     DATA = d.\hyperlink{unionword__t_adcad4dc69be4c39d2fb6307f0cb97ac1}{h8};
+104 
+105     LowWR;  \textcolor{comment}{// Enable Write}
+106     HighWR; \textcolor{comment}{// Disable Write}
+107 
+108     DATA = d.\hyperlink{unionword__t_a533455d8a4ec318e7144be4c1b6b9af3}{l8};
+109 
+110     LowWR;  \textcolor{comment}{// Enable Write}
+111     HighWR; \textcolor{comment}{// Disable Write}
+112     \textcolor{comment}{//HighCS;}
+113 \}
+\end{DoxyCode}
+\hypertarget{ili9325_8h_af09111982493955d4ca5c8ce2d32eb24}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325\-\_\-write\-Register@{I\-L\-I9325\-\_\-write\-Register}}
+\index{I\-L\-I9325\-\_\-write\-Register@{I\-L\-I9325\-\_\-write\-Register}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325\-\_\-write\-Register}]{\setlength{\rightskip}{0pt plus 5cm}void I\-L\-I9325\-\_\-write\-Register (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{index}
+\end{DoxyParamCaption}
+)}}\label{ili9325_8h_af09111982493955d4ca5c8ce2d32eb24}
+
+
+ \subsubsection*{P\-I\-C 26\-J50 47\-J53\-A 32\-M\-X250 E\-M\-P\-E\-R\-O\-R L\-C\-D pin }
+
+V\-S\-S G\-N\-D G\-N\-D G\-N\-D G\-N\-D G\-N\-D +5\-V 5\-V V\-I\-N V\-D\-D 5\-V 5\-V \subsubsection*{-\/ -\/ -\/ -\/ -\/ nc }
+
+P\-M\-A0 8 5 26 R\-S Register Selection P\-M\-W\-R 9 14 64 R\-W Write\-: Low=Enable, High=Disable \subsubsection*{P\-M\-R\-D 10 13 63 R\-D Read\-: Low=Enable, High=Disable }
+
+P\-M\-D0 0 24 54 D0 Display data, L\-S\-B P\-M\-D1 1 25 53 D1 Display data P\-M\-D2 2 26 49 D2 Display data P\-M\-D3 3 27 48 D3 Display data P\-M\-D4 4 28 47 D4 Display data P\-M\-D5 5 29 45 D5 Display data P\-M\-D6 6 30 44 D6 Display data \subsubsection*{P\-M\-D7 7 31 43 D7 Display data, M\-S\-B }
+
+P\-M\-A1 11 4 74 C\-S Low=Select, High=Deselect
+\begin{DoxyItemize}
+\item -\/ -\/ -\/ nc P\-M\-A2 12 4 R\-S\-T Low=Reset, High=no Reset \subsubsection*{-\/ -\/ -\/ -\/ nc }
+\end{DoxyItemize}
+
+\subsubsection*{Prototypes }
+
+
+
+ \subsubsection*{Write functions }
+
+Definition at line 59 of file ili9325.\-c.
+
+
+
+Referenced by I\-L\-I9325\-\_\-clear\-Screen(), I\-L\-I9325\-\_\-clear\-Window(), I\-L\-I9325\-\_\-read(), I\-L\-I9325\-\_\-test(), and I\-L\-I9325\-\_\-write().
+
+
+\begin{DoxyCode}
+60 \{
+61     \textcolor{comment}{//LowCS;}
+62     LowRS;  \textcolor{comment}{// Enable Register Selection Signal}
+63     HighRD; \textcolor{comment}{// Disable Read Mode}
+64     HighWR; \textcolor{comment}{// Disable Write Mode}
+65 
+66     DATA = 0;
+67     
+68     LowWR;  \textcolor{comment}{// Enable Write}
+69     HighWR; \textcolor{comment}{// Disable Write}
+70 
+71     DATA = index;
+72 
+73     LowWR;  \textcolor{comment}{// Enable Write}
+74     HighWR; \textcolor{comment}{// Disable Write}
+75     \textcolor{comment}{//HighCS;}
+76 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}{\index{ili9325.\-h@{ili9325.\-h}!I\-L\-I9325@{I\-L\-I9325}}
+\index{I\-L\-I9325@{I\-L\-I9325}!ili9325.h@{ili9325.\-h}}
+\subsubsection[{I\-L\-I9325}]{\setlength{\rightskip}{0pt plus 5cm}{\bf lcd\-\_\-t} I\-L\-I9325}}\label{ili9325_8h_a300c8b59fe21040c4b79e1c583fb9f8a}
+
+
+ \subsubsection*{Globals }
+
+Definition at line 404 of file ili9325.\-h.
+
+
+
+Referenced by I\-L\-I9325\-\_\-clear\-Screen(), I\-L\-I9325\-\_\-clear\-Window(), I\-L\-I9325\-\_\-del\-Pixel(), I\-L\-I9325\-\_\-draw\-Pixel(), I\-L\-I9325\-\_\-get\-Orientation(), I\-L\-I9325\-\_\-get\-Screen\-Height(), I\-L\-I9325\-\_\-get\-Screen\-Width(), I\-L\-I9325\-\_\-init(), I\-L\-I9325\-\_\-print\-Char(), I\-L\-I9325\-\_\-print\-String(), I\-L\-I9325\-\_\-read\-Pixel(), I\-L\-I9325\-\_\-set\-Background\-Color(), I\-L\-I9325\-\_\-set\-Color(), I\-L\-I9325\-\_\-set\-Cursor(), I\-L\-I9325\-\_\-set\-Landscape(), I\-L\-I9325\-\_\-set\-Portrait(), I\-L\-I9325\-\_\-set\-Window(), and I\-L\-I9325\-\_\-test().
+

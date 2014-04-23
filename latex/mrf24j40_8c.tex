@@ -1,0 +1,1472 @@
+\hypertarget{mrf24j40_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/zigbee/mrf24j40.c File Reference}
+\label{mrf24j40_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/zigbee/mrf24j40.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/zigbee/mrf24j40.\-c}}
+}
+{\ttfamily \#include \char`\"{}mrf24j40.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pic\-\_\-utils.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}spi\-\_\-hw.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pic\-\_\-serial.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{mrf24j40_8c_a43c2197b37525bad11b0a279543e14de}{mrf24j40\-\_\-flush\-\_\-receive\-\_\-buffer} ()
+\begin{DoxyCompactList}\small\item\em Flush receive buffer of mrf24j40. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_a72626ec7ec5ecc20053f2a016a201a1e}{mrf24j40\-\_\-set\-\_\-channel} (uns8 \-\_\-channel)
+\begin{DoxyCompactList}\small\item\em Change channels. \end{DoxyCompactList}\item 
+uns8 \hyperlink{mrf24j40_8c_a9da66b4d338b1e049f3f05d544f1fd54}{mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed} ()
+\begin{DoxyCompactList}\small\item\em Scan all channels for lowest R\-F energy. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_a4e1e4d74cf38c7fc374f3eb255700c03}{mrf24j40\-\_\-orphan\-\_\-channel\-\_\-scan} ()
+\item 
+void \hyperlink{mrf24j40_8c_ab71ccfcff88aac5eee58a19f54aa2109}{mrf24j40\-\_\-start\-\_\-pan} ()
+\item 
+void \hyperlink{mrf24j40_8c_ad9e81cebd5af85bb472afca27a98a155}{mrf24j40\-\_\-realign\-\_\-pan} ()
+\item 
+void \hyperlink{mrf24j40_8c_a79c36e3ed4f61d22249207839f4f9780}{mrf24j40\-\_\-associate\-\_\-to\-\_\-pan} ()
+\item 
+void \hyperlink{mrf24j40_8c_a52bdc6b4a498cb7c7359bd46b024f698}{mrf24h40\-\_\-pan\-\_\-association\-\_\-requested} ()
+\item 
+void \hyperlink{mrf24j40_8c_a6b2e12ab3335c73d91854720ab423635}{mrf24j40\-\_\-set\-\_\-pan\-\_\-id} (uns16 \-\_\-pan\-\_\-id)
+\begin{DoxyCompactList}\small\item\em Set P\-A\-N id. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_aaa6d5cff4b27a95ad3ba70b9546829a9}{mrf24j40\-\_\-set\-\_\-extended\-\_\-address} (uns8 $\ast$\-\_\-extended\-\_\-address)
+\begin{DoxyCompactList}\small\item\em Set extended address. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_aa649c52d5e4f761cf3bfef6526507621}{mrf24j40\-\_\-set\-\_\-short\-\_\-address} (uns16 \-\_\-short\-\_\-address)
+\begin{DoxyCompactList}\small\item\em Set short address. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_ae0914aea7789bb5e8255846c5af2b7c2}{mrf24j40\-\_\-handle\-\_\-isr} ()
+\begin{DoxyCompactList}\small\item\em Interrupt service routine for mrf24j40 chip. \end{DoxyCompactList}\item 
+uns8 \hyperlink{mrf24j40_8c_a212ea4da8d06ced12fe211e681ec33b8}{mrf24j40\-\_\-receive} (uns8 $\ast$data, uns8 bytes\-\_\-to\-\_\-receive)
+\begin{DoxyCompactList}\small\item\em Pull received data from buffer. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_a339a469ccf270b9f3b36285397263270}{mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address} (uns8 frame\-\_\-type, uns16 dest\-\_\-pan\-\_\-id, uns8 $\ast$dest\-\_\-extended\-\_\-address, uns8 $\ast$data, uns8 data\-\_\-length, uns8 ack)
+\begin{DoxyCompactList}\small\item\em Transmit packet to extended address. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_abd67d5fb6662acd68fea3ad71ea3a5a6}{mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address} (uns8 frame\-\_\-type, uns16 dest\-\_\-pan\-\_\-id, uns16 dest\-\_\-short\-\_\-address, uns8 $\ast$data, uns8 bytes\-\_\-to\-\_\-transmit, uns8 ack)
+\begin{DoxyCompactList}\small\item\em Transmit packet to short address. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_af9ff6a491b3bd0835f42ba7a541de95e}{mrf24j40\-\_\-transmit} (uns8 $\ast$data, uns8 bytes\-\_\-to\-\_\-transmit)
+\begin{DoxyCompactList}\small\item\em Transmit raw data. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_a261a227eeebba1fd8a02602eb93e4ade}{mrf24j40\-\_\-init} ()
+\begin{DoxyCompactList}\small\item\em Initialises mrf24j40 chip ready for use. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_af4f4c45771aef2d2b5b7a43649efb51a}{mrf24j40\-\_\-init\-\_\-coordinator} ()
+\item 
+uns8 \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\-\_\-short\-\_\-addr\-\_\-read} (uns8 addr)
+\begin{DoxyCompactList}\small\item\em Read data from short address of memory location in mrf24j40. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\-\_\-short\-\_\-addr\-\_\-write} (uns8 addr, uns8 data)
+\begin{DoxyCompactList}\small\item\em Write data to short address memory location. \end{DoxyCompactList}\item 
+uns8 \hyperlink{mrf24j40_8c_a90608c5fc9744ae883557236eb9b128e}{mrf24j40\-\_\-long\-\_\-addr\-\_\-read} (uns16 addr)
+\begin{DoxyCompactList}\small\item\em Read data from long address of memory location in mrf24j40. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\-\_\-long\-\_\-addr\-\_\-write} (uns16 addr, uns8 data)
+\begin{DoxyCompactList}\small\item\em Write data to long address memory location. \end{DoxyCompactList}\item 
+void \hyperlink{mrf24j40_8c_ac6dddd7f68e8cb580cd56b08b2eaba2a}{mrf24j40\-\_\-setup\-\_\-io} ()
+\begin{DoxyCompactList}\small\item\em Setup ports/pins as inputs/outputs ready for use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uns8 \hyperlink{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}{data\-\_\-sequence\-\_\-number}
+\item 
+uns16 \hyperlink{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{pan\-\_\-id} = 0xffff
+\item 
+uns8 \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\-\_\-address} \mbox{[}8\mbox{]} = \{0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff\}
+\item 
+uns16 \hyperlink{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}{short\-\_\-address} = 0xffff
+\item 
+uns8 \hyperlink{mrf24j40_8c_ae7b7ee2dcad6c2d174a78a8c47474df5}{current\-\_\-channel} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{mrf24j40_8c_a52bdc6b4a498cb7c7359bd46b024f698}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24h40\-\_\-pan\-\_\-association\-\_\-requested@{mrf24h40\-\_\-pan\-\_\-association\-\_\-requested}}
+\index{mrf24h40\-\_\-pan\-\_\-association\-\_\-requested@{mrf24h40\-\_\-pan\-\_\-association\-\_\-requested}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24h40\-\_\-pan\-\_\-association\-\_\-requested}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24h40\-\_\-pan\-\_\-association\-\_\-requested (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a52bdc6b4a498cb7c7359bd46b024f698}
+
+
+Definition at line 286 of file mrf24j40.\-c.
+
+
+\begin{DoxyCode}
+286                                           \{
+287     \textcolor{comment}{// allocate 16bit short address}
+288         \textcolor{comment}{// fffe stuff in 7.5.3.1}
+289     \textcolor{comment}{// generate association response command (see 7.3.2)}
+290     \textcolor{comment}{// send it indirect, using 7.5.6.3 method}
+291     \textcolor{comment}{//  add to pending transactions}
+292 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a79c36e3ed4f61d22249207839f4f9780}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-associate\-\_\-to\-\_\-pan@{mrf24j40\-\_\-associate\-\_\-to\-\_\-pan}}
+\index{mrf24j40\-\_\-associate\-\_\-to\-\_\-pan@{mrf24j40\-\_\-associate\-\_\-to\-\_\-pan}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-associate\-\_\-to\-\_\-pan}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-associate\-\_\-to\-\_\-pan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a79c36e3ed4f61d22249207839f4f9780}
+
+
+Definition at line 280 of file mrf24j40.\-c.
+
+
+\begin{DoxyCode}
+280                                  \{
+281     \textcolor{comment}{// send associate to pan command}
+282     \textcolor{comment}{// wait macResponseWaitTime}
+283     
+284 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a43c2197b37525bad11b0a279543e14de}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-flush\-\_\-receive\-\_\-buffer@{mrf24j40\-\_\-flush\-\_\-receive\-\_\-buffer}}
+\index{mrf24j40\-\_\-flush\-\_\-receive\-\_\-buffer@{mrf24j40\-\_\-flush\-\_\-receive\-\_\-buffer}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-flush\-\_\-receive\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-flush\-\_\-receive\-\_\-buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a43c2197b37525bad11b0a279543e14de}
+
+
+Flush receive buffer of mrf24j40. 
+
+No need to call this routine normally, except according to mrf24j40 errata (promiscuous mode) 
+
+Definition at line 89 of file mrf24j40.\-c.
+
+
+
+References mrf24j40\-\_\-short\-\_\-addr\-\_\-read(), mrf24j40\-\_\-short\-\_\-addr\-\_\-write(), R\-X\-F\-L\-U\-S\-H, and R\-X\-F\-L\-U\-S\-H\-\_\-\-R\-X\-F\-L\-U\-S\-H.
+
+
+
+Referenced by mrf24j40\-\_\-receive\-\_\-callback().
+
+
+\begin{DoxyCode}
+89                                      \{
+90     
+91     uns8 rxflush;
+92 
+93     rxflush = \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\_short\_addr\_read}(\hyperlink{mrf24j40__defines_8h_abdcfede4d7605fdbf20e4acc51a7d8b7}{RXFLUSH}); \textcolor{comment}{// Get rxflush}
+94     set\_bit(rxflush, \hyperlink{mrf24j40__defines_8h_a382fbe527c20f2287961e81990642563}{RXFLUSH\_RXFLUSH});   \textcolor{comment}{// Set flush bit}
+95     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_abdcfede4d7605fdbf20e4acc51a7d8b7}{RXFLUSH}, rxflush);    \textcolor{comment}{// Push it back to the
+       mrf}
+96 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_ae0914aea7789bb5e8255846c5af2b7c2}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-handle\-\_\-isr@{mrf24j40\-\_\-handle\-\_\-isr}}
+\index{mrf24j40\-\_\-handle\-\_\-isr@{mrf24j40\-\_\-handle\-\_\-isr}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-handle\-\_\-isr}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-handle\-\_\-isr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_ae0914aea7789bb5e8255846c5af2b7c2}
+
+
+Interrupt service routine for mrf24j40 chip. 
+
+Call this routine when the mrf24j40 indicates an interrupt condition, or called regularly. 
+
+Definition at line 335 of file mrf24j40.\-c.
+
+
+
+References I\-N\-T\-S\-T\-A\-T, I\-N\-T\-S\-T\-A\-T\-\_\-\-R\-X\-I\-F, I\-N\-T\-S\-T\-A\-T\-\_\-\-T\-X\-N\-I\-F, mrf24j40\-\_\-receive\-\_\-callback(), mrf24j40\-\_\-short\-\_\-addr\-\_\-read(), mrf24j40\-\_\-transmit\-\_\-callback(), T\-X\-S\-T\-A\-T, and T\-X\-S\-T\-A\-T\-\_\-\-C\-C\-A\-F\-A\-I\-L.
+
+
+\begin{DoxyCode}
+335                            \{
+336 
+337 uns8 intstat;
+338 
+339     \textcolor{comment}{// first we need to get a copy of intstat to find out what happened}
+340     intstat = \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\_short\_addr\_read}(\hyperlink{mrf24j40__defines_8h_a555136974e2faa49b15189b7c27597c6}{INTSTAT});
+341     
+342     \textcolor{comment}{// mrf24j40 intstat register is cleared on read}
+343     \textcolor{keywordflow}{if} (test\_bit(intstat, \hyperlink{mrf24j40__defines_8h_a5b056f0a98d7434d1040e309e09b557d}{INTSTAT\_RXIF})) \{
+344 \textcolor{preprocessor}{            #ifndef \_\_PIC32MX\_\_}
+345 \textcolor{preprocessor}{}                serial\_print\_str(\textcolor{stringliteral}{"R"});
+346 \textcolor{preprocessor}{                #endif              }
+347 \textcolor{preprocessor}{}        \textcolor{comment}{// handle receive}
+348         \hyperlink{____zigbee_8c_ae5780b8f43c80edf90d1a6292d3b9f81}{mrf24j40\_receive\_callback}();
+349     \}
+350     \textcolor{keywordflow}{if} (test\_bit(intstat, \hyperlink{mrf24j40__defines_8h_a3e5e72bdac6785166caa54df6c904ad3}{INTSTAT\_TXNIF})) \{
+351 \textcolor{preprocessor}{            #ifndef \_\_PIC32MX\_\_ }
+352 \textcolor{preprocessor}{}                serial\_print\_str(\textcolor{stringliteral}{"Tx complete txstat=0x"});
+353 \textcolor{preprocessor}{            #endif  }
+354 \textcolor{preprocessor}{}        uns8 stat = \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\_short\_addr\_read}(\hyperlink{mrf24j40__defines_8h_a9b55c5012b89b417ee348b39a8d708c3}{TXSTAT});
+355         \hyperlink{____zigbee_8c_a2ea8d1d035c0b178eb3b7f1dfbfe2822}{mrf24j40\_transmit\_callback}(stat & 0b00000001, \textcolor{comment}{// success = 0}
+356                                           stat >> 6,    \textcolor{comment}{// retries}
+357                                           test\_bit(stat, \hyperlink{mrf24j40__defines_8h_ab482c2f3e759f847408bcffb8c130a71}{TXSTAT\_CCAFAIL})); \textcolor{comment}{// due to cca
+       failure?}
+358 \textcolor{preprocessor}{            #ifndef \_\_PIC32MX\_\_                                       }
+359 \textcolor{preprocessor}{}                serial\_print\_int\_hex(stat);
+360                 serial\_print\_nl();
+361 \textcolor{preprocessor}{                #endif              }
+362 \textcolor{preprocessor}{}    \}
+363 
+364 \}   
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a261a227eeebba1fd8a02602eb93e4ade}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-init@{mrf24j40\-\_\-init}}
+\index{mrf24j40\-\_\-init@{mrf24j40\-\_\-init}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a261a227eeebba1fd8a02602eb93e4ade}
+
+
+Initialises mrf24j40 chip ready for use. 
+
+Sets int pin as input and cs pin as output. 
+
+Definition at line 586 of file mrf24j40.\-c.
+
+
+
+References B\-B\-R\-E\-G2, B\-B\-R\-E\-G6, B\-B\-R\-E\-G6\-\_\-\-R\-S\-S\-I\-M\-O\-D\-E2, C\-C\-A\-E\-D\-T\-H, data\-\_\-sequence\-\_\-number, Delayus(), mrf24j40\-\_\-long\-\_\-addr\-\_\-read(), mrf24j40\-\_\-long\-\_\-addr\-\_\-write(), mrf24j40\-\_\-short\-\_\-addr\-\_\-read(), mrf24j40\-\_\-short\-\_\-addr\-\_\-write(), M\-R\-F\-\_\-\-I\-N\-T\-C\-O\-N, M\-R\-F\-\_\-\-I\-N\-T\-C\-O\-N\-\_\-\-R\-X\-I\-E, M\-R\-F\-\_\-\-I\-N\-T\-C\-O\-N\-\_\-\-T\-X\-N\-I\-E, P\-A\-C\-O\-N2, R\-F\-C\-O\-N0, R\-F\-C\-O\-N1, R\-F\-C\-O\-N2, R\-F\-C\-O\-N3, R\-F\-C\-O\-N6, R\-F\-C\-O\-N7, R\-F\-C\-O\-N8, R\-F\-C\-T\-L, R\-F\-S\-T\-A\-T\-E, S\-L\-P\-C\-O\-N1, S\-O\-F\-T\-R\-S\-T, T\-E\-S\-T\-M\-O\-D\-E, and T\-X\-S\-T\-B\-L.
+
+
+
+Referenced by init\-\_\-zigbee().
+
+
+\begin{DoxyCode}
+587 \{
+588     uns8 check;
+589     
+590     \textcolor{comment}{// Example steps to initialize the MRF24J40:}
+591     
+592     \textcolor{comment}{// 1. SOFTRST (0x2A) = 0x07}
+593     \textcolor{comment}{// Perform a software Reset.}
+594     \textcolor{comment}{// The bits will be automatically cleared to 0 by hardware.}
+595     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a6adcf17de0b3fc9cfbead5437bb5f25a}{SOFTRST}, 0x07);
+596     
+597     \textcolor{comment}{// Wait for soft reset to complete}
+598 
+599     \textcolor{keywordflow}{do} \{
+600         check = \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\_short\_addr\_read}(\hyperlink{mrf24j40__defines_8h_a6adcf17de0b3fc9cfbead5437bb5f25a}{SOFTRST});
+601     \} \textcolor{keywordflow}{while} (check != 0);
+602     
+603 \textcolor{preprocessor}{    #if defined(ENABLE\_PA\_LNA) && defined(MRF24J40MB)}
+604 \textcolor{preprocessor}{}        \textcolor{comment}{// Turn on PA/LNA if we have one}
+605         \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ad716bb76ce6c332187e14e0b0c7bfe67}{TESTMODE}, 0x0f);
+606 \textcolor{preprocessor}{    #endif  }
+607 \textcolor{preprocessor}{}    
+608     \textcolor{comment}{// 2. PACON2 (0x18) = 0x98}
+609     \textcolor{comment}{// Initialize FIFOEN = 1 and TXONTS = 0x6.}
+610     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ae058aeb59a04b88b23447568d184fe63}{PACON2}, 0x98);
+611     \textcolor{comment}{// 3. TXSTBL (0x2E) = 0x95}
+612     \textcolor{comment}{// Initialize RFSTBL = 0x9.}
+613     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_aae9c36aa79c0b3701b06bc612029a136}{TXSTBL}, 0x95);
+614     
+615     \textcolor{comment}{// wait for mrf to be in receive mode}
+616     
+617     \textcolor{keywordflow}{do} \{
+618         check = \hyperlink{mrf24j40_8c_a90608c5fc9744ae883557236eb9b128e}{mrf24j40\_long\_addr\_read}(\hyperlink{mrf24j40__defines_8h_a19aa795c6f74ab05d62052549656e6c8}{RFSTATE});
+619     \} \textcolor{keywordflow}{while} (check & 0xa0 != 0xa0);
+620 
+621     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_afdb12829f6ceee9516556a07e4b1abfb}{RFCON0}, 0x03); \textcolor{comment}{// or three?}
+622     \textcolor{comment}{// mrf24j40\_long\_addr\_write(RFCON1, 0x02);  // VCO control mode (1 or 2?)}
+623     \textcolor{comment}{// miwi stack source is at odds with data sheet here}
+624     
+625     \textcolor{comment}{// 4. RFCON1 (0x201) = 0x01 – Initialize VCOOPT = 0x01.}
+626     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ad612dcdedf3697a1f7bd4341420ace20}{RFCON1}, 0x01);
+627     \textcolor{comment}{// 5. RFCON2 (0x202) = 0x80 – Enable PLL (PLLEN = 1).}
+628     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ad938ea2506401ec12b9eda2498e043c5}{RFCON2}, 0x80);
+629     \textcolor{comment}{// 6. RFCON6 (0x206) = 0x90 – Initialize TXFIL = 1 and 20MRECVR = 1.}
+630     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a3ad08aaa6d1b7d5ded25175553539fe7}{RFCON6}, 0x90);
+631     \textcolor{comment}{// 7. RFCON7 (0x207) = 0x80 – Initialize SLPCLKSEL = 0x2 (100 kHz Internal oscillator).}
+632     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a3e4ace5ac84f9457626b21c0e224f7dd}{RFCON7}, 0x08);
+633     \textcolor{comment}{// 8. RFCON8 (0x208) = 0x10 – Initialize RFVCO = 1.}
+634     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a43c9711b1a654ad62b1e2318da933c4b}{RFCON8}, 0x10);
+635     \textcolor{comment}{// 9. SLPCON1 (0x220) = 0x21 – Initialize CLKOUTEN = 1 and SLPCLKDIV = 0x01.}
+636     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a733f7f8770be1951b8a17b2ca63f92ef}{SLPCON1}, 0x21);
+637     
+638     \textcolor{comment}{//Configuration for nonbeacon-enabled devices}
+639     \textcolor{comment}{//(see Section MRF datasheet 3.8 “Beacon-Enabled and Nonbeacon-Enabled Networks”):}
+640     \textcolor{comment}{//10. BBREG2 (0x3A) = 0x80 – Set CCA mode to ED.}
+641     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_abc8629a2ad9d0c4cd02f6e777d221918}{BBREG2}, 0x80);
+642     \textcolor{comment}{// 11. RSSITHCCA (0x3F) = 0x60 – Set CCA ED threshold.}
+643     \textcolor{comment}{// IH: I think the datasheet is wrong, the mem address is "CCAEDTH", even though}
+644     \textcolor{comment}{// it's referred to as RSSITHCCA and CCAMODE in the documentation...}
+645     
+646     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a2e3f22229049044797aafc7caf8bb921}{CCAEDTH}, 0x60);
+647     \textcolor{comment}{// 12. BBREG6 (0x3E) = 0x40 – Set appended RSSI value to RXFIFO.}
+648     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_afd2fbebdba4de5a48540fe75c71da7be}{BBREG6}, 1 << 
+      \hyperlink{mrf24j40__defines_8h_a0a647fe142731bac78f1195c7ff2f6f8}{BBREG6\_RSSIMODE2});
+649     \textcolor{comment}{// 13. Enable interrupts – See Section 3.3 “Interrupts”.}
+650     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ac83aacfe9615688d0dadc710df9a9f69}{MRF\_INTCON}, (1 << 
+      \hyperlink{mrf24j40__defines_8h_adcbff29ab4efd3eac6458720ca3d05eb}{MRF\_INTCON\_RXIE}) & (1 << \hyperlink{mrf24j40__defines_8h_aa5f478bf77ee0957c45cd88366660da9}{MRF\_INTCON\_TXNIE}));
+651     \textcolor{comment}{// 14. Set channel – See Section 3.4 “Channel Selection”.}
+652     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_afdb12829f6ceee9516556a07e4b1abfb}{RFCON0}, 11);
+653         
+654 \textcolor{preprocessor}{    #if defined(ENABLE\_PA\_LNA) && defined(MRF24J40MB)}
+655 \textcolor{preprocessor}{}    \textcolor{comment}{// There are special MRF24J40 transceiver output power}
+656     \textcolor{comment}{// setting for Microchip MRF24J40MB module.}
+657     \textcolor{comment}{// To do: Correct settings for other locations}
+658     
+659 \textcolor{preprocessor}{        #if APPLICATION\_SITE == EUROPE}
+660 \textcolor{preprocessor}{}            \textcolor{comment}{// MRF24J40 output power set to be -14.9dB}
+661             \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a5032bd679e328b2cc0c4a9293ed56182}{RFCON3}, 0x70);
+662 \textcolor{preprocessor}{        #else}
+663 \textcolor{preprocessor}{}            \textcolor{comment}{// MRF24J40 output power set to be -1.9dB - Stock setting}
+664             \textcolor{comment}{// mrf24j40\_long\_addr\_writeRFCON3, 0x18);}
+665 
+666             \textcolor{comment}{// MRF24J40 output power set to be -1.2dB}
+667             \textcolor{comment}{// mrf24j40\_long\_addr\_write(RFCON3, 0x10);}
+668 
+669             \textcolor{comment}{// MRF24J40 output power set to be -0.5dB}
+670             \textcolor{comment}{// mrf24j40\_long\_addr\_write(RFCON3, 0x08);}
+671 
+672             \textcolor{comment}{// MRF24J40 output power set to be -0dB -> 22,5 dBm output power}
+673             \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a5032bd679e328b2cc0c4a9293ed56182}{RFCON3}, 0x00);
+674 \textcolor{preprocessor}{        #endif}
+675 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #else}
+676 \textcolor{preprocessor}{}        \textcolor{comment}{// power level to be 0dBms}
+677         \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a5032bd679e328b2cc0c4a9293ed56182}{RFCON3},0x00);
+678 \textcolor{preprocessor}{    #endif}
+679 \textcolor{preprocessor}{}
+680     \textcolor{comment}{// 15. RFCTL (0x36) = 0x04 – Reset RF state machine.}
+681     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_aae352d5efa2ff27613c38ea5213ff425}{RFCTL}, 0x04);
+682     
+683     \textcolor{comment}{// 16. RFCTL (0x36) = 0x00.}
+684     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_aae352d5efa2ff27613c38ea5213ff425}{RFCTL}, 0x00);
+685     \textcolor{comment}{// 17. Delay at least 192 ìs.}
+686 \textcolor{preprocessor}{    #ifndef \_\_PIC32MX\_\_ }
+687 \textcolor{preprocessor}{}            delay\_us(200);  
+688 \textcolor{preprocessor}{        #endif}
+689 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+690 \textcolor{preprocessor}{}                \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(200);
+691 \textcolor{preprocessor}{        #endif                          }
+692 \textcolor{preprocessor}{}
+693     \textcolor{comment}{//  RXMCR.PANCOORD = 1 if coordinator, 0 is default (not coordinator)}
+694 
+695     \textcolor{comment}{//mrf24j40\_short\_addr\_write(RXMCR, 0x01); // promiscuous mode, no coord}
+696 
+697     \hyperlink{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}{data\_sequence\_number} = 0;
+698 
+699 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_af4f4c45771aef2d2b5b7a43649efb51a}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-init\-\_\-coordinator@{mrf24j40\-\_\-init\-\_\-coordinator}}
+\index{mrf24j40\-\_\-init\-\_\-coordinator@{mrf24j40\-\_\-init\-\_\-coordinator}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-init\-\_\-coordinator}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-init\-\_\-coordinator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_af4f4c45771aef2d2b5b7a43649efb51a}
+
+
+Definition at line 702 of file mrf24j40.\-c.
+
+
+
+References B\-B\-R\-E\-G2, B\-B\-R\-E\-G6, C\-C\-A\-E\-D\-T\-H, data\-\_\-sequence\-\_\-number, Delayus(), extended\-\_\-address, mrf24j40\-\_\-long\-\_\-addr\-\_\-write(), mrf24j40\-\_\-short\-\_\-addr\-\_\-read(), mrf24j40\-\_\-short\-\_\-addr\-\_\-write(), M\-R\-F\-\_\-\-I\-N\-T\-C\-O\-N, M\-R\-F\-\_\-\-I\-N\-T\-C\-O\-N\-\_\-\-R\-X\-I\-E, M\-R\-F\-\_\-\-I\-N\-T\-C\-O\-N\-\_\-\-T\-X\-N\-I\-E, P\-A\-C\-O\-N2, R\-F\-C\-O\-N0, R\-F\-C\-O\-N1, R\-F\-C\-O\-N2, R\-F\-C\-O\-N6, R\-F\-C\-O\-N7, R\-F\-C\-O\-N8, R\-F\-C\-T\-L, R\-X\-M\-C\-R, R\-X\-M\-C\-R\-\_\-\-P\-A\-N\-C\-O\-O\-R\-D, S\-L\-P\-C\-O\-N1, S\-O\-F\-T\-R\-S\-T, T\-X\-M\-C\-R, T\-X\-M\-C\-R\-\_\-\-S\-L\-O\-T\-T\-E\-D, and T\-X\-S\-T\-B\-L.
+
+
+\begin{DoxyCode}
+702                                  \{
+703 uns8 val;
+704     
+705     \textcolor{comment}{// Example steps to initialize the MRF24J40:}
+706     
+707     \textcolor{comment}{// 1. SOFTRST (0x2A) = 0x07 – Perform a software Reset. The bits will be automatically cleared to ‘0’ by
+       hardware.}
+708     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a6adcf17de0b3fc9cfbead5437bb5f25a}{SOFTRST}, 0x07);
+709     \textcolor{comment}{// 2. PACON2 (0x18) = 0x98 – Initialize FIFOEN = 1 and TXONTS = 0x6.}
+710     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ae058aeb59a04b88b23447568d184fe63}{PACON2}, 0x98);
+711     \textcolor{comment}{// 3. TXSTBL (0x2E) = 0x95 – Initialize RFSTBL = 0x9.}
+712     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_aae9c36aa79c0b3701b06bc612029a136}{TXSTBL}, 0x95);
+713     \textcolor{comment}{// 4. RFCON1 (0x201) = 0x01 – Initialize VCOOPT = 0x01.}
+714     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ad612dcdedf3697a1f7bd4341420ace20}{RFCON1}, 0x01);
+715     \textcolor{comment}{// 5. RFCON2 (0x202) = 0x80 – Enable PLL (PLLEN = 1).}
+716     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ad938ea2506401ec12b9eda2498e043c5}{RFCON2}, 0x008);
+717     \textcolor{comment}{// 6. RFCON6 (0x206) = 0x90 – Initialize TXFIL = 1 and 20MRECVR = 1.}
+718     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a3ad08aaa6d1b7d5ded25175553539fe7}{RFCON6}, 0x90);
+719     \textcolor{comment}{// 7. RFCON7 (0x207) = 0x80 – Initialize SLPCLKSEL = 0x2 (100 kHz Internal oscillator).}
+720     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a3e4ace5ac84f9457626b21c0e224f7dd}{RFCON7}, 0x08);
+721     \textcolor{comment}{// 8. RFCON8 (0x208) = 0x10 – Initialize RFVCO = 1.}
+722     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a43c9711b1a654ad62b1e2318da933c4b}{RFCON8}, 0x10);
+723     \textcolor{comment}{// 9. SLPCON1 (0x220) = 0x21 – Initialize CLKOUTEN = 1 and SLPCLKDIV = 0x01.}
+724     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a733f7f8770be1951b8a17b2ca63f92ef}{SLPCON1}, 0x21);
+725     
+726     \textcolor{comment}{//Configuration for nonbeacon-enabled devices}
+727     \textcolor{comment}{//(see Section MRF datasheet 3.8 “Beacon-Enabled and Nonbeacon-Enabled Networks”):}
+728     \textcolor{comment}{//10. BBREG2 (0x3A) = 0x80 – Set CCA mode to ED.}
+729     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_abc8629a2ad9d0c4cd02f6e777d221918}{BBREG2}, 0x80);
+730     \textcolor{comment}{// 11. RSSITHCCA (0x3F) = 0x60 – Set CCA ED threshold.}
+731     \textcolor{comment}{// IH: I think the datasheet is wrong, the mem address is "CCAEDTH", even though}
+732     \textcolor{comment}{// it's referred to as RSSITHCCA and CCAMODE in the documentation...}
+733     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a2e3f22229049044797aafc7caf8bb921}{CCAEDTH}, 0x60);
+734     \textcolor{comment}{// 12. BBREG6 (0x3E) = 0x40 – Set appended RSSI value to RXFIFO.}
+735     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_afd2fbebdba4de5a48540fe75c71da7be}{BBREG6}, 0x40);
+736     \textcolor{comment}{// 13. Enable interrupts – See Section 3.3 “Interrupts”.}
+737     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ac83aacfe9615688d0dadc710df9a9f69}{MRF\_INTCON}, (1 << 
+      \hyperlink{mrf24j40__defines_8h_adcbff29ab4efd3eac6458720ca3d05eb}{MRF\_INTCON\_RXIE}) & (1 << \hyperlink{mrf24j40__defines_8h_aa5f478bf77ee0957c45cd88366660da9}{MRF\_INTCON\_TXNIE}));
+738     \textcolor{comment}{// 14. Set channel – See Section 3.4 “Channel Selection”.}
+739     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_afdb12829f6ceee9516556a07e4b1abfb}{RFCON0}, 11);
+740     \textcolor{comment}{// 15. RFCTL (0x36) = 0x04 – Reset RF state machine.}
+741     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_aae352d5efa2ff27613c38ea5213ff425}{RFCTL}, 0x04);
+742     
+743     \textcolor{comment}{// 16. RFCTL (0x36) = 0x00.}
+744     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_aae352d5efa2ff27613c38ea5213ff425}{RFCTL}, 0x00);
+745     \textcolor{comment}{// 17. Delay at least 192 ìs. }
+746 \textcolor{preprocessor}{    #ifndef \_\_PIC32MX\_\_ }
+747 \textcolor{preprocessor}{}            delay\_us(200);  
+748 \textcolor{preprocessor}{        #endif}
+749 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+750 \textcolor{preprocessor}{}                \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(200);
+751 \textcolor{preprocessor}{        #endif    }
+752 \textcolor{preprocessor}{}
+753 \textcolor{comment}{//  RXMCR.PANCOORD = 1 if coordinator, 0 is default (not coordinator)}
+754 \textcolor{comment}{//  TXMCR.SLOTTED = 1 for slotted CSMA-CA mode, 0 is default (unslotted CSMA\_CA mode)}
+755 
+756     \textcolor{comment}{//mrf24j40\_short\_addr\_write(RXMCR, 0x01); // promiscuous mode, no coord}
+757     
+758     \textcolor{comment}{//Set the PANCOORD (RXMCR 0x00<3>) bit = 1 to configure as PAN coordinator.}
+759     val = \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\_short\_addr\_read}(\hyperlink{mrf24j40__defines_8h_ae852a501881d70a7159c8b490b99a20b}{RXMCR});
+760     set\_bit(val, \hyperlink{mrf24j40__defines_8h_aeb5e1f439335c265d60e2ad434336f39}{RXMCR\_PANCOORD});
+761     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ae852a501881d70a7159c8b490b99a20b}{RXMCR}, val);
+762     
+763     \textcolor{comment}{//2. Set the SLOTTED (TXMCR 0x11<5>) bit = 1 to use Slotted CSMA-CA mode.}
+764     \textcolor{comment}{// turn on slotted}
+765     val = \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\_short\_addr\_read}(\hyperlink{mrf24j40__defines_8h_aae1eb8c52f9c90a1da5173b22fe57dce}{TXMCR});
+766     set\_bit(val, \hyperlink{mrf24j40__defines_8h_ae9a412d7274c6519d5b1955b125bd485}{TXMCR\_SLOTTED});
+767     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_aae1eb8c52f9c90a1da5173b22fe57dce}{TXMCR}, val);
+768 
+769     \textcolor{comment}{// 3. Load the beacon frame into the TXBFIFO (0x080-0x0FF).}
+770     uns8 header\_length = 2+1+10;    
+771     uns8 frame\_length = header\_length + 6;
+772     uns8 superframe\_spec\_field\_l = 0b10001000; \textcolor{comment}{// bo = 8, so = 8}
+773     uns8 superframe\_spec\_field\_h = 0b11001000; \textcolor{comment}{// AP/PC/R/BLE/final cap slot}
+774     
+775     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+0, header\_length);
+776     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+1, frame\_length);
+777     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+2, 0x00);   \textcolor{comment}{//frame control - beacon}
+778     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+3, 0x80);   \textcolor{comment}{//addressing mode - source only}
+779     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+4, 
+      \hyperlink{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}{data\_sequence\_number}++);   \textcolor{comment}{//seq number }
+780     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+5, 5);   \textcolor{comment}{//PANID LSB}
+781     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+6, 0);   \textcolor{comment}{//PANID MSB}
+782     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+7, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[7]); \textcolor{comment}{// LSB}
+783     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+8, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[6]);
+784     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+9, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[5]);
+785     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+10, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[4]);
+786     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+11, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[3]);
+787     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+12, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[2]);
+788     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+13, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[1]);
+789     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+14, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[0]);    \textcolor{comment}{//
+       MSB}
+790     
+791     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+15, superframe\_spec\_field\_l);
+792     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+16, superframe\_spec\_field\_h);
+793     
+794     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+17, 0);  \textcolor{comment}{// GTS}
+795     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+18, 0);  \textcolor{comment}{// Pending addresses}
+796     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+19, 0x4d);   \textcolor{comment}{// Protocol ID}
+797     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x080+20, 0x10);   \textcolor{comment}{// version }
+798     \textcolor{comment}{// no payload}
+799     
+800 
+801     \textcolor{comment}{// 4. Set the TXBMSK (TXBCON1 0x25<7>) bit = 1 to mask the beacon interrupt mask.}
+802     \textcolor{comment}{//val = mrf24j40\_short\_addr\_read(TXBCON1);}
+803     \textcolor{comment}{//set\_bit(val, TXBCON1\_TXBMSK);}
+804     \textcolor{comment}{//mrf24j40\_short\_addr\_write(RXMCR);}
+805 
+806     \textcolor{comment}{//5. Program the CAP end slot (ESLOTG1 0x13<3:0>) value. If the coordinator supports}
+807     \textcolor{comment}{//Guaranteed Time Slot operation, refer to Section 3.8.1.5 “Configuring Beacon-Enabled}
+808     \textcolor{comment}{//GTS Settings for PAN Coordinator” below.}
+809 
+810     \textcolor{comment}{//6. Calibrate the Sleep Clock (SLPCLK) frequency. Refer to Section 3.15.1.2 “Sleep Clock Calibration”.}
+811     \textcolor{comment}{//7. Set WAKECNT (SLPACK 0x35<6:0>) value = 0x5F to set the main oscillator (20 MHz)}
+812     \textcolor{comment}{//start-up timer value.}
+813     \textcolor{comment}{//8. Program the Beacon Interval into the Main Counter,}
+814     \textcolor{comment}{//MAINCNT (0x229<1:0>, 0x228, 0x227, 0x226), }
+815     \textcolor{comment}{//and Remain Counter, REMCNT (0x225, 0x224), according to BO and SO values. Refer to}
+816     \textcolor{comment}{//Section 3.15.1.3 “Sleep Mode Counters”.}
+817     \textcolor{comment}{//9. Configure the BO (ORDER 0x10<7:4>) and SO (ORDER 0x10<3:0>) values. After configuring}
+818     \textcolor{comment}{//BO and SO, the beacon frame will be sent immediately.}
+819              \textcolor{comment}{//BO3(1) BO2(1) BO1(1) BO0(1) SO3(1) SO2(1) SO1(1) SO0(1)}
+820     \textcolor{comment}{//mrf24j40\_short\_addr\_write(ORDER, 0b10001000);}
+821     
+822     \hyperlink{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}{data\_sequence\_number} = 0;
+823 
+824 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a90608c5fc9744ae883557236eb9b128e}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-long\-\_\-addr\-\_\-read@{mrf24j40\-\_\-long\-\_\-addr\-\_\-read}}
+\index{mrf24j40\-\_\-long\-\_\-addr\-\_\-read@{mrf24j40\-\_\-long\-\_\-addr\-\_\-read}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-long\-\_\-addr\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}uns8 mrf24j40\-\_\-long\-\_\-addr\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{uns16}]{addr}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a90608c5fc9744ae883557236eb9b128e}
+
+
+Read data from long address of memory location in mrf24j40. 
+
+Returns the value in the memory location specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & Long address memory location (see mrf24h40\-\_\-defines.\-h) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 868 of file mrf24j40.\-c.
+
+
+
+References S\-P\-I\-\_\-read(), and S\-P\-I\-\_\-write().
+
+
+
+Referenced by mrf24j40\-\_\-init(), mrf24j40\-\_\-receive(), mrf24j40\-\_\-receive\-\_\-callback(), and mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed().
+
+
+\begin{DoxyCode}
+868                                         \{
+869 
+870     uns8 result;
+871 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_ }
+872 \textcolor{preprocessor}{}            clear\_pin(mrf24j40\_cs\_port, mrf24j40\_cs\_pin);
+873 
+874             addr = addr & 0b0000001111111111;   \textcolor{comment}{// <9:0> bits}
+875             addr = addr << 5;
+876             set\_bit(addr, 15);  \textcolor{comment}{// long addresss}
+877             spi\_hw\_transmit(addr >> 8);
+878             spi\_hw\_transmit(addr & 0x00ff);
+879             result = spi\_hw\_receive();  
+880 
+881             set\_pin(mrf24j40\_cs\_port, mrf24j40\_cs\_pin);
+882 \textcolor{preprocessor}{        #endif}
+883 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+884 \textcolor{preprocessor}{}            ZIGCS=0;
+885             addr=((addr<<1)&0x7FE)|0x800;
+886             addr<<=4;
+887             \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(addr>>8);
+888             \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(addr);
+889             result=\hyperlink{p8_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{SPI\_read}();
+890             ZIGCS=1;        
+891 \textcolor{preprocessor}{        #endif}
+892 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} result;
+893 \}   
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-long\-\_\-addr\-\_\-write@{mrf24j40\-\_\-long\-\_\-addr\-\_\-write}}
+\index{mrf24j40\-\_\-long\-\_\-addr\-\_\-write@{mrf24j40\-\_\-long\-\_\-addr\-\_\-write}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-long\-\_\-addr\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-long\-\_\-addr\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{uns16}]{addr, }
+\item[{uns8}]{data}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}
+
+
+Write data to long address memory location. 
+
+Sets the memory location to the value specified
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & Long address memory location (see mrf24h40\-\_\-defines.\-h) \\
+\hline
+{\em data} & Value that the memory location should be set to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 895 of file mrf24j40.\-c.
+
+
+
+References S\-P\-I\-\_\-write().
+
+
+
+Referenced by mrf24j40\-\_\-init(), mrf24j40\-\_\-init\-\_\-coordinator(), mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed(), mrf24j40\-\_\-set\-\_\-channel(), mrf24j40\-\_\-transmit(), mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address(), and mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address().
+
+
+\begin{DoxyCode}
+895                                                     \{
+896 
+897 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_}
+898 \textcolor{preprocessor}{}            clear\_pin(mrf24j40\_cs\_port, mrf24j40\_cs\_pin);
+899 
+900             addr = addr & 0b0000001111111111;   \textcolor{comment}{// <9:0> bits}
+901             addr = addr << 5;
+902 
+903             set\_bit(addr, 15);  \textcolor{comment}{// long addresss}
+904             set\_bit(addr, 4);   \textcolor{comment}{// set for write}
+905 
+906             spi\_hw\_transmit(addr >> 8 );
+907             spi\_hw\_transmit(addr & 0x00ff);
+908             spi\_hw\_transmit(data);
+909     
+910             set\_pin(mrf24j40\_cs\_port, mrf24j40\_cs\_pin);
+911 \textcolor{preprocessor}{        #endif}
+912 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+913 \textcolor{preprocessor}{}            ZIGCS=0;
+914             addr=((addr<<1)&0x7FF)|0x801;
+915             addr<<=4;
+916             \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(addr>>8);
+917             \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(addr);
+918             \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(data);
+919             ZIGCS=1;     
+920 \textcolor{preprocessor}{        #endif              }
+921 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a4e1e4d74cf38c7fc374f3eb255700c03}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-orphan\-\_\-channel\-\_\-scan@{mrf24j40\-\_\-orphan\-\_\-channel\-\_\-scan}}
+\index{mrf24j40\-\_\-orphan\-\_\-channel\-\_\-scan@{mrf24j40\-\_\-orphan\-\_\-channel\-\_\-scan}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-orphan\-\_\-channel\-\_\-scan}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-orphan\-\_\-channel\-\_\-scan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a4e1e4d74cf38c7fc374f3eb255700c03}
+
+
+Definition at line 270 of file mrf24j40.\-c.
+
+
+\begin{DoxyCode}
+270                                     \{
+271 \}           
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_ad9e81cebd5af85bb472afca27a98a155}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-realign\-\_\-pan@{mrf24j40\-\_\-realign\-\_\-pan}}
+\index{mrf24j40\-\_\-realign\-\_\-pan@{mrf24j40\-\_\-realign\-\_\-pan}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-realign\-\_\-pan}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-realign\-\_\-pan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_ad9e81cebd5af85bb472afca27a98a155}
+
+
+Definition at line 277 of file mrf24j40.\-c.
+
+
+\begin{DoxyCode}
+277                             \{
+278 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a212ea4da8d06ced12fe211e681ec33b8}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-receive@{mrf24j40\-\_\-receive}}
+\index{mrf24j40\-\_\-receive@{mrf24j40\-\_\-receive}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-receive}]{\setlength{\rightskip}{0pt plus 5cm}uns8 mrf24j40\-\_\-receive (
+\begin{DoxyParamCaption}
+\item[{uns8 $\ast$}]{data, }
+\item[{uns8}]{bytes\-\_\-to\-\_\-receive}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a212ea4da8d06ced12fe211e681ec33b8}
+
+
+Pull received data from buffer. 
+
+Once an interrupt has occured and we know it is because a packet has been received, this routine will pull the data from the mrf receive buffer. This needs to be done quickly so that the next packet is not lost. 
+
+Definition at line 366 of file mrf24j40.\-c.
+
+
+
+References B\-B\-R\-E\-G1, B\-B\-R\-E\-G1\-\_\-\-R\-X\-D\-E\-C\-I\-N\-V, mrf24j40\-\_\-long\-\_\-addr\-\_\-read(), and mrf24j40\-\_\-short\-\_\-addr\-\_\-write().
+
+
+
+Referenced by Z\-I\-Ggets().
+
+
+\begin{DoxyCode}
+366                                                          \{
+367 
+368 uns8 frame\_length;
+369 uns16 frame\_pos;
+370 uns8 buffer\_count;
+371 \textcolor{comment}{/*}
+372 \textcolor{comment}{1. Receive RXIF interrupt.}
+373 \textcolor{comment}{2. Disable host microcontroller interrupts.}
+374 \textcolor{comment}{3. Set RXDECINV = 1; disable receiving packets off air.}
+375 \textcolor{comment}{4. Read address, 0x300; get RXFIFO frame length value.}
+376 \textcolor{comment}{5. Read RXFIFO addresses, 0x301 through (0x300 + Frame Length + 2); read packet data plus LQI and RSSI.}
+377 \textcolor{comment}{6. Clear RXDECINV = 0; enable receiving packets.}
+378 \textcolor{comment}{7. Enable host microcontroller interrupts.}
+379 \textcolor{comment}{*/}
+380 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_        }
+381 \textcolor{preprocessor}{}            serial\_putc(\textcolor{charliteral}{'a'});
+382 \textcolor{preprocessor}{        #endif          }
+383 \textcolor{preprocessor}{}    \textcolor{comment}{// Disable reading packets off air}
+384     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a20cb57e354cea1bb261e2c7e36829f80}{BBREG1}, 1 << 
+      \hyperlink{mrf24j40__defines_8h_a8ebc60496b6c55e98e50d6ce41cb4646}{BBREG1\_RXDECINV});
+385 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_         }
+386 \textcolor{preprocessor}{}            serial\_putc(\textcolor{charliteral}{'b'});
+387 \textcolor{preprocessor}{        #endif          }
+388 \textcolor{preprocessor}{}    
+389     frame\_pos = 0x300;
+390     frame\_length = \hyperlink{mrf24j40_8c_a90608c5fc9744ae883557236eb9b128e}{mrf24j40\_long\_addr\_read}(frame\_pos++); 
+391     buffer\_count = 0;
+392 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_ }
+393 \textcolor{preprocessor}{}            serial\_putc(\textcolor{charliteral}{'c'});
+394 \textcolor{preprocessor}{        #endif          }
+395 \textcolor{preprocessor}{}    
+396     \textcolor{keywordflow}{while} ((buffer\_count <= bytes\_to\_receive) && (buffer\_count <= frame\_length + 2)) \{
+397         \textcolor{comment}{//0x301 through (0x300 + Frame Length + 2 ); read packet data plus LQI and RSSI.}
+398         data[buffer\_count++] = \hyperlink{mrf24j40_8c_a90608c5fc9744ae883557236eb9b128e}{mrf24j40\_long\_addr\_read}(frame\_pos++);
+399     \}
+400 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_ }
+401 \textcolor{preprocessor}{}            serial\_putc(\textcolor{charliteral}{'d'});
+402 \textcolor{preprocessor}{        #endif          }
+403 \textcolor{preprocessor}{}    
+404     \textcolor{comment}{// Re-enable reading packets off air}
+405     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a20cb57e354cea1bb261e2c7e36829f80}{BBREG1}, 0);
+406 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_ }
+407 \textcolor{preprocessor}{}            serial\_putc(\textcolor{charliteral}{'e'});
+408 \textcolor{preprocessor}{        #endif          }
+409 \textcolor{preprocessor}{}
+410     \textcolor{keywordflow}{return} buffer\_count - 1;
+411     
+412 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a9da66b4d338b1e049f3f05d544f1fd54}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed@{mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed}}
+\index{mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed@{mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed}]{\setlength{\rightskip}{0pt plus 5cm}uns8 mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a9da66b4d338b1e049f3f05d544f1fd54}
+
+
+Scan all channels for lowest R\-F energy. 
+
+Scans through all channels and reports the channel with the lowest Energy Detection level. 
+
+Definition at line 119 of file mrf24j40.\-c.
+
+
+
+References B\-B\-R\-E\-G6, B\-B\-R\-E\-G6\-\_\-\-R\-S\-S\-I\-M\-O\-D\-E1, B\-B\-R\-E\-G6\-\_\-\-R\-S\-S\-I\-M\-O\-D\-E2, B\-B\-R\-E\-G6\-\_\-\-R\-S\-S\-I\-R\-D\-Y, G\-P\-I\-O, mrf24j40\-\_\-long\-\_\-addr\-\_\-read(), mrf24j40\-\_\-long\-\_\-addr\-\_\-write(), mrf24j40\-\_\-set\-\_\-channel(), mrf24j40\-\_\-short\-\_\-addr\-\_\-read(), mrf24j40\-\_\-short\-\_\-addr\-\_\-write(), M\-R\-F\-\_\-\-F\-I\-R\-S\-T\-\_\-\-C\-H\-A\-N\-N\-E\-L, M\-R\-F\-\_\-\-L\-A\-S\-T\-\_\-\-C\-H\-A\-N\-N\-E\-L, R\-S\-S\-I, T\-E\-S\-T\-M\-O\-D\-E, and T\-R\-I\-S\-G\-P\-I\-O.
+
+
+\begin{DoxyCode}
+119                                            \{
+120 
+121 uns8 rssi;
+122 uns8 \_channel;
+123 uns16 scan\_count;
+124 uns8 highest\_on\_channel;
+125 uns8 lowest\_channel = \hyperlink{mrf24j40_8h_abd8f219d146b1b84628d9a49290f2432}{MRF\_LAST\_CHANNEL};
+126 uns8 lowest\_ed = 0xff;
+127 uns8 bbreg6;    
+128 
+129     \textcolor{comment}{// We should really ignore all packets here (do to)}
+130     
+131 \textcolor{preprocessor}{    #if defined(ENABLE\_PA\_LNA)}
+132 \textcolor{preprocessor}{}        \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ad716bb76ce6c332187e14e0b0c7bfe67}{TESTMODE}, 0x08);          \textcolor{comment}{// Disable
+       automatic switch on PA/LNA}
+133         \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_aa8bd8ab4679e66ad33a15687750e7c24}{TRISGPIO}, 0x0F);        \textcolor{comment}{// Set GPIO
+       direction}
+134         \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a1037b18e2d226fe7d327d4a6f17a21c1}{GPIO}, 0x0C);           \textcolor{comment}{// Enable LNA}
+135 \textcolor{preprocessor}{    #endif}
+136 \textcolor{preprocessor}{}
+137     
+138     \textcolor{keywordflow}{for} (\_channel = \hyperlink{mrf24j40_8h_abe950188f48a3cc9feda5ca6a9116c4a}{MRF\_FIRST\_CHANNEL}; \_channel <= 
+      \hyperlink{mrf24j40_8h_abd8f219d146b1b84628d9a49290f2432}{MRF\_LAST\_CHANNEL}; \_channel++) \{
+139         
+140         \textcolor{comment}{// switch channel}
+141         \hyperlink{mrf24j40_8c_a72626ec7ec5ecc20053f2a016a201a1e}{mrf24j40\_set\_channel}(\_channel);
+142         
+143         highest\_on\_channel = 0;
+144         \textcolor{keywordflow}{for} (scan\_count = 0; scan\_count < 1000; scan\_count++) \{
+145             \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_afd2fbebdba4de5a48540fe75c71da7be}{BBREG6}, 1 << 
+      \hyperlink{mrf24j40__defines_8h_a0672ae7c00c9f180f1376ff333bc9ee3}{BBREG6\_RSSIMODE1});
+146             \textcolor{keywordflow}{do} \{
+147                 bbreg6 = \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\_short\_addr\_read}(\hyperlink{mrf24j40__defines_8h_afd2fbebdba4de5a48540fe75c71da7be}{BBREG6});
+148             \} \textcolor{keywordflow}{while} (!test\_bit(bbreg6, \hyperlink{mrf24j40__defines_8h_a4a5ca5144dbfa2a0f19de3d43126803c}{BBREG6\_RSSIRDY}));
+149             rssi = \hyperlink{mrf24j40_8c_a90608c5fc9744ae883557236eb9b128e}{mrf24j40\_long\_addr\_read}(\hyperlink{mrf24j40__defines_8h_a91888bdc573835ec5a22972f6c7d69ba}{RSSI});
+150             \textcolor{keywordflow}{if} (rssi > highest\_on\_channel) \{
+151                 highest\_on\_channel = rssi;
+152             \}   
+153         \}
+154         
+155         \textcolor{keywordflow}{if} (highest\_on\_channel < lowest\_ed) \{
+156             lowest\_ed = highest\_on\_channel;
+157             lowest\_channel = \_channel;
+158         \}   
+159     \}
+160     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_afd2fbebdba4de5a48540fe75c71da7be}{BBREG6}, 1 << 
+      \hyperlink{mrf24j40__defines_8h_a0a647fe142731bac78f1195c7ff2f6f8}{BBREG6\_RSSIMODE2});  \textcolor{comment}{// Back to mode 2 (rssi in pkt)}
+161     
+162     \textcolor{comment}{// Should stop ignoring all packets now if we started ignoring them earlier}
+163     \textcolor{comment}{// (to do)}
+164     
+165 \textcolor{preprocessor}{    #if defined(ENABLE\_PA\_LNA)}
+166 \textcolor{preprocessor}{}        \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a1037b18e2d226fe7d327d4a6f17a21c1}{GPIO}, 0);
+167         \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_aa8bd8ab4679e66ad33a15687750e7c24}{TRISGPIO}, 0x00);
+168         \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_ad716bb76ce6c332187e14e0b0c7bfe67}{TESTMODE}, 0x0F);
+169 \textcolor{preprocessor}{    #endif}
+170 \textcolor{preprocessor}{}
+171     
+172     \textcolor{keywordflow}{return} lowest\_channel;
+173 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a72626ec7ec5ecc20053f2a016a201a1e}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-set\-\_\-channel@{mrf24j40\-\_\-set\-\_\-channel}}
+\index{mrf24j40\-\_\-set\-\_\-channel@{mrf24j40\-\_\-set\-\_\-channel}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-set\-\_\-channel}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-set\-\_\-channel (
+\begin{DoxyParamCaption}
+\item[{uns8}]{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a72626ec7ec5ecc20053f2a016a201a1e}
+
+
+Change channels. 
+
+Change to the specified channel, in the range M\-R\-F\-\_\-\-F\-I\-R\-S\-T\-\_\-\-C\-H\-A\-N\-N\-E\-L to M\-R\-F\-\_\-\-L\-A\-S\-T\-\_\-\-C\-H\-A\-N\-N\-E\-L.
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel to change to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file mrf24j40.\-c.
+
+
+
+References current\-\_\-channel, Delayus(), mrf24j40\-\_\-long\-\_\-addr\-\_\-write(), mrf24j40\-\_\-short\-\_\-addr\-\_\-write(), R\-F\-C\-O\-N0, and R\-F\-C\-T\-L.
+
+
+
+Referenced by init\-\_\-zigbee(), and mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed().
+
+
+\begin{DoxyCode}
+101 \{
+102     \hyperlink{mrf24j40_8c_ae7b7ee2dcad6c2d174a78a8c47474df5}{current\_channel} = \_channel;
+103     \_channel = \_channel - 11;
+104     \_channel = 0x02 + 0x10 * \_channel;
+105     
+106     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(\hyperlink{mrf24j40__defines_8h_afdb12829f6ceee9516556a07e4b1abfb}{RFCON0}, \_channel);   \textcolor{comment}{// Set channel}
+107     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_aae352d5efa2ff27613c38ea5213ff425}{RFCTL}, 0x04);   \textcolor{comment}{// RFCTL (0x36) = 0x04 – Reset
+       RF state machine.}
+108     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_aae352d5efa2ff27613c38ea5213ff425}{RFCTL}, 0x00);   \textcolor{comment}{// RFCTL (0x36) = 0x00}
+109         
+110 \textcolor{preprocessor}{    #ifndef \_\_PIC32MX\_\_}
+111 \textcolor{preprocessor}{}            delay\_us(200);  \textcolor{comment}{// Delay at least 192us         }
+112 \textcolor{preprocessor}{    #endif}
+113 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #ifdef \_\_PIC32MX\_\_}
+114 \textcolor{preprocessor}{}            \hyperlink{delayus_8c_a6cdbcdf95d42821fd989dc1867abcbcb}{Delayus}(200);
+115 \textcolor{preprocessor}{    #endif          }
+116 \textcolor{preprocessor}{}\}   
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_aaa6d5cff4b27a95ad3ba70b9546829a9}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-set\-\_\-extended\-\_\-address@{mrf24j40\-\_\-set\-\_\-extended\-\_\-address}}
+\index{mrf24j40\-\_\-set\-\_\-extended\-\_\-address@{mrf24j40\-\_\-set\-\_\-extended\-\_\-address}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-set\-\_\-extended\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-set\-\_\-extended\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{uns8 $\ast$}]{\-\_\-extended\-\_\-address}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_aaa6d5cff4b27a95ad3ba70b9546829a9}
+
+
+Set extended address. 
+
+Set I\-E\-E\-E 802.\-15.\-4 extended address.
+
+Sets the 64 bit extended address of the module. Pass a pointer to an 8 byte uns8 array containing the address. 
+
+Definition at line 303 of file mrf24j40.\-c.
+
+
+
+References E\-A\-D\-R7, extended\-\_\-address, and mrf24j40\-\_\-short\-\_\-addr\-\_\-write().
+
+
+\begin{DoxyCode}
+303                                                             \{
+304     uns8 count;
+305     uns8 mem\_pos = \hyperlink{mrf24j40__defines_8h_abccf310ed87a82576c3ea727b6311473}{EADR7};
+306 \textcolor{preprocessor}{    #ifndef \_\_PIC32MX\_\_}
+307 \textcolor{preprocessor}{}            serial\_print\_str(\textcolor{stringliteral}{"Setting EA to: "});
+308 \textcolor{preprocessor}{    #endif          }
+309 \textcolor{preprocessor}{}    \textcolor{keywordflow}{for} (count = 0; count < 8; count++) \{
+310         \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[count] = \_extended\_address[count];
+311         \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(mem\_pos--, 
+      \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[count]);
+312 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_}
+313 \textcolor{preprocessor}{}                serial\_print\_int\_hex(\hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[count]);
+314                 serial\_putc(\textcolor{charliteral}{' '});
+315 \textcolor{preprocessor}{        #endif  }
+316 \textcolor{preprocessor}{}    \}
+317 \textcolor{preprocessor}{    #ifndef \_\_PIC32MX\_\_}
+318 \textcolor{preprocessor}{}            serial\_print\_nl();
+319 \textcolor{preprocessor}{    #endif          }
+320 \textcolor{preprocessor}{}\}   
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a6b2e12ab3335c73d91854720ab423635}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-set\-\_\-pan\-\_\-id@{mrf24j40\-\_\-set\-\_\-pan\-\_\-id}}
+\index{mrf24j40\-\_\-set\-\_\-pan\-\_\-id@{mrf24j40\-\_\-set\-\_\-pan\-\_\-id}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-set\-\_\-pan\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-set\-\_\-pan\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{uns16}]{\-\_\-pan\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a6b2e12ab3335c73d91854720ab423635}
+
+
+Set P\-A\-N id. 
+
+Sets the 16 bit P\-A\-N id of the module. 
+
+Definition at line 296 of file mrf24j40.\-c.
+
+
+
+References mrf24j40\-\_\-short\-\_\-addr\-\_\-write(), pan\-\_\-id, P\-A\-N\-I\-D\-H, and P\-A\-N\-I\-D\-L.
+
+
+
+Referenced by init\-\_\-zigbee().
+
+
+\begin{DoxyCode}
+297 \{
+298     \hyperlink{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{pan\_id} = \_pan\_id;
+299     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a2d03831e7338dd2289d5d432c0e944cf}{PANIDL}, \hyperlink{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{pan\_id} & 0xff);
+300     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a460454fa7eb4c39d5d05256626922a52}{PANIDH}, \hyperlink{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{pan\_id} >> 8);
+301 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_aa649c52d5e4f761cf3bfef6526507621}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-set\-\_\-short\-\_\-address@{mrf24j40\-\_\-set\-\_\-short\-\_\-address}}
+\index{mrf24j40\-\_\-set\-\_\-short\-\_\-address@{mrf24j40\-\_\-set\-\_\-short\-\_\-address}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-set\-\_\-short\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-set\-\_\-short\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{uns16}]{\-\_\-short\-\_\-address}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_aa649c52d5e4f761cf3bfef6526507621}
+
+
+Set short address. 
+
+Sets the 16 bit short address of the module. 
+
+Definition at line 322 of file mrf24j40.\-c.
+
+
+
+References mrf24j40\-\_\-short\-\_\-addr\-\_\-write(), S\-A\-D\-R\-H, S\-A\-D\-R\-L, and short\-\_\-address.
+
+
+
+Referenced by init\-\_\-zigbee().
+
+
+\begin{DoxyCode}
+323 \{
+324     \textcolor{comment}{// Keep hold of the short address}
+325     \hyperlink{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}{short\_address} = \_short\_address;
+326     
+327     \textcolor{comment}{// Tell the mrf about it}
+328     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a90aee6e278049042adb0c66587a59e85}{SADRL}, \hyperlink{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}{short\_address} & 0xff);
+329     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a81cd267967bf9ea9adb6b8f5b1775943}{SADRH}, \hyperlink{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}{short\_address} >> 8);
+330 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_ac6dddd7f68e8cb580cd56b08b2eaba2a}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-setup\-\_\-io@{mrf24j40\-\_\-setup\-\_\-io}}
+\index{mrf24j40\-\_\-setup\-\_\-io@{mrf24j40\-\_\-setup\-\_\-io}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-setup\-\_\-io}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-setup\-\_\-io (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_ac6dddd7f68e8cb580cd56b08b2eaba2a}
+
+
+Setup ports/pins as inputs/outputs ready for use. 
+
+Sets int pin as input and cs pin as output. 
+
+Definition at line 924 of file mrf24j40.\-c.
+
+
+
+References Delayms(), and S\-P\-I\-\_\-init().
+
+
+
+Referenced by init\-\_\-zigbee().
+
+
+\begin{DoxyCode}
+924                          \{
+925 
+926 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_ }
+927 \textcolor{preprocessor}{}            make\_input(mrf24j40\_int\_port, mrf24j40\_int\_pin);
+928             set\_pin(mrf24j40\_cs\_port, mrf24j40\_cs\_pin); \textcolor{comment}{// keep high}
+929             make\_output(mrf24j40\_cs\_port, mrf24j40\_cs\_pin);
+930 \textcolor{preprocessor}{        #endif  }
+931 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+932 \textcolor{preprocessor}{}            \hyperlink{spi_8h_ac0055f801ff78bc7fafccc46e3e15ba7}{SPI\_init}();         \textcolor{comment}{// init SPI default (2 on PIC32-PINGUINO)}
+933                                 \textcolor{comment}{// only called here for test}
+934                                 \textcolor{comment}{// will be called later in main32.c}
+935 \textcolor{preprocessor}{            #ifndef PIC32\_PINGUINO\_220}
+936 \textcolor{preprocessor}{}                \textcolor{comment}{//pinmode(13,OUTPUT); // CLK}
+937                 \textcolor{comment}{//pinmode(11,OUTPUT); // SDO}
+938                 \textcolor{comment}{//pinmode(12,INPUT);    // SDI              }
+939                 ZIGRESETOUT;        \textcolor{comment}{// macro for RESET}
+940                 ZIGCSOUT;           \textcolor{comment}{// macro for CS}
+941                 ZIGINTIN;           \textcolor{comment}{// interrupt (not yet implemented)}
+942 \textcolor{preprocessor}{            #else}
+943 \textcolor{preprocessor}{}                ZIGRESETOUT;        \textcolor{comment}{// macro for RESET}
+944                 ZIGCSOUT;           \textcolor{comment}{// macro for CS}
+945 \textcolor{preprocessor}{            #endif}
+946 \textcolor{preprocessor}{}            ZIGRESET=0;
+947             ZIGCS=1;
+948             ZIGRESET=1;
+949             \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(100);
+950 \textcolor{preprocessor}{        #endif          }
+951 \textcolor{preprocessor}{}\}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-short\-\_\-addr\-\_\-read@{mrf24j40\-\_\-short\-\_\-addr\-\_\-read}}
+\index{mrf24j40\-\_\-short\-\_\-addr\-\_\-read@{mrf24j40\-\_\-short\-\_\-addr\-\_\-read}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-short\-\_\-addr\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}uns8 mrf24j40\-\_\-short\-\_\-addr\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{uns8}]{addr}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}
+
+
+Read data from short address of memory location in mrf24j40. 
+
+Returns the value in the memory location specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & Short address memory location (see mrf24h40\-\_\-defines.\-h) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 826 of file mrf24j40.\-c.
+
+
+
+References S\-P\-I\-\_\-read(), and S\-P\-I\-\_\-write().
+
+
+
+Referenced by mrf24j40\-\_\-flush\-\_\-receive\-\_\-buffer(), mrf24j40\-\_\-handle\-\_\-isr(), mrf24j40\-\_\-init(), mrf24j40\-\_\-init\-\_\-coordinator(), mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed(), mrf24j40\-\_\-transmit(), mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address(), mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address(), and Z\-I\-Ggets().
+
+
+\begin{DoxyCode}
+827 \{
+828 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_}
+829 \textcolor{preprocessor}{}            clear\_pin(mrf24j40\_cs\_port, mrf24j40\_cs\_pin);
+830             addr = addr & 0b00111111;   \textcolor{comment}{// <5:0> bits}
+831             addr = addr << 1;   \textcolor{comment}{// LSB = 0, means read}
+832             spi\_hw\_transmit(addr);
+833             uns8 result = spi\_hw\_receive();
+834             set\_pin(mrf24j40\_cs\_port, mrf24j40\_cs\_pin);
+835 \textcolor{preprocessor}{        #endif}
+836 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+837 \textcolor{preprocessor}{}            addr = (addr << 1) & 0x7E;
+838             ZIGCS=0; \textcolor{comment}{// CS must be held low while communicationg with MRF24J40}
+839             \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(addr);
+840             \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} result = \hyperlink{p8_2pinguino_2core_2spi_8c_aab7c83353e6e6abc4e477b7f55800166}{SPI\_read}();
+841             ZIGCS=1; \textcolor{comment}{// end of communication}
+842 \textcolor{preprocessor}{        #endif                              }
+843 \textcolor{preprocessor}{}    \textcolor{keywordflow}{return} result;
+844 \}   
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-short\-\_\-addr\-\_\-write@{mrf24j40\-\_\-short\-\_\-addr\-\_\-write}}
+\index{mrf24j40\-\_\-short\-\_\-addr\-\_\-write@{mrf24j40\-\_\-short\-\_\-addr\-\_\-write}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-short\-\_\-addr\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-short\-\_\-addr\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{uns8}]{addr, }
+\item[{uns8}]{data}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}
+
+
+Write data to short address memory location. 
+
+Sets the memory location to the value specified
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & Short address memory location (see mrf24h40\-\_\-defines.\-h) \\
+\hline
+{\em data} & Value that the memory location should be set to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 846 of file mrf24j40.\-c.
+
+
+
+References S\-P\-I\-\_\-write().
+
+
+
+Referenced by mrf24j40\-\_\-flush\-\_\-receive\-\_\-buffer(), mrf24j40\-\_\-init(), mrf24j40\-\_\-init\-\_\-coordinator(), mrf24j40\-\_\-receive(), mrf24j40\-\_\-scan\-\_\-for\-\_\-lowest\-\_\-channel\-\_\-ed(), mrf24j40\-\_\-set\-\_\-channel(), mrf24j40\-\_\-set\-\_\-extended\-\_\-address(), mrf24j40\-\_\-set\-\_\-pan\-\_\-id(), mrf24j40\-\_\-set\-\_\-short\-\_\-address(), mrf24j40\-\_\-transmit(), mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address(), and mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address().
+
+
+\begin{DoxyCode}
+847 \{
+848 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_}
+849 \textcolor{preprocessor}{}            clear\_pin(mrf24j40\_cs\_port, mrf24j40\_cs\_pin);
+850             addr = addr & 0b00111111;   \textcolor{comment}{// <5:0> bits}
+851             addr = addr << 1;   \textcolor{comment}{// LSB = 0, means read}
+852             set\_bit(addr, 0);   \textcolor{comment}{// write}
+853 
+854             spi\_hw\_transmit(addr);
+855             spi\_hw\_transmit(data);
+856 
+857             set\_pin(mrf24j40\_cs\_port, mrf24j40\_cs\_pin);
+858 \textcolor{preprocessor}{        #endif}
+859 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+860 \textcolor{preprocessor}{}            addr=((addr<<1)&0x7F)|1;
+861             ZIGCS=0;
+862             \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(addr);
+863             \hyperlink{p8_2pinguino_2core_2spi_8c_a8b8e658f3a88a94800dcae0720a7f997}{SPI\_write}(data);
+864             ZIGCS=1;
+865 \textcolor{preprocessor}{        #endif  }
+866 \textcolor{preprocessor}{}\}   
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_ab71ccfcff88aac5eee58a19f54aa2109}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-start\-\_\-pan@{mrf24j40\-\_\-start\-\_\-pan}}
+\index{mrf24j40\-\_\-start\-\_\-pan@{mrf24j40\-\_\-start\-\_\-pan}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-start\-\_\-pan}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-start\-\_\-pan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_ab71ccfcff88aac5eee58a19f54aa2109}
+
+
+Definition at line 273 of file mrf24j40.\-c.
+
+
+\begin{DoxyCode}
+273                           \{
+274     
+275 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_af9ff6a491b3bd0835f42ba7a541de95e}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-transmit@{mrf24j40\-\_\-transmit}}
+\index{mrf24j40\-\_\-transmit@{mrf24j40\-\_\-transmit}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-transmit}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-transmit (
+\begin{DoxyParamCaption}
+\item[{uns8 $\ast$}]{data, }
+\item[{uns8}]{bytes\-\_\-to\-\_\-transmit}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_af9ff6a491b3bd0835f42ba7a541de95e}
+
+
+Transmit raw data. 
+
+Transmit a raw packet -\/ this assumes you have already created an 802.\-15.\-4 compatible packet. Normally you would use transmit\-\_\-to\-\_\-extended\-\_\-adddress or transmit\-\_\-to\-\_\-short\-\_\-address instead. 
+
+Definition at line 549 of file mrf24j40.\-c.
+
+
+
+References data\-\_\-sequence\-\_\-number, mrf24j40\-\_\-long\-\_\-addr\-\_\-write(), mrf24j40\-\_\-short\-\_\-addr\-\_\-read(), mrf24j40\-\_\-short\-\_\-addr\-\_\-write(), T\-X\-N\-C\-O\-N, and T\-X\-N\-C\-O\-N\-\_\-\-T\-X\-N\-T\-R\-I\-G.
+
+
+\begin{DoxyCode}
+549                                                            \{
+550 
+551     
+552     uns8 fc\_lsb = 0b01000001;
+553     uns8 fc\_msb = 0b00000000;
+554 \textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+555 \textcolor{preprocessor}{}                \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} count=0;
+556 \textcolor{preprocessor}{        #endif                  }
+557 \textcolor{preprocessor}{}    
+558     
+559     \hyperlink{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}{data\_sequence\_number}++;
+560     uns8 header\_length = 3; \textcolor{comment}{// Just two bytes of frame control + sequence number, no addrs}
+561     uns8 frame\_length = header\_length + bytes\_to\_transmit;
+562     
+563     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x00, header\_length);
+564     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x01, frame\_length);
+565     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x02, fc\_lsb);
+566     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x03, fc\_msb);
+567     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x04, \hyperlink{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}{data\_sequence\_number});
+568     
+569 \textcolor{preprocessor}{    #ifndef \_\_PIC32MX\_\_}
+570 \textcolor{preprocessor}{}            \textcolor{keywordflow}{for} (uns8 count=0;  count < bytes\_to\_transmit; count++) \{ \textcolor{comment}{// check format here}
+571                 \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(count+header\_length+2,  data[count]);
+572 \textcolor{preprocessor}{        #endif}
+573 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+574 \textcolor{preprocessor}{}            \textcolor{keywordflow}{for} (count=0;  count < bytes\_to\_transmit; count++) \{ \textcolor{comment}{// check format here}
+575                 \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(count+header\_length+2,  data[count]);
+576 \textcolor{preprocessor}{        #endif                      }
+577 \textcolor{preprocessor}{}    \}
+578     
+579     uns8 txncon = \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\_short\_addr\_read}(\hyperlink{mrf24j40__defines_8h_a99b76835d47380fece4f5dd479f0411d}{TXNCON});
+580     set\_bit(txncon, \hyperlink{mrf24j40__defines_8h_a58c4d1bd2edbc3241e2574028f43b69d}{TXNCON\_TXNTRIG});
+581     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a99b76835d47380fece4f5dd479f0411d}{TXNCON}, txncon);
+582 
+583 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_a339a469ccf270b9f3b36285397263270}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address@{mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address}}
+\index{mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address@{mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{uns8}]{frame\-\_\-type, }
+\item[{uns16}]{dest\-\_\-pan\-\_\-id, }
+\item[{uns8 $\ast$}]{dest\-\_\-extended\-\_\-address, }
+\item[{uns8 $\ast$}]{data, }
+\item[{uns8}]{data\-\_\-length, }
+\item[{uns8}]{ack}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_a339a469ccf270b9f3b36285397263270}
+
+
+Transmit packet to extended address. 
+
+Requests that the mrf24j40 transmit the packet to the specified extended address
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\-\_\-type} & 802.\-15.\-4 frame type \\
+\hline
+{\em dest\-\_\-pan\-\_\-id} & P\-A\-N id of destination \\
+\hline
+{\em dest\-\_\-extended\-\_\-address} & Pointer to uns8 array indicating extended address of destination \\
+\hline
+{\em data} & Pointer to uns8 array of bytes to transmit \\
+\hline
+{\em bytes\-\_\-to\-\_\-transmit} & \\
+\hline
+{\em ack} & Either M\-R\-F\-\_\-\-A\-C\-K or M\-R\-F\-\_\-\-N\-O\-\_\-\-A\-C\-K depending if you want hardware acknowledgement \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 414 of file mrf24j40.\-c.
+
+
+
+References data\-\_\-sequence\-\_\-number, extended\-\_\-address, mrf24j40\-\_\-long\-\_\-addr\-\_\-write(), mrf24j40\-\_\-short\-\_\-addr\-\_\-read(), mrf24j40\-\_\-short\-\_\-addr\-\_\-write(), pan\-\_\-id, T\-X\-N\-C\-O\-N, T\-X\-N\-C\-O\-N\-\_\-\-T\-X\-N\-A\-C\-K\-R\-E\-Q, and T\-X\-N\-C\-O\-N\-\_\-\-T\-X\-N\-T\-R\-I\-G.
+
+
+\begin{DoxyCode}
+415                                                                                    \{
+416     
+417     \textcolor{comment}{// See notes below on frame control bytes format:}
+418     uns8 fc\_msb = 0b11001100;   \textcolor{comment}{// 64 bit dest (10,11) 64 bit src (14,15)}
+419     uns8 fc\_lsb = 0b00000000 | frame\_type;  \textcolor{comment}{// pan id compression=0, data}
+420 \textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+421 \textcolor{preprocessor}{}                \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} count=0;
+422 \textcolor{preprocessor}{        #endif }
+423 \textcolor{preprocessor}{}        
+424     \textcolor{keywordflow}{if} (ack) \{
+425         set\_bit(fc\_lsb, 5); \textcolor{comment}{// ack bit}
+426     \}
+427     
+428     \hyperlink{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}{data\_sequence\_number}++;
+429     
+430     uns8 header\_length = 3+8+8+2+2;
+431     uns8 frame\_length = header\_length + data\_length;
+432     
+433     \textcolor{comment}{// Write out data to mrf}
+434         
+435     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x00, header\_length);
+436     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x01, frame\_length);
+437     
+438     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x02, fc\_lsb); 
+439     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x03, fc\_msb);
+440     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x04, \hyperlink{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}{data\_sequence\_number});
+441     
+442     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x05, dest\_pan\_id & 0xff); \textcolor{comment}{// dest pan id LSB}
+443     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x06, dest\_pan\_id >> 8);   \textcolor{comment}{// MSB}
+444 
+445     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x07, dest\_extended\_address[7]); \textcolor{comment}{// LSB}
+446     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x08, dest\_extended\_address[6]);
+447     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x09, dest\_extended\_address[5]);
+448     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x0a, dest\_extended\_address[4]);
+449     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x0b, dest\_extended\_address[3]);
+450     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x0c, dest\_extended\_address[2]);
+451     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x0d, dest\_extended\_address[1]);
+452     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x0e, dest\_extended\_address[0]); \textcolor{comment}{// MSB}
+453     
+454     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x0f, \hyperlink{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{pan\_id} & 0xff);    \textcolor{comment}{// src pan id LSB}
+455     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x10, \hyperlink{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{pan\_id} >> 8);  \textcolor{comment}{// MSB}
+456 
+457     
+458     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x11, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[7]);    \textcolor{comment}{// LSB}
+459     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x12, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[6]);
+460     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x13, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[5]);
+461     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x14, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[4]);
+462     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x15, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[3]);
+463     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x16, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[2]);
+464     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x17, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[1]);
+465     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x18, \hyperlink{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{extended\_address}[0]);    \textcolor{comment}{// MSB}
+466 \textcolor{preprocessor}{    #ifndef \_\_PIC32MX\_\_}
+467 \textcolor{preprocessor}{}            \textcolor{keywordflow}{for} (uns8 count=0;  count < data\_length; count++) \{
+468                 \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(count+header\_length+2,  data[count]);
+469 \textcolor{preprocessor}{        #endif}
+470 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+471 \textcolor{preprocessor}{}            \textcolor{keywordflow}{for} (count=0;  count < data\_length; count++) \{
+472                 \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(count+header\_length+2,  data[count]);
+473 \textcolor{preprocessor}{        #endif                      }
+474 \textcolor{preprocessor}{}    \}
+475     
+476     uns8 txncon = \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\_short\_addr\_read}(\hyperlink{mrf24j40__defines_8h_a99b76835d47380fece4f5dd479f0411d}{TXNCON});
+477     
+478     set\_bit(txncon, \hyperlink{mrf24j40__defines_8h_a58c4d1bd2edbc3241e2574028f43b69d}{TXNCON\_TXNTRIG});
+479     \textcolor{keywordflow}{if} (ack) \{
+480         set\_bit(txncon, \hyperlink{mrf24j40__defines_8h_a3ab3b5757e3ff4df9a7a012b7a1e5ee0}{TXNCON\_TXNACKREQ});
+481     \}   
+482     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a99b76835d47380fece4f5dd479f0411d}{TXNCON}, txncon);
+483     
+484 
+485 \}
+\end{DoxyCode}
+\hypertarget{mrf24j40_8c_abd67d5fb6662acd68fea3ad71ea3a5a6}{\index{mrf24j40.\-c@{mrf24j40.\-c}!mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address@{mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address}}
+\index{mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address@{mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}void mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{uns8}]{frame\-\_\-type, }
+\item[{uns16}]{dest\-\_\-pan\-\_\-id, }
+\item[{uns16}]{dest\-\_\-short\-\_\-address, }
+\item[{uns8 $\ast$}]{data, }
+\item[{uns8}]{bytes\-\_\-to\-\_\-transmit, }
+\item[{uns8}]{ack}
+\end{DoxyParamCaption}
+)}}\label{mrf24j40_8c_abd67d5fb6662acd68fea3ad71ea3a5a6}
+
+
+Transmit packet to short address. 
+
+Requests that the mrf24j40 transmit the packet to the specified short address
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\-\_\-type} & 802.\-15.\-4 frame type \\
+\hline
+{\em dest\-\_\-pan\-\_\-id} & P\-A\-N id of destination \\
+\hline
+{\em dest\-\_\-short\-\_\-address} & 16 bit short address of destination \\
+\hline
+{\em data} & Pointer to uns8 array of bytes to transmit \\
+\hline
+{\em bytes\-\_\-to\-\_\-transmit} & \\
+\hline
+{\em ack} & Either M\-R\-F\-\_\-\-A\-C\-K or M\-R\-F\-\_\-\-N\-O\-\_\-\-A\-C\-K depending if you want hardware acknowledgement \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 488 of file mrf24j40.\-c.
+
+
+
+References data\-\_\-sequence\-\_\-number, mrf24j40\-\_\-long\-\_\-addr\-\_\-write(), mrf24j40\-\_\-short\-\_\-addr\-\_\-read(), mrf24j40\-\_\-short\-\_\-addr\-\_\-write(), pan\-\_\-id, short\-\_\-address, T\-X\-N\-C\-O\-N, T\-X\-N\-C\-O\-N\-\_\-\-T\-X\-N\-A\-C\-K\-R\-E\-Q, and T\-X\-N\-C\-O\-N\-\_\-\-T\-X\-N\-T\-R\-I\-G.
+
+
+
+Referenced by Z\-I\-Gputs().
+
+
+\begin{DoxyCode}
+488                                                                                                            
+                                               \{
+489     
+490     uns8 fc\_msb = 0b10001000;   \textcolor{comment}{// short dest (10,11) short src (14,15)}
+491     uns8 fc\_lsb = 0b00000000 | frame\_type;  \textcolor{comment}{// data, pan id compression (only have dest pan id)}
+492 \textcolor{preprocessor}{        #ifdef \_\_PIC32MX\_\_}
+493 \textcolor{preprocessor}{}                \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} count=0;
+494 \textcolor{preprocessor}{        #endif                }
+495 \textcolor{preprocessor}{}    \textcolor{comment}{// To do:}
+496     \textcolor{comment}{// Not smart enough for this yet:}
+497     \textcolor{comment}{//if (dest\_pan\_id == pan\_id) \{}
+498     \textcolor{comment}{//  set\_bit(fc\_lsb, 6);     // pan compression}
+499     \textcolor{comment}{//\} }
+500     \textcolor{keywordflow}{if} (ack) \{
+501         set\_bit(fc\_lsb, 5); \textcolor{comment}{// ack bit}
+502     \}   
+503     
+504     \hyperlink{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}{data\_sequence\_number}++;
+505     
+506     uns8 header\_length = 3+2+2+2+2;
+507     uns8 frame\_length = header\_length + bytes\_to\_transmit;
+508         
+509     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x00, header\_length);
+510     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x01, frame\_length);
+511     
+512     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x02, fc\_lsb); 
+513     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x03, fc\_msb);
+514     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x04, \hyperlink{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}{data\_sequence\_number});
+515     
+516     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x05, dest\_pan\_id & 0xff); \textcolor{comment}{// dest pan id  LSB}
+517     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x06, dest\_pan\_id >> 8);   \textcolor{comment}{// MSB}
+518     
+519     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x07, dest\_short\_address & 0xff); \textcolor{comment}{// LSB}
+520     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x08, dest\_short\_address >> 8);    \textcolor{comment}{// MSB}
+521 
+522     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x09, \hyperlink{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{pan\_id} & 0xff);    \textcolor{comment}{// src pan id  (=ours)
+       LSB}
+523     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x0a, \hyperlink{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{pan\_id} >> 8);  \textcolor{comment}{// MSB}
+524 
+525     
+526     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x0b, \hyperlink{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}{short\_address} & 0xff);  \textcolor{comment}{// LSB}
+527     \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(0x0c, \hyperlink{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}{short\_address} >> 8);
+528 \textcolor{preprocessor}{        #ifndef \_\_PIC32MX\_\_ }
+529 \textcolor{preprocessor}{}    \textcolor{keywordflow}{for} (uns8 count=0;  count < bytes\_to\_transmit; count++) \{ \textcolor{comment}{// check format here}
+530 \textcolor{preprocessor}{    #endif}
+531 \textcolor{preprocessor}{}\textcolor{preprocessor}{    #ifdef \_\_PIC32MX\_\_}
+532 \textcolor{preprocessor}{}    \textcolor{keywordflow}{for} (count=0;  count < bytes\_to\_transmit; count++) \{ 
+533 \textcolor{preprocessor}{    #endif}
+534 \textcolor{preprocessor}{}        \hyperlink{mrf24j40_8c_a49319e6e77c1d2b46c82d9eccc495e26}{mrf24j40\_long\_addr\_write}(count+header\_length+2,  data[count]);
+535     \}
+536     
+537     uns8 txncon = \hyperlink{mrf24j40_8c_a2355fd15b0ae65b0a17b2a87687b5f3b}{mrf24j40\_short\_addr\_read}(\hyperlink{mrf24j40__defines_8h_a99b76835d47380fece4f5dd479f0411d}{TXNCON});
+538     set\_bit(txncon, \hyperlink{mrf24j40__defines_8h_a58c4d1bd2edbc3241e2574028f43b69d}{TXNCON\_TXNTRIG});
+539     \textcolor{keywordflow}{if} (ack) \{
+540         set\_bit(txncon, \hyperlink{mrf24j40__defines_8h_a3ab3b5757e3ff4df9a7a012b7a1e5ee0}{TXNCON\_TXNACKREQ});
+541     \}   
+542     \hyperlink{mrf24j40_8c_aab3eae81fbbe2ae36f2899a7fbbcb1cd}{mrf24j40\_short\_addr\_write}(\hyperlink{mrf24j40__defines_8h_a99b76835d47380fece4f5dd479f0411d}{TXNCON}, txncon);
+543     
+544 
+545 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{mrf24j40_8c_ae7b7ee2dcad6c2d174a78a8c47474df5}{\index{mrf24j40.\-c@{mrf24j40.\-c}!current\-\_\-channel@{current\-\_\-channel}}
+\index{current\-\_\-channel@{current\-\_\-channel}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{current\-\_\-channel}]{\setlength{\rightskip}{0pt plus 5cm}uns8 current\-\_\-channel = 0}}\label{mrf24j40_8c_ae7b7ee2dcad6c2d174a78a8c47474df5}
+
+
+Definition at line 86 of file mrf24j40.\-c.
+
+
+
+Referenced by mrf24j40\-\_\-set\-\_\-channel().
+
+\hypertarget{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}{\index{mrf24j40.\-c@{mrf24j40.\-c}!data\-\_\-sequence\-\_\-number@{data\-\_\-sequence\-\_\-number}}
+\index{data\-\_\-sequence\-\_\-number@{data\-\_\-sequence\-\_\-number}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{data\-\_\-sequence\-\_\-number}]{\setlength{\rightskip}{0pt plus 5cm}uns8 data\-\_\-sequence\-\_\-number}}\label{mrf24j40_8c_a4a4a91c1ef1f9a8665b59e4003aff72c}
+
+
+Definition at line 82 of file mrf24j40.\-c.
+
+
+
+Referenced by mrf24j40\-\_\-init(), mrf24j40\-\_\-init\-\_\-coordinator(), mrf24j40\-\_\-transmit(), mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address(), and mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address().
+
+\hypertarget{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}{\index{mrf24j40.\-c@{mrf24j40.\-c}!extended\-\_\-address@{extended\-\_\-address}}
+\index{extended\-\_\-address@{extended\-\_\-address}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{extended\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}uns8 extended\-\_\-address\mbox{[}8\mbox{]} = \{0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff\}}}\label{mrf24j40_8c_a388871a29ebe303de0693029f42dc348}
+
+
+Definition at line 84 of file mrf24j40.\-c.
+
+
+
+Referenced by mrf24j40\-\_\-init\-\_\-coordinator(), mrf24j40\-\_\-set\-\_\-extended\-\_\-address(), and mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address().
+
+\hypertarget{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}{\index{mrf24j40.\-c@{mrf24j40.\-c}!pan\-\_\-id@{pan\-\_\-id}}
+\index{pan\-\_\-id@{pan\-\_\-id}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{pan\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uns16 pan\-\_\-id = 0xffff}}\label{mrf24j40_8c_a3ace26c2cff595729296f659195d621c}
+
+
+Definition at line 83 of file mrf24j40.\-c.
+
+
+
+Referenced by mrf24j40\-\_\-set\-\_\-pan\-\_\-id(), mrf24j40\-\_\-transmit\-\_\-to\-\_\-extended\-\_\-address(), mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address(), and Z\-I\-Gputs().
+
+\hypertarget{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}{\index{mrf24j40.\-c@{mrf24j40.\-c}!short\-\_\-address@{short\-\_\-address}}
+\index{short\-\_\-address@{short\-\_\-address}!mrf24j40.c@{mrf24j40.\-c}}
+\subsubsection[{short\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}uns16 short\-\_\-address = 0xffff}}\label{mrf24j40_8c_ad7c42ba8ffaec06319caf00e7ffd9ffb}
+
+
+Definition at line 85 of file mrf24j40.\-c.
+
+
+
+Referenced by mrf24j40\-\_\-set\-\_\-short\-\_\-address(), and mrf24j40\-\_\-transmit\-\_\-to\-\_\-short\-\_\-address().
+

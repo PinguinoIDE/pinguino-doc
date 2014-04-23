@@ -1,0 +1,543 @@
+\hypertarget{servos_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/servos.c File Reference}
+\label{servos_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/servos.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/servos.\-c}}
+}
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{servos_8c_a957b4699dd1fcca8c4a93f351fb112d7}{S\-E\-R\-V\-O\-S\-L\-I\-B\-R\-A\-R\-Y}
+\item 
+\#define \hyperlink{servos_8c_a3ede0c246c78f3cee82a4060bef01862}{Default\-S\-E\-R\-V\-O\-M\-A\-X}~192
+\item 
+\#define \hyperlink{servos_8c_a248eae25c206141b94d88b0d845f0439}{Default\-S\-E\-R\-V\-O\-M\-I\-N}~64
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{servos_8c_a2061c00db51234f5ba2999415c3c82b0}{servos\-\_\-init} ()
+\item 
+void \hyperlink{servos_8c_a6fed2f3dd662a7d34ba474465c527cf1}{Servo\-Attach} (unsigned char pin)
+\item 
+void \hyperlink{servos_8c_a3d490bdd11460c2d0533c7b6e31f7346}{Servo\-Detach} (unsigned char pin)
+\item 
+void \hyperlink{servos_8c_a1738c5ca911512c30e1f529f5125ed71}{Servo\-Write} (unsigned char servo, unsigned char \hyperlink{p32_2include_2pinguino_2core_2macro_8h_afe93c2c14da376a1621194c15c1de496}{degrees})
+\item 
+unsigned char \hyperlink{servos_8c_acc39d2697a43315ad49b96c63c41de2f}{Servo\-Read} (unsigned char servo)
+\item 
+void \hyperlink{servos_8c_a698a2b502406c999c8972759c452ed27}{Servo\-Minimum\-Pulse} (unsigned char servo, int min\-\_\-microseconds)
+\item 
+void \hyperlink{servos_8c_a50f2f5a61887d47b29bd534a8be186ff}{Servo\-Maximum\-Pulse} (unsigned char servo, int max\-\_\-microseconds)
+\item 
+void \hyperlink{servos_8c_a4c3e226eaaf571fb38c449064385a6ff}{servos\-\_\-interrupt} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile unsigned char \hyperlink{servos_8c_a793fd408be2a27174378ec9bfcbfb144}{phase} =0
+\item 
+volatile unsigned char \hyperlink{servos_8c_a60ca7e89d4365b62d64a3f02839252ef}{needreordering} =0
+\item 
+unsigned char \hyperlink{servos_8c_a5397073a62286058b0f8d8759411690d}{timingindex}
+\item 
+unsigned char \hyperlink{servos_8c_ac36cd3e853a2a1a1bf078290e721a55f}{timedivision} =0
+\item 
+unsigned char \hyperlink{servos_8c_a5c123d3528d7afadc12da5601753710c}{loopvar}
+\item 
+unsigned char \hyperlink{servos_8c_a7ac2e5b3290e5367ac6a526b9e7c8821}{mascaratotal} \mbox{[}Total\-P\-I\-Cports\mbox{]}
+\item 
+unsigned char \hyperlink{servos_8c_a20e9455cf6da1546adaad7823afb70fb}{timevalue} \mbox{[}Total\-P\-I\-Cpins\mbox{]}
+\item 
+unsigned char \hyperlink{servos_8c_a833a51fe4ce283b82edadd8d82ade899}{timings} \mbox{[}Total\-P\-I\-Cpins\mbox{]}\mbox{[}Total\-P\-I\-Cports\mbox{]}
+\item 
+unsigned char \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos} \mbox{[}Total\-P\-I\-Cports\mbox{]}
+\item 
+unsigned char \hyperlink{servos_8c_a4e17331adc404707e6028c587cf19161}{servovalues} \mbox{[}Total\-P\-I\-Cpins\mbox{]}
+\item 
+unsigned char \hyperlink{servos_8c_a6d4e2f533daad0d9680234cc1dfc36ee}{maxminpos} \mbox{[}2\mbox{]}\mbox{[}Total\-P\-I\-Cpins\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{servos_8c_a3ede0c246c78f3cee82a4060bef01862}{\index{servos.\-c@{servos.\-c}!Default\-S\-E\-R\-V\-O\-M\-A\-X@{Default\-S\-E\-R\-V\-O\-M\-A\-X}}
+\index{Default\-S\-E\-R\-V\-O\-M\-A\-X@{Default\-S\-E\-R\-V\-O\-M\-A\-X}!servos.c@{servos.\-c}}
+\subsubsection[{Default\-S\-E\-R\-V\-O\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define Default\-S\-E\-R\-V\-O\-M\-A\-X~192}}\label{servos_8c_a3ede0c246c78f3cee82a4060bef01862}
+
+
+Definition at line 72 of file servos.\-c.
+
+
+
+Referenced by servos\-\_\-init().
+
+\hypertarget{servos_8c_a248eae25c206141b94d88b0d845f0439}{\index{servos.\-c@{servos.\-c}!Default\-S\-E\-R\-V\-O\-M\-I\-N@{Default\-S\-E\-R\-V\-O\-M\-I\-N}}
+\index{Default\-S\-E\-R\-V\-O\-M\-I\-N@{Default\-S\-E\-R\-V\-O\-M\-I\-N}!servos.c@{servos.\-c}}
+\subsubsection[{Default\-S\-E\-R\-V\-O\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define Default\-S\-E\-R\-V\-O\-M\-I\-N~64}}\label{servos_8c_a248eae25c206141b94d88b0d845f0439}
+
+
+Definition at line 73 of file servos.\-c.
+
+
+
+Referenced by servos\-\_\-init().
+
+\hypertarget{servos_8c_a957b4699dd1fcca8c4a93f351fb112d7}{\index{servos.\-c@{servos.\-c}!S\-E\-R\-V\-O\-S\-L\-I\-B\-R\-A\-R\-Y@{S\-E\-R\-V\-O\-S\-L\-I\-B\-R\-A\-R\-Y}}
+\index{S\-E\-R\-V\-O\-S\-L\-I\-B\-R\-A\-R\-Y@{S\-E\-R\-V\-O\-S\-L\-I\-B\-R\-A\-R\-Y}!servos.c@{servos.\-c}}
+\subsubsection[{S\-E\-R\-V\-O\-S\-L\-I\-B\-R\-A\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-R\-V\-O\-S\-L\-I\-B\-R\-A\-R\-Y}}\label{servos_8c_a957b4699dd1fcca8c4a93f351fb112d7}
+
+
+Definition at line 65 of file servos.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{servos_8c_a6fed2f3dd662a7d34ba474465c527cf1}{\index{servos.\-c@{servos.\-c}!Servo\-Attach@{Servo\-Attach}}
+\index{Servo\-Attach@{Servo\-Attach}!servos.c@{servos.\-c}}
+\subsubsection[{Servo\-Attach}]{\setlength{\rightskip}{0pt plus 5cm}void Servo\-Attach (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{pin}
+\end{DoxyParamCaption}
+)}}\label{servos_8c_a6fed2f3dd662a7d34ba474465c527cf1}
+
+
+Definition at line 423 of file servos.\-c.
+
+
+
+References activatedservos, p\-A, p\-B, p\-C, p\-D, and p\-E.
+
+
+\begin{DoxyCode}
+424 \{
+425     \textcolor{keywordflow}{if}(pin>=TotalPICpins) \textcolor{keywordflow}{return};
+426 
+427     \textcolor{keywordflow}{switch} (port[pin])
+428     \{
+429         \textcolor{keywordflow}{case} \hyperlink{digital_8h_a166cc8406becb925e56e7e43ab4faaef}{pA}: 
+430                 \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[\hyperlink{digital_8h_a166cc8406becb925e56e7e43ab4faaef}{pA}] = \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[
+      \hyperlink{digital_8h_a166cc8406becb925e56e7e43ab4faaef}{pA}] | mask[pin];  \textcolor{comment}{// list pin as servo driver.}
+431                 TRISA = TRISA & (~mask[pin]);                   \textcolor{comment}{// set as output pin}
+432                 \textcolor{keywordflow}{break};
+433         \textcolor{keywordflow}{case} \hyperlink{digital_8h_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}: 
+434                 \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[\hyperlink{digital_8h_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}] = \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[
+      \hyperlink{digital_8h_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}] | mask[pin];  \textcolor{comment}{// list pin as servo driver.}
+435                 TRISB = TRISB & (~mask[pin]);                   \textcolor{comment}{// set as output pin}
+436                 \textcolor{keywordflow}{break};
+437 \textcolor{preprocessor}{        #if defined(\_\_18f14k22) || defined(PINGUINO2455) || defined(PINGUINO2550) || defined(PINGUINO25K50)
+       || defined(CHRP3) || defined(PINGUINO26J50) || defined(FREEJALDUINO) || defined(PINGUINO47J53A) ||
+       defined(PINGUINO47J53B) || defined(PINGUINO4550) || defined(PINGUINO45K50) || defined(PICUNO\_EQUO)}
+438 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{digital_8h_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}: 
+439                 \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[\hyperlink{digital_8h_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}] = \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[
+      \hyperlink{digital_8h_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}] | mask[pin];  \textcolor{comment}{// list pin as servo driver.}
+440                 TRISC = TRISC & (~mask[pin]);                   \textcolor{comment}{// set as output pin}
+441                 \textcolor{keywordflow}{break};
+442 \textcolor{preprocessor}{        #endif}
+443 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #if defined(PINGUINO47J53A) || defined(PINGUINO47J53B) || defined(PINGUINO4550) ||
+       defined(PINGUINO45K50) || defined(PICUNO\_EQUO)                   }
+444 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{digital_8h_aeb46d85e02eebbe66bcbcbb44f403841}{pD}: 
+445                 \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[\hyperlink{digital_8h_aeb46d85e02eebbe66bcbcbb44f403841}{pD}] = \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[
+      \hyperlink{digital_8h_aeb46d85e02eebbe66bcbcbb44f403841}{pD}] | mask[pin];  \textcolor{comment}{// list pin as servo driver.}
+446                 TRISD = TRISD & (~mask[pin]);                   \textcolor{comment}{// set as output pin}
+447                 \textcolor{keywordflow}{break};
+448 \textcolor{preprocessor}{        #endif}
+449 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #if defined(PINGUINO47J53A) || defined(PINGUINO47J53B) || defined(PINGUINO4550) ||
+       defined(PINGUINO45K50)       }
+450 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{digital_8h_a9aba3e923a2537bfbd31131da85a2d0a}{pE}: 
+451                 \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[\hyperlink{digital_8h_a9aba3e923a2537bfbd31131da85a2d0a}{pE}] = \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[
+      \hyperlink{digital_8h_a9aba3e923a2537bfbd31131da85a2d0a}{pE}] | mask[pin];  \textcolor{comment}{// list pin as servo driver.}
+452                 TRISE = TRISE & (~mask[pin]);                   \textcolor{comment}{// set as output pin}
+453                 \textcolor{keywordflow}{break};                              
+454 \textcolor{preprocessor}{        #endif}
+455 \textcolor{preprocessor}{}    \}
+456     
+457 \}
+\end{DoxyCode}
+\hypertarget{servos_8c_a3d490bdd11460c2d0533c7b6e31f7346}{\index{servos.\-c@{servos.\-c}!Servo\-Detach@{Servo\-Detach}}
+\index{Servo\-Detach@{Servo\-Detach}!servos.c@{servos.\-c}}
+\subsubsection[{Servo\-Detach}]{\setlength{\rightskip}{0pt plus 5cm}void Servo\-Detach (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{pin}
+\end{DoxyParamCaption}
+)}}\label{servos_8c_a3d490bdd11460c2d0533c7b6e31f7346}
+
+
+Definition at line 459 of file servos.\-c.
+
+
+
+References activatedservos, p\-A, p\-B, p\-C, p\-D, and p\-E.
+
+
+\begin{DoxyCode}
+460 \{
+461     \textcolor{keywordflow}{if}(pin>=TotalPICpins) \textcolor{keywordflow}{return};
+462 
+463     \textcolor{keywordflow}{switch} (port[pin])
+464     \{
+465         \textcolor{keywordflow}{case} \hyperlink{digital_8h_a166cc8406becb925e56e7e43ab4faaef}{pA}: \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[\hyperlink{digital_8h_a166cc8406becb925e56e7e43ab4faaef}{pA}] = \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[
+      \hyperlink{digital_8h_a166cc8406becb925e56e7e43ab4faaef}{pA}] ^ mask[pin];
+466                 \textcolor{keywordflow}{break};
+467         \textcolor{keywordflow}{case} \hyperlink{digital_8h_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}: \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[\hyperlink{digital_8h_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}] = \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[
+      \hyperlink{digital_8h_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}] ^ mask[pin];
+468                 \textcolor{keywordflow}{break};
+469 \textcolor{preprocessor}{        #if defined(\_\_18f14k22) || defined(PINGUINO2455) || defined(PINGUINO2550) || defined(PINGUINO25K50)
+       || defined(CHRP3) || defined(PINGUINO26J50) || defined(FREEJALDUINO) || defined(PINGUINO47J53A) ||
+       defined(PINGUINO47J53B) || defined(PINGUINO4550) || defined(PINGUINO45K50) || defined(PICUNO\_EQUO)}
+470 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{digital_8h_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}: \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[\hyperlink{digital_8h_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}] = \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[
+      \hyperlink{digital_8h_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}] ^ mask[pin];
+471                 \textcolor{keywordflow}{break};
+472 \textcolor{preprocessor}{        #endif}
+473 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #if defined(PINGUINO47J53A) || defined(PINGUINO47J53B) || defined(PINGUINO4550) ||
+       defined(PINGUINO45K50) || defined(PICUNO\_EQUO) }
+474 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{digital_8h_aeb46d85e02eebbe66bcbcbb44f403841}{pD}: \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[\hyperlink{digital_8h_aeb46d85e02eebbe66bcbcbb44f403841}{pD}] = \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[
+      \hyperlink{digital_8h_aeb46d85e02eebbe66bcbcbb44f403841}{pD}] ^ mask[pin];
+475                 \textcolor{keywordflow}{break};
+476 \textcolor{preprocessor}{        #endif}
+477 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #if defined(PINGUINO47J53A) || defined(PINGUINO47J53B) || defined(PINGUINO4550) ||
+       defined(PINGUINO45K50)       }
+478 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{digital_8h_a9aba3e923a2537bfbd31131da85a2d0a}{pE}: \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[\hyperlink{digital_8h_a9aba3e923a2537bfbd31131da85a2d0a}{pE}] = \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[
+      \hyperlink{digital_8h_a9aba3e923a2537bfbd31131da85a2d0a}{pE}] ^ mask[pin];
+479                 \textcolor{keywordflow}{break};
+480 \textcolor{preprocessor}{        #endif}
+481 \textcolor{preprocessor}{}    \}
+482 
+483 \}
+\end{DoxyCode}
+\hypertarget{servos_8c_a50f2f5a61887d47b29bd534a8be186ff}{\index{servos.\-c@{servos.\-c}!Servo\-Maximum\-Pulse@{Servo\-Maximum\-Pulse}}
+\index{Servo\-Maximum\-Pulse@{Servo\-Maximum\-Pulse}!servos.c@{servos.\-c}}
+\subsubsection[{Servo\-Maximum\-Pulse}]{\setlength{\rightskip}{0pt plus 5cm}void Servo\-Maximum\-Pulse (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{servo, }
+\item[{int}]{max\-\_\-microseconds}
+\end{DoxyParamCaption}
+)}}\label{servos_8c_a50f2f5a61887d47b29bd534a8be186ff}
+
+
+Definition at line 534 of file servos.\-c.
+
+
+
+References maxminpos.
+
+
+\begin{DoxyCode}
+535 \{
+536     \textcolor{comment}{// Check if number of servo is valid:}
+537     \textcolor{keywordflow}{if}(servo>=TotalPICpins)
+538         \textcolor{keywordflow}{return};
+539         
+540     \textcolor{comment}{// test if microseconds are within range:}
+541     \textcolor{keywordflow}{if} (max\_microseconds<1500) max\_microseconds=1500;
+542     \textcolor{keywordflow}{if} (max\_microseconds>2500) max\_microseconds=2500;
+543 
+544     \textcolor{comment}{// The following formula converts max. microseconds to max. timeslot}
+545     \hyperlink{servos_8c_a6d4e2f533daad0d9680234cc1dfc36ee}{maxminpos}[1][servo]=(max\_microseconds-500)>>3;   \textcolor{comment}{// 125 < final\_max < 250}
+546 
+547 \}
+\end{DoxyCode}
+\hypertarget{servos_8c_a698a2b502406c999c8972759c452ed27}{\index{servos.\-c@{servos.\-c}!Servo\-Minimum\-Pulse@{Servo\-Minimum\-Pulse}}
+\index{Servo\-Minimum\-Pulse@{Servo\-Minimum\-Pulse}!servos.c@{servos.\-c}}
+\subsubsection[{Servo\-Minimum\-Pulse}]{\setlength{\rightskip}{0pt plus 5cm}void Servo\-Minimum\-Pulse (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{servo, }
+\item[{int}]{min\-\_\-microseconds}
+\end{DoxyParamCaption}
+)}}\label{servos_8c_a698a2b502406c999c8972759c452ed27}
+
+
+Definition at line 520 of file servos.\-c.
+
+
+
+References maxminpos.
+
+
+\begin{DoxyCode}
+521 \{
+522     \textcolor{comment}{// Check if number of servo is valid:}
+523     \textcolor{keywordflow}{if}(servo>=TotalPICpins)
+524         \textcolor{keywordflow}{return};
+525 
+526     \textcolor{comment}{// test if microseconds are within range:}
+527     \textcolor{keywordflow}{if} (min\_microseconds<500)  min\_microseconds=500;
+528     \textcolor{keywordflow}{if} (min\_microseconds>1500) min\_microseconds=1500;
+529 
+530     \textcolor{comment}{// The following formula converts min. microseconds to min. timeslot}
+531     \hyperlink{servos_8c_a6d4e2f533daad0d9680234cc1dfc36ee}{maxminpos}[0][servo]=(min\_microseconds-500)>>3;   \textcolor{comment}{// 0 < final\_min < 125}
+532 \}
+\end{DoxyCode}
+\hypertarget{servos_8c_acc39d2697a43315ad49b96c63c41de2f}{\index{servos.\-c@{servos.\-c}!Servo\-Read@{Servo\-Read}}
+\index{Servo\-Read@{Servo\-Read}!servos.c@{servos.\-c}}
+\subsubsection[{Servo\-Read}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Servo\-Read (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{servo}
+\end{DoxyParamCaption}
+)}}\label{servos_8c_acc39d2697a43315ad49b96c63c41de2f}
+
+
+Definition at line 511 of file servos.\-c.
+
+
+
+References servovalues.
+
+
+\begin{DoxyCode}
+512 \{
+513     \textcolor{keywordflow}{if}(servo>=TotalPICpins)        \textcolor{comment}{// test if numservo is valid}
+514         \textcolor{keywordflow}{return} 0;
+515         
+516     \textcolor{keywordflow}{return} \hyperlink{servos_8c_a4e17331adc404707e6028c587cf19161}{servovalues}[servo];
+517 \}
+\end{DoxyCode}
+\hypertarget{servos_8c_a2061c00db51234f5ba2999415c3c82b0}{\index{servos.\-c@{servos.\-c}!servos\-\_\-init@{servos\-\_\-init}}
+\index{servos\-\_\-init@{servos\-\_\-init}!servos.c@{servos.\-c}}
+\subsubsection[{servos\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void servos\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{servos_8c_a2061c00db51234f5ba2999415c3c82b0}
+
+
+Definition at line 150 of file servos.\-c.
+
+
+
+References activatedservos, Default\-S\-E\-R\-V\-O\-M\-A\-X, Default\-S\-E\-R\-V\-O\-M\-I\-N, maxminpos, and servovalues.
+
+
+\begin{DoxyCode}
+151 \{
+152     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} a;
+153 
+154     \textcolor{comment}{// Filling up the servovalues table to 255. }
+155     \textcolor{keywordflow}{for}(a=0;a<TotalPICpins;a++)
+156     \{
+157         \hyperlink{servos_8c_a4e17331adc404707e6028c587cf19161}{servovalues}[a]=255;  \textcolor{comment}{//Filling up the servovalues table to 255.}
+158         \hyperlink{servos_8c_a6d4e2f533daad0d9680234cc1dfc36ee}{maxminpos}[0][a]= \hyperlink{servos_8c_a248eae25c206141b94d88b0d845f0439}{DefaultSERVOMIN}; \textcolor{comment}{// Setting min servo position to 1000
+       usec.}
+159         \hyperlink{servos_8c_a6d4e2f533daad0d9680234cc1dfc36ee}{maxminpos}[1][a]= \hyperlink{servos_8c_a3ede0c246c78f3cee82a4060bef01862}{DefaultSERVOMAX}; \textcolor{comment}{// Setting max servo position to 2000
+       usec.}
+160     \}
+161     
+162     \textcolor{comment}{// Filling up the activated servos matrix.}
+163     \textcolor{keywordflow}{for}(a=0;a<TotalPICports;a++)
+164         \hyperlink{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{activatedservos}[a]=0x00;  \textcolor{comment}{// Setting all pins as deactivated as servo.}
+165 
+166     INTCONbits.GIEH    = 0; \textcolor{comment}{// Disable global HP interrupts}
+167     INTCONbits.GIEL    = 0; \textcolor{comment}{// Disable global LP interrupts}
+168       
+169     T1CON=0x01;             \textcolor{comment}{//timer 1 prescaler 1 source is internal oscillator}
+170     TMR1H=0xFF;             \textcolor{comment}{// First value on timer to start up...}
+171     TMR1L=0x00;             \textcolor{comment}{// ...now the first interrupt will be generated by timer2 after 9 ms.}
+172     IPR1bits.TMR1IP = 1;    \textcolor{comment}{// INT\_HIGH\_PRIORITY}
+173     PIR1bits.TMR1IF = 0;    \textcolor{comment}{// Setting flag to 0}
+174     PIE1bits.TMR1IE = 1;    \textcolor{comment}{// INT\_ENABLE}
+175     T1CONbits.TMR1ON   = 1; \textcolor{comment}{// Starting TMR1}
+176     
+177     INTCONbits.GIEH    = 1; \textcolor{comment}{// Enable global HP interrupts}
+178     INTCONbits.GIEL    = 1; \textcolor{comment}{// Enable global LP interrupts}
+179 
+180 \}
+\end{DoxyCode}
+\hypertarget{servos_8c_a4c3e226eaaf571fb38c449064385a6ff}{\index{servos.\-c@{servos.\-c}!servos\-\_\-interrupt@{servos\-\_\-interrupt}}
+\index{servos\-\_\-interrupt@{servos\-\_\-interrupt}!servos.c@{servos.\-c}}
+\subsubsection[{servos\-\_\-interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void servos\-\_\-interrupt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{servos_8c_a4c3e226eaaf571fb38c449064385a6ff}
+
+
+Definition at line 550 of file servos.\-c.
+
+
+
+References needreordering, and phase.
+
+
+\begin{DoxyCode}
+551 \{
+552     \textcolor{keywordflow}{if} (PIR1bits.TMR1IF)
+553     \{
+554         \textcolor{comment}{//T1CON=0x00;}
+555 
+556         \textcolor{comment}{//case before 500 microseconds:}
+557 
+558         \textcolor{keywordflow}{if} (\hyperlink{servos_8c_a793fd408be2a27174378ec9bfcbfb144}{phase})
+559         \{
+560             ServosPulseUp();
+561             \textcolor{comment}{// Load at TMR1 (65535d - 6000d (-54usec for adjusments ) = 59481d = 0xE859 (after some
+       calibration 0xe959)}
+562             TMR1H= 0xe9;
+563             TMR1L= 0x59;
+564             \textcolor{comment}{// timer 1 prescaler 1 source is internal oscillator Fosc/4 (CPU clock or Fosc=48Mhz).}
+565             T1CON=1;
+566             \hyperlink{servos_8c_a793fd408be2a27174378ec9bfcbfb144}{phase} = 0;
+567         \}
+568 
+569         \textcolor{comment}{//case before 2500 microseconds:}
+570 
+571         \textcolor{keywordflow}{else}
+572         \{
+573             \textcolor{comment}{//The following call takes 2 ms aprox.:}
+574             ServosPulseDown();
+575             \textcolor{comment}{// After fisrt 2,5 ms we need a delay of 17,5 ms to complete a 20 ms cycle.}
+576             \textcolor{comment}{// Loading at TMR1 65535d - (4,375 x 12000(=1ms)=) 52500d = 13035d = 0x32EB => 4,375 ms}
+577             \textcolor{comment}{// This is 4,375ms x 4 (preescaler) = 17,5 ms}
+578             TMR1H= 0x32;
+579             TMR1L= 0xeb;
+580             \textcolor{comment}{// timer 1 prescaler 1 source is internal oscillator Fosc/4 (recordemos que Fosc=48Mhz).}
+581             \textcolor{keywordflow}{if} (\hyperlink{servos_8c_a60ca7e89d4365b62d64a3f02839252ef}{needreordering})
+582                 SortServoTimings(); \textcolor{comment}{// This takes more than 1 ms, but it's call only if needed.}
+583             T1CON= ( 1 | 2 << 4 ) ; \textcolor{comment}{// activate timer1 and prescaler = 1:4}
+584             \hyperlink{servos_8c_a793fd408be2a27174378ec9bfcbfb144}{phase} = 1;             \textcolor{comment}{//This indicates that after next interrupt it will start the servos
+       cycle.}
+585         \}
+586 
+587         \textcolor{comment}{// enable interrupt again}
+588         PIR1bits.TMR1IF=0;
+589     \}
+590     \textcolor{keywordflow}{return};
+591 \}
+\end{DoxyCode}
+\hypertarget{servos_8c_a1738c5ca911512c30e1f529f5125ed71}{\index{servos.\-c@{servos.\-c}!Servo\-Write@{Servo\-Write}}
+\index{Servo\-Write@{Servo\-Write}!servos.c@{servos.\-c}}
+\subsubsection[{Servo\-Write}]{\setlength{\rightskip}{0pt plus 5cm}void Servo\-Write (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{servo, }
+\item[{unsigned char}]{degrees}
+\end{DoxyParamCaption}
+)}}\label{servos_8c_a1738c5ca911512c30e1f529f5125ed71}
+
+
+Definition at line 485 of file servos.\-c.
+
+
+
+References maxminpos, needreordering, and servovalues.
+
+
+\begin{DoxyCode}
+486 \{
+487     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} range;
+488     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} ticksperdegree;
+489     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} value;
+490 
+491     \textcolor{comment}{// Check if number of servo is valid}
+492     \textcolor{keywordflow}{if}(servo>=TotalPICpins)
+493         \textcolor{keywordflow}{return};
+494 
+495     \textcolor{comment}{// limitting degrees:}
+496     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2core_2macro_8h_afe93c2c14da376a1621194c15c1de496}{degrees}>180) \hyperlink{p8_2pinguino_2core_2macro_8h_afe93c2c14da376a1621194c15c1de496}{degrees}=180;
+497 
+498     \textcolor{comment}{// Converts degrees to timeslots}
+499     range = (\hyperlink{servos_8c_a6d4e2f533daad0d9680234cc1dfc36ee}{maxminpos}[1][servo]  - \hyperlink{servos_8c_a6d4e2f533daad0d9680234cc1dfc36ee}{maxminpos}[0][servo]);
+500     value = (\hyperlink{p8_2pinguino_2core_2macro_8h_afe93c2c14da376a1621194c15c1de496}{degrees}*range) / 180 + \hyperlink{servos_8c_a6d4e2f533daad0d9680234cc1dfc36ee}{maxminpos}[0][servo];
+501 
+502     \textcolor{comment}{// Storage of that new position to servovalues positions table:}
+503     \textcolor{comment}{// it should be added the min value for that servo}
+504     \hyperlink{servos_8c_a4e17331adc404707e6028c587cf19161}{servovalues}[servo]= value;
+505 
+506     \hyperlink{servos_8c_a60ca7e89d4365b62d64a3f02839252ef}{needreordering}=1;  \textcolor{comment}{// This indicates servo timings must be reordered.}
+507 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}{\index{servos.\-c@{servos.\-c}!activatedservos@{activatedservos}}
+\index{activatedservos@{activatedservos}!servos.c@{servos.\-c}}
+\subsubsection[{activatedservos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char activatedservos\mbox{[}Total\-P\-I\-Cports\mbox{]}}}\label{servos_8c_aff8bf804d0eb77d951d6c84ebbd36d83}
+
+
+Definition at line 141 of file servos.\-c.
+
+
+
+Referenced by Servo\-Attach(), Servo\-Detach(), and servos\-\_\-init().
+
+\hypertarget{servos_8c_a5c123d3528d7afadc12da5601753710c}{\index{servos.\-c@{servos.\-c}!loopvar@{loopvar}}
+\index{loopvar@{loopvar}!servos.c@{servos.\-c}}
+\subsubsection[{loopvar}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char loopvar}}\label{servos_8c_a5c123d3528d7afadc12da5601753710c}
+
+
+Definition at line 136 of file servos.\-c.
+
+\hypertarget{servos_8c_a7ac2e5b3290e5367ac6a526b9e7c8821}{\index{servos.\-c@{servos.\-c}!mascaratotal@{mascaratotal}}
+\index{mascaratotal@{mascaratotal}!servos.c@{servos.\-c}}
+\subsubsection[{mascaratotal}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char mascaratotal\mbox{[}Total\-P\-I\-Cports\mbox{]}}}\label{servos_8c_a7ac2e5b3290e5367ac6a526b9e7c8821}
+
+
+Definition at line 137 of file servos.\-c.
+
+\hypertarget{servos_8c_a6d4e2f533daad0d9680234cc1dfc36ee}{\index{servos.\-c@{servos.\-c}!maxminpos@{maxminpos}}
+\index{maxminpos@{maxminpos}!servos.c@{servos.\-c}}
+\subsubsection[{maxminpos}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char maxminpos\mbox{[}2\mbox{]}\mbox{[}Total\-P\-I\-Cpins\mbox{]}}}\label{servos_8c_a6d4e2f533daad0d9680234cc1dfc36ee}
+
+
+Definition at line 145 of file servos.\-c.
+
+
+
+Referenced by Servo\-Maximum\-Pulse(), Servo\-Minimum\-Pulse(), servos\-\_\-init(), and Servo\-Write().
+
+\hypertarget{servos_8c_a60ca7e89d4365b62d64a3f02839252ef}{\index{servos.\-c@{servos.\-c}!needreordering@{needreordering}}
+\index{needreordering@{needreordering}!servos.c@{servos.\-c}}
+\subsubsection[{needreordering}]{\setlength{\rightskip}{0pt plus 5cm}volatile unsigned char needreordering =0}}\label{servos_8c_a60ca7e89d4365b62d64a3f02839252ef}
+
+
+Definition at line 78 of file servos.\-c.
+
+
+
+Referenced by servos\-\_\-interrupt(), and Servo\-Write().
+
+\hypertarget{servos_8c_a793fd408be2a27174378ec9bfcbfb144}{\index{servos.\-c@{servos.\-c}!phase@{phase}}
+\index{phase@{phase}!servos.c@{servos.\-c}}
+\subsubsection[{phase}]{\setlength{\rightskip}{0pt plus 5cm}volatile unsigned char phase =0}}\label{servos_8c_a793fd408be2a27174378ec9bfcbfb144}
+
+
+Definition at line 77 of file servos.\-c.
+
+
+
+Referenced by servos\-\_\-interrupt().
+
+\hypertarget{servos_8c_a4e17331adc404707e6028c587cf19161}{\index{servos.\-c@{servos.\-c}!servovalues@{servovalues}}
+\index{servovalues@{servovalues}!servos.c@{servos.\-c}}
+\subsubsection[{servovalues}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char servovalues\mbox{[}Total\-P\-I\-Cpins\mbox{]}}}\label{servos_8c_a4e17331adc404707e6028c587cf19161}
+
+
+Definition at line 143 of file servos.\-c.
+
+
+
+Referenced by Servo\-Read(), servos\-\_\-init(), and Servo\-Write().
+
+\hypertarget{servos_8c_ac36cd3e853a2a1a1bf078290e721a55f}{\index{servos.\-c@{servos.\-c}!timedivision@{timedivision}}
+\index{timedivision@{timedivision}!servos.c@{servos.\-c}}
+\subsubsection[{timedivision}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char timedivision =0}}\label{servos_8c_ac36cd3e853a2a1a1bf078290e721a55f}
+
+
+Definition at line 135 of file servos.\-c.
+
+\hypertarget{servos_8c_a20e9455cf6da1546adaad7823afb70fb}{\index{servos.\-c@{servos.\-c}!timevalue@{timevalue}}
+\index{timevalue@{timevalue}!servos.c@{servos.\-c}}
+\subsubsection[{timevalue}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char timevalue\mbox{[}Total\-P\-I\-Cpins\mbox{]}}}\label{servos_8c_a20e9455cf6da1546adaad7823afb70fb}
+
+
+Definition at line 139 of file servos.\-c.
+
+\hypertarget{servos_8c_a5397073a62286058b0f8d8759411690d}{\index{servos.\-c@{servos.\-c}!timingindex@{timingindex}}
+\index{timingindex@{timingindex}!servos.c@{servos.\-c}}
+\subsubsection[{timingindex}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char timingindex}}\label{servos_8c_a5397073a62286058b0f8d8759411690d}
+
+
+Definition at line 134 of file servos.\-c.
+
+\hypertarget{servos_8c_a833a51fe4ce283b82edadd8d82ade899}{\index{servos.\-c@{servos.\-c}!timings@{timings}}
+\index{timings@{timings}!servos.c@{servos.\-c}}
+\subsubsection[{timings}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char timings\mbox{[}Total\-P\-I\-Cpins\mbox{]}\mbox{[}Total\-P\-I\-Cports\mbox{]}}}\label{servos_8c_a833a51fe4ce283b82edadd8d82ade899}
+
+
+Definition at line 140 of file servos.\-c.
+

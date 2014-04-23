@@ -1,0 +1,252 @@
+\hypertarget{reset_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/reset.c File Reference}
+\label{reset_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/reset.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/reset.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{reset_8c_ac1ef1c95a10803726dc102b6b5689e20}{\-\_\-\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C}
+\item 
+\#define \hyperlink{reset_8c_a16a370e400c1496d9881307097b1bb7c}{System\-Is\-Config\-Mismatch\-Reset}()~!R\-C\-O\-Nbits.\-N\-O\-T\-\_\-\-C\-M
+\item 
+\#define \hyperlink{reset_8c_ac9cb49ce8976dedddc4de3b236b2ce54}{System\-Is\-Sleep\-Instruction\-Reset}()~!R\-C\-O\-Nbits.\-N\-O\-T\-\_\-\-P\-D
+\item 
+\#define \hyperlink{reset_8c_ac938d51ef4e62315e8dba5997f36afe2}{System\-Is\-Reset\-Instruction\-Reset}()~!R\-C\-O\-Nbits.\-N\-O\-T\-\_\-\-R\-I
+\item 
+\#define \hyperlink{reset_8c_ac4bcb03fc475679f8ae3e83d91eb31cf}{System\-Is\-Stack\-Full\-Reset}()~S\-T\-K\-P\-T\-Rbits.\-S\-T\-K\-F\-U\-L
+\item 
+\#define \hyperlink{reset_8c_a75278fc88d38934f14cde418bfe1caf8}{System\-Is\-Stack\-Underflow\-Reset}()~S\-T\-K\-P\-T\-Rbits.\-S\-T\-K\-U\-N\-F
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{reset_8c_a064aff666d673f29c59eab8bebb9ca51}{System\-Is\-Power\-On\-Reset} ()
+\item 
+char \hyperlink{reset_8c_a2cb2710bf844203fca50ff4b70df8216}{System\-Is\-Brown\-Out\-Reset} ()
+\item 
+char \hyperlink{reset_8c_af28eb65e71c3b7ad9ae15e76f9ddac14}{System\-Is\-Watchdog\-Timeout\-Reset} ()
+\item 
+char \hyperlink{reset_8c_aa6e40841634fd2c14018987451846298}{System\-Is\-Mclr\-Reset} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{reset_8c_ac1ef1c95a10803726dc102b6b5689e20}{\index{reset.\-c@{reset.\-c}!\-\_\-\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C@{\-\_\-\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C@{\-\_\-\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C}!reset.c@{reset.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C}}\label{reset_8c_ac1ef1c95a10803726dc102b6b5689e20}
+
+
+Definition at line 27 of file reset.\-c.
+
+\hypertarget{reset_8c_a16a370e400c1496d9881307097b1bb7c}{\index{reset.\-c@{reset.\-c}!System\-Is\-Config\-Mismatch\-Reset@{System\-Is\-Config\-Mismatch\-Reset}}
+\index{System\-Is\-Config\-Mismatch\-Reset@{System\-Is\-Config\-Mismatch\-Reset}!reset.c@{reset.\-c}}
+\subsubsection[{System\-Is\-Config\-Mismatch\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}\#define System\-Is\-Config\-Mismatch\-Reset(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~!R\-C\-O\-Nbits.\-N\-O\-T\-\_\-\-C\-M}}\label{reset_8c_a16a370e400c1496d9881307097b1bb7c}
+
+
+Definition at line 83 of file reset.\-c.
+
+
+
+Referenced by System\-Is\-Mclr\-Reset().
+
+\hypertarget{reset_8c_ac938d51ef4e62315e8dba5997f36afe2}{\index{reset.\-c@{reset.\-c}!System\-Is\-Reset\-Instruction\-Reset@{System\-Is\-Reset\-Instruction\-Reset}}
+\index{System\-Is\-Reset\-Instruction\-Reset@{System\-Is\-Reset\-Instruction\-Reset}!reset.c@{reset.\-c}}
+\subsubsection[{System\-Is\-Reset\-Instruction\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}\#define System\-Is\-Reset\-Instruction\-Reset(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~!R\-C\-O\-Nbits.\-N\-O\-T\-\_\-\-R\-I}}\label{reset_8c_ac938d51ef4e62315e8dba5997f36afe2}
+
+
+Definition at line 114 of file reset.\-c.
+
+
+
+Referenced by System\-Is\-Mclr\-Reset().
+
+\hypertarget{reset_8c_ac9cb49ce8976dedddc4de3b236b2ce54}{\index{reset.\-c@{reset.\-c}!System\-Is\-Sleep\-Instruction\-Reset@{System\-Is\-Sleep\-Instruction\-Reset}}
+\index{System\-Is\-Sleep\-Instruction\-Reset@{System\-Is\-Sleep\-Instruction\-Reset}!reset.c@{reset.\-c}}
+\subsubsection[{System\-Is\-Sleep\-Instruction\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}\#define System\-Is\-Sleep\-Instruction\-Reset(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~!R\-C\-O\-Nbits.\-N\-O\-T\-\_\-\-P\-D}}\label{reset_8c_ac9cb49ce8976dedddc4de3b236b2ce54}
+
+
+Definition at line 89 of file reset.\-c.
+
+
+
+Referenced by System\-Is\-Mclr\-Reset().
+
+\hypertarget{reset_8c_ac4bcb03fc475679f8ae3e83d91eb31cf}{\index{reset.\-c@{reset.\-c}!System\-Is\-Stack\-Full\-Reset@{System\-Is\-Stack\-Full\-Reset}}
+\index{System\-Is\-Stack\-Full\-Reset@{System\-Is\-Stack\-Full\-Reset}!reset.c@{reset.\-c}}
+\subsubsection[{System\-Is\-Stack\-Full\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}\#define System\-Is\-Stack\-Full\-Reset(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~S\-T\-K\-P\-T\-Rbits.\-S\-T\-K\-F\-U\-L}}\label{reset_8c_ac4bcb03fc475679f8ae3e83d91eb31cf}
+
+
+Definition at line 120 of file reset.\-c.
+
+
+
+Referenced by System\-Is\-Mclr\-Reset().
+
+\hypertarget{reset_8c_a75278fc88d38934f14cde418bfe1caf8}{\index{reset.\-c@{reset.\-c}!System\-Is\-Stack\-Underflow\-Reset@{System\-Is\-Stack\-Underflow\-Reset}}
+\index{System\-Is\-Stack\-Underflow\-Reset@{System\-Is\-Stack\-Underflow\-Reset}!reset.c@{reset.\-c}}
+\subsubsection[{System\-Is\-Stack\-Underflow\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}\#define System\-Is\-Stack\-Underflow\-Reset(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~S\-T\-K\-P\-T\-Rbits.\-S\-T\-K\-U\-N\-F}}\label{reset_8c_a75278fc88d38934f14cde418bfe1caf8}
+
+
+Definition at line 126 of file reset.\-c.
+
+
+
+Referenced by System\-Is\-Mclr\-Reset().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{reset_8c_a2cb2710bf844203fca50ff4b70df8216}{\index{reset.\-c@{reset.\-c}!System\-Is\-Brown\-Out\-Reset@{System\-Is\-Brown\-Out\-Reset}}
+\index{System\-Is\-Brown\-Out\-Reset@{System\-Is\-Brown\-Out\-Reset}!reset.c@{reset.\-c}}
+\subsubsection[{System\-Is\-Brown\-Out\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}char System\-Is\-Brown\-Out\-Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{reset_8c_a2cb2710bf844203fca50ff4b70df8216}
+
+
+Definition at line 97 of file reset.\-c.
+
+
+
+Referenced by System\-Is\-Mclr\-Reset().
+
+
+\begin{DoxyCode}
+98 \{
+99     \textcolor{keywordflow}{if} (RCONbits.NOT\_POR)
+100     \{
+101         \textcolor{keywordflow}{if} (!RCONbits.NOT\_BOR)
+102         \{
+103             RCONbits.NOT\_BOR = 1;
+104             \textcolor{keywordflow}{return} 1;
+105         \}
+106     \}
+107     \textcolor{keywordflow}{return} 0;
+108 \}
+\end{DoxyCode}
+\hypertarget{reset_8c_aa6e40841634fd2c14018987451846298}{\index{reset.\-c@{reset.\-c}!System\-Is\-Mclr\-Reset@{System\-Is\-Mclr\-Reset}}
+\index{System\-Is\-Mclr\-Reset@{System\-Is\-Mclr\-Reset}!reset.c@{reset.\-c}}
+\subsubsection[{System\-Is\-Mclr\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}char System\-Is\-Mclr\-Reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{reset_8c_aa6e40841634fd2c14018987451846298}
+
+
+Definition at line 148 of file reset.\-c.
+
+
+
+References System\-Is\-Brown\-Out\-Reset(), System\-Is\-Config\-Mismatch\-Reset, System\-Is\-Power\-On\-Reset(), System\-Is\-Reset\-Instruction\-Reset, System\-Is\-Sleep\-Instruction\-Reset, System\-Is\-Stack\-Full\-Reset, System\-Is\-Stack\-Underflow\-Reset, and System\-Is\-Watchdog\-Timeout\-Reset().
+
+
+\begin{DoxyCode}
+149 \{
+150     \textcolor{comment}{// power-on reset ?}
+151     \textcolor{keywordflow}{if} (\hyperlink{reset_8c_a064aff666d673f29c59eab8bebb9ca51}{SystemIsPowerOnReset}())             \textcolor{keywordflow}{return} 0;
+152     \textcolor{comment}{// config. mismatch reset ?}
+153     \textcolor{keywordflow}{if} (\hyperlink{reset_8c_a16a370e400c1496d9881307097b1bb7c}{SystemIsConfigMismatchReset}())      \textcolor{keywordflow}{return} 0;
+154     \textcolor{comment}{// sleep instruction reset ?}
+155     \textcolor{keywordflow}{if} (\hyperlink{reset_8c_ac9cb49ce8976dedddc4de3b236b2ce54}{SystemIsSleepInstructionReset}())    \textcolor{keywordflow}{return} 0;
+156     \textcolor{comment}{// brown-out reset ?}
+157     \textcolor{keywordflow}{if} (\hyperlink{reset_8c_a2cb2710bf844203fca50ff4b70df8216}{SystemIsBrownOutReset}())            \textcolor{keywordflow}{return} 0;
+158     \textcolor{comment}{// watchdog timeout reset ?}
+159     \textcolor{keywordflow}{if} (\hyperlink{reset_8c_af28eb65e71c3b7ad9ae15e76f9ddac14}{SystemIsWatchdogTimeoutReset}())     \textcolor{keywordflow}{return} 0;
+160     \textcolor{comment}{// reset instruction ?}
+161     \textcolor{keywordflow}{if} (\hyperlink{reset_8c_ac938d51ef4e62315e8dba5997f36afe2}{SystemIsResetInstructionReset}())    \textcolor{keywordflow}{return} 0;
+162     \textcolor{comment}{// stack full reset ?}
+163     \textcolor{keywordflow}{if} (\hyperlink{reset_8c_ac4bcb03fc475679f8ae3e83d91eb31cf}{SystemIsStackFullReset}())           \textcolor{keywordflow}{return} 0;
+164     \textcolor{comment}{// stack underflow reset ?}
+165     \textcolor{keywordflow}{if} (\hyperlink{reset_8c_a75278fc88d38934f14cde418bfe1caf8}{SystemIsStackUnderflowReset}())      \textcolor{keywordflow}{return} 0;
+166     \textcolor{comment}{// then it's a MCLR-pin reset}
+167     \textcolor{keywordflow}{return} 1;
+168 \}
+\end{DoxyCode}
+\hypertarget{reset_8c_a064aff666d673f29c59eab8bebb9ca51}{\index{reset.\-c@{reset.\-c}!System\-Is\-Power\-On\-Reset@{System\-Is\-Power\-On\-Reset}}
+\index{System\-Is\-Power\-On\-Reset@{System\-Is\-Power\-On\-Reset}!reset.c@{reset.\-c}}
+\subsubsection[{System\-Is\-Power\-On\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}char System\-Is\-Power\-On\-Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{reset_8c_a064aff666d673f29c59eab8bebb9ca51}
+An M\-C\-L\-R reset will not affect the T\-O, P\-O\-R and B\-O\-R bits and can be detected by the absence of other reset causes indicated by these bits, if they were set appropriately before the reset.
+
+A Power-\/\-On Reset will clear the P\-O\-R bit and set the T\-O and P\-D bits. It is recommended that the P\-O\-R bit be set after a Power-\/on Reset has been detected, so that subsequent Power-\/on Resets may be detected.
+
+If a brown-\/out reset was enabled the B\-O\-R bit will be unknown. Brown-\/out Reset is said to have occurred when B\-O\-R is ‘0’ and P\-O\-R is ‘1’ (assuming that P\-O\-R was set to ‘1’ by software immediately after a Power-\/on Reset).
+
+R\-C\-O\-N $<$7\-:0$>$ = I\-P\-E\-N $\vert$ -\/ $\vert$ C\-M $\vert$ R\-I $\vert$ T\-O $\vert$ P\-D $\vert$ P\-O\-R $\vert$ B\-O\-R
+
+I\-P\-E\-N = 1 \-: Enable priority levels on interrupts 0 C\-M = 1 \-: A Configuration Mismatch Reset has not occurred R\-I = 1 \-: The R\-E\-S\-E\-T instruction was not executed T\-O = 1 \-: Set by power-\/up, C\-L\-R\-W\-D\-T instruction or S\-L\-E\-E\-P instruction P\-D = 0 \-: 1 = Set by power-\/up or by the C\-L\-R\-W\-D\-T instruction 0 = Set by execution of the S\-L\-E\-E\-P instruction
+
+P\-O\-R = 0 \-: A Power-\/on Reset occurred (must be set in software after a Power-\/on Reset occurs) B\-O\-R = 0\-: A Brown-\/out Reset occurred (must be set in software after a Brown-\/out Reset occurs) 
+
+Definition at line 69 of file reset.\-c.
+
+
+
+Referenced by System\-Is\-Mclr\-Reset().
+
+
+\begin{DoxyCode}
+70 \{
+71     \textcolor{keywordflow}{if} (!RCONbits.NOT\_POR)
+72     \{
+73         RCONbits.NOT\_POR = 1;
+74         \textcolor{keywordflow}{return} 1;
+75     \}
+76     \textcolor{keywordflow}{return} 0;
+77 \}
+\end{DoxyCode}
+\hypertarget{reset_8c_af28eb65e71c3b7ad9ae15e76f9ddac14}{\index{reset.\-c@{reset.\-c}!System\-Is\-Watchdog\-Timeout\-Reset@{System\-Is\-Watchdog\-Timeout\-Reset}}
+\index{System\-Is\-Watchdog\-Timeout\-Reset@{System\-Is\-Watchdog\-Timeout\-Reset}!reset.c@{reset.\-c}}
+\subsubsection[{System\-Is\-Watchdog\-Timeout\-Reset}]{\setlength{\rightskip}{0pt plus 5cm}char System\-Is\-Watchdog\-Timeout\-Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{reset_8c_af28eb65e71c3b7ad9ae15e76f9ddac14}
+
+
+Definition at line 132 of file reset.\-c.
+
+
+
+Referenced by System\-Is\-Mclr\-Reset().
+
+
+\begin{DoxyCode}
+133 \{
+134     \textcolor{comment}{// checks if watchdog is enabled}
+135     \textcolor{keywordflow}{if} (WDTCONbits.SWDTEN)
+136     \{
+137         \textcolor{comment}{// watchdog timeout reset}
+138         \textcolor{keywordflow}{if} (!RCONbits.NOT\_TO)
+139             \textcolor{keywordflow}{return} 1;
+140     \}
+141     \textcolor{keywordflow}{return} 0;
+142 \}
+\end{DoxyCode}

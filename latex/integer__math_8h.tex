@@ -1,0 +1,201 @@
+\hypertarget{integer__math_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/integer\-\_\-math.h File Reference}
+\label{integer__math_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/integer\-\_\-math.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/libraries/integer\-\_\-math.\-h}}
+}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef float \hyperlink{integer__math_8h_a1fe3e4aff47a7b4584778867cb817c01}{returntype}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{integer__math_8h_a1fe3e4aff47a7b4584778867cb817c01}{returntype} \hyperlink{integer__math_8h_a75c206deaa23373742a9b63b9d88547b}{sini} (unsigned int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})
+\item 
+\hyperlink{integer__math_8h_a1fe3e4aff47a7b4584778867cb817c01}{returntype} \hyperlink{integer__math_8h_a23a6057d030cef9c2419b9ab1e00e615}{cosi} (unsigned int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})
+\item 
+\hyperlink{integer__math_8h_a1fe3e4aff47a7b4584778867cb817c01}{returntype} \hyperlink{integer__math_8h_a47765f13a47838f98c63f0294443d512}{tani} (unsigned int \hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})
+\item 
+\hyperlink{integer__math_8h_a1fe3e4aff47a7b4584778867cb817c01}{returntype} \hyperlink{integer__math_8h_a95c977034828ad73c4c90ca9f6ce14d8}{powi} (int base, int num)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const float \hyperlink{integer__math_8h_a7771729c5d67dc4bf35431f49c26ac63}{sins} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{integer__math_8h_a1fe3e4aff47a7b4584778867cb817c01}{\index{integer\-\_\-math.\-h@{integer\-\_\-math.\-h}!returntype@{returntype}}
+\index{returntype@{returntype}!integer_math.h@{integer\-\_\-math.\-h}}
+\subsubsection[{returntype}]{\setlength{\rightskip}{0pt plus 5cm}typedef float {\bf returntype}}}\label{integer__math_8h_a1fe3e4aff47a7b4584778867cb817c01}
+
+
+Definition at line 14 of file integer\-\_\-math.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{integer__math_8h_a23a6057d030cef9c2419b9ab1e00e615}{\index{integer\-\_\-math.\-h@{integer\-\_\-math.\-h}!cosi@{cosi}}
+\index{cosi@{cosi}!integer_math.h@{integer\-\_\-math.\-h}}
+\subsubsection[{cosi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf returntype} cosi (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x}
+\end{DoxyParamCaption}
+)}}\label{integer__math_8h_a23a6057d030cef9c2419b9ab1e00e615}
+
+
+Definition at line 34 of file integer\-\_\-math.\-c.
+
+
+
+References sins.
+
+
+
+Referenced by draw\-Bitmap\-R(), rotate\-Char(), and tani().
+
+
+\begin{DoxyCode}
+34                                \{
+35     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} - 360*((int)(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}/360));
+36     
+37     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}<=90)\{
+38         \textcolor{keywordflow}{return}(\hyperlink{integer__math_8h_a7771729c5d67dc4bf35431f49c26ac63}{sins}[90-\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}]);
+39     \}
+40     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}<180)\{
+41         \textcolor{keywordflow}{return}(-\hyperlink{integer__math_8h_a7771729c5d67dc4bf35431f49c26ac63}{sins}[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}-90]);
+42     \}
+43     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}<=270)\{
+44         \textcolor{keywordflow}{return}(-\hyperlink{integer__math_8h_a7771729c5d67dc4bf35431f49c26ac63}{sins}[270-\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}]);
+45     \}
+46     \textcolor{comment}{//x<60}
+47     \textcolor{keywordflow}{return}(\hyperlink{integer__math_8h_a7771729c5d67dc4bf35431f49c26ac63}{sins}[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}-270]);
+48 \}
+\end{DoxyCode}
+\hypertarget{integer__math_8h_a95c977034828ad73c4c90ca9f6ce14d8}{\index{integer\-\_\-math.\-h@{integer\-\_\-math.\-h}!powi@{powi}}
+\index{powi@{powi}!integer_math.h@{integer\-\_\-math.\-h}}
+\subsubsection[{powi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf returntype} powi (
+\begin{DoxyParamCaption}
+\item[{int}]{base, }
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}}\label{integer__math_8h_a95c977034828ad73c4c90ca9f6ce14d8}
+
+
+Definition at line 54 of file integer\-\_\-math.\-c.
+
+
+
+References res.
+
+
+
+Referenced by print\-Num\-F().
+
+
+\begin{DoxyCode}
+54                                   \{
+55     \textcolor{keywordtype}{int} i, to;
+56     \textcolor{keywordtype}{float} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = 1;
+57     
+58     to = num > 0? num: num * (-1);
+59 
+60     \textcolor{keywordflow}{for}(i = 0; i<to; i++)\{
+61         res *= base;
+62     \}
+63     
+64     \textcolor{keywordflow}{return} (num>0?res:(1/res));
+65     
+66 \}
+\end{DoxyCode}
+\hypertarget{integer__math_8h_a75c206deaa23373742a9b63b9d88547b}{\index{integer\-\_\-math.\-h@{integer\-\_\-math.\-h}!sini@{sini}}
+\index{sini@{sini}!integer_math.h@{integer\-\_\-math.\-h}}
+\subsubsection[{sini}]{\setlength{\rightskip}{0pt plus 5cm}{\bf returntype} sini (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x}
+\end{DoxyParamCaption}
+)}}\label{integer__math_8h_a75c206deaa23373742a9b63b9d88547b}
+
+
+Definition at line 17 of file integer\-\_\-math.\-c.
+
+
+
+References sins.
+
+
+
+Referenced by draw\-Bitmap\-R(), rotate\-Char(), and tani().
+
+
+\begin{DoxyCode}
+17                                \{
+18     \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} = \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x} - 360*((int)(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}/360));
+19     
+20     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}<=90)\{
+21         \textcolor{keywordflow}{return}(\hyperlink{integer__math_8h_a7771729c5d67dc4bf35431f49c26ac63}{sins}[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}]);
+22     \}
+23     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}<180)\{
+24         \textcolor{keywordflow}{return}(\hyperlink{integer__math_8h_a7771729c5d67dc4bf35431f49c26ac63}{sins}[180-\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}]);
+25     \}
+26     \textcolor{keywordflow}{if}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}<270)\{
+27         \textcolor{keywordflow}{return}(-\hyperlink{integer__math_8h_a7771729c5d67dc4bf35431f49c26ac63}{sins}[\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}-180]);
+28     \}
+29     \textcolor{comment}{//x<360}
+30     \textcolor{keywordflow}{return}(-\hyperlink{integer__math_8h_a7771729c5d67dc4bf35431f49c26ac63}{sins}[360-\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}]);
+31 \}
+\end{DoxyCode}
+\hypertarget{integer__math_8h_a47765f13a47838f98c63f0294443d512}{\index{integer\-\_\-math.\-h@{integer\-\_\-math.\-h}!tani@{tani}}
+\index{tani@{tani}!integer_math.h@{integer\-\_\-math.\-h}}
+\subsubsection[{tani}]{\setlength{\rightskip}{0pt plus 5cm}{\bf returntype} tani (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x}
+\end{DoxyParamCaption}
+)}}\label{integer__math_8h_a47765f13a47838f98c63f0294443d512}
+
+
+Definition at line 50 of file integer\-\_\-math.\-c.
+
+
+
+References cosi(), and sini().
+
+
+\begin{DoxyCode}
+50                                \{
+51     \textcolor{keywordflow}{return} (\hyperlink{integer__math_8c_a75c206deaa23373742a9b63b9d88547b}{sini}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})/\hyperlink{integer__math_8c_a23a6057d030cef9c2419b9ab1e00e615}{cosi}(\hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}));
+52 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{integer__math_8h_a7771729c5d67dc4bf35431f49c26ac63}{\index{integer\-\_\-math.\-h@{integer\-\_\-math.\-h}!sins@{sins}}
+\index{sins@{sins}!integer_math.h@{integer\-\_\-math.\-h}}
+\subsubsection[{sins}]{\setlength{\rightskip}{0pt plus 5cm}const float sins\mbox{[}$\,$\mbox{]}}}\label{integer__math_8h_a7771729c5d67dc4bf35431f49c26ac63}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{ 0,0.0174524064,0.0348994967,0.0523359562,0.0697564737,
+0.0871557427,0.1045284633,0.1218693434,0.139173101,0.156434465,0.1736481777,
+0.1908089954,0.2079116908,0.2249510543,0.2419218956,0.2588190451,0.2756373558,
+0.2923717047,0.3090169944,0.3255681545,0.3420201433,0.3583679495,0.3746065934,
+0.3907311285,0.4067366431,0.4226182617,0.4383711468,0.4539904997,0.4694715628,
+0.4848096202,0.5,0.5150380749,0.5299192642,0.544639035,0.5591929035,0.5735764364,
+0.5877852523,0.6018150232,0.6156614753,0.629320391,0.6427876097,0.656059029,
+0.6691306064,0.6819983601,0.6946583705,0.7071067812,0.7193398003,0.7313537016,
+0.7431448255,0.7547095802,0.7660444431,0.7771459615,0.7880107536,0.79863551,
+0.8090169944,0.8191520443,0.8290375726,0.8386705679,0.8480480962,0.8571673007,
+0.8660254038,0.8746197071,0.8829475929,0.8910065242,0.8987940463,0.906307787,
+0.9135454576,0.9205048535,0.9271838546,0.9335804265,0.9396926208,0.9455185756,
+0.9510565163,0.956304756,0.9612616959,0.9659258263,0.9702957263,0.9743700648,
+0.9781476007,0.9816271834,0.984807753,0.9876883406,0.9902680687,0.9925461516,
+0.9945218954,0.9961946981,0.9975640503,0.9986295348,0.999390827,0.9998476952,
+1 \}
+\end{DoxyCode}
+
+
+Definition at line 16 of file integer\-\_\-math.\-h.
+
+
+
+Referenced by cosi(), and sini().
+

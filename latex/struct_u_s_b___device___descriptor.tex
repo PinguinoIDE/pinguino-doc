@@ -1,0 +1,152 @@
+\hypertarget{struct_u_s_b___device___descriptor}{\section{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor Struct Reference}
+\label{struct_u_s_b___device___descriptor}\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+}
+
+
+{\ttfamily \#include $<$pic\-U\-S\-B.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___device___descriptor_a904ce9aea3e1db94a9a1ec5a0a22b65d}{b\-Length}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___device___descriptor_af6d6c7e334878414c973fc10e54cfb4e}{b\-Descriptor\-Type}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{struct_u_s_b___device___descriptor_adec107f638eb1313f918ae1816d70b4f}{bcd\-U\-S\-B}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___device___descriptor_a2f8fee89c530db85ad73a73dde2ffe6b}{b\-Device\-Class}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___device___descriptor_a5082b67cfc876ba2828ed925b05c9f33}{b\-Device\-Sub\-Class}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___device___descriptor_a4dd44af3eaf7355f5699fc2fbf1bcb2f}{b\-Device\-Protocol}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___device___descriptor_ad89d746ea974362fa15ab646fdcb5c61}{b\-Max\-Packet\-Size0}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{struct_u_s_b___device___descriptor_a7a7c71d161c32f997811107e4d546ca8}{id\-Vendor}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{struct_u_s_b___device___descriptor_a519c2f3b9ade6de6e761b4ada00d31b9}{id\-Product}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{struct_u_s_b___device___descriptor_a75748d3657ef8f02b2562a71e1b1f197}{bcd\-Device}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___device___descriptor_aae88465cfdcbe8c3654a5d317ca2a428}{i\-Manufacturer}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___device___descriptor_a038aa24fddd7b42b20976e13392954f2}{i\-Product}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___device___descriptor_ad5cf25949929f3baddc6f1b2751835dc}{i\-Serial\-Number}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{struct_u_s_b___device___descriptor_a26db168b352c51f781975b270ee76692}{b\-Num\-Configurations}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\-S\-B Device Descriptor.\par
+ The device descriptor of a U\-S\-B device represents the entire device. As a result a U\-S\-B device can only hav e one device descriptor. It specifies some basic, yet important information about the device such as the s upported U\-S\-B version, maximum packet size, vendor and product I\-Ds and the number of possible configuration s the device can have. 
+
+Definition at line 165 of file pic\-U\-S\-B.\-h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{struct_u_s_b___device___descriptor_a75748d3657ef8f02b2562a71e1b1f197}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!bcd\-Device@{bcd\-Device}}
+\index{bcd\-Device@{bcd\-Device}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{bcd\-Device}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} bcd\-Device}}\label{struct_u_s_b___device___descriptor_a75748d3657ef8f02b2562a71e1b1f197}
+Device Release Number 
+
+Definition at line 180 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_adec107f638eb1313f918ae1816d70b4f}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!bcd\-U\-S\-B@{bcd\-U\-S\-B}}
+\index{bcd\-U\-S\-B@{bcd\-U\-S\-B}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{bcd\-U\-S\-B}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} bcd\-U\-S\-B}}\label{struct_u_s_b___device___descriptor_adec107f638eb1313f918ae1816d70b4f}
+U\-S\-B Specification Number which device complies to. 
+
+Definition at line 169 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_af6d6c7e334878414c973fc10e54cfb4e}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!b\-Descriptor\-Type@{b\-Descriptor\-Type}}
+\index{b\-Descriptor\-Type@{b\-Descriptor\-Type}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{b\-Descriptor\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Descriptor\-Type}}\label{struct_u_s_b___device___descriptor_af6d6c7e334878414c973fc10e54cfb4e}
+Device Descriptor (0x01) 
+
+Definition at line 168 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_a2f8fee89c530db85ad73a73dde2ffe6b}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!b\-Device\-Class@{b\-Device\-Class}}
+\index{b\-Device\-Class@{b\-Device\-Class}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{b\-Device\-Class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Device\-Class}}\label{struct_u_s_b___device___descriptor_a2f8fee89c530db85ad73a73dde2ffe6b}
+Class Code (Assigned by U\-S\-B Org). If equal to Zero, each inte rface specifies it’s own class code. If equal to 0x\-F\-F, the class code is vendor specified. Otherwise field is valid Class Code. 
+
+Definition at line 170 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_a4dd44af3eaf7355f5699fc2fbf1bcb2f}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!b\-Device\-Protocol@{b\-Device\-Protocol}}
+\index{b\-Device\-Protocol@{b\-Device\-Protocol}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{b\-Device\-Protocol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Device\-Protocol}}\label{struct_u_s_b___device___descriptor_a4dd44af3eaf7355f5699fc2fbf1bcb2f}
+Protocol Code (Assigned by U\-S\-B Org) 
+
+Definition at line 174 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_a5082b67cfc876ba2828ed925b05c9f33}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!b\-Device\-Sub\-Class@{b\-Device\-Sub\-Class}}
+\index{b\-Device\-Sub\-Class@{b\-Device\-Sub\-Class}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{b\-Device\-Sub\-Class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Device\-Sub\-Class}}\label{struct_u_s_b___device___descriptor_a5082b67cfc876ba2828ed925b05c9f33}
+Subclass Code (Assigned by U\-S\-B Org) 
+
+Definition at line 173 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_a904ce9aea3e1db94a9a1ec5a0a22b65d}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!b\-Length@{b\-Length}}
+\index{b\-Length@{b\-Length}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{b\-Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Length}}\label{struct_u_s_b___device___descriptor_a904ce9aea3e1db94a9a1ec5a0a22b65d}
+Size of the Descriptor in u8s (18 u8s = 0x12) 
+
+Definition at line 167 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_ad89d746ea974362fa15ab646fdcb5c61}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!b\-Max\-Packet\-Size0@{b\-Max\-Packet\-Size0}}
+\index{b\-Max\-Packet\-Size0@{b\-Max\-Packet\-Size0}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{b\-Max\-Packet\-Size0}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Max\-Packet\-Size0}}\label{struct_u_s_b___device___descriptor_ad89d746ea974362fa15ab646fdcb5c61}
+Maximum Packet Size for Zero Endpoint. Valid Sizes are 8, 16, 32, 64 
+
+Definition at line 175 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_a26db168b352c51f781975b270ee76692}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!b\-Num\-Configurations@{b\-Num\-Configurations}}
+\index{b\-Num\-Configurations@{b\-Num\-Configurations}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{b\-Num\-Configurations}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} b\-Num\-Configurations}}\label{struct_u_s_b___device___descriptor_a26db168b352c51f781975b270ee76692}
+Number of Possible Configurations 
+
+Definition at line 184 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_a519c2f3b9ade6de6e761b4ada00d31b9}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!id\-Product@{id\-Product}}
+\index{id\-Product@{id\-Product}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{id\-Product}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} id\-Product}}\label{struct_u_s_b___device___descriptor_a519c2f3b9ade6de6e761b4ada00d31b9}
+Product I\-D (Assigned by Manufacturer) 
+
+Definition at line 179 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_a7a7c71d161c32f997811107e4d546ca8}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!id\-Vendor@{id\-Vendor}}
+\index{id\-Vendor@{id\-Vendor}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{id\-Vendor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} id\-Vendor}}\label{struct_u_s_b___device___descriptor_a7a7c71d161c32f997811107e4d546ca8}
+Vendor I\-D (Assigned by U\-S\-B Org). Microchip Vendor I\-D is 0x04\-D 8 
+
+Definition at line 177 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_aae88465cfdcbe8c3654a5d317ca2a428}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!i\-Manufacturer@{i\-Manufacturer}}
+\index{i\-Manufacturer@{i\-Manufacturer}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{i\-Manufacturer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} i\-Manufacturer}}\label{struct_u_s_b___device___descriptor_aae88465cfdcbe8c3654a5d317ca2a428}
+Index of Manufacturer String Descriptor 
+
+Definition at line 181 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_a038aa24fddd7b42b20976e13392954f2}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!i\-Product@{i\-Product}}
+\index{i\-Product@{i\-Product}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{i\-Product}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} i\-Product}}\label{struct_u_s_b___device___descriptor_a038aa24fddd7b42b20976e13392954f2}
+Index of Product String Descriptor 
+
+Definition at line 182 of file pic\-U\-S\-B.\-h.
+
+\hypertarget{struct_u_s_b___device___descriptor_ad5cf25949929f3baddc6f1b2751835dc}{\index{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}!i\-Serial\-Number@{i\-Serial\-Number}}
+\index{i\-Serial\-Number@{i\-Serial\-Number}!USB_Device_Descriptor@{U\-S\-B\-\_\-\-Device\-\_\-\-Descriptor}}
+\subsubsection[{i\-Serial\-Number}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} i\-Serial\-Number}}\label{struct_u_s_b___device___descriptor_ad5cf25949929f3baddc6f1b2751835dc}
+Index of Serial Number String Descriptor 
+
+Definition at line 183 of file pic\-U\-S\-B.\-h.
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/usb/\hyperlink{pic_u_s_b_8h}{pic\-U\-S\-B.\-h}\end{DoxyCompactItemize}

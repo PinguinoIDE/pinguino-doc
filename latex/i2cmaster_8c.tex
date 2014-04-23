@@ -1,0 +1,1131 @@
+\hypertarget{i2cmaster_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/i2cmaster.c File Reference}
+\label{i2cmaster_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/i2cmaster.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/i2cmaster.\-c}}
+}
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{i2cmaster_8c_acb9380f67f6904888ceac6a5dd589b9d}{\-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}~32
+\item 
+\#define \hyperlink{i2cmaster_8c_a9536bf85bced4f4e549a82fb18eb6140}{I2\-C\-\_\-\-W\-R\-I\-T\-E}~0
+\item 
+\#define \hyperlink{i2cmaster_8c_ab5c0fbe837494c5f9130a5914854250d}{I2\-C\-\_\-\-R\-E\-A\-D}~1
+\item 
+\#define \hyperlink{i2cmaster_8c_a0b9a450afec8aedf7b2586a45d4b370c}{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}~0
+\item 
+\#define \hyperlink{i2cmaster_8c_aa6bde6f87c55b879889545bc072173fd}{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}~1
+\item 
+\#define \hyperlink{i2cmaster_8c_a27cf310dac6c98eca59bf4b9884d9102}{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}~0
+\item 
+\#define \hyperlink{i2cmaster_8c_a562c5b9c555d183bb173819d1508e4e3}{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}~1
+\item 
+\#define \hyperlink{i2cmaster_8c_a30c06a423a78e6ded9ae0d26aa3fb541}{I2\-C\-\_\-100\-K\-H\-Z}~100
+\item 
+\#define \hyperlink{i2cmaster_8c_af20d0f07302cb39d69cd7d517c4b44a6}{I2\-C\-\_\-400\-K\-H\-Z}~400
+\item 
+\#define \hyperlink{i2cmaster_8c_a0342b9931f95c111ccce18e98c8d776a}{I2\-C\-\_\-1\-M\-H\-Z}~1000
+\item 
+\#define \hyperlink{i2cmaster_8c_a7eddd9fda3af4dfea01c6ff00677deae}{I2\-C\-\_\-\-R\-E\-A\-D\-Y}~0
+\item 
+\#define \hyperlink{i2cmaster_8c_a8ced29ce38de8b00c7230917bba3447f}{I2\-C\-\_\-\-M\-R\-X}~1
+\item 
+\#define \hyperlink{i2cmaster_8c_a4744f32f17280b9a40081d9cb6f2f12b}{I2\-C\-\_\-\-M\-T\-X}~2
+\item 
+\#define \hyperlink{i2cmaster_8c_a11891518779e5b30aec6c2243ef45828}{I2\-C\-\_\-\-S\-R\-X}~3
+\item 
+\#define \hyperlink{i2cmaster_8c_a43fb67172aabae9e4dce704941822a80}{I2\-C\-\_\-\-S\-T\-X}~4
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{i2cmaster_8c_a9663e0448c34403ef58a5f99b66d5ff3}{I2\-C\-\_\-master} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\begin{DoxyCompactList}\small\item\em P\-R\-O\-T\-O\-T\-Y\-P\-E\-S. \end{DoxyCompactList}\item 
+void \hyperlink{i2cmaster_8c_ab41207d342a68cdfb5f78d0a449d1b06}{I2\-C\-\_\-slave} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+void \hyperlink{i2cmaster_8c_a294f9659c7a45647d2274c1b2d7ad849}{I2\-C\-\_\-init} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_a39120f62e823d8bc3523d07093d3993d}{I2\-C\-\_\-write} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_ae8f073ed5b503fde322dd21330ba56e6}{I2\-C\-\_\-read} ()
+\item 
+void \hyperlink{i2cmaster_8c_a66348b2efe600d56512d22cb81f09fcd}{I2\-C\-\_\-idle} ()
+\item 
+void \hyperlink{i2cmaster_8c_a263c74ce484e3680c05a9118707fadb7}{I2\-C\-\_\-start} ()
+\item 
+void \hyperlink{i2cmaster_8c_af8dcc1bcb3e1c6c0fcdca4cf599a239b}{I2\-C\-\_\-stop} ()
+\item 
+void \hyperlink{i2cmaster_8c_a5c5db4ac8c3c6ac4bf3b358d00a9e9c3}{I2\-C\-\_\-restart} ()
+\item 
+void \hyperlink{i2cmaster_8c_a509b10df2156a43d231bd9c7d2e9d848}{I2\-C\-\_\-send\-Nack} ()
+\item 
+void \hyperlink{i2cmaster_8c_a7f5eeebeea47eafb764e4a04d47f979b}{I2\-C\-\_\-send\-Ack} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_a19258d5cdb347228308731b6c4dfe2c7}{I2\-C\-\_\-transmit} (const \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_a37badcff970ed10813b6c7984eada9ba}{I2\-C\-\_\-write\-To} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_a6aea0b710a4a8c2b257a0b8e969dae5a}{I2\-C\-\_\-read\-From} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8})
+\item 
+void \hyperlink{i2cmaster_8c_ae438af25abd18a1fea5fa21c5638597b}{I2\-C\-\_\-begin} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} address, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} speed)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_a14cc1f159281c1d9df69f535681158ed}{I2\-C\-\_\-request\-From} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} address, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} quantity)
+\item 
+void \hyperlink{i2cmaster_8c_a3e2737474127ad45f2485914203092c9}{I2\-C\-\_\-begin\-Transmission} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} address)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_a86dc2d90ee8935cef99bb939d4baba25}{I2\-C\-\_\-end\-Transmission} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} send\-Stop)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_afac0849c3d2b80235c6ac5fe8a4934bb}{I2\-C\-\_\-in\-Buffer} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} data)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_a7774b78d2d146fff690b3b2afed169fb}{I2\-C\-\_\-in\-Buffer\-S} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$data, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} quantity)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_acfc46c70e079486eaaeb73c109881188}{I2\-C\-\_\-in\-Buffer\-Str} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$data)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_a69462f5f77446c32dd9a40fd25ff728f}{I2\-C\-\_\-available} ()
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{i2cmaster_8c_a057904c6b4ff3e024ed3f851fa46efff}{I2\-C\-\_\-out\-Buffer} ()
+\item 
+int \hyperlink{i2cmaster_8c_a4d46097cf44ef5e943170bf7cbee3625}{peek} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{i2cmaster_8c_acb9380f67f6904888ceac6a5dd589b9d}{\index{i2cmaster.\-c@{i2cmaster.\-c}!\-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-@{\-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}}
+\index{\-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-@{\-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{\-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-~32}}\label{i2cmaster_8c_acb9380f67f6904888ceac6a5dd589b9d}
+
+
+Definition at line 20 of file i2cmaster.\-c.
+
+
+
+Referenced by i2c\-\_\-hw\-\_\-slave\-\_\-init(), i2c\-\_\-hw\-\_\-slave\-\_\-on\-\_\-state\-\_\-4(), I2\-C\-\_\-in\-Buffer(), I2\-C\-\_\-read\-From(), I2\-C\-\_\-request\-From(), and I2\-C\-\_\-write\-To().
+
+\hypertarget{i2cmaster_8c_a30c06a423a78e6ded9ae0d26aa3fb541}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-100\-K\-H\-Z@{I2\-C\-\_\-100\-K\-H\-Z}}
+\index{I2\-C\-\_\-100\-K\-H\-Z@{I2\-C\-\_\-100\-K\-H\-Z}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-100\-K\-H\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-100\-K\-H\-Z~100}}\label{i2cmaster_8c_a30c06a423a78e6ded9ae0d26aa3fb541}
+
+
+Definition at line 31 of file i2cmaster.\-c.
+
+\hypertarget{i2cmaster_8c_a0342b9931f95c111ccce18e98c8d776a}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-1\-M\-H\-Z@{I2\-C\-\_\-1\-M\-H\-Z}}
+\index{I2\-C\-\_\-1\-M\-H\-Z@{I2\-C\-\_\-1\-M\-H\-Z}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-1\-M\-H\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-1\-M\-H\-Z~1000}}\label{i2cmaster_8c_a0342b9931f95c111ccce18e98c8d776a}
+
+
+Definition at line 33 of file i2cmaster.\-c.
+
+\hypertarget{i2cmaster_8c_af20d0f07302cb39d69cd7d517c4b44a6}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-400\-K\-H\-Z@{I2\-C\-\_\-400\-K\-H\-Z}}
+\index{I2\-C\-\_\-400\-K\-H\-Z@{I2\-C\-\_\-400\-K\-H\-Z}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-400\-K\-H\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-400\-K\-H\-Z~400}}\label{i2cmaster_8c_af20d0f07302cb39d69cd7d517c4b44a6}
+
+
+Definition at line 32 of file i2cmaster.\-c.
+
+\hypertarget{i2cmaster_8c_a0b9a450afec8aedf7b2586a45d4b370c}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}}
+\index{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E~0}}\label{i2cmaster_8c_a0b9a450afec8aedf7b2586a45d4b370c}
+
+
+Definition at line 25 of file i2cmaster.\-c.
+
+\hypertarget{i2cmaster_8c_a8ced29ce38de8b00c7230917bba3447f}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-\-M\-R\-X@{I2\-C\-\_\-\-M\-R\-X}}
+\index{I2\-C\-\_\-\-M\-R\-X@{I2\-C\-\_\-\-M\-R\-X}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-\-M\-R\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-M\-R\-X~1}}\label{i2cmaster_8c_a8ced29ce38de8b00c7230917bba3447f}
+
+
+Definition at line 41 of file i2cmaster.\-c.
+
+
+
+Referenced by I2\-C\-\_\-read\-From().
+
+\hypertarget{i2cmaster_8c_a4744f32f17280b9a40081d9cb6f2f12b}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-\-M\-T\-X@{I2\-C\-\_\-\-M\-T\-X}}
+\index{I2\-C\-\_\-\-M\-T\-X@{I2\-C\-\_\-\-M\-T\-X}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-\-M\-T\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-M\-T\-X~2}}\label{i2cmaster_8c_a4744f32f17280b9a40081d9cb6f2f12b}
+
+
+Definition at line 42 of file i2cmaster.\-c.
+
+
+
+Referenced by I2\-C\-\_\-write\-To().
+
+\hypertarget{i2cmaster_8c_ab5c0fbe837494c5f9130a5914854250d}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-\-R\-E\-A\-D@{I2\-C\-\_\-\-R\-E\-A\-D}}
+\index{I2\-C\-\_\-\-R\-E\-A\-D@{I2\-C\-\_\-\-R\-E\-A\-D}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-R\-E\-A\-D~1}}\label{i2cmaster_8c_ab5c0fbe837494c5f9130a5914854250d}
+
+
+Definition at line 24 of file i2cmaster.\-c.
+
+
+
+Referenced by I2\-C\-\_\-read\-From().
+
+\hypertarget{i2cmaster_8c_a7eddd9fda3af4dfea01c6ff00677deae}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-\-R\-E\-A\-D\-Y@{I2\-C\-\_\-\-R\-E\-A\-D\-Y}}
+\index{I2\-C\-\_\-\-R\-E\-A\-D\-Y@{I2\-C\-\_\-\-R\-E\-A\-D\-Y}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-\-R\-E\-A\-D\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-R\-E\-A\-D\-Y~0}}\label{i2cmaster_8c_a7eddd9fda3af4dfea01c6ff00677deae}
+
+
+Definition at line 40 of file i2cmaster.\-c.
+
+
+
+Referenced by I2\-C\-\_\-begin(), I2\-C\-\_\-read\-From(), and I2\-C\-\_\-write\-To().
+
+\hypertarget{i2cmaster_8c_aa6bde6f87c55b879889545bc072173fd}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}}
+\index{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E@{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E~1}}\label{i2cmaster_8c_aa6bde6f87c55b879889545bc072173fd}
+
+
+Definition at line 26 of file i2cmaster.\-c.
+
+\hypertarget{i2cmaster_8c_a27cf310dac6c98eca59bf4b9884d9102}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}}
+\index{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-F\-F~0}}\label{i2cmaster_8c_a27cf310dac6c98eca59bf4b9884d9102}
+
+
+Definition at line 27 of file i2cmaster.\-c.
+
+\hypertarget{i2cmaster_8c_a562c5b9c555d183bb173819d1508e4e3}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}}
+\index{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N@{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-S\-L\-E\-W\-\_\-\-O\-N~1}}\label{i2cmaster_8c_a562c5b9c555d183bb173819d1508e4e3}
+
+
+Definition at line 28 of file i2cmaster.\-c.
+
+\hypertarget{i2cmaster_8c_a11891518779e5b30aec6c2243ef45828}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-\-S\-R\-X@{I2\-C\-\_\-\-S\-R\-X}}
+\index{I2\-C\-\_\-\-S\-R\-X@{I2\-C\-\_\-\-S\-R\-X}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-\-S\-R\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-S\-R\-X~3}}\label{i2cmaster_8c_a11891518779e5b30aec6c2243ef45828}
+
+
+Definition at line 43 of file i2cmaster.\-c.
+
+\hypertarget{i2cmaster_8c_a43fb67172aabae9e4dce704941822a80}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-\-S\-T\-X@{I2\-C\-\_\-\-S\-T\-X}}
+\index{I2\-C\-\_\-\-S\-T\-X@{I2\-C\-\_\-\-S\-T\-X}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-\-S\-T\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-S\-T\-X~4}}\label{i2cmaster_8c_a43fb67172aabae9e4dce704941822a80}
+
+
+Definition at line 44 of file i2cmaster.\-c.
+
+\hypertarget{i2cmaster_8c_a9536bf85bced4f4e549a82fb18eb6140}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-\-W\-R\-I\-T\-E@{I2\-C\-\_\-\-W\-R\-I\-T\-E}}
+\index{I2\-C\-\_\-\-W\-R\-I\-T\-E@{I2\-C\-\_\-\-W\-R\-I\-T\-E}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-\-W\-R\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\-C\-\_\-\-W\-R\-I\-T\-E~0}}\label{i2cmaster_8c_a9536bf85bced4f4e549a82fb18eb6140}
+
+
+Definition at line 23 of file i2cmaster.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{i2cmaster_8c_a69462f5f77446c32dd9a40fd25ff728f}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-available@{I2\-C\-\_\-available}}
+\index{I2\-C\-\_\-available@{I2\-C\-\_\-available}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-available}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-available (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a69462f5f77446c32dd9a40fd25ff728f}
+
+
+Definition at line 484 of file i2cmaster.\-c.
+
+
+\begin{DoxyCode}
+485 \{
+486   \textcolor{keywordflow}{return} \_i2c\_rxBufferLength - \_i2c\_rxBufferIndex;
+487 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_ae438af25abd18a1fea5fa21c5638597b}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-begin@{I2\-C\-\_\-begin}}
+\index{I2\-C\-\_\-begin@{I2\-C\-\_\-begin}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-begin}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-begin (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u16}}]{speed}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_ae438af25abd18a1fea5fa21c5638597b}
+
+
+Definition at line 306 of file i2cmaster.\-c.
+
+
+
+References i2c\-\_\-hw\-\_\-slave\-\_\-init(), I2\-C\-\_\-master(), and I2\-C\-\_\-\-R\-E\-A\-D\-Y.
+
+
+\begin{DoxyCode}
+307 \{
+308     \textcolor{keywordflow}{if} (address !=0) \{
+309         \textcolor{comment}{//  SSPADD = address; done in I2C\_init}
+310         \textcolor{comment}{//  I2C\_slave((u16)address);}
+311 \textcolor{preprocessor}{        #ifdef I2CINT}
+312 \textcolor{preprocessor}{}        \hyperlink{i2cslave_8c_a80b75624f690758b26928c7a060934ca}{i2c\_hw\_slave\_init}(address);
+313 \textcolor{preprocessor}{        #endif}
+314 \textcolor{preprocessor}{}    \}
+315     
+316     \_i2c\_rxBufferIndex = 0;
+317     \_i2c\_rxBufferLength = 0;
+318 
+319     \_i2c\_txBufferIndex = 0;
+320     \_i2c\_txBufferLength = 0;
+321 
+322     \textcolor{comment}{// initialize state}
+323     i2c\_state = \hyperlink{i2cmaster_8c_a7eddd9fda3af4dfea01c6ff00677deae}{I2C\_READY};
+324     i2c\_sendStop = \textcolor{keyword}{true};        \textcolor{comment}{// default value}
+325     i2c\_inRepStart = \textcolor{keyword}{false};
+326 
+327     \textcolor{keywordflow}{if} (address ==0) \{
+328         \hyperlink{i2cmaster_8c_a9663e0448c34403ef58a5f99b66d5ff3}{I2C\_master}(speed);
+329     \}
+330 
+331 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a3e2737474127ad45f2485914203092c9}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-begin\-Transmission@{I2\-C\-\_\-begin\-Transmission}}
+\index{I2\-C\-\_\-begin\-Transmission@{I2\-C\-\_\-begin\-Transmission}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-begin\-Transmission}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-begin\-Transmission (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a3e2737474127ad45f2485914203092c9}
+
+
+Definition at line 364 of file i2cmaster.\-c.
+
+
+\begin{DoxyCode}
+365 \{
+366     \textcolor{comment}{// indicate that we are transmitting}
+367     \_i2c\_transmitting = 1;
+368     \textcolor{comment}{// set address of targeted slave}
+369     \_i2c\_txAddress = address;
+370     \textcolor{comment}{// reset tx buffer iterator vars}
+371     \_i2c\_txBufferIndex = 0;
+372     \_i2c\_txBufferLength = 0;
+373 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a86dc2d90ee8935cef99bb939d4baba25}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-end\-Transmission@{I2\-C\-\_\-end\-Transmission}}
+\index{I2\-C\-\_\-end\-Transmission@{I2\-C\-\_\-end\-Transmission}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-end\-Transmission}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-end\-Transmission (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{send\-Stop}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a86dc2d90ee8935cef99bb939d4baba25}
+
+
+Definition at line 381 of file i2cmaster.\-c.
+
+
+
+References I2\-C\-\_\-write\-To().
+
+
+\begin{DoxyCode}
+382 \{
+383  \textcolor{comment}{//   u8 sendStop = true;}
+384     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} ret;
+385     \textcolor{comment}{// transmit buffer (blocking)}
+386     ret = \hyperlink{i2cmaster_8c_a37badcff970ed10813b6c7984eada9ba}{I2C\_writeTo}(\_i2c\_txAddress, \_i2c\_txBuffer, \_i2c\_txBufferLength, 1, sendStop);
+387     \textcolor{comment}{// reset tx buffer iterator vars}
+388     \_i2c\_txBufferIndex = 0;
+389     \_i2c\_txBufferLength = 0;
+390     \textcolor{comment}{// indicate that we are done transmitting}
+391     \_i2c\_transmitting = 0;
+392 
+393     \textcolor{keywordflow}{return} ret;
+394 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a66348b2efe600d56512d22cb81f09fcd}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-idle@{I2\-C\-\_\-idle}}
+\index{I2\-C\-\_\-idle@{I2\-C\-\_\-idle}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-idle}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-idle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a66348b2efe600d56512d22cb81f09fcd}
+\hypertarget{i2cmaster_8c_afac0849c3d2b80235c6ac5fe8a4934bb}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-in\-Buffer@{I2\-C\-\_\-in\-Buffer}}
+\index{I2\-C\-\_\-in\-Buffer@{I2\-C\-\_\-in\-Buffer}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-in\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-in\-Buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{data}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_afac0849c3d2b80235c6ac5fe8a4934bb}
+
+
+Definition at line 400 of file i2cmaster.\-c.
+
+
+
+References \-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-, and I2\-C\-\_\-transmit().
+
+
+
+Referenced by I2\-C\-\_\-in\-Buffer\-S(), and I2\-C\-\_\-in\-Buffer\-Str().
+
+
+\begin{DoxyCode}
+401 \{
+402   \textcolor{keywordflow}{if}(\_i2c\_transmitting)\{
+403   \textcolor{comment}{// in master transmitter mode}
+404     \textcolor{comment}{// don't bother if buffer is full}
+405     \textcolor{keywordflow}{if}(\_i2c\_txBufferLength >= \hyperlink{i2cmaster_8c_acb9380f67f6904888ceac6a5dd589b9d}{\_I2CBUFFERLENGTH\_})\{
+406 \textcolor{comment}{//      setWriteError();}
+407       \textcolor{keywordflow}{return} 0;
+408     \}
+409     \textcolor{comment}{// put byte in tx buffer}
+410     \_i2c\_txBuffer[\_i2c\_txBufferIndex] = data;
+411     ++\_i2c\_txBufferIndex;
+412     \textcolor{comment}{// update amount in buffer}
+413 \textcolor{comment}{//serial\_printf("\(\backslash\)r\(\backslash\)n%2X",data);    }
+414     \_i2c\_txBufferLength = \_i2c\_txBufferIndex;
+415   \}
+416 \textcolor{preprocessor}{#ifdef I2CINT}
+417 \textcolor{preprocessor}{}  \textcolor{keywordflow}{else}\{
+418   \textcolor{comment}{// in slave send mode}
+419     \textcolor{comment}{// reply to master}
+420 
+421     \hyperlink{i2cmaster_8c_a19258d5cdb347228308731b6c4dfe2c7}{I2C\_transmit}(&data, 1);
+422 
+423   \}
+424 \textcolor{preprocessor}{#endif}
+425 \textcolor{preprocessor}{}  \textcolor{keywordflow}{return} 1;
+426 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a7774b78d2d146fff690b3b2afed169fb}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-in\-Buffer\-S@{I2\-C\-\_\-in\-Buffer\-S}}
+\index{I2\-C\-\_\-in\-Buffer\-S@{I2\-C\-\_\-in\-Buffer\-S}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-in\-Buffer\-S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-in\-Buffer\-S (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{data, }
+\item[{{\bf u8}}]{quantity}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a7774b78d2d146fff690b3b2afed169fb}
+
+
+Definition at line 431 of file i2cmaster.\-c.
+
+
+
+References I2\-C\-\_\-in\-Buffer(), and I2\-C\-\_\-transmit().
+
+
+\begin{DoxyCode}
+432 \{
+433   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+434   \textcolor{keywordflow}{if}(\_i2c\_transmitting)\{
+435   \textcolor{comment}{// in master transmitter mode}
+436     \textcolor{keywordflow}{for}( i = 0; i < quantity; ++i)\{
+437       \hyperlink{i2cmaster_8c_afac0849c3d2b80235c6ac5fe8a4934bb}{I2C\_inBuffer}(data[i]);
+438     \}
+439   \}
+440 \textcolor{preprocessor}{#ifdef I2CINT}
+441 \textcolor{preprocessor}{}  \textcolor{keywordflow}{else}\{
+442   \textcolor{comment}{// in slave send mode}
+443     \textcolor{comment}{// reply to master}
+444 
+445     \hyperlink{i2cmaster_8c_a19258d5cdb347228308731b6c4dfe2c7}{I2C\_transmit}(data, quantity);
+446 
+447   \}
+448 \textcolor{preprocessor}{#endif}
+449 \textcolor{preprocessor}{}  \textcolor{keywordflow}{return} quantity;
+450 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_acfc46c70e079486eaaeb73c109881188}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-in\-Buffer\-Str@{I2\-C\-\_\-in\-Buffer\-Str}}
+\index{I2\-C\-\_\-in\-Buffer\-Str@{I2\-C\-\_\-in\-Buffer\-Str}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-in\-Buffer\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-in\-Buffer\-Str (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_acfc46c70e079486eaaeb73c109881188}
+
+
+Definition at line 451 of file i2cmaster.\-c.
+
+
+
+References I2\-C\-\_\-in\-Buffer(), and I2\-C\-\_\-transmit().
+
+
+\begin{DoxyCode}
+452 \{
+453   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+454   \textcolor{keywordflow}{if}(\_i2c\_transmitting)\{
+455   \textcolor{comment}{// in master transmitter mode}
+456     i = 0;
+457     \textcolor{keywordflow}{while} (data[i] != \textcolor{charliteral}{'\(\backslash\)0'})
+458     \{
+459       \hyperlink{i2cmaster_8c_afac0849c3d2b80235c6ac5fe8a4934bb}{I2C\_inBuffer}(data[i]);
+460       ++i;
+461     \}
+462   \}
+463 \textcolor{preprocessor}{#ifdef I2CINT}
+464 \textcolor{preprocessor}{}  \textcolor{keywordflow}{else}\{
+465   i=0;
+466   \textcolor{keywordflow}{while} (data[i] != \textcolor{charliteral}{'\(\backslash\)0'}) i++;
+467   \textcolor{comment}{// in slave send mode}
+468     \textcolor{comment}{// reply to master}
+469 
+470     \hyperlink{i2cmaster_8c_a19258d5cdb347228308731b6c4dfe2c7}{I2C\_transmit}(data,i);
+471 
+472   \}
+473 \textcolor{preprocessor}{#endif}
+474 \textcolor{preprocessor}{}  \textcolor{keywordflow}{return} i;
+475 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a294f9659c7a45647d2274c1b2d7ad849}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-init@{I2\-C\-\_\-init}}
+\index{I2\-C\-\_\-init@{I2\-C\-\_\-init}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{, }
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a294f9659c7a45647d2274c1b2d7ad849}
+
+
+Definition at line 167 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-100\-K\-H\-Z, I2\-C\-\_\-1\-M\-H\-Z, I2\-C\-\_\-400\-K\-H\-Z, I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E, I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E, and I\-N\-P\-U\-T.
+
+
+
+Referenced by I2\-C1\-\_\-init(), I2\-C2\-\_\-init(), I2\-C\-\_\-master(), I2\-C\-\_\-slave(), lcdi2c\-\_\-init(), and P\-C\-F8574\-\_\-init().
+
+
+\begin{DoxyCode}
+168 \{
+169     \textcolor{comment}{// In Slave mode, the SCL and SDA pins must be configured as inputs}
+170 \textcolor{preprocessor}{    #if defined(\_\_18f26j50) || defined(\_\_18f46j50) || \(\backslash\)}
+171 \textcolor{preprocessor}{        defined(\_\_18f27j53) || defined(\_\_18f47j53)}
+172 \textcolor{preprocessor}{}    TRISBbits.TRISB5 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};          \textcolor{comment}{// SDA = INPUT}
+173     TRISBbits.TRISB4 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};          \textcolor{comment}{// SCL = INPUT}
+174 \textcolor{preprocessor}{    #else}
+175 \textcolor{preprocessor}{}    TRISBbits.TRISB0 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};          \textcolor{comment}{// SDA = INPUT}
+176     TRISBbits.TRISB1 = \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT};          \textcolor{comment}{// SCL = INPUT}
+177 
+178 \textcolor{preprocessor}{    #endif}
+179 \textcolor{preprocessor}{}
+180     \textcolor{keywordflow}{switch} (mode)
+181     \{
+182         \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2i2c_8c_aa6bde6f87c55b879889545bc072173fd}{I2C\_SLAVE\_MODE}:
+183             \textcolor{comment}{//intUsed[INT\_SSP] = INT\_USED;}
+184             \textcolor{comment}{// Enabling interrupts (peripheral & general)}
+185             \textcolor{comment}{//INTCONbits.PEIE=1;}
+186             \textcolor{comment}{//INTCONbits.GIE=1;}
+187             \textcolor{keywordflow}{if} (sora > 0x80)
+188                 SSPCON1= 0b00101111;    \textcolor{comment}{// Slave mode, 10-bit address with Start and Stop bit interrupts
+       enabled}
+189             \textcolor{keywordflow}{else}
+190                 SSPCON1= 0b00101110;    \textcolor{comment}{// 00101110Slave mode,  7-bit address with Start and Stop bit
+       interrupts enabled}
+191     \textcolor{comment}{/*------------------------------------------------------------------------*/}
+192             SSPADD= sora;               \textcolor{comment}{// Slave 7-bit address}
+193             \textcolor{comment}{// TODO                     // Slave 10-bit address}
+194     \textcolor{comment}{/*------------------------------------------------------------------------*/}
+195             \textcolor{keywordflow}{break};
+196 
+197         \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{I2C\_MASTER\_MODE}:
+198         \textcolor{keywordflow}{default}:\textcolor{comment}{// I2C\_MASTER\_MODE}
+199             SSPCON1= 0b00101000;        \textcolor{comment}{// Master Mode, clock = FOSC/(4 * (SSPADD + 1))}
+200             \textcolor{comment}{// datasheet p208}
+201             \textcolor{keywordflow}{switch} (sora)
+202             \{
+203                 \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2i2c_8c_a0342b9931f95c111ccce18e98c8d776a}{I2C\_1MHZ}:
+204                     \textcolor{comment}{// SMP = 1 = Slew rate control disabled for Standard Speed mode (100 kHz and 1 MHz)}
+205                     SSPSTATbits.SMP = 1;    \textcolor{comment}{// Slew Mode Off}
+206                     SSPADD= 11;            \textcolor{comment}{// 1MHz = FOSC/(4 * (SSPADD + 1))}
+207                     \textcolor{keywordflow}{break};                  \textcolor{comment}{// SSPADD = 48 000 / (4*1000) - 1}
+208                     
+209                 \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2i2c_8c_af20d0f07302cb39d69cd7d517c4b44a6}{I2C\_400KHZ}:
+210                     \textcolor{comment}{// SMP = 0 = Slew rate control enabled for High-Speed mode (400 kHz)}
+211                     SSPSTATbits.SMP = 0;    \textcolor{comment}{// Slew Mode On}
+212                     SSPADD= 29;            \textcolor{comment}{// 400kHz = FOSC/(4 * (SSPADD + 1))}
+213                     \textcolor{keywordflow}{break};           \textcolor{comment}{// SSPADD = 48 000 / (4*400) - 1}
+214                 \textcolor{keywordflow}{case} \hyperlink{p8_2pinguino_2core_2i2c_8c_a30c06a423a78e6ded9ae0d26aa3fb541}{I2C\_100KHZ}:
+215                 \textcolor{keywordflow}{default}:
+216                     \textcolor{comment}{// SMP = 1 = Slew rate control disabled for Standard Speed mode (100 kHz and 1 MHz)}
+217                     SSPSTATbits.SMP = 1;    \textcolor{comment}{// Slew Mode Off}
+218                     SSPADD= 119;           \textcolor{comment}{// 100kHz = FOSC/(4 * (SSPADD + 1))}
+219                     \textcolor{keywordflow}{break};                  \textcolor{comment}{// SSPADD = 48 000 / (4*100) - 1}
+220             \}
+221             \textcolor{keywordflow}{break};
+222     \}
+223     SSPCON2= 0;
+224     PIR1bits.SSPIF = 0; \textcolor{comment}{// MSSP Interrupt Flag}
+225     PIR2bits.BCLIF = 0; \textcolor{comment}{// Bus Collision Interrupt Flag}
+226     \textcolor{comment}{//Delayms(1000);}
+227 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a9663e0448c34403ef58a5f99b66d5ff3}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-master@{I2\-C\-\_\-master}}
+\index{I2\-C\-\_\-master@{I2\-C\-\_\-master}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-master}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-master (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a9663e0448c34403ef58a5f99b66d5ff3}
+
+
+P\-R\-O\-T\-O\-T\-Y\-P\-E\-S. 
+
+
+
+Definition at line 144 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-init(), and I2\-C\-\_\-\-M\-A\-S\-T\-E\-R\-\_\-\-M\-O\-D\-E.
+
+
+
+Referenced by I2\-C\-\_\-begin().
+
+
+\begin{DoxyCode}
+145 \{
+146     \hyperlink{p8_2pinguino_2core_2i2c_8c_a294f9659c7a45647d2274c1b2d7ad849}{I2C\_init}(\hyperlink{p8_2pinguino_2core_2i2c_8c_a0b9a450afec8aedf7b2586a45d4b370c}{I2C\_MASTER\_MODE}, speed);
+147 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a057904c6b4ff3e024ed3f851fa46efff}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-out\-Buffer@{I2\-C\-\_\-out\-Buffer}}
+\index{I2\-C\-\_\-out\-Buffer@{I2\-C\-\_\-out\-Buffer}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-out\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-out\-Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a057904c6b4ff3e024ed3f851fa46efff}
+
+
+Definition at line 505 of file i2cmaster.\-c.
+
+
+\begin{DoxyCode}
+506 \{
+507     \textcolor{comment}{// default to returning null char}
+508     \textcolor{comment}{// for people using with char strings}
+509     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} value = \textcolor{charliteral}{'\(\backslash\)0'};
+510     \textcolor{comment}{// get each successive byte on each call}
+511     \textcolor{keywordflow}{if} (\_i2c\_rxBufferIndex < \_i2c\_rxBufferLength)
+512     \{
+513         value = \_i2c\_rxBuffer[\_i2c\_rxBufferIndex];
+514         ++\_i2c\_rxBufferIndex;
+515     \}
+516     \textcolor{keywordflow}{return} value;
+517 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_ae8f073ed5b503fde322dd21330ba56e6}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-read@{I2\-C\-\_\-read}}
+\index{I2\-C\-\_\-read@{I2\-C\-\_\-read}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_ae8f073ed5b503fde322dd21330ba56e6}
+
+
+Definition at line 290 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C\-\_\-read\-From().
+
+
+\begin{DoxyCode}
+291 \{
+292 \textcolor{comment}{//rz    u8 r;}
+293     
+294     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                 \textcolor{comment}{// Wait the MSSP module is inactive}
+295     \textcolor{comment}{//PIR1bits.SSPIF = 0;         // Clear SSP interrupt flag}
+296     SSPCON2bits.RCEN = 1;       \textcolor{comment}{// Initiate reception of byte}
+297     \textcolor{comment}{//while (!PIR1bits.SSPIF);    // Wait the interrupt flag is set}
+298 
+299     PIR1bits.SSPIF = 0;         \textcolor{comment}{// Clear SSP interrupt flag}
+300     
+301 \textcolor{comment}{//rz    r = SSPBUF;}
+302     
+303     \textcolor{keywordflow}{while} (!PIR1bits.SSPIF);    \textcolor{comment}{// Wait the interrupt flag is set}
+304     PIR1bits.SSPIF=0; \textcolor{comment}{// ROlf clear SSPIF}
+305 \textcolor{comment}{//rz    r = SSPBUF;}
+306     PIR1bits.SSPIF=0; \textcolor{comment}{// ROlf clear SSPIF}
+307     \textcolor{comment}{//while (!SSPSTATbits.BF);    // Wait until buffer is full}
+308     \textcolor{comment}{//while (SSPCON2bits.RCEN);    // Wait until RCEN is cleared}
+309 
+310 \textcolor{comment}{//rz    return r;}
+311     \textcolor{keywordflow}{return} SSPBUF;
+312 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a6aea0b710a4a8c2b257a0b8e969dae5a}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-read\-From@{I2\-C\-\_\-read\-From}}
+\index{I2\-C\-\_\-read\-From@{I2\-C\-\_\-read\-From}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-read\-From}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-read\-From (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8} $\ast$}]{data, }
+\item[{{\bf u8}}]{length, }
+\item[{{\bf u8}}]{send\-Stop}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a6aea0b710a4a8c2b257a0b8e969dae5a}
+
+
+Definition at line 101 of file i2cmaster.\-c.
+
+
+
+References \-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-, I2\-C\-\_\-\-M\-R\-X, I2\-C\-\_\-\-R\-E\-A\-D, I2\-C\-\_\-read(), I2\-C\-\_\-\-R\-E\-A\-D\-Y, I2\-C\-\_\-restart(), I2\-C\-\_\-send\-Ack(), I2\-C\-\_\-send\-Nack(), I2\-C\-\_\-start(), I2\-C\-\_\-stop(), and I2\-C\-\_\-write().
+
+
+
+Referenced by I2\-C\-\_\-request\-From().
+
+
+\begin{DoxyCode}
+102 \{
+103   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+104   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} resp\_sla;
+105   \textcolor{comment}{// ensure data will fit into buffer}
+106   \textcolor{keywordflow}{if}( length > \hyperlink{i2cmaster_8c_acb9380f67f6904888ceac6a5dd589b9d}{\_I2CBUFFERLENGTH\_})\{
+107     \textcolor{keywordflow}{return} 0;
+108   \}
+109 
+110   \textcolor{comment}{// wait until twi is ready, become master receiver}
+111   \textcolor{keywordflow}{while}(i2c\_state != \hyperlink{i2cmaster_8c_a7eddd9fda3af4dfea01c6ff00677deae}{I2C\_READY})\{
+112      \textcolor{keywordflow}{continue};
+113   \}
+114   i2c\_state = \hyperlink{i2cmaster_8c_a8ced29ce38de8b00c7230917bba3447f}{I2C\_MRX};\textcolor{comment}{// Master Receiver}
+115   i2c\_sendStop = sendStop;
+116   \textcolor{comment}{// reset error state (0xFF.. no error occured)}
+117   i2c\_error = 0xFF;
+118 
+119   \textcolor{comment}{// initialize buffer iteration vars}
+120   \_i2c\_masterBufferIndex = 0;
+121   \_i2c\_masterBufferLength = length;  \textcolor{comment}{// This is not intuitive, read on...}
+122   \textcolor{comment}{// On receive, the previously configured ACK/NACK setting is transmitted in}
+123   \textcolor{comment}{// response to the received byte before the interrupt is signalled. }
+124   \textcolor{comment}{// Therefor we must actually set NACK when the \_next\_ to last byte is}
+125   \textcolor{comment}{// received, causing that NACK to be sent in response to receiving the last}
+126   \textcolor{comment}{// expected byte of data.}
+127 
+128   \textcolor{comment}{// build sla+w, slave device address + w bit}
+129   i2c\_slarw = (address) |\hyperlink{i2cmaster_8c_ab5c0fbe837494c5f9130a5914854250d}{I2C\_READ};
+130 
+131   \textcolor{keywordflow}{if} (i2c\_inRepStart) \{
+132     \textcolor{comment}{// if we're in the repeated start state, then we've already sent the start,}
+133     \textcolor{comment}{// (@@@ we hope), and the TWI statemachine is just waiting for the address byte.}
+134     \textcolor{comment}{// We need to remove ourselves from the repeated start state before we enable interrupts,}
+135     \textcolor{comment}{// since the ISR is ASYNC, and we could get confused if we hit the ISR before cleaning}
+136     \textcolor{comment}{// up. Also, don't enable the START interrupt. There may be one pending from the }
+137     \textcolor{comment}{// repeated start that we sent outselves, and that would really confuse things.}
+138     i2c\_inRepStart = \textcolor{keyword}{false};\textcolor{comment}{// remember, we're dealing with an ASYNC ISR}
+139     \hyperlink{i2cmaster_8c_a5c5db4ac8c3c6ac4bf3b358d00a9e9c3}{I2C\_restart}();
+140     resp\_sla = \hyperlink{i2cmaster_8c_a39120f62e823d8bc3523d07093d3993d}{I2C\_write}(i2c\_slarw);
+141   \}
+142   \textcolor{keywordflow}{else} \{
+143     \textcolor{comment}{// send start condition}
+144     \hyperlink{i2cmaster_8c_a263c74ce484e3680c05a9118707fadb7}{I2C\_start}();
+145     resp\_sla = \hyperlink{i2cmaster_8c_a39120f62e823d8bc3523d07093d3993d}{I2C\_write}(i2c\_slarw);
+146   \}
+147        \textcolor{comment}{//address sent, ack received}
+148       \textcolor{comment}{// put byte into buffer}
+149     \textcolor{keywordflow}{if} (resp\_sla) \{
+150     \textcolor{keywordflow}{while} (\_i2c\_masterBufferIndex < \_i2c\_masterBufferLength)
+151       \{
+152        \_i2c\_masterBuffer[\_i2c\_masterBufferIndex++] = \hyperlink{i2cmaster_8c_ae8f073ed5b503fde322dd21330ba56e6}{I2C\_read}();
+153        \textcolor{comment}{// data received, ack sent}
+154        \textcolor{comment}{// ack if more bytes are expected, otherwise nack}
+155       \textcolor{keywordflow}{if}(\_i2c\_masterBufferIndex == \_i2c\_masterBufferLength)\{
+156           \hyperlink{i2cmaster_8c_a509b10df2156a43d231bd9c7d2e9d848}{I2C\_sendNack}();
+157         \}\textcolor{keywordflow}{else}\{
+158           \hyperlink{i2cmaster_8c_a7f5eeebeea47eafb764e4a04d47f979b}{I2C\_sendAck}();
+159         \}
+160       \}
+161     \}
+162     
+163 
+164   \textcolor{keywordflow}{if} (\_i2c\_masterBufferIndex < length)
+165     length = \_i2c\_masterBufferIndex;
+166 
+167   \textcolor{comment}{// copy i2c buffer to data}
+168   \textcolor{keywordflow}{for}(i = 0; i < length; ++i)\{
+169     data[i] = \_i2c\_masterBuffer[i];
+170   \}
+171   \textcolor{keywordflow}{if} (i2c\_sendStop)
+172     \hyperlink{i2cmaster_8c_af8dcc1bcb3e1c6c0fcdca4cf599a239b}{I2C\_stop}();
+173   \textcolor{keywordflow}{else} \{
+174     i2c\_inRepStart = \textcolor{keyword}{true};
+175   \}
+176   i2c\_state = \hyperlink{i2cmaster_8c_a7eddd9fda3af4dfea01c6ff00677deae}{I2C\_READY};
+177   \textcolor{keywordflow}{return} length;
+178 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a14cc1f159281c1d9df69f535681158ed}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-request\-From@{I2\-C\-\_\-request\-From}}
+\index{I2\-C\-\_\-request\-From@{I2\-C\-\_\-request\-From}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-request\-From}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-request\-From (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8}}]{quantity}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a14cc1f159281c1d9df69f535681158ed}
+
+
+Definition at line 338 of file i2cmaster.\-c.
+
+
+
+References \-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-, I2\-C\-\_\-read\-From(), and read().
+
+
+\begin{DoxyCode}
+339 \{
+340     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{output_8c_aa0c5d610f8b61891a7cf5fca2671b6f9}{read};
+341     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} sendStop;
+342     
+343     \textcolor{comment}{// clamp to buffer length}
+344     \textcolor{keywordflow}{if} (quantity > \hyperlink{i2cmaster_8c_acb9380f67f6904888ceac6a5dd589b9d}{\_I2CBUFFERLENGTH\_})
+345         quantity = \hyperlink{i2cmaster_8c_acb9380f67f6904888ceac6a5dd589b9d}{\_I2CBUFFERLENGTH\_};
+346 
+347     \textcolor{comment}{// perform blocking read into buffer}
+348     sendStop = \textcolor{keyword}{true};
+349     read = \hyperlink{i2cmaster_8c_a6aea0b710a4a8c2b257a0b8e969dae5a}{I2C\_readFrom}(address, \_i2c\_rxBuffer, quantity, sendStop);
+350 
+351     \textcolor{comment}{// set rx buffer iterator vars}
+352     \_i2c\_rxBufferIndex = 0;
+353     \_i2c\_rxBufferLength = \hyperlink{output_8c_aa0c5d610f8b61891a7cf5fca2671b6f9}{read};
+354 
+355     \textcolor{keywordflow}{return} \hyperlink{output_8c_aa0c5d610f8b61891a7cf5fca2671b6f9}{read};
+356 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a5c5db4ac8c3c6ac4bf3b358d00a9e9c3}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-restart@{I2\-C\-\_\-restart}}
+\index{I2\-C\-\_\-restart@{I2\-C\-\_\-restart}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-restart}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-restart (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a5c5db4ac8c3c6ac4bf3b358d00a9e9c3}
+
+
+Definition at line 418 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-restart(), I2\-C2\-\_\-restart(), I2\-C\-\_\-get(), I2\-C\-\_\-read\-From(), and I2\-C\-\_\-send\-I\-D().
+
+
+\begin{DoxyCode}
+419 \{
+420     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait module is inactive}
+421     \textcolor{comment}{//PIR1bits.SSPIF = 0;             // Clear SSP interrupt flag}
+422     SSPCON2bits.RSEN = 1;           \textcolor{comment}{// Send restart bit}
+423     \textcolor{keywordflow}{while} (SSPCON2bits.RSEN);       \textcolor{comment}{// Wait until RSEN is cleared  }
+424     \textcolor{comment}{//while (!PIR1bits.SSPIF);        // Wait the interrupt flag is set}
+425 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a7f5eeebeea47eafb764e4a04d47f979b}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-send\-Ack@{I2\-C\-\_\-send\-Ack}}
+\index{I2\-C\-\_\-send\-Ack@{I2\-C\-\_\-send\-Ack}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-send\-Ack}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-send\-Ack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a7f5eeebeea47eafb764e4a04d47f979b}
+
+
+Definition at line 434 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-send\-Ack(), I2\-C2\-\_\-send\-Ack(), and I2\-C\-\_\-read\-From().
+
+
+\begin{DoxyCode}
+435 \{
+436     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait module is inactive}
+437     SSPCON2bits.ACKDT = 0;          \textcolor{comment}{// We want an Ack}
+438     PIR1bits.SSPIF = 0;             \textcolor{comment}{// Clear SSP interrupt flag}
+439     SSPCON2bits.ACKEN = 1;          \textcolor{comment}{// Send it now}
+440     \textcolor{keywordflow}{while} (!PIR1bits.SSPIF);        \textcolor{comment}{// Wait the interrupt flag is set}
+441 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a509b10df2156a43d231bd9c7d2e9d848}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-send\-Nack@{I2\-C\-\_\-send\-Nack}}
+\index{I2\-C\-\_\-send\-Nack@{I2\-C\-\_\-send\-Nack}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-send\-Nack}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-send\-Nack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a509b10df2156a43d231bd9c7d2e9d848}
+
+
+Definition at line 450 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-send\-Nack(), I2\-C2\-\_\-send\-Nack(), I2\-C\-\_\-get(), and I2\-C\-\_\-read\-From().
+
+
+\begin{DoxyCode}
+451 \{
+452     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait module is inactive}
+453     SSPCON2bits.ACKDT = 1;          \textcolor{comment}{// We want a No Ack}
+454     PIR1bits.SSPIF = 0;             \textcolor{comment}{// Clear SSP interrupt flag}
+455     SSPCON2bits.ACKEN = 1;          \textcolor{comment}{// Send it now}
+456     \textcolor{keywordflow}{while} (!PIR1bits.SSPIF);        \textcolor{comment}{// Wait the interrupt flag is set}
+457 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_ab41207d342a68cdfb5f78d0a449d1b06}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-slave@{I2\-C\-\_\-slave}}
+\index{I2\-C\-\_\-slave@{I2\-C\-\_\-slave}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-slave}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-slave (
+\begin{DoxyParamCaption}
+\item[{{\bf u16}}]{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_ab41207d342a68cdfb5f78d0a449d1b06}
+
+
+Definition at line 149 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-init(), and I2\-C\-\_\-\-S\-L\-A\-V\-E\-\_\-\-M\-O\-D\-E.
+
+
+\begin{DoxyCode}
+150 \{
+151     \hyperlink{p8_2pinguino_2core_2i2c_8c_a294f9659c7a45647d2274c1b2d7ad849}{I2C\_init}(\hyperlink{p8_2pinguino_2core_2i2c_8c_aa6bde6f87c55b879889545bc072173fd}{I2C\_SLAVE\_MODE}, DeviceID);
+152 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a263c74ce484e3680c05a9118707fadb7}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-start@{I2\-C\-\_\-start}}
+\index{I2\-C\-\_\-start@{I2\-C\-\_\-start}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a263c74ce484e3680c05a9118707fadb7}
+
+
+Definition at line 386 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-start(), I2\-C2\-\_\-start(), I2\-C\-\_\-read\-From(), I2\-C\-\_\-send(), I2\-C\-\_\-send\-I\-D(), I2\-C\-\_\-write\-To(), and P\-C\-F8574\-\_\-write().
+
+
+\begin{DoxyCode}
+387 \{
+388     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait module is inactive}
+389     \textcolor{comment}{//PIR1bits.SSPIF = 0;             // Clear SSP interrupt flag}
+390     SSPCON2bits.SEN = 1;            \textcolor{comment}{// Send start bit}
+391     \textcolor{keywordflow}{while} (SSPCON2bits.SEN);        \textcolor{comment}{// Wait until SEN is cleared }
+392     \textcolor{comment}{//while (!PIR1bits.SSPIF);        // Wait the interrupt flag is set}
+393 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_af8dcc1bcb3e1c6c0fcdca4cf599a239b}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-stop@{I2\-C\-\_\-stop}}
+\index{I2\-C\-\_\-stop@{I2\-C\-\_\-stop}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-stop}]{\setlength{\rightskip}{0pt plus 5cm}void I2\-C\-\_\-stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_af8dcc1bcb3e1c6c0fcdca4cf599a239b}
+
+
+Definition at line 403 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-stop(), I2\-C2\-\_\-stop(), I2\-C\-\_\-get(), I2\-C\-\_\-read\-From(), I2\-C\-\_\-send(), I2\-C\-\_\-write\-To(), and P\-C\-F8574\-\_\-write().
+
+
+\begin{DoxyCode}
+404 \{
+405     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait module is inactive}
+406     \textcolor{comment}{//PIR1bits.SSPIF = 0;             // Clear SSP interrupt flag}
+407     SSPCON2bits.PEN = 1;            \textcolor{comment}{// Send stop bit}
+408     \textcolor{keywordflow}{while} (SSPCON2bits.PEN);        \textcolor{comment}{// Wait until PEN is cleared }
+409     \textcolor{comment}{//while (!PIR1bits.SSPIF);        // Wait the interrupt flag is set}
+410 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a19258d5cdb347228308731b6c4dfe2c7}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-transmit@{I2\-C\-\_\-transmit}}
+\index{I2\-C\-\_\-transmit@{I2\-C\-\_\-transmit}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-transmit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-transmit (
+\begin{DoxyParamCaption}
+\item[{const {\bf u8} $\ast$}]{, }
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a19258d5cdb347228308731b6c4dfe2c7}
+
+
+Referenced by I2\-C\-\_\-in\-Buffer(), I2\-C\-\_\-in\-Buffer\-S(), and I2\-C\-\_\-in\-Buffer\-Str().
+
+\hypertarget{i2cmaster_8c_a39120f62e823d8bc3523d07093d3993d}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-write@{I2\-C\-\_\-write}}
+\index{I2\-C\-\_\-write@{I2\-C\-\_\-write}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a39120f62e823d8bc3523d07093d3993d}
+
+
+Definition at line 256 of file i2c.\-c.
+
+
+
+References I2\-C\-\_\-idle.
+
+
+
+Referenced by I2\-C1\-\_\-write(), I2\-C2\-\_\-write(), I2\-C\-\_\-read\-From(), I2\-C\-\_\-write\-To(), and P\-C\-F8574\-\_\-write().
+
+
+\begin{DoxyCode}
+257 \{
+258     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait the MSSP module is inactive}
+259     SSPBUF = value;                 \textcolor{comment}{// Write byte to SSPBUF (BF is set to 1)}
+260     \hyperlink{p8_2pinguino_2core_2i2c_8c_a25b122492ad92c208bda3f05bd6af08c}{I2C\_idle}();                     \textcolor{comment}{// Wait the MSSP module is inactive}
+261 \textcolor{comment}{/*}
+262 \textcolor{comment}{    while (SSPCON1bits.WCOL)        // Send again if write collision occurred }
+263 \textcolor{comment}{    \{}
+264 \textcolor{comment}{        LATCbits.LATC2 = 1;}
+265 \textcolor{comment}{        SSPCON1bits.WCOL = 0;       // Must be cleared by software}
+266 \textcolor{comment}{        SSPBUF = value;             // Write byte to SSPBUF (BF is set to 1)}
+267 \textcolor{comment}{    \}}
+268 \textcolor{comment}{*/}
+269 \textcolor{comment}{//    while (SSPSTATbits.BF);         // Wait until buffer is empty (BF set to 0)}
+270     \textcolor{comment}{// ACKSTAT can be returned now because it was loaded before BF was cleared}
+271     \textcolor{keywordflow}{return} (!SSPCON2bits.ACKSTAT);  \textcolor{comment}{// 1 if Ack, 0 if NAck}
+272 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a37badcff970ed10813b6c7984eada9ba}{\index{i2cmaster.\-c@{i2cmaster.\-c}!I2\-C\-\_\-write\-To@{I2\-C\-\_\-write\-To}}
+\index{I2\-C\-\_\-write\-To@{I2\-C\-\_\-write\-To}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{I2\-C\-\_\-write\-To}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} I2\-C\-\_\-write\-To (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{address, }
+\item[{{\bf u8} $\ast$}]{data, }
+\item[{{\bf u8}}]{length, }
+\item[{{\bf u8}}]{wait, }
+\item[{{\bf u8}}]{send\-Stop}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a37badcff970ed10813b6c7984eada9ba}
+
+
+Definition at line 195 of file i2cmaster.\-c.
+
+
+
+References \-\_\-\-I2\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-, I2\-C\-\_\-\-M\-T\-X, I2\-C\-\_\-\-R\-E\-A\-D\-Y, I2\-C\-\_\-start(), I2\-C\-\_\-stop(), and I2\-C\-\_\-write().
+
+
+
+Referenced by I2\-C\-\_\-end\-Transmission().
+
+
+\begin{DoxyCode}
+196 \{
+197   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i;
+198   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} resp\_sla;
+199   \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} resp\_dat;
+200   \textcolor{comment}{// ensure data will fit into buffer}
+201   \textcolor{keywordflow}{if}(length > \hyperlink{i2cmaster_8c_acb9380f67f6904888ceac6a5dd589b9d}{\_I2CBUFFERLENGTH\_})\{
+202     \textcolor{keywordflow}{return} 1;
+203   \}
+204 
+205   \textcolor{comment}{// wait until twi is ready, become master transmitter}
+206   \textcolor{keywordflow}{while}(i2c\_state != \hyperlink{i2cmaster_8c_a7eddd9fda3af4dfea01c6ff00677deae}{I2C\_READY})\{
+207     \textcolor{keywordflow}{continue};
+208   \}
+209   i2c\_state = \hyperlink{i2cmaster_8c_a4744f32f17280b9a40081d9cb6f2f12b}{I2C\_MTX};
+210   i2c\_sendStop = sendStop;
+211   \textcolor{comment}{// reset error state (0xFF.. no error occured)}
+212   i2c\_error = 0xFF;
+213 
+214   \textcolor{comment}{// initialize buffer iteration vars}
+215   \_i2c\_masterBufferIndex = 0;
+216   \_i2c\_masterBufferLength = length;
+217   
+218   \textcolor{comment}{// copy data to twi buffer}
+219   \textcolor{keywordflow}{for}(i = 0; i < length; ++i)\{
+220     \_i2c\_masterBuffer[i] = data[i];
+221   \}
+222   
+223   \textcolor{comment}{// build sla+w, slave device address + w bit}
+224   i2c\_slarw = address;  
+225   \textcolor{comment}{// if we're in a repeated start, then we've already sent the START}
+226   \textcolor{comment}{// in the ISR. Don't do it again.}
+227   \textcolor{comment}{//}
+228   \textcolor{keywordflow}{if} (i2c\_inRepStart  == \textcolor{keyword}{true}) \{
+229     \textcolor{comment}{// if we're in the repeated start state, then we've already sent the start,}
+230     \textcolor{comment}{// (@@@ we hope), and the TWI statemachine is just waiting for the address byte.}
+231     \textcolor{comment}{// We need to remove ourselves from the repeated start state before we enable interrupts,}
+232     \textcolor{comment}{// since the ISR is ASYNC, and we could get confused if we hit the ISR before cleaning}
+233     \textcolor{comment}{// up. Also, don't enable the START interrupt. There may be one pending from the }
+234     \textcolor{comment}{// repeated start that we sent outselves, and that would really confuse things.}
+235     i2c\_inRepStart = \textcolor{keyword}{false};         \textcolor{comment}{// remember, we're dealing with an ASYNC ISR}
+236     resp\_sla = \hyperlink{i2cmaster_8c_a39120f62e823d8bc3523d07093d3993d}{I2C\_write}(i2c\_slarw);
+237   \}
+238   \textcolor{keywordflow}{else} \{
+239     \textcolor{comment}{// send start condition}
+240     \hyperlink{i2cmaster_8c_a263c74ce484e3680c05a9118707fadb7}{I2C\_start}();
+241     resp\_sla = \hyperlink{i2cmaster_8c_a39120f62e823d8bc3523d07093d3993d}{I2C\_write}(i2c\_slarw);
+242  \}
+243 \textcolor{keywordflow}{if}(resp\_sla) \{
+244 \textcolor{comment}{//addr ack}
+245     \textcolor{keywordflow}{while}(\_i2c\_masterBufferIndex < \_i2c\_masterBufferLength)\{
+246         \textcolor{comment}{// copy data to output register and ack}
+247         resp\_dat= \hyperlink{i2cmaster_8c_a39120f62e823d8bc3523d07093d3993d}{I2C\_write}(\_i2c\_masterBuffer[\_i2c\_masterBufferIndex++]);
+248         \textcolor{keywordflow}{if} (!resp\_dat) \{
+249           \textcolor{keywordflow}{break};
+250         \}
+251     \}
+252 
+253     
+254     \textcolor{keywordflow}{if} (i2c\_sendStop)
+255           \hyperlink{i2cmaster_8c_af8dcc1bcb3e1c6c0fcdca4cf599a239b}{I2C\_stop}();
+256     \textcolor{keywordflow}{else} \{
+257       i2c\_inRepStart = \textcolor{keyword}{true};    \textcolor{comment}{// we're gonna send the START}
+258       \textcolor{comment}{// don't enable the interrupt. We'll generate the start, but we }
+259       \textcolor{comment}{// avoid handling the interrupt until we're in the next transaction,}
+260       \textcolor{comment}{// at the point where we would normally issue the start.}
+261     \}
+262     i2c\_state = \hyperlink{i2cmaster_8c_a7eddd9fda3af4dfea01c6ff00677deae}{I2C\_READY};
+263 \}
+264   \textcolor{keywordflow}{if} (i2c\_error == 0xFF)
+265     \textcolor{keywordflow}{return} 0;   \textcolor{comment}{// success}
+266   \textcolor{keywordflow}{else}
+267     \textcolor{keywordflow}{return} 4;   \textcolor{comment}{// i2c error}
+268 
+269 \}
+\end{DoxyCode}
+\hypertarget{i2cmaster_8c_a4d46097cf44ef5e943170bf7cbee3625}{\index{i2cmaster.\-c@{i2cmaster.\-c}!peek@{peek}}
+\index{peek@{peek}!i2cmaster.c@{i2cmaster.\-c}}
+\subsubsection[{peek}]{\setlength{\rightskip}{0pt plus 5cm}int peek (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{i2cmaster_8c_a4d46097cf44ef5e943170bf7cbee3625}
+
+
+Definition at line 522 of file i2cmaster.\-c.
+
+
+\begin{DoxyCode}
+523 \{
+524   \textcolor{keywordtype}{int} value = -1;
+525   
+526   \textcolor{keywordflow}{if}(\_i2c\_rxBufferIndex < \_i2c\_rxBufferLength)\{
+527     value = \_i2c\_rxBuffer[\_i2c\_rxBufferIndex];
+528   \}
+529 
+530   \textcolor{keywordflow}{return} value;
+531 \}
+\end{DoxyCode}

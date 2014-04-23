@@ -1,0 +1,85 @@
+\hypertarget{p8_2pinguino_2core_2digitalw_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalw.c File Reference}
+\label{p8_2pinguino_2core_2digitalw_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalw.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalw.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$pin.\-h$>$}\\*
+{\ttfamily \#include $<$digital.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2digitalw_8c_a9c6564156b07778ffedae3fe7a5f3810}{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite} (unsigned char pin, unsigned char \hyperlink{keypad32_8c_a2dc73433524e44e05908b0250ce9d9de}{state})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2digitalw_8c_a9c6564156b07778ffedae3fe7a5f3810}{\index{p8/pinguino/core/digitalw.\-c@{p8/pinguino/core/digitalw.\-c}!\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-\_\-}!p8/pinguino/core/digitalw.c@{p8/pinguino/core/digitalw.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-W\-\_\-\-\_\-}}\label{p8_2pinguino_2core_2digitalw_8c_a9c6564156b07778ffedae3fe7a5f3810}
+
+
+Definition at line 38 of file digitalw.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{\index{p8/pinguino/core/digitalw.\-c@{p8/pinguino/core/digitalw.\-c}!digitalwrite@{digitalwrite}}
+\index{digitalwrite@{digitalwrite}!p8/pinguino/core/digitalw.c@{p8/pinguino/core/digitalw.\-c}}
+\subsubsection[{digitalwrite}]{\setlength{\rightskip}{0pt plus 5cm}void digitalwrite (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{pin, }
+\item[{unsigned char}]{state}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}
+
+
+Definition at line 48 of file digitalw.\-c.
+
+
+
+References p\-A, p\-B, p\-C, p\-D, p\-E, and P\-W\-M\-\_\-close().
+
+
+
+Referenced by \-\_\-lcd\-\_\-begin(), \-\_\-lcd\-\_\-pulse\-Enable(), \-\_\-lcd\-\_\-send(), \-\_\-lcd\-\_\-write4bits(), \-\_\-lcd\-\_\-write8bits(), disable\-S\-D(), D\-S1306\-\_\-init(), D\-S1306\-\_\-\-Init(), D\-S1306\-\_\-readn(), D\-S1306\-\_\-writen(), enable\-S\-D(), if(), init\-S\-D(), Keypad\-\_\-get\-Key(), Keypad\-\_\-initialize\-Pins(), lcd\-\_\-begin(), lcd\-\_\-pulse\-Enable(), lcd\-\_\-send(), lcd\-\_\-write4bits(), lcd\-\_\-write8bits(), Led\-Control\-\_\-init(), Led\-Control\-\_\-spi\-Transfer(), M\-C\-P23\-S17\-\_\-init(), M\-C\-P23\-S17\-\_\-read\-\_\-\-A(), M\-C\-P23\-S17\-\_\-read\-\_\-\-B(), M\-C\-P23\-S17\-\_\-read\-\_\-\-W(), M\-C\-P23\-S17\-\_\-write\-\_\-\-A(), M\-C\-P23\-S17\-\_\-write\-\_\-\-B(), M\-C\-P23\-S17\-\_\-write\-\_\-\-W(), modbuss\-\_\-configure(), modbuss\-\_\-send\-Packet(), Led\-::off(), Led\-::on(), P\-C\-D8544\-\_\-command(), P\-C\-D8544\-\_\-data(), P\-C\-D8544\-\_\-refresh(), P\-C\-D8544\-\_\-shift\-Out(), read\-S\-E\-C\-T\-O\-R(), shift\-Out(), S\-P\-I\-Loc\-\_\-\-Init(), S\-P\-I\-Loc\-\_\-\-Read(), S\-P\-I\-Loc\-\_\-\-Write(), S\-T7565\-\_\-command(), S\-T7565\-\_\-data(), S\-T7565\-\_\-init(), S\-T7565\-\_\-shift\-Out(), Stepper\-\_\-step\-Motor(), Led\-::toggle(), toggle(), touch\-\_\-init\-Touch(), touch\-\_\-read(), touch\-\_\-read\-Data(), touch\-\_\-write\-Data(), and write\-S\-E\-C\-T\-O\-R().
+
+
+\begin{DoxyCode}
+49 \{
+50 \textcolor{preprocessor}{    #if defined(ANALOGWRITE) || defined(\_\_PWM\_\_)}
+51 \textcolor{preprocessor}{}    \hyperlink{pwmclose_8c_a40552d82b976add7920ed8de5533bc7c}{PWM\_close}(pin);
+52 \textcolor{preprocessor}{    #endif}
+53 \textcolor{preprocessor}{}
+54     \textcolor{keywordflow}{switch} (port[pin])
+55     \{
+56         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a166cc8406becb925e56e7e43ab4faaef}{pA}:
+57             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) LATA=LATA | mask[pin];
+58             \textcolor{keywordflow}{else} LATA=LATA & (255-mask[pin]);
+59             \textcolor{keywordflow}{break};
+60         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aa2fde944269dfe7bc69a31cd4d7979ee}{pB}:
+61             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) LATB=LATB | mask[pin]; 
+62             \textcolor{keywordflow}{else} LATB=LATB & (255-mask[pin]);
+63             \textcolor{keywordflow}{break};
+64         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a2cfa7c8cffd6a972558ee9ab003dec31}{pC}:
+65             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) LATC=LATC | mask[pin];
+66             \textcolor{keywordflow}{else} LATC=LATC & (255-mask[pin]);
+67             \textcolor{keywordflow}{break};
+68 \textcolor{preprocessor}{        #if defined(PINGUINO4455)   || defined(PINGUINO4550)  || \(\backslash\)}
+69 \textcolor{preprocessor}{            defined(PINGUINO45K50)  || defined(PINGUINO46J50) || \(\backslash\)}
+70 \textcolor{preprocessor}{            defined(PINGUINO47J53A) || defined(PICUNO\_EQUO)}
+71 \textcolor{preprocessor}{}        \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_aeb46d85e02eebbe66bcbcbb44f403841}{pD}:
+72             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) LATD=LATD | mask[pin]; 
+73             \textcolor{keywordflow}{else} LATD=LATD & (255-mask[pin]);
+74             \textcolor{keywordflow}{break};
+75         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a9aba3e923a2537bfbd31131da85a2d0a}{pE}:
+76             \textcolor{keywordflow}{if} (\hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state}) LATE=LATE | mask[pin]; 
+77             \textcolor{keywordflow}{else} LATE=LATE & (255-mask[pin]);
+78             \textcolor{keywordflow}{break};
+79 \textcolor{preprocessor}{        #endif}
+80 \textcolor{preprocessor}{}    \}
+81 \}
+\end{DoxyCode}

@@ -1,0 +1,683 @@
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/dcf77.c File Reference}
+\label{p8_2pinguino_2libraries_2dcf77_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/dcf77.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/dcf77.\-c}}
+}
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$macro.\-h$>$}\\*
+{\ttfamily \#include $<$interrupt.\-h$>$}\\*
+{\ttfamily \#include $<$dcf77.\-h$>$}\\*
+{\ttfamily \#include $<$digitalp.\-c$>$}\\*
+{\ttfamily \#include $<$digitalr.\-c$>$}\\*
+{\ttfamily \#include $<$bcd.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_adcf56cf9271eba07a14d47a20e2853f3}{\-\_\-\-D\-C\-F77\-\_\-\-C\-\_\-}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_ac168ce75f08829b5d5f8d41af6681741}{\-\_\-\-\_\-\-D\-C\-F77\-\_\-\-\_\-}
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a2c1ebaca4865ffcfc220b89386694cfe}{T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D}~20
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a8e02d7c5440cf554840b61ffd3c53116}{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D}~(\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a2c1ebaca4865ffcfc220b89386694cfe}{T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D} $\ast$ 1500)
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a01e0db9c4829818ac93163bc6a24d526}{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-H}~\hyperlink{p32_2include_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}{high8}(\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a8e02d7c5440cf554840b61ffd3c53116}{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D})
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a335c1d37ec964f664cfd8ef3054148c9}{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-L}~\hyperlink{p32_2include_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{low8}(\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a8e02d7c5440cf554840b61ffd3c53116}{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D})
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a430e4d664f8264c6f4bae9a82d87f38e}{T\-M\-R\-\_\-\-O\-N\-E\-S\-E\-C}~((1000/\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a2c1ebaca4865ffcfc220b89386694cfe}{T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D}) -\/ 1)
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_aab31a3cff7e62cc8ea28397a8993e69a}{D\-C\-F\-\_\-\-Discr\-\_\-150ms}~(150 / \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a2c1ebaca4865ffcfc220b89386694cfe}{T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D})
+\item 
+\#define \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_ae8ed4c77789f9668bf65554c21e635d2}{D\-C\-F\-\_\-\-Sync\-\_\-1500ms}~(1500 / \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a2c1ebaca4865ffcfc220b89386694cfe}{T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a99cca5c10befd49fddebdcef2d5f2855}{D\-C\-F77\-\_\-append\-Signal} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} signal)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_abfa8e77cac6ecbd0c9eeb45a892581f5}{Parity\-\_\-\-Even} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} Bits)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a23d4bde9e27b508637405a05aface3da}{Decode\-\_\-\-Buffer} (void)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a39d5e937da543c0e67ebf37137df3738}{D\-C\-F77\-\_\-scan\-Signal} (void)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_ab3dce6d30d81211debf93a102febac4c}{Update\-\_\-\-Time} (void)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a949354a8dec087cc2d63b22f4ae121d8}{D\-C\-F77\-\_\-start} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} dcf\-Pin)
+\item 
+void \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a6885d84292efb5cf2a0b0446c7cd4883}{dcf77\-\_\-interrupt} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a72089c5a7fb162cb03a206e9fc7ee10b}{Signal\-Pin}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_ad7fde485c0fbd31b276c496139392673}{Prev\-Signal}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{Buff\-Pntr}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a3cb782ec380af1661b5a6795b5bdb1f7}{Nosync}
+\item 
+volatile \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5130710ce5313dc7a41c462451bd6281}{Cntr\-\_\-sec}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a2cb109a0f7734e6bc37b5568cc42b0bb}{Prev\-Flank}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}{Buff1}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2}
+\item 
+volatile \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_aca140538c39b0632658edc82e5f41531}{Cntr\-\_\-tmr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_ac168ce75f08829b5d5f8d41af6681741}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!\-\_\-\-\_\-\-D\-C\-F77\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-C\-F77\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-D\-C\-F77\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-C\-F77\-\_\-\-\_\-}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-C\-F77\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-C\-F77\-\_\-\-\_\-}}\label{p8_2pinguino_2libraries_2dcf77_8c_ac168ce75f08829b5d5f8d41af6681741}
+
+
+Definition at line 41 of file dcf77.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_adcf56cf9271eba07a14d47a20e2853f3}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!\-\_\-\-D\-C\-F77\-\_\-\-C\-\_\-@{\-\_\-\-D\-C\-F77\-\_\-\-C\-\_\-}}
+\index{\-\_\-\-D\-C\-F77\-\_\-\-C\-\_\-@{\-\_\-\-D\-C\-F77\-\_\-\-C\-\_\-}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{\-\_\-\-D\-C\-F77\-\_\-\-C\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-D\-C\-F77\-\_\-\-C\-\_\-}}\label{p8_2pinguino_2libraries_2dcf77_8c_adcf56cf9271eba07a14d47a20e2853f3}
+
+
+Definition at line 40 of file dcf77.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_aab31a3cff7e62cc8ea28397a8993e69a}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!D\-C\-F\-\_\-\-Discr\-\_\-150ms@{D\-C\-F\-\_\-\-Discr\-\_\-150ms}}
+\index{D\-C\-F\-\_\-\-Discr\-\_\-150ms@{D\-C\-F\-\_\-\-Discr\-\_\-150ms}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{D\-C\-F\-\_\-\-Discr\-\_\-150ms}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-C\-F\-\_\-\-Discr\-\_\-150ms~(150 / {\bf T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D})}}\label{p8_2pinguino_2libraries_2dcf77_8c_aab31a3cff7e62cc8ea28397a8993e69a}
+
+
+Definition at line 76 of file dcf77.\-c.
+
+
+
+Referenced by D\-C\-F77\-\_\-scan\-Signal().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_ae8ed4c77789f9668bf65554c21e635d2}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!D\-C\-F\-\_\-\-Sync\-\_\-1500ms@{D\-C\-F\-\_\-\-Sync\-\_\-1500ms}}
+\index{D\-C\-F\-\_\-\-Sync\-\_\-1500ms@{D\-C\-F\-\_\-\-Sync\-\_\-1500ms}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{D\-C\-F\-\_\-\-Sync\-\_\-1500ms}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-C\-F\-\_\-\-Sync\-\_\-1500ms~(1500 / {\bf T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D})}}\label{p8_2pinguino_2libraries_2dcf77_8c_ae8ed4c77789f9668bf65554c21e635d2}
+
+
+Definition at line 82 of file dcf77.\-c.
+
+
+
+Referenced by D\-C\-F77\-\_\-scan\-Signal().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a430e4d664f8264c6f4bae9a82d87f38e}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!T\-M\-R\-\_\-\-O\-N\-E\-S\-E\-C@{T\-M\-R\-\_\-\-O\-N\-E\-S\-E\-C}}
+\index{T\-M\-R\-\_\-\-O\-N\-E\-S\-E\-C@{T\-M\-R\-\_\-\-O\-N\-E\-S\-E\-C}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{T\-M\-R\-\_\-\-O\-N\-E\-S\-E\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-M\-R\-\_\-\-O\-N\-E\-S\-E\-C~((1000/{\bf T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D}) -\/ 1)}}\label{p8_2pinguino_2libraries_2dcf77_8c_a430e4d664f8264c6f4bae9a82d87f38e}
+
+
+Definition at line 70 of file dcf77.\-c.
+
+
+
+Referenced by dcf77\-\_\-interrupt().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a2c1ebaca4865ffcfc220b89386694cfe}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D@{T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D}}
+\index{T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D@{T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D~20}}\label{p8_2pinguino_2libraries_2dcf77_8c_a2c1ebaca4865ffcfc220b89386694cfe}
+
+
+Definition at line 66 of file dcf77.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a8e02d7c5440cf554840b61ffd3c53116}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D@{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D}}
+\index{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D@{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D~({\bf T\-M\-R\-\_\-\-O\-V\-E\-R\-L\-O\-A\-D} $\ast$ 1500)}}\label{p8_2pinguino_2libraries_2dcf77_8c_a8e02d7c5440cf554840b61ffd3c53116}
+
+
+Definition at line 67 of file dcf77.\-c.
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a01e0db9c4829818ac93163bc6a24d526}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-H@{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-H}}
+\index{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-H@{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-H}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-H~{\bf high8}({\bf T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D})}}\label{p8_2pinguino_2libraries_2dcf77_8c_a01e0db9c4829818ac93163bc6a24d526}
+
+
+Definition at line 68 of file dcf77.\-c.
+
+
+
+Referenced by dcf77\-\_\-interrupt(), and D\-C\-F77\-\_\-start().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a335c1d37ec964f664cfd8ef3054148c9}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-L@{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-L}}
+\index{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-L@{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-L}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-L~{\bf low8}({\bf T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D})}}\label{p8_2pinguino_2libraries_2dcf77_8c_a335c1d37ec964f664cfd8ef3054148c9}
+
+
+Definition at line 69 of file dcf77.\-c.
+
+
+
+Referenced by dcf77\-\_\-interrupt(), and D\-C\-F77\-\_\-start().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a99cca5c10befd49fddebdcef2d5f2855}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!D\-C\-F77\-\_\-append\-Signal@{D\-C\-F77\-\_\-append\-Signal}}
+\index{D\-C\-F77\-\_\-append\-Signal@{D\-C\-F77\-\_\-append\-Signal}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{D\-C\-F77\-\_\-append\-Signal}]{\setlength{\rightskip}{0pt plus 5cm}void D\-C\-F77\-\_\-append\-Signal (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{signal}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2dcf77_8c_a99cca5c10befd49fddebdcef2d5f2855}
+
+
+Definition at line 99 of file dcf77.\-c.
+
+
+
+References Buff1, Buff2, and Buff\-Pntr.
+
+
+
+Referenced by D\-C\-F77\-\_\-scan\-Signal().
+
+
+\begin{DoxyCode}
+100 \{
+101 \textcolor{comment}{/*    }
+102 \textcolor{comment}{    if ((signal > 0) && (BuffPntr < 32))}
+103 \textcolor{comment}{        Buff1 = Buff1 | (1 << BuffPntr);}
+104 \textcolor{comment}{    if ((signal > 0) && (BuffPntr > 31))}
+105 \textcolor{comment}{        Buff2 = Buff2 | (1 << (BuffPntr - 32));}
+106 \textcolor{comment}{*/}
+107     \textcolor{keywordflow}{if} (signal)
+108     \{
+109         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{BuffPntr} < 32) \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}{Buff1} = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}{Buff1} | (1 << \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{BuffPntr});
+110         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{BuffPntr} > 31) \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2} = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2} | (1 << (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{BuffPntr} - 32));
+111     \}
+112     
+113     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{BuffPntr}++;
+114 
+115     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{BuffPntr} > 59)
+116     \{
+117         \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{BuffPntr} = 0;
+118         \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}{Buff1}   = 0;
+119         \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2}   = 0;
+120     \}
+121 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a6885d84292efb5cf2a0b0446c7cd4883}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!dcf77\-\_\-interrupt@{dcf77\-\_\-interrupt}}
+\index{dcf77\-\_\-interrupt@{dcf77\-\_\-interrupt}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{dcf77\-\_\-interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void dcf77\-\_\-interrupt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2dcf77_8c_a6885d84292efb5cf2a0b0446c7cd4883}
+
+
+Definition at line 381 of file dcf77.\-c.
+
+
+
+References Cntr\-\_\-sec, Cntr\-\_\-tmr, D\-C\-F77\-\_\-scan\-Signal(), T\-M\-R\-\_\-\-O\-N\-E\-S\-E\-C, T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-H, T\-M\-R\-\_\-\-P\-R\-E\-L\-O\-A\-D\-L, and Update\-\_\-\-Time().
+
+
+\begin{DoxyCode}
+382 \{
+383 \textcolor{comment}{/*}
+384 \textcolor{comment}{    // is this an TMR1 interrupt ?}
+385 \textcolor{comment}{    if (PIR1bits.TMR1IF)}
+386 \textcolor{comment}{    \{}
+387 \textcolor{comment}{        // load timer1 again}
+388 \textcolor{comment}{        TMR1H = high8(TMR\_PRELOAD);}
+389 \textcolor{comment}{        TMR1L =  low8(TMR\_PRELOAD);}
+390 \textcolor{comment}{}
+391 \textcolor{comment}{        // enable Timer1 interrupt again}
+392 \textcolor{comment}{        PIR1bits.TMR1IF = 0;}
+393 \textcolor{comment}{*/}
+394     \textcolor{comment}{// is this an TMR3 interrupt ?}
+395     \textcolor{keywordflow}{if} (PIR2bits.TMR3IF)
+396     \{
+397         \textcolor{comment}{// load timer1 again}
+398         TMR3H = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a01e0db9c4829818ac93163bc6a24d526}{TMR\_PRELOADH};
+399         TMR3L = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a335c1d37ec964f664cfd8ef3054148c9}{TMR\_PRELOADL};
+400 
+401         \textcolor{comment}{// enable Timer3 interrupt again}
+402         PIR2bits.TMR3IF = 0;
+403 
+404 \textcolor{comment}{//      debug("Interrupt !\(\backslash\)r\(\backslash\)n");}
+405 
+406         \textcolor{comment}{// Update time every second}
+407         \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_aca140538c39b0632658edc82e5f41531}{Cntr\_tmr}++;
+408         \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5130710ce5313dc7a41c462451bd6281}{Cntr\_sec}++;
+409 
+410         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5130710ce5313dc7a41c462451bd6281}{Cntr\_sec} > \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a430e4d664f8264c6f4bae9a82d87f38e}{TMR\_ONESEC})
+411         \{
+412             \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5130710ce5313dc7a41c462451bd6281}{Cntr\_sec} = 0;
+413             \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_ab3dce6d30d81211debf93a102febac4c}{Update\_Time}();
+414         \}
+415 
+416         \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a39d5e937da543c0e67ebf37137df3738}{DCF77\_scanSignal}();
+417     \}
+418 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a39d5e937da543c0e67ebf37137df3738}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!D\-C\-F77\-\_\-scan\-Signal@{D\-C\-F77\-\_\-scan\-Signal}}
+\index{D\-C\-F77\-\_\-scan\-Signal@{D\-C\-F77\-\_\-scan\-Signal}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{D\-C\-F77\-\_\-scan\-Signal}]{\setlength{\rightskip}{0pt plus 5cm}void D\-C\-F77\-\_\-scan\-Signal (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2dcf77_8c_a39d5e937da543c0e67ebf37137df3738}
+
+
+Definition at line 227 of file dcf77.\-c.
+
+
+
+References Cntr\-\_\-tmr, D\-C\-F77\-\_\-append\-Signal(), D\-C\-F\-\_\-\-Discr\-\_\-150ms, D\-C\-F\-\_\-\-Sync\-\_\-1500ms, Decode\-\_\-\-Buffer(), digitalread(), Prev\-Flank, Prev\-Signal, and Signal\-Pin.
+
+
+
+Referenced by dcf77\-\_\-interrupt(), and Timer1\-Interrupt().
+
+
+\begin{DoxyCode}
+228 \{
+229     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} LengthPulse;
+230     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} CurrFlank;
+231     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}  CurrSignal;
+232 
+233     CurrSignal = \hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a72089c5a7fb162cb03a206e9fc7ee10b}{SignalPin});
+234     \textcolor{keywordflow}{if} (CurrSignal != \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_ad7fde485c0fbd31b276c496139392673}{PrevSignal})
+235     \{
+236         \textcolor{keywordflow}{if} (CurrSignal == 1)
+237         \{
+238 \textcolor{comment}{//          digitalwrite(USERLED, HIGH);}
+239             \textcolor{comment}{/* At a raising flank */}
+240             CurrFlank = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_aca140538c39b0632658edc82e5f41531}{Cntr\_tmr};
+241             \textcolor{keywordflow}{if} ((CurrFlank - \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a2cb109a0f7734e6bc37b5568cc42b0bb}{PrevFlank}) > \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_ae8ed4c77789f9668bf65554c21e635d2}{DCF\_Sync\_1500ms})
+242                 \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a23d4bde9e27b508637405a05aface3da}{Decode\_Buffer}();
+243             \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a2cb109a0f7734e6bc37b5568cc42b0bb}{PrevFlank} = CurrFlank;
+244         \}
+245         \textcolor{keywordflow}{else}
+246         \{
+247 \textcolor{comment}{//          digitalwrite(USERLED, LOW);}
+248             \textcolor{comment}{/* At a falling flank */}
+249             LengthPulse = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_aca140538c39b0632658edc82e5f41531}{Cntr\_tmr} - \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a2cb109a0f7734e6bc37b5568cc42b0bb}{PrevFlank};
+250             \textcolor{keywordflow}{if} (LengthPulse < \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_aab31a3cff7e62cc8ea28397a8993e69a}{DCF\_Discr\_150ms})
+251                 \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a99cca5c10befd49fddebdcef2d5f2855}{DCF77\_appendSignal}(0);
+252             \textcolor{keywordflow}{else}
+253                 \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a99cca5c10befd49fddebdcef2d5f2855}{DCF77\_appendSignal}(1);
+254         \}
+255         \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_ad7fde485c0fbd31b276c496139392673}{PrevSignal} = CurrSignal;
+256     \}
+257 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a949354a8dec087cc2d63b22f4ae121d8}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!D\-C\-F77\-\_\-start@{D\-C\-F77\-\_\-start}}
+\index{D\-C\-F77\-\_\-start@{D\-C\-F77\-\_\-start}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{D\-C\-F77\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}void D\-C\-F77\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{dcf\-Pin}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2dcf77_8c_a949354a8dec087cc2d63b22f4ae121d8}
+
+
+Definition at line 315 of file dcf77.\-c.
+
+
+\begin{DoxyCode}
+316 \{
+317     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a72089c5a7fb162cb03a206e9fc7ee10b}{SignalPin}  = dcfPin;
+318     \hyperlink{digitalp_8c_a4b7fb3b918515dd8def26fd611013db2}{pinmode}(\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a72089c5a7fb162cb03a206e9fc7ee10b}{SignalPin}, \hyperlink{p8_2pinguino_2core_2const_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT});
+319 
+320     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ae53e173daf8fcf970bb3324ae545f21c}{seconds} = 0;
+321     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a517646d9969ae9c9f8921e133b1b872b}{minutes} = 0;
+322     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours} = 0;
+323     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a97419c23eb9097f89c83ce342df499f8}{dayofweek} = 0;
+324     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af980355fa766196214d34395ebed0a89}{dayofmonth} = 0;
+325     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ad5f8cd6773aef677b920ae4e4265bb10}{month} = 0;
+326     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ab02bacda75d48acac498f0c9f4e9b1cf}{year} = 0;
+327     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_aa1bb3da10a284c040c7fcf3943b36d58}{nosync} = 0;        \textcolor{comment}{// nosync shows minutes}
+328 
+329     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_ad7fde485c0fbd31b276c496139392673}{PrevSignal}    = 0;
+330     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a2cb109a0f7734e6bc37b5568cc42b0bb}{PrevFlank}  = 0;
+331     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{BuffPntr}    = 0;
+332     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}{Buff1}      = 0;
+333     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2}      = 0;
+334     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a3cb782ec380af1661b5a6795b5bdb1f7}{Nosync}        = 1;
+335 
+336     \textcolor{comment}{// general interrupt init}
+337     RCONbits.IPEN = 1;                  \textcolor{comment}{// Enable HP/LP interrupts}
+338     INTCONbits.GIEH = 1;                \textcolor{comment}{// Enable HP interrupts}
+339     INTCONbits.GIEL = 1;                \textcolor{comment}{// Enable LP interrupts}
+340 
+341 \textcolor{comment}{//  if (intUsed[INT\_TMR3] == INT\_NOT\_USED)}
+342 \textcolor{comment}{//  \{}
+343         \textcolor{comment}{//intUsed[INT\_TMR3] = INT\_USED;}
+344         \textcolor{comment}{// timer3 interrupt init}
+345         IPR2bits.TMR3IP = \hyperlink{interrupt_8h_a764fb7c5acbe8969ff8bcdffa153fbae}{INT\_HIGH\_PRIORITY};
+346         PIE2bits.TMR3IE = \hyperlink{interrupt_8h_abf7a56466fd6203663685a04448c9185}{INT\_ENABLE};
+347         PIR2bits.TMR3IF = 0;
+348         TMR3H = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a01e0db9c4829818ac93163bc6a24d526}{TMR\_PRELOADH};
+349         TMR3L = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a335c1d37ec964f664cfd8ef3054148c9}{TMR\_PRELOADL};
+350 \textcolor{preprocessor}{        #if defined(\_\_18f2550) || defined(\_\_18f4550)}
+351 \textcolor{preprocessor}{}            T3CON = \hyperlink{interrupt_8h_a1b7c5dd5c00c431f5c596d7dcabd17cf}{T3\_ON} | T3\_16BIT | \hyperlink{interrupt_8h_a4b6200ff53c4efe3cf482ed1bf5a350f}{T3\_PS\_1\_8} | T3\_SOURCE\_INT;
+352 \textcolor{preprocessor}{        #endif}
+353 \textcolor{preprocessor}{}\textcolor{preprocessor}{        #if defined(\_\_18f26j50) || defined(\_\_18f46j50)}
+354 \textcolor{preprocessor}{}            T3CON = \hyperlink{interrupt_8h_a1b7c5dd5c00c431f5c596d7dcabd17cf}{T3\_ON} | T3\_16BIT | \hyperlink{interrupt_8h_a4b6200ff53c4efe3cf482ed1bf5a350f}{T3\_PS\_1\_8} | T3\_SOURCE\_INT;\textcolor{comment}{// | T3\_SOURCE\_T1OFF;}
+355 \textcolor{preprocessor}{        #endif}
+356 \textcolor{preprocessor}{}\textcolor{comment}{//    \}}
+357 
+358 \textcolor{comment}{/*}
+359 \textcolor{comment}{    else if (intUsed[INT\_TMR1] == INT\_NOT\_USED)}
+360 \textcolor{comment}{    \{}
+361 \textcolor{comment}{        // timer1 interrupt init}
+362 \textcolor{comment}{        //intUsed[INT\_TMR1] = INT\_USED;}
+363 \textcolor{comment}{        IPR1bits.TMR1IP = INT\_HIGH\_PRIORITY;}
+364 \textcolor{comment}{        PIE1bits.TMR1IE = INT\_ENABLE;}
+365 \textcolor{comment}{        PIR1bits.TMR1IF = 0;}
+366 \textcolor{comment}{        TMR1H = high8(TMR\_PRELOAD);}
+367 \textcolor{comment}{        TMR1L =  low8(TMR\_PRELOAD);}
+368 \textcolor{comment}{        #if defined(\_\_18f2550) || defined(\_\_18f4550)}
+369 \textcolor{comment}{            T1CON = T1\_ON | T1\_16BIT | T1\_PS\_1\_8 | T1\_OSC\_OFF | T1\_SYNC\_EXT\_OFF | T1\_SOURCE\_INT |
+       T1\_RUN\_FROM\_ANOTHER;}
+370 \textcolor{comment}{        #elif defined(\_\_18f26j50) || defined(\_\_18f46j50)}
+371 \textcolor{comment}{            T1CON = T1\_ON | T1\_16BIT | T1\_PS\_1\_8 | T1\_OSC\_OFF | T1\_SYNC\_EXT\_OFF | T1\_SOURCE\_INT;}
+372 \textcolor{comment}{        #endif}
+373 \textcolor{comment}{    \}}
+374 \textcolor{comment}{*/}
+375 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a23d4bde9e27b508637405a05aface3da}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Decode\-\_\-\-Buffer@{Decode\-\_\-\-Buffer}}
+\index{Decode\-\_\-\-Buffer@{Decode\-\_\-\-Buffer}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Decode\-\_\-\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void Decode\-\_\-\-Buffer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2dcf77_8c_a23d4bde9e27b508637405a05aface3da}
+
+
+Definition at line 142 of file dcf77.\-c.
+
+
+
+References bcd2bin(), Buff1, Buff2, Buff\-Pntr, Time\-\_\-\-Date\-\_\-\-Format\-::dayofmonth, Time\-\_\-\-Date\-\_\-\-Format\-::dayofweek, D\-C\-F77, Time\-\_\-\-Date\-\_\-\-Format\-::hours, Time\-\_\-\-Date\-\_\-\-Format\-::minutes, Time\-\_\-\-Date\-\_\-\-Format\-::month, Time\-\_\-\-Date\-\_\-\-Format\-::nosync, Nosync, Parity\-\_\-\-Even(), R\-T\-Clock, Time\-\_\-\-Date\-\_\-\-Format\-::seconds, and Time\-\_\-\-Date\-\_\-\-Format\-::year.
+
+
+
+Referenced by D\-C\-F77\-\_\-scan\-Signal().
+
+
+\begin{DoxyCode}
+143 \{
+144     \hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32} Code;
+145     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}  Par, Par1, Par2, Par3;
+146     \textcolor{comment}{//  Disp\_Input\_Binary(Buff1, Buff2);}
+147 
+148     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{BuffPntr} == 59)
+149     \{
+150         \textcolor{comment}{// Minutes}
+151         Code = (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}{Buff1} >> 21) & 0x7F;
+152         Par  = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_abfa8e77cac6ecbd0c9eeb45a892581f5}{Parity\_Even}(Code);
+153         Par1 = (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}{Buff1} >> 28) & 1;
+154 \textcolor{comment}{//      debug("Par= %d Par1= %d\(\backslash\)r\(\backslash\)n", Par, Par1);}
+155         \textcolor{keywordflow}{if} (Par == Par1)
+156         \{
+157             Par1 = 11;
+158             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_a517646d9969ae9c9f8921e133b1b872b}{minutes} = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(Code);
+159 \textcolor{comment}{//          debug("mm= %02d \(\backslash\)r\(\backslash\)n", DCF77.mm);}
+160         \}
+161 
+162         \textcolor{comment}{// Hours}
+163         Code = ((\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}{Buff1} >> 29) & 0x7) | ((\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2} & 0x7) << 3);
+164         Par = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_abfa8e77cac6ecbd0c9eeb45a892581f5}{Parity\_Even}(Code);
+165         Par2 = (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2} >> 3) & 1;
+166 \textcolor{comment}{//      debug("Par= %d Par2= %d\(\backslash\)r\(\backslash\)n", Par, Par2);}
+167         \textcolor{keywordflow}{if} (Par == Par2)
+168         \{
+169             Par2 = 12;
+170             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours} = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(Code);
+171 \textcolor{comment}{//          debug("hh= %02d \(\backslash\)r\(\backslash\)n", DCF77.hh);}
+172         \}
+173 
+174         Code = (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2} >> 4) & 0x3FFFFF;
+175         Par = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_abfa8e77cac6ecbd0c9eeb45a892581f5}{Parity\_Even}(Code);
+176         Par3 = (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2} >> 26) & 1;
+177 \textcolor{comment}{//      debug("Par= %d Par3= %d\(\backslash\)r\(\backslash\)n", Par, Par3);}
+178         \textcolor{keywordflow}{if} (Par == Par3)
+179         \{
+180             Par3 = 13;
+181             Code = (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2} >> 10) & 0x7;
+182             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_a97419c23eb9097f89c83ce342df499f8}{dayofweek} = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(Code);
+183 \textcolor{comment}{//          debug("dw= %02d \(\backslash\)r\(\backslash\)n", DCF77.dw);}
+184 
+185             Code = (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2} >> 4) & 0x3F;
+186             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_af980355fa766196214d34395ebed0a89}{dayofmonth} = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(Code);
+187 \textcolor{comment}{//          debug("da= %02d \(\backslash\)r\(\backslash\)n", DCF77.da);}
+188 
+189             Code = (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2} >> 13) & 0x1F;
+190             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_ad5f8cd6773aef677b920ae4e4265bb10}{month} = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(Code);
+191 \textcolor{comment}{//          debug("mo= %02d \(\backslash\)r\(\backslash\)n", DCF77.mo);}
+192 
+193             Code = (\hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2} >> 18) & 0xFF;
+194             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_ab02bacda75d48acac498f0c9f4e9b1cf}{year} = \hyperlink{p8_2pinguino_2core_2bcd_8c_af5810f450aa8f5995ded4e1de8554225}{bcd2bin}(Code);
+195 \textcolor{comment}{//          debug("yr= %02d \(\backslash\)r\(\backslash\)n", DCF77.yr);}
+196         \}
+197 \textcolor{comment}{//      Part = Par1 + Par2 + Par3;}
+198 \textcolor{comment}{//      debug("Part= %d\(\backslash\)r\(\backslash\)n", Part);}
+199         \textcolor{keywordflow}{if} (Par1 + Par2 + Par3 == 36)
+200         \{
+201             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_ae53e173daf8fcf970bb3324ae545f21c}{seconds} = 0;
+202             \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a3cb782ec380af1661b5a6795b5bdb1f7}{Nosync}   = 0;
+203 \textcolor{comment}{//          debug("Tim=  %d:%02d \(\backslash\)r\(\backslash\)n", DCF77.hh, DCF77.mm);}
+204 \textcolor{comment}{//          debug("Dat=: %02d-%02d-%02d  %1d\(\backslash\)r\(\backslash\)n", DCF77.da, DCF77.mo, DCF77.yr, DCF77.dw);}
+205 \textcolor{comment}{//          RTClock = DCF77;}
+206             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ae53e173daf8fcf970bb3324ae545f21c}{seconds} = \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_ae53e173daf8fcf970bb3324ae545f21c}{seconds};
+207             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a517646d9969ae9c9f8921e133b1b872b}{minutes} = \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_a517646d9969ae9c9f8921e133b1b872b}{minutes};
+208             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours} = \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours};
+209             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a97419c23eb9097f89c83ce342df499f8}{dayofweek} = \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_a97419c23eb9097f89c83ce342df499f8}{dayofweek};
+210             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af980355fa766196214d34395ebed0a89}{dayofmonth} = \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_af980355fa766196214d34395ebed0a89}{dayofmonth};
+211             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ad5f8cd6773aef677b920ae4e4265bb10}{month} = \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_ad5f8cd6773aef677b920ae4e4265bb10}{month};
+212             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ab02bacda75d48acac498f0c9f4e9b1cf}{year} = \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_ab02bacda75d48acac498f0c9f4e9b1cf}{year};
+213             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_aa1bb3da10a284c040c7fcf3943b36d58}{nosync} = \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_ac03894d35fd099d1b388a9bb3b3d1b4f}{DCF77}.\hyperlink{struct_time___date___format_aa1bb3da10a284c040c7fcf3943b36d58}{nosync};      \textcolor{comment}{// nosync shows minutes}
+214         \}
+215     \}
+216     \textcolor{comment}{// Reset Inputbuffer}
+217     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{BuffPntr}    = 0;
+218     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}{Buff1}      = 0;
+219     \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{Buff2}      = 0;
+220 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_abfa8e77cac6ecbd0c9eeb45a892581f5}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Parity\-\_\-\-Even@{Parity\-\_\-\-Even}}
+\index{Parity\-\_\-\-Even@{Parity\-\_\-\-Even}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Parity\-\_\-\-Even}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Parity\-\_\-\-Even (
+\begin{DoxyParamCaption}
+\item[{{\bf u32}}]{Bits}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2dcf77_8c_abfa8e77cac6ecbd0c9eeb45a892581f5}
+
+
+Definition at line 127 of file dcf77.\-c.
+
+
+
+Referenced by Decode\-\_\-\-Buffer().
+
+
+\begin{DoxyCode}
+128 \{
+129     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} i, p = 0;
+130 
+131     \textcolor{keywordflow}{for} (i = 0; i < 32; i++)
+132         \textcolor{keywordflow}{if} ((Bits & (1 << i)) > 0)
+133             p = !p;
+134             
+135     \textcolor{keywordflow}{return} p;
+136 \}
+\end{DoxyCode}
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_ab3dce6d30d81211debf93a102febac4c}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Update\-\_\-\-Time@{Update\-\_\-\-Time}}
+\index{Update\-\_\-\-Time@{Update\-\_\-\-Time}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Update\-\_\-\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void Update\-\_\-\-Time (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2libraries_2dcf77_8c_ab3dce6d30d81211debf93a102febac4c}
+
+
+Definition at line 263 of file dcf77.\-c.
+
+
+
+References Time\-\_\-\-Date\-\_\-\-Format\-::dayofmonth, Time\-\_\-\-Date\-\_\-\-Format\-::dayofweek, Time\-\_\-\-Date\-\_\-\-Format\-::hours, Time\-\_\-\-Date\-\_\-\-Format\-::minutes, Time\-\_\-\-Date\-\_\-\-Format\-::month, Time\-\_\-\-Date\-\_\-\-Format\-::nosync, Nosync, R\-T\-Clock, Time\-\_\-\-Date\-\_\-\-Format\-::seconds, and Time\-\_\-\-Date\-\_\-\-Format\-::year.
+
+
+
+Referenced by dcf77\-\_\-interrupt(), and Timer1\-Interrupt().
+
+
+\begin{DoxyCode}
+264 \{
+265     \textcolor{keyword}{const} \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} Mnth[12] = \{31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31\};
+266 
+267     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ae53e173daf8fcf970bb3324ae545f21c}{seconds} == 0)
+268         \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_aa1bb3da10a284c040c7fcf3943b36d58}{nosync} = \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a3cb782ec380af1661b5a6795b5bdb1f7}{Nosync};
+269 
+270     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ae53e173daf8fcf970bb3324ae545f21c}{seconds}++;                                \textcolor{comment}{// Seconds}
+271 
+272     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ae53e173daf8fcf970bb3324ae545f21c}{seconds} > 59)
+273     \{
+274         \hyperlink{p8_2pinguino_2libraries_2dcf77_8c_a3cb782ec380af1661b5a6795b5bdb1f7}{Nosync}++;
+275         \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ae53e173daf8fcf970bb3324ae545f21c}{seconds} = 0;
+276 
+277         \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a517646d9969ae9c9f8921e133b1b872b}{minutes}++;                            \textcolor{comment}{// Minutes}
+278         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a517646d9969ae9c9f8921e133b1b872b}{minutes} > 59)
+279         \{
+280             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a517646d9969ae9c9f8921e133b1b872b}{minutes} = 0;
+281 
+282             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours}++;                        \textcolor{comment}{// Hours}
+283             \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours} > 23)
+284             \{
+285                 \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours} = 0;
+286 
+287                 \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a97419c23eb9097f89c83ce342df499f8}{dayofweek}++;                \textcolor{comment}{// Day of Week}
+288                 \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a97419c23eb9097f89c83ce342df499f8}{dayofweek} > 7)
+289                     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_a97419c23eb9097f89c83ce342df499f8}{dayofweek} = 1;
+290 
+291                 \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af980355fa766196214d34395ebed0a89}{dayofmonth}++;              \textcolor{comment}{// Date}
+292                 \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af980355fa766196214d34395ebed0a89}{dayofmonth} > Mnth[\hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.
+      \hyperlink{struct_time___date___format_ad5f8cd6773aef677b920ae4e4265bb10}{month}-1])
+293                 \{
+294                     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_af980355fa766196214d34395ebed0a89}{dayofmonth} = 1;
+295 
+296                     \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ad5f8cd6773aef677b920ae4e4265bb10}{month}++;                \textcolor{comment}{// Month}
+297                     \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ad5f8cd6773aef677b920ae4e4265bb10}{month} > 12)
+298                     \{
+299                         \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ad5f8cd6773aef677b920ae4e4265bb10}{month} = 1;
+300 
+301                         \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ab02bacda75d48acac498f0c9f4e9b1cf}{year}++;              \textcolor{comment}{// Year}
+302                         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ab02bacda75d48acac498f0c9f4e9b1cf}{year} > 99)
+303                             \hyperlink{p8_2pinguino_2libraries_2dcf77_8h_a41f4f3e553ba5a06245571c636f342b2}{RTClock}.\hyperlink{struct_time___date___format_ab02bacda75d48acac498f0c9f4e9b1cf}{year} = 0;
+304                     \}
+305                 \}
+306             \}
+307         \}
+308     \}
+309 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Buff1@{Buff1}}
+\index{Buff1@{Buff1}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Buff1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Buff1}}\label{p8_2pinguino_2libraries_2dcf77_8c_a215318ad68e206e73e9384bc827df76a}
+
+
+Definition at line 91 of file dcf77.\-c.
+
+
+
+Referenced by D\-C\-F77\-\_\-append\-Signal(), D\-C\-F77\-\_\-start(), and Decode\-\_\-\-Buffer().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Buff2@{Buff2}}
+\index{Buff2@{Buff2}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Buff2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32} Buff2}}\label{p8_2pinguino_2libraries_2dcf77_8c_a5b7193608c22772e0a7e47dbd742e4a1}
+
+
+Definition at line 91 of file dcf77.\-c.
+
+
+
+Referenced by D\-C\-F77\-\_\-append\-Signal(), D\-C\-F77\-\_\-start(), and Decode\-\_\-\-Buffer().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Buff\-Pntr@{Buff\-Pntr}}
+\index{Buff\-Pntr@{Buff\-Pntr}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Buff\-Pntr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Buff\-Pntr}}\label{p8_2pinguino_2libraries_2dcf77_8c_a56abc81e16be2cedd288f7e3c6fa4a0e}
+
+
+Definition at line 88 of file dcf77.\-c.
+
+
+
+Referenced by D\-C\-F77\-\_\-append\-Signal(), D\-C\-F77\-\_\-start(), and Decode\-\_\-\-Buffer().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a5130710ce5313dc7a41c462451bd6281}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Cntr\-\_\-sec@{Cntr\-\_\-sec}}
+\index{Cntr\-\_\-sec@{Cntr\-\_\-sec}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Cntr\-\_\-sec}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf u8} Cntr\-\_\-sec}}\label{p8_2pinguino_2libraries_2dcf77_8c_a5130710ce5313dc7a41c462451bd6281}
+
+
+Definition at line 89 of file dcf77.\-c.
+
+
+
+Referenced by dcf77\-\_\-interrupt(), and Timer1\-Interrupt().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_aca140538c39b0632658edc82e5f41531}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Cntr\-\_\-tmr@{Cntr\-\_\-tmr}}
+\index{Cntr\-\_\-tmr@{Cntr\-\_\-tmr}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Cntr\-\_\-tmr}]{\setlength{\rightskip}{0pt plus 5cm}volatile {\bf u32} Cntr\-\_\-tmr}}\label{p8_2pinguino_2libraries_2dcf77_8c_aca140538c39b0632658edc82e5f41531}
+
+
+Definition at line 92 of file dcf77.\-c.
+
+
+
+Referenced by dcf77\-\_\-interrupt(), and D\-C\-F77\-\_\-scan\-Signal().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a3cb782ec380af1661b5a6795b5bdb1f7}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Nosync@{Nosync}}
+\index{Nosync@{Nosync}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Nosync}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Nosync}}\label{p8_2pinguino_2libraries_2dcf77_8c_a3cb782ec380af1661b5a6795b5bdb1f7}
+
+
+Definition at line 88 of file dcf77.\-c.
+
+
+
+Referenced by D\-C\-F77\-\_\-start(), Decode\-\_\-\-Buffer(), and Update\-\_\-\-Time().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a2cb109a0f7734e6bc37b5568cc42b0bb}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Prev\-Flank@{Prev\-Flank}}
+\index{Prev\-Flank@{Prev\-Flank}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Prev\-Flank}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u16} Prev\-Flank}}\label{p8_2pinguino_2libraries_2dcf77_8c_a2cb109a0f7734e6bc37b5568cc42b0bb}
+
+
+Definition at line 90 of file dcf77.\-c.
+
+
+
+Referenced by D\-C\-F77\-\_\-scan\-Signal(), and D\-C\-F77\-\_\-start().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_ad7fde485c0fbd31b276c496139392673}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Prev\-Signal@{Prev\-Signal}}
+\index{Prev\-Signal@{Prev\-Signal}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Prev\-Signal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Prev\-Signal}}\label{p8_2pinguino_2libraries_2dcf77_8c_ad7fde485c0fbd31b276c496139392673}
+
+
+Definition at line 88 of file dcf77.\-c.
+
+
+
+Referenced by D\-C\-F77\-\_\-scan\-Signal(), and D\-C\-F77\-\_\-start().
+
+\hypertarget{p8_2pinguino_2libraries_2dcf77_8c_a72089c5a7fb162cb03a206e9fc7ee10b}{\index{p8/pinguino/libraries/dcf77.\-c@{p8/pinguino/libraries/dcf77.\-c}!Signal\-Pin@{Signal\-Pin}}
+\index{Signal\-Pin@{Signal\-Pin}!p8/pinguino/libraries/dcf77.c@{p8/pinguino/libraries/dcf77.\-c}}
+\subsubsection[{Signal\-Pin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Signal\-Pin}}\label{p8_2pinguino_2libraries_2dcf77_8c_a72089c5a7fb162cb03a206e9fc7ee10b}
+
+
+Definition at line 88 of file dcf77.\-c.
+
+
+
+Referenced by D\-C\-F77\-\_\-scan\-Signal(), and D\-C\-F77\-\_\-start().
+

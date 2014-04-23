@@ -1,0 +1,54 @@
+\hypertarget{digitalt_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalt.c File Reference}
+\label{digitalt_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalt.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/digitalt.\-c}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$pin.\-h$>$}\\*
+{\ttfamily \#include $<$digital.\-h$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+{\ttfamily \#include $<$digitalr.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{digitalt_8c_a7cbd5bf5ce742479fd23e81f22db5e95}{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-T\-\_\-\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{digitalt_8c_ad774a25211d7bf3672c5e2cf584bbd9c}{toggle} (unsigned char pin)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{digitalt_8c_a7cbd5bf5ce742479fd23e81f22db5e95}{\index{digitalt.\-c@{digitalt.\-c}!\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-T\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-T\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-T\-\_\-\-\_\-@{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-T\-\_\-\-\_\-}!digitalt.c@{digitalt.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-T\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-D\-I\-G\-I\-T\-A\-L\-T\-\_\-\-\_\-}}\label{digitalt_8c_a7cbd5bf5ce742479fd23e81f22db5e95}
+
+
+Definition at line 38 of file digitalt.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{digitalt_8c_ad774a25211d7bf3672c5e2cf584bbd9c}{\index{digitalt.\-c@{digitalt.\-c}!toggle@{toggle}}
+\index{toggle@{toggle}!digitalt.c@{digitalt.\-c}}
+\subsubsection[{toggle}]{\setlength{\rightskip}{0pt plus 5cm}void toggle (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{pin}
+\end{DoxyParamCaption}
+)}}\label{digitalt_8c_ad774a25211d7bf3672c5e2cf584bbd9c}
+
+
+Definition at line 47 of file digitalt.\-c.
+
+
+
+References digitalread(), digitalwrite(), and state.
+
+
+\begin{DoxyCode}
+48 \{
+49     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \hyperlink{keypad_8c_a2dc73433524e44e05908b0250ce9d9de}{state};
+50     state = \hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(pin);
+51     \hyperlink{p8_2pinguino_2core_2digitalw_8c_aa8b647552ab4292b55b14ab37b166908}{digitalwrite}(pin, state^1);
+52 \}
+\end{DoxyCode}

@@ -1,0 +1,760 @@
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/\-\_\-\-\_\-cdc.c File Reference}
+\label{p32_2include_2pinguino_2core_2____cdc_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+}
+{\ttfamily \#include $<$stdarg.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$system.\-c$>$}\\*
+{\ttfamily \#include $<$interrupt.\-c$>$}\\*
+{\ttfamily \#include $<$delay.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a4607ffda9dac39b25d25cd69c5a755f8}{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_ac17ceb5a97a0ca5c1c744ba4dc5f836c}{U\-S\-B\-C\-D\-Cis\-Configured}()~(\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_ae504eb0b0912afa628e07d89c33da82d}{U\-S\-B\-Device\-State} == 0x20)
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_aa02ce8e5f2e3a3abe21648933b5b4a7e}{m\-U\-S\-B\-U\-S\-A\-R\-T\-Is\-Tx\-Trf\-Ready}()~(\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_af38198c695175d0f021e62adb47167d8}{cdc\-\_\-trf\-\_\-state}==0)
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a8c590bfe47fa571b1cf6866ed282368c}{U\-S\-B\-Get\-Device\-State}()~(\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_ae504eb0b0912afa628e07d89c33da82d}{U\-S\-B\-Device\-State})
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a08446de7aa51cb91713e0fba3a63e0dc}{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}~64
+\item 
+\#define \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afa9063b2dfd7231c09961532f655bcc8}{C\-D\-C\-Clear\-D\-T\-R}()~(\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_ae9206078c5ec525f5b90ff119928a1cd}{control\-\_\-signal\-\_\-bitmap} \&= 0xfe)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847c}{U\-S\-B\-\_\-\-E\-V\-E\-N\-T} \{ \\*
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca939a6cc6d749a232a23ff324dca6d48c}{E\-V\-E\-N\-T\-\_\-\-N\-O\-N\-E} = 0, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca9ea155ec17885c9d9ab741520ca44d1d}{E\-V\-E\-N\-T\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E} = 1, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cafa5e6a7ec467be90ecd37de7a0d9420b}{E\-V\-E\-N\-T\-\_\-\-H\-O\-S\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E} = 100, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca22d1656953cb041d77090464077b999b}{E\-V\-E\-N\-T\-\_\-\-H\-U\-B\-\_\-\-A\-T\-T\-A\-C\-H}, 
+\\*
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca7bc5ba88a447d7f9da46b09a636e034b}{E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-L\-L}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca7bc364c0124c58ce8a2964a95e2d5579}{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-S\-E\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae0474e1419fffc355f41021958fbc902}{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-O\-V\-E\-R\-C\-U\-R\-R\-E\-N\-T}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca8356e6897063c333563f3ad73afbae8a}{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-P\-O\-W\-E\-R}, 
+\\*
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae6f10ec654369cefb27b4fd12b94be1e}{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-P\-O\-W\-E\-R}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacea62d4c4421106616f5ecacb7523b25}{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-P\-O\-W\-E\-R\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca42dcddb5fd7146d4a45602cd4a4d3333}{E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-U\-P\-P\-O\-R\-T\-E\-D\-\_\-\-D\-E\-V\-I\-C\-E}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caffd4d14604fc81bfe722f0230f688e48}{E\-V\-E\-N\-T\-\_\-\-C\-A\-N\-N\-O\-T\-\_\-\-E\-N\-U\-M\-E\-R\-A\-T\-E}, 
+\\*
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca68583554f2ea1b119f00eb2d53f1db32}{E\-V\-E\-N\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-N\-I\-T\-\_\-\-E\-R\-R\-O\-R}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cab7db7fe9f6ec59637ee8550586c4592a}{E\-V\-E\-N\-T\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-M\-E\-M\-O\-R\-Y}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caede3942ee5fa8efdd8578b04fe5adc37}{E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-P\-E\-C\-I\-F\-I\-E\-D\-\_\-\-E\-R\-R\-O\-R}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cab3ad4ab38a7a883c15b79d74671416d0}{E\-V\-E\-N\-T\-\_\-\-D\-E\-T\-A\-C\-H}, 
+\\*
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae53e7bdedb5bae74d62baf7d80118961}{E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca99733d021f56f6e94ded33901f8f6cfa}{E\-V\-E\-N\-T\-\_\-\-S\-O\-F}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caf77b6485b8436579576b00e374df1cab}{E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-U\-M\-E}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caef398fd95398daa3c0321ef557d9e281}{E\-V\-E\-N\-T\-\_\-\-S\-U\-S\-P\-E\-N\-D}, 
+\\*
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca77b8827708a115c9e8e25bda1804e022}{E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-E\-T}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacbf5feccb18783cb2143d7605a60bfb7}{E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-R\-E\-A\-D}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca57ba0909e96b4073950cce43bad4f99b}{E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-W\-R\-I\-T\-E}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca0decebc08fa82bf74faa932e15db9d9e}{E\-V\-E\-N\-T\-\_\-\-G\-E\-N\-E\-R\-I\-C\-\_\-\-B\-A\-S\-E} = 400, 
+\\*
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacfc0006d96490d780bd4b9711ff223eb}{E\-V\-E\-N\-T\-\_\-\-M\-S\-D\-\_\-\-B\-A\-S\-E} = 500, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca6db3affa4f20221e91b40ea6425c31b6}{E\-V\-E\-N\-T\-\_\-\-H\-I\-D\-\_\-\-B\-A\-S\-E} = 600, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{E\-V\-E\-N\-T\-\_\-\-P\-R\-I\-N\-T\-E\-R\-\_\-\-B\-A\-S\-E} = 700, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca1b103ea84d2ee1b17a681e26a1f4e67c}{E\-V\-E\-N\-T\-\_\-\-C\-D\-C\-\_\-\-B\-A\-S\-E} = 800, 
+\\*
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca65eb5f7e89634360bce1bb1f8b1ea71e}{E\-V\-E\-N\-T\-\_\-\-C\-H\-A\-R\-G\-E\-R\-\_\-\-B\-A\-S\-E} = 900, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae156819f300a63d88ad51bd9a3a389d9}{E\-V\-E\-N\-T\-\_\-\-A\-U\-D\-I\-O\-\_\-\-B\-A\-S\-E} = 1000, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca26db21c1db4fdef72e70ee793a333400}{E\-V\-E\-N\-T\-\_\-\-U\-S\-E\-R\-\_\-\-B\-A\-S\-E} = 10000, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca35d87680cfd49414478cc47a2a27fc8e}{E\-V\-E\-N\-T\-\_\-\-B\-U\-S\-\_\-\-E\-R\-R\-O\-R} = 2$^\wedge$31-\/1
+ \}
+\item 
+enum \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5d}{U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-S} \{ \\*
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da6111a36b98eedda29a83db38ae50bd15}{E\-V\-E\-N\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-E\-D} = E\-V\-E\-N\-T\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da401cbeb67b72fe95ed129e5f95b6a39c}{E\-V\-E\-N\-T\-\_\-\-S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da990f20e0801d27b6977aaac7a5b64e3c}{E\-V\-E\-N\-T\-\_\-\-E\-P0\-\_\-\-R\-E\-Q\-U\-E\-S\-T}, 
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5dafecc13aec5ade12c55ef62af1b14d62a}{E\-V\-E\-N\-T\-\_\-\-A\-T\-T\-A\-C\-H}, 
+\\*
+\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da3a5d2a17610019839bd59ed1db280622}{E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a3d2b0ce0dc5fb42a0601d78c783ecfc0}{U\-S\-B\-Check\-C\-D\-C\-Request} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a2ea6d35bafd1834129f88fe9b1b13a81}{C\-D\-C\-Init\-E\-P} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_aa274606c41406910ba323ad1d0dfa335}{U\-S\-B\-Task} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a0c750bc9fb88a91b6800813860cc3103}{U\-S\-B\-Device\-Init} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a785677dba131ba1a883b6b2f04377293}{U\-S\-B\-Device\-Attach} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a27116af8a2ff1670cab09af9b3c22ac7}{put\-U\-S\-B\-U\-S\-A\-R\-T} (char $\ast$, char)
+\item 
+char \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_aaf7df237b9fee64588f1fe10b6acff48}{gets\-U\-S\-B\-U\-S\-A\-R\-T} (char $\ast$, char)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a4eaa67384a96d47e73e1396b5d8e624c}{C\-D\-C\-Tx\-Service} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a11b5afc07fcdbd4ab5a7b06ba89992cf}{I\-N\-T\-Enable\-System\-Multi\-Vectored\-Int} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a36345296ffd86df532b53e52a763f429}{I\-N\-T\-Enable\-Interrupts} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a3daae663c6a36067c234117f3fff5064}{my\-Set\-Line\-Coding\-Handler} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_ad71633b922a64f2fc05976feb2803de9}{U\-S\-E\-R\-\_\-\-U\-S\-B\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-\_\-\-H\-A\-N\-D\-L\-E\-R} (\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847c}{U\-S\-B\-\_\-\-E\-V\-E\-N\-T} event\-\_\-usb)
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a5ff49c946132c4887a1074260708f5e9}{C\-D\-C\-\_\-init} ()
+\item 
+void \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a64d8575f07904f5d3b77e98a7b7bef5e}{C\-D\-Cputs} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$buffer, \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} length)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a3cab238eaebad61a49f2147107882b9e}{C\-D\-Cgets} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} $\ast$buffer)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_aa0e1607382d15d1e6c5c31b4536c69f4}{C\-D\-C\-U\-S\-B\-Is\-Connected} (void)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_ac256b336d255565f955602429e966364}{C\-D\-C\-D\-T\-R\-Is\-Ready} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_af38198c695175d0f021e62adb47167d8}{cdc\-\_\-trf\-\_\-state}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_ae504eb0b0912afa628e07d89c33da82d}{U\-S\-B\-Device\-State}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a77973ed171c57abc68c45a2270374e95}{\-\_\-cdc\-\_\-buffer} \mbox{[}\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a08446de7aa51cb91713e0fba3a63e0dc}{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}\mbox{]}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a67bb6a3d7ee6a2a5950ce437abbe31c8}{B\-O\-O\-L} \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a65ca417a188c71d102effc3ac6287c26}{C\-D\-C\-U\-S\-B\-Not\-Connected} = \hyperlink{p32_2include_2pinguino_2core_2const_8h_a65e9886d74aaee76545e83dd09011727}{false}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_ae9206078c5ec525f5b90ff119928a1cd}{control\-\_\-signal\-\_\-bitmap}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a4607ffda9dac39b25d25cd69c5a755f8}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C@{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}}
+\index{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C@{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-U\-S\-B\-C\-D\-C}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a4607ffda9dac39b25d25cd69c5a755f8}
+
+
+Definition at line 13 of file \-\_\-\-\_\-cdc.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a08446de7aa51cb91713e0fba3a63e0dc}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-@{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}}
+\index{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-@{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{\-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-~64}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a08446de7aa51cb91713e0fba3a63e0dc}
+
+
+Definition at line 102 of file \-\_\-\-\_\-cdc.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_afa9063b2dfd7231c09961532f655bcc8}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!C\-D\-C\-Clear\-D\-T\-R@{C\-D\-C\-Clear\-D\-T\-R}}
+\index{C\-D\-C\-Clear\-D\-T\-R@{C\-D\-C\-Clear\-D\-T\-R}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-C\-Clear\-D\-T\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-D\-C\-Clear\-D\-T\-R(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf control\-\_\-signal\-\_\-bitmap} \&= 0xfe)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_afa9063b2dfd7231c09961532f655bcc8}
+
+
+Definition at line 587 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+Referenced by C\-D\-C\-D\-T\-R\-Is\-Ready().
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_aa02ce8e5f2e3a3abe21648933b5b4a7e}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!m\-U\-S\-B\-U\-S\-A\-R\-T\-Is\-Tx\-Trf\-Ready@{m\-U\-S\-B\-U\-S\-A\-R\-T\-Is\-Tx\-Trf\-Ready}}
+\index{m\-U\-S\-B\-U\-S\-A\-R\-T\-Is\-Tx\-Trf\-Ready@{m\-U\-S\-B\-U\-S\-A\-R\-T\-Is\-Tx\-Trf\-Ready}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{m\-U\-S\-B\-U\-S\-A\-R\-T\-Is\-Tx\-Trf\-Ready}]{\setlength{\rightskip}{0pt plus 5cm}\#define m\-U\-S\-B\-U\-S\-A\-R\-T\-Is\-Tx\-Trf\-Ready(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf cdc\-\_\-trf\-\_\-state}==0)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_aa02ce8e5f2e3a3abe21648933b5b4a7e}
+
+
+Definition at line 38 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+Referenced by C\-D\-Cputs().
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_ac17ceb5a97a0ca5c1c744ba4dc5f836c}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!U\-S\-B\-C\-D\-Cis\-Configured@{U\-S\-B\-C\-D\-Cis\-Configured}}
+\index{U\-S\-B\-C\-D\-Cis\-Configured@{U\-S\-B\-C\-D\-Cis\-Configured}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{U\-S\-B\-C\-D\-Cis\-Configured}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-C\-D\-Cis\-Configured(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf U\-S\-B\-Device\-State} == 0x20)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_ac17ceb5a97a0ca5c1c744ba4dc5f836c}
+
+
+Definition at line 37 of file \-\_\-\-\_\-cdc.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a8c590bfe47fa571b1cf6866ed282368c}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!U\-S\-B\-Get\-Device\-State@{U\-S\-B\-Get\-Device\-State}}
+\index{U\-S\-B\-Get\-Device\-State@{U\-S\-B\-Get\-Device\-State}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{U\-S\-B\-Get\-Device\-State}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\-S\-B\-Get\-Device\-State(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~({\bf U\-S\-B\-Device\-State})}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a8c590bfe47fa571b1cf6866ed282368c}
+
+
+Definition at line 39 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5d}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-S@{U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-S}}
+\index{U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-S@{U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-S}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\-S\-B\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-S}}}\label{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5d}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\-V\-E\-N\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-E\-D@{E\-V\-E\-N\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-E\-D}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-E\-D@{E\-V\-E\-N\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-E\-D}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da6111a36b98eedda29a83db38ae50bd15}{E\-V\-E\-N\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-E\-D}\label{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da6111a36b98eedda29a83db38ae50bd15}
+}]\index{E\-V\-E\-N\-T\-\_\-\-S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{E\-V\-E\-N\-T\-\_\-\-S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R@{E\-V\-E\-N\-T\-\_\-\-S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da401cbeb67b72fe95ed129e5f95b6a39c}{E\-V\-E\-N\-T\-\_\-\-S\-E\-T\-\_\-\-D\-E\-S\-C\-R\-I\-P\-T\-O\-R}\label{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da401cbeb67b72fe95ed129e5f95b6a39c}
+}]\index{E\-V\-E\-N\-T\-\_\-\-E\-P0\-\_\-\-R\-E\-Q\-U\-E\-S\-T@{E\-V\-E\-N\-T\-\_\-\-E\-P0\-\_\-\-R\-E\-Q\-U\-E\-S\-T}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-E\-P0\-\_\-\-R\-E\-Q\-U\-E\-S\-T@{E\-V\-E\-N\-T\-\_\-\-E\-P0\-\_\-\-R\-E\-Q\-U\-E\-S\-T}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da990f20e0801d27b6977aaac7a5b64e3c}{E\-V\-E\-N\-T\-\_\-\-E\-P0\-\_\-\-R\-E\-Q\-U\-E\-S\-T}\label{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da990f20e0801d27b6977aaac7a5b64e3c}
+}]\index{E\-V\-E\-N\-T\-\_\-\-A\-T\-T\-A\-C\-H@{E\-V\-E\-N\-T\-\_\-\-A\-T\-T\-A\-C\-H}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-A\-T\-T\-A\-C\-H@{E\-V\-E\-N\-T\-\_\-\-A\-T\-T\-A\-C\-H}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5dafecc13aec5ade12c55ef62af1b14d62a}{E\-V\-E\-N\-T\-\_\-\-A\-T\-T\-A\-C\-H}\label{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5dafecc13aec5ade12c55ef62af1b14d62a}
+}]\index{E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-D@{E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-D}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-D@{E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-D}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da3a5d2a17610019839bd59ed1db280622}{E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R\-\_\-\-T\-E\-R\-M\-I\-N\-A\-T\-E\-D}\label{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da3a5d2a17610019839bd59ed1db280622}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 91 of file \-\_\-\-\_\-cdc.\-c.
+
+
+\begin{DoxyCode}
+92 \{
+93     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da6111a36b98eedda29a83db38ae50bd15}{EVENT\_CONFIGURED} = \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca9ea155ec17885c9d9ab741520ca44d1d}{EVENT\_DEVICE\_STACK\_BASE},
+94     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da401cbeb67b72fe95ed129e5f95b6a39c}{EVENT\_SET\_DESCRIPTOR},
+95     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da990f20e0801d27b6977aaac7a5b64e3c}{EVENT\_EP0\_REQUEST},
+96     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5dafecc13aec5ade12c55ef62af1b14d62a}{EVENT\_ATTACH},
+97     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da3a5d2a17610019839bd59ed1db280622}{EVENT\_TRANSFER\_TERMINATED}
+98 \} \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5d}{USB\_DEVICE\_STACK\_EVENTS};
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847c}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!U\-S\-B\-\_\-\-E\-V\-E\-N\-T@{U\-S\-B\-\_\-\-E\-V\-E\-N\-T}}
+\index{U\-S\-B\-\_\-\-E\-V\-E\-N\-T@{U\-S\-B\-\_\-\-E\-V\-E\-N\-T}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{U\-S\-B\-\_\-\-E\-V\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf U\-S\-B\-\_\-\-E\-V\-E\-N\-T}}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847c}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\-V\-E\-N\-T\-\_\-\-N\-O\-N\-E@{E\-V\-E\-N\-T\-\_\-\-N\-O\-N\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-N\-O\-N\-E@{E\-V\-E\-N\-T\-\_\-\-N\-O\-N\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca939a6cc6d749a232a23ff324dca6d48c}{E\-V\-E\-N\-T\-\_\-\-N\-O\-N\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca939a6cc6d749a232a23ff324dca6d48c}
+}]\index{E\-V\-E\-N\-T\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca9ea155ec17885c9d9ab741520ca44d1d}{E\-V\-E\-N\-T\-\_\-\-D\-E\-V\-I\-C\-E\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca9ea155ec17885c9d9ab741520ca44d1d}
+}]\index{E\-V\-E\-N\-T\-\_\-\-H\-O\-S\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-H\-O\-S\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-H\-O\-S\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-H\-O\-S\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cafa5e6a7ec467be90ecd37de7a0d9420b}{E\-V\-E\-N\-T\-\_\-\-H\-O\-S\-T\-\_\-\-S\-T\-A\-C\-K\-\_\-\-B\-A\-S\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cafa5e6a7ec467be90ecd37de7a0d9420b}
+}]\index{E\-V\-E\-N\-T\-\_\-\-H\-U\-B\-\_\-\-A\-T\-T\-A\-C\-H@{E\-V\-E\-N\-T\-\_\-\-H\-U\-B\-\_\-\-A\-T\-T\-A\-C\-H}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-H\-U\-B\-\_\-\-A\-T\-T\-A\-C\-H@{E\-V\-E\-N\-T\-\_\-\-H\-U\-B\-\_\-\-A\-T\-T\-A\-C\-H}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca22d1656953cb041d77090464077b999b}{E\-V\-E\-N\-T\-\_\-\-H\-U\-B\-\_\-\-A\-T\-T\-A\-C\-H}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca22d1656953cb041d77090464077b999b}
+}]\index{E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-L\-L@{E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-L\-L}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-L\-L@{E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-L\-L}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca7bc5ba88a447d7f9da46b09a636e034b}{E\-V\-E\-N\-T\-\_\-\-S\-T\-A\-L\-L}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca7bc5ba88a447d7f9da46b09a636e034b}
+}]\index{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-S\-E\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T@{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-S\-E\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-S\-E\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T@{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-S\-E\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca7bc364c0124c58ce8a2964a95e2d5579}{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-S\-E\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca7bc364c0124c58ce8a2964a95e2d5579}
+}]\index{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-O\-V\-E\-R\-C\-U\-R\-R\-E\-N\-T@{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-O\-V\-E\-R\-C\-U\-R\-R\-E\-N\-T}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-O\-V\-E\-R\-C\-U\-R\-R\-E\-N\-T@{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-O\-V\-E\-R\-C\-U\-R\-R\-E\-N\-T}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae0474e1419fffc355f41021958fbc902}{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-O\-V\-E\-R\-C\-U\-R\-R\-E\-N\-T}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae0474e1419fffc355f41021958fbc902}
+}]\index{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-P\-O\-W\-E\-R@{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-P\-O\-W\-E\-R}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-P\-O\-W\-E\-R@{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-P\-O\-W\-E\-R}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca8356e6897063c333563f3ad73afbae8a}{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-P\-O\-W\-E\-R}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca8356e6897063c333563f3ad73afbae8a}
+}]\index{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-P\-O\-W\-E\-R@{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-P\-O\-W\-E\-R}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-P\-O\-W\-E\-R@{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-P\-O\-W\-E\-R}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae6f10ec654369cefb27b4fd12b94be1e}{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-R\-E\-L\-E\-A\-S\-E\-\_\-\-P\-O\-W\-E\-R}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae6f10ec654369cefb27b4fd12b94be1e}
+}]\index{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-P\-O\-W\-E\-R\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E@{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-P\-O\-W\-E\-R\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-P\-O\-W\-E\-R\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E@{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-P\-O\-W\-E\-R\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacea62d4c4421106616f5ecacb7523b25}{E\-V\-E\-N\-T\-\_\-\-V\-B\-U\-S\-\_\-\-P\-O\-W\-E\-R\-\_\-\-A\-V\-A\-I\-L\-A\-B\-L\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacea62d4c4421106616f5ecacb7523b25}
+}]\index{E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-U\-P\-P\-O\-R\-T\-E\-D\-\_\-\-D\-E\-V\-I\-C\-E@{E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-U\-P\-P\-O\-R\-T\-E\-D\-\_\-\-D\-E\-V\-I\-C\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-U\-P\-P\-O\-R\-T\-E\-D\-\_\-\-D\-E\-V\-I\-C\-E@{E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-U\-P\-P\-O\-R\-T\-E\-D\-\_\-\-D\-E\-V\-I\-C\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca42dcddb5fd7146d4a45602cd4a4d3333}{E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-U\-P\-P\-O\-R\-T\-E\-D\-\_\-\-D\-E\-V\-I\-C\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca42dcddb5fd7146d4a45602cd4a4d3333}
+}]\index{E\-V\-E\-N\-T\-\_\-\-C\-A\-N\-N\-O\-T\-\_\-\-E\-N\-U\-M\-E\-R\-A\-T\-E@{E\-V\-E\-N\-T\-\_\-\-C\-A\-N\-N\-O\-T\-\_\-\-E\-N\-U\-M\-E\-R\-A\-T\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-C\-A\-N\-N\-O\-T\-\_\-\-E\-N\-U\-M\-E\-R\-A\-T\-E@{E\-V\-E\-N\-T\-\_\-\-C\-A\-N\-N\-O\-T\-\_\-\-E\-N\-U\-M\-E\-R\-A\-T\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caffd4d14604fc81bfe722f0230f688e48}{E\-V\-E\-N\-T\-\_\-\-C\-A\-N\-N\-O\-T\-\_\-\-E\-N\-U\-M\-E\-R\-A\-T\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caffd4d14604fc81bfe722f0230f688e48}
+}]\index{E\-V\-E\-N\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-N\-I\-T\-\_\-\-E\-R\-R\-O\-R@{E\-V\-E\-N\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-N\-I\-T\-\_\-\-E\-R\-R\-O\-R}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-N\-I\-T\-\_\-\-E\-R\-R\-O\-R@{E\-V\-E\-N\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-N\-I\-T\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca68583554f2ea1b119f00eb2d53f1db32}{E\-V\-E\-N\-T\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-N\-I\-T\-\_\-\-E\-R\-R\-O\-R}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca68583554f2ea1b119f00eb2d53f1db32}
+}]\index{E\-V\-E\-N\-T\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-M\-E\-M\-O\-R\-Y@{E\-V\-E\-N\-T\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-M\-E\-M\-O\-R\-Y}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-M\-E\-M\-O\-R\-Y@{E\-V\-E\-N\-T\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-M\-E\-M\-O\-R\-Y}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cab7db7fe9f6ec59637ee8550586c4592a}{E\-V\-E\-N\-T\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-M\-E\-M\-O\-R\-Y}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cab7db7fe9f6ec59637ee8550586c4592a}
+}]\index{E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-P\-E\-C\-I\-F\-I\-E\-D\-\_\-\-E\-R\-R\-O\-R@{E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-P\-E\-C\-I\-F\-I\-E\-D\-\_\-\-E\-R\-R\-O\-R}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-P\-E\-C\-I\-F\-I\-E\-D\-\_\-\-E\-R\-R\-O\-R@{E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-P\-E\-C\-I\-F\-I\-E\-D\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caede3942ee5fa8efdd8578b04fe5adc37}{E\-V\-E\-N\-T\-\_\-\-U\-N\-S\-P\-E\-C\-I\-F\-I\-E\-D\-\_\-\-E\-R\-R\-O\-R}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caede3942ee5fa8efdd8578b04fe5adc37}
+}]\index{E\-V\-E\-N\-T\-\_\-\-D\-E\-T\-A\-C\-H@{E\-V\-E\-N\-T\-\_\-\-D\-E\-T\-A\-C\-H}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-D\-E\-T\-A\-C\-H@{E\-V\-E\-N\-T\-\_\-\-D\-E\-T\-A\-C\-H}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cab3ad4ab38a7a883c15b79d74671416d0}{E\-V\-E\-N\-T\-\_\-\-D\-E\-T\-A\-C\-H}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cab3ad4ab38a7a883c15b79d74671416d0}
+}]\index{E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R@{E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R@{E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae53e7bdedb5bae74d62baf7d80118961}{E\-V\-E\-N\-T\-\_\-\-T\-R\-A\-N\-S\-F\-E\-R}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae53e7bdedb5bae74d62baf7d80118961}
+}]\index{E\-V\-E\-N\-T\-\_\-\-S\-O\-F@{E\-V\-E\-N\-T\-\_\-\-S\-O\-F}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-S\-O\-F@{E\-V\-E\-N\-T\-\_\-\-S\-O\-F}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca99733d021f56f6e94ded33901f8f6cfa}{E\-V\-E\-N\-T\-\_\-\-S\-O\-F}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca99733d021f56f6e94ded33901f8f6cfa}
+}]\index{E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-U\-M\-E@{E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-U\-M\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-U\-M\-E@{E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-U\-M\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caf77b6485b8436579576b00e374df1cab}{E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-U\-M\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caf77b6485b8436579576b00e374df1cab}
+}]\index{E\-V\-E\-N\-T\-\_\-\-S\-U\-S\-P\-E\-N\-D@{E\-V\-E\-N\-T\-\_\-\-S\-U\-S\-P\-E\-N\-D}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-S\-U\-S\-P\-E\-N\-D@{E\-V\-E\-N\-T\-\_\-\-S\-U\-S\-P\-E\-N\-D}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caef398fd95398daa3c0321ef557d9e281}{E\-V\-E\-N\-T\-\_\-\-S\-U\-S\-P\-E\-N\-D}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caef398fd95398daa3c0321ef557d9e281}
+}]\index{E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-E\-T@{E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-E\-T}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-E\-T@{E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-E\-T}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca77b8827708a115c9e8e25bda1804e022}{E\-V\-E\-N\-T\-\_\-\-R\-E\-S\-E\-T}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca77b8827708a115c9e8e25bda1804e022}
+}]\index{E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-R\-E\-A\-D@{E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-R\-E\-A\-D}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-R\-E\-A\-D@{E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-R\-E\-A\-D}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacbf5feccb18783cb2143d7605a60bfb7}{E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-R\-E\-A\-D}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacbf5feccb18783cb2143d7605a60bfb7}
+}]\index{E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-W\-R\-I\-T\-E@{E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-W\-R\-I\-T\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-W\-R\-I\-T\-E@{E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-W\-R\-I\-T\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca57ba0909e96b4073950cce43bad4f99b}{E\-V\-E\-N\-T\-\_\-\-D\-A\-T\-A\-\_\-\-I\-S\-O\-C\-\_\-\-W\-R\-I\-T\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca57ba0909e96b4073950cce43bad4f99b}
+}]\index{E\-V\-E\-N\-T\-\_\-\-G\-E\-N\-E\-R\-I\-C\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-G\-E\-N\-E\-R\-I\-C\-\_\-\-B\-A\-S\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-G\-E\-N\-E\-R\-I\-C\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-G\-E\-N\-E\-R\-I\-C\-\_\-\-B\-A\-S\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca0decebc08fa82bf74faa932e15db9d9e}{E\-V\-E\-N\-T\-\_\-\-G\-E\-N\-E\-R\-I\-C\-\_\-\-B\-A\-S\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca0decebc08fa82bf74faa932e15db9d9e}
+}]\index{E\-V\-E\-N\-T\-\_\-\-M\-S\-D\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-M\-S\-D\-\_\-\-B\-A\-S\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-M\-S\-D\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-M\-S\-D\-\_\-\-B\-A\-S\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacfc0006d96490d780bd4b9711ff223eb}{E\-V\-E\-N\-T\-\_\-\-M\-S\-D\-\_\-\-B\-A\-S\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacfc0006d96490d780bd4b9711ff223eb}
+}]\index{E\-V\-E\-N\-T\-\_\-\-H\-I\-D\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-H\-I\-D\-\_\-\-B\-A\-S\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-H\-I\-D\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-H\-I\-D\-\_\-\-B\-A\-S\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca6db3affa4f20221e91b40ea6425c31b6}{E\-V\-E\-N\-T\-\_\-\-H\-I\-D\-\_\-\-B\-A\-S\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca6db3affa4f20221e91b40ea6425c31b6}
+}]\index{E\-V\-E\-N\-T\-\_\-\-P\-R\-I\-N\-T\-E\-R\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-P\-R\-I\-N\-T\-E\-R\-\_\-\-B\-A\-S\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-P\-R\-I\-N\-T\-E\-R\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-P\-R\-I\-N\-T\-E\-R\-\_\-\-B\-A\-S\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{E\-V\-E\-N\-T\-\_\-\-P\-R\-I\-N\-T\-E\-R\-\_\-\-B\-A\-S\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}
+}]\index{E\-V\-E\-N\-T\-\_\-\-C\-D\-C\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-C\-D\-C\-\_\-\-B\-A\-S\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-C\-D\-C\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-C\-D\-C\-\_\-\-B\-A\-S\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca1b103ea84d2ee1b17a681e26a1f4e67c}{E\-V\-E\-N\-T\-\_\-\-C\-D\-C\-\_\-\-B\-A\-S\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca1b103ea84d2ee1b17a681e26a1f4e67c}
+}]\index{E\-V\-E\-N\-T\-\_\-\-C\-H\-A\-R\-G\-E\-R\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-C\-H\-A\-R\-G\-E\-R\-\_\-\-B\-A\-S\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-C\-H\-A\-R\-G\-E\-R\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-C\-H\-A\-R\-G\-E\-R\-\_\-\-B\-A\-S\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca65eb5f7e89634360bce1bb1f8b1ea71e}{E\-V\-E\-N\-T\-\_\-\-C\-H\-A\-R\-G\-E\-R\-\_\-\-B\-A\-S\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca65eb5f7e89634360bce1bb1f8b1ea71e}
+}]\index{E\-V\-E\-N\-T\-\_\-\-A\-U\-D\-I\-O\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-A\-U\-D\-I\-O\-\_\-\-B\-A\-S\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-A\-U\-D\-I\-O\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-A\-U\-D\-I\-O\-\_\-\-B\-A\-S\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae156819f300a63d88ad51bd9a3a389d9}{E\-V\-E\-N\-T\-\_\-\-A\-U\-D\-I\-O\-\_\-\-B\-A\-S\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae156819f300a63d88ad51bd9a3a389d9}
+}]\index{E\-V\-E\-N\-T\-\_\-\-U\-S\-E\-R\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-U\-S\-E\-R\-\_\-\-B\-A\-S\-E}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-U\-S\-E\-R\-\_\-\-B\-A\-S\-E@{E\-V\-E\-N\-T\-\_\-\-U\-S\-E\-R\-\_\-\-B\-A\-S\-E}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca26db21c1db4fdef72e70ee793a333400}{E\-V\-E\-N\-T\-\_\-\-U\-S\-E\-R\-\_\-\-B\-A\-S\-E}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca26db21c1db4fdef72e70ee793a333400}
+}]\index{E\-V\-E\-N\-T\-\_\-\-B\-U\-S\-\_\-\-E\-R\-R\-O\-R@{E\-V\-E\-N\-T\-\_\-\-B\-U\-S\-\_\-\-E\-R\-R\-O\-R}!p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!E\-V\-E\-N\-T\-\_\-\-B\-U\-S\-\_\-\-E\-R\-R\-O\-R@{E\-V\-E\-N\-T\-\_\-\-B\-U\-S\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca35d87680cfd49414478cc47a2a27fc8e}{E\-V\-E\-N\-T\-\_\-\-B\-U\-S\-\_\-\-E\-R\-R\-O\-R}\label{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca35d87680cfd49414478cc47a2a27fc8e}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 55 of file \-\_\-\-\_\-cdc.\-c.
+
+
+\begin{DoxyCode}
+56 \{
+57     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca939a6cc6d749a232a23ff324dca6d48c}{EVENT\_NONE} = 0,
+58     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca9ea155ec17885c9d9ab741520ca44d1d}{EVENT\_DEVICE\_STACK\_BASE} = 1,
+59     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cafa5e6a7ec467be90ecd37de7a0d9420b}{EVENT\_HOST\_STACK\_BASE} = 100,
+60     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca22d1656953cb041d77090464077b999b}{EVENT\_HUB\_ATTACH},           
+61     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca7bc5ba88a447d7f9da46b09a636e034b}{EVENT\_STALL},                  
+62     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca7bc364c0124c58ce8a2964a95e2d5579}{EVENT\_VBUS\_SES\_REQUEST},     
+63     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae0474e1419fffc355f41021958fbc902}{EVENT\_VBUS\_OVERCURRENT},     
+64     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca8356e6897063c333563f3ad73afbae8a}{EVENT\_VBUS\_REQUEST\_POWER},   
+65     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae6f10ec654369cefb27b4fd12b94be1e}{EVENT\_VBUS\_RELEASE\_POWER},   
+66     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacea62d4c4421106616f5ecacb7523b25}{EVENT\_VBUS\_POWER\_AVAILABLE}, 
+67     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca42dcddb5fd7146d4a45602cd4a4d3333}{EVENT\_UNSUPPORTED\_DEVICE},   
+68     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caffd4d14604fc81bfe722f0230f688e48}{EVENT\_CANNOT\_ENUMERATE},     
+69     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca68583554f2ea1b119f00eb2d53f1db32}{EVENT\_CLIENT\_INIT\_ERROR},    
+70     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cab7db7fe9f6ec59637ee8550586c4592a}{EVENT\_OUT\_OF\_MEMORY},        
+71     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caede3942ee5fa8efdd8578b04fe5adc37}{EVENT\_UNSPECIFIED\_ERROR},     
+72     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cab3ad4ab38a7a883c15b79d74671416d0}{EVENT\_DETACH}, 
+73     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae53e7bdedb5bae74d62baf7d80118961}{EVENT\_TRANSFER},
+74     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca99733d021f56f6e94ded33901f8f6cfa}{EVENT\_SOF},                  
+75     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caf77b6485b8436579576b00e374df1cab}{EVENT\_RESUME},
+76     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847caef398fd95398daa3c0321ef557d9e281}{EVENT\_SUSPEND},
+77     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca77b8827708a115c9e8e25bda1804e022}{EVENT\_RESET},  
+78     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacbf5feccb18783cb2143d7605a60bfb7}{EVENT\_DATA\_ISOC\_READ},
+79     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca57ba0909e96b4073950cce43bad4f99b}{EVENT\_DATA\_ISOC\_WRITE},
+80     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca0decebc08fa82bf74faa932e15db9d9e}{EVENT\_GENERIC\_BASE}  = 400,
+81     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cacfc0006d96490d780bd4b9711ff223eb}{EVENT\_MSD\_BASE}      = 500,
+82     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca6db3affa4f20221e91b40ea6425c31b6}{EVENT\_HID\_BASE}      = 600,
+83     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca55ccde266708fe2fb30bac23dcf250b9}{EVENT\_PRINTER\_BASE}  = 700,
+84     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca1b103ea84d2ee1b17a681e26a1f4e67c}{EVENT\_CDC\_BASE}      = 800,
+85     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca65eb5f7e89634360bce1bb1f8b1ea71e}{EVENT\_CHARGER\_BASE}  = 900,
+86     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847cae156819f300a63d88ad51bd9a3a389d9}{EVENT\_AUDIO\_BASE}    = 1000,
+87     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca26db21c1db4fdef72e70ee793a333400}{EVENT\_USER\_BASE}     = 10000,
+88     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847ca35d87680cfd49414478cc47a2a27fc8e}{EVENT\_BUS\_ERROR}     = 2^31-1
+89 \} \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a58f011a3d1f4cad0e69a9bf036fb847c}{USB\_EVENT};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a5ff49c946132c4887a1074260708f5e9}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!C\-D\-C\-\_\-init@{C\-D\-C\-\_\-init}}
+\index{C\-D\-C\-\_\-init@{C\-D\-C\-\_\-init}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-C\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void C\-D\-C\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a5ff49c946132c4887a1074260708f5e9}
+
+
+Definition at line 185 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+References Delayms(), U\-S\-B\-Device\-Attach(), and U\-S\-B\-Device\-Init().
+
+
+\begin{DoxyCode}
+186 \{
+187     \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a0c750bc9fb88a91b6800813860cc3103}{USBDeviceInit}();       \textcolor{comment}{// Initializes USB module SFRs and firmware}
+188 \textcolor{preprocessor}{    #if defined(\_\_32MX220F032D\_\_)||defined(\_\_32MX250F128B\_\_)||defined(\_\_32MX220F032B\_\_)}
+189 \textcolor{preprocessor}{}        \textcolor{comment}{// nothing to do}
+190 \textcolor{preprocessor}{    #else}
+191 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a785677dba131ba1a883b6b2f04377293}{USBDeviceAttach}();
+192 \textcolor{preprocessor}{    #endif}
+193 \textcolor{preprocessor}{}    \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(1500);
+194 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_ac256b336d255565f955602429e966364}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!C\-D\-C\-D\-T\-R\-Is\-Ready@{C\-D\-C\-D\-T\-R\-Is\-Ready}}
+\index{C\-D\-C\-D\-T\-R\-Is\-Ready@{C\-D\-C\-D\-T\-R\-Is\-Ready}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-C\-D\-T\-R\-Is\-Ready}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} C\-D\-C\-D\-T\-R\-Is\-Ready (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_ac256b336d255565f955602429e966364}
+
+
+Definition at line 589 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+References C\-D\-C\-Clear\-D\-T\-R, and C\-D\-C\-U\-S\-B\-Is\-Connected().
+
+
+\begin{DoxyCode}
+590 \{
+591     \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_aa0e1607382d15d1e6c5c31b4536c69f4}{CDCUSBIsConnected}() == \textcolor{keyword}{true})
+592     \{
+593         \textcolor{comment}{//if(control\_signal\_bitmap.DTE\_PRESENT == 1)}
+594         \textcolor{keywordflow}{if}((\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_ae9206078c5ec525f5b90ff119928a1cd}{control\_signal\_bitmap} & 0x01) == 0x01)
+595             \textcolor{keywordflow}{return} (\textcolor{keyword}{true});
+596         \textcolor{keywordflow}{else}
+597             \textcolor{keywordflow}{return} (\textcolor{keyword}{false});
+598     \}
+599     \textcolor{keywordflow}{else}
+600     \{
+601         \textcolor{comment}{//control\_signal\_bitmap &= 0xfe;       // !0x01}
+602         \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afa9063b2dfd7231c09961532f655bcc8}{CDCClearDTR}();
+603         \textcolor{keywordflow}{return} (\textcolor{keyword}{false});
+604     \}
+605 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a3cab238eaebad61a49f2147107882b9e}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!C\-D\-Cgets@{C\-D\-Cgets}}
+\index{C\-D\-Cgets@{C\-D\-Cgets}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-Cgets}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} C\-D\-Cgets (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a3cab238eaebad61a49f2147107882b9e}
+
+
+Definition at line 232 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+References C\-D\-C\-Tx\-Service(), and gets\-U\-S\-B\-U\-S\-A\-R\-T().
+
+
+\begin{DoxyCode}
+233 \{
+234     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} numBytesRead;
+235         
+236 \textcolor{preprocessor}{    #if defined(\_\_32MX220F032D\_\_)||defined(\_\_32MX250F128B\_\_)||defined(\_\_32MX220F032B\_\_)}
+237 \textcolor{preprocessor}{}        USB\_Service();
+238         numBytesRead = USB\_Service\_CDC\_GetString( buffer );
+239 \textcolor{preprocessor}{    #else}
+240 \textcolor{preprocessor}{}        \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a4eaa67384a96d47e73e1396b5d8e624c}{CDCTxService}();
+241         numBytesRead = \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_aaf7df237b9fee64588f1fe10b6acff48}{getsUSBUSART}(buffer, 64);
+242 \textcolor{preprocessor}{    #endif}
+243 \textcolor{preprocessor}{}        \textcolor{keywordflow}{return} numBytesRead;
+244 \textcolor{comment}{/*}
+245 \textcolor{comment}{    if (mUSBUSARTIsTxTrfReady())}
+246 \textcolor{comment}{    \{}
+247 \textcolor{comment}{        CDCTxService();}
+248 \textcolor{comment}{        numBytesRead = getsUSBUSART(buffer, 64);}
+249 \textcolor{comment}{        CDCTxService();}
+250 \textcolor{comment}{        return numBytesRead;}
+251 \textcolor{comment}{    \}}
+252 \textcolor{comment}{*/}
+253 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a2ea6d35bafd1834129f88fe9b1b13a81}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!C\-D\-C\-Init\-E\-P@{C\-D\-C\-Init\-E\-P}}
+\index{C\-D\-C\-Init\-E\-P@{C\-D\-C\-Init\-E\-P}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-C\-Init\-E\-P}]{\setlength{\rightskip}{0pt plus 5cm}void C\-D\-C\-Init\-E\-P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a2ea6d35bafd1834129f88fe9b1b13a81}
+
+
+Referenced by U\-S\-E\-R\-\_\-\-U\-S\-B\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-\_\-\-H\-A\-N\-D\-L\-E\-R().
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a64d8575f07904f5d3b77e98a7b7bef5e}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!C\-D\-Cputs@{C\-D\-Cputs}}
+\index{C\-D\-Cputs@{C\-D\-Cputs}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-Cputs}]{\setlength{\rightskip}{0pt plus 5cm}void C\-D\-Cputs (
+\begin{DoxyParamCaption}
+\item[{{\bf u8} $\ast$}]{buffer, }
+\item[{{\bf u8}}]{length}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a64d8575f07904f5d3b77e98a7b7bef5e}
+
+
+Definition at line 202 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+References C\-D\-C\-Tx\-Service(), m\-U\-S\-B\-U\-S\-A\-R\-T\-Is\-Tx\-Trf\-Ready, and put\-U\-S\-B\-U\-S\-A\-R\-T().
+
+
+\begin{DoxyCode}
+203 \{
+204     \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} i;
+205     \textcolor{keywordflow}{for} (i = 1000; i > 0; --i)
+206     \{
+207         \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_aa02ce8e5f2e3a3abe21648933b5b4a7e}{mUSBUSARTIsTxTrfReady}())
+208             \textcolor{keywordflow}{break};
+209 \textcolor{preprocessor}{        #if defined(\_\_32MX220F032D\_\_)||defined(\_\_32MX250F128B\_\_)||defined(\_\_32MX220F032B\_\_)}
+210 \textcolor{preprocessor}{}            USB\_Service();
+211 \textcolor{preprocessor}{        #else}
+212 \textcolor{preprocessor}{}            \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a4eaa67384a96d47e73e1396b5d8e624c}{CDCTxService}();
+213 \textcolor{preprocessor}{        #endif}
+214 \textcolor{preprocessor}{}    \}
+215     \textcolor{keywordflow}{if} (i > 0)
+216     \{
+217         \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a27116af8a2ff1670cab09af9b3c22ac7}{putUSBUSART}(buffer, length);
+218 \textcolor{preprocessor}{        #if defined(\_\_32MX220F032D\_\_)||defined(\_\_32MX250F128B\_\_)||defined(\_\_32MX220F032B\_\_)}
+219 \textcolor{preprocessor}{}            USB\_Service();
+220 \textcolor{preprocessor}{        #else}
+221 \textcolor{preprocessor}{}            \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a4eaa67384a96d47e73e1396b5d8e624c}{CDCTxService}();
+222 \textcolor{preprocessor}{        #endif}
+223 \textcolor{preprocessor}{}    \}
+224 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a4eaa67384a96d47e73e1396b5d8e624c}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!C\-D\-C\-Tx\-Service@{C\-D\-C\-Tx\-Service}}
+\index{C\-D\-C\-Tx\-Service@{C\-D\-C\-Tx\-Service}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-C\-Tx\-Service}]{\setlength{\rightskip}{0pt plus 5cm}void C\-D\-C\-Tx\-Service (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a4eaa67384a96d47e73e1396b5d8e624c}
+
+
+Referenced by C\-D\-Cgets(), and C\-D\-Cputs().
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_aa0e1607382d15d1e6c5c31b4536c69f4}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!C\-D\-C\-U\-S\-B\-Is\-Connected@{C\-D\-C\-U\-S\-B\-Is\-Connected}}
+\index{C\-D\-C\-U\-S\-B\-Is\-Connected@{C\-D\-C\-U\-S\-B\-Is\-Connected}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-C\-U\-S\-B\-Is\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} C\-D\-C\-U\-S\-B\-Is\-Connected (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_aa0e1607382d15d1e6c5c31b4536c69f4}
+
+
+Definition at line 553 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+References C\-D\-C\-\_\-init().
+
+
+
+Referenced by C\-D\-C\-D\-T\-R\-Is\-Ready().
+
+
+\begin{DoxyCode}
+554 \{
+555     \textcolor{keywordflow}{if} ( (U1OTGSTATbits.VBUSVD != 0) && (U1OTGSTATbits.SESVD != 0) )
+556     \{
+557         \textcolor{keywordflow}{if} (\hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a65ca417a188c71d102effc3ac6287c26}{CDCUSBNotConnected} == \textcolor{keyword}{true})
+558         \{
+559             \hyperlink{p8_2pinguino_2libraries_2____cdc_8c_ac04ee17353a5cb5788e98ff1a84308c9}{CDC\_init}();
+560             \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a65ca417a188c71d102effc3ac6287c26}{CDCUSBNotConnected} = \textcolor{keyword}{false};
+561         \}
+562         \textcolor{keywordflow}{return}(\textcolor{keyword}{true});
+563     \}
+564     \textcolor{keywordflow}{else}
+565     \{
+566         \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a65ca417a188c71d102effc3ac6287c26}{CDCUSBNotConnected} = \textcolor{keyword}{true};
+567         \textcolor{keywordflow}{return} (\textcolor{keyword}{false});
+568     \}
+569 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_aaf7df237b9fee64588f1fe10b6acff48}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!gets\-U\-S\-B\-U\-S\-A\-R\-T@{gets\-U\-S\-B\-U\-S\-A\-R\-T}}
+\index{gets\-U\-S\-B\-U\-S\-A\-R\-T@{gets\-U\-S\-B\-U\-S\-A\-R\-T}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{gets\-U\-S\-B\-U\-S\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}char gets\-U\-S\-B\-U\-S\-A\-R\-T (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{char}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_aaf7df237b9fee64588f1fe10b6acff48}
+
+
+Referenced by C\-D\-Cgets().
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a36345296ffd86df532b53e52a763f429}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!I\-N\-T\-Enable\-Interrupts@{I\-N\-T\-Enable\-Interrupts}}
+\index{I\-N\-T\-Enable\-Interrupts@{I\-N\-T\-Enable\-Interrupts}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{I\-N\-T\-Enable\-Interrupts}]{\setlength{\rightskip}{0pt plus 5cm}void I\-N\-T\-Enable\-Interrupts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a36345296ffd86df532b53e52a763f429}
+
+
+Definition at line 118 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+References I\-N\-T\-\_\-\-U\-S\-B, and Int\-Enable().
+
+
+\begin{DoxyCode}
+119 \{
+120     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a06f9af7832fa5c1b2bd93084df9831b1}{IntEnable}(\hyperlink{interrupt_8h_a5dae4195f004e6899a36066e00dcd13d}{INT\_USB});
+121 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a11b5afc07fcdbd4ab5a7b06ba89992cf}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!I\-N\-T\-Enable\-System\-Multi\-Vectored\-Int@{I\-N\-T\-Enable\-System\-Multi\-Vectored\-Int}}
+\index{I\-N\-T\-Enable\-System\-Multi\-Vectored\-Int@{I\-N\-T\-Enable\-System\-Multi\-Vectored\-Int}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{I\-N\-T\-Enable\-System\-Multi\-Vectored\-Int}]{\setlength{\rightskip}{0pt plus 5cm}void I\-N\-T\-Enable\-System\-Multi\-Vectored\-Int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a11b5afc07fcdbd4ab5a7b06ba89992cf}
+
+
+Definition at line 110 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+References I\-N\-T\-\_\-\-S\-Y\-S\-T\-E\-M\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-M\-U\-L\-T\-\_\-\-V\-E\-C\-T\-O\-R, and Int\-Configure\-System().
+
+
+\begin{DoxyCode}
+111 \{
+112     \hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a9e4ebfd3f20cf6de4cfda78c4043f872}{IntConfigureSystem}(\hyperlink{p32_2include_2pinguino_2core_2interrupt_8c_a8b1e2aaa6d775c7a98062aa9c5de70bb}{INT\_SYSTEM\_CONFIG\_MULT\_VECTOR});
+113 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a3daae663c6a36067c234117f3fff5064}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!my\-Set\-Line\-Coding\-Handler@{my\-Set\-Line\-Coding\-Handler}}
+\index{my\-Set\-Line\-Coding\-Handler@{my\-Set\-Line\-Coding\-Handler}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{my\-Set\-Line\-Coding\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}void my\-Set\-Line\-Coding\-Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a3daae663c6a36067c234117f3fff5064}
+
+
+Definition at line 126 of file \-\_\-\-\_\-cdc.\-c.
+
+
+\begin{DoxyCode}
+127 \{
+128 \textcolor{comment}{/*}
+129 \textcolor{comment}{    //If the request is not in a valid range}
+130 \textcolor{comment}{    if(cdc\_notice.GetLineCoding.dwDTERate.Val > 115200)}
+131 \textcolor{comment}{    \{}
+132 \textcolor{comment}{        //NOTE: There are two ways that an unsupported baud rate could be}
+133 \textcolor{comment}{        //handled.  The first is just to ignore the request and don't change}
+134 \textcolor{comment}{        //the values.  That is what is currently implemented in this function.}
+135 \textcolor{comment}{        //The second possible method is to stall the STATUS stage of the request.}
+136 \textcolor{comment}{        //STALLing the STATUS stage will cause an exception to be thrown in the }
+137 \textcolor{comment}{        //requesting application.  Some programs, like HyperTerminal, handle the}
+138 \textcolor{comment}{        //exception properly and give a pop-up box indicating that the request}
+139 \textcolor{comment}{        //settings are not valid.  Any application that does not handle the}
+140 \textcolor{comment}{        //exception correctly will likely crash when this requiest fails.  For}
+141 \textcolor{comment}{        //the sake of example the code required to STALL the status stage of the}
+142 \textcolor{comment}{        //request is provided below.  It has been left out so that this demo}
+143 \textcolor{comment}{        //does not cause applications without the required exception handling}
+144 \textcolor{comment}{        //to crash.}
+145 \textcolor{comment}{        //---------------------------------------}
+146 \textcolor{comment}{        //USBStallEndpoint(0,1);}
+147 \textcolor{comment}{    \}}
+148 \textcolor{comment}{    else}
+149 \textcolor{comment}{    \{}
+150 \textcolor{comment}{        u32 dwBaud;}
+151 \textcolor{comment}{}
+152 \textcolor{comment}{        //Update the baudrate info in the CDC driver}
+153 \textcolor{comment}{        CDCSetBaudRate(cdc\_notice.GetLineCoding.dwDTERate.Val);}
+154 \textcolor{comment}{}
+155 \textcolor{comment}{        //Update the baudrate of the UART}
+156 \textcolor{comment}{        U2BRG = ((GetPeripheralClock()+(BRG\_DIV2/2*line\_coding.dwDTERate.Val))/BRG\_DIV2/
+      line\_coding.dwDTERate.Val-1);}
+157 \textcolor{comment}{        //U2MODE = 0;}
+158 \textcolor{comment}{        U2MODEbits.BRGH = BRGH2;}
+159 \textcolor{comment}{        //U2STA = 0;}
+160 \textcolor{comment}{    \}}
+161 \textcolor{comment}{*/}
+162 \}
+\end{DoxyCode}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a27116af8a2ff1670cab09af9b3c22ac7}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!put\-U\-S\-B\-U\-S\-A\-R\-T@{put\-U\-S\-B\-U\-S\-A\-R\-T}}
+\index{put\-U\-S\-B\-U\-S\-A\-R\-T@{put\-U\-S\-B\-U\-S\-A\-R\-T}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{put\-U\-S\-B\-U\-S\-A\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}void put\-U\-S\-B\-U\-S\-A\-R\-T (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{char}]{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a27116af8a2ff1670cab09af9b3c22ac7}
+
+
+Referenced by C\-D\-Cputs().
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a3d2b0ce0dc5fb42a0601d78c783ecfc0}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!U\-S\-B\-Check\-C\-D\-C\-Request@{U\-S\-B\-Check\-C\-D\-C\-Request}}
+\index{U\-S\-B\-Check\-C\-D\-C\-Request@{U\-S\-B\-Check\-C\-D\-C\-Request}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{U\-S\-B\-Check\-C\-D\-C\-Request}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-B\-Check\-C\-D\-C\-Request (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a3d2b0ce0dc5fb42a0601d78c783ecfc0}
+
+
+Referenced by U\-S\-E\-R\-\_\-\-U\-S\-B\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-\_\-\-H\-A\-N\-D\-L\-E\-R().
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a785677dba131ba1a883b6b2f04377293}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!U\-S\-B\-Device\-Attach@{U\-S\-B\-Device\-Attach}}
+\index{U\-S\-B\-Device\-Attach@{U\-S\-B\-Device\-Attach}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{U\-S\-B\-Device\-Attach}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-B\-Device\-Attach (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a785677dba131ba1a883b6b2f04377293}
+
+
+Referenced by C\-D\-C\-\_\-init().
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a0c750bc9fb88a91b6800813860cc3103}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!U\-S\-B\-Device\-Init@{U\-S\-B\-Device\-Init}}
+\index{U\-S\-B\-Device\-Init@{U\-S\-B\-Device\-Init}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{U\-S\-B\-Device\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-B\-Device\-Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a0c750bc9fb88a91b6800813860cc3103}
+
+
+Referenced by C\-D\-C\-\_\-init().
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_aa274606c41406910ba323ad1d0dfa335}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!U\-S\-B\-Task@{U\-S\-B\-Task}}
+\index{U\-S\-B\-Task@{U\-S\-B\-Task}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{U\-S\-B\-Task}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-B\-Task (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_aa274606c41406910ba323ad1d0dfa335}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_ad71633b922a64f2fc05976feb2803de9}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!U\-S\-E\-R\-\_\-\-U\-S\-B\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-\_\-\-H\-A\-N\-D\-L\-E\-R@{U\-S\-E\-R\-\_\-\-U\-S\-B\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-\_\-\-H\-A\-N\-D\-L\-E\-R}}
+\index{U\-S\-E\-R\-\_\-\-U\-S\-B\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-\_\-\-H\-A\-N\-D\-L\-E\-R@{U\-S\-E\-R\-\_\-\-U\-S\-B\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-\_\-\-H\-A\-N\-D\-L\-E\-R}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{U\-S\-E\-R\-\_\-\-U\-S\-B\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-\_\-\-H\-A\-N\-D\-L\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}void U\-S\-E\-R\-\_\-\-U\-S\-B\-\_\-\-C\-A\-L\-L\-B\-A\-C\-K\-\_\-\-E\-V\-E\-N\-T\-\_\-\-H\-A\-N\-D\-L\-E\-R (
+\begin{DoxyParamCaption}
+\item[{{\bf U\-S\-B\-\_\-\-E\-V\-E\-N\-T}}]{event\-\_\-usb}
+\end{DoxyParamCaption}
+)}}\label{p32_2include_2pinguino_2core_2____cdc_8c_ad71633b922a64f2fc05976feb2803de9}
+
+
+Definition at line 165 of file \-\_\-\-\_\-cdc.\-c.
+
+
+
+References C\-D\-C\-Init\-E\-P(), E\-V\-E\-N\-T\-\_\-\-C\-O\-N\-F\-I\-G\-U\-R\-E\-D, E\-V\-E\-N\-T\-\_\-\-E\-P0\-\_\-\-R\-E\-Q\-U\-E\-S\-T, and U\-S\-B\-Check\-C\-D\-C\-Request().
+
+
+\begin{DoxyCode}
+166 \{
+167     \textcolor{keywordflow}{switch}(event\_usb)
+168     \{
+169         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da990f20e0801d27b6977aaac7a5b64e3c}{EVENT\_EP0\_REQUEST}:
+170             \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a3d2b0ce0dc5fb42a0601d78c783ecfc0}{USBCheckCDCRequest}();
+171             \textcolor{keywordflow}{break};
+172         \textcolor{keywordflow}{case} \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_afc6d26c332088ac27e51c11895e12c5da6111a36b98eedda29a83db38ae50bd15}{EVENT\_CONFIGURED}: 
+173             \hyperlink{p32_2include_2pinguino_2core_2____cdc_8c_a2ea6d35bafd1834129f88fe9b1b13a81}{CDCInitEP}();
+174             \textcolor{keywordflow}{break};
+175     \}
+176 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a77973ed171c57abc68c45a2270374e95}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!\-\_\-cdc\-\_\-buffer@{\-\_\-cdc\-\_\-buffer}}
+\index{\-\_\-cdc\-\_\-buffer@{\-\_\-cdc\-\_\-buffer}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{\-\_\-cdc\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} \-\_\-cdc\-\_\-buffer\mbox{[}{\bf \-\_\-\-C\-D\-C\-B\-U\-F\-F\-E\-R\-L\-E\-N\-G\-T\-H\-\_\-}\mbox{]}}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a77973ed171c57abc68c45a2270374e95}
+
+
+Definition at line 105 of file \-\_\-\-\_\-cdc.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_af38198c695175d0f021e62adb47167d8}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!cdc\-\_\-trf\-\_\-state@{cdc\-\_\-trf\-\_\-state}}
+\index{cdc\-\_\-trf\-\_\-state@{cdc\-\_\-trf\-\_\-state}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{cdc\-\_\-trf\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char cdc\-\_\-trf\-\_\-state}}\label{p32_2include_2pinguino_2core_2____cdc_8c_af38198c695175d0f021e62adb47167d8}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_a65ca417a188c71d102effc3ac6287c26}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!C\-D\-C\-U\-S\-B\-Not\-Connected@{C\-D\-C\-U\-S\-B\-Not\-Connected}}
+\index{C\-D\-C\-U\-S\-B\-Not\-Connected@{C\-D\-C\-U\-S\-B\-Not\-Connected}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{C\-D\-C\-U\-S\-B\-Not\-Connected}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\-O\-O\-L} C\-D\-C\-U\-S\-B\-Not\-Connected = {\bf false}}}\label{p32_2include_2pinguino_2core_2____cdc_8c_a65ca417a188c71d102effc3ac6287c26}
+
+
+Definition at line 551 of file \-\_\-\-\_\-cdc.\-c.
+
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_ae9206078c5ec525f5b90ff119928a1cd}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!control\-\_\-signal\-\_\-bitmap@{control\-\_\-signal\-\_\-bitmap}}
+\index{control\-\_\-signal\-\_\-bitmap@{control\-\_\-signal\-\_\-bitmap}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{control\-\_\-signal\-\_\-bitmap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} control\-\_\-signal\-\_\-bitmap}}\label{p32_2include_2pinguino_2core_2____cdc_8c_ae9206078c5ec525f5b90ff119928a1cd}
+\hypertarget{p32_2include_2pinguino_2core_2____cdc_8c_ae504eb0b0912afa628e07d89c33da82d}{\index{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}!U\-S\-B\-Device\-State@{U\-S\-B\-Device\-State}}
+\index{U\-S\-B\-Device\-State@{U\-S\-B\-Device\-State}!p32/include/pinguino/core/__cdc.c@{p32/include/pinguino/core/\-\_\-\-\_\-cdc.\-c}}
+\subsubsection[{U\-S\-B\-Device\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} U\-S\-B\-Device\-State}}\label{p32_2include_2pinguino_2core_2____cdc_8c_ae504eb0b0912afa628e07d89c33da82d}

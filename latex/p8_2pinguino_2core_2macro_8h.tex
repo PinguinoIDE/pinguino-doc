@@ -1,0 +1,466 @@
+\hypertarget{p8_2pinguino_2core_2macro_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/macro.h File Reference}
+\label{p8_2pinguino_2core_2macro_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/macro.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/core/macro.\-h}}
+}
+{\ttfamily \#include $<$pic18fregs.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$const.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}{nop}()~do \{ \-\_\-\-\_\-asm nop    \-\_\-\-\_\-endasm; \} while (0)
+\begin{DoxyCompactList}\small\item\em A\-S\-M. \end{DoxyCompactList}\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a79ed2e9a82502ab017664dd92d9dea35}{clrwdt}()~do \{ \-\_\-\-\_\-asm clrwdt \-\_\-\-\_\-endasm; \} while (0)
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_adff1ae9368523be49ce8ef497d4ca902}{reset}()~do \{ \-\_\-\-\_\-asm reset  \-\_\-\-\_\-endasm; \} while (0)
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_af4f3c80609d474d15c59d1b02b55e463}{sleep}()~do \{ \-\_\-\-\_\-asm sleep  \-\_\-\-\_\-endasm; \} while (0)
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_aeab54da5ac84f3441a91cb982b2276bc}{interrupts}()~do \{ I\-N\-T\-C\-O\-Nbits.\-G\-I\-E\-H  = 1; I\-N\-T\-C\-O\-Nbits.\-G\-I\-E\-L  = 1; \} while (0)
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a8dfd0b70aa3eb3c592d6de11711fce91}{no\-Interrupts}()~do \{ I\-N\-T\-C\-O\-Nbits.\-G\-I\-E\-H  = 0; I\-N\-T\-C\-O\-Nbits.\-G\-I\-E\-L  = 0; \} while (0)
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a6d9e0d21493aca7754e42a2c8345d156}{No\-End\-Loop}~while(1)
+\begin{DoxyCompactList}\small\item\em C. \end{DoxyCompactList}\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_ad03cbb59aaf2eea05907807a12936e7f}{high\-Byte}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~((\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}) ((\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}) $>$$>$ 8))
+\begin{DoxyCompactList}\small\item\em B\-Y\-T\-E\-S. \end{DoxyCompactList}\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}{high8}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~((\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}) ((\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}) $>$$>$ 8))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a19a055e908717e6f71f285bc5c84ea45}{low\-Byte}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~((\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}) ((\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}) \& 0x\-F\-F))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{low8}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~((\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8}) ((\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}) \& 0x\-F\-F))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a11ba66c0460bf50b842396567680f809}{make16}(\hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ab6b4677f42acfb2273127492d13a7e05}{low}, \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a4d9825708f3b6cae156e4e5f1e1647f6}{high})~(\hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ab6b4677f42acfb2273127492d13a7e05}{low} $\vert$ (\hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a4d9825708f3b6cae156e4e5f1e1647f6}{high} $<$$<$ 8))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_ac6afabdc09a49a433ee19d8a9486056d}{min}(a, b)~((a)$<$(b)?(a)\-:(b))
+\begin{DoxyCompactList}\small\item\em M\-A\-T\-H. \end{DoxyCompactList}\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_affe776513b24d84b39af8ab0930fef7f}{max}(a, b)~((a)$>$(b)?(a)\-:(b))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a7df4a1319e5665c9040aa1838eef987c}{constrain}(amt, \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ab6b4677f42acfb2273127492d13a7e05}{low}, \hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a4d9825708f3b6cae156e4e5f1e1647f6}{high})~((amt)$<$(\hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ab6b4677f42acfb2273127492d13a7e05}{low})?(\hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_ab6b4677f42acfb2273127492d13a7e05}{low})\-:((amt)$>$(\hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a4d9825708f3b6cae156e4e5f1e1647f6}{high})?(\hyperlink{p32_2include_2pinguino_2core_2digitalw_8c_a4d9825708f3b6cae156e4e5f1e1647f6}{high})\-:(amt)))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a6ea10f4260b54a61665ead26cb995ba3}{round}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~((\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})$>$=0?(long)((\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})+0.\-5)\-:(long)((\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})-\/0.\-5))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a7571dba2995b9cb57259345fe49d2f97}{radians}(\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})~((\hyperlink{p8_2pinguino_2core_2const_8h_ac4b2d0390812db69420100fbb4a5f2ab}{deg})$\ast$\hyperlink{p32_2include_2pinguino_2core_2const_8h_a212460e743fecb084d717bb2180c5a56}{D\-E\-G\-\_\-\-T\-O\-\_\-\-R\-A\-D})
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_afe93c2c14da376a1621194c15c1de496}{degrees}(\hyperlink{p8_2pinguino_2core_2const_8h_aa322affa45b9a0af7408db0f961d6e14}{rad})~((\hyperlink{p8_2pinguino_2core_2const_8h_aa322affa45b9a0af7408db0f961d6e14}{rad})$\ast$\hyperlink{p32_2include_2pinguino_2core_2const_8h_a89e47af0449640d4f15191aba5ca24c6}{R\-A\-D\-\_\-\-T\-O\-\_\-\-D\-E\-G})
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_ae7616788b30810a219d9cdee95904ba4}{sq}(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})~((\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x})$\ast$(\hyperlink{p32_2include_2pinguino_2libraries_2_p_c_d8544_8c_a8b1cd5df3ee434053cf8b77bf7c6a053}{x}))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a3ca5ecd34b04d6a243c054ac3a57f68d}{swap}(a, b)~((\&(a) == \&(b)) $\vert$$\vert$ (((a) -\/= (b)), ((b) += (a)), ((a) = (b) -\/ (a))))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{B\-I\-N\-\_\-\-B\-I\-T}(value, bit, dec)~(((((\hyperlink{p8_2pinguino_2core_2typedef_8h_a2caf5cd7bcdbe1eefa727f44ffb10bac}{u32})(value\#\#.\-0))/dec)\&1 == 1)? (1$<$$<$bit) \-: 0)
+\begin{DoxyCompactList}\small\item\em C\-L\-O\-C\-K. \end{DoxyCompactList}\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a9316b5a3eb0c4188c27f5d3f39c1ca63}{Bin}(value)
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_ae2707821bea4150e97ed730c3d5394fc}{Bit\-Read}(octet, n)~(octet = (octet $>$$>$ n) \& 1)
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_abd16e15a4d165ed667cac5de685351cf}{Bit\-Set}(octet, n)~(octet $\vert$= (1 $<$$<$ n))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_ad24a4e047155c8fb03f82a892c755e35}{Bit\-Clear}(octet, n)~((octet) \&= $\sim$(1 $<$$<$ (n)))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_af0ad35d07aa8e83dbae63e57dfd9a26c}{Bit\-Inv}(octet, n)~(octet $^\wedge$= (1 $<$$<$ n))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a4bb19493c3a4a5809b58ba7759fa9cd7}{Bit\-Write}(value, bit, bitvalue)~(bitvalue ? \hyperlink{p32_2include_2pinguino_2core_2macro_8h_afc1ed47d482c01f8193d3982d203a8c0}{Bit\-Set}(value, bit) \-: \hyperlink{p32_2include_2pinguino_2core_2macro_8h_ad24a4e047155c8fb03f82a892c755e35}{Bit\-Clear}(value, bit))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_ab6f0c037238ab516a5df66bfa4695433}{Bit}(b)~(1 $<$$<$ (b))
+\item 
+\#define \hyperlink{p8_2pinguino_2core_2macro_8h_a4805e26237b7bceb9bc080b20bf2ae89}{Not}(b)~(255 -\/ b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{p8_2pinguino_2core_2macro_8h_a9316b5a3eb0c4188c27f5d3f39c1ca63}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!Bin@{Bin}}
+\index{Bin@{Bin}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{Bin}]{\setlength{\rightskip}{0pt plus 5cm}\#define Bin(
+\begin{DoxyParamCaption}
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}}\label{p8_2pinguino_2core_2macro_8h_a9316b5a3eb0c4188c27f5d3f39c1ca63}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+(   \hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{BIN\_BIT}(value,  0, 1) | \hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{\(\backslash\)}
+\hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{        BIN\_BIT}(value,  1, 10) | \hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{\(\backslash\)}
+\hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{        BIN\_BIT}(value,  2, 100) | \hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{\(\backslash\)}
+\hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{        BIN\_BIT}(value,  3, 1000) | \hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{\(\backslash\)}
+\hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{        BIN\_BIT}(value,  4, 10000) | \hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{\(\backslash\)}
+\hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{        BIN\_BIT}(value,  5, 100000) | \hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{\(\backslash\)}
+\hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{        BIN\_BIT}(value,  6, 1000000) | \hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{\(\backslash\)}
+\hyperlink{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{        BIN\_BIT}(value,  7, 10000000))
+\end{DoxyCode}
+
+
+Definition at line 62 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!B\-I\-N\-\_\-\-B\-I\-T@{B\-I\-N\-\_\-\-B\-I\-T}}
+\index{B\-I\-N\-\_\-\-B\-I\-T@{B\-I\-N\-\_\-\-B\-I\-T}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{B\-I\-N\-\_\-\-B\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-I\-N\-\_\-\-B\-I\-T(
+\begin{DoxyParamCaption}
+\item[{}]{value, }
+\item[{}]{bit, }
+\item[{}]{dec}
+\end{DoxyParamCaption}
+)~((((({\bf u32})(value\#\#.\-0))/dec)\&1 == 1)? (1$<$$<$bit) \-: 0)}}\label{p8_2pinguino_2core_2macro_8h_a7f896e15c3827e60fceff9073fcafbe6}
+
+
+C\-L\-O\-C\-K. 
+
+B\-I\-T\-W\-I\-S\-E O\-P\-E\-R\-A\-T\-I\-O\-N 
+
+Definition at line 59 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_ab6f0c037238ab516a5df66bfa4695433}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!Bit@{Bit}}
+\index{Bit@{Bit}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{Bit}]{\setlength{\rightskip}{0pt plus 5cm}\#define Bit(
+\begin{DoxyParamCaption}
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(1 $<$$<$ (b))}}\label{p8_2pinguino_2core_2macro_8h_ab6f0c037238ab516a5df66bfa4695433}
+
+
+Definition at line 91 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_ad24a4e047155c8fb03f82a892c755e35}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!Bit\-Clear@{Bit\-Clear}}
+\index{Bit\-Clear@{Bit\-Clear}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{Bit\-Clear}]{\setlength{\rightskip}{0pt plus 5cm}\#define Bit\-Clear(
+\begin{DoxyParamCaption}
+\item[{}]{octet, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~((octet) \&= $\sim$(1 $<$$<$ (n)))}}\label{p8_2pinguino_2core_2macro_8h_ad24a4e047155c8fb03f82a892c755e35}
+
+
+Definition at line 81 of file macro.\-h.
+
+
+
+Referenced by Int\-Clear\-Flag(), and Int\-Disable().
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_af0ad35d07aa8e83dbae63e57dfd9a26c}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!Bit\-Inv@{Bit\-Inv}}
+\index{Bit\-Inv@{Bit\-Inv}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{Bit\-Inv}]{\setlength{\rightskip}{0pt plus 5cm}\#define Bit\-Inv(
+\begin{DoxyParamCaption}
+\item[{}]{octet, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(octet $^\wedge$= (1 $<$$<$ n))}}\label{p8_2pinguino_2core_2macro_8h_af0ad35d07aa8e83dbae63e57dfd9a26c}
+
+
+Definition at line 85 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_ae2707821bea4150e97ed730c3d5394fc}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!Bit\-Read@{Bit\-Read}}
+\index{Bit\-Read@{Bit\-Read}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{Bit\-Read}]{\setlength{\rightskip}{0pt plus 5cm}\#define Bit\-Read(
+\begin{DoxyParamCaption}
+\item[{}]{octet, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(octet = (octet $>$$>$ n) \& 1)}}\label{p8_2pinguino_2core_2macro_8h_ae2707821bea4150e97ed730c3d5394fc}
+
+
+Definition at line 73 of file macro.\-h.
+
+
+
+Referenced by Int\-Get\-Flag().
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_abd16e15a4d165ed667cac5de685351cf}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!Bit\-Set@{Bit\-Set}}
+\index{Bit\-Set@{Bit\-Set}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{Bit\-Set}]{\setlength{\rightskip}{0pt plus 5cm}\#define Bit\-Set(
+\begin{DoxyParamCaption}
+\item[{}]{octet, }
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~(octet $\vert$= (1 $<$$<$ n))}}\label{p8_2pinguino_2core_2macro_8h_abd16e15a4d165ed667cac5de685351cf}
+
+
+Definition at line 77 of file macro.\-h.
+
+
+
+Referenced by Int\-Enable().
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a4bb19493c3a4a5809b58ba7759fa9cd7}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!Bit\-Write@{Bit\-Write}}
+\index{Bit\-Write@{Bit\-Write}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{Bit\-Write}]{\setlength{\rightskip}{0pt plus 5cm}\#define Bit\-Write(
+\begin{DoxyParamCaption}
+\item[{}]{value, }
+\item[{}]{bit, }
+\item[{}]{bitvalue}
+\end{DoxyParamCaption}
+)~(bitvalue ? {\bf Bit\-Set}(value, bit) \-: {\bf Bit\-Clear}(value, bit))}}\label{p8_2pinguino_2core_2macro_8h_a4bb19493c3a4a5809b58ba7759fa9cd7}
+
+
+Definition at line 88 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a79ed2e9a82502ab017664dd92d9dea35}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!clrwdt@{clrwdt}}
+\index{clrwdt@{clrwdt}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{clrwdt}]{\setlength{\rightskip}{0pt plus 5cm}\#define clrwdt(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ \-\_\-\-\_\-asm clrwdt \-\_\-\-\_\-endasm; \} while (0)}}\label{p8_2pinguino_2core_2macro_8h_a79ed2e9a82502ab017664dd92d9dea35}
+
+
+Definition at line 17 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a7df4a1319e5665c9040aa1838eef987c}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!constrain@{constrain}}
+\index{constrain@{constrain}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{constrain}]{\setlength{\rightskip}{0pt plus 5cm}\#define constrain(
+\begin{DoxyParamCaption}
+\item[{}]{amt, }
+\item[{}]{{\bf low}, }
+\item[{}]{{\bf high}}
+\end{DoxyParamCaption}
+)~((amt)$<$({\bf low})?({\bf low})\-:((amt)$>$({\bf high})?({\bf high})\-:(amt)))}}\label{p8_2pinguino_2core_2macro_8h_a7df4a1319e5665c9040aa1838eef987c}
+
+
+Definition at line 44 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_afe93c2c14da376a1621194c15c1de496}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!degrees@{degrees}}
+\index{degrees@{degrees}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{degrees}]{\setlength{\rightskip}{0pt plus 5cm}\#define degrees(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf rad}}
+\end{DoxyParamCaption}
+)~(({\bf rad})$\ast${\bf R\-A\-D\-\_\-\-T\-O\-\_\-\-D\-E\-G})}}\label{p8_2pinguino_2core_2macro_8h_afe93c2c14da376a1621194c15c1de496}
+
+
+Definition at line 47 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!high8@{high8}}
+\index{high8@{high8}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{high8}]{\setlength{\rightskip}{0pt plus 5cm}\#define high8(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~(({\bf u8}) (({\bf x}) $>$$>$ 8))}}\label{p8_2pinguino_2core_2macro_8h_aa853c5a75372d75cab718be7abded494}
+
+
+Definition at line 30 of file macro.\-h.
+
+
+
+Referenced by E\-E\-P\-R\-O\-M\-\_\-write16(), millis\-\_\-init(), millis\-\_\-interrupt(), P\-M\-P\-\_\-init(), P\-M\-P\-\_\-send\-Address(), P\-M\-P\-\_\-write(), stepper\-\_\-interrupt(), and Stepper\-\_\-set\-Speed().
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_ad03cbb59aaf2eea05907807a12936e7f}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!high\-Byte@{high\-Byte}}
+\index{high\-Byte@{high\-Byte}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{high\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}\#define high\-Byte(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~(({\bf u8}) (({\bf x}) $>$$>$ 8))}}\label{p8_2pinguino_2core_2macro_8h_ad03cbb59aaf2eea05907807a12936e7f}
+
+
+B\-Y\-T\-E\-S. 
+
+
+
+Definition at line 29 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_aeab54da5ac84f3441a91cb982b2276bc}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!interrupts@{interrupts}}
+\index{interrupts@{interrupts}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{interrupts}]{\setlength{\rightskip}{0pt plus 5cm}\#define interrupts(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ I\-N\-T\-C\-O\-Nbits.\-G\-I\-E\-H  = 1; I\-N\-T\-C\-O\-Nbits.\-G\-I\-E\-L  = 1; \} while (0)}}\label{p8_2pinguino_2core_2macro_8h_aeab54da5ac84f3441a91cb982b2276bc}
+
+
+Definition at line 20 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!low8@{low8}}
+\index{low8@{low8}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{low8}]{\setlength{\rightskip}{0pt plus 5cm}\#define low8(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~(({\bf u8}) (({\bf x}) \& 0x\-F\-F))}}\label{p8_2pinguino_2core_2macro_8h_a51da0a37f977fa569c834b291c7bda70}
+
+
+Definition at line 32 of file macro.\-h.
+
+
+
+Referenced by E\-E\-P\-R\-O\-M\-\_\-write16(), millis\-\_\-init(), millis\-\_\-interrupt(), P\-M\-P\-\_\-init(), P\-M\-P\-\_\-send\-Address(), P\-M\-P\-\_\-write(), stepper\-\_\-interrupt(), and Stepper\-\_\-set\-Speed().
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a19a055e908717e6f71f285bc5c84ea45}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!low\-Byte@{low\-Byte}}
+\index{low\-Byte@{low\-Byte}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{low\-Byte}]{\setlength{\rightskip}{0pt plus 5cm}\#define low\-Byte(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~(({\bf u8}) (({\bf x}) \& 0x\-F\-F))}}\label{p8_2pinguino_2core_2macro_8h_a19a055e908717e6f71f285bc5c84ea45}
+
+
+Definition at line 31 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a11ba66c0460bf50b842396567680f809}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!make16@{make16}}
+\index{make16@{make16}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{make16}]{\setlength{\rightskip}{0pt plus 5cm}\#define make16(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf low}, }
+\item[{}]{{\bf high}}
+\end{DoxyParamCaption}
+)~({\bf low} $\vert$ ({\bf high} $<$$<$ 8))}}\label{p8_2pinguino_2core_2macro_8h_a11ba66c0460bf50b842396567680f809}
+
+
+Definition at line 33 of file macro.\-h.
+
+
+
+Referenced by P\-M\-P\-\_\-read().
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_affe776513b24d84b39af8ab0930fef7f}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!max@{max}}
+\index{max@{max}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{max}]{\setlength{\rightskip}{0pt plus 5cm}\#define max(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~((a)$>$(b)?(a)\-:(b))}}\label{p8_2pinguino_2core_2macro_8h_affe776513b24d84b39af8ab0930fef7f}
+
+
+Definition at line 39 of file macro.\-h.
+
+
+
+Referenced by Serial\-Set\-Data\-Rate().
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_ac6afabdc09a49a433ee19d8a9486056d}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!min@{min}}
+\index{min@{min}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{min}]{\setlength{\rightskip}{0pt plus 5cm}\#define min(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~((a)$<$(b)?(a)\-:(b))}}\label{p8_2pinguino_2core_2macro_8h_ac6afabdc09a49a433ee19d8a9486056d}
+
+
+M\-A\-T\-H. 
+
+
+
+Definition at line 37 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a6d9e0d21493aca7754e42a2c8345d156}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!No\-End\-Loop@{No\-End\-Loop}}
+\index{No\-End\-Loop@{No\-End\-Loop}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{No\-End\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}\#define No\-End\-Loop~while(1)}}\label{p8_2pinguino_2core_2macro_8h_a6d9e0d21493aca7754e42a2c8345d156}
+
+
+C. 
+
+
+
+Definition at line 25 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a8dfd0b70aa3eb3c592d6de11711fce91}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!no\-Interrupts@{no\-Interrupts}}
+\index{no\-Interrupts@{no\-Interrupts}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{no\-Interrupts}]{\setlength{\rightskip}{0pt plus 5cm}\#define no\-Interrupts(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ I\-N\-T\-C\-O\-Nbits.\-G\-I\-E\-H  = 0; I\-N\-T\-C\-O\-Nbits.\-G\-I\-E\-L  = 0; \} while (0)}}\label{p8_2pinguino_2core_2macro_8h_a8dfd0b70aa3eb3c592d6de11711fce91}
+
+
+Definition at line 21 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!nop@{nop}}
+\index{nop@{nop}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{nop}]{\setlength{\rightskip}{0pt plus 5cm}\#define nop(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ \-\_\-\-\_\-asm nop    \-\_\-\-\_\-endasm; \} while (0)}}\label{p8_2pinguino_2core_2macro_8h_a6c92c29fa8e83ab85e05543010e10d7c}
+
+
+A\-S\-M. 
+
+
+
+Definition at line 16 of file macro.\-h.
+
+
+
+Referenced by delay450ns(), touch\-\_\-read\-Data(), and touch\-\_\-write\-Data().
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a4805e26237b7bceb9bc080b20bf2ae89}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!Not@{Not}}
+\index{Not@{Not}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{Not}]{\setlength{\rightskip}{0pt plus 5cm}\#define Not(
+\begin{DoxyParamCaption}
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(255 -\/ b)}}\label{p8_2pinguino_2core_2macro_8h_a4805e26237b7bceb9bc080b20bf2ae89}
+
+
+Definition at line 94 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a7571dba2995b9cb57259345fe49d2f97}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!radians@{radians}}
+\index{radians@{radians}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{radians}]{\setlength{\rightskip}{0pt plus 5cm}\#define radians(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf deg}}
+\end{DoxyParamCaption}
+)~(({\bf deg})$\ast${\bf D\-E\-G\-\_\-\-T\-O\-\_\-\-R\-A\-D})}}\label{p8_2pinguino_2core_2macro_8h_a7571dba2995b9cb57259345fe49d2f97}
+
+
+Definition at line 46 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_adff1ae9368523be49ce8ef497d4ca902}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!reset@{reset}}
+\index{reset@{reset}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}\#define reset(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ \-\_\-\-\_\-asm reset  \-\_\-\-\_\-endasm; \} while (0)}}\label{p8_2pinguino_2core_2macro_8h_adff1ae9368523be49ce8ef497d4ca902}
+
+
+Definition at line 18 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a6ea10f4260b54a61665ead26cb995ba3}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!round@{round}}
+\index{round@{round}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{round}]{\setlength{\rightskip}{0pt plus 5cm}\#define round(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~(({\bf x})$>$=0?(long)(({\bf x})+0.\-5)\-:(long)(({\bf x})-\/0.\-5))}}\label{p8_2pinguino_2core_2macro_8h_a6ea10f4260b54a61665ead26cb995ba3}
+
+
+Definition at line 45 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_af4f3c80609d474d15c59d1b02b55e463}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!sleep@{sleep}}
+\index{sleep@{sleep}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{sleep}]{\setlength{\rightskip}{0pt plus 5cm}\#define sleep(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ \-\_\-\-\_\-asm sleep  \-\_\-\-\_\-endasm; \} while (0)}}\label{p8_2pinguino_2core_2macro_8h_af4f3c80609d474d15c59d1b02b55e463}
+
+
+Definition at line 19 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_ae7616788b30810a219d9cdee95904ba4}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!sq@{sq}}
+\index{sq@{sq}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{sq}]{\setlength{\rightskip}{0pt plus 5cm}\#define sq(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~(({\bf x})$\ast$({\bf x}))}}\label{p8_2pinguino_2core_2macro_8h_ae7616788b30810a219d9cdee95904ba4}
+
+
+Definition at line 48 of file macro.\-h.
+
+\hypertarget{p8_2pinguino_2core_2macro_8h_a3ca5ecd34b04d6a243c054ac3a57f68d}{\index{p8/pinguino/core/macro.\-h@{p8/pinguino/core/macro.\-h}!swap@{swap}}
+\index{swap@{swap}!p8/pinguino/core/macro.h@{p8/pinguino/core/macro.\-h}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}\#define swap(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~((\&(a) == \&(b)) $\vert$$\vert$ (((a) -\/= (b)), ((b) += (a)), ((a) = (b) -\/ (a))))}}\label{p8_2pinguino_2core_2macro_8h_a3ca5ecd34b04d6a243c054ac3a57f68d}
+
+
+Definition at line 49 of file macro.\-h.
+
+
+
+Referenced by draw\-Line(), and S\-T7565\-\_\-draw\-Line().
+

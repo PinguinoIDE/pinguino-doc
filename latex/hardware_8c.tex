@@ -1,0 +1,61 @@
+\hypertarget{hardware_8c}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/hardware.c File Reference}
+\label{hardware_8c}\index{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/hardware.\-c@{/dvpt/pinguino/git/pinguino-\/libraries/p32/include/pinguino/core/hardware.\-c}}
+}
+{\ttfamily \#include $<$const.\-h$>$}\\*
+{\ttfamily \#include $<$typedef.\-h$>$}\\*
+{\ttfamily \#include $<$delay.\-c$>$}\\*
+{\ttfamily \#include $<$digitalw.\-c$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hardware_8c_a782cfa49dee303b3f30f1d618f783ac6}{\-\_\-\-\_\-\-H\-A\-R\-D\-W\-A\-R\-E\-\_\-\-C}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} \hyperlink{hardware_8c_a930d3a7f624b0cda07f25cd4ad7c8e86}{Switch\-Debounce} (\hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} pin, \hyperlink{p8_2pinguino_2core_2typedef_8h_a50b0d1c7a54fa09a64a3ac111c778520}{u16} ms)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{hardware_8c_a782cfa49dee303b3f30f1d618f783ac6}{\index{hardware.\-c@{hardware.\-c}!\-\_\-\-\_\-\-H\-A\-R\-D\-W\-A\-R\-E\-\_\-\-C@{\-\_\-\-\_\-\-H\-A\-R\-D\-W\-A\-R\-E\-\_\-\-C}}
+\index{\-\_\-\-\_\-\-H\-A\-R\-D\-W\-A\-R\-E\-\_\-\-C@{\-\_\-\-\_\-\-H\-A\-R\-D\-W\-A\-R\-E\-\_\-\-C}!hardware.c@{hardware.\-c}}
+\subsubsection[{\-\_\-\-\_\-\-H\-A\-R\-D\-W\-A\-R\-E\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-\_\-\-H\-A\-R\-D\-W\-A\-R\-E\-\_\-\-C}}\label{hardware_8c_a782cfa49dee303b3f30f1d618f783ac6}
+
+
+Definition at line 28 of file hardware.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{hardware_8c_a930d3a7f624b0cda07f25cd4ad7c8e86}{\index{hardware.\-c@{hardware.\-c}!Switch\-Debounce@{Switch\-Debounce}}
+\index{Switch\-Debounce@{Switch\-Debounce}!hardware.c@{hardware.\-c}}
+\subsubsection[{Switch\-Debounce}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u8} Switch\-Debounce (
+\begin{DoxyParamCaption}
+\item[{{\bf u8}}]{pin, }
+\item[{{\bf u16}}]{ms}
+\end{DoxyParamCaption}
+)}}\label{hardware_8c_a930d3a7f624b0cda07f25cd4ad7c8e86}
+
+
+Definition at line 45 of file hardware.\-c.
+
+
+
+References Delayms(), and digitalread().
+
+
+\begin{DoxyCode}
+46 \{
+47     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} state1 = 0;
+48     \hyperlink{p8_2pinguino_2core_2typedef_8h_aed742c436da53c1080638ce6ef7d13de}{u8} state2 = 0;
+49 
+50     \textcolor{keywordflow}{while}(1)
+51     \{
+52         state1 = (\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(pin) == 1 ? 1 : 0);        \textcolor{comment}{// Met l'état de la pin dans state1}
+53         \hyperlink{delayms_8c_ac7c5f7cc370a3aae05026dc8791d1d3c}{Delayms}(ms);                                 \textcolor{comment}{// anti-rebond 50 milisecondes}
+54         state2 = (\hyperlink{digitalr_8c_a2800a13f4516530f5055b7348d83bdf5}{digitalread}(pin) == 1 ? 1 : 0);        \textcolor{comment}{// Met l'état de la pin dans state2}
+55         \textcolor{keywordflow}{if}(state2 == state1) \textcolor{keywordflow}{return} state1;             \textcolor{comment}{// Si l'etat est stable pendant 50 ms}
+56     \}
+57 \}
+\end{DoxyCode}

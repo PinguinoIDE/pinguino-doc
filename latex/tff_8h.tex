@@ -1,0 +1,2109 @@
+\hypertarget{tff_8h}{\section{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/tff.h File Reference}
+\label{tff_8h}\index{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/tff.\-h@{/dvpt/pinguino/git/pinguino-\/libraries/p8/pinguino/libraries/sd/tff.\-h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_f_a_t_f_s}{F\-A\-T\-F\-S}
+\item 
+struct \hyperlink{struct_d_i_r}{D\-I\-R}
+\item 
+struct \hyperlink{struct_f_i_l}{F\-I\-L}
+\item 
+struct \hyperlink{struct_f_i_l_i_n_f_o}{F\-I\-L\-I\-N\-F\-O}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tff_8h_a4e662e3c0df2e7c5fceaae6774c9be48}{\-\_\-\-M\-C\-U\-\_\-\-E\-N\-D\-I\-A\-N}~1
+\item 
+\#define \hyperlink{tff_8h_afb8d35370cfe0c23832ac2d82e854ec6}{\-\_\-\-F\-S\-\_\-\-R\-E\-A\-D\-O\-N\-L\-Y}~0
+\item 
+\#define \hyperlink{tff_8h_abefed32e4f049538ff7d7101cd8e3643}{\-\_\-\-F\-S\-\_\-\-M\-I\-N\-I\-M\-I\-Z\-E}~0
+\item 
+\#define \hyperlink{tff_8h_a62cdce547af40f0c1599698ee151bbd7}{\-\_\-\-U\-S\-E\-\_\-\-M\-K\-F\-S}~1
+\item 
+\#define \hyperlink{tff_8h_aaab0313f867bb008b64236239f5c2660}{\-\_\-\-U\-S\-E\-\_\-\-S\-T\-R\-F\-U\-N\-C}~2
+\item 
+\#define \hyperlink{tff_8h_ae49b948c9a92ff7082b88bd36f63d988}{\-\_\-\-U\-S\-E\-\_\-\-F\-O\-R\-W\-A\-R\-D}~0
+\item 
+\#define \hyperlink{tff_8h_a79fae83d3d8fd0b344b0e882b1f815dd}{\-\_\-\-F\-A\-T32}~0
+\item 
+\#define \hyperlink{tff_8h_a9e006f46c2c44887b6265fa9ddbc2253}{\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O}~0
+\item 
+\#define \hyperlink{tff_8h_ac1a53bb89d43f351de39245b463a673c}{\-\_\-\-U\-S\-E\-\_\-\-S\-J\-I\-S}~1
+\item 
+\#define \hyperlink{tff_8h_a1b60ab58db79b74c2e3c8b80114c5fb6}{\-\_\-\-U\-S\-E\-\_\-\-N\-T\-F\-L\-A\-G}~1
+\item 
+\#define \hyperlink{tff_8h_a9e006f46c2c44887b6265fa9ddbc2253}{\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O}~0
+\item 
+\#define \hyperlink{tff_8h_afb543768443893928a6914a4d81e4817}{S\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z}~512\-U			/$\ast$ Do not change $\ast$/
+\item 
+\#define \hyperlink{tff_8h_adf4f3cf1022d258ab04973295aeadb7a}{S\-S\-Z}(fs)~512\-U
+\item 
+\#define \hyperlink{tff_8h_abdbcea489d520f885acf0905c826a8af}{feof}(fp)~((fp)-\/$>$fptr == (fp)-\/$>$\hyperlink{itdb02__graph16w_8h_aa5154f1f2f741b1408f8726078a53e27}{fsize})
+\item 
+\#define \hyperlink{tff_8h_a59adc4c82490d23754cd39c2fb99b0da}{E\-O\-F}~-\/1
+\item 
+\#define \hyperlink{tff_8h_a1f4f3530ff03abbd979b072536e72290}{F\-A\-\_\-\-R\-E\-A\-D}~0x01
+\item 
+\#define \hyperlink{tff_8h_a0c5dd686b10f84c2a2b3954957a5979a}{F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-E\-X\-I\-S\-T\-I\-N\-G}~0x00
+\item 
+\#define \hyperlink{tff_8h_afa366963220c89b882c0361794020c14}{F\-A\-\_\-\-W\-R\-I\-T\-E}~0x02
+\item 
+\#define \hyperlink{tff_8h_a417bb1babd1785fd181a806b5613eba3}{F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-N\-E\-W}~0x04
+\item 
+\#define \hyperlink{tff_8h_afba4546b131dea4b24727fa20a80e29f}{F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-A\-L\-W\-A\-Y\-S}~0x08
+\item 
+\#define \hyperlink{tff_8h_a17b01553029920ac0468912b4bcb16c7}{F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-A\-L\-W\-A\-Y\-S}~0x10
+\item 
+\#define \hyperlink{tff_8h_ac4b7d5223f84df91c306ffbff536fae4}{F\-A\-\_\-\-\_\-\-W\-R\-I\-T\-T\-E\-N}~0x20
+\item 
+\#define \hyperlink{tff_8h_ad3b47fe8126573b17752a9a242b76b9a}{F\-A\-\_\-\-\_\-\-E\-R\-R\-O\-R}~0x80
+\item 
+\#define \hyperlink{tff_8h_aab755aa1b4f81f4aabee4a5d4738cfb0}{F\-S\-\_\-\-F\-A\-T12}~1
+\item 
+\#define \hyperlink{tff_8h_a7ef90a36d99edfc0138a2155a17a79b9}{F\-S\-\_\-\-F\-A\-T16}~2
+\item 
+\#define \hyperlink{tff_8h_ac63e0796095a789cefdbc3c3c676c9ce}{F\-S\-\_\-\-F\-A\-T32}~3
+\item 
+\#define \hyperlink{tff_8h_add6d85d1e7a02b4f6188783ef91a5f1e}{A\-M\-\_\-\-R\-D\-O}~0x01	/$\ast$ Read only $\ast$/
+\item 
+\#define \hyperlink{tff_8h_aa90c4c921c1955fd407d8bbf17f1674e}{A\-M\-\_\-\-H\-I\-D}~0x02	/$\ast$ Hidden $\ast$/
+\item 
+\#define \hyperlink{tff_8h_a1f25d5c17b5a3a6397b3398add8cdc15}{A\-M\-\_\-\-S\-Y\-S}~0x04	/$\ast$ System $\ast$/
+\item 
+\#define \hyperlink{tff_8h_a5cfae62dabae0a54809e43b36685ce7c}{A\-M\-\_\-\-V\-O\-L}~0x08	/$\ast$ Volume label $\ast$/
+\item 
+\#define \hyperlink{tff_8h_a91161ef62e0e85ba3c2876d3d339473d}{A\-M\-\_\-\-L\-F\-N}~0x0\-F	/$\ast$ L\-F\-N entry $\ast$/
+\item 
+\#define \hyperlink{tff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}{A\-M\-\_\-\-D\-I\-R}~0x10	/$\ast$ Directory $\ast$/
+\item 
+\#define \hyperlink{tff_8h_ae8174d00798e34e7c9e95898cb9e1a09}{A\-M\-\_\-\-A\-R\-C}~0x20	/$\ast$ Archive $\ast$/
+\item 
+\#define \hyperlink{tff_8h_a8f81669ee736efb2b2b49c7b0985472d}{B\-S\-\_\-jmp\-Boot}~0
+\item 
+\#define \hyperlink{tff_8h_a02a76ada191ec2dc5f8af60ff3576da7}{B\-S\-\_\-\-O\-E\-M\-Name}~3
+\item 
+\#define \hyperlink{tff_8h_a8551844b4eb4e15aecd8cc9aa3585fa2}{B\-P\-B\-\_\-\-Byts\-Per\-Sec}~11
+\item 
+\#define \hyperlink{tff_8h_aab78e41c617a14b9540c0563d6b957fa}{B\-P\-B\-\_\-\-Sec\-Per\-Clus}~13
+\item 
+\#define \hyperlink{tff_8h_ab3ec444c8457c9bc98aa07e846f5c1b7}{B\-P\-B\-\_\-\-Rsvd\-Sec\-Cnt}~14
+\item 
+\#define \hyperlink{tff_8h_af44a1e8c89ec5502595f23496d24cbf1}{B\-P\-B\-\_\-\-Num\-F\-A\-Ts}~16
+\item 
+\#define \hyperlink{tff_8h_aaa667f14c87c45dc128f2ab208e92f98}{B\-P\-B\-\_\-\-Root\-Ent\-Cnt}~17
+\item 
+\#define \hyperlink{tff_8h_a4eb540eecde0f2df26fa8c7969341d68}{B\-P\-B\-\_\-\-Tot\-Sec16}~19
+\item 
+\#define \hyperlink{tff_8h_a414e054c4b5ea3414ebefa3539e7e554}{B\-P\-B\-\_\-\-Media}~21
+\item 
+\#define \hyperlink{tff_8h_a60a2f6efeb6a4c7cb2da1e5def6ca43b}{B\-P\-B\-\_\-\-F\-A\-T\-Sz16}~22
+\item 
+\#define \hyperlink{tff_8h_ac71bb771432ea532bc47713a028ebd76}{B\-P\-B\-\_\-\-Sec\-Per\-Trk}~24
+\item 
+\#define \hyperlink{tff_8h_a9c03603c3be34d4c5cc1b481b0bc6774}{B\-P\-B\-\_\-\-Num\-Heads}~26
+\item 
+\#define \hyperlink{tff_8h_a449d4ed5c4c8105daf29aad9488277f7}{B\-P\-B\-\_\-\-Hidd\-Sec}~28
+\item 
+\#define \hyperlink{tff_8h_a7723a9f0da553e8879d60909d85ccb7b}{B\-P\-B\-\_\-\-Tot\-Sec32}~32
+\item 
+\#define \hyperlink{tff_8h_a74b810b3f3583c1eb54bd4305c0f261a}{B\-S\-\_\-55\-A\-A}~510
+\item 
+\#define \hyperlink{tff_8h_a0c51f7393341b839dfb241c2951f3ef4}{B\-S\-\_\-\-Drv\-Num}~36
+\item 
+\#define \hyperlink{tff_8h_a85a92e790602efef4da3a2f141611ce8}{B\-S\-\_\-\-Boot\-Sig}~38
+\item 
+\#define \hyperlink{tff_8h_a383a71bda500a0fb5a37f4edd785acbf}{B\-S\-\_\-\-Vol\-I\-D}~39
+\item 
+\#define \hyperlink{tff_8h_a28498ba4b07ff90aaa9628e81fb89d32}{B\-S\-\_\-\-Vol\-Lab}~43
+\item 
+\#define \hyperlink{tff_8h_a2264848692d36c1b2499c9b6a10acf75}{B\-S\-\_\-\-Fil\-Sys\-Type}~54
+\item 
+\#define \hyperlink{tff_8h_a6e6340030dc29e7da2e9f92e472a763d}{B\-P\-B\-\_\-\-F\-A\-T\-Sz32}~36
+\item 
+\#define \hyperlink{tff_8h_a6c832cd9e28f8e4fbbd45fdc86c7ebbb}{B\-P\-B\-\_\-\-Ext\-Flags}~40
+\item 
+\#define \hyperlink{tff_8h_a1f75a149df65028e24d43727b9ffcb9d}{B\-P\-B\-\_\-\-F\-S\-Ver}~42
+\item 
+\#define \hyperlink{tff_8h_a7add0104bd20083d6940d616faecd45a}{B\-P\-B\-\_\-\-Root\-Clus}~44
+\item 
+\#define \hyperlink{tff_8h_a51c45669282b9ce9da5152231df9f3ac}{B\-P\-B\-\_\-\-F\-S\-Info}~48
+\item 
+\#define \hyperlink{tff_8h_a383726fb93488d41866028b4f07c90e1}{B\-P\-B\-\_\-\-Bk\-Boot\-Sec}~50
+\item 
+\#define \hyperlink{tff_8h_aa670c7b495f5b347c442df67b188c58f}{B\-S\-\_\-\-Drv\-Num32}~64
+\item 
+\#define \hyperlink{tff_8h_a59c4b2f802ab4bc9319e5bd840e615b8}{B\-S\-\_\-\-Boot\-Sig32}~66
+\item 
+\#define \hyperlink{tff_8h_abaa3aafdcf5e83f8cb7e2bb373b13525}{B\-S\-\_\-\-Vol\-I\-D32}~67
+\item 
+\#define \hyperlink{tff_8h_a8241a49bce313184a58617ba1ad9e84c}{B\-S\-\_\-\-Vol\-Lab32}~71
+\item 
+\#define \hyperlink{tff_8h_a8d8786452966cd0ce579f2575a54a348}{B\-S\-\_\-\-Fil\-Sys\-Type32}~82
+\item 
+\#define \hyperlink{tff_8h_a318e58c1966aba52b90ab98dcb649883}{F\-S\-I\-\_\-\-Lead\-Sig}~0
+\item 
+\#define \hyperlink{tff_8h_a3bac0e6ff5907873030db1d0a7c4ebef}{F\-S\-I\-\_\-\-Struc\-Sig}~484
+\item 
+\#define \hyperlink{tff_8h_ab711e50459aba01b11c6b46a7cc1410b}{F\-S\-I\-\_\-\-Free\-\_\-\-Count}~488
+\item 
+\#define \hyperlink{tff_8h_a320700cedf300c9b418edf56e5e6b086}{F\-S\-I\-\_\-\-Nxt\-\_\-\-Free}~492
+\item 
+\#define \hyperlink{tff_8h_ac3f187bf0ba891551f594af6b61f3188}{M\-B\-R\-\_\-\-Table}~446
+\item 
+\#define \hyperlink{tff_8h_afa89348e9fc2de82ae9e12c661366b0e}{D\-I\-R\-\_\-\-Name}~0
+\item 
+\#define \hyperlink{tff_8h_ad3233e40118ed66095f3c9545b788f8a}{D\-I\-R\-\_\-\-Attr}~11
+\item 
+\#define \hyperlink{tff_8h_a87ee1f701c2ab941862e3ce00c1c1e9d}{D\-I\-R\-\_\-\-N\-Tres}~12
+\item 
+\#define \hyperlink{tff_8h_a47fb1881ea71d860db9b8280564cb4d5}{D\-I\-R\-\_\-\-Crt\-Time}~14
+\item 
+\#define \hyperlink{tff_8h_acf498617bb4c7750fd738864c3c0ab5a}{D\-I\-R\-\_\-\-Crt\-Date}~16
+\item 
+\#define \hyperlink{tff_8h_a0bc29c3f09e1e9c40c414f7d50d7905c}{D\-I\-R\-\_\-\-Fst\-Clus\-H\-I}~20
+\item 
+\#define \hyperlink{tff_8h_ab9452d336adeece2a1b0b54ab35b8a59}{D\-I\-R\-\_\-\-Wrt\-Time}~22
+\item 
+\#define \hyperlink{tff_8h_abed17fa699511b09cbf64961373d63a4}{D\-I\-R\-\_\-\-Wrt\-Date}~24
+\item 
+\#define \hyperlink{tff_8h_aebe0e913bff75a89d38dbcb04baf5dff}{D\-I\-R\-\_\-\-Fst\-Clus\-L\-O}~26
+\item 
+\#define \hyperlink{tff_8h_abfbfa613864a02a65f0bf70ead6672c7}{D\-I\-R\-\_\-\-File\-Size}~28
+\item 
+\#define \hyperlink{tff_8h_a398519bb08da6457e62567d1f0b567e3}{L\-D\-\_\-\-W\-O\-R\-D}(ptr)~(\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})($\ast$(\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word}$\ast$)(\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}$\ast$)(ptr))
+\item 
+\#define \hyperlink{tff_8h_a4690304ddc975516f7dc02575c96e34e}{L\-D\-\_\-\-D\-W\-O\-R\-D}(ptr)~(\hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword})($\ast$(\hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword}$\ast$)(\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}$\ast$)(ptr))
+\item 
+\#define \hyperlink{tff_8h_a95ceb4c25b216e71baa7102939edfd0d}{S\-T\-\_\-\-W\-O\-R\-D}(ptr, val)~$\ast$(\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word}$\ast$)(\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}$\ast$)(ptr)=(\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})(val)
+\item 
+\#define \hyperlink{tff_8h_abf5aba973d95ac5843b80aa7379cdd66}{S\-T\-\_\-\-D\-W\-O\-R\-D}(ptr, val)~$\ast$(\hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword}$\ast$)(\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}$\ast$)(ptr)=(\hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword})(val)
+\item 
+\#define \hyperlink{tff_8h_a749228947bc890224b8bd5de6e11faa3}{\-\_\-\-F\-A\-T\-F\-S}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word} \hyperlink{tff_8h_af322b62389c843d5727de4796a09f59c}{C\-L\-U\-S\-T}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \{ \\*
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{F\-R\-\_\-\-O\-K} = 0, 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca97dee4a6b485dc8f91f37486092dfe34}{F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R}, 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44cac9894bed3e8632ede8d2712235fa8e45}{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}, 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}, 
+\\*
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44cae4529c8cc8b59783d6efc9ba4f574532}{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}, 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca196c8de0d4f775323f10ab831adc856e}{F\-R\-\_\-\-N\-O\-T\-\_\-\-O\-P\-E\-N\-E\-D}, 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44cafc56605c68aaffab4a428339a8bd600d}{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}, 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca086154b5fee763f28c49fd0e2c1cb463}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}, 
+\\*
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{F\-R\-\_\-\-O\-K} = 0, 
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44cac9894bed3e8632ede8d2712235fa8e45}{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}, 
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}, 
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44cae4529c8cc8b59783d6efc9ba4f574532}{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}, 
+\\*
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca83e45a4b579558c57192c0a391b9bb45}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E}, 
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca487844af77de15f6932a3b41ef3a2d65}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E}, 
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{F\-R\-\_\-\-D\-E\-N\-I\-E\-D}, 
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca0d8f024d256df76e84782b95018a2450}{F\-R\-\_\-\-E\-X\-I\-S\-T}, 
+\\*
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{F\-R\-\_\-\-R\-W\-\_\-\-E\-R\-R\-O\-R}, 
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44cac3afbb423b1d4497229416812aff383b}{F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}, 
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44cafc56605c68aaffab4a428339a8bd600d}{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}, 
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca086154b5fee763f28c49fd0e2c1cb463}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}, 
+\\*
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca3dec4eba481cdf5e99d7cd6009e6dcf8}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T}, 
+\hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca4b02760f758f5b1a89f445244fe9fbca}{F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{F\-R\-\_\-\-O\-K} = 0, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca97dee4a6b485dc8f91f37486092dfe34}{F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R}, 
+\\*
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44cab6c9903af6e9bffbb7a288705f4a6a76}{F\-R\-\_\-\-I\-N\-T\-\_\-\-E\-R\-R}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44cac9894bed3e8632ede8d2712235fa8e45}{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44cae4529c8cc8b59783d6efc9ba4f574532}{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}, 
+\\*
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca83e45a4b579558c57192c0a391b9bb45}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{F\-R\-\_\-\-D\-E\-N\-I\-E\-D}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca0d8f024d256df76e84782b95018a2450}{F\-R\-\_\-\-E\-X\-I\-S\-T}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca3dec4eba481cdf5e99d7cd6009e6dcf8}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T}, 
+\\*
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44cac3afbb423b1d4497229416812aff383b}{F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca487844af77de15f6932a3b41ef3a2d65}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44cafc56605c68aaffab4a428339a8bd600d}{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca086154b5fee763f28c49fd0e2c1cb463}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}, 
+\\*
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca4b02760f758f5b1a89f445244fe9fbca}{F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca3f8ca7e51af8b129d14328de7243c5d4}{F\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca7db5afaaa2af591bd4a208b2967075d7}{F\-R\-\_\-\-L\-O\-C\-K\-E\-D}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44caf56a76a86602cbdeb2c4f3d00cfad21c}{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-O\-U\-G\-H\-\_\-\-C\-O\-R\-E}, 
+\\*
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca50dd3c3c274ccebb2cfbddde9d065bb9}{F\-R\-\_\-\-T\-O\-O\-\_\-\-M\-A\-N\-Y\-\_\-\-O\-P\-E\-N\-\_\-\-F\-I\-L\-E\-S}, 
+\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44ca3b89faeceab64db277d0fcdeaaa315d6}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_aabced8314db84d8e9989204334c461be}{f\-\_\-mount} (\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}, \hyperlink{struct_f_a_t_f_s}{F\-A\-T\-F\-S} $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_a3cc72041536a83f5f81b70962c3fbc6f}{f\-\_\-open} (\hyperlink{struct_f_i_l}{F\-I\-L} $\ast$, const char $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_a96533e305f5fc839ac4a9e6321c6ebfd}{f\-\_\-read} (\hyperlink{struct_f_i_l}{F\-I\-L} $\ast$, void $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word}, \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_a5b31e4018f73901cceb0588ee64fd5f0}{f\-\_\-write} (\hyperlink{struct_f_i_l}{F\-I\-L} $\ast$, const void $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word}, \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_aaf470a350e3d0b11941a613d6f186c54}{f\-\_\-lseek} (\hyperlink{struct_f_i_l}{F\-I\-L} $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword})
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_a004f8ebf5a01c5c7065292cc4545bc38}{f\-\_\-close} (\hyperlink{struct_f_i_l}{F\-I\-L} $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_ae573cd64e467a62c076e74d5125e6409}{f\-\_\-opendir} (\hyperlink{struct_d_i_r}{D\-I\-R} $\ast$, const char $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_ae84f86ce841a3facb95060e0bdefd5fb}{f\-\_\-readdir} (\hyperlink{struct_d_i_r}{D\-I\-R} $\ast$, \hyperlink{struct_f_i_l_i_n_f_o}{F\-I\-L\-I\-N\-F\-O} $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_a36d1930b7eb7c5de67b55a9c673eb0fa}{f\-\_\-stat} (const char $\ast$, \hyperlink{struct_f_i_l_i_n_f_o}{F\-I\-L\-I\-N\-F\-O} $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_ac255d7c24cae9e840bfdd158c238d2db}{f\-\_\-getfree} (const char $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword} $\ast$, \hyperlink{struct_f_a_t_f_s}{F\-A\-T\-F\-S} $\ast$$\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_a29d002c2c9b726151b9c1a4ad742c41d}{f\-\_\-truncate} (\hyperlink{struct_f_i_l}{F\-I\-L} $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_ae3ba7b156902f7678b3344f1e5bc5e88}{f\-\_\-sync} (\hyperlink{struct_f_i_l}{F\-I\-L} $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_a7d317d7bcbe9a9100a42d18e0790ffc5}{f\-\_\-unlink} (const char $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_a9c19eb129fb91e8c1dcde98a8941f9eb}{f\-\_\-mkdir} (const char $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_a8dc5eb46180da67309d729c91a01cd9d}{f\-\_\-chmod} (const char $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}, \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_aeeca06177bafbc7d7286a728be075ae4}{f\-\_\-utime} (const char $\ast$, const \hyperlink{struct_f_i_l_i_n_f_o}{F\-I\-L\-I\-N\-F\-O} $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_addcca3084286cebc66b1734408dc5e56}{f\-\_\-rename} (const char $\ast$, const char $\ast$)
+\item 
+\hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{F\-R\-E\-S\-U\-L\-T} \hyperlink{tff_8h_a96258cc8fbf954a2068aa757ef2b1dd9}{f\-\_\-forward} (\hyperlink{struct_f_i_l}{F\-I\-L} $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word}($\ast$)(const \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} $\ast$, \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word}), \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word}, \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word} $\ast$)
+\item 
+int \hyperlink{tff_8h_aa5bad7defeabd71319e19658c4cfd743}{fputc} (int, \hyperlink{struct_f_i_l}{F\-I\-L} $\ast$)
+\item 
+int \hyperlink{tff_8h_a6f8f8badf755223ae81bcf3d8448d38d}{fputs} (const char $\ast$, \hyperlink{struct_f_i_l}{F\-I\-L} $\ast$)
+\item 
+int \hyperlink{tff_8h_a63eafdd166ef4079dc84cf6718febea6}{fprintf} (\hyperlink{struct_f_i_l}{F\-I\-L} $\ast$, const char $\ast$,...)
+\item 
+char $\ast$ \hyperlink{tff_8h_a674c749faa4daccd22b64e47412d64b4}{fgets} (char $\ast$, int, \hyperlink{struct_f_i_l}{F\-I\-L} $\ast$)
+\item 
+\hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword} \hyperlink{tff_8h_a489f23a9be58cd896a5c45e45c6e6e6f}{get\-\_\-fattime} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{tff_8h_a79fae83d3d8fd0b344b0e882b1f815dd}{\index{tff.\-h@{tff.\-h}!\-\_\-\-F\-A\-T32@{\-\_\-\-F\-A\-T32}}
+\index{\-\_\-\-F\-A\-T32@{\-\_\-\-F\-A\-T32}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-F\-A\-T32}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-F\-A\-T32~0}}\label{tff_8h_a79fae83d3d8fd0b344b0e882b1f815dd}
+
+
+Definition at line 47 of file tff.\-h.
+
+
+
+Referenced by f\-\_\-getfree().
+
+\hypertarget{tff_8h_a749228947bc890224b8bd5de6e11faa3}{\index{tff.\-h@{tff.\-h}!\-\_\-\-F\-A\-T\-F\-S@{\-\_\-\-F\-A\-T\-F\-S}}
+\index{\-\_\-\-F\-A\-T\-F\-S@{\-\_\-\-F\-A\-T\-F\-S}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-F\-A\-T\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-F\-A\-T\-F\-S}}\label{tff_8h_a749228947bc890224b8bd5de6e11faa3}
+
+
+Definition at line 313 of file tff.\-h.
+
+\hypertarget{tff_8h_abefed32e4f049538ff7d7101cd8e3643}{\index{tff.\-h@{tff.\-h}!\-\_\-\-F\-S\-\_\-\-M\-I\-N\-I\-M\-I\-Z\-E@{\-\_\-\-F\-S\-\_\-\-M\-I\-N\-I\-M\-I\-Z\-E}}
+\index{\-\_\-\-F\-S\-\_\-\-M\-I\-N\-I\-M\-I\-Z\-E@{\-\_\-\-F\-S\-\_\-\-M\-I\-N\-I\-M\-I\-Z\-E}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-F\-S\-\_\-\-M\-I\-N\-I\-M\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-F\-S\-\_\-\-M\-I\-N\-I\-M\-I\-Z\-E~0}}\label{tff_8h_abefed32e4f049538ff7d7101cd8e3643}
+
+
+Definition at line 32 of file tff.\-h.
+
+\hypertarget{tff_8h_afb8d35370cfe0c23832ac2d82e854ec6}{\index{tff.\-h@{tff.\-h}!\-\_\-\-F\-S\-\_\-\-R\-E\-A\-D\-O\-N\-L\-Y@{\-\_\-\-F\-S\-\_\-\-R\-E\-A\-D\-O\-N\-L\-Y}}
+\index{\-\_\-\-F\-S\-\_\-\-R\-E\-A\-D\-O\-N\-L\-Y@{\-\_\-\-F\-S\-\_\-\-R\-E\-A\-D\-O\-N\-L\-Y}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-F\-S\-\_\-\-R\-E\-A\-D\-O\-N\-L\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-F\-S\-\_\-\-R\-E\-A\-D\-O\-N\-L\-Y~0}}\label{tff_8h_afb8d35370cfe0c23832ac2d82e854ec6}
+
+
+Definition at line 27 of file tff.\-h.
+
+
+
+Referenced by f\-\_\-lseek().
+
+\hypertarget{tff_8h_a4e662e3c0df2e7c5fceaae6774c9be48}{\index{tff.\-h@{tff.\-h}!\-\_\-\-M\-C\-U\-\_\-\-E\-N\-D\-I\-A\-N@{\-\_\-\-M\-C\-U\-\_\-\-E\-N\-D\-I\-A\-N}}
+\index{\-\_\-\-M\-C\-U\-\_\-\-E\-N\-D\-I\-A\-N@{\-\_\-\-M\-C\-U\-\_\-\-E\-N\-D\-I\-A\-N}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-M\-C\-U\-\_\-\-E\-N\-D\-I\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-M\-C\-U\-\_\-\-E\-N\-D\-I\-A\-N~1}}\label{tff_8h_a4e662e3c0df2e7c5fceaae6774c9be48}
+
+
+Definition at line 19 of file tff.\-h.
+
+\hypertarget{tff_8h_ae49b948c9a92ff7082b88bd36f63d988}{\index{tff.\-h@{tff.\-h}!\-\_\-\-U\-S\-E\-\_\-\-F\-O\-R\-W\-A\-R\-D@{\-\_\-\-U\-S\-E\-\_\-\-F\-O\-R\-W\-A\-R\-D}}
+\index{\-\_\-\-U\-S\-E\-\_\-\-F\-O\-R\-W\-A\-R\-D@{\-\_\-\-U\-S\-E\-\_\-\-F\-O\-R\-W\-A\-R\-D}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-U\-S\-E\-\_\-\-F\-O\-R\-W\-A\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-U\-S\-E\-\_\-\-F\-O\-R\-W\-A\-R\-D~0}}\label{tff_8h_ae49b948c9a92ff7082b88bd36f63d988}
+
+
+Definition at line 44 of file tff.\-h.
+
+\hypertarget{tff_8h_a9e006f46c2c44887b6265fa9ddbc2253}{\index{tff.\-h@{tff.\-h}!\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O@{\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O}}
+\index{\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O@{\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O~0}}\label{tff_8h_a9e006f46c2c44887b6265fa9ddbc2253}
+
+
+Definition at line 70 of file tff.\-h.
+
+\hypertarget{tff_8h_a9e006f46c2c44887b6265fa9ddbc2253}{\index{tff.\-h@{tff.\-h}!\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O@{\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O}}
+\index{\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O@{\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-U\-S\-E\-\_\-\-F\-S\-I\-N\-F\-O~0}}\label{tff_8h_a9e006f46c2c44887b6265fa9ddbc2253}
+
+
+Definition at line 70 of file tff.\-h.
+
+\hypertarget{tff_8h_a62cdce547af40f0c1599698ee151bbd7}{\index{tff.\-h@{tff.\-h}!\-\_\-\-U\-S\-E\-\_\-\-M\-K\-F\-S@{\-\_\-\-U\-S\-E\-\_\-\-M\-K\-F\-S}}
+\index{\-\_\-\-U\-S\-E\-\_\-\-M\-K\-F\-S@{\-\_\-\-U\-S\-E\-\_\-\-M\-K\-F\-S}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-U\-S\-E\-\_\-\-M\-K\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-U\-S\-E\-\_\-\-M\-K\-F\-S~1}}\label{tff_8h_a62cdce547af40f0c1599698ee151bbd7}
+
+
+Definition at line 38 of file tff.\-h.
+
+\hypertarget{tff_8h_a1b60ab58db79b74c2e3c8b80114c5fb6}{\index{tff.\-h@{tff.\-h}!\-\_\-\-U\-S\-E\-\_\-\-N\-T\-F\-L\-A\-G@{\-\_\-\-U\-S\-E\-\_\-\-N\-T\-F\-L\-A\-G}}
+\index{\-\_\-\-U\-S\-E\-\_\-\-N\-T\-F\-L\-A\-G@{\-\_\-\-U\-S\-E\-\_\-\-N\-T\-F\-L\-A\-G}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-U\-S\-E\-\_\-\-N\-T\-F\-L\-A\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-U\-S\-E\-\_\-\-N\-T\-F\-L\-A\-G~1}}\label{tff_8h_a1b60ab58db79b74c2e3c8b80114c5fb6}
+
+
+Definition at line 57 of file tff.\-h.
+
+\hypertarget{tff_8h_ac1a53bb89d43f351de39245b463a673c}{\index{tff.\-h@{tff.\-h}!\-\_\-\-U\-S\-E\-\_\-\-S\-J\-I\-S@{\-\_\-\-U\-S\-E\-\_\-\-S\-J\-I\-S}}
+\index{\-\_\-\-U\-S\-E\-\_\-\-S\-J\-I\-S@{\-\_\-\-U\-S\-E\-\_\-\-S\-J\-I\-S}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-U\-S\-E\-\_\-\-S\-J\-I\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-U\-S\-E\-\_\-\-S\-J\-I\-S~1}}\label{tff_8h_ac1a53bb89d43f351de39245b463a673c}
+
+
+Definition at line 53 of file tff.\-h.
+
+\hypertarget{tff_8h_aaab0313f867bb008b64236239f5c2660}{\index{tff.\-h@{tff.\-h}!\-\_\-\-U\-S\-E\-\_\-\-S\-T\-R\-F\-U\-N\-C@{\-\_\-\-U\-S\-E\-\_\-\-S\-T\-R\-F\-U\-N\-C}}
+\index{\-\_\-\-U\-S\-E\-\_\-\-S\-T\-R\-F\-U\-N\-C@{\-\_\-\-U\-S\-E\-\_\-\-S\-T\-R\-F\-U\-N\-C}!tff.h@{tff.\-h}}
+\subsubsection[{\-\_\-\-U\-S\-E\-\_\-\-S\-T\-R\-F\-U\-N\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-U\-S\-E\-\_\-\-S\-T\-R\-F\-U\-N\-C~2}}\label{tff_8h_aaab0313f867bb008b64236239f5c2660}
+
+
+Definition at line 41 of file tff.\-h.
+
+\hypertarget{tff_8h_ae8174d00798e34e7c9e95898cb9e1a09}{\index{tff.\-h@{tff.\-h}!A\-M\-\_\-\-A\-R\-C@{A\-M\-\_\-\-A\-R\-C}}
+\index{A\-M\-\_\-\-A\-R\-C@{A\-M\-\_\-\-A\-R\-C}!tff.h@{tff.\-h}}
+\subsubsection[{A\-M\-\_\-\-A\-R\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-M\-\_\-\-A\-R\-C~0x20	/$\ast$ Archive $\ast$/}}\label{tff_8h_ae8174d00798e34e7c9e95898cb9e1a09}
+
+
+Definition at line 235 of file tff.\-h.
+
+\hypertarget{tff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}{\index{tff.\-h@{tff.\-h}!A\-M\-\_\-\-D\-I\-R@{A\-M\-\_\-\-D\-I\-R}}
+\index{A\-M\-\_\-\-D\-I\-R@{A\-M\-\_\-\-D\-I\-R}!tff.h@{tff.\-h}}
+\subsubsection[{A\-M\-\_\-\-D\-I\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-M\-\_\-\-D\-I\-R~0x10	/$\ast$ Directory $\ast$/}}\label{tff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}
+
+
+Definition at line 234 of file tff.\-h.
+
+\hypertarget{tff_8h_aa90c4c921c1955fd407d8bbf17f1674e}{\index{tff.\-h@{tff.\-h}!A\-M\-\_\-\-H\-I\-D@{A\-M\-\_\-\-H\-I\-D}}
+\index{A\-M\-\_\-\-H\-I\-D@{A\-M\-\_\-\-H\-I\-D}!tff.h@{tff.\-h}}
+\subsubsection[{A\-M\-\_\-\-H\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-M\-\_\-\-H\-I\-D~0x02	/$\ast$ Hidden $\ast$/}}\label{tff_8h_aa90c4c921c1955fd407d8bbf17f1674e}
+
+
+Definition at line 230 of file tff.\-h.
+
+\hypertarget{tff_8h_a91161ef62e0e85ba3c2876d3d339473d}{\index{tff.\-h@{tff.\-h}!A\-M\-\_\-\-L\-F\-N@{A\-M\-\_\-\-L\-F\-N}}
+\index{A\-M\-\_\-\-L\-F\-N@{A\-M\-\_\-\-L\-F\-N}!tff.h@{tff.\-h}}
+\subsubsection[{A\-M\-\_\-\-L\-F\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-M\-\_\-\-L\-F\-N~0x0\-F	/$\ast$ L\-F\-N entry $\ast$/}}\label{tff_8h_a91161ef62e0e85ba3c2876d3d339473d}
+
+
+Definition at line 233 of file tff.\-h.
+
+\hypertarget{tff_8h_add6d85d1e7a02b4f6188783ef91a5f1e}{\index{tff.\-h@{tff.\-h}!A\-M\-\_\-\-R\-D\-O@{A\-M\-\_\-\-R\-D\-O}}
+\index{A\-M\-\_\-\-R\-D\-O@{A\-M\-\_\-\-R\-D\-O}!tff.h@{tff.\-h}}
+\subsubsection[{A\-M\-\_\-\-R\-D\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-M\-\_\-\-R\-D\-O~0x01	/$\ast$ Read only $\ast$/}}\label{tff_8h_add6d85d1e7a02b4f6188783ef91a5f1e}
+
+
+Definition at line 229 of file tff.\-h.
+
+\hypertarget{tff_8h_a1f25d5c17b5a3a6397b3398add8cdc15}{\index{tff.\-h@{tff.\-h}!A\-M\-\_\-\-S\-Y\-S@{A\-M\-\_\-\-S\-Y\-S}}
+\index{A\-M\-\_\-\-S\-Y\-S@{A\-M\-\_\-\-S\-Y\-S}!tff.h@{tff.\-h}}
+\subsubsection[{A\-M\-\_\-\-S\-Y\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-M\-\_\-\-S\-Y\-S~0x04	/$\ast$ System $\ast$/}}\label{tff_8h_a1f25d5c17b5a3a6397b3398add8cdc15}
+
+
+Definition at line 231 of file tff.\-h.
+
+\hypertarget{tff_8h_a5cfae62dabae0a54809e43b36685ce7c}{\index{tff.\-h@{tff.\-h}!A\-M\-\_\-\-V\-O\-L@{A\-M\-\_\-\-V\-O\-L}}
+\index{A\-M\-\_\-\-V\-O\-L@{A\-M\-\_\-\-V\-O\-L}!tff.h@{tff.\-h}}
+\subsubsection[{A\-M\-\_\-\-V\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-M\-\_\-\-V\-O\-L~0x08	/$\ast$ Volume label $\ast$/}}\label{tff_8h_a5cfae62dabae0a54809e43b36685ce7c}
+
+
+Definition at line 232 of file tff.\-h.
+
+\hypertarget{tff_8h_a383726fb93488d41866028b4f07c90e1}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Bk\-Boot\-Sec@{B\-P\-B\-\_\-\-Bk\-Boot\-Sec}}
+\index{B\-P\-B\-\_\-\-Bk\-Boot\-Sec@{B\-P\-B\-\_\-\-Bk\-Boot\-Sec}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Bk\-Boot\-Sec}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Bk\-Boot\-Sec~50}}\label{tff_8h_a383726fb93488d41866028b4f07c90e1}
+
+
+Definition at line 268 of file tff.\-h.
+
+\hypertarget{tff_8h_a8551844b4eb4e15aecd8cc9aa3585fa2}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Byts\-Per\-Sec@{B\-P\-B\-\_\-\-Byts\-Per\-Sec}}
+\index{B\-P\-B\-\_\-\-Byts\-Per\-Sec@{B\-P\-B\-\_\-\-Byts\-Per\-Sec}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Byts\-Per\-Sec}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Byts\-Per\-Sec~11}}\label{tff_8h_a8551844b4eb4e15aecd8cc9aa3585fa2}
+
+
+Definition at line 243 of file tff.\-h.
+
+\hypertarget{tff_8h_a6c832cd9e28f8e4fbbd45fdc86c7ebbb}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Ext\-Flags@{B\-P\-B\-\_\-\-Ext\-Flags}}
+\index{B\-P\-B\-\_\-\-Ext\-Flags@{B\-P\-B\-\_\-\-Ext\-Flags}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Ext\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Ext\-Flags~40}}\label{tff_8h_a6c832cd9e28f8e4fbbd45fdc86c7ebbb}
+
+
+Definition at line 264 of file tff.\-h.
+
+\hypertarget{tff_8h_a60a2f6efeb6a4c7cb2da1e5def6ca43b}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-F\-A\-T\-Sz16@{B\-P\-B\-\_\-\-F\-A\-T\-Sz16}}
+\index{B\-P\-B\-\_\-\-F\-A\-T\-Sz16@{B\-P\-B\-\_\-\-F\-A\-T\-Sz16}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-F\-A\-T\-Sz16}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-F\-A\-T\-Sz16~22}}\label{tff_8h_a60a2f6efeb6a4c7cb2da1e5def6ca43b}
+
+
+Definition at line 250 of file tff.\-h.
+
+\hypertarget{tff_8h_a6e6340030dc29e7da2e9f92e472a763d}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-F\-A\-T\-Sz32@{B\-P\-B\-\_\-\-F\-A\-T\-Sz32}}
+\index{B\-P\-B\-\_\-\-F\-A\-T\-Sz32@{B\-P\-B\-\_\-\-F\-A\-T\-Sz32}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-F\-A\-T\-Sz32}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-F\-A\-T\-Sz32~36}}\label{tff_8h_a6e6340030dc29e7da2e9f92e472a763d}
+
+
+Definition at line 263 of file tff.\-h.
+
+\hypertarget{tff_8h_a51c45669282b9ce9da5152231df9f3ac}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-F\-S\-Info@{B\-P\-B\-\_\-\-F\-S\-Info}}
+\index{B\-P\-B\-\_\-\-F\-S\-Info@{B\-P\-B\-\_\-\-F\-S\-Info}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-F\-S\-Info}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-F\-S\-Info~48}}\label{tff_8h_a51c45669282b9ce9da5152231df9f3ac}
+
+
+Definition at line 267 of file tff.\-h.
+
+\hypertarget{tff_8h_a1f75a149df65028e24d43727b9ffcb9d}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-F\-S\-Ver@{B\-P\-B\-\_\-\-F\-S\-Ver}}
+\index{B\-P\-B\-\_\-\-F\-S\-Ver@{B\-P\-B\-\_\-\-F\-S\-Ver}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-F\-S\-Ver}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-F\-S\-Ver~42}}\label{tff_8h_a1f75a149df65028e24d43727b9ffcb9d}
+
+
+Definition at line 265 of file tff.\-h.
+
+\hypertarget{tff_8h_a449d4ed5c4c8105daf29aad9488277f7}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Hidd\-Sec@{B\-P\-B\-\_\-\-Hidd\-Sec}}
+\index{B\-P\-B\-\_\-\-Hidd\-Sec@{B\-P\-B\-\_\-\-Hidd\-Sec}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Hidd\-Sec}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Hidd\-Sec~28}}\label{tff_8h_a449d4ed5c4c8105daf29aad9488277f7}
+
+
+Definition at line 253 of file tff.\-h.
+
+\hypertarget{tff_8h_a414e054c4b5ea3414ebefa3539e7e554}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Media@{B\-P\-B\-\_\-\-Media}}
+\index{B\-P\-B\-\_\-\-Media@{B\-P\-B\-\_\-\-Media}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Media}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Media~21}}\label{tff_8h_a414e054c4b5ea3414ebefa3539e7e554}
+
+
+Definition at line 249 of file tff.\-h.
+
+\hypertarget{tff_8h_af44a1e8c89ec5502595f23496d24cbf1}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Num\-F\-A\-Ts@{B\-P\-B\-\_\-\-Num\-F\-A\-Ts}}
+\index{B\-P\-B\-\_\-\-Num\-F\-A\-Ts@{B\-P\-B\-\_\-\-Num\-F\-A\-Ts}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Num\-F\-A\-Ts}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Num\-F\-A\-Ts~16}}\label{tff_8h_af44a1e8c89ec5502595f23496d24cbf1}
+
+
+Definition at line 246 of file tff.\-h.
+
+\hypertarget{tff_8h_a9c03603c3be34d4c5cc1b481b0bc6774}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Num\-Heads@{B\-P\-B\-\_\-\-Num\-Heads}}
+\index{B\-P\-B\-\_\-\-Num\-Heads@{B\-P\-B\-\_\-\-Num\-Heads}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Num\-Heads}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Num\-Heads~26}}\label{tff_8h_a9c03603c3be34d4c5cc1b481b0bc6774}
+
+
+Definition at line 252 of file tff.\-h.
+
+\hypertarget{tff_8h_a7add0104bd20083d6940d616faecd45a}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Root\-Clus@{B\-P\-B\-\_\-\-Root\-Clus}}
+\index{B\-P\-B\-\_\-\-Root\-Clus@{B\-P\-B\-\_\-\-Root\-Clus}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Root\-Clus}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Root\-Clus~44}}\label{tff_8h_a7add0104bd20083d6940d616faecd45a}
+
+
+Definition at line 266 of file tff.\-h.
+
+\hypertarget{tff_8h_aaa667f14c87c45dc128f2ab208e92f98}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Root\-Ent\-Cnt@{B\-P\-B\-\_\-\-Root\-Ent\-Cnt}}
+\index{B\-P\-B\-\_\-\-Root\-Ent\-Cnt@{B\-P\-B\-\_\-\-Root\-Ent\-Cnt}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Root\-Ent\-Cnt}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Root\-Ent\-Cnt~17}}\label{tff_8h_aaa667f14c87c45dc128f2ab208e92f98}
+
+
+Definition at line 247 of file tff.\-h.
+
+\hypertarget{tff_8h_ab3ec444c8457c9bc98aa07e846f5c1b7}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Rsvd\-Sec\-Cnt@{B\-P\-B\-\_\-\-Rsvd\-Sec\-Cnt}}
+\index{B\-P\-B\-\_\-\-Rsvd\-Sec\-Cnt@{B\-P\-B\-\_\-\-Rsvd\-Sec\-Cnt}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Rsvd\-Sec\-Cnt}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Rsvd\-Sec\-Cnt~14}}\label{tff_8h_ab3ec444c8457c9bc98aa07e846f5c1b7}
+
+
+Definition at line 245 of file tff.\-h.
+
+\hypertarget{tff_8h_aab78e41c617a14b9540c0563d6b957fa}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Sec\-Per\-Clus@{B\-P\-B\-\_\-\-Sec\-Per\-Clus}}
+\index{B\-P\-B\-\_\-\-Sec\-Per\-Clus@{B\-P\-B\-\_\-\-Sec\-Per\-Clus}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Sec\-Per\-Clus}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Sec\-Per\-Clus~13}}\label{tff_8h_aab78e41c617a14b9540c0563d6b957fa}
+
+
+Definition at line 244 of file tff.\-h.
+
+\hypertarget{tff_8h_ac71bb771432ea532bc47713a028ebd76}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Sec\-Per\-Trk@{B\-P\-B\-\_\-\-Sec\-Per\-Trk}}
+\index{B\-P\-B\-\_\-\-Sec\-Per\-Trk@{B\-P\-B\-\_\-\-Sec\-Per\-Trk}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Sec\-Per\-Trk}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Sec\-Per\-Trk~24}}\label{tff_8h_ac71bb771432ea532bc47713a028ebd76}
+
+
+Definition at line 251 of file tff.\-h.
+
+\hypertarget{tff_8h_a4eb540eecde0f2df26fa8c7969341d68}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Tot\-Sec16@{B\-P\-B\-\_\-\-Tot\-Sec16}}
+\index{B\-P\-B\-\_\-\-Tot\-Sec16@{B\-P\-B\-\_\-\-Tot\-Sec16}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Tot\-Sec16}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Tot\-Sec16~19}}\label{tff_8h_a4eb540eecde0f2df26fa8c7969341d68}
+
+
+Definition at line 248 of file tff.\-h.
+
+\hypertarget{tff_8h_a7723a9f0da553e8879d60909d85ccb7b}{\index{tff.\-h@{tff.\-h}!B\-P\-B\-\_\-\-Tot\-Sec32@{B\-P\-B\-\_\-\-Tot\-Sec32}}
+\index{B\-P\-B\-\_\-\-Tot\-Sec32@{B\-P\-B\-\_\-\-Tot\-Sec32}!tff.h@{tff.\-h}}
+\subsubsection[{B\-P\-B\-\_\-\-Tot\-Sec32}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-P\-B\-\_\-\-Tot\-Sec32~32}}\label{tff_8h_a7723a9f0da553e8879d60909d85ccb7b}
+
+
+Definition at line 254 of file tff.\-h.
+
+\hypertarget{tff_8h_a74b810b3f3583c1eb54bd4305c0f261a}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-55\-A\-A@{B\-S\-\_\-55\-A\-A}}
+\index{B\-S\-\_\-55\-A\-A@{B\-S\-\_\-55\-A\-A}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-55\-A\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-55\-A\-A~510}}\label{tff_8h_a74b810b3f3583c1eb54bd4305c0f261a}
+
+
+Definition at line 255 of file tff.\-h.
+
+\hypertarget{tff_8h_a85a92e790602efef4da3a2f141611ce8}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-\-Boot\-Sig@{B\-S\-\_\-\-Boot\-Sig}}
+\index{B\-S\-\_\-\-Boot\-Sig@{B\-S\-\_\-\-Boot\-Sig}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-\-Boot\-Sig}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-\-Boot\-Sig~38}}\label{tff_8h_a85a92e790602efef4da3a2f141611ce8}
+
+
+Definition at line 258 of file tff.\-h.
+
+\hypertarget{tff_8h_a59c4b2f802ab4bc9319e5bd840e615b8}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-\-Boot\-Sig32@{B\-S\-\_\-\-Boot\-Sig32}}
+\index{B\-S\-\_\-\-Boot\-Sig32@{B\-S\-\_\-\-Boot\-Sig32}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-\-Boot\-Sig32}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-\-Boot\-Sig32~66}}\label{tff_8h_a59c4b2f802ab4bc9319e5bd840e615b8}
+
+
+Definition at line 270 of file tff.\-h.
+
+\hypertarget{tff_8h_a0c51f7393341b839dfb241c2951f3ef4}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-\-Drv\-Num@{B\-S\-\_\-\-Drv\-Num}}
+\index{B\-S\-\_\-\-Drv\-Num@{B\-S\-\_\-\-Drv\-Num}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-\-Drv\-Num}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-\-Drv\-Num~36}}\label{tff_8h_a0c51f7393341b839dfb241c2951f3ef4}
+
+
+Definition at line 257 of file tff.\-h.
+
+\hypertarget{tff_8h_aa670c7b495f5b347c442df67b188c58f}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-\-Drv\-Num32@{B\-S\-\_\-\-Drv\-Num32}}
+\index{B\-S\-\_\-\-Drv\-Num32@{B\-S\-\_\-\-Drv\-Num32}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-\-Drv\-Num32}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-\-Drv\-Num32~64}}\label{tff_8h_aa670c7b495f5b347c442df67b188c58f}
+
+
+Definition at line 269 of file tff.\-h.
+
+\hypertarget{tff_8h_a2264848692d36c1b2499c9b6a10acf75}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-\-Fil\-Sys\-Type@{B\-S\-\_\-\-Fil\-Sys\-Type}}
+\index{B\-S\-\_\-\-Fil\-Sys\-Type@{B\-S\-\_\-\-Fil\-Sys\-Type}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-\-Fil\-Sys\-Type}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-\-Fil\-Sys\-Type~54}}\label{tff_8h_a2264848692d36c1b2499c9b6a10acf75}
+
+
+Definition at line 261 of file tff.\-h.
+
+\hypertarget{tff_8h_a8d8786452966cd0ce579f2575a54a348}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-\-Fil\-Sys\-Type32@{B\-S\-\_\-\-Fil\-Sys\-Type32}}
+\index{B\-S\-\_\-\-Fil\-Sys\-Type32@{B\-S\-\_\-\-Fil\-Sys\-Type32}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-\-Fil\-Sys\-Type32}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-\-Fil\-Sys\-Type32~82}}\label{tff_8h_a8d8786452966cd0ce579f2575a54a348}
+
+
+Definition at line 273 of file tff.\-h.
+
+\hypertarget{tff_8h_a8f81669ee736efb2b2b49c7b0985472d}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-jmp\-Boot@{B\-S\-\_\-jmp\-Boot}}
+\index{B\-S\-\_\-jmp\-Boot@{B\-S\-\_\-jmp\-Boot}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-jmp\-Boot}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-jmp\-Boot~0}}\label{tff_8h_a8f81669ee736efb2b2b49c7b0985472d}
+
+
+Definition at line 241 of file tff.\-h.
+
+\hypertarget{tff_8h_a02a76ada191ec2dc5f8af60ff3576da7}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-\-O\-E\-M\-Name@{B\-S\-\_\-\-O\-E\-M\-Name}}
+\index{B\-S\-\_\-\-O\-E\-M\-Name@{B\-S\-\_\-\-O\-E\-M\-Name}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-\-O\-E\-M\-Name}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-\-O\-E\-M\-Name~3}}\label{tff_8h_a02a76ada191ec2dc5f8af60ff3576da7}
+
+
+Definition at line 242 of file tff.\-h.
+
+\hypertarget{tff_8h_a383a71bda500a0fb5a37f4edd785acbf}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-\-Vol\-I\-D@{B\-S\-\_\-\-Vol\-I\-D}}
+\index{B\-S\-\_\-\-Vol\-I\-D@{B\-S\-\_\-\-Vol\-I\-D}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-\-Vol\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-\-Vol\-I\-D~39}}\label{tff_8h_a383a71bda500a0fb5a37f4edd785acbf}
+
+
+Definition at line 259 of file tff.\-h.
+
+\hypertarget{tff_8h_abaa3aafdcf5e83f8cb7e2bb373b13525}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-\-Vol\-I\-D32@{B\-S\-\_\-\-Vol\-I\-D32}}
+\index{B\-S\-\_\-\-Vol\-I\-D32@{B\-S\-\_\-\-Vol\-I\-D32}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-\-Vol\-I\-D32}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-\-Vol\-I\-D32~67}}\label{tff_8h_abaa3aafdcf5e83f8cb7e2bb373b13525}
+
+
+Definition at line 271 of file tff.\-h.
+
+\hypertarget{tff_8h_a28498ba4b07ff90aaa9628e81fb89d32}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-\-Vol\-Lab@{B\-S\-\_\-\-Vol\-Lab}}
+\index{B\-S\-\_\-\-Vol\-Lab@{B\-S\-\_\-\-Vol\-Lab}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-\-Vol\-Lab}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-\-Vol\-Lab~43}}\label{tff_8h_a28498ba4b07ff90aaa9628e81fb89d32}
+
+
+Definition at line 260 of file tff.\-h.
+
+\hypertarget{tff_8h_a8241a49bce313184a58617ba1ad9e84c}{\index{tff.\-h@{tff.\-h}!B\-S\-\_\-\-Vol\-Lab32@{B\-S\-\_\-\-Vol\-Lab32}}
+\index{B\-S\-\_\-\-Vol\-Lab32@{B\-S\-\_\-\-Vol\-Lab32}!tff.h@{tff.\-h}}
+\subsubsection[{B\-S\-\_\-\-Vol\-Lab32}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-S\-\_\-\-Vol\-Lab32~71}}\label{tff_8h_a8241a49bce313184a58617ba1ad9e84c}
+
+
+Definition at line 272 of file tff.\-h.
+
+\hypertarget{tff_8h_ad3233e40118ed66095f3c9545b788f8a}{\index{tff.\-h@{tff.\-h}!D\-I\-R\-\_\-\-Attr@{D\-I\-R\-\_\-\-Attr}}
+\index{D\-I\-R\-\_\-\-Attr@{D\-I\-R\-\_\-\-Attr}!tff.h@{tff.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-Attr}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-Attr~11}}\label{tff_8h_ad3233e40118ed66095f3c9545b788f8a}
+
+
+Definition at line 283 of file tff.\-h.
+
+\hypertarget{tff_8h_acf498617bb4c7750fd738864c3c0ab5a}{\index{tff.\-h@{tff.\-h}!D\-I\-R\-\_\-\-Crt\-Date@{D\-I\-R\-\_\-\-Crt\-Date}}
+\index{D\-I\-R\-\_\-\-Crt\-Date@{D\-I\-R\-\_\-\-Crt\-Date}!tff.h@{tff.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-Crt\-Date}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-Crt\-Date~16}}\label{tff_8h_acf498617bb4c7750fd738864c3c0ab5a}
+
+
+Definition at line 286 of file tff.\-h.
+
+\hypertarget{tff_8h_a47fb1881ea71d860db9b8280564cb4d5}{\index{tff.\-h@{tff.\-h}!D\-I\-R\-\_\-\-Crt\-Time@{D\-I\-R\-\_\-\-Crt\-Time}}
+\index{D\-I\-R\-\_\-\-Crt\-Time@{D\-I\-R\-\_\-\-Crt\-Time}!tff.h@{tff.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-Crt\-Time}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-Crt\-Time~14}}\label{tff_8h_a47fb1881ea71d860db9b8280564cb4d5}
+
+
+Definition at line 285 of file tff.\-h.
+
+\hypertarget{tff_8h_abfbfa613864a02a65f0bf70ead6672c7}{\index{tff.\-h@{tff.\-h}!D\-I\-R\-\_\-\-File\-Size@{D\-I\-R\-\_\-\-File\-Size}}
+\index{D\-I\-R\-\_\-\-File\-Size@{D\-I\-R\-\_\-\-File\-Size}!tff.h@{tff.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-File\-Size}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-File\-Size~28}}\label{tff_8h_abfbfa613864a02a65f0bf70ead6672c7}
+
+
+Definition at line 291 of file tff.\-h.
+
+\hypertarget{tff_8h_a0bc29c3f09e1e9c40c414f7d50d7905c}{\index{tff.\-h@{tff.\-h}!D\-I\-R\-\_\-\-Fst\-Clus\-H\-I@{D\-I\-R\-\_\-\-Fst\-Clus\-H\-I}}
+\index{D\-I\-R\-\_\-\-Fst\-Clus\-H\-I@{D\-I\-R\-\_\-\-Fst\-Clus\-H\-I}!tff.h@{tff.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-Fst\-Clus\-H\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-Fst\-Clus\-H\-I~20}}\label{tff_8h_a0bc29c3f09e1e9c40c414f7d50d7905c}
+
+
+Definition at line 287 of file tff.\-h.
+
+\hypertarget{tff_8h_aebe0e913bff75a89d38dbcb04baf5dff}{\index{tff.\-h@{tff.\-h}!D\-I\-R\-\_\-\-Fst\-Clus\-L\-O@{D\-I\-R\-\_\-\-Fst\-Clus\-L\-O}}
+\index{D\-I\-R\-\_\-\-Fst\-Clus\-L\-O@{D\-I\-R\-\_\-\-Fst\-Clus\-L\-O}!tff.h@{tff.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-Fst\-Clus\-L\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-Fst\-Clus\-L\-O~26}}\label{tff_8h_aebe0e913bff75a89d38dbcb04baf5dff}
+
+
+Definition at line 290 of file tff.\-h.
+
+\hypertarget{tff_8h_afa89348e9fc2de82ae9e12c661366b0e}{\index{tff.\-h@{tff.\-h}!D\-I\-R\-\_\-\-Name@{D\-I\-R\-\_\-\-Name}}
+\index{D\-I\-R\-\_\-\-Name@{D\-I\-R\-\_\-\-Name}!tff.h@{tff.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-Name}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-Name~0}}\label{tff_8h_afa89348e9fc2de82ae9e12c661366b0e}
+
+
+Definition at line 282 of file tff.\-h.
+
+\hypertarget{tff_8h_a87ee1f701c2ab941862e3ce00c1c1e9d}{\index{tff.\-h@{tff.\-h}!D\-I\-R\-\_\-\-N\-Tres@{D\-I\-R\-\_\-\-N\-Tres}}
+\index{D\-I\-R\-\_\-\-N\-Tres@{D\-I\-R\-\_\-\-N\-Tres}!tff.h@{tff.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-N\-Tres}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-N\-Tres~12}}\label{tff_8h_a87ee1f701c2ab941862e3ce00c1c1e9d}
+
+
+Definition at line 284 of file tff.\-h.
+
+\hypertarget{tff_8h_abed17fa699511b09cbf64961373d63a4}{\index{tff.\-h@{tff.\-h}!D\-I\-R\-\_\-\-Wrt\-Date@{D\-I\-R\-\_\-\-Wrt\-Date}}
+\index{D\-I\-R\-\_\-\-Wrt\-Date@{D\-I\-R\-\_\-\-Wrt\-Date}!tff.h@{tff.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-Wrt\-Date}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-Wrt\-Date~24}}\label{tff_8h_abed17fa699511b09cbf64961373d63a4}
+
+
+Definition at line 289 of file tff.\-h.
+
+\hypertarget{tff_8h_ab9452d336adeece2a1b0b54ab35b8a59}{\index{tff.\-h@{tff.\-h}!D\-I\-R\-\_\-\-Wrt\-Time@{D\-I\-R\-\_\-\-Wrt\-Time}}
+\index{D\-I\-R\-\_\-\-Wrt\-Time@{D\-I\-R\-\_\-\-Wrt\-Time}!tff.h@{tff.\-h}}
+\subsubsection[{D\-I\-R\-\_\-\-Wrt\-Time}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-\_\-\-Wrt\-Time~22}}\label{tff_8h_ab9452d336adeece2a1b0b54ab35b8a59}
+
+
+Definition at line 288 of file tff.\-h.
+
+\hypertarget{tff_8h_a59adc4c82490d23754cd39c2fb99b0da}{\index{tff.\-h@{tff.\-h}!E\-O\-F@{E\-O\-F}}
+\index{E\-O\-F@{E\-O\-F}!tff.h@{tff.\-h}}
+\subsubsection[{E\-O\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-O\-F~-\/1}}\label{tff_8h_a59adc4c82490d23754cd39c2fb99b0da}
+
+
+Definition at line 191 of file tff.\-h.
+
+\hypertarget{tff_8h_ad3b47fe8126573b17752a9a242b76b9a}{\index{tff.\-h@{tff.\-h}!F\-A\-\_\-\-\_\-\-E\-R\-R\-O\-R@{F\-A\-\_\-\-\_\-\-E\-R\-R\-O\-R}}
+\index{F\-A\-\_\-\-\_\-\-E\-R\-R\-O\-R@{F\-A\-\_\-\-\_\-\-E\-R\-R\-O\-R}!tff.h@{tff.\-h}}
+\subsubsection[{F\-A\-\_\-\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-\_\-\-\_\-\-E\-R\-R\-O\-R~0x80}}\label{tff_8h_ad3b47fe8126573b17752a9a242b76b9a}
+
+
+Definition at line 217 of file tff.\-h.
+
+
+
+Referenced by f\-\_\-lseek(), f\-\_\-read(), f\-\_\-truncate(), and f\-\_\-write().
+
+\hypertarget{tff_8h_ac4b7d5223f84df91c306ffbff536fae4}{\index{tff.\-h@{tff.\-h}!F\-A\-\_\-\-\_\-\-W\-R\-I\-T\-T\-E\-N@{F\-A\-\_\-\-\_\-\-W\-R\-I\-T\-T\-E\-N}}
+\index{F\-A\-\_\-\-\_\-\-W\-R\-I\-T\-T\-E\-N@{F\-A\-\_\-\-\_\-\-W\-R\-I\-T\-T\-E\-N}!tff.h@{tff.\-h}}
+\subsubsection[{F\-A\-\_\-\-\_\-\-W\-R\-I\-T\-T\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-\_\-\-\_\-\-W\-R\-I\-T\-T\-E\-N~0x20}}\label{tff_8h_ac4b7d5223f84df91c306ffbff536fae4}
+
+
+Definition at line 215 of file tff.\-h.
+
+
+
+Referenced by f\-\_\-lseek(), f\-\_\-open(), f\-\_\-sync(), f\-\_\-truncate(), and f\-\_\-write().
+
+\hypertarget{tff_8h_afba4546b131dea4b24727fa20a80e29f}{\index{tff.\-h@{tff.\-h}!F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-A\-L\-W\-A\-Y\-S@{F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-A\-L\-W\-A\-Y\-S}}
+\index{F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-A\-L\-W\-A\-Y\-S@{F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-A\-L\-W\-A\-Y\-S}!tff.h@{tff.\-h}}
+\subsubsection[{F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-A\-L\-W\-A\-Y\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-A\-L\-W\-A\-Y\-S~0x08}}\label{tff_8h_afba4546b131dea4b24727fa20a80e29f}
+
+
+Definition at line 213 of file tff.\-h.
+
+
+
+Referenced by f\-\_\-open().
+
+\hypertarget{tff_8h_a417bb1babd1785fd181a806b5613eba3}{\index{tff.\-h@{tff.\-h}!F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-N\-E\-W@{F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-N\-E\-W}}
+\index{F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-N\-E\-W@{F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-N\-E\-W}!tff.h@{tff.\-h}}
+\subsubsection[{F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-N\-E\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-\_\-\-C\-R\-E\-A\-T\-E\-\_\-\-N\-E\-W~0x04}}\label{tff_8h_a417bb1babd1785fd181a806b5613eba3}
+
+
+Definition at line 212 of file tff.\-h.
+
+
+
+Referenced by f\-\_\-open().
+
+\hypertarget{tff_8h_a17b01553029920ac0468912b4bcb16c7}{\index{tff.\-h@{tff.\-h}!F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-A\-L\-W\-A\-Y\-S@{F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-A\-L\-W\-A\-Y\-S}}
+\index{F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-A\-L\-W\-A\-Y\-S@{F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-A\-L\-W\-A\-Y\-S}!tff.h@{tff.\-h}}
+\subsubsection[{F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-A\-L\-W\-A\-Y\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-A\-L\-W\-A\-Y\-S~0x10}}\label{tff_8h_a17b01553029920ac0468912b4bcb16c7}
+
+
+Definition at line 214 of file tff.\-h.
+
+
+
+Referenced by f\-\_\-open().
+
+\hypertarget{tff_8h_a0c5dd686b10f84c2a2b3954957a5979a}{\index{tff.\-h@{tff.\-h}!F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-E\-X\-I\-S\-T\-I\-N\-G@{F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-E\-X\-I\-S\-T\-I\-N\-G}}
+\index{F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-E\-X\-I\-S\-T\-I\-N\-G@{F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-E\-X\-I\-S\-T\-I\-N\-G}!tff.h@{tff.\-h}}
+\subsubsection[{F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-E\-X\-I\-S\-T\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-\_\-\-O\-P\-E\-N\-\_\-\-E\-X\-I\-S\-T\-I\-N\-G~0x00}}\label{tff_8h_a0c5dd686b10f84c2a2b3954957a5979a}
+
+
+Definition at line 209 of file tff.\-h.
+
+\hypertarget{tff_8h_a1f4f3530ff03abbd979b072536e72290}{\index{tff.\-h@{tff.\-h}!F\-A\-\_\-\-R\-E\-A\-D@{F\-A\-\_\-\-R\-E\-A\-D}}
+\index{F\-A\-\_\-\-R\-E\-A\-D@{F\-A\-\_\-\-R\-E\-A\-D}!tff.h@{tff.\-h}}
+\subsubsection[{F\-A\-\_\-\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-\_\-\-R\-E\-A\-D~0x01}}\label{tff_8h_a1f4f3530ff03abbd979b072536e72290}
+
+
+Definition at line 208 of file tff.\-h.
+
+
+
+Referenced by f\-\_\-open(), and f\-\_\-read().
+
+\hypertarget{tff_8h_afa366963220c89b882c0361794020c14}{\index{tff.\-h@{tff.\-h}!F\-A\-\_\-\-W\-R\-I\-T\-E@{F\-A\-\_\-\-W\-R\-I\-T\-E}}
+\index{F\-A\-\_\-\-W\-R\-I\-T\-E@{F\-A\-\_\-\-W\-R\-I\-T\-E}!tff.h@{tff.\-h}}
+\subsubsection[{F\-A\-\_\-\-W\-R\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-A\-\_\-\-W\-R\-I\-T\-E~0x02}}\label{tff_8h_afa366963220c89b882c0361794020c14}
+
+
+Definition at line 211 of file tff.\-h.
+
+
+
+Referenced by f\-\_\-lseek(), f\-\_\-open(), f\-\_\-truncate(), and f\-\_\-write().
+
+\hypertarget{tff_8h_abdbcea489d520f885acf0905c826a8af}{\index{tff.\-h@{tff.\-h}!feof@{feof}}
+\index{feof@{feof}!tff.h@{tff.\-h}}
+\subsubsection[{feof}]{\setlength{\rightskip}{0pt plus 5cm}\#define feof(
+\begin{DoxyParamCaption}
+\item[{}]{fp}
+\end{DoxyParamCaption}
+)~((fp)-\/$>$fptr == (fp)-\/$>${\bf fsize})}}\label{tff_8h_abdbcea489d520f885acf0905c826a8af}
+
+
+Definition at line 190 of file tff.\-h.
+
+\hypertarget{tff_8h_aab755aa1b4f81f4aabee4a5d4738cfb0}{\index{tff.\-h@{tff.\-h}!F\-S\-\_\-\-F\-A\-T12@{F\-S\-\_\-\-F\-A\-T12}}
+\index{F\-S\-\_\-\-F\-A\-T12@{F\-S\-\_\-\-F\-A\-T12}!tff.h@{tff.\-h}}
+\subsubsection[{F\-S\-\_\-\-F\-A\-T12}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-S\-\_\-\-F\-A\-T12~1}}\label{tff_8h_aab755aa1b4f81f4aabee4a5d4738cfb0}
+
+
+Definition at line 222 of file tff.\-h.
+
+\hypertarget{tff_8h_a7ef90a36d99edfc0138a2155a17a79b9}{\index{tff.\-h@{tff.\-h}!F\-S\-\_\-\-F\-A\-T16@{F\-S\-\_\-\-F\-A\-T16}}
+\index{F\-S\-\_\-\-F\-A\-T16@{F\-S\-\_\-\-F\-A\-T16}!tff.h@{tff.\-h}}
+\subsubsection[{F\-S\-\_\-\-F\-A\-T16}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-S\-\_\-\-F\-A\-T16~2}}\label{tff_8h_a7ef90a36d99edfc0138a2155a17a79b9}
+
+
+Definition at line 223 of file tff.\-h.
+
+\hypertarget{tff_8h_ac63e0796095a789cefdbc3c3c676c9ce}{\index{tff.\-h@{tff.\-h}!F\-S\-\_\-\-F\-A\-T32@{F\-S\-\_\-\-F\-A\-T32}}
+\index{F\-S\-\_\-\-F\-A\-T32@{F\-S\-\_\-\-F\-A\-T32}!tff.h@{tff.\-h}}
+\subsubsection[{F\-S\-\_\-\-F\-A\-T32}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-S\-\_\-\-F\-A\-T32~3}}\label{tff_8h_ac63e0796095a789cefdbc3c3c676c9ce}
+
+
+Definition at line 224 of file tff.\-h.
+
+\hypertarget{tff_8h_ab711e50459aba01b11c6b46a7cc1410b}{\index{tff.\-h@{tff.\-h}!F\-S\-I\-\_\-\-Free\-\_\-\-Count@{F\-S\-I\-\_\-\-Free\-\_\-\-Count}}
+\index{F\-S\-I\-\_\-\-Free\-\_\-\-Count@{F\-S\-I\-\_\-\-Free\-\_\-\-Count}!tff.h@{tff.\-h}}
+\subsubsection[{F\-S\-I\-\_\-\-Free\-\_\-\-Count}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-S\-I\-\_\-\-Free\-\_\-\-Count~488}}\label{tff_8h_ab711e50459aba01b11c6b46a7cc1410b}
+
+
+Definition at line 277 of file tff.\-h.
+
+\hypertarget{tff_8h_a318e58c1966aba52b90ab98dcb649883}{\index{tff.\-h@{tff.\-h}!F\-S\-I\-\_\-\-Lead\-Sig@{F\-S\-I\-\_\-\-Lead\-Sig}}
+\index{F\-S\-I\-\_\-\-Lead\-Sig@{F\-S\-I\-\_\-\-Lead\-Sig}!tff.h@{tff.\-h}}
+\subsubsection[{F\-S\-I\-\_\-\-Lead\-Sig}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-S\-I\-\_\-\-Lead\-Sig~0}}\label{tff_8h_a318e58c1966aba52b90ab98dcb649883}
+
+
+Definition at line 275 of file tff.\-h.
+
+\hypertarget{tff_8h_a320700cedf300c9b418edf56e5e6b086}{\index{tff.\-h@{tff.\-h}!F\-S\-I\-\_\-\-Nxt\-\_\-\-Free@{F\-S\-I\-\_\-\-Nxt\-\_\-\-Free}}
+\index{F\-S\-I\-\_\-\-Nxt\-\_\-\-Free@{F\-S\-I\-\_\-\-Nxt\-\_\-\-Free}!tff.h@{tff.\-h}}
+\subsubsection[{F\-S\-I\-\_\-\-Nxt\-\_\-\-Free}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-S\-I\-\_\-\-Nxt\-\_\-\-Free~492}}\label{tff_8h_a320700cedf300c9b418edf56e5e6b086}
+
+
+Definition at line 278 of file tff.\-h.
+
+\hypertarget{tff_8h_a3bac0e6ff5907873030db1d0a7c4ebef}{\index{tff.\-h@{tff.\-h}!F\-S\-I\-\_\-\-Struc\-Sig@{F\-S\-I\-\_\-\-Struc\-Sig}}
+\index{F\-S\-I\-\_\-\-Struc\-Sig@{F\-S\-I\-\_\-\-Struc\-Sig}!tff.h@{tff.\-h}}
+\subsubsection[{F\-S\-I\-\_\-\-Struc\-Sig}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-S\-I\-\_\-\-Struc\-Sig~484}}\label{tff_8h_a3bac0e6ff5907873030db1d0a7c4ebef}
+
+
+Definition at line 276 of file tff.\-h.
+
+\hypertarget{tff_8h_a4690304ddc975516f7dc02575c96e34e}{\index{tff.\-h@{tff.\-h}!L\-D\-\_\-\-D\-W\-O\-R\-D@{L\-D\-\_\-\-D\-W\-O\-R\-D}}
+\index{L\-D\-\_\-\-D\-W\-O\-R\-D@{L\-D\-\_\-\-D\-W\-O\-R\-D}!tff.h@{tff.\-h}}
+\subsubsection[{L\-D\-\_\-\-D\-W\-O\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-D\-\_\-\-D\-W\-O\-R\-D(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~({\bf dword})($\ast$({\bf dword}$\ast$)({\bf byte}$\ast$)(ptr))}}\label{tff_8h_a4690304ddc975516f7dc02575c96e34e}
+
+
+Definition at line 299 of file tff.\-h.
+
+\hypertarget{tff_8h_a398519bb08da6457e62567d1f0b567e3}{\index{tff.\-h@{tff.\-h}!L\-D\-\_\-\-W\-O\-R\-D@{L\-D\-\_\-\-W\-O\-R\-D}}
+\index{L\-D\-\_\-\-W\-O\-R\-D@{L\-D\-\_\-\-W\-O\-R\-D}!tff.h@{tff.\-h}}
+\subsubsection[{L\-D\-\_\-\-W\-O\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-D\-\_\-\-W\-O\-R\-D(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)~({\bf word})($\ast$({\bf word}$\ast$)({\bf byte}$\ast$)(ptr))}}\label{tff_8h_a398519bb08da6457e62567d1f0b567e3}
+
+
+Definition at line 298 of file tff.\-h.
+
+\hypertarget{tff_8h_ac3f187bf0ba891551f594af6b61f3188}{\index{tff.\-h@{tff.\-h}!M\-B\-R\-\_\-\-Table@{M\-B\-R\-\_\-\-Table}}
+\index{M\-B\-R\-\_\-\-Table@{M\-B\-R\-\_\-\-Table}!tff.h@{tff.\-h}}
+\subsubsection[{M\-B\-R\-\_\-\-Table}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-B\-R\-\_\-\-Table~446}}\label{tff_8h_ac3f187bf0ba891551f594af6b61f3188}
+
+
+Definition at line 280 of file tff.\-h.
+
+\hypertarget{tff_8h_afb543768443893928a6914a4d81e4817}{\index{tff.\-h@{tff.\-h}!S\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z@{S\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z}}
+\index{S\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z@{S\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z}!tff.h@{tff.\-h}}
+\subsubsection[{S\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z~512\-U			/$\ast$ Do not change $\ast$/}}\label{tff_8h_afb543768443893928a6914a4d81e4817}
+
+
+Definition at line 73 of file tff.\-h.
+
+\hypertarget{tff_8h_adf4f3cf1022d258ab04973295aeadb7a}{\index{tff.\-h@{tff.\-h}!S\-S\-Z@{S\-S\-Z}}
+\index{S\-S\-Z@{S\-S\-Z}!tff.h@{tff.\-h}}
+\subsubsection[{S\-S\-Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-S\-Z(
+\begin{DoxyParamCaption}
+\item[{}]{fs}
+\end{DoxyParamCaption}
+)~512\-U}}\label{tff_8h_adf4f3cf1022d258ab04973295aeadb7a}
+
+
+Definition at line 77 of file tff.\-h.
+
+\hypertarget{tff_8h_abf5aba973d95ac5843b80aa7379cdd66}{\index{tff.\-h@{tff.\-h}!S\-T\-\_\-\-D\-W\-O\-R\-D@{S\-T\-\_\-\-D\-W\-O\-R\-D}}
+\index{S\-T\-\_\-\-D\-W\-O\-R\-D@{S\-T\-\_\-\-D\-W\-O\-R\-D}!tff.h@{tff.\-h}}
+\subsubsection[{S\-T\-\_\-\-D\-W\-O\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-\_\-\-D\-W\-O\-R\-D(
+\begin{DoxyParamCaption}
+\item[{}]{ptr, }
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~$\ast$({\bf dword}$\ast$)({\bf byte}$\ast$)(ptr)=({\bf dword})(val)}}\label{tff_8h_abf5aba973d95ac5843b80aa7379cdd66}
+
+
+Definition at line 301 of file tff.\-h.
+
+\hypertarget{tff_8h_a95ceb4c25b216e71baa7102939edfd0d}{\index{tff.\-h@{tff.\-h}!S\-T\-\_\-\-W\-O\-R\-D@{S\-T\-\_\-\-W\-O\-R\-D}}
+\index{S\-T\-\_\-\-W\-O\-R\-D@{S\-T\-\_\-\-W\-O\-R\-D}!tff.h@{tff.\-h}}
+\subsubsection[{S\-T\-\_\-\-W\-O\-R\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-T\-\_\-\-W\-O\-R\-D(
+\begin{DoxyParamCaption}
+\item[{}]{ptr, }
+\item[{}]{val}
+\end{DoxyParamCaption}
+)~$\ast$({\bf word}$\ast$)({\bf byte}$\ast$)(ptr)=({\bf word})(val)}}\label{tff_8h_a95ceb4c25b216e71baa7102939edfd0d}
+
+
+Definition at line 300 of file tff.\-h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{tff_8h_af322b62389c843d5727de4796a09f59c}{\index{tff.\-h@{tff.\-h}!C\-L\-U\-S\-T@{C\-L\-U\-S\-T}}
+\index{C\-L\-U\-S\-T@{C\-L\-U\-S\-T}!tff.h@{tff.\-h}}
+\subsubsection[{C\-L\-U\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf word} {\bf C\-L\-U\-S\-T}}}\label{tff_8h_af322b62389c843d5727de4796a09f59c}
+
+
+Definition at line 68 of file tff.\-h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44c}{\index{tff.\-h@{tff.\-h}!F\-R\-E\-S\-U\-L\-T@{F\-R\-E\-S\-U\-L\-T}}
+\index{F\-R\-E\-S\-U\-L\-T@{F\-R\-E\-S\-U\-L\-T}!tff.h@{tff.\-h}}
+\subsubsection[{F\-R\-E\-S\-U\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf F\-R\-E\-S\-U\-L\-T}}}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44c}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{F\-R\-\_\-\-O\-K@{F\-R\-\_\-\-O\-K}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-O\-K@{F\-R\-\_\-\-O\-K}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{F\-R\-\_\-\-O\-K}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}
+}]\index{F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R@{F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R@{F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97dee4a6b485dc8f91f37486092dfe34}{F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97dee4a6b485dc8f91f37486092dfe34}
+}]\index{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y@{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y@{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cac9894bed3e8632ede8d2712235fa8e45}{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cac9894bed3e8632ede8d2712235fa8e45}
+}]\index{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}
+}]\index{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H@{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H@{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cae4529c8cc8b59783d6efc9ba4f574532}{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cae4529c8cc8b59783d6efc9ba4f574532}
+}]\index{F\-R\-\_\-\-N\-O\-T\-\_\-\-O\-P\-E\-N\-E\-D@{F\-R\-\_\-\-N\-O\-T\-\_\-\-O\-P\-E\-N\-E\-D}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-T\-\_\-\-O\-P\-E\-N\-E\-D@{F\-R\-\_\-\-N\-O\-T\-\_\-\-O\-P\-E\-N\-E\-D}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca196c8de0d4f775323f10ab831adc856e}{F\-R\-\_\-\-N\-O\-T\-\_\-\-O\-P\-E\-N\-E\-D}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca196c8de0d4f775323f10ab831adc856e}
+}]\index{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D@{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D@{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cafc56605c68aaffab4a428339a8bd600d}{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cafc56605c68aaffab4a428339a8bd600d}
+}]\index{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca086154b5fee763f28c49fd0e2c1cb463}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca086154b5fee763f28c49fd0e2c1cb463}
+}]\index{F\-R\-\_\-\-O\-K@{F\-R\-\_\-\-O\-K}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-O\-K@{F\-R\-\_\-\-O\-K}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{F\-R\-\_\-\-O\-K}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}
+}]\index{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y@{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y@{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cac9894bed3e8632ede8d2712235fa8e45}{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cac9894bed3e8632ede8d2712235fa8e45}
+}]\index{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}
+}]\index{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H@{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H@{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cae4529c8cc8b59783d6efc9ba4f574532}{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cae4529c8cc8b59783d6efc9ba4f574532}
+}]\index{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca83e45a4b579558c57192c0a391b9bb45}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca83e45a4b579558c57192c0a391b9bb45}
+}]\index{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca487844af77de15f6932a3b41ef3a2d65}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca487844af77de15f6932a3b41ef3a2d65}
+}]\index{F\-R\-\_\-\-D\-E\-N\-I\-E\-D@{F\-R\-\_\-\-D\-E\-N\-I\-E\-D}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-D\-E\-N\-I\-E\-D@{F\-R\-\_\-\-D\-E\-N\-I\-E\-D}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{F\-R\-\_\-\-D\-E\-N\-I\-E\-D}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}
+}]\index{F\-R\-\_\-\-E\-X\-I\-S\-T@{F\-R\-\_\-\-E\-X\-I\-S\-T}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-E\-X\-I\-S\-T@{F\-R\-\_\-\-E\-X\-I\-S\-T}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca0d8f024d256df76e84782b95018a2450}{F\-R\-\_\-\-E\-X\-I\-S\-T}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca0d8f024d256df76e84782b95018a2450}
+}]\index{F\-R\-\_\-\-R\-W\-\_\-\-E\-R\-R\-O\-R@{F\-R\-\_\-\-R\-W\-\_\-\-E\-R\-R\-O\-R}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-R\-W\-\_\-\-E\-R\-R\-O\-R@{F\-R\-\_\-\-R\-W\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{F\-R\-\_\-\-R\-W\-\_\-\-E\-R\-R\-O\-R}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}
+}]\index{F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D@{F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D@{F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cac3afbb423b1d4497229416812aff383b}{F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cac3afbb423b1d4497229416812aff383b}
+}]\index{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D@{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D@{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cafc56605c68aaffab4a428339a8bd600d}{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cafc56605c68aaffab4a428339a8bd600d}
+}]\index{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca086154b5fee763f28c49fd0e2c1cb463}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca086154b5fee763f28c49fd0e2c1cb463}
+}]\index{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca3dec4eba481cdf5e99d7cd6009e6dcf8}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca3dec4eba481cdf5e99d7cd6009e6dcf8}
+}]\index{F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D@{F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D@{F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca4b02760f758f5b1a89f445244fe9fbca}{F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca4b02760f758f5b1a89f445244fe9fbca}
+}]\index{F\-R\-\_\-\-O\-K@{F\-R\-\_\-\-O\-K}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-O\-K@{F\-R\-\_\-\-O\-K}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{F\-R\-\_\-\-O\-K}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}
+}]\index{F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R@{F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R@{F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97dee4a6b485dc8f91f37486092dfe34}{F\-R\-\_\-\-D\-I\-S\-K\-\_\-\-E\-R\-R}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97dee4a6b485dc8f91f37486092dfe34}
+}]\index{F\-R\-\_\-\-I\-N\-T\-\_\-\-E\-R\-R@{F\-R\-\_\-\-I\-N\-T\-\_\-\-E\-R\-R}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-I\-N\-T\-\_\-\-E\-R\-R@{F\-R\-\_\-\-I\-N\-T\-\_\-\-E\-R\-R}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cab6c9903af6e9bffbb7a288705f4a6a76}{F\-R\-\_\-\-I\-N\-T\-\_\-\-E\-R\-R}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cab6c9903af6e9bffbb7a288705f4a6a76}
+}]\index{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y@{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y@{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cac9894bed3e8632ede8d2712235fa8e45}{F\-R\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-Y}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cac9894bed3e8632ede8d2712235fa8e45}
+}]\index{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}
+}]\index{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H@{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H@{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cae4529c8cc8b59783d6efc9ba4f574532}{F\-R\-\_\-\-N\-O\-\_\-\-P\-A\-T\-H}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cae4529c8cc8b59783d6efc9ba4f574532}
+}]\index{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca83e45a4b579558c57192c0a391b9bb45}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-N\-A\-M\-E}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca83e45a4b579558c57192c0a391b9bb45}
+}]\index{F\-R\-\_\-\-D\-E\-N\-I\-E\-D@{F\-R\-\_\-\-D\-E\-N\-I\-E\-D}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-D\-E\-N\-I\-E\-D@{F\-R\-\_\-\-D\-E\-N\-I\-E\-D}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{F\-R\-\_\-\-D\-E\-N\-I\-E\-D}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}
+}]\index{F\-R\-\_\-\-E\-X\-I\-S\-T@{F\-R\-\_\-\-E\-X\-I\-S\-T}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-E\-X\-I\-S\-T@{F\-R\-\_\-\-E\-X\-I\-S\-T}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca0d8f024d256df76e84782b95018a2450}{F\-R\-\_\-\-E\-X\-I\-S\-T}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca0d8f024d256df76e84782b95018a2450}
+}]\index{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca3dec4eba481cdf5e99d7cd6009e6dcf8}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-B\-J\-E\-C\-T}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca3dec4eba481cdf5e99d7cd6009e6dcf8}
+}]\index{F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D@{F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D@{F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cac3afbb423b1d4497229416812aff383b}{F\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-P\-R\-O\-T\-E\-C\-T\-E\-D}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cac3afbb423b1d4497229416812aff383b}
+}]\index{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca487844af77de15f6932a3b41ef3a2d65}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-D\-R\-I\-V\-E}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca487844af77de15f6932a3b41ef3a2d65}
+}]\index{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D@{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D@{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44cafc56605c68aaffab4a428339a8bd600d}{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-A\-B\-L\-E\-D}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44cafc56605c68aaffab4a428339a8bd600d}
+}]\index{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M@{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca086154b5fee763f28c49fd0e2c1cb463}{F\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E\-S\-Y\-S\-T\-E\-M}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca086154b5fee763f28c49fd0e2c1cb463}
+}]\index{F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D@{F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D@{F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca4b02760f758f5b1a89f445244fe9fbca}{F\-R\-\_\-\-M\-K\-F\-S\-\_\-\-A\-B\-O\-R\-T\-E\-D}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca4b02760f758f5b1a89f445244fe9fbca}
+}]\index{F\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T@{F\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T@{F\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca3f8ca7e51af8b129d14328de7243c5d4}{F\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca3f8ca7e51af8b129d14328de7243c5d4}
+}]\index{F\-R\-\_\-\-L\-O\-C\-K\-E\-D@{F\-R\-\_\-\-L\-O\-C\-K\-E\-D}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-L\-O\-C\-K\-E\-D@{F\-R\-\_\-\-L\-O\-C\-K\-E\-D}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca7db5afaaa2af591bd4a208b2967075d7}{F\-R\-\_\-\-L\-O\-C\-K\-E\-D}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca7db5afaaa2af591bd4a208b2967075d7}
+}]\index{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-O\-U\-G\-H\-\_\-\-C\-O\-R\-E@{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-O\-U\-G\-H\-\_\-\-C\-O\-R\-E}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-O\-U\-G\-H\-\_\-\-C\-O\-R\-E@{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-O\-U\-G\-H\-\_\-\-C\-O\-R\-E}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44caf56a76a86602cbdeb2c4f3d00cfad21c}{F\-R\-\_\-\-N\-O\-T\-\_\-\-E\-N\-O\-U\-G\-H\-\_\-\-C\-O\-R\-E}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44caf56a76a86602cbdeb2c4f3d00cfad21c}
+}]\index{F\-R\-\_\-\-T\-O\-O\-\_\-\-M\-A\-N\-Y\-\_\-\-O\-P\-E\-N\-\_\-\-F\-I\-L\-E\-S@{F\-R\-\_\-\-T\-O\-O\-\_\-\-M\-A\-N\-Y\-\_\-\-O\-P\-E\-N\-\_\-\-F\-I\-L\-E\-S}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-T\-O\-O\-\_\-\-M\-A\-N\-Y\-\_\-\-O\-P\-E\-N\-\_\-\-F\-I\-L\-E\-S@{F\-R\-\_\-\-T\-O\-O\-\_\-\-M\-A\-N\-Y\-\_\-\-O\-P\-E\-N\-\_\-\-F\-I\-L\-E\-S}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca50dd3c3c274ccebb2cfbddde9d065bb9}{F\-R\-\_\-\-T\-O\-O\-\_\-\-M\-A\-N\-Y\-\_\-\-O\-P\-E\-N\-\_\-\-F\-I\-L\-E\-S}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca50dd3c3c274ccebb2cfbddde9d065bb9}
+}]\index{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R}!tff.\-h@{tff.\-h}}\index{tff.\-h@{tff.\-h}!F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R@{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R}}\item[{\em 
+\hypertarget{tff_8h_a49d0171ecbd362cda5680a0d360db44ca3b89faeceab64db277d0fcdeaaa315d6}{F\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-A\-R\-A\-M\-E\-T\-E\-R}\label{tff_8h_a49d0171ecbd362cda5680a0d360db44ca3b89faeceab64db277d0fcdeaaa315d6}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 149 of file tff.\-h.
+
+
+\begin{DoxyCode}
+149              \{
+150     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK} = 0,         \textcolor{comment}{/* 0 */}
+151     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44cac9894bed3e8632ede8d2712235fa8e45}{FR\_NOT\_READY},       \textcolor{comment}{/* 1 */}
+152     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{FR\_NO\_FILE},           \textcolor{comment}{/* 2 */}
+153     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44cae4529c8cc8b59783d6efc9ba4f574532}{FR\_NO\_PATH},           \textcolor{comment}{/* 3 */}
+154     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca83e45a4b579558c57192c0a391b9bb45}{FR\_INVALID\_NAME}, \textcolor{comment}{/* 4 */}
+155     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca487844af77de15f6932a3b41ef3a2d65}{FR\_INVALID\_DRIVE},   \textcolor{comment}{/* 5 */}
+156     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{FR\_DENIED},         \textcolor{comment}{/* 6 */}
+157     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca0d8f024d256df76e84782b95018a2450}{FR\_EXIST},           \textcolor{comment}{/* 7 */}
+158     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR},     \textcolor{comment}{/* 8 */}
+159     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44cac3afbb423b1d4497229416812aff383b}{FR\_WRITE\_PROTECTED},   \textcolor{comment}{/* 9 */}
+160     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44cafc56605c68aaffab4a428339a8bd600d}{FR\_NOT\_ENABLED},       \textcolor{comment}{/* 10 */}
+161     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca086154b5fee763f28c49fd0e2c1cb463}{FR\_NO\_FILESYSTEM},   \textcolor{comment}{/* 11 */}
+162     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca3dec4eba481cdf5e99d7cd6009e6dcf8}{FR\_INVALID\_OBJECT}, \textcolor{comment}{/* 12 */}
+163     \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca4b02760f758f5b1a89f445244fe9fbca}{FR\_MKFS\_ABORTED}      \textcolor{comment}{/* 13 (not used) */}
+164 \} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44c}{FRESULT};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{tff_8h_a8dc5eb46180da67309d729c91a01cd9d}{\index{tff.\-h@{tff.\-h}!f\-\_\-chmod@{f\-\_\-chmod}}
+\index{f\-\_\-chmod@{f\-\_\-chmod}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-chmod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-chmod (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf byte}}]{, }
+\item[{{\bf byte}}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a8dc5eb46180da67309d729c91a01cd9d}
+
+
+Definition at line 1550 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1555 \{
+1556 \textcolor{comment}{//  FRESULT res;}
+1557 \textcolor{comment}{//  DIR dj;}
+1558 \textcolor{comment}{//  byte *dir;}
+1559 \textcolor{comment}{//  char fn[8+3+1];}
+1560 
+1561 
+1562     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = auto\_mount(&path, 1);
+1563     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{
+1564         \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = trace\_path(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, path, &\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir});    \textcolor{comment}{/* Trace the file path */}
+1565         \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{             \textcolor{comment}{/* Trace completed */}
+1566             \textcolor{keywordflow}{if} (!\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}) \{
+1567                 \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca83e45a4b579558c57192c0a391b9bb45}{FR\_INVALID\_NAME};    \textcolor{comment}{/* Root directory */}
+1568             \} \textcolor{keywordflow}{else} \{
+1569                 mask &= \hyperlink{pff_8h_add6d85d1e7a02b4f6188783ef91a5f1e}{AM\_RDO}|\hyperlink{pff_8h_aa90c4c921c1955fd407d8bbf17f1674e}{AM\_HID}|\hyperlink{pff_8h_a1f25d5c17b5a3a6397b3398add8cdc15}{AM\_SYS}|\hyperlink{pff_8h_ae8174d00798e34e7c9e95898cb9e1a09}{AM\_ARC};    \textcolor{comment}{/* Valid attribute mask */}
+1570                 \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] = (value & mask) | (\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] & (
+      \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})~mask);    \textcolor{comment}{/* Apply attribute change */}
+1571                 \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = sync();
+1572             \}
+1573         \}
+1574     \}
+1575     \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1576 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_a004f8ebf5a01c5c7065292cc4545bc38}{\index{tff.\-h@{tff.\-h}!f\-\_\-close@{f\-\_\-close}}
+\index{f\-\_\-close@{f\-\_\-close}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-close (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a004f8ebf5a01c5c7065292cc4545bc38}
+
+
+Definition at line 1098 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1101 \{
+1102 \textcolor{comment}{//  FRESULT res;}
+1103 
+1104 
+1105 \textcolor{preprocessor}{#if !\_FS\_READONLY}
+1106 \textcolor{preprocessor}{}    \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = \hyperlink{tff_8c_ad69c7246b122ba56a134939ee0eaf847}{f\_sync}(fp);
+1107 \textcolor{preprocessor}{#else}
+1108 \textcolor{preprocessor}{}    \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = validate(fp->fs, fp->id);
+1109 \textcolor{preprocessor}{#endif}
+1110 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) fp->fs = \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};
+1111     \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1112 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_a96258cc8fbf954a2068aa757ef2b1dd9}{\index{tff.\-h@{tff.\-h}!f\-\_\-forward@{f\-\_\-forward}}
+\index{f\-\_\-forward@{f\-\_\-forward}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-forward}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-forward (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L} $\ast$}]{, }
+\item[{{\bf word}($\ast$)(const {\bf byte} $\ast$, {\bf word})}]{, }
+\item[{{\bf word}}]{, }
+\item[{{\bf word} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a96258cc8fbf954a2068aa757ef2b1dd9}
+\hypertarget{tff_8h_ac255d7c24cae9e840bfdd158c238d2db}{\index{tff.\-h@{tff.\-h}!f\-\_\-getfree@{f\-\_\-getfree}}
+\index{f\-\_\-getfree@{f\-\_\-getfree}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-getfree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-getfree (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf dword} $\ast$}]{, }
+\item[{{\bf F\-A\-T\-F\-S} $\ast$$\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_ac255d7c24cae9e840bfdd158c238d2db}
+
+
+Definition at line 1359 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1364 \{
+1365 \textcolor{comment}{//  FRESULT res;}
+1366     \hyperlink{struct_f_a_t_f_s}{FATFS} *fs;
+1367     \hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword} n, sect;
+1368     \hyperlink{tff_8h_af322b62389c843d5727de4796a09f59c}{CLUST} clust;
+1369     \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} fat, f, *p;
+1370 
+1371 
+1372     \textcolor{comment}{/* Get drive number */}
+1373     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = auto\_mount(&drv, 0);
+1374     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1375     *fatfs = fs = FatFs;
+1376 
+1377     \textcolor{comment}{/* If number of free cluster is valid, return it without cluster scan. */}
+1378     \textcolor{keywordflow}{if} (fs->\hyperlink{struct_f_a_t_f_s_a7976c77220d4840b68e2aef308c770e5}{free\_clust} <= fs->\hyperlink{struct_f_a_t_f_s_aa628566fa0882ed951ed01fc6f20ff1b}{max\_clust} - 2) \{
+1379         *nclust = fs->\hyperlink{struct_f_a_t_f_s_a7976c77220d4840b68e2aef308c770e5}{free\_clust};
+1380         \textcolor{keywordflow}{return} \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK};
+1381     \}
+1382 
+1383     \textcolor{comment}{/* Get number of free clusters */}
+1384     fat = fs->\hyperlink{struct_f_a_t_f_s_aee58d0bf64f06146927e78ad026b06ac}{fs\_type};
+1385     n = 0;
+1386     \textcolor{keywordflow}{if} (fat == \hyperlink{pff_8h_aab755aa1b4f81f4aabee4a5d4738cfb0}{FS\_FAT12}) \{
+1387         clust = 2;
+1388         \textcolor{keywordflow}{do} \{
+1389             \textcolor{keywordflow}{if} ((\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})get\_cluster(clust) == 0) n++;
+1390         \} \textcolor{keywordflow}{while} (++clust < fs->max\_clust);
+1391     \} \textcolor{keywordflow}{else} \{
+1392         clust = fs->\hyperlink{struct_f_a_t_f_s_aa628566fa0882ed951ed01fc6f20ff1b}{max\_clust};
+1393         sect = fs->\hyperlink{struct_f_a_t_f_s_a4c158f002bd87f70c1595baef8888d96}{fatbase};
+1394         f = 0; p = 0;
+1395         \textcolor{keywordflow}{do} \{
+1396             \textcolor{keywordflow}{if} (!f) \{
+1397                 \textcolor{keywordflow}{if} (!move\_window(sect++)) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1398                 p = fs->\hyperlink{struct_f_a_t_f_s_a54541860d8273ee2709def80ccc3e271}{win};
+1399             \}
+1400             \textcolor{keywordflow}{if} (!\hyperlink{tff_8h_a79fae83d3d8fd0b344b0e882b1f815dd}{\_FAT32} || fat == \hyperlink{pff_8h_a7ef90a36d99edfc0138a2155a17a79b9}{FS\_FAT16}) \{
+1401                 \textcolor{keywordflow}{if} (\hyperlink{pff_8h_a398519bb08da6457e62567d1f0b567e3}{LD\_WORD}(p) == 0) n++;
+1402                 p += 2; f += 1;
+1403             \} \textcolor{keywordflow}{else} \{
+1404                 \textcolor{keywordflow}{if} (\hyperlink{pff_8h_a4690304ddc975516f7dc02575c96e34e}{LD\_DWORD}(p) == 0) n++;
+1405                 p += 4; f += 2;
+1406             \}
+1407         \} \textcolor{keywordflow}{while} (--clust);
+1408     \}
+1409     fs->\hyperlink{struct_f_a_t_f_s_a7976c77220d4840b68e2aef308c770e5}{free\_clust} = n;
+1410 \textcolor{preprocessor}{#if \_USE\_FSINFO}
+1411 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (fat == \hyperlink{pff_8h_ac63e0796095a789cefdbc3c3c676c9ce}{FS\_FAT32}) fs->\hyperlink{struct_f_a_t_f_s_a7f248fa8f63ffcdabc347bc9467ec9bf}{fsi\_flag} = 1;
+1412 \textcolor{preprocessor}{#endif}
+1413 \textcolor{preprocessor}{}
+1414     *nclust = n;
+1415     \textcolor{keywordflow}{return} \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK};
+1416 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_aaf470a350e3d0b11941a613d6f186c54}{\index{tff.\-h@{tff.\-h}!f\-\_\-lseek@{f\-\_\-lseek}}
+\index{f\-\_\-lseek@{f\-\_\-lseek}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-lseek}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-lseek (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L} $\ast$}]{, }
+\item[{{\bf dword}}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_aaf470a350e3d0b11941a613d6f186c54}
+
+
+Definition at line 1122 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1126 \{
+1127 \textcolor{comment}{//  FRESULT res;}
+1128     \hyperlink{tff_8h_af322b62389c843d5727de4796a09f59c}{CLUST} clust;
+1129     \hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword} csize, ifptr;
+1130 
+1131 
+1132     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = validate(fp->fs, fp->id);          \textcolor{comment}{/* Check validity of the object */}
+1133     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1134     \textcolor{keywordflow}{if} (fp->flag & \hyperlink{tff_8h_ad3b47fe8126573b17752a9a242b76b9a}{FA\_\_ERROR}) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1135     \textcolor{keywordflow}{if} (ofs > fp->fsize                 \textcolor{comment}{/* In read-only mode, clip offset with the file size */}
+1136 #\textcolor{keywordflow}{if} !\hyperlink{tff_8h_afb8d35370cfe0c23832ac2d82e854ec6}{\_FS\_READONLY}
+1137          && !(fp->flag & \hyperlink{tff_8h_afa366963220c89b882c0361794020c14}{FA\_WRITE})
+1138 #endif
+1139         ) ofs = fp->fsize;
+1140 
+1141     ifptr = fp->fptr;
+1142     fp->fptr = 0; fp->csect = 255;
+1143     \textcolor{keywordflow}{if} (ofs > 0) \{
+1144         csize = (\hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword})fp->fs->csize * 512U;       \textcolor{comment}{/* Cluster size (byte) */}
+1145         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_af84ca11bf86c56a1f74027a99d48218d}{if} (ifptr > 0 &&
+1146             (ofs - 1) / csize >= (ifptr - 1) / csize) \{\textcolor{comment}{/* When seek to same or following cluster, */}
+1147             fp->fptr = (ifptr - 1) & ~(csize - 1);  \textcolor{comment}{/* start from the current cluster */}
+1148             ofs -= fp->fptr;
+1149             clust = fp->curr\_clust;
+1150         \} \textcolor{keywordflow}{else} \{                                    \textcolor{comment}{/* When seek to back cluster, */}
+1151             clust = fp->org\_clust;                  \textcolor{comment}{/* start from the first cluster */}
+1152 \textcolor{preprocessor}{#if !\_FS\_READONLY}
+1153 \textcolor{preprocessor}{}            \textcolor{keywordflow}{if} (clust == 0) \{                       \textcolor{comment}{/* If no cluster chain, create a new chain */}
+1154                 clust = create\_chain(0);
+1155                 \textcolor{keywordflow}{if} (clust == 1) \textcolor{keywordflow}{goto} fk\_error;
+1156                 fp->org\_clust = clust;
+1157             \}
+1158 \textcolor{preprocessor}{#endif}
+1159 \textcolor{preprocessor}{}            fp->curr\_clust = clust;
+1160         \}
+1161         \textcolor{keywordflow}{if} (clust != 0) \{
+1162             \textcolor{keywordflow}{while} (ofs > csize) \{                   \textcolor{comment}{/* Cluster following loop */}
+1163 \textcolor{preprocessor}{#if !\_FS\_READONLY}
+1164 \textcolor{preprocessor}{}                \textcolor{keywordflow}{if} (fp->flag & \hyperlink{tff_8h_afa366963220c89b882c0361794020c14}{FA\_WRITE}) \{          \textcolor{comment}{/* Check if in write mode or not */}
+1165                     clust = create\_chain(clust);    \textcolor{comment}{/* Force streached if in write mode */}
+1166                     \textcolor{keywordflow}{if} (clust == 0) \{               \textcolor{comment}{/* When disk gets full, clip file size */}
+1167                         ofs = csize; \textcolor{keywordflow}{break};
+1168                     \}
+1169                 \} \textcolor{keywordflow}{else}
+1170 \textcolor{preprocessor}{#endif}
+1171 \textcolor{preprocessor}{}                    clust = get\_cluster(clust);     \textcolor{comment}{/* Follow cluster chain if not in write mode */}
+1172                 \textcolor{keywordflow}{if} (clust < 2 || clust >= fp->fs->max\_clust) \textcolor{keywordflow}{goto} fk\_error;
+1173                 fp->curr\_clust = clust;
+1174                 fp->fptr += csize;
+1175                 ofs -= csize;
+1176             \}
+1177             fp->fptr += ofs;
+1178             fp->csect = (\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})(ofs / 512U); \textcolor{comment}{/* Sector offset in the cluster */}
+1179             \textcolor{keywordflow}{if} (ofs % 512U) fp->csect++;
+1180         \}
+1181     \}
+1182 
+1183 \textcolor{preprocessor}{#if !\_FS\_READONLY}
+1184 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (fp->fptr > fp->fsize) \{         \textcolor{comment}{/* Set changed flag if the file was extended */}
+1185         fp->fsize = fp->fptr;
+1186         fp->flag |= \hyperlink{tff_8h_ac4b7d5223f84df91c306ffbff536fae4}{FA\_\_WRITTEN};
+1187     \}
+1188 \textcolor{preprocessor}{#endif}
+1189 \textcolor{preprocessor}{}
+1190     \textcolor{keywordflow}{return} \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK};
+1191 
+1192 fk\_error:   \textcolor{comment}{/* Abort this file due to an unrecoverable error */}
+1193     fp->flag |= \hyperlink{tff_8h_ad3b47fe8126573b17752a9a242b76b9a}{FA\_\_ERROR};
+1194     \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1195 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_a9c19eb129fb91e8c1dcde98a8941f9eb}{\index{tff.\-h@{tff.\-h}!f\-\_\-mkdir@{f\-\_\-mkdir}}
+\index{f\-\_\-mkdir@{f\-\_\-mkdir}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-mkdir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-mkdir (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a9c19eb129fb91e8c1dcde98a8941f9eb}
+
+
+Definition at line 1478 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1481 \{
+1482 \textcolor{comment}{//  FRESULT res;}
+1483 \textcolor{comment}{//  DIR dj;}
+1484 \textcolor{comment}{//  byte *dir;}
+1485     \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} *fw, n;
+1486 \textcolor{comment}{//  char fn[8+3+1];}
+1487     \hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword} sect, dsect, tim;
+1488     \hyperlink{tff_8h_af322b62389c843d5727de4796a09f59c}{CLUST} dclust, pclust;
+1489 
+1490 
+1491     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = auto\_mount(&path, 1);
+1492     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1493     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = trace\_path(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, path, &\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir});    \textcolor{comment}{/* Trace the file path */}
+1494     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca0d8f024d256df76e84782b95018a2450}{FR\_EXIST};      \textcolor{comment}{/* Any file or directory is already existing */}
+1495     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{FR\_NO\_FILE}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1496 
+1497     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = reserve\_direntry(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, &\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir});      \textcolor{comment}{/* Reserve a directory entry */}
+1498     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1499     sect = \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_a5ee19a26d1dfd79d52fbba59cc792da3}{winsect};
+1500     dclust = create\_chain(0);               \textcolor{comment}{/* Allocate a cluster for new directory table */}
+1501     \textcolor{keywordflow}{if} (dclust == 1) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1502     dsect = \hyperlink{ff_8c_a7519abb60fe91f6aa1d17f64fbae123a}{clust2sect}(dclust);
+1503     \textcolor{keywordflow}{if} (!dsect) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{FR\_DENIED};
+1504     \textcolor{keywordflow}{if} (!move\_window(dsect)) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1505 
+1506     fw = \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_a54541860d8273ee2709def80ccc3e271}{win};
+1507     memset((\textcolor{keywordtype}{void} *)fw, 0, 512U);                    \textcolor{comment}{/* Clear the directory table */}
+1508     \textcolor{keywordflow}{for} (n = 1; n < \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_af8143a50ac7be72544022dd46a7013da}{csize}; n++) \{
+1509         \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a7ffe0ccc946550a260d00871c6b636e7}{disk\_write}(fw, ++dsect, 1) != \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}{RES\_OK})
+1510             \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1511     \}
+1512 
+1513     memset(&fw[\hyperlink{pff_8h_afa89348e9fc2de82ae9e12c661366b0e}{DIR\_Name}], \textcolor{charliteral}{' '}, 8+3);        \textcolor{comment}{/* Create "." entry */}
+1514     fw[\hyperlink{pff_8h_afa89348e9fc2de82ae9e12c661366b0e}{DIR\_Name}] = \textcolor{charliteral}{'.'};
+1515     fw[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] = \hyperlink{pff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}{AM\_DIR};
+1516     tim = \hyperlink{tff_8h_a489f23a9be58cd896a5c45e45c6e6e6f}{get\_fattime}();
+1517     \hyperlink{pff_8h_abf5aba973d95ac5843b80aa7379cdd66}{ST\_DWORD}(&fw[\hyperlink{pff_8h_ab9452d336adeece2a1b0b54ab35b8a59}{DIR\_WrtTime}], tim);
+1518     memcpy(&fw[32], &fw[0], 32); fw[33] = \textcolor{charliteral}{'.'};  \textcolor{comment}{/* Create ".." entry */}
+1519     pclust = \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_aada1acd6ce100ead798e712b18c49547}{sclust};
+1520 \textcolor{preprocessor}{#if \_FAT32}
+1521 \textcolor{preprocessor}{}    \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&fw[   \hyperlink{pff_8h_a0bc29c3f09e1e9c40c414f7d50d7905c}{DIR\_FstClusHI}], dclust >> 16);
+1522     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_aee58d0bf64f06146927e78ad026b06ac}{fs\_type} == \hyperlink{pff_8h_ac63e0796095a789cefdbc3c3c676c9ce}{FS\_FAT32} && pclust == \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->
+      \hyperlink{struct_f_a_t_f_s_a2152449dba421b7671f09ec7fcc7fa4e}{dirbase}) pclust = 0;
+1523     \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&fw[32+\hyperlink{pff_8h_a0bc29c3f09e1e9c40c414f7d50d7905c}{DIR\_FstClusHI}], pclust >> 16);
+1524 \textcolor{preprocessor}{#endif}
+1525 \textcolor{preprocessor}{}    \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&fw[   \hyperlink{pff_8h_aebe0e913bff75a89d38dbcb04baf5dff}{DIR\_FstClusLO}], dclust);
+1526     \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&fw[32+\hyperlink{pff_8h_aebe0e913bff75a89d38dbcb04baf5dff}{DIR\_FstClusLO}], pclust);
+1527     \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_ac310e0b372e8ec4195568846746d2f49}{winflag} = 1;
+1528 
+1529     \textcolor{keywordflow}{if} (!move\_window(sect)) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1530     memset(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[0], 0, 32);                      \textcolor{comment}{/* Clean-up the new entry */}
+1531     memcpy(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_afa89348e9fc2de82ae9e12c661366b0e}{DIR\_Name}], \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, 8+3);           \textcolor{comment}{/* Name */}
+1532     \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_a87ee1f701c2ab941862e3ce00c1c1e9d}{DIR\_NTres}] = \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}[11];
+1533     \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] = \hyperlink{pff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}{AM\_DIR};                        \textcolor{comment}{/* Attribute */}
+1534     \hyperlink{pff_8h_abf5aba973d95ac5843b80aa7379cdd66}{ST\_DWORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ab9452d336adeece2a1b0b54ab35b8a59}{DIR\_WrtTime}], tim);         \textcolor{comment}{/* Crated time */}
+1535     \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_aebe0e913bff75a89d38dbcb04baf5dff}{DIR\_FstClusLO}], dclust);        \textcolor{comment}{/* Table start cluster */}
+1536 \textcolor{preprocessor}{#if \_FAT32}
+1537 \textcolor{preprocessor}{}    \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_a0bc29c3f09e1e9c40c414f7d50d7905c}{DIR\_FstClusHI}], dclust >> 16);
+1538 \textcolor{preprocessor}{#endif}
+1539 \textcolor{preprocessor}{}
+1540     \textcolor{keywordflow}{return} sync();
+1541 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_aabced8314db84d8e9989204334c461be}{\index{tff.\-h@{tff.\-h}!f\-\_\-mount@{f\-\_\-mount}}
+\index{f\-\_\-mount@{f\-\_\-mount}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-mount}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-mount (
+\begin{DoxyParamCaption}
+\item[{{\bf byte}}]{, }
+\item[{{\bf F\-A\-T\-F\-S} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_aabced8314db84d8e9989204334c461be}
+
+
+Definition at line 796 of file tff.\-c.
+
+
+\begin{DoxyCode}
+800 \{
+801     \textcolor{keywordflow}{if} (drv) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca487844af77de15f6932a3b41ef3a2d65}{FR\_INVALID\_DRIVE};
+802 
+803     \textcolor{keywordflow}{if} (FatFs) FatFs->\hyperlink{struct_f_a_t_f_s_aee58d0bf64f06146927e78ad026b06ac}{fs\_type} = 0;   \textcolor{comment}{/* Clear old object */}
+804 
+805     FatFs = fs;                 \textcolor{comment}{/* Register and clear new object */}
+806     \textcolor{keywordflow}{if} (fs) fs->\hyperlink{struct_f_a_t_f_s_aee58d0bf64f06146927e78ad026b06ac}{fs\_type} = 0;
+807 
+808     \textcolor{keywordflow}{return} \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK};
+809 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_a3cc72041536a83f5f81b70962c3fbc6f}{\index{tff.\-h@{tff.\-h}!f\-\_\-open@{f\-\_\-open}}
+\index{f\-\_\-open@{f\-\_\-open}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-open (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L} $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{{\bf byte}}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a3cc72041536a83f5f81b70962c3fbc6f}
+
+
+Definition at line 818 of file tff.\-c.
+
+
+\begin{DoxyCode}
+823 \{
+824 \textcolor{comment}{//  FRESULT res;}
+825 \textcolor{comment}{//  DIR dj;}
+826 \textcolor{comment}{//  byte *dir;}
+827 \textcolor{comment}{//  char fn[8+3+1];}
+828 
+829 
+830     fp->fs = \hyperlink{p8_2pinguino_2core_2const_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL};      \textcolor{comment}{/* Clear file object */}
+831 \textcolor{preprocessor}{#if !\_FS\_READONLY}
+832 \textcolor{preprocessor}{}    mode &= (\hyperlink{tff_8h_a1f4f3530ff03abbd979b072536e72290}{FA\_READ}|\hyperlink{tff_8h_afa366963220c89b882c0361794020c14}{FA\_WRITE}|\hyperlink{tff_8h_afba4546b131dea4b24727fa20a80e29f}{FA\_CREATE\_ALWAYS}|
+      \hyperlink{tff_8h_a17b01553029920ac0468912b4bcb16c7}{FA\_OPEN\_ALWAYS}|\hyperlink{tff_8h_a417bb1babd1785fd181a806b5613eba3}{FA\_CREATE\_NEW});
+833     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = auto\_mount(&path, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})(mode & (\hyperlink{tff_8h_afa366963220c89b882c0361794020c14}{FA\_WRITE}|
+      \hyperlink{tff_8h_afba4546b131dea4b24727fa20a80e29f}{FA\_CREATE\_ALWAYS}|\hyperlink{tff_8h_a17b01553029920ac0468912b4bcb16c7}{FA\_OPEN\_ALWAYS}|\hyperlink{tff_8h_a417bb1babd1785fd181a806b5613eba3}{FA\_CREATE\_NEW})));
+834 \textcolor{preprocessor}{#else}
+835 \textcolor{preprocessor}{}    mode &= \hyperlink{tff_8h_a1f4f3530ff03abbd979b072536e72290}{FA\_READ};
+836     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = auto\_mount(&path, 0);
+837 \textcolor{preprocessor}{#endif}
+838 \textcolor{preprocessor}{}    \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+839     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = trace\_path(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, path, &\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir});    \textcolor{comment}{/* Trace the file path */}
+840 
+841 \textcolor{preprocessor}{#if !\_FS\_READONLY}
+842 \textcolor{preprocessor}{}    \textcolor{comment}{/* Create or Open a File */}
+843     \textcolor{keywordflow}{if} (mode & (\hyperlink{tff_8h_afba4546b131dea4b24727fa20a80e29f}{FA\_CREATE\_ALWAYS}|\hyperlink{tff_8h_a17b01553029920ac0468912b4bcb16c7}{FA\_OPEN\_ALWAYS}|
+      \hyperlink{tff_8h_a417bb1babd1785fd181a806b5613eba3}{FA\_CREATE\_NEW})) \{
+844         \hyperlink{tff_8h_af322b62389c843d5727de4796a09f59c}{CLUST} rs;
+845         \hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword} dw;
+846         \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{     \textcolor{comment}{/* No file, create new */}
+847             \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{FR\_NO\_FILE}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+848             \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = reserve\_direntry(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, &\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir});
+849             \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+850             memset((\textcolor{keywordtype}{void} *)\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}, 0, 32);      \textcolor{comment}{/* Initialize the new entry with open name */}
+851             memcpy(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_afa89348e9fc2de82ae9e12c661366b0e}{DIR\_Name}], \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, 8+3);
+852             \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_a87ee1f701c2ab941862e3ce00c1c1e9d}{DIR\_NTres}] = \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}[11];
+853             mode |= \hyperlink{tff_8h_afba4546b131dea4b24727fa20a80e29f}{FA\_CREATE\_ALWAYS};
+854         \}
+855         \textcolor{keywordflow}{else} \{                  \textcolor{comment}{/* Any object is already existing */}
+856             \textcolor{keywordflow}{if} (mode & \hyperlink{tff_8h_a417bb1babd1785fd181a806b5613eba3}{FA\_CREATE\_NEW})          \textcolor{comment}{/* Cannot create new */}
+857                 \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca0d8f024d256df76e84782b95018a2450}{FR\_EXIST};
+858             \textcolor{keywordflow}{if} (!\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir} || (\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] & (\hyperlink{pff_8h_add6d85d1e7a02b4f6188783ef91a5f1e}{AM\_RDO}|\hyperlink{pff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}{AM\_DIR})))    \textcolor{comment}{/* Cannot overwrite
+       (R/O or DIR) */}
+859                 \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{FR\_DENIED};
+860             \textcolor{keywordflow}{if} (mode & \hyperlink{tff_8h_afba4546b131dea4b24727fa20a80e29f}{FA\_CREATE\_ALWAYS}) \{      \textcolor{comment}{/* Resize it to zero */}
+861 \textcolor{preprocessor}{#if \_FAT32}
+862 \textcolor{preprocessor}{}                rs = ((\hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword})\hyperlink{pff_8h_a398519bb08da6457e62567d1f0b567e3}{LD\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_a0bc29c3f09e1e9c40c414f7d50d7905c}{DIR\_FstClusHI}]) << 16) | 
+      \hyperlink{pff_8h_a398519bb08da6457e62567d1f0b567e3}{LD\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_aebe0e913bff75a89d38dbcb04baf5dff}{DIR\_FstClusLO}]);
+863                 \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[DIR\_FstClusHI], 0);
+864 \textcolor{preprocessor}{#else}
+865 \textcolor{preprocessor}{}                rs = \hyperlink{pff_8h_a398519bb08da6457e62567d1f0b567e3}{LD\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[DIR\_FstClusLO]);
+866 \textcolor{preprocessor}{#endif}
+867 \textcolor{preprocessor}{}                \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[DIR\_FstClusLO], 0);  \textcolor{comment}{/* cluster = 0 */}
+868                 \hyperlink{pff_8h_abf5aba973d95ac5843b80aa7379cdd66}{ST\_DWORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_abfbfa613864a02a65f0bf70ead6672c7}{DIR\_FileSize}], 0); \textcolor{comment}{/* size = 0 */}
+869                 \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_ac310e0b372e8ec4195568846746d2f49}{winflag} = 1;
+870                 dw = \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_a5ee19a26d1dfd79d52fbba59cc792da3}{winsect};         \textcolor{comment}{/* Remove the cluster chain */}
+871                 \textcolor{keywordflow}{if} (!remove\_chain(rs) || !move\_window(dw))
+872                     \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+873                 \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_a07b2a137b54c6c95ffcee006c8906429}{last\_clust} = rs - 1;       \textcolor{comment}{/* Reuse the cluster hole */}
+874             \}
+875         \}
+876         \textcolor{keywordflow}{if} (mode & FA\_CREATE\_ALWAYS) \{
+877             \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] = 0;                   \textcolor{comment}{/* Reset attribute */}
+878             dw = \hyperlink{tff_8h_a489f23a9be58cd896a5c45e45c6e6e6f}{get\_fattime}();
+879             \hyperlink{pff_8h_abf5aba973d95ac5843b80aa7379cdd66}{ST\_DWORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_a47fb1881ea71d860db9b8280564cb4d5}{DIR\_CrtTime}], dw);  \textcolor{comment}{/* Created time */}
+880             \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_ac310e0b372e8ec4195568846746d2f49}{winflag} = 1;
+881             mode |= \hyperlink{tff_8h_ac4b7d5223f84df91c306ffbff536fae4}{FA\_\_WRITTEN};             \textcolor{comment}{/* Set file changed flag */}
+882         \}
+883     \}
+884     \textcolor{comment}{/* Open an existing file */}
+885     \textcolor{keywordflow}{else} \{
+886 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* !\_FS\_READONLY */}\textcolor{preprocessor}{}
+887 \textcolor{preprocessor}{}        \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};            \textcolor{comment}{/* Trace failed */}
+888         \textcolor{keywordflow}{if} (!\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir} || (\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] & \hyperlink{pff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}{AM\_DIR}))   \textcolor{comment}{/* It is a directory */}
+889             \textcolor{keywordflow}{return} \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{FR\_NO\_FILE};
+890 \textcolor{preprocessor}{#if !\_FS\_READONLY}
+891 \textcolor{preprocessor}{}        \textcolor{keywordflow}{if} ((mode & \hyperlink{tff_8h_afa366963220c89b882c0361794020c14}{FA\_WRITE}) && (\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] & \hyperlink{pff_8h_add6d85d1e7a02b4f6188783ef91a5f1e}{AM\_RDO})) \textcolor{comment}{/* R/O violation */}
+892             \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{FR\_DENIED};
+893     \}
+894     fp->dir\_sect = \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_a5ee19a26d1dfd79d52fbba59cc792da3}{winsect};       \textcolor{comment}{/* Pointer to the directory entry */}
+895     fp->dir\_ptr = \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir};
+896 \textcolor{preprocessor}{#endif}
+897 \textcolor{preprocessor}{}    fp->flag = mode;                    \textcolor{comment}{/* File access mode */}
+898     fp->org\_clust =                     \textcolor{comment}{/* File start cluster */}
+899 \textcolor{preprocessor}{#if \_FAT32}
+900 \textcolor{preprocessor}{}        ((\hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword})\hyperlink{pff_8h_a398519bb08da6457e62567d1f0b567e3}{LD\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[DIR\_FstClusHI]) << 16) |
+901 #endif
+902         \hyperlink{pff_8h_a398519bb08da6457e62567d1f0b567e3}{LD\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[DIR\_FstClusLO]);
+903     fp->fsize = \hyperlink{pff_8h_a4690304ddc975516f7dc02575c96e34e}{LD\_DWORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_abfbfa613864a02a65f0bf70ead6672c7}{DIR\_FileSize}]);    \textcolor{comment}{/* File size */}
+904     fp->fptr = 0; fp->csect = 255;      \textcolor{comment}{/* File pointer */}
+905     fp->fs = \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}; fp->\hyperlink{struct_f_a_t_f_s_a588688f55d57bf8a7e8c1d2cf88a3c56}{id} = \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_a588688f55d57bf8a7e8c1d2cf88a3c56}{id}; \textcolor{comment}{/* Owner file system object of the file */}
+906     \textcolor{keywordflow}{return} \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK};
+907 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_ae573cd64e467a62c076e74d5125e6409}{\index{tff.\-h@{tff.\-h}!f\-\_\-opendir@{f\-\_\-opendir}}
+\index{f\-\_\-opendir@{f\-\_\-opendir}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-opendir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-opendir (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-I\-R} $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_ae573cd64e467a62c076e74d5125e6409}
+
+
+Definition at line 1205 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1209 \{
+1210 \textcolor{comment}{//  FRESULT res;}
+1211 \textcolor{comment}{//  byte *dir;}
+1212 \textcolor{comment}{//  char fn[8+3+1];}
+1213 
+1214 
+1215     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = auto\_mount(&path, 0);
+1216     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{
+1217         \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = trace\_path(\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, path, &\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}); \textcolor{comment}{/* Trace the directory path */}
+1218         \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{                     \textcolor{comment}{/* Trace completed */}
+1219             \textcolor{keywordflow}{if} (\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}) \{                           \textcolor{comment}{/* It is not the root dir */}
+1220                 \textcolor{keywordflow}{if} (\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] & \hyperlink{pff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}{AM\_DIR}) \{  \textcolor{comment}{/* The entry is a directory */}
+1221                     \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_aad779eab97ffc889755c8b483fbf9eb5}{clust} =
+1222 \textcolor{preprocessor}{#if \_FAT32}
+1223 \textcolor{preprocessor}{}                        ((\hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword})\hyperlink{pff_8h_a398519bb08da6457e62567d1f0b567e3}{LD\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_a0bc29c3f09e1e9c40c414f7d50d7905c}{DIR\_FstClusHI}]) << 16) |
+1224 #endif
+1225                             \hyperlink{pff_8h_a398519bb08da6457e62567d1f0b567e3}{LD\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_aebe0e913bff75a89d38dbcb04baf5dff}{DIR\_FstClusLO}]);
+1226                     \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_aa7c560f325cb4d59f40dc8cf731b6e22}{sect} = \hyperlink{ff_8c_a7519abb60fe91f6aa1d17f64fbae123a}{clust2sect}(\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_aad779eab97ffc889755c8b483fbf9eb5}{clust});
+1227                     \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_a7cb92c69ac44a71424d6b8a0c3dac288}{index} = 2;
+1228                 \} \textcolor{keywordflow}{else} \{                        \textcolor{comment}{/* The entry is not a directory */}
+1229                     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{FR\_NO\_FILE};
+1230                 \}
+1231             \}
+1232             \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_a588688f55d57bf8a7e8c1d2cf88a3c56}{id} = \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_a588688f55d57bf8a7e8c1d2cf88a3c56}{id};
+1233         \}
+1234     \}
+1235 
+1236     \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1237 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_a96533e305f5fc839ac4a9e6321c6ebfd}{\index{tff.\-h@{tff.\-h}!f\-\_\-read@{f\-\_\-read}}
+\index{f\-\_\-read@{f\-\_\-read}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L} $\ast$}]{, }
+\item[{void $\ast$}]{, }
+\item[{{\bf word}}]{, }
+\item[{{\bf word} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a96533e305f5fc839ac4a9e6321c6ebfd}
+
+
+Definition at line 916 of file tff.\-c.
+
+
+\begin{DoxyCode}
+922 \{
+923 \textcolor{comment}{//  FRESULT res;}
+924     \hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword} sect, remain;
+925     \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word} rcnt, cc;
+926     \hyperlink{tff_8h_af322b62389c843d5727de4796a09f59c}{CLUST} clust;
+927     \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} *rbuff = buff;
+928 
+929 
+930     *br = 0;
+931     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = validate(fp->fs, fp->id);                  \textcolor{comment}{/* Check validity of the object */}
+932     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+933     \textcolor{keywordflow}{if} (fp->flag & \hyperlink{tff_8h_ad3b47fe8126573b17752a9a242b76b9a}{FA\_\_ERROR}) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};   \textcolor{comment}{/* Check error flag */}
+934     \textcolor{keywordflow}{if} (!(fp->flag & \hyperlink{tff_8h_a1f4f3530ff03abbd979b072536e72290}{FA\_READ})) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{FR\_DENIED};    \textcolor{comment}{/* Check access mode */}
+935     remain = fp->fsize - fp->fptr;
+936     \textcolor{keywordflow}{if} (btr > remain) btr = (\hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word})remain;           \textcolor{comment}{/* Truncate btr by remaining bytes */}
+937 
+938     \textcolor{keywordflow}{for} ( ;  btr;                                   \textcolor{comment}{/* Repeat until all data transferred */}
+939         rbuff += rcnt, fp->fptr += rcnt, *br += rcnt, btr -= rcnt) \{
+940         \textcolor{keywordflow}{if} ((fp->fptr % 512U) == 0) \{               \textcolor{comment}{/* On the sector boundary? */}
+941             \textcolor{keywordflow}{if} (fp->csect >= fp->fs->csize) \{       \textcolor{comment}{/* On the cluster boundary? */}
+942                 clust = (fp->fptr == 0) ?           \textcolor{comment}{/* On the top of the file? */}
+943                     fp->org\_clust : get\_cluster(fp->curr\_clust);
+944                 \textcolor{keywordflow}{if} (clust < 2 || clust >= fp->fs->max\_clust) \textcolor{keywordflow}{goto} fr\_error;
+945                 fp->curr\_clust = clust;             \textcolor{comment}{/* Update current cluster */}
+946                 fp->csect = 0;                      \textcolor{comment}{/* Reset sector address in the cluster */}
+947             \}
+948             sect = \hyperlink{ff_8c_a7519abb60fe91f6aa1d17f64fbae123a}{clust2sect}(fp->curr\_clust) + fp->csect;    \textcolor{comment}{/* Get current sector */}
+949             cc = btr / 512U;                        \textcolor{comment}{/* When remaining bytes >= sector size, */}
+950             \textcolor{keywordflow}{if} (cc) \{                               \textcolor{comment}{/* Read maximum contiguous sectors directly */}
+951                 \textcolor{keywordflow}{if} (fp->csect + cc > fp->fs->csize) \textcolor{comment}{/* Clip at cluster boundary */}
+952                     cc = fp->fs->csize - fp->csect;
+953                 \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a77ba19c0c97a900fac95999446e32308}{disk\_read}(rbuff, sect, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})cc) != \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}{RES\_OK})
+954                     \textcolor{keywordflow}{goto} fr\_error;
+955                 fp->csect += (\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})cc;              \textcolor{comment}{/* Next sector address in the cluster */}
+956                 rcnt = 512U * cc;                   \textcolor{comment}{/* Number of bytes transferred */}
+957                 \textcolor{keywordflow}{continue};
+958             \}
+959             fp->csect++;                            \textcolor{comment}{/* Next sector address in the cluster */}
+960         \}
+961         sect = \hyperlink{ff_8c_a7519abb60fe91f6aa1d17f64fbae123a}{clust2sect}(fp->curr\_clust) + fp->csect - 1;    \textcolor{comment}{/* Get current sector */}
+962         \textcolor{keywordflow}{if} (!move\_window(sect)) \textcolor{keywordflow}{goto} fr\_error;      \textcolor{comment}{/* Move sector window */}
+963         rcnt = 512U - (fp->fptr % 512U);            \textcolor{comment}{/* Get partial sector from sector window */}
+964         \textcolor{keywordflow}{if} (rcnt > btr) rcnt = btr;
+965         memcpy(rbuff, &fp->fs->win[fp->fptr % 512U], rcnt);
+966     \}
+967 
+968     \textcolor{keywordflow}{return} \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK};
+969 
+970 fr\_error:   \textcolor{comment}{/* Abort this file due to an unrecoverable error */}
+971     fp->flag |= \hyperlink{tff_8h_ad3b47fe8126573b17752a9a242b76b9a}{FA\_\_ERROR};
+972     \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+973 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_ae84f86ce841a3facb95060e0bdefd5fb}{\index{tff.\-h@{tff.\-h}!f\-\_\-readdir@{f\-\_\-readdir}}
+\index{f\-\_\-readdir@{f\-\_\-readdir}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-readdir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-readdir (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-I\-R} $\ast$}]{, }
+\item[{{\bf F\-I\-L\-I\-N\-F\-O} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_ae84f86ce841a3facb95060e0bdefd5fb}
+
+
+Definition at line 1246 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1250 \{
+1251 \textcolor{comment}{//  FRESULT res;}
+1252 \textcolor{comment}{//  byte *dir;}
+1253     \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_aa0dd25f53b00986c159fb20de6894e51}{c};
+1254 
+1255 
+1256     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = validate(\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}, \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_a588688f55d57bf8a7e8c1d2cf88a3c56}{id});          \textcolor{comment}{/* Check validity of the object */}
+1257     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1258 
+1259     finfo->fname[0] = 0;
+1260     \textcolor{keywordflow}{while} (\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_aa7c560f325cb4d59f40dc8cf731b6e22}{sect}) \{
+1261         \textcolor{keywordflow}{if} (!move\_window(\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_aa7c560f325cb4d59f40dc8cf731b6e22}{sect}))
+1262             \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1263         \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir} = &\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_a54541860d8273ee2709def80ccc3e271}{win}[(\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_a7cb92c69ac44a71424d6b8a0c3dac288}{index} & 15) * 32]; \textcolor{comment}{/* pointer to the directory entry */}
+1264         c = \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_afa89348e9fc2de82ae9e12c661366b0e}{DIR\_Name}];
+1265         \textcolor{keywordflow}{if} (c == 0) \textcolor{keywordflow}{break};                          \textcolor{comment}{/* Has it reached to end of dir? */}
+1266         \textcolor{keywordflow}{if} (c != 0xE5 && !(\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] & \hyperlink{pff_8h_a5cfae62dabae0a54809e43b36685ce7c}{AM\_VOL}))    \textcolor{comment}{/* Is it a valid entry? */}
+1267             get\_fileinfo(finfo, \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir});
+1268         \textcolor{keywordflow}{if} (!next\_dir\_entry(\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj})) \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}->\hyperlink{struct_d_i_r_aa7c560f325cb4d59f40dc8cf731b6e22}{sect} = 0;      \textcolor{comment}{/* Next entry */}
+1269         \hyperlink{p8_2pinguino_2libraries_2_p_c_d8544_8c_af84ca11bf86c56a1f74027a99d48218d}{if} (finfo->fname[0]) \textcolor{keywordflow}{break};                   \textcolor{comment}{/* Found valid entry */}
+1270     \}
+1271 
+1272     \textcolor{keywordflow}{return} \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK};
+1273 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_addcca3084286cebc66b1734408dc5e56}{\index{tff.\-h@{tff.\-h}!f\-\_\-rename@{f\-\_\-rename}}
+\index{f\-\_\-rename@{f\-\_\-rename}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-rename}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-rename (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_addcca3084286cebc66b1734408dc5e56}
+
+
+Definition at line 1619 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1623 \{
+1624     \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44c}{FRESULT} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1625     \hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword} sect\_old;
+1626     \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} *dir\_old, *dir\_new, direntry[32-11];
+1627 \textcolor{comment}{//  DIR dj;}
+1628 \textcolor{comment}{//  char fn[8+3+1];}
+1629 
+1630 
+1631     res = auto\_mount(&path\_old, 1);
+1632     \textcolor{keywordflow}{if} (res != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1633 
+1634     res = trace\_path(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, path\_old, &dir\_old);  \textcolor{comment}{/* Check old object */}
+1635     \textcolor{keywordflow}{if} (res != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};               \textcolor{comment}{/* The old object is not found */}
+1636     \textcolor{keywordflow}{if} (!dir\_old) \textcolor{keywordflow}{return} \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{FR\_NO\_FILE};
+1637     sect\_old = \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_a5ee19a26d1dfd79d52fbba59cc792da3}{winsect};                   \textcolor{comment}{/* Save the object information */}
+1638     memcpy(direntry, &dir\_old[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}], 32-11);
+1639 
+1640     res = trace\_path(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, path\_new, &dir\_new);  \textcolor{comment}{/* Check new object */}
+1641     \textcolor{keywordflow}{if} (res == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca0d8f024d256df76e84782b95018a2450}{FR\_EXIST};         \textcolor{comment}{/* The new object name is already existing */}
+1642     \textcolor{keywordflow}{if} (res != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca97da8f98fc2e66d8fa7847f9ebb19b8c}{FR\_NO\_FILE}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};         \textcolor{comment}{/* Is there no old name? */}
+1643     res = reserve\_direntry(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, &dir\_new);        \textcolor{comment}{/* Reserve a directory entry */}
+1644     \textcolor{keywordflow}{if} (res != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1645 
+1646     memcpy(&dir\_new[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}], direntry, 32-11);    \textcolor{comment}{/* Create new entry */}
+1647     memcpy(&dir\_new[\hyperlink{pff_8h_afa89348e9fc2de82ae9e12c661366b0e}{DIR\_Name}], \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, 8+3);
+1648     dir\_new[\hyperlink{pff_8h_a87ee1f701c2ab941862e3ce00c1c1e9d}{DIR\_NTres}] = \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}[11];
+1649     \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_ac310e0b372e8ec4195568846746d2f49}{winflag} = 1;
+1650 
+1651     \textcolor{keywordflow}{if} (!move\_window(sect\_old)) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};  \textcolor{comment}{/* Delete old entry */}
+1652     dir\_old[\hyperlink{pff_8h_afa89348e9fc2de82ae9e12c661366b0e}{DIR\_Name}] = 0xE5;
+1653 
+1654     \textcolor{keywordflow}{return} sync();
+1655 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_a36d1930b7eb7c5de67b55a9c673eb0fa}{\index{tff.\-h@{tff.\-h}!f\-\_\-stat@{f\-\_\-stat}}
+\index{f\-\_\-stat@{f\-\_\-stat}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-stat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-stat (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf F\-I\-L\-I\-N\-F\-O} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a36d1930b7eb7c5de67b55a9c673eb0fa}
+
+
+Definition at line 1283 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1287 \{
+1288 \textcolor{comment}{//  FRESULT res;}
+1289 \textcolor{comment}{//  DIR dj;}
+1290 \textcolor{comment}{//  byte *dir;}
+1291 \textcolor{comment}{//  char fn[8+3+1];}
+1292 
+1293 
+1294     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = auto\_mount(&path, 0);
+1295     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{
+1296         \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = trace\_path(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, path, &\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir});    \textcolor{comment}{/* Trace the file path */}
+1297         \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{                     \textcolor{comment}{/* Trace completed */}
+1298             \textcolor{keywordflow}{if} (\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}) \textcolor{comment}{/* Found an object */}
+1299                 get\_fileinfo(finfo, \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir});
+1300             \textcolor{keywordflow}{else}        \textcolor{comment}{/* It is root dir */}
+1301                 \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca83e45a4b579558c57192c0a391b9bb45}{FR\_INVALID\_NAME};
+1302         \}
+1303     \}
+1304 
+1305     \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1306 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_ae3ba7b156902f7678b3344f1e5bc5e88}{\index{tff.\-h@{tff.\-h}!f\-\_\-sync@{f\-\_\-sync}}
+\index{f\-\_\-sync@{f\-\_\-sync}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-sync}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-sync (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_ae3ba7b156902f7678b3344f1e5bc5e88}
+
+
+Definition at line 1061 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1064 \{
+1065 \textcolor{comment}{//  FRESULT res;}
+1066     \hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword} tim;
+1067 \textcolor{comment}{//  byte *dir;}
+1068 
+1069     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = validate(fp->fs, fp->id);      \textcolor{comment}{/* Check validity of the object */}
+1070     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{
+1071         \textcolor{keywordflow}{if} (fp->flag & \hyperlink{tff_8h_ac4b7d5223f84df91c306ffbff536fae4}{FA\_\_WRITTEN}) \{    \textcolor{comment}{/* Has the file been written? */}
+1072             \textcolor{comment}{/* Update the directory entry */}
+1073             \textcolor{keywordflow}{if} (!move\_window(fp->dir\_sect)) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1074             \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir} = fp->dir\_ptr;
+1075             \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] |= \hyperlink{pff_8h_ae8174d00798e34e7c9e95898cb9e1a09}{AM\_ARC};                       \textcolor{comment}{/* Set archive bit */}
+1076             \hyperlink{pff_8h_abf5aba973d95ac5843b80aa7379cdd66}{ST\_DWORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_abfbfa613864a02a65f0bf70ead6672c7}{DIR\_FileSize}], fp->fsize);     \textcolor{comment}{/* Update file size */}
+1077             \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_aebe0e913bff75a89d38dbcb04baf5dff}{DIR\_FstClusLO}], fp->org\_clust); \textcolor{comment}{/* Update start cluster */}
+1078 \textcolor{preprocessor}{#if \_FAT32}
+1079 \textcolor{preprocessor}{}            \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_a0bc29c3f09e1e9c40c414f7d50d7905c}{DIR\_FstClusHI}], fp->org\_clust >> 16);
+1080 \textcolor{preprocessor}{#endif}
+1081 \textcolor{preprocessor}{}            tim = \hyperlink{tff_8h_a489f23a9be58cd896a5c45e45c6e6e6f}{get\_fattime}();                 \textcolor{comment}{/* Updated time */}
+1082             \hyperlink{pff_8h_abf5aba973d95ac5843b80aa7379cdd66}{ST\_DWORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ab9452d336adeece2a1b0b54ab35b8a59}{DIR\_WrtTime}], tim);
+1083             fp->flag &= (\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})~\hyperlink{tff_8h_ac4b7d5223f84df91c306ffbff536fae4}{FA\_\_WRITTEN};
+1084             \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = sync();
+1085         \}
+1086     \}
+1087     \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1088 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_a29d002c2c9b726151b9c1a4ad742c41d}{\index{tff.\-h@{tff.\-h}!f\-\_\-truncate@{f\-\_\-truncate}}
+\index{f\-\_\-truncate@{f\-\_\-truncate}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-truncate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-truncate (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a29d002c2c9b726151b9c1a4ad742c41d}
+
+
+Definition at line 1316 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1319 \{
+1320 \textcolor{comment}{//  FRESULT res;}
+1321     \hyperlink{tff_8h_af322b62389c843d5727de4796a09f59c}{CLUST} ncl;
+1322 
+1323 
+1324     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = validate(fp->fs, fp->id);      \textcolor{comment}{/* Check validity of the object */}
+1325     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1326     \textcolor{keywordflow}{if} (fp->flag & \hyperlink{tff_8h_ad3b47fe8126573b17752a9a242b76b9a}{FA\_\_ERROR}) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};   \textcolor{comment}{/* Check error flag */}
+1327     \textcolor{keywordflow}{if} (!(fp->flag & \hyperlink{tff_8h_afa366963220c89b882c0361794020c14}{FA\_WRITE})) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{FR\_DENIED};  \textcolor{comment}{/* Check access mode */}
+1328 
+1329     \textcolor{keywordflow}{if} (fp->fsize > fp->fptr) \{
+1330         fp->fsize = fp->fptr;   \textcolor{comment}{/* Set file size to current R/W point */}
+1331         fp->flag |= \hyperlink{tff_8h_ac4b7d5223f84df91c306ffbff536fae4}{FA\_\_WRITTEN};
+1332         \textcolor{keywordflow}{if} (fp->fptr == 0) \{    \textcolor{comment}{/* When set file size to zero, remove entire cluster chain */}
+1333             \textcolor{keywordflow}{if} (!remove\_chain(fp->org\_clust)) \textcolor{keywordflow}{goto} ft\_error;
+1334             fp->org\_clust = 0;
+1335         \} \textcolor{keywordflow}{else} \{                \textcolor{comment}{/* When truncate a part of the file, remove remaining clusters */}
+1336             ncl = get\_cluster(fp->curr\_clust);
+1337             \textcolor{keywordflow}{if} (ncl < 2) \textcolor{keywordflow}{goto} ft\_error;
+1338             \textcolor{keywordflow}{if} (ncl < fp->fs->max\_clust) \{
+1339                 \textcolor{keywordflow}{if} (!put\_cluster(fp->curr\_clust, (\hyperlink{tff_8h_af322b62389c843d5727de4796a09f59c}{CLUST})0x0FFFFFFF)) \textcolor{keywordflow}{goto} ft\_error;
+1340                 \textcolor{keywordflow}{if} (!remove\_chain(ncl)) \textcolor{keywordflow}{goto} ft\_error;
+1341             \}
+1342         \}
+1343     \}
+1344 
+1345     \textcolor{keywordflow}{return} \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK};
+1346 
+1347 ft\_error:   \textcolor{comment}{/* Abort this file due to an unrecoverable error */}
+1348     fp->flag |= \hyperlink{tff_8h_ad3b47fe8126573b17752a9a242b76b9a}{FA\_\_ERROR};
+1349     \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1350 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_a7d317d7bcbe9a9100a42d18e0790ffc5}{\index{tff.\-h@{tff.\-h}!f\-\_\-unlink@{f\-\_\-unlink}}
+\index{f\-\_\-unlink@{f\-\_\-unlink}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-unlink}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-unlink (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a7d317d7bcbe9a9100a42d18e0790ffc5}
+
+
+Definition at line 1425 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1428 \{
+1429 \textcolor{comment}{//  FRESULT res;}
+1430 \textcolor{comment}{//  DIR dj;}
+1431 \textcolor{comment}{//  byte *dir;}
+1432     \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} *sdir;
+1433     \hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword} dsect;
+1434 \textcolor{comment}{//  char fn[8+3+1];}
+1435     \hyperlink{tff_8h_af322b62389c843d5727de4796a09f59c}{CLUST} dclust;
+1436 
+1437 
+1438     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = auto\_mount(&path, 1);
+1439     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1440     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = trace\_path(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, path, &\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir});    \textcolor{comment}{/* Trace the file path */}
+1441     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};            \textcolor{comment}{/* Trace failed */}
+1442     \textcolor{keywordflow}{if} (!\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca83e45a4b579558c57192c0a391b9bb45}{FR\_INVALID\_NAME};     \textcolor{comment}{/* It is the root directory */}
+1443     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] & \hyperlink{pff_8h_add6d85d1e7a02b4f6188783ef91a5f1e}{AM\_RDO}) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{FR\_DENIED}; \textcolor{comment}{/* It is a R/O object */}
+1444     dsect = \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_a5ee19a26d1dfd79d52fbba59cc792da3}{winsect};
+1445     dclust =
+1446 \textcolor{preprocessor}{#if \_FAT32}
+1447 \textcolor{preprocessor}{}        ((\hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword})\hyperlink{pff_8h_a398519bb08da6457e62567d1f0b567e3}{LD\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_a0bc29c3f09e1e9c40c414f7d50d7905c}{DIR\_FstClusHI}]) << 16) |
+1448 #endif
+1449         \hyperlink{pff_8h_a398519bb08da6457e62567d1f0b567e3}{LD\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_aebe0e913bff75a89d38dbcb04baf5dff}{DIR\_FstClusLO}]);
+1450     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] & \hyperlink{pff_8h_a3a9db44e978ed6c13b641e092d4cd7d3}{AM\_DIR}) \{          \textcolor{comment}{/* It is a sub-directory */}
+1451         \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_aad779eab97ffc889755c8b483fbf9eb5}{clust} = dclust;                   \textcolor{comment}{/* Check if the sub-dir is empty or not */}
+1452         \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_aa7c560f325cb4d59f40dc8cf731b6e22}{sect} = \hyperlink{ff_8c_a7519abb60fe91f6aa1d17f64fbae123a}{clust2sect}(dclust);
+1453         \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a7cb92c69ac44a71424d6b8a0c3dac288}{index} = 2;
+1454         \textcolor{keywordflow}{do} \{
+1455             \textcolor{keywordflow}{if} (!move\_window(\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_aa7c560f325cb4d59f40dc8cf731b6e22}{sect})) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1456             sdir = &\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_a54541860d8273ee2709def80ccc3e271}{win}[(\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a7cb92c69ac44a71424d6b8a0c3dac288}{index} & 15) * 32];
+1457             \textcolor{keywordflow}{if} (sdir[\hyperlink{pff_8h_afa89348e9fc2de82ae9e12c661366b0e}{DIR\_Name}] == 0) \textcolor{keywordflow}{break};
+1458             \textcolor{keywordflow}{if} (sdir[\hyperlink{pff_8h_afa89348e9fc2de82ae9e12c661366b0e}{DIR\_Name}] != 0xE5 && !(sdir[\hyperlink{pff_8h_ad3233e40118ed66095f3c9545b788f8a}{DIR\_Attr}] & 
+      \hyperlink{pff_8h_a5cfae62dabae0a54809e43b36685ce7c}{AM\_VOL}))
+1459                 \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{FR\_DENIED};  \textcolor{comment}{/* The directory is not empty */}
+1460         \} \textcolor{keywordflow}{while} (next\_dir\_entry(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}));
+1461     \}
+1462 
+1463     \textcolor{keywordflow}{if} (!move\_window(dsect)) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR}; \textcolor{comment}{/* Mark the directory entry 'deleted' */}
+1464     \hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_afa89348e9fc2de82ae9e12c661366b0e}{DIR\_Name}] = 0xE5;
+1465     \hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}.\hyperlink{struct_d_i_r_a472e3612956e3ffb3ab823c37ca33250}{fs}->\hyperlink{struct_f_a_t_f_s_ac310e0b372e8ec4195568846746d2f49}{winflag} = 1;
+1466     \textcolor{keywordflow}{if} (!remove\_chain(dclust)) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};   \textcolor{comment}{/* Remove the cluster chain */}
+1467 
+1468     \textcolor{keywordflow}{return} sync();
+1469 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_aeeca06177bafbc7d7286a728be075ae4}{\index{tff.\-h@{tff.\-h}!f\-\_\-utime@{f\-\_\-utime}}
+\index{f\-\_\-utime@{f\-\_\-utime}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-utime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-utime (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{const {\bf F\-I\-L\-I\-N\-F\-O} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_aeeca06177bafbc7d7286a728be075ae4}
+
+
+Definition at line 1585 of file tff.\-c.
+
+
+\begin{DoxyCode}
+1589 \{
+1590 \textcolor{comment}{//  FRESULT res;}
+1591 \textcolor{comment}{//  DIR dj;}
+1592 \textcolor{comment}{//  byte *dir;}
+1593 \textcolor{comment}{//  char fn[8+3+1];}
+1594 
+1595 
+1596     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = auto\_mount(&path, 1);
+1597     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{
+1598         \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = trace\_path(&\hyperlink{tff_8c_a90affc32512431e143844fa9721bf9d9}{dj}, \hyperlink{tff_8c_a4eeeb71a8aa4cf022612fc51ab25ed15}{fn}, path, &\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir});    \textcolor{comment}{/* Trace the file path */}
+1599         \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} == \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \{             \textcolor{comment}{/* Trace completed */}
+1600             \textcolor{keywordflow}{if} (!\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}) \{
+1601                 \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca83e45a4b579558c57192c0a391b9bb45}{FR\_INVALID\_NAME};    \textcolor{comment}{/* Root directory */}
+1602             \} \textcolor{keywordflow}{else} \{
+1603                 \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_ab9452d336adeece2a1b0b54ab35b8a59}{DIR\_WrtTime}], finfo->ftime);
+1604                 \hyperlink{pff_8h_a95ceb4c25b216e71baa7102939edfd0d}{ST\_WORD}(&\hyperlink{tff_8c_addeee88e846cc637a785bcaf23b45b5e}{dir}[\hyperlink{pff_8h_abed17fa699511b09cbf64961373d63a4}{DIR\_WrtDate}], finfo->fdate);
+1605                 \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = sync();
+1606             \}
+1607         \}
+1608     \}
+1609     \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1610 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_a5b31e4018f73901cceb0588ee64fd5f0}{\index{tff.\-h@{tff.\-h}!f\-\_\-write@{f\-\_\-write}}
+\index{f\-\_\-write@{f\-\_\-write}!tff.h@{tff.\-h}}
+\subsubsection[{f\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-R\-E\-S\-U\-L\-T} f\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L} $\ast$}]{, }
+\item[{const void $\ast$}]{, }
+\item[{{\bf word}}]{, }
+\item[{{\bf word} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a5b31e4018f73901cceb0588ee64fd5f0}
+
+
+Definition at line 983 of file tff.\-c.
+
+
+\begin{DoxyCode}
+989 \{
+990 \textcolor{comment}{//  FRESULT res;}
+991     \hyperlink{p8_2pinguino_2core_2typedef_8h_a74cb93d430006e784da73b8ca406ee6e}{dword} sect;
+992     \hyperlink{p8_2pinguino_2core_2typedef_8h_abad51e07ab6d26bec9f1f786c8d65bcd}{word} wcnt, cc;
+993     \hyperlink{tff_8h_af322b62389c843d5727de4796a09f59c}{CLUST} clust;
+994     \textcolor{keyword}{const} \hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte} *wbuff = buff;
+995 
+996 
+997     *bw = 0;
+998     \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} = validate(fp->fs, fp->id);                  \textcolor{comment}{/* Check validity of the object */}
+999     \textcolor{keywordflow}{if} (\hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res} != \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK}) \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1000     \textcolor{keywordflow}{if} (fp->flag & \hyperlink{tff_8h_ad3b47fe8126573b17752a9a242b76b9a}{FA\_\_ERROR}) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};   \textcolor{comment}{/* Check error flag */}
+1001     \textcolor{keywordflow}{if} (!(fp->flag & \hyperlink{tff_8h_afa366963220c89b882c0361794020c14}{FA\_WRITE})) \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca897e9f2dd7629a80f48af242d8bc1a3d}{FR\_DENIED};  \textcolor{comment}{/* Check access mode */}
+1002     \textcolor{keywordflow}{if} (fp->fsize + btw < fp->\hyperlink{itdb02__graph_8h_aa5154f1f2f741b1408f8726078a53e27}{fsize}) \textcolor{keywordflow}{return} \hyperlink{pff_8h_a49d0171ecbd362cda5680a0d360db44ca62fce5cd9df008f8fc85f99706bda5f1}{FR\_OK};    \textcolor{comment}{/* File size cannot reach 4GB */}
+1003 
+1004     \textcolor{keywordflow}{for} ( ;  btw;                                   \textcolor{comment}{/* Repeat until all data transferred */}
+1005         wbuff += wcnt, fp->fptr += wcnt, *bw += wcnt, btw -= wcnt) \{
+1006         \textcolor{keywordflow}{if} ((fp->fptr % 512U) == 0) \{               \textcolor{comment}{/* On the sector boundary? */}
+1007             \textcolor{keywordflow}{if} (fp->csect >= fp->fs->csize) \{       \textcolor{comment}{/* On the cluster boundary? */}
+1008                 \textcolor{keywordflow}{if} (fp->fptr == 0) \{                \textcolor{comment}{/* On the top of the file? */}
+1009                     clust = fp->org\_clust;          \textcolor{comment}{/* Follow from the origin */}
+1010                     \textcolor{keywordflow}{if} (clust == 0)                 \textcolor{comment}{/* When there is no cluster chain, */}
+1011                         fp->org\_clust = clust = create\_chain(0);    \textcolor{comment}{/* Create a new cluster chain */}
+1012                 \} \textcolor{keywordflow}{else} \{                            \textcolor{comment}{/* Middle or end of the file */}
+1013                     clust = create\_chain(fp->curr\_clust);           \textcolor{comment}{/* Trace or streach cluster chain */}
+1014                 \}
+1015                 \textcolor{keywordflow}{if} (clust == 0) \textcolor{keywordflow}{break};              \textcolor{comment}{/* Could not allocate a new cluster (disk full) */}
+1016                 \textcolor{keywordflow}{if} (clust == 1 || clust >= fp->fs->max\_clust) \textcolor{keywordflow}{goto} fw\_error;
+1017                 fp->curr\_clust = clust;             \textcolor{comment}{/* Update current cluster */}
+1018                 fp->csect = 0;                      \textcolor{comment}{/* Reset sector address in the cluster */}
+1019             \}
+1020             sect = \hyperlink{ff_8c_a7519abb60fe91f6aa1d17f64fbae123a}{clust2sect}(fp->curr\_clust) + fp->csect;    \textcolor{comment}{/* Get current sector */}
+1021             cc = btw / 512U;                        \textcolor{comment}{/* When remaining bytes >= sector size, */}
+1022             \textcolor{keywordflow}{if} (cc) \{                               \textcolor{comment}{/* Write maximum contiguous sectors directly */}
+1023                 \textcolor{keywordflow}{if} (fp->csect + cc > fp->fs->csize) \textcolor{comment}{/* Clip at cluster boundary */}
+1024                     cc = fp->fs->csize - fp->csect;
+1025                 \textcolor{keywordflow}{if} (\hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_a7ffe0ccc946550a260d00871c6b636e7}{disk\_write}(wbuff, sect, (\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})cc) != \hyperlink{p8_2pinguino_2libraries_2sd_2diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2ba2ea4b6ef3fffc17dd1d38ab5c2837737}{RES\_OK})
+1026                     \textcolor{keywordflow}{goto} fw\_error;
+1027                 fp->csect += (\hyperlink{p8_2pinguino_2core_2typedef_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte})cc;              \textcolor{comment}{/* Next sector address in the cluster */}
+1028                 wcnt = 512U * cc;                   \textcolor{comment}{/* Number of bytes transferred */}
+1029                 \textcolor{keywordflow}{continue};
+1030             \}
+1031             \textcolor{keywordflow}{if} (fp->fptr >= fp->fsize) \{            \textcolor{comment}{/* Flush R/W window without reading if needed */}
+1032                 \textcolor{keywordflow}{if} (!move\_window(0)) \textcolor{keywordflow}{goto} fw\_error;
+1033                 fp->fs->winsect = sect;
+1034             \}
+1035             fp->csect++;                            \textcolor{comment}{/* Next sector address in the cluster */}
+1036         \}
+1037         sect = \hyperlink{ff_8c_a7519abb60fe91f6aa1d17f64fbae123a}{clust2sect}(fp->curr\_clust) + fp->csect - 1;    \textcolor{comment}{/* Get current sector */}
+1038         \textcolor{keywordflow}{if} (!move\_window(sect)) \textcolor{keywordflow}{goto} fw\_error;      \textcolor{comment}{/* Move sector window */}
+1039         wcnt = 512U - (fp->fptr % 512U);            \textcolor{comment}{/* Put partial sector into sector window */}
+1040         \textcolor{keywordflow}{if} (wcnt > btw) wcnt = btw;
+1041         memcpy(&fp->fs->win[fp->fptr % 512U], wbuff, wcnt);
+1042         fp->fs->winflag = 1;
+1043     \}
+1044 
+1045     \textcolor{keywordflow}{if} (fp->fptr > fp->fsize) \{fp->fsize = fp->fptr;\}   \textcolor{comment}{/* Update file size if needed */}
+1046     fp->flag |= \hyperlink{tff_8h_ac4b7d5223f84df91c306ffbff536fae4}{FA\_\_WRITTEN};                     \textcolor{comment}{/* Set file changed flag */}
+1047     \textcolor{keywordflow}{return} \hyperlink{tff_8c_aab43d7bcfb87e7ef71138d651ce1bea1}{res};
+1048 
+1049 fw\_error:   \textcolor{comment}{/* Abort this file due to an unrecoverable error */}
+1050     fp->flag |= \hyperlink{tff_8h_ad3b47fe8126573b17752a9a242b76b9a}{FA\_\_ERROR};
+1051     \textcolor{keywordflow}{return} \hyperlink{tff_8h_a49d0171ecbd362cda5680a0d360db44ca40dbd5f7138201bd676f4b19c11e93f4}{FR\_RW\_ERROR};
+1052 \}
+\end{DoxyCode}
+\hypertarget{tff_8h_a674c749faa4daccd22b64e47412d64b4}{\index{tff.\-h@{tff.\-h}!fgets@{fgets}}
+\index{fgets@{fgets}!tff.h@{tff.\-h}}
+\subsubsection[{fgets}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ fgets (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{int}]{, }
+\item[{{\bf F\-I\-L} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a674c749faa4daccd22b64e47412d64b4}
+\hypertarget{tff_8h_a63eafdd166ef4079dc84cf6718febea6}{\index{tff.\-h@{tff.\-h}!fprintf@{fprintf}}
+\index{fprintf@{fprintf}!tff.h@{tff.\-h}}
+\subsubsection[{fprintf}]{\setlength{\rightskip}{0pt plus 5cm}int fprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-I\-L} $\ast$}]{, }
+\item[{const char $\ast$}]{, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a63eafdd166ef4079dc84cf6718febea6}
+\hypertarget{tff_8h_aa5bad7defeabd71319e19658c4cfd743}{\index{tff.\-h@{tff.\-h}!fputc@{fputc}}
+\index{fputc@{fputc}!tff.h@{tff.\-h}}
+\subsubsection[{fputc}]{\setlength{\rightskip}{0pt plus 5cm}int fputc (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{{\bf F\-I\-L} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_aa5bad7defeabd71319e19658c4cfd743}
+\hypertarget{tff_8h_a6f8f8badf755223ae81bcf3d8448d38d}{\index{tff.\-h@{tff.\-h}!fputs@{fputs}}
+\index{fputs@{fputs}!tff.h@{tff.\-h}}
+\subsubsection[{fputs}]{\setlength{\rightskip}{0pt plus 5cm}int fputs (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{, }
+\item[{{\bf F\-I\-L} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a6f8f8badf755223ae81bcf3d8448d38d}
+\hypertarget{tff_8h_a489f23a9be58cd896a5c45e45c6e6e6f}{\index{tff.\-h@{tff.\-h}!get\-\_\-fattime@{get\-\_\-fattime}}
+\index{get\-\_\-fattime@{get\-\_\-fattime}!tff.h@{tff.\-h}}
+\subsubsection[{get\-\_\-fattime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dword} get\-\_\-fattime (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{tff_8h_a489f23a9be58cd896a5c45e45c6e6e6f}
+
+
+Definition at line 583 of file diskio.\-c.
+
+
+
+Referenced by f\-\_\-mkdir(), f\-\_\-open(), and f\-\_\-sync().
+
+
+\begin{DoxyCode}
+583                         \{
+584     \hyperlink{p8_2pinguino_2libraries_2integer_8h_ad342ac907eb044443153a22f964bf0af}{DWORD} tmr = 0;
+585 
+586 \textcolor{comment}{// Pre-processor commands added so only use RTCC if the board is known}
+587 \textcolor{comment}{// to support the RTCC ** Added 07 May 2012}
+588 
+589 \textcolor{comment}{// For boards known to support the RTCC library}
+590 
+591 \textcolor{preprocessor}{#if defined (PIC32\_PINGUINO) || defined (PIC32\_PINGUINO\_OTG)}
+592 \textcolor{preprocessor}{}    \hyperlink{unionrtcc_time}{rtccTime} pTm, cTm;
+593     \hyperlink{unionrtcc_date}{rtccDate} pDt, cDt;
+594 
+595     \hyperlink{rtcc_8h_a1dbff3cc5a57cfce880aa5c3d97389bf}{RTCC\_GetTimeDate}(&pTm, &pDt);   \textcolor{comment}{// get time and date from RTC}
+596                                             \textcolor{comment}{// assumes RTC has been set and is running}
+597                                             \textcolor{comment}{// OK - could be expanded to check that RTC}
+598                                             \textcolor{comment}{// is running and that a valid value is}
+599                                             \textcolor{comment}{// being returned by the RTC}
+600     cTm = \hyperlink{p8_2pinguino_2core_2rtcc_8c_a827e4753332ef9b673ec39e960c3d0de}{RTCC\_ConvertTime}(&pTm);   \textcolor{comment}{// convert time from bcd to decimal format}
+601     cDt = \hyperlink{p8_2pinguino_2core_2rtcc_8c_a6686cea9b23ceaf8ce04f794fe302533}{RTCC\_ConvertDate}(&pDt);   \textcolor{comment}{// convert date from bcd to decimal format}
+602 
+603     \textcolor{comment}{/* Pack date and time into a DWORD variable */}
+604 \textcolor{comment}{//  tmr = (((DWORD) pDt.year - 80)) | ((DWORD) pDt.mon) | ((DWORD) pDt.mday)}
+605 \textcolor{comment}{//          | (WORD) (pTm.hour) | (WORD) (pTm.min) | (WORD) (pTm.sec);}
+606     tmr = cDt.\hyperlink{unionrtcc_date_ab02bacda75d48acac498f0c9f4e9b1cf}{year} + 20;
+607    
+608   \textcolor{comment}{// Correction according to a newer rtcc library, with diff struct members.}
+609   
+610      tmr = (tmr << 4) | cDt.\hyperlink{unionrtcc_date_ad5f8cd6773aef677b920ae4e4265bb10}{month};     \textcolor{comment}{// shifts left 4 bits and adds monthth}
+611     tmr = (tmr << 5) | cDt.\hyperlink{unionrtcc_date_af980355fa766196214d34395ebed0a89}{dayofmonth};        \textcolor{comment}{// shifts left 5 bits and adds m.day}
+612     tmr = (tmr << 5) | cTm.\hyperlink{unionrtcc_time_af8ebb6bc008ed8d3be395faf75ec1ebc}{hours};      \textcolor{comment}{// shifts left 5 bits and adds hour}
+613     tmr = (tmr << 6) | cTm.\hyperlink{unionrtcc_time_a517646d9969ae9c9f8921e133b1b872b}{minutes};      \textcolor{comment}{// shift left 6 bits and adds minutes}
+614     tmr = (tmr << 5) | (cTm.\hyperlink{unionrtcc_time_ae53e173daf8fcf970bb3324ae545f21c}{seconds}/2);  \textcolor{comment}{// shifts left 5 bits and adds seconds/2}
+615 
+616 \textcolor{comment}{//  For other boards use a fixed date and time of 01 Jan 2012 12:00:00}
+617 \textcolor{preprocessor}{#else}
+618 \textcolor{preprocessor}{}     tmr = 12 + 20;
+619      tmr = (tmr << 4) | 1;       \textcolor{comment}{// shifts left 4 bits and adds month}
+620      tmr = (tmr << 5) | 1;      \textcolor{comment}{// shifts left 5 bits and adds m.day}
+621      tmr = (tmr << 5) | 12;     \textcolor{comment}{// shifts left 5 bits and adds hour}
+622      tmr = (tmr << 6) | 0;       \textcolor{comment}{// shift left 6 bits and adds minutes}
+623      tmr = (tmr << 5) | (0/2);   \textcolor{comment}{// shifts left 5 bits and adds seconds/2}
+624 \textcolor{preprocessor}{#endif}
+625 \textcolor{preprocessor}{}
+626     \textcolor{keywordflow}{return} tmr;
+627 \}
+\end{DoxyCode}
